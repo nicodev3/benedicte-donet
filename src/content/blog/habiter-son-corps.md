@@ -3,14 +3,14 @@ title: "Éloge de la présence : l’acte complètement fou d’habiter son corp
 excerpt: "Dans cet article, je veux partager plus intimement le cheminement qui m’a menée vers l’acte le plus salvateur qu’il m’ait été donné d’expérimenter : habiter mon corps. Quelles que soient les techniques thérapeutiques que j’étudie, les enseignements de méditation que je reçois ou les expérimentations que je traverse, je reviens toujours à mon ami le…"
 date: 2026-06-04T09:09:20Z
 updated: 2026-06-08T12:35:28Z
-image: "/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg"
+image: "../../assets/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg"
 imageAlt: "bienfaits dissociation méditation"
 seoTitle: "Éloge de la présence : l’acte complètement fou d’habiter son corps"
 seoDescription: "Dans cet article, je veux partager plus intimement le cheminement qui m’a menée vers l’acte le plus salvateur qu’il m’ait été donné d’expérimenter : habiter mon corps. Quelles que soient les techniques thérapeutiques que j’étudie, les enseignements de méditation que je reçois ou les expérimentations que je traverse, je reviens toujours à mon ami le…"
 draft: false
 ---
 
-![](/images/wp/pleineconscience-720x1080.jpg)
+![Pratique de pleine conscience pour habiter son corps](../../assets/images/wp/pleineconscience-scaled.jpg)
 
 Dans cet article, je veux partager plus intimement le cheminement qui m’a menée vers l’acte le plus salvateur qu’il m’ait été donné d’expérimenter : habiter mon corps.
 
@@ -76,7 +76,7 @@ Cela peut paraître beaucoup.
 
 Et pourtant, il me paraît aujourd’hui étonnant de passer vingt-trois heures de notre journée sans venir pleinement habiter, sentir et rencontrer notre être.
 
-![bienfaits dissociation méditation](/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-1629x1080.jpg)
+![bienfaits dissociation méditation](../../assets/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg)
 
 **Habiter son corps au quotidien**
 

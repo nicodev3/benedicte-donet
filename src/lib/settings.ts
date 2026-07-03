@@ -71,8 +71,16 @@ export interface HomeSettings {
   seoDescription?: string;
 }
 
+export interface NavigationItem {
+  label: string;
+  url: string;
+  order: number;
+  visible: boolean;
+  children?: { label: string; url: string; visible: boolean }[];
+}
+
 export interface NavigationSettings {
-  items: { label: string; url: string; order: number; visible: boolean }[];
+  items: NavigationItem[];
 }
 
 export interface FooterSettings {

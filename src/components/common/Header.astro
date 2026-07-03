@@ -1,6 +1,7 @@
 ---
 import Container from "./Container.astro";
 import Button from "./Button.astro";
+import SiteImage from "./SiteImage.astro";
 import {
   getGlobalSettings,
   getNavigationSettings,
@@ -19,17 +20,27 @@ function isActive(url: string): boolean {
   if (url === "/") return currentPath === "/";
   return currentPath.startsWith(url);
 }
+
+function isItemActive(item: (typeof items)[number]): boolean {
+  return (
+    item.children?.some((child) => child.visible && isActive(child.url)) ?? false
+  );
+}
+
+function visibleChildren(item: (typeof items)[number]) {
+  return item.children?.filter((child) => child.visible) ?? [];
+}
 ---
 
 <header class="header">
   <Container>
     <div class="header-inner">
       <a href="/" class="brand" aria-label={global.siteName}>
-        <img
-          src="/images/wp/logo-Benedicte-Donet-transparent-1.png"
-          alt={global.siteName}
-          width="150"
-          height="60"
+        <SiteImage
+          src="/images/wp/logo-benedicte-donet.png"
+          alt={`Logo ${global.siteName}`}
+          width={150}
+          height={60}
           loading="eager"
         />
       </a>
@@ -44,16 +55,51 @@ function isActive(url: string): boolean {
       <nav class="nav" aria-label="Navigation principale">
         <ul>
           {
-            items.map((item) => (
-              <li>
-                <a
-                  href={item.url}
-                  aria-current={isActive(item.url) ? "page" : undefined}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))
+            items.map((item) => {
+              const children = visibleChildren(item);
+              const hasDropdown = children.length > 0;
+              const dropdownId = `nav-dropdown-${item.label.toLowerCase().replace(/\s+/g, "-")}`;
+
+              return (
+                <li class:list={[{ "has-dropdown": hasDropdown }]}>
+                  {hasDropdown ? (
+                    <>
+                      <button
+                        type="button"
+                        class="nav-link nav-trigger"
+                        aria-current={isItemActive(item) ? "page" : undefined}
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls={dropdownId}
+                      >
+                        {item.label}
+                      </button>
+                      <ul class="dropdown" id={dropdownId}>
+                        {children.map((child) => (
+                          <li>
+                            <a
+                              href={child.url}
+                              aria-current={
+                                isActive(child.url) ? "page" : undefined
+                              }
+                            >
+                              {child.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <a
+                      href={item.url}
+                      aria-current={isActive(item.url) ? "page" : undefined}
+                    >
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              );
+            })
           }
         </ul>
         <Button href={global.appointmentUrl} class="nav-cta">
@@ -82,12 +128,12 @@ function isActive(url: string): boolean {
     padding-block: 0.6rem;
   }
 
-  .brand img {
+  .brand :global(img) {
     height: 56px;
     width: auto;
   }
 
-  .nav ul {
+  .nav > ul {
     display: flex;
     align-items: center;
     gap: var(--space-md);
@@ -96,13 +142,12 @@ function isActive(url: string): boolean {
     padding: 0;
   }
 
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
+  .nav > ul > li {
+    position: relative;
   }
 
-  .nav a {
+  .nav a,
+  .nav-trigger {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: var(--text-sm);
@@ -111,9 +156,77 @@ function isActive(url: string): boolean {
     white-space: nowrap;
   }
 
+  .nav-trigger {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
   .nav a:hover,
-  .nav a[aria-current="page"] {
+  .nav a[aria-current="page"],
+  .nav-trigger:hover,
+  .nav-trigger:focus-visible,
+  .nav-trigger[aria-current="page"] {
     color: var(--color-primary);
+  }
+
+  .has-dropdown > .nav-trigger::after {
+    content: "";
+    display: inline-block;
+    width: 0.45em;
+    height: 0.45em;
+    margin-left: 0.35em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-0.15em) rotate(45deg);
+    vertical-align: middle;
+  }
+
+  .dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 12rem;
+    margin: 0;
+    padding: 0.4rem 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-soft);
+    z-index: 60;
+  }
+
+  .dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 0.5rem;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 0.55rem 1rem;
+    white-space: nowrap;
+  }
+
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    display: flex;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
   }
 
   .nav :global(.nav-cta) {
@@ -161,7 +274,7 @@ function isActive(url: string): boolean {
       box-shadow: var(--shadow-soft);
     }
 
-    .nav ul {
+    .nav > ul {
       flex-direction: column;
       align-items: stretch;
       gap: 0;
@@ -171,6 +284,39 @@ function isActive(url: string): boolean {
       display: block;
       padding: 0.7rem 0;
       font-size: var(--text-base);
+    }
+
+    .has-dropdown > .nav-trigger::after {
+      display: none;
+    }
+
+    .nav-trigger {
+      display: block;
+      padding: 0.7rem 0;
+      font-size: var(--text-base);
+    }
+
+    .dropdown {
+      display: block;
+      position: static;
+      transform: none;
+      min-width: 0;
+      margin: 0;
+      padding: 0 0 0 1rem;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .dropdown::before {
+      display: none;
+    }
+
+    .dropdown a {
+      padding: 0.5rem 0;
+      font-size: var(--text-sm);
+      font-weight: 600;
     }
 
     .nav-toggle:checked ~ .nav {

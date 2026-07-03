@@ -127,6 +127,15 @@ const settings = defineCollection({
           url: z.string(),
           order: z.number().default(0),
           visible: z.boolean().default(true),
+          children: z
+            .array(
+              z.object({
+                label: z.string(),
+                url: z.string(),
+                visible: z.boolean().default(true),
+              })
+            )
+            .optional(),
         })
       ),
     }),

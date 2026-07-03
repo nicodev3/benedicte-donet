@@ -13,7 +13,7 @@ draft: false
 
 # La psychothérapie
 
-![EMDR psychologie en ligne benedicte donet](/images/wp/DSC07154.jpg)
+![EMDR psychologie en ligne benedicte donet](../../assets/images/wp/DSC07154.jpg)
 
 ## JE VOUS ACCOMPAGNE
 
@@ -27,20 +27,20 @@ J’intègre à ce socle d’autres méthodes thérapeutiques qui me semblent al
 
 ## MON APPROCHE
 
-![EMDR psychologie en ligne psychothérapie benedicte donet](/images/wp/approche-1-1.svg)
+![EMDR psychologie en ligne psychothérapie benedicte donet](../../assets/images/wp/approche-1-1.svg)
 
 ### Un cadre chaleureux et sécurisant
 
 J’ai à cœur de vous offrir un espace de confiance et un environnement chaleureux pour vous permettre de **vous ouvrir à votre propre rythme**.  
 Je suis consciente du caractère sacré et vulnérable d’une relation thérapeutique, et je m’engage à préserver cette confiance en maintenant la **qualité de ma présence** et en respectant strictement le secret professionnel.
 
-![EMDR psychologie en ligne psychothérapie](/images/wp/approche-2-1.svg)
+![EMDR psychologie en ligne psychothérapie](../../assets/images/wp/approche-2-1.svg)
 
 ### Une pratique holistique, adaptée à chacun
 
 Ma pratique est guidée par une vision holistique de la psychologie, qui consiste à **prendre en compte l’Être dans sa totalité**. Ainsi, mon approche envers l’Être humain tient compte de ses dimensions physiques, mentales, émotionnelles, familiales, sociales, culturelles et spirituelles. Je crois que nous possédons tous un potentiel de guérison et de croissance personnelle extraordinaire, et ma mission est de **vous accompagner sur votre propre chemin**, en douceur et en respectant votre rythme.
 
-![psychothérapie EMDR psychologie en ligne](/images/wp/approche-3-1.svg)
+![psychothérapie EMDR psychologie en ligne](../../assets/images/wp/approche-3-1.svg)
 
 ### Une approche passionnée et engagée
 
@@ -65,7 +65,7 @@ Accompagnement autour de la sexualité
 
 Dans le domaine de la sexualité, je porte une attention particulière à favoriser une exploration délicate des traumatismes passés, de votre parcours personnel et de l’impact de ces expériences sur les difficultés que vous affrontez. Les troubles sexuels peuvent prendre différentes formes, notamment des douleurs lors des rapports, un manque d’intérêt ou de désir sexuel, des difficultés liées à l’excitation ou à l’orgasme, ou encore des défis à établir des relations intimes, entre autres.
 
-![masterclass psychologie en ligne benedicte donet](/images/wp/DSC06705.jpg)
+![masterclass psychologie en ligne benedicte donet](../../assets/images/wp/DSC06705.jpg)
 
 Quelles que soient les origines de vos difficultés, connues ou enfouies, nous entreprenons ensemble une exploration sensible et bienveillante de votre histoire, abordant ainsi les dimensions psychologiques et psychosomatiques des troubles que vous vivez. Mon intérêt pour l’exploration délicate de la sexualité, souvent entourée de tabous et de mystères, m’anime profondément. Dans le contexte familial, éducatif et social, il est indéniable qu’il existe un **manque important en matière d’éducation et de transmission sur la sexualité**.
 
@@ -90,7 +90,7 @@ Le travail psychothérapeutique que nous entreprendrons ensemble ne vise pas seu
 
 \* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](/infos-pratiques/) pour aborder ce sujet.
 
-![EMDR psychologie en ligne benedicte donet psychothérapeute](/images/wp/DSCF1201.jpg)
+![EMDR psychologie en ligne benedicte donet psychothérapeute](../../assets/images/wp/DSCF1201.jpg)
 
 ## Des questions ?
 

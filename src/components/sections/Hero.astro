@@ -1,16 +1,25 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Button from "@/components/common/Button.astro";
+import SiteImage from "@/components/common/SiteImage.astro";
 
 interface Props {
   title: string;
   subtitle: string;
   image?: string;
+  imageAlt?: string;
   ctaLabel: string;
   ctaUrl: string;
 }
 
-const { title, subtitle, image, ctaLabel, ctaUrl } = Astro.props;
+const {
+  title,
+  subtitle,
+  image,
+  imageAlt = "Bénédicte Donet, psychologue en ligne",
+  ctaLabel,
+  ctaUrl,
+} = Astro.props;
 ---
 
 <section class="hero">
@@ -24,11 +33,11 @@ const { title, subtitle, image, ctaLabel, ctaUrl } = Astro.props;
       {
         image && (
           <div class="hero-image">
-            <img
+            <SiteImage
               src={image}
-              alt="Bénédicte Donet, psychologue en ligne"
-              width="480"
-              height="480"
+              alt={imageAlt}
+              width={480}
+              height={480}
               loading="eager"
               fetchpriority="high"
             />
@@ -63,7 +72,7 @@ const { title, subtitle, image, ctaLabel, ctaUrl } = Astro.props;
     font-family: var(--font-heading);
   }
 
-  .hero-image img {
+  .hero-image :global(img) {
     border-radius: var(--radius-md);
     margin-inline: auto;
   }
@@ -78,7 +87,7 @@ const { title, subtitle, image, ctaLabel, ctaUrl } = Astro.props;
       order: -1;
     }
 
-    .hero-image img {
+    .hero-image :global(img) {
       max-width: 320px;
     }
   }

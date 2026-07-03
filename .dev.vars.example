@@ -1,0 +1,8 @@
+# Secrets OAuth GitHub pour Decap CMS.
+# Copier en .dev.vars pour npm run pages:dev (callback : http://localhost:8788/api/callback).
+#
+# En préprod Cloudflare Pages, créer une OAuth App avec :
+#   Homepage  → https://benedicte-donet.pages.dev
+#   Callback  → https://benedicte-donet.pages.dev/api/callback
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=

@@ -23,6 +23,7 @@ const home = await getHomeSettings();
     title={home.hero.title}
     subtitle={home.hero.subtitle}
     image={home.hero.image}
+    imageAlt="Bénédicte Donet, psychologue en ligne spécialisée EMDR et trauma"
     ctaLabel={home.hero.primaryCtaLabel}
     ctaUrl={home.hero.primaryCtaUrl}
   />
@@ -33,7 +34,7 @@ const home = await getHomeSettings();
     ctaLabel={home.intro.ctaLabel}
     ctaUrl={home.intro.ctaUrl}
     image={home.intro.image}
-    imageAlt="Bénédicte Donet"
+    imageAlt="Portrait de Bénédicte Donet, psychologue en ligne"
   />
 
   <TextImage
@@ -59,6 +60,7 @@ const home = await getHomeSettings();
     ctaLabel={home.masterclass.ctaLabel}
     ctaUrl={home.masterclass.ctaUrl}
     image={home.masterclass.image}
+    imageAlt="Affiche des masterclass et programmes de méditation en ligne"
   />
 
   <QuoteBlock text={home.quote.text} author={home.quote.author} />

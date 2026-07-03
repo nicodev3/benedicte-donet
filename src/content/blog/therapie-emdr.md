@@ -3,7 +3,7 @@ title: "Qu’est-ce que la thérapie EMDR ?"
 excerpt: "Vous traversez une période difficile, ou portez en vous un vécu douloureux qui semble encore peser ? L’EMDR (Eye Movement Desensitization and Reprocessing) est une méthode thérapeutique reconnue qui permet de traiter les traumatismes psychiques en profondeur. Dans cet article, découvrez comment cette approche douce et puissante peut vous aider à retrouver plus de légèreté et de sécurité intérieure, à votre rythme."
 date: 2025-05-20T07:43:13Z
 updated: 2026-06-08T12:33:19Z
-image: "/images/wp/EMDR-therapie-scaled.jpeg"
+image: "../../assets/images/wp/EMDR-therapie-scaled.jpeg"
 imageAlt: "therapie emdr definition"
 seoTitle: "Qu’est-ce que la thérapie EMDR ?"
 seoDescription: "Vous traversez une période difficile, ou portez en vous un vécu douloureux qui semble encore peser ? L’EMDR (Eye Movement Desensitization and Reprocessing) est une méthode thérapeutique reconnue qui permet de traiter les traumatismes psychiques en profondeur. Dans cet article, découvrez comment cette approche douce et puissante peut vous aider à retrouver plus de légèreté et de sécurité intérieure, à votre rythme."
@@ -12,7 +12,7 @@ draft: false
 
 # Une approche douce et reconnue
 
-![](/images/wp/EMDR-therapie-1620x1080.jpeg)
+![Séance de thérapie EMDR, illustration de la désensibilisation](../../assets/images/wp/EMDR-therapie-scaled.jpeg)
 
 La psycho-**thérapie EMDR** (Eye Movement Desensitization and Reprocessing) est une approche psychothérapeutique reconnue pour son efficacité dans le traitement des **traumatismes psychiques**, de l’**anxiété**, des **phobies** ou encore du **stress post-traumatique**.
 
@@ -48,7 +48,7 @@ Oui. Le soin psychologique par EMDR est une méthode sûre et respectueuse. Cont
 
 L’EMDR est souvent complétée par d’autres outils, comme la **pleine conscience**, le **travail corporel** ou la **respiration guidée**, afin de soutenir un retour à l’équilibre plus profond.
 
-![](/images/wp/therapie-EMDR-1920x834.jpeg)
+![Schéma illustrant le processus de retraitement EMDR](../../assets/images/wp/therapie-EMDR-scaled.jpeg)
 
 ## En conclusion
 

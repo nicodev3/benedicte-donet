@@ -13,7 +13,7 @@ draft: false
 
 # La photothérapie
 
-![photothérapeute benedicte donet séance photo confiance en soi](/images/wp/autoportrait-Bene.png)
+![photothérapeute benedicte donet séance photo confiance en soi](../../assets/images/wp/autoportrait-Bene.png)
 
 ## A propos
 
@@ -31,21 +31,21 @@ Dans une société qui nous pousse instinctivement à juger et à rejeter certai
 
 [
 
-](/images/wp/20200802Bene_Clara-one-step-closer-to-love_1022-scaled.jpg)[
+![Séance photo photothérapie — portrait en extérieur](../../assets/images/wp/20200802Bene_Clara-one-step-closer-to-love_1022-scaled.jpg)[
 
-](/images/wp/DSCF1587-scaled.jpg)[
+![Séance photo confiance en soi — portrait naturel](../../assets/images/wp/DSCF1587-scaled.jpg)[
 
-](/images/wp/DSCF5037-scaled.jpg)[
+![Photothérapie — mise en lumière de la beauté intérieure](../../assets/images/wp/DSCF5037-scaled.jpg)[
 
-](/images/wp/DSCF5669-scaled.jpg)[
+![Séance photo bienveillance et amour de soi](../../assets/images/wp/DSCF5669-scaled.jpg)[
 
-](/images/wp/DSCF7418-1-scaled.jpg)[
+![Portrait photothérapie confiance en soi](../../assets/images/wp/DSCF7418-1-scaled.jpg)[
 
-](/images/wp/DSCF7806-1-scaled.jpg)
+![Séance photo célébration du corps](../../assets/images/wp/DSCF7806-1-scaled.jpg)
 
 ## Mes offres de photothérapie
 
-![séance photo confiance en soi photothérapie](/images/wp/photoshoot-1-e1693227930198.png)
+![séance photo confiance en soi photothérapie](../../assets/images/wp/photoshoot-1-e1693227930198.png)
 
 ### Les graines d'amour
 
@@ -59,7 +59,7 @@ Durée : ~ **3 heures** ~
 
 Prix : **300 euros**
 
-![séance photo confiance en soi phototherapie psy](/images/wp/photoshoot-2-e1693228035506.png)
+![séance photo confiance en soi phototherapie psy](../../assets/images/wp/photoshoot-2-e1693228035506.png)
 
 ### Un jardin d'amour
 
@@ -98,7 +98,7 @@ Nous nous familiarisons avec vos aspirations et prendrons le temps d’écouter 
 Une Seconde Rencontre  
 Nous approfondirons le travail amorcé lors de notre première séance, en ouvrant un espace d’écoute pour les émotions présentes et pour la libération des blocages entravant l’amour de soi. Des méthodes variées telles que la parole, l’EMDR, la constellation familiale ou les pratiques somatiques seront proposées.
 
-![séance photo confiance en soi amour phototherapie](/images/wp/DSCF7440-scaled.jpg)
+![séance photo confiance en soi amour phototherapie](../../assets/images/wp/DSCF7440-scaled.jpg)
 
 Le Photoshoot  
 Pendant 2 heures, nous plongerons dans la photographie et la sensation pour explorer les thèmes abordés lors de notre rencontre. Les émotions et les états d’esprit seront accueillis avec bienveillance. Les outils utilisés incluent la méditation, la danse, la respiration, les mouvements et la parole.
@@ -108,19 +108,19 @@ Je prendrai le temps d’éditer les photos avec toute ma sensibilité et ma pas
 
 [
 
-](/images/wp/DSCF8469-scaled.jpg)[
+![Galerie photothérapie — portrait expressif](../../assets/images/wp/DSCF8469-scaled.jpg)[
 
-](/images/wp/DSCF8152-scaled.jpg)[
+![Galerie photothérapie — séance en lumière naturelle](../../assets/images/wp/DSCF8152-scaled.jpg)[
 
-](/images/wp/DSCF5184-scaled.jpg)[
+![Galerie photothérapie — moment d'introspection](../../assets/images/wp/DSCF5184-scaled.jpg)[
 
-](/images/wp/DSCF4153-scaled.jpg)[
+![Galerie photothérapie — connexion à soi](../../assets/images/wp/DSCF4153-scaled.jpg)[
 
-](/images/wp/DSCF3002-scaled.jpg)[
+![Galerie photothérapie — célébration de la singularité](../../assets/images/wp/DSCF3002-scaled.jpg)[
 
-](/images/wp/DSCF2968-scaled.jpg)
+![Galerie photothérapie — amour de soi](../../assets/images/wp/DSCF2968-scaled.jpg)
 
-![Bénédicte Donet séance photo pour avoir confiance en soi](/images/wp/DSCF1287.jpg)
+![Bénédicte Donet séance photo pour avoir confiance en soi](../../assets/images/wp/DSCF1287.jpg)
 
 Je suis impatiente de vous offrir l’une ou l’autre de ces expériences.  
 Les deux choix partagent les mêmes valeurs et intentions :  

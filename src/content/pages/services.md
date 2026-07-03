@@ -20,7 +20,7 @@ Mes spécialités :
 -   La pratique de l’Emdr
 -   Pratiques psycho-corporelles
 
-![psychologue en visio benedicte donet](/images/wp/benedicte-Teleconsultation.png)
+![psychologue en visio benedicte donet](../../assets/images/wp/benedicte-Teleconsultation.png)
 
 ## Je vous accompagne à travers divers outils
 
@@ -44,9 +44,9 @@ Les principales modalités que j’utilise dans mes séances sont :
 
 [En savoir plus](/psychotherapie/)
 
-![psychologue en visio emdr](/images/wp/psycho-services.png)
+![psychologue en visio emdr](../../assets/images/wp/psycho-services.png)
 
-![psychologue en visio confiance en soi](/images/wp/DSCF7418-scaled.jpg)
+![psychologue en visio confiance en soi](../../assets/images/wp/DSCF7418-scaled.jpg)
 
 ## Photo-thérapie
 
@@ -65,7 +65,7 @@ C’est avec joie que je partage ce que j’ai acquis au fil de nombreuses anné
 
 [En savoir plus](/masterclass/)
 
-![programme de méditation en ligne psychologue](/images/wp/DSC07682.jpg)
+![programme de méditation en ligne psychologue](../../assets/images/wp/DSC07682.jpg)
 
 Vous pensez être la peine, en réalité vous êtes le médicament qui la guérit. Vous pensez être la serrure de votre cœur, en réalité vous êtes la clé qui l’ouvre.
 
@@ -98,7 +98,7 @@ En tant que psychologue en visio, dans mon accompagnement, j'aime créer un envi
 -   04/06/2026
 -   [Pleine conscience](/category/pleine-conscience/), [Trauma](/category/trauma/)
 
-[![bienfaits dissociation méditation](/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg)](/habiter-son-corps/)
+[![bienfaits dissociation méditation](../../assets/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg)](/habiter-son-corps/)
 
 #### [Exploration de croyance: Un état de paix continue est-il vraiment impossible ?](/exploration-de-croyance-un-etat-de-paix-continue-est-il-vraiment-impossible/)
 
@@ -107,7 +107,7 @@ J’ai longtemps cru que le bonheur demandait des efforts. Qu’il fallait trava
 -   17/04/2026
 -   [EMDR](/category/emdr/), [Pleine conscience](/category/pleine-conscience/), [Psycho](/category/psycho/), [Psychologie positive](/category/psychologie-positive/), [Trauma](/category/trauma/)
 
-[![公園　新緑](/images/wp/AdobeStock_150001132-1-scaled.jpeg)](/exploration-de-croyance-un-etat-de-paix-continue-est-il-vraiment-impossible/)
+[![公園　新緑](../../assets/images/wp/AdobeStock_150001132-1-scaled.jpeg)](/exploration-de-croyance-un-etat-de-paix-continue-est-il-vraiment-impossible/)
 
 #### [L’EMDR : un processus naturel, pas une solution magique](/emdr-traitement-trauma-processus-naturel/)
 
@@ -116,7 +116,7 @@ L’EMDR respecte profondément le fonctionnement naturel du cerveau. Il n’imp
 -   28/12/2025
 -   [EMDR](/category/emdr/), [Psycho](/category/psycho/), [Trauma](/category/trauma/)
 
-[![EMDR traitement traumatisme](/images/wp/daniel-oberg-41Wuv1xsmGM-unsplash-scaled.jpg)](/emdr-traitement-trauma-processus-naturel/)
+[![EMDR traitement traumatisme](../../assets/images/wp/daniel-oberg-41Wuv1xsmGM-unsplash-scaled.jpg)](/emdr-traitement-trauma-processus-naturel/)
 
 #### [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/)
 
@@ -125,7 +125,7 @@ Vous traversez une période difficile, ou portez en vous un vécu douloureux qui
 -   20/05/2025
 -   [EMDR](/category/emdr/), [Psycho](/category/psycho/), [Trauma](/category/trauma/)
 
-[![therapie emdr definition](/images/wp/EMDR-therapie-scaled.jpeg)](/therapie-emdr/)
+[![therapie emdr definition](../../assets/images/wp/EMDR-therapie-scaled.jpeg)](/therapie-emdr/)
 
 #### [Traumatisme et relation amoureuse : comprendre l’impact pour mieux guérir](/traumatisme-relation-amoureuse/)
 
@@ -134,7 +134,7 @@ Les traumatismes laissent une empreinte durable sur la psyché humaine, influen�
 -   30/01/2024
 -   [Psycho](/category/psycho/), [Trauma](/category/trauma/)
 
-[![traumatisme et relation amoureuse](/images/wp/justin-follis-A7Um4oi-UYU-unsplash-scaled.jpg)](/traumatisme-relation-amoureuse/)
+[![traumatisme et relation amoureuse](../../assets/images/wp/justin-follis-A7Um4oi-UYU-unsplash-scaled.jpg)](/traumatisme-relation-amoureuse/)
 
 #### [Mémoire et traumatisme : comprendre leur lien pour mieux guérir](/memoire-traumatisme-guerison/)
 
@@ -143,7 +143,7 @@ La mémoire est un mécanisme complexe qui façonne notre compréhension du mond
 -   27/01/2024
 -   [EMDR](/category/emdr/), [Psycho](/category/psycho/), [Trauma](/category/trauma/)
 
-[![guérir d'un traumatisme](/images/wp/ian-dooley-FgSyP02I0gw-unsplash-scaled.jpg)](/memoire-traumatisme-guerison/)
+[![guérir d'un traumatisme](../../assets/images/wp/ian-dooley-FgSyP02I0gw-unsplash-scaled.jpg)](/memoire-traumatisme-guerison/)
 
 #### [Dissociation et reconnexion : comment la méditation peut aider](/dissociation-comprendre-le-lien-avec-la-meditation/)
 
@@ -152,7 +152,7 @@ La dissociation, un phénomène complexe qui peut affecter la santé mentale, es
 -   25/01/2024
 -   [Pleine conscience](/category/pleine-conscience/), [Psycho](/category/psycho/)
 
-[![Dissociation méditation bienfaits](/images/wp/motoki-tonn-ezOKZhYJAFo-unsplash-scaled.jpg)](/dissociation-comprendre-le-lien-avec-la-meditation/)
+[![Dissociation méditation bienfaits](../../assets/images/wp/motoki-tonn-ezOKZhYJAFo-unsplash-scaled.jpg)](/dissociation-comprendre-le-lien-avec-la-meditation/)
 
 #### [Méditation pleine conscience thérapie : une synergie puissante pour le bien-être](/meditation-pleine-conscience-therapie/)
 
@@ -161,7 +161,7 @@ Dans la quête du bien-être mental, la combinaison de la méditation et de la t
 -   23/01/2024
 -   [Pleine conscience](/category/pleine-conscience/), [Psycho](/category/psycho/)
 
-[![méditation pleine conscience thérapie](/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg)](/meditation-pleine-conscience-therapie/)
+[![méditation pleine conscience thérapie](../../assets/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg)](/meditation-pleine-conscience-therapie/)
 
 #### [OUR RELATIONSHIP WITH MONEY](/en/our-relationship-with-money-therapy/)
 
@@ -170,7 +170,7 @@ Often, when one thinks about working with a psychologist, the idea of addressing
 -   30/10/2023
 -   [Positive psychology](/en/category/positive-psychology/), [Psycho-education](/en/category/psycho-education/), [relationshipwithmoney](/en/category/relationshipwithmoney/)
 
-[![probleme avec l'argent psychologie relation à l'argent](/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/en/our-relationship-with-money-therapy/)
+[![probleme avec l'argent psychologie relation à l'argent](../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/en/our-relationship-with-money-therapy/)
 
 #### [La relation à l’argent : un sujet universel et souvent négligé](/relation-a-l-argent-psychologie/)
 
@@ -179,4 +179,4 @@ Souvent quand on pense a travailler avec un psychologue, on ne pense pas nécess
 -   30/10/2023
 -   [relational'argent](/category/relationalargent/), [Trauma](/category/trauma/)
 
-[![probleme avec l'argent psychologie relation à l'argent](/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/relation-a-l-argent-psychologie/)
+[![probleme avec l'argent psychologie relation à l'argent](../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/relation-a-l-argent-psychologie/)

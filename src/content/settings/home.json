@@ -2,7 +2,7 @@
   "hero": {
     "title": "Psychologue en ligne",
     "subtitle": "Psychologue clinicienne en visio | Trauma-thérapies | EMDR | Sexualité",
-    "image": "/images/wp/bene-accueil-1.png",
+    "image": "/images/wp/hero-accueil-psychologue-en-ligne.png",
     "primaryCtaLabel": "Je prends rendez-vous",
     "primaryCtaUrl": "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet"
   },
@@ -11,7 +11,7 @@
     "text": "Je suis Bénédicte Donet, psychologue en ligne et psychothérapeute en ligne passionnée. J'ai à cœur de vous guider dans ce que vous traversez pour évoluer d'un état de survie, peurs, blocages ou difficultés, vers l'aisance, la paix et l'harmonie que vous recherchez. Mon expérience et mes connaissances prennent leurs sources dans une approche holistique. Lors de nos séances, nous explorons toutes les dimensions de votre expérience pour découvrir ensemble ce qui nécessite un accompagnement vers une transformation. Au travers différents outils (EMDR, IFS, parole, méditation), je vous accompagne dans l'exploration des différentes facettes de votre être et soutiens les changements que vous souhaitez accueillir dans votre vie. Je crois fermement en l'incroyable potentiel de guérison et de croissance personnelle chez chacun. Je m'engage à vous offrir un espace thérapeutique sacré, où votre vulnérabilité et confiance peuvent naturellement émerger et la guérison est facilitée.",
     "ctaLabel": "Découvrir ma pratique",
     "ctaUrl": "/a-propos/",
-    "image": "/images/wp/DSCF0359.jpg"
+    "image": "/images/wp/portrait-benedicte-donet-bienvenue.jpg"
   },
   "whyOnline": {
     "title": "Pourquoi choisir une psychologue en ligne ?",
@@ -27,21 +27,21 @@
         "text": "Pendant nos séances de psychologie en ligne, nous explorons les différentes dimensions de votre Être afin de vous accompagner vers le changement que vous souhaitez accueillir dans votre vie : votre histoire, peurs, croyances, émotions, votre style d'attachement, votre manière de communiquer et de percevoir le monde. Chaque thérapie est unique, en douceur et en respectant votre rythme.",
         "url": "/psychotherapie/",
         "linkLabel": "Découvrir la psychothérapie",
-        "image": "/images/wp/AdobeStock_150001132-scaled.jpeg"
+        "image": "/images/wp/illustration-seance-individuelle-psychologie.jpeg"
       },
       {
         "title": "Ateliers et programmes",
         "text": "Au travers des ateliers et programmes, je vous offre des pratiques et savoirs transformateurs : le traumatisme, la régulation du système nerveux, la sexualité, la méditation, les pratiques psycho-corporelles. La connaissance de soi et de nos fonctionnements est nécessaire pour pouvoir s'accueillir et vivre avec davantage d'harmonie.",
         "url": "/masterclass/",
         "linkLabel": "Voir les masterclass",
-        "image": "/images/wp/AdobeStock_213461157-scaled.jpeg"
+        "image": "/images/wp/illustration-ateliers-meditation.jpeg"
       },
       {
         "title": "Photothérapie",
         "text": "Au travers de la photothérapie, je vous accompagne à explorer votre relation au corps. C'est un temps et un espace dédié à l'amour de soi et à l'accueil avec bienveillance de ce qui a besoin d'être mis en lumière et senti.",
         "url": "/phototherapie/",
         "linkLabel": "Découvrir la photothérapie",
-        "image": "/images/wp/DSC07660.jpg"
+        "image": "/images/wp/illustration-phototherapie-confiance.jpg"
       }
     ]
   },
@@ -69,7 +69,7 @@
     "text": "Découvrez une expérience d'exploration personnelle grâce à des masterclass et des programmes psycho-éducatifs en ligne. Chacun de ces ateliers est une invitation à pratiquer des outils tels que la méditation, l'amour de soi, la régulation du système nerveux et l'exploration de la sexualité pour cultiver une compréhension profonde de soi-même.",
     "ctaLabel": "Je réserve",
     "ctaUrl": "/masterclass/",
-    "image": "/images/wp/Affiche-masterclass-test.png"
+    "image": "/images/wp/affiche-masterclasses-programmes.png"
   },
   "quote": {
     "text": "Ta tâche n'est pas de chercher l'amour, mais simplement de chercher et trouver tous les obstacles que tu as construits contre l'amour.",

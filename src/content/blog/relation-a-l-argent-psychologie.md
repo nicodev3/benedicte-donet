@@ -3,14 +3,14 @@ title: "La relation à l’argent : un sujet universel et souvent négligé"
 excerpt: "Souvent quand on pense a travailler avec un psychologue, on ne pense pas nécessairement a y aller pour travailler sur sa relation a l’argent. Et pourtant, c’est un sujet qui touche tout le monde, chaque jour. La manière dont nous nous sentons et entrons en relation avec l’argent dit énormément de ce que nous avons vécu, ce que nos parents et grand parents ont vécu en relation avec l’abondance ou le manque financier."
 date: 2023-10-30T07:13:05Z
 updated: 2026-06-08T12:28:51Z
-image: "/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg"
+image: "../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg"
 imageAlt: "probleme avec l'argent psychologie relation à l'argent"
 seoTitle: "La relation à l’argent : un sujet universel et souvent négligé"
 seoDescription: "Souvent quand on pense a travailler avec un psychologue, on ne pense pas nécessairement a y aller pour travailler sur sa relation a l’argent. Et pourtant, c’est un sujet qui touche tout le monde, chaque jour. La manière dont nous nous sentons et entrons en relation avec l’argent dit énormément de ce que nous avons vécu, ce que nos parents et grand parents ont vécu en relation avec l’abondance ou le manque financier."
 draft: false
 ---
 
-![](/images/wp/andre-taissin-5OUMf1Mr5pU-unsplash-1620x1080.jpg)
+![Pièces de monnaie, illustration de la relation à l'argent](../../assets/images/wp/andre-taissin-5OUMf1Mr5pU-unsplash-scaled.jpg)
 
 Souvent, lorsqu’on pense à consulter un psychologue, aborder sa **relation à l’argent** ne semble pas être une priorité. Pourtant, c’est un thème qui nous touche tous, chaque jour.
 
@@ -33,7 +33,7 @@ Comprendre sa **relation à l’argent**, c’est se libérer d’idées préco
 
 Ce lien est souvent complexe, influencé profondément par le passé, l’environnement familial et les croyances personnelles. L’exploration de ces dimensions peut transformer votre comportement face à l’argent.
 
-![](/images/wp/christine-roy-ir5MHI6rPg0-unsplash-1613x1080.jpg)
+![Personne réfléchissant à sa relation avec l'argent](../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)
 
 ## Questions clés pour explorer votre rapport à l’argent
 

@@ -1,21 +1,25 @@
 # =====================================================================
 # Decap CMS — éditeur de contenu pour Bénédicte Donet
 # Seules les zones listées ici sont éditables par la cliente.
+#
+# URL publique actuelle : https://benedicte-donet.pages.dev
+# Production (à activer à la bascule DNS) : https://www.benedictedonet-psyenligne.com
 # =====================================================================
 
 backend:
   name: github
-  repo: OWNER/benedicte-donet # TODO : remplacer par le dépôt GitHub réel
+  repo: nicodev3/benedicte-donet
   branch: main
-  base_url: https://api.netlify.com # ou service OAuth auto-hébergé, voir README
-  # Pour Cloudflare Pages, prévoir un worker OAuth (voir docs/cms-editor-guide.md)
+  # OAuth GitHub via Pages Functions — doit correspondre à l’URL où /admin/ est servi
+  base_url: https://benedicte-donet.pages.dev
+  auth_endpoint: api/auth
 
 locale: fr
-site_url: https://www.benedictedonet-psyenligne.com
-display_url: https://www.benedictedonet-psyenligne.com
-logo_url: /images/wp/logo-Benedicte-Donet-transparent-1.png
+site_url: https://benedicte-donet.pages.dev
+display_url: https://benedicte-donet.pages.dev
+logo_url: /images/wp/logo-benedicte-donet.png
 
-media_folder: "public/images/uploads"
+media_folder: "src/assets/images/uploads"
 public_folder: "/images/uploads"
 
 # Brouillons validés avant publication
@@ -268,6 +272,16 @@ collections:
               - { label: "Lien (URL)", name: "url", widget: "string" }
               - { label: "Ordre", name: "order", widget: "number", value_type: "int" }
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - label: "Sous-menu"
+                name: "children"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                hint: "Optionnel — affiche un menu déroulant au survol. Incluez « Vue d'ensemble » en premier pour la page parente."
+                fields:
+                  - { label: "Libellé", name: "label", widget: "string" }
+                  - { label: "Lien (URL)", name: "url", widget: "string" }
+                  - { label: "Visible", name: "visible", widget: "boolean", default: true }
 
       - name: "footer"
         label: "Pied de page"

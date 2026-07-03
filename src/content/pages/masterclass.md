@@ -30,30 +30,30 @@ J’ai à cœur de vous transmettre les enseignements qui m’aident et aident m
 
 ## Masterclass et programmes
 
--   [![se reposer en soi Programme de méditation](/images/wp/se-reposer-en-soi-bis.png)
+-   [![se reposer en soi Programme de méditation](../../assets/images/wp/se-reposer-en-soi-bis.png)
     
     ## PROGRAMME DE MEDITATION EN LIGNE :  
     Se Reposer en Soi
     
     150.00€](/produit/programme-de-meditation-se-reposer-en-soi/) [Ajouter au panier](/wp-json/wp/v2/pages?per_page=100&page=1&_embed=1&add-to-cart=5998)
--   [![Masterclass méditation amour cultiver amour](/images/wp/cultiver-lamour.png)
+-   [![Masterclass méditation amour cultiver amour](../../assets/images/wp/cultiver-lamour.png)
     
     ## Masterclass : CULTIVER L’AMOUR
     
     45.00€](/produit/masterclass-cultiver-lamour/) [Ajouter au panier](/wp-json/wp/v2/pages?per_page=100&page=1&_embed=1&add-to-cart=5339)
--   [![programme amour de soi meditation en ligne](/images/wp/affiche-meditation-1.png)
+-   [![programme amour de soi meditation en ligne](../../assets/images/wp/affiche-meditation-1.png)
     
     ## PROGRAMME amour de soi :  
     Un pas de plus vers ton monde intérieur
     
     465.00€  –  765.00€Plage de prix : 465.00€ à 765.00€](/produit/programme-de-meditation-un-pas-de-plus-vers-ton-monde-interieur/) [Choix des options](/produit/programme-de-meditation-un-pas-de-plus-vers-ton-monde-interieur/) Ce produit a plusieurs variations. Les options peuvent être choisies sur la page du produit
--   [![méditation en ligne atelier en ligne](/images/wp/affiche-au-coeur-de-ta-poitrine.png)
+-   [![méditation en ligne atelier en ligne](../../assets/images/wp/affiche-au-coeur-de-ta-poitrine.png)
     
     ## Masterclass : AU CŒUR DE TA POITRINE
     
     45.00€](/produit/masterclass-au-coeur-de-ta-poitrine/) [Ajouter au panier](/wp-json/wp/v2/pages?per_page=100&page=1&_embed=1&add-to-cart=4671)
 
-![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](/images/wp/DSCF1217.jpg)
+![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](../../assets/images/wp/DSCF1217.jpg)
 
 ## Des questions ?
 

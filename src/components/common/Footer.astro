@@ -1,6 +1,7 @@
 ---
 import Container from "./Container.astro";
 import Button from "./Button.astro";
+import SiteImage from "./SiteImage.astro";
 import { getGlobalSettings, getFooterSettings } from "@/lib/settings";
 
 const global = await getGlobalSettings();
@@ -13,11 +14,11 @@ const year = new Date().getFullYear();
   <Container>
     <div class="footer-grid">
       <div class="footer-about">
-        <img
-          src="/images/wp/logo-Benedicte-Donet-transparent-1.png"
-          alt={global.siteName}
-          width="150"
-          height="60"
+        <SiteImage
+          src="/images/wp/logo-benedicte-donet.png"
+          alt={`Logo ${global.siteName}`}
+          width={150}
+          height={60}
           loading="lazy"
         />
         <p>{footer.text}</p>
@@ -104,7 +105,7 @@ const year = new Date().getFullYear();
     gap: var(--space-lg);
   }
 
-  .footer-about img {
+  .footer-about :global(img) {
     height: 56px;
     width: auto;
     margin-bottom: var(--space-sm);

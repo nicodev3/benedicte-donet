@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
+import SiteImage from "@/components/common/SiteImage.astro";
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
@@ -33,12 +34,14 @@ const formatDate = (date: Date) =>
           <article class="post-card">
             {post.data.image && (
               <a href={`/${post.id}/`} tabindex="-1" aria-hidden="true">
-                <img
+                <SiteImage
                   src={post.data.image}
-                  alt=""
+                  alt={post.data.imageAlt || post.data.title}
+                  width={400}
+                  height={260}
+                  widths={[400, 800]}
+                  sizes="(max-width: 700px) 100vw, 400px"
                   loading="lazy"
-                  width="400"
-                  height="260"
                 />
               </a>
             )}
@@ -95,7 +98,7 @@ const formatDate = (date: Date) =>
     transform: translateY(-3px);
   }
 
-  .post-card img {
+  .post-card :global(img) {
     width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;

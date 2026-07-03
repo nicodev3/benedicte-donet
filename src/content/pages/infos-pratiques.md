@@ -11,7 +11,7 @@ draft: false
 
 # Infos pratiques
 
-![Bénédicte Donet psychologue en ligne avis](/images/wp/portrait-infos-pratiques-1.png)
+![Bénédicte Donet psychologue en ligne avis](../../assets/images/wp/portrait-infos-pratiques-1.png)
 
 ## Prise de rendez-vous
 
