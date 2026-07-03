@@ -1,0 +1,88 @@
+---
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import Button from "@/components/common/Button.astro";
+
+interface Props {
+  title: string;
+  steps: { title: string; text: string }[];
+  ctaLabel: string;
+  ctaUrl: string;
+}
+
+const { title, steps, ctaLabel, ctaUrl } = Astro.props;
+---
+
+<Section>
+  <Container>
+    <h2 class="steps-title">{title}</h2>
+    <ol class="steps">
+      {
+        steps.map((step, index) => (
+          <li class="step">
+            <span class="step-number" aria-hidden="true">
+              {index + 1}
+            </span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="steps-cta">
+      <Button href={ctaUrl}>{ctaLabel}</Button>
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .steps-title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: step;
+  }
+
+  .step {
+    text-align: center;
+    padding: var(--space-md);
+  }
+
+  .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-full);
+    background: var(--color-secondary);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .step h3 {
+    margin-bottom: var(--space-xs);
+    font-size: var(--text-xl);
+  }
+
+  .step p {
+    color: var(--color-text-soft);
+    font-size: var(--text-sm);
+  }
+
+  .steps-cta {
+    text-align: center;
+    margin-top: var(--space-xl);
+  }
+</style>

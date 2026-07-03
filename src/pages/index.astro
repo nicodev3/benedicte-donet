@@ -1,0 +1,71 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/sections/Hero.astro";
+import TextImage from "@/components/sections/TextImage.astro";
+import ServicesGrid from "@/components/sections/ServicesGrid.astro";
+import AppointmentSteps from "@/components/sections/AppointmentSteps.astro";
+import CtaBlock from "@/components/sections/CtaBlock.astro";
+import QuoteBlock from "@/components/sections/QuoteBlock.astro";
+import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
+import ContactBlock from "@/components/sections/ContactBlock.astro";
+import NewsletterBlock from "@/components/sections/NewsletterBlock.astro";
+import { getHomeSettings } from "@/lib/settings";
+
+const home = await getHomeSettings();
+---
+
+<BaseLayout
+  title={home.seoTitle}
+  description={home.seoDescription}
+  image={home.hero.image}
+>
+  <Hero
+    title={home.hero.title}
+    subtitle={home.hero.subtitle}
+    image={home.hero.image}
+    ctaLabel={home.hero.primaryCtaLabel}
+    ctaUrl={home.hero.primaryCtaUrl}
+  />
+
+  <TextImage
+    title={home.intro.title}
+    text={home.intro.text}
+    ctaLabel={home.intro.ctaLabel}
+    ctaUrl={home.intro.ctaUrl}
+    image={home.intro.image}
+    imageAlt="Bénédicte Donet"
+  />
+
+  <TextImage
+    title={home.whyOnline.title}
+    text={home.whyOnline.text}
+    ctaLabel={home.whyOnline.ctaLabel}
+    ctaUrl={home.whyOnline.ctaUrl}
+    tone="muted"
+  />
+
+  <ServicesGrid title={home.services.title} cards={home.services.cards} />
+
+  <AppointmentSteps
+    title={home.appointment.title}
+    steps={home.appointment.steps}
+    ctaLabel={home.appointment.ctaLabel}
+    ctaUrl={home.appointment.ctaUrl}
+  />
+
+  <CtaBlock
+    title={home.masterclass.title}
+    text={home.masterclass.text}
+    ctaLabel={home.masterclass.ctaLabel}
+    ctaUrl={home.masterclass.ctaUrl}
+    image={home.masterclass.image}
+  />
+
+  <QuoteBlock text={home.quote.text} author={home.quote.author} />
+
+  <ReviewsBlock title={home.reviews.title} items={home.reviews.items} />
+
+  <ContactBlock />
+
+  <NewsletterBlock />
+</BaseLayout>

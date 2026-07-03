@@ -1,0 +1,296 @@
+# =====================================================================
+# Decap CMS — éditeur de contenu pour Bénédicte Donet
+# Seules les zones listées ici sont éditables par la cliente.
+# =====================================================================
+
+backend:
+  name: github
+  repo: OWNER/benedicte-donet # TODO : remplacer par le dépôt GitHub réel
+  branch: main
+  base_url: https://api.netlify.com # ou service OAuth auto-hébergé, voir README
+  # Pour Cloudflare Pages, prévoir un worker OAuth (voir docs/cms-editor-guide.md)
+
+locale: fr
+site_url: https://www.benedictedonet-psyenligne.com
+display_url: https://www.benedictedonet-psyenligne.com
+logo_url: /images/wp/logo-Benedicte-Donet-transparent-1.png
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Brouillons validés avant publication
+publish_mode: editorial_workflow
+
+collections:
+  # ------------------------------------------------------------------
+  # BLOG — création libre d'articles
+  # ------------------------------------------------------------------
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Article"
+    folder: "src/content/blog"
+    create: true
+    format: "frontmatter"
+    extension: "md"
+    slug: "{{slug}}"
+    preview_path: "/{{slug}}/"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Titre", name: "title", widget: "string", hint: "Le titre principal de l'article." }
+      - label: "Extrait"
+        name: "excerpt"
+        widget: "text"
+        required: false
+        hint: "Résumé court affiché sur la page Blog (2-3 phrases)."
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - label: "Date de mise à jour"
+        name: "updated"
+        widget: "datetime"
+        required: false
+        hint: "À remplir uniquement si vous modifiez un article déjà publié."
+      - label: "Image principale"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Image affichée en haut de l'article et sur la page Blog."
+      - label: "Description de l'image"
+        name: "imageAlt"
+        widget: "string"
+        required: false
+        hint: "Décrivez l'image en quelques mots (important pour l'accessibilité et le référencement)."
+      - { label: "Contenu", name: "body", widget: "markdown" }
+      - label: "Titre SEO"
+        name: "seoTitle"
+        widget: "string"
+        required: false
+        hint: "Titre affiché dans Google (60 caractères max conseillé). Si vide, le titre de l'article est utilisé."
+      - label: "Meta description"
+        name: "seoDescription"
+        widget: "text"
+        required: false
+        hint: "Description affichée dans Google (155 caractères max conseillé)."
+      - label: "Brouillon"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        hint: "Activé = l'article n'est PAS visible sur le site."
+
+  # ------------------------------------------------------------------
+  # PAGES — modification des pages existantes uniquement (pas de création)
+  # ------------------------------------------------------------------
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "src/content/pages"
+    create: false
+    delete: false
+    format: "frontmatter"
+    extension: "md"
+    preview_path: "/{{slug}}/"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - label: "Description courte"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Utilisée comme introduction sous le titre (facultatif)."
+      - label: "Image principale"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Description de l'image"
+        name: "imageAlt"
+        widget: "string"
+        required: false
+      - { label: "Contenu", name: "body", widget: "markdown" }
+      - label: "Titre SEO"
+        name: "seoTitle"
+        widget: "string"
+        required: false
+        hint: "Titre affiché dans Google. Si vide, le titre de la page est utilisé."
+      - label: "Meta description"
+        name: "seoDescription"
+        widget: "text"
+        required: false
+        hint: "Description affichée dans Google (155 caractères max conseillé)."
+      - label: "Ordre"
+        name: "order"
+        widget: "hidden"
+        default: 0
+      - label: "Brouillon"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer une page sans en parler à votre webmaster."
+
+  # ------------------------------------------------------------------
+  # RÉGLAGES — fichiers uniques contrôlés
+  # ------------------------------------------------------------------
+  - name: "settings"
+    label: "Réglages du site"
+    files:
+      - name: "global"
+        label: "Coordonnées & réglages généraux"
+        file: "src/content/settings/global.json"
+        fields:
+          - { label: "Nom du site", name: "siteName", widget: "string" }
+          - { label: "Sous-titre / baseline", name: "baseline", widget: "string" }
+          - label: "Titre SEO par défaut"
+            name: "defaultSeoTitle"
+            widget: "string"
+            hint: "Utilisé quand une page n'a pas de titre SEO spécifique."
+          - label: "Meta description par défaut"
+            name: "defaultSeoDescription"
+            widget: "text"
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Téléphone", name: "phone", widget: "string" }
+          - label: "Lien de prise de rendez-vous (Doctolib)"
+            name: "appointmentUrl"
+            widget: "string"
+            hint: "Lien complet vers votre page Doctolib."
+          - { label: "Instagram", name: "instagramUrl", widget: "string", required: false }
+          - { label: "Facebook", name: "facebookUrl", widget: "string", required: false }
+          - label: "Zone d'activité"
+            name: "area"
+            widget: "string"
+            required: false
+            hint: "Ex : Téléconsultation en visio (Zoom / Doctolib)"
+
+      - name: "home"
+        label: "Page d'accueil"
+        file: "src/content/settings/home.json"
+        fields:
+          - label: "Bandeau principal (haut de page)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Sous-titre", name: "subtitle", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "Texte du bouton", name: "primaryCtaLabel", widget: "string" }
+              - label: "Lien du bouton"
+                name: "primaryCtaUrl"
+                widget: "string"
+                hint: "En général votre lien Doctolib. Ne pas modifier sans vérifier."
+          - label: "Bienvenue (présentation)"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Texte", name: "text", widget: "text" }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+          - label: "Pourquoi une psychologue en ligne ?"
+            name: "whyOnline"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Texte", name: "text", widget: "text" }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
+          - label: "Accompagnements proposés"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Titre de la section", name: "title", widget: "string" }
+              - label: "Cartes"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Texte", name: "text", widget: "text" }
+                  - { label: "Lien", name: "url", widget: "string" }
+                  - { label: "Texte du lien", name: "linkLabel", widget: "string", default: "En savoir plus" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
+          - label: "Comment prendre rendez-vous"
+            name: "appointment"
+            widget: "object"
+            fields:
+              - { label: "Titre de la section", name: "title", widget: "string" }
+              - label: "Étapes"
+                name: "steps"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Texte", name: "text", widget: "text" }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string" }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string" }
+          - label: "Masterclass & programmes"
+            name: "masterclass"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Texte", name: "text", widget: "text" }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string" }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string" }
+              - { label: "Image / affiche", name: "image", widget: "image", required: false }
+          - label: "Citation"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Texte", name: "text", widget: "text" }
+              - { label: "Auteur", name: "author", widget: "string" }
+          - label: "Avis de patients"
+            name: "reviews"
+            widget: "object"
+            fields:
+              - { label: "Titre de la section", name: "title", widget: "string" }
+              - label: "Avis"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.author}}"
+                fields:
+                  - { label: "Prénom / nom abrégé", name: "author", widget: "string" }
+                  - { label: "Texte de l'avis", name: "text", widget: "text" }
+          - label: "Titre SEO de l'accueil"
+            name: "seoTitle"
+            widget: "string"
+            required: false
+          - label: "Meta description de l'accueil"
+            name: "seoDescription"
+            widget: "text"
+            required: false
+
+      - name: "navigation"
+        label: "Menu de navigation"
+        file: "src/content/settings/navigation.json"
+        fields:
+          - label: "Éléments du menu"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.label}}"
+            hint: "Attention : ne modifiez pas les liens (URL) sans en parler à votre webmaster."
+            fields:
+              - { label: "Libellé", name: "label", widget: "string" }
+              - { label: "Lien (URL)", name: "url", widget: "string" }
+              - { label: "Ordre", name: "order", widget: "number", value_type: "int" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+      - name: "footer"
+        label: "Pied de page"
+        file: "src/content/settings/footer.json"
+        fields:
+          - { label: "Texte de présentation", name: "text", widget: "text" }
+          - label: "Liens rapides"
+            name: "quickLinks"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Libellé", name: "label", widget: "string" }
+              - { label: "Lien (URL)", name: "url", widget: "string" }
+          - label: "Liens légaux"
+            name: "legalLinks"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Libellé", name: "label", widget: "string" }
+              - { label: "Lien (URL)", name: "url", widget: "string" }
+          - label: "Bouton d'action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Texte", name: "label", widget: "string" }
+              - { label: "Lien", name: "url", widget: "string" }

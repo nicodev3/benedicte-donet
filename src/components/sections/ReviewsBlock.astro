@@ -1,0 +1,77 @@
+---
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+
+interface Props {
+  title: string;
+  items: { author: string; text: string }[];
+}
+
+const { title, items } = Astro.props;
+---
+
+<Section>
+  <Container>
+    <h2 class="reviews-title">{title}</h2>
+    <div class="reviews-grid">
+      {
+        items.map((review) => (
+          <figure class="review">
+            <blockquote>{review.text}</blockquote>
+            <figcaption>
+              <span class="stars" aria-label="5 étoiles sur 5">
+                ★★★★★
+              </span>
+              {review.author}
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .reviews-title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .review {
+    margin: 0;
+    padding: var(--space-md);
+    background: var(--color-bg-soft);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review blockquote {
+    border: none;
+    padding: 0;
+    font-style: normal;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    flex: 1;
+  }
+
+  .review figcaption {
+    margin-top: var(--space-sm);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stars {
+    color: var(--color-highlight);
+    letter-spacing: 2px;
+  }
+</style>

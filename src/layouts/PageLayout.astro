@@ -1,0 +1,69 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  page: CollectionEntry<"pages">;
+}
+
+const { page } = Astro.props;
+const { title, description, image, imageAlt, seoTitle, seoDescription } =
+  page.data;
+---
+
+<BaseLayout
+  title={seoTitle || title}
+  description={seoDescription || description}
+  image={image}
+>
+  <Section tone="soft" class="page-hero">
+    <Container narrow>
+      <h1>{title}</h1>
+      {description && <p class="page-description">{description}</p>}
+    </Container>
+  </Section>
+
+  {
+    image && (
+      <Container narrow>
+        <img
+          src={image}
+          alt={imageAlt || ""}
+          class="page-image"
+          loading="eager"
+        />
+      </Container>
+    )
+  }
+
+  <Container>
+    <article class="prose">
+      <slot />
+    </article>
+  </Container>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding-block: var(--space-xl);
+    text-align: center;
+  }
+
+  .page-description {
+    margin-top: var(--space-sm);
+    font-size: var(--text-lg);
+    color: var(--color-text-soft);
+  }
+
+  .page-image {
+    border-radius: var(--radius-md);
+    margin-block: var(--space-lg);
+    box-shadow: var(--shadow-soft);
+  }
+
+  article {
+    padding-block: var(--space-lg) var(--space-xl);
+  }
+</style>

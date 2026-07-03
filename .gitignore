@@ -1,0 +1,16 @@
+# Build
+dist/
+.astro/
+
+# Dépendances
+node_modules/
+
+# Environnement
+.env
+.env.*
+
+# Système
+.DS_Store
+
+# Wrangler
+.wrangler/

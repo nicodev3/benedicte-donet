@@ -1,0 +1,192 @@
+---
+import Container from "./Container.astro";
+import Button from "./Button.astro";
+import {
+  getGlobalSettings,
+  getNavigationSettings,
+} from "@/lib/settings";
+
+const global = await getGlobalSettings();
+const navigation = await getNavigationSettings();
+
+const items = navigation.items
+  .filter((item) => item.visible)
+  .sort((a, b) => a.order - b.order);
+
+const currentPath = Astro.url.pathname;
+
+function isActive(url: string): boolean {
+  if (url === "/") return currentPath === "/";
+  return currentPath.startsWith(url);
+}
+---
+
+<header class="header">
+  <Container>
+    <div class="header-inner">
+      <a href="/" class="brand" aria-label={global.siteName}>
+        <img
+          src="/images/wp/logo-Benedicte-Donet-transparent-1.png"
+          alt={global.siteName}
+          width="150"
+          height="60"
+          loading="eager"
+        />
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          {
+            items.map((item) => (
+              <li>
+                <a
+                  href={item.url}
+                  aria-current={isActive(item.url) ? "page" : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <Button href={global.appointmentUrl} class="nav-cta">
+          Prendre RDV
+        </Button>
+      </nav>
+    </div>
+  </Container>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: 0.6rem;
+  }
+
+  .brand img {
+    height: 56px;
+    width: auto;
+  }
+
+  .nav ul {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .nav a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav a:hover,
+  .nav a[aria-current="page"] {
+    color: var(--color-primary);
+  }
+
+  .nav :global(.nav-cta) {
+    font-size: var(--text-sm);
+    padding: 0.6em 1.4em;
+  }
+
+  /* Menu mobile en CSS pur (pas de JavaScript) */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .nav-toggle-label span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-text);
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  @media (max-width: 900px) {
+    .nav-toggle-label {
+      display: flex;
+    }
+
+    .nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .nav ul {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .nav a {
+      display: block;
+      padding: 0.7rem 0;
+      font-size: var(--text-base);
+    }
+
+    .nav-toggle:checked ~ .nav {
+      display: flex;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+</style>

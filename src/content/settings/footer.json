@@ -1,0 +1,19 @@
+{
+  "text": "Bénédicte Donet, psychologue clinicienne en ligne. Accompagnement en visio : trauma-thérapies, EMDR, anxiété, sexualité.",
+  "quickLinks": [
+    { "label": "Services", "url": "/services/" },
+    { "label": "Psychothérapie", "url": "/psychotherapie/" },
+    { "label": "Photothérapie", "url": "/phototherapie/" },
+    { "label": "Masterclass", "url": "/masterclass/" },
+    { "label": "Infos pratiques", "url": "/infos-pratiques/" },
+    { "label": "Blog", "url": "/blog/" }
+  ],
+  "legalLinks": [
+    { "label": "Mentions légales", "url": "/mentions-legales/" },
+    { "label": "Politique de confidentialité", "url": "/politique-de-confidentialite/" }
+  ],
+  "cta": {
+    "label": "Je prends rendez-vous",
+    "url": "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet"
+  }
+}

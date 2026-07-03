@@ -1,0 +1,63 @@
+---
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import Button from "@/components/common/Button.astro";
+import { getGlobalSettings } from "@/lib/settings";
+
+const global = await getGlobalSettings();
+---
+
+<Section tone="soft" id="contact">
+  <Container narrow>
+    <div class="contact">
+      <h2>Pour me contacter</h2>
+      <ul class="contact-list">
+        <li>
+          <a href={`tel:${global.phone.replace(/\s/g, "")}`}>{global.phone}</a>
+        </li>
+        <li>
+          <a href={`mailto:${global.email}`}>{global.email}</a>
+        </li>
+        {global.area && <li>{global.area}</li>}
+      </ul>
+      <div class="contact-actions">
+        <Button href={global.appointmentUrl}>Je prends RDV via Doctolib</Button>
+        <Button href={`mailto:${global.email}`} variant="outline">
+          Je prends RDV via message
+        </Button>
+      </div>
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .contact {
+    text-align: center;
+  }
+
+  .contact h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-list {
+    list-style: none;
+    margin: 0 0 var(--space-lg);
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm) var(--space-lg);
+    color: var(--color-text-soft);
+  }
+
+  .contact-list a {
+    font-weight: 500;
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+</style>

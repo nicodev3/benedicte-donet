@@ -1,0 +1,104 @@
+---
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+
+interface Card {
+  title: string;
+  text: string;
+  url: string;
+  linkLabel: string;
+  image?: string;
+}
+
+interface Props {
+  title: string;
+  cards: Card[];
+}
+
+const { title, cards } = Astro.props;
+---
+
+<Section tone="soft">
+  <Container>
+    <h2 class="services-title">{title}</h2>
+    <div class="services-grid">
+      {
+        cards.map((card) => (
+          <article class="card">
+            {card.image && (
+              <a href={card.url} tabindex="-1" aria-hidden="true">
+                <img src={card.image} alt="" loading="lazy" />
+              </a>
+            )}
+            <div class="card-body">
+              <h3>
+                <a href={card.url}>{card.title}</a>
+              </h3>
+              <p>{card.text}</p>
+              <a href={card.url} class="card-link">
+                {card.linkLabel} →
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .services-title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+  }
+
+  .card-body h3 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .card-body h3 a:hover {
+    color: var(--color-primary);
+  }
+
+  .card-body p {
+    color: var(--color-text-soft);
+    font-size: var(--text-sm);
+    flex: 1;
+  }
+
+  .card-link {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>

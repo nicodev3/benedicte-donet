@@ -1,0 +1,43 @@
+---
+interface Props {
+  tone?: "default" | "soft" | "muted" | "primary";
+  id?: string;
+  class?: string;
+}
+
+const { tone = "default", id, class: className = "" } = Astro.props;
+---
+
+<section {id} class:list={["section", `tone-${tone}`, className]}>
+  <slot />
+</section>
+
+<style>
+  .section {
+    padding-block: var(--space-2xl);
+  }
+
+  .tone-soft {
+    background: var(--color-bg-soft);
+  }
+
+  .tone-muted {
+    background: var(--color-bg-muted);
+  }
+
+  .tone-primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .tone-primary :global(h2),
+  .tone-primary :global(h3) {
+    color: #fff;
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding-block: var(--space-xl);
+    }
+  }
+</style>

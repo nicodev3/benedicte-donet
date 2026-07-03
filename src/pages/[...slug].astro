@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from "astro:content";
+import PageLayout from "@/layouts/PageLayout.astro";
+import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
+import type { CollectionEntry } from "astro:content";
+
+/**
+ * Sur le site WordPress d'origine, les articles de blog sont servis
+ * à la racine (/mon-article/), comme les pages. Cette route reproduit
+ * ce comportement pour préserver toutes les URLs indexées.
+ */
+export async function getStaticPaths() {
+  const pages = await getCollection("pages", ({ data }) => !data.draft);
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+  return [
+    ...pages.map((page) => ({
+      params: { slug: page.id },
+      props: { type: "page" as const, entry: page },
+    })),
+    ...posts.map((post) => ({
+      params: { slug: post.id },
+      props: { type: "post" as const, entry: post },
+    })),
+  ];
+}
+
+type Props =
+  | { type: "page"; entry: CollectionEntry<"pages"> }
+  | { type: "post"; entry: CollectionEntry<"blog"> };
+
+const { type, entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+{
+  type === "page" ? (
+    <PageLayout page={entry}>
+      <Content />
+    </PageLayout>
+  ) : (
+    <BlogPostLayout post={entry}>
+      <Content />
+    </BlogPostLayout>
+  )
+}

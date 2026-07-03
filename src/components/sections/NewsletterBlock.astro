@@ -1,0 +1,48 @@
+---
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import Button from "@/components/common/Button.astro";
+import { getGlobalSettings } from "@/lib/settings";
+
+/**
+ * La newsletter WordPress utilisait un formulaire embarqué.
+ * En attendant un endpoint dédié (ou un service type Brevo/Mailerlite),
+ * on renvoie vers un contact email — voir docs/redirects.md.
+ */
+const global = await getGlobalSettings();
+---
+
+<Section tone="muted">
+  <Container narrow>
+    <div class="newsletter">
+      <h2>La newsletter mensuelle</h2>
+      <p>
+        Abonne-toi à la newsletter mensuelle t'offrant du contenu de qualité
+        sur la psychologie : des articles pour mieux te comprendre, des
+        interviews inspirantes et des méditations en ligne. Seulement un email
+        par mois !
+      </p>
+      <Button
+        href={`mailto:${global.email}?subject=Inscription%20newsletter`}
+        variant="secondary"
+      >
+        Je m'abonne
+      </Button>
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .newsletter {
+    text-align: center;
+  }
+
+  .newsletter h2 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .newsletter p {
+    margin-bottom: var(--space-md);
+    color: var(--color-text-soft);
+  }
+</style>

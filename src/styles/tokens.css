@@ -1,0 +1,74 @@
+/* ===================================================================
+   Design tokens — charte reprise du site WordPress d'origine
+   Polices : Caviar Dreams (titres) / Rubik (texte)
+   =================================================================== */
+
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/fonts/CaviarDreams.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/fonts/CaviarDreams_Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/fonts/CaviarDreams_Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Couleurs */
+  --color-primary: #c68d85;
+  --color-primary-dark: #a86e66;
+  --color-secondary: #67c7ca;
+  --color-secondary-dark: #4ba9ac;
+  --color-accent: #ffacb7;
+  --color-highlight: #f9a440;
+  --color-text: #3b2e38;
+  --color-text-soft: #6d5f68;
+  --color-bg: #ffffff;
+  --color-bg-soft: #fff1eb;
+  --color-bg-muted: #faf6f4;
+  --color-border: #eadfdb;
+
+  /* Typographie */
+  --font-heading: "Caviar Dreams", "Trebuchet MS", sans-serif;
+  --font-body: "Rubik Variable", "Rubik", system-ui, sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-3xl: clamp(1.9rem, 1.5rem + 1.6vw, 2.75rem);
+  --text-4xl: clamp(2.3rem, 1.8rem + 2.4vw, 3.5rem);
+
+  /* Espacements */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Mise en page */
+  --container-max: 72rem;
+  --container-narrow: 46rem;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-full: 999px;
+  --shadow-soft: 0 8px 30px rgba(59, 46, 56, 0.08);
+
+  --transition: 180ms ease;
+}

@@ -1,0 +1,43 @@
+---
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+
+interface Props {
+  text: string;
+  author: string;
+}
+
+const { text, author } = Astro.props;
+---
+
+<Section tone="primary">
+  <Container narrow>
+    <figure class="quote">
+      <blockquote>« {text} »</blockquote>
+      <figcaption>— {author}</figcaption>
+    </figure>
+  </Container>
+</Section>
+
+<style>
+  .quote {
+    margin: 0;
+    text-align: center;
+  }
+
+  .quote blockquote {
+    border: none;
+    padding: 0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: var(--text-2xl);
+    line-height: 1.5;
+    color: #fff;
+  }
+
+  .quote figcaption {
+    margin-top: var(--space-md);
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.85);
+  }
+</style>

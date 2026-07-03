@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/common/Container.astro";
+import Button from "@/components/common/Button.astro";
+---
+
+<BaseLayout title="Page introuvable" noindex>
+  <Container narrow>
+    <div class="not-found">
+      <h1>Page introuvable</h1>
+      <p>
+        La page que vous cherchez n'existe pas ou a été déplacée. Vous pouvez
+        revenir à l'accueil ou consulter le blog.
+      </p>
+      <div class="not-found-actions">
+        <Button href="/">Retour à l'accueil</Button>
+        <Button href="/blog/" variant="outline">Voir le blog</Button>
+      </div>
+    </div>
+  </Container>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding-block: var(--space-2xl);
+  }
+
+  .not-found p {
+    margin-block: var(--space-md);
+    color: var(--color-text-soft);
+  }
+
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+</style>

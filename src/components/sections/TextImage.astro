@@ -1,0 +1,98 @@
+---
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import Button from "@/components/common/Button.astro";
+
+interface Props {
+  title: string;
+  text: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
+  image?: string;
+  imageAlt?: string;
+  reverse?: boolean;
+  tone?: "default" | "soft" | "muted";
+}
+
+const {
+  title,
+  text,
+  ctaLabel,
+  ctaUrl,
+  image,
+  imageAlt = "",
+  reverse = false,
+  tone = "default",
+} = Astro.props;
+---
+
+<Section {tone}>
+  <Container>
+    <div class:list={["ti-grid", { reverse, "no-image": !image }]}>
+      <div class="ti-content">
+        <h2>{title}</h2>
+        <p>{text}</p>
+        {
+          ctaLabel && ctaUrl && (
+            <Button href={ctaUrl} variant="outline">
+              {ctaLabel}
+            </Button>
+          )
+        }
+      </div>
+      {
+        image && (
+          <div class="ti-image">
+            <img src={image} alt={imageAlt} loading="lazy" />
+          </div>
+        )
+      }
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .ti-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .ti-grid.no-image {
+    grid-template-columns: 1fr;
+    max-width: var(--container-narrow);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .ti-grid.reverse .ti-content {
+    order: 2;
+  }
+
+  .ti-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .ti-content p {
+    margin-bottom: var(--space-md);
+    color: var(--color-text-soft);
+  }
+
+  .ti-image img {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    margin-inline: auto;
+  }
+
+  @media (max-width: 820px) {
+    .ti-grid,
+    .ti-grid.reverse {
+      grid-template-columns: 1fr;
+    }
+
+    .ti-grid.reverse .ti-content {
+      order: 0;
+    }
+  }
+</style>
