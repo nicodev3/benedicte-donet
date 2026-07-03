@@ -88,10 +88,27 @@ const settings = defineCollection({
         cards: z.array(
           z.object({
             title: z.string(),
-            text: z.string(),
+            intro: z.string().optional(),
+            bullets: z.preprocess(
+              (val) =>
+                typeof val === "string"
+                  ? val
+                      .split("\n")
+                      .map((line) => line.trim())
+                      .filter(Boolean)
+                  : val,
+              z.array(z.string()).optional()
+            ),
+            text: z.string().optional(),
             url: z.string(),
-            linkLabel: z.string().default("En savoir plus"),
+            imageUrl: z.string().optional(),
+            linkLabel: z.string().optional(),
+            linkUrl: z.string().optional(),
+            ctaLabel: z.string().optional(),
+            ctaUrl: z.string().optional(),
             image: z.string().optional(),
+            titleUnderline: z.boolean().optional(),
+            imageWidth: z.enum(["narrow", "wide"]).optional(),
           })
         ),
       }),

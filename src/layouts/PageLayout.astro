@@ -3,6 +3,9 @@ import BaseLayout from "./BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
+import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import { buildBreadcrumbs } from "@/lib/breadcrumbs";
+import { getNavigationSettings } from "@/lib/settings";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -12,6 +15,13 @@ interface Props {
 const { page } = Astro.props;
 const { title, description, image, imageAlt, seoTitle, seoDescription } =
   page.data;
+
+const navigation = await getNavigationSettings();
+const breadcrumbs = buildBreadcrumbs(
+  Astro.url.pathname,
+  title,
+  navigation
+);
 ---
 
 <BaseLayout
@@ -21,6 +31,7 @@ const { title, description, image, imageAlt, seoTitle, seoDescription } =
 >
   <Section tone="soft" class="page-hero">
     <Container narrow>
+      <Breadcrumb items={breadcrumbs} />
       <h1>{title}</h1>
       {description && <p class="page-description">{description}</p>}
     </Container>

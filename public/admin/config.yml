@@ -204,10 +204,29 @@ collections:
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
-                  - { label: "Texte", name: "text", widget: "text" }
+                  - { label: "Introduction", name: "intro", widget: "text", required: false }
+                  - {
+                      label: "Points clés (un par ligne)",
+                      name: "bullets",
+                      widget: "text",
+                      required: false,
+                      hint: "Utiliser **texte** pour le gras."
+                    }
+                  - { label: "Texte de conclusion", name: "text", widget: "text", required: false }
                   - { label: "Lien", name: "url", widget: "string" }
-                  - { label: "Texte du lien", name: "linkLabel", widget: "string", default: "En savoir plus" }
+                  - { label: "Lien de l'image", name: "imageUrl", widget: "string", required: false }
+                  - { label: "Texte du lien", name: "linkLabel", widget: "string", required: false }
+                  - { label: "URL du lien de bas de carte", name: "linkUrl", widget: "string", required: false }
+                  - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
+                  - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
                   - { label: "Image", name: "image", widget: "image", required: false }
+                  - { label: "Titre souligné", name: "titleUnderline", widget: "boolean", default: false, required: false }
+                  - label: "Largeur de l'image"
+                    name: "imageWidth"
+                    widget: "select"
+                    required: false
+                    options: ["wide", "narrow"]
+                    default: "wide"
           - label: "Comment prendre rendez-vous"
             name: "appointment"
             widget: "object"

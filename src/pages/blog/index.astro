@@ -4,6 +4,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
+import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import { buildBreadcrumbs } from "@/lib/breadcrumbs";
+import { getNavigationSettings } from "@/lib/settings";
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
@@ -11,6 +14,13 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
 
 const formatDate = (date: Date) =>
   new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" }).format(date);
+
+const navigation = await getNavigationSettings();
+const breadcrumbs = buildBreadcrumbs(
+  Astro.url.pathname,
+  "Blog",
+  navigation
+);
 ---
 
 <BaseLayout
@@ -19,6 +29,7 @@ const formatDate = (date: Date) =>
 >
   <Section tone="soft" class="blog-hero">
     <Container narrow>
+      <Breadcrumb items={breadcrumbs} />
       <h1>Le blog</h1>
       <p>
         Des articles pour mieux te comprendre : trauma, EMDR, méditation,
@@ -127,7 +138,7 @@ const formatDate = (date: Date) =>
   }
 
   .post-card-body h2 a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
   }
 
   .post-card-body p {

@@ -3,6 +3,8 @@ import BaseLayout from "./BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
+import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getGlobalSettings } from "@/lib/settings";
 import type { CollectionEntry } from "astro:content";
 
@@ -24,6 +26,11 @@ const {
 
 const global = await getGlobalSettings();
 
+const breadcrumbs = buildBreadcrumbs(Astro.url.pathname, title, undefined, {
+  label: "Blog",
+  url: "/blog/",
+});
+
 const formattedDate = new Intl.DateTimeFormat("fr-FR", {
   dateStyle: "long",
 }).format(date);
@@ -40,8 +47,8 @@ const formattedDate = new Intl.DateTimeFormat("fr-FR", {
   <Container narrow>
     <article class="post">
       <header class="post-header">
+        <Breadcrumb items={breadcrumbs} />
         <p class="post-meta">
-          <a href="/blog/">← Retour au blog</a>
           <time datetime={date.toISOString()}>{formattedDate}</time>
         </p>
         <h1>{title}</h1>
@@ -86,9 +93,6 @@ const formattedDate = new Intl.DateTimeFormat("fr-FR", {
   }
 
   .post-meta {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--space-sm);
     font-size: var(--text-sm);
     color: var(--color-text-soft);
     margin-bottom: var(--space-md);

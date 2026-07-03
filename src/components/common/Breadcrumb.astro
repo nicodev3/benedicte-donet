@@ -1,0 +1,85 @@
+---
+import { SITE } from "@/site.config";
+import type { BreadcrumbItem } from "@/lib/breadcrumbs";
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+const show = items.length > 1;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    ...(item.url ? { item: new URL(item.url, SITE.url).href } : {}),
+  })),
+};
+---
+
+{
+  show && (
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ol>
+        {items.map((item) => (
+          <li>
+            {item.url ? (
+              <a href={item.url}>{item.label}</a>
+            ) : (
+              <span aria-current="page">{item.label}</span>
+            )}
+          </li>
+        ))}
+      </ol>
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </nav>
+  )
+}
+
+<style>
+  .breadcrumb {
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0;
+    list-style: none;
+    padding: 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-soft);
+  }
+
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .breadcrumb li:not(:last-child)::after {
+    content: "/";
+    color: var(--color-border-strong);
+    pointer-events: none;
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-soft);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+
+  .breadcrumb [aria-current="page"] {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+</style>

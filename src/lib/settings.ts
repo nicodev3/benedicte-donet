@@ -43,10 +43,18 @@ export interface HomeSettings {
     title: string;
     cards: {
       title: string;
-      text: string;
+      intro?: string;
+      bullets?: string[];
+      text?: string;
       url: string;
-      linkLabel: string;
+      imageUrl?: string;
+      linkLabel?: string;
+      linkUrl?: string;
+      ctaLabel?: string;
+      ctaUrl?: string;
       image?: string;
+      titleUnderline?: boolean;
+      imageWidth?: "narrow" | "wide";
     }[];
   };
   appointment: {

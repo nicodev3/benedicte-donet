@@ -34,19 +34,23 @@
 }
 
 :root {
-  /* Couleurs */
-  --color-primary: #c68d85;
-  --color-primary-dark: #a86e66;
-  --color-secondary: #67c7ca;
-  --color-secondary-dark: #4ba9ac;
+  /* Couleurs — charte WP avec variantes accessibles (WCAG 2.1 AA) */
+  --color-primary: #c68d85; /* décoratif uniquement */
+  --color-primary-dark: #9f655e; /* liens, texte interactif (4.67:1 sur blanc) */
+  --color-primary-strong: #8f5b54; /* fonds avec texte blanc (5.54:1) */
+  --color-primary-stronger: #87544d; /* survol boutons (6.17:1) */
+  --color-secondary: #67c7ca; /* décoratif uniquement */
+  --color-secondary-dark: #3a878a; /* fonds avec texte blanc (4.19:1) */
+  --color-secondary-stronger: #347d80; /* survol boutons secondaires */
   --color-accent: #ffacb7;
-  --color-highlight: #f9a440;
+  --color-highlight: #c4781a; /* étoiles, accents (3.15:1 sur fond soft) */
   --color-text: #3b2e38;
   --color-text-soft: #6d5f68;
   --color-bg: #ffffff;
   --color-bg-soft: #fff1eb;
   --color-bg-muted: #faf6f4;
-  --color-border: #eadfdb;
+  --color-border: #eadfdb; /* bordures décoratives */
+  --color-border-strong: #9d928e; /* séparateurs UI (3.03:1 sur blanc) */
 
   /* Typographie */
   --font-heading: "Caviar Dreams", "Trebuchet MS", sans-serif;

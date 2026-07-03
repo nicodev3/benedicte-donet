@@ -2,13 +2,21 @@
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
+import Button from "@/components/common/Button.astro";
 
 interface Card {
   title: string;
-  text: string;
+  intro?: string;
+  bullets?: string[];
+  text?: string;
   url: string;
-  linkLabel: string;
+  imageUrl?: string;
+  linkLabel?: string;
+  linkUrl?: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
   image?: string;
+  imageWidth?: "narrow" | "wide";
 }
 
 interface Props {
@@ -17,96 +25,324 @@ interface Props {
 }
 
 const { title, cards } = Astro.props;
+
+function richText(value: string): string {
+  return value.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
 ---
 
-<Section tone="soft">
+<Section class="services-section">
   <Container>
     <h2 class="services-title">{title}</h2>
-    <div class="services-grid">
+    <div class="services-stack">
       {
-        cards.map((card) => (
-          <article class="card">
-            {card.image && (
-              <a href={card.url} tabindex="-1" aria-hidden="true">
-                <SiteImage
-                  src={card.image}
-                  alt={`Illustration : ${card.title}`}
-                  width={800}
-                  widths={[400, 600, 800]}
-                  sizes="(max-width: 700px) 90vw, (max-width: 1100px) 45vw, 380px"
-                  loading="lazy"
-                />
-              </a>
-            )}
-            <div class="card-body">
-              <h3>
-                <a href={card.url}>{card.title}</a>
-              </h3>
-              <p>{card.text}</p>
-              <a href={card.url} class="card-link">
-                {card.linkLabel} →
-              </a>
-            </div>
-          </article>
-        ))
+        cards.map((card, index) => {
+          const align = index % 2 === 0 ? "start" : "end";
+          const footerHref = card.linkUrl || card.url;
+
+          return (
+            <article class:list={["service-card", `align-${align}`]}>
+              <div class="service-card-inner">
+                {
+                  card.image && (
+                    <div class="service-visual">
+                      <img
+                        src="/images/wp/cadre-fleur-beige.svg"
+                        alt=""
+                        class="service-frame"
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div
+                        class:list={[
+                          "service-image",
+                          { narrow: card.imageWidth === "narrow" },
+                        ]}
+                      >
+                        <SiteImage
+                          src={card.image}
+                          alt={`Illustration : ${card.title}`}
+                          width={400}
+                          widths={[200, 300, 400]}
+                          sizes="(max-width: 767px) 50vw, 225px"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  )
+                }
+                <h3>
+                  <a href={card.url}>{card.title}</a>
+                </h3>
+                <div class="service-body">
+                  {card.intro && <p set:html={richText(card.intro)} />}
+                  {
+                    card.bullets && (
+                      <ul>
+                        {card.bullets.map((item) => (
+                          <li set:html={richText(item)} />
+                        ))}
+                      </ul>
+                    )
+                  }
+                  {!card.bullets && card.text && <p set:html={richText(card.text)} />}
+                  {card.bullets && card.text && <p set:html={richText(card.text)} />}
+                  {
+                    card.linkLabel && (
+                      <p class="service-link">
+                        <strong>
+                          <a href={footerHref}>{card.linkLabel}</a>
+                        </strong>
+                        .
+                      </p>
+                    )
+                  }
+                </div>
+              </div>
+              {
+                card.ctaLabel && (
+                  <div class="service-cta">
+                    <Button href={card.ctaUrl || card.url} class="service-button">
+                      {card.ctaLabel}
+                    </Button>
+                  </div>
+                )
+              }
+            </article>
+          );
+        })
       }
     </div>
   </Container>
 </Section>
 
 <style>
+  :global(.section.services-section) {
+    padding-block: clamp(4.5rem, 8vw, 9.375rem) var(--space-xl);
+  }
+
   .services-title {
     text-align: center;
-    margin-bottom: var(--space-xl);
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
-  }
-
-  .card {
-    background: #fff;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card :global(img) {
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-  }
-
-  .card-body {
-    padding: var(--space-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-    flex: 1;
-  }
-
-  .card-body h3 a {
-    color: var(--color-text);
-    text-decoration: none;
-  }
-
-  .card-body h3 a:hover {
-    color: var(--color-primary);
-  }
-
-  .card-body p {
-    color: var(--color-text-soft);
-    font-size: var(--text-sm);
-    flex: 1;
-  }
-
-  .card-link {
-    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem);
     font-weight: 700;
-    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin-bottom: clamp(1.875rem, 3vw, 1.875rem);
+  }
+
+  .services-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.875rem;
+    width: 80%;
+    max-width: 52rem;
+    margin-inline: auto;
+  }
+
+  .service-card {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .service-card.align-start {
+    align-self: flex-start;
+  }
+
+  .service-card.align-end {
+    align-self: flex-end;
+  }
+
+  .service-card-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    margin-top: -0.9375rem;
+    padding: 1.875rem 3.125rem 2.5rem;
+    background: rgb(103 199 202 / 0.13);
+    border-radius: 5.625rem 0 5.625rem 0;
+  }
+
+  .service-visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 68%;
+    max-width: 17rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .service-frame {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .service-image {
+    grid-area: 1 / 1;
+    display: block;
+    width: 46%;
+    max-width: 9rem;
+    z-index: 1;
+  }
+
+  .service-image.narrow {
+    width: 42%;
+    max-width: 6.5rem;
+  }
+
+  .service-image :global(img) {
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .service-card-inner h3 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: clamp(1.125rem, 1rem + 0.5vw, 1.625rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    margin-top: 0.25rem;
+  }
+
+  .service-card-inner h3 a {
+    color: var(--color-primary-strong);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .service-card-inner h3 a:hover {
+    color: var(--color-primary-stronger);
+  }
+
+  .service-body {
+    width: 100%;
+    background: var(--color-bg);
+    margin-inline: -0.75rem;
+    padding: 0.625rem 1.875rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    text-align: start;
+    color: var(--color-text);
+  }
+
+  .service-body :global(p + p),
+  .service-body :global(ul + p),
+  .service-body :global(p + ul) {
+    margin-top: 0.75rem;
+  }
+
+  .service-body ul {
+    padding-left: 1.25rem;
+  }
+
+  .service-body li + li {
+    margin-top: 0.25rem;
+  }
+
+  .service-body :global(a) {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  .service-body :global(a:hover) {
+    color: var(--color-primary-dark);
+  }
+
+  .service-link {
+    margin-top: 0.75rem;
+  }
+
+  .service-link strong {
+    font-weight: 700;
+  }
+
+  .service-cta {
+    margin-top: -0.625rem;
+    text-align: center;
+  }
+
+  .service-cta :global(.service-button) {
+    border-radius: 35px 0 35px 0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.45rem;
+  }
+
+  @media (max-width: 1024px) {
+    .services-stack {
+      width: 100%;
+    }
+
+    .service-card-inner {
+      padding-inline: 2.5rem;
+    }
+
+    .service-visual {
+      width: 72%;
+      max-width: 14rem;
+    }
+
+    .service-image,
+    .service-image.narrow {
+      width: 48%;
+      max-width: 7rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .services-stack {
+      width: min(100%, 22rem);
+    }
+
+    .service-card,
+    .service-card.align-start,
+    .service-card.align-end {
+      align-self: center;
+      width: 80%;
+    }
+
+    .service-card-inner {
+      border-radius: 3.75rem 0 3.75rem 0;
+      padding: 0.9375rem 0.9375rem 2.5rem;
+    }
+
+    .service-visual {
+      width: 78%;
+      max-width: 12rem;
+    }
+
+    .service-image,
+    .service-image.narrow {
+      width: 50%;
+      max-width: 6rem;
+    }
+
+    .service-card-inner h3 {
+      font-size: 1.125rem;
+    }
+
+    .service-body {
+      margin-inline: 0;
+      padding: 0.3125rem;
+      font-size: 0.9375rem;
+    }
+
+    .service-cta :global(.service-button) {
+      font-size: 0.9375rem;
+    }
   }
 </style>
