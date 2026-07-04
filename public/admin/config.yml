@@ -23,8 +23,8 @@ site_url: https://benedicte-donet.pages.dev
 display_url: https://benedicte-donet.pages.dev
 logo_url: /images/wp/logo-benedicte-donet.png
 
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: "public/images/wp"
+public_folder: "/images/wp"
 
 # Brouillons validés avant publication
 publish_mode: editorial_workflow
