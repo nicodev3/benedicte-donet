@@ -1,4 +1,4 @@
-import type { NavigationSettings } from "@/lib/settings";
+import type { NavigationItem } from "@/lib/navigation";
 import { DEFAULT_LOCALE, localizedPath, type Locale } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 
@@ -15,7 +15,7 @@ function normalizePath(path: string): string {
 export function buildBreadcrumbs(
   pathname: string,
   currentLabel: string,
-  navigation?: NavigationSettings,
+  navigation?: NavigationItem[],
   parent?: { label: string; url: string },
   locale: Locale = DEFAULT_LOCALE
 ): BreadcrumbItem[] {
@@ -39,7 +39,7 @@ export function buildBreadcrumbs(
     return items;
   }
 
-  for (const navItem of navigation.items) {
+  for (const navItem of navigation) {
     if (navItem.url === "/") continue;
 
     const navPath = normalizePath(localizedPath(navItem.url, locale));
@@ -50,7 +50,7 @@ export function buildBreadcrumbs(
     }
 
     const child = navItem.children?.find(
-      (c) => c.visible && normalizePath(localizedPath(c.url, locale)) === path
+      (c) => normalizePath(localizedPath(c.url, locale)) === path
     );
 
     if (child) {

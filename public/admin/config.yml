@@ -367,57 +367,6 @@ collections:
             widget: "text"
             required: false
 
-      - name: "navigation"
-        label: "Menu de navigation"
-        file: "src/content/settings/navigation.json"
-        fields: &navigation_settings_fields
-          - label: "Éléments du menu"
-            name: "items"
-            widget: "list"
-            summary: "{{fields.label}}"
-            hint: "Attention : ne modifiez pas les liens (URL) sans en parler à votre webmaster."
-            fields:
-              - { label: "Libellé", name: "label", widget: "string" }
-              - { label: "Lien (URL)", name: "url", widget: "string" }
-              - { label: "Ordre", name: "order", widget: "number", value_type: "int" }
-              - { label: "Visible", name: "visible", widget: "boolean", default: true }
-              - label: "Sous-menu"
-                name: "children"
-                widget: "list"
-                required: false
-                summary: "{{fields.label}}"
-                hint: "Optionnel — affiche un menu déroulant au survol. Incluez « Vue d'ensemble » en premier pour la page parente."
-                fields:
-                  - { label: "Libellé", name: "label", widget: "string" }
-                  - { label: "Lien (URL)", name: "url", widget: "string" }
-                  - { label: "Visible", name: "visible", widget: "boolean", default: true }
-
-      - name: "footer"
-        label: "Pied de page"
-        file: "src/content/settings/footer.json"
-        fields: &footer_settings_fields
-          - { label: "Texte de présentation", name: "text", widget: "text" }
-          - label: "Liens rapides"
-            name: "quickLinks"
-            widget: "list"
-            summary: "{{fields.label}}"
-            fields:
-              - { label: "Libellé", name: "label", widget: "string" }
-              - { label: "Lien (URL)", name: "url", widget: "string" }
-          - label: "Liens légaux"
-            name: "legalLinks"
-            widget: "list"
-            summary: "{{fields.label}}"
-            fields:
-              - { label: "Libellé", name: "label", widget: "string" }
-              - { label: "Lien (URL)", name: "url", widget: "string" }
-          - label: "Bouton d'action"
-            name: "cta"
-            widget: "object"
-            fields:
-              - { label: "Texte", name: "label", widget: "string" }
-              - { label: "Lien", name: "url", widget: "string" }
-
       - name: "global_en"
         label: "EN — Coordonnées & réglages généraux"
         file: "src/content/settings/global.en.json"
@@ -428,13 +377,3 @@ collections:
         file: "src/content/settings/home.en.json"
         preview_path: "/en/"
         fields: *home_settings_fields
-
-      - name: "navigation_en"
-        label: "EN — Menu de navigation"
-        file: "src/content/settings/navigation.en.json"
-        fields: *navigation_settings_fields
-
-      - name: "footer_en"
-        label: "EN — Pied de page"
-        file: "src/content/settings/footer.en.json"
-        fields: *footer_settings_fields

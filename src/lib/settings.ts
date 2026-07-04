@@ -82,25 +82,6 @@ export interface HomeSettings {
   seoDescription?: string;
 }
 
-export interface NavigationItem {
-  label: string;
-  url: string;
-  order: number;
-  visible: boolean;
-  children?: { label: string; url: string; visible: boolean }[];
-}
-
-export interface NavigationSettings {
-  items: NavigationItem[];
-}
-
-export interface FooterSettings {
-  text: string;
-  quickLinks: { label: string; url: string }[];
-  legalLinks: { label: string; url: string }[];
-  cta: { label: string; url: string };
-}
-
 async function getSettings<T>(id: string, locale: Locale = DEFAULT_LOCALE): Promise<T> {
   const localizedId = locale === DEFAULT_LOCALE ? id : `${id}${locale}`;
   const entry =
@@ -113,7 +94,3 @@ export const getGlobalSettings = (locale?: Locale) =>
   getSettings<GlobalSettings>("global", locale);
 export const getHomeSettings = (locale?: Locale) =>
   getSettings<HomeSettings>("home", locale);
-export const getNavigationSettings = (locale?: Locale) =>
-  getSettings<NavigationSettings>("navigation", locale);
-export const getFooterSettings = (locale?: Locale) =>
-  getSettings<FooterSettings>("footer", locale);

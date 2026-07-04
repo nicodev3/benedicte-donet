@@ -56,13 +56,8 @@ const products = defineCollection({
   }),
 });
 
-const linkSchema = z.object({
-  label: z.string(),
-  url: z.string(),
-});
-
 /**
- * Réglages globaux, home, navigation et footer (fichiers JSON contrôlés).
+ * Réglages globaux et page d'accueil (fichiers JSON contrôlés).
  */
 const settings = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/settings" }),
@@ -156,36 +151,6 @@ const settings = defineCollection({
       }),
       seoTitle: z.string().optional(),
       seoDescription: z.string().optional(),
-    }),
-    // navigation.json
-    z.object({
-      items: z.array(
-        z.object({
-          label: z.string(),
-          url: z.string(),
-          order: z.number().default(0),
-          visible: z.boolean().default(true),
-          children: z
-            .array(
-              z.object({
-                label: z.string(),
-                url: z.string(),
-                visible: z.boolean().default(true),
-              })
-            )
-            .optional(),
-        })
-      ),
-    }),
-    // footer.json
-    z.object({
-      text: z.string(),
-      quickLinks: z.array(linkSchema),
-      legalLinks: z.array(linkSchema),
-      cta: z.object({
-        label: z.string(),
-        url: z.string(),
-      }),
     }),
   ]),
 });

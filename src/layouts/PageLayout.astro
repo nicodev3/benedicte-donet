@@ -13,7 +13,8 @@ import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
-import { getHomeSettings, getNavigationSettings } from "@/lib/settings";
+import { getHomeSettings } from "@/lib/settings";
+import { getNavigationItems } from "@/lib/navigation";
 import { getContentSlug, getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 import type { CollectionEntry } from "astro:content";
@@ -34,13 +35,12 @@ const isWideContent =
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
-const navigation = await getNavigationSettings(locale);
 const homeReviews =
   pageSlug === "infos-pratiques" ? (await getHomeSettings(locale)).reviews : null;
 const breadcrumbs = buildBreadcrumbs(
   Astro.url.pathname,
   title,
-  navigation,
+  getNavigationItems(locale),
   undefined,
   locale
 );

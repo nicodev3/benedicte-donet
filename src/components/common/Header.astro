@@ -3,10 +3,8 @@ import Container from "./Container.astro";
 import Button from "./Button.astro";
 import SiteImage from "./SiteImage.astro";
 import { ChevronDown, Menu, X } from "@lucide/astro";
-import {
-  getGlobalSettings,
-  getNavigationSettings,
-} from "@/lib/settings";
+import { getGlobalSettings } from "@/lib/settings";
+import { getNavigationItems } from "@/lib/navigation";
 import {
   alternateLocalePath,
   getAlternateLocale,
@@ -19,11 +17,7 @@ import { useTranslations } from "@/lib/translations";
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
 const global = await getGlobalSettings(locale);
-const navigation = await getNavigationSettings(locale);
-
-const items = navigation.items
-  .filter((item) => item.visible)
-  .sort((a, b) => a.order - b.order);
+const items = getNavigationItems(locale);
 
 const currentPath = Astro.url.pathname;
 const languageLabel = getLocaleSwitchLabel(locale);
@@ -37,13 +31,11 @@ function isActive(url: string): boolean {
 }
 
 function isItemActive(item: (typeof items)[number]): boolean {
-  return (
-    item.children?.some((child) => child.visible && isActive(child.url)) ?? false
-  );
+  return item.children?.some((child) => isActive(child.url)) ?? false;
 }
 
 function visibleChildren(item: (typeof items)[number]) {
-  return item.children?.filter((child) => child.visible) ?? [];
+  return item.children ?? [];
 }
 ---
 
