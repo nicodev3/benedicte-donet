@@ -1,17 +1,14 @@
 ---
 title: "Photothérapie"
-description: ""
-image: ""
+heroTitle: "La photothérapie"
+description: "Séance photo confiance en soi"
+image: "/images/wp/DSCF4124-scaled.jpg"
 imageAlt: ""
-seoTitle: "Photothérapie"
+seoTitle: "Photothérapie | Séance photo confiance en soi"
 seoDescription: ""
 order: 3
 draft: false
 ---
-
-## Séance photo confiance en soi
-
-# La photothérapie
 
 ![photothérapeute benedicte donet séance photo confiance en soi](../../assets/images/wp/autoportrait-Bene.png)
 
@@ -29,18 +26,11 @@ Dans une société qui nous pousse instinctivement à juger et à rejeter certai
 
 [Découvrir les options](#option)
 
-[
-
-![Séance photo photothérapie — portrait en extérieur](../../assets/images/wp/20200802Bene_Clara-one-step-closer-to-love_1022-scaled.jpg)[
-
-![Séance photo confiance en soi — portrait naturel](../../assets/images/wp/DSCF1587-scaled.jpg)[
-
-![Photothérapie — mise en lumière de la beauté intérieure](../../assets/images/wp/DSCF5037-scaled.jpg)[
-
-![Séance photo bienveillance et amour de soi](../../assets/images/wp/DSCF5669-scaled.jpg)[
-
-![Portrait photothérapie confiance en soi](../../assets/images/wp/DSCF7418-1-scaled.jpg)[
-
+![Séance photo photothérapie — portrait en extérieur](../../assets/images/wp/20200802Bene_Clara-one-step-closer-to-love_1022-scaled.jpg)
+![Séance photo confiance en soi — portrait naturel](../../assets/images/wp/DSCF1587-scaled.jpg)
+![Photothérapie — mise en lumière de la beauté intérieure](../../assets/images/wp/DSCF5037-scaled.jpg)
+![Séance photo bienveillance et amour de soi](../../assets/images/wp/DSCF5669-scaled.jpg)
+![Portrait photothérapie confiance en soi](../../assets/images/wp/DSCF7418-1-scaled.jpg)
 ![Séance photo célébration du corps](../../assets/images/wp/DSCF7806-1-scaled.jpg)
 
 ## Mes offres de photothérapie
@@ -106,18 +96,11 @@ Pendant 2 heures, nous plongerons dans la photographie et la sensation pour expl
 Après le photoshoot  
 Je prendrai le temps d’éditer les photos avec toute ma sensibilité et ma passion. Ce moment exceptionnel me permet souvent de découvrir des éléments qui ont enrichi notre expérience. Ce processus révélera l’évolution et mettra en lumière la personne que vous êtes. Vous recevrez une centaine de photos éditées et nous aurons une séance bilan pour intégrer les éléments du photoshoot. Je pourrai également vous offrir des axes de travail sur soi : pratiques, méditations, etc.
 
-[
-
-![Galerie photothérapie — portrait expressif](../../assets/images/wp/DSCF8469-scaled.jpg)[
-
-![Galerie photothérapie — séance en lumière naturelle](../../assets/images/wp/DSCF8152-scaled.jpg)[
-
-![Galerie photothérapie — moment d'introspection](../../assets/images/wp/DSCF5184-scaled.jpg)[
-
-![Galerie photothérapie — connexion à soi](../../assets/images/wp/DSCF4153-scaled.jpg)[
-
-![Galerie photothérapie — célébration de la singularité](../../assets/images/wp/DSCF3002-scaled.jpg)[
-
+![Galerie photothérapie — portrait expressif](../../assets/images/wp/DSCF8469-scaled.jpg)
+![Galerie photothérapie — séance en lumière naturelle](../../assets/images/wp/DSCF8152-scaled.jpg)
+![Galerie photothérapie — moment d'introspection](../../assets/images/wp/DSCF5184-scaled.jpg)
+![Galerie photothérapie — connexion à soi](../../assets/images/wp/DSCF4153-scaled.jpg)
+![Galerie photothérapie — célébration de la singularité](../../assets/images/wp/DSCF3002-scaled.jpg)
 ![Galerie photothérapie — amour de soi](../../assets/images/wp/DSCF2968-scaled.jpg)
 
 ![Bénédicte Donet séance photo pour avoir confiance en soi](../../assets/images/wp/DSCF1287.jpg)

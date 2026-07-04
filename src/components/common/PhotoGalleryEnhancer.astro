@@ -1,0 +1,430 @@
+---
+/**
+ * Regroupe les images consécutives du contenu éditorial en grille 3 colonnes
+ * et ouvre un diaporama plein écran au clic.
+ */
+---
+
+<script>
+  const MIN_GALLERY_SIZE = 3;
+
+  function extractImageParagraph(paragraph: Element): HTMLImageElement[] | null {
+    if (paragraph.tagName !== "P") return null;
+
+    const imgs = [...paragraph.querySelectorAll("img")];
+    if (!imgs.length) return null;
+
+    const clone = paragraph.cloneNode(true) as HTMLElement;
+    clone.querySelectorAll("img").forEach((img) => img.remove());
+    const leftover = clone.textContent?.replace(/\[/g, "").trim() ?? "";
+    if (leftover) return null;
+
+    return imgs;
+  }
+
+  function getImageSrc(img: HTMLImageElement): string {
+    return img.currentSrc || img.src;
+  }
+
+  function buildGalleries(root: HTMLElement) {
+    const children = [...root.children];
+    let group: { paragraph: Element; imgs: HTMLImageElement[] }[] = [];
+
+    const flush = () => {
+      const totalImages = group.reduce((count, item) => count + item.imgs.length, 0);
+      if (totalImages < MIN_GALLERY_SIZE) {
+        group = [];
+        return;
+      }
+
+      const gallery = document.createElement("div");
+      gallery.className = "photo-gallery";
+      gallery.setAttribute("role", "group");
+      gallery.setAttribute("aria-label", "Galerie photos");
+
+      for (const item of group) {
+        for (const img of item.imgs) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "photo-gallery-item";
+          button.setAttribute(
+            "aria-label",
+            img.alt ? `Ouvrir : ${img.alt}` : "Ouvrir la photo"
+          );
+
+          const clone = img.cloneNode(true) as HTMLImageElement;
+          clone.removeAttribute("width");
+          clone.removeAttribute("height");
+          clone.loading = "lazy";
+          button.append(clone);
+          gallery.append(button);
+        }
+      }
+
+      group[0].paragraph.replaceWith(gallery);
+      group.slice(1).forEach((item) => item.paragraph.remove());
+      group = [];
+    };
+
+    for (const child of children) {
+      const imgs = extractImageParagraph(child);
+      if (imgs) {
+        group.push({ paragraph: child, imgs });
+      } else {
+        flush();
+      }
+    }
+
+    flush();
+  }
+
+  let lightboxBound = false;
+
+  function bindLightbox(lightbox: HTMLElement) {
+    if (lightboxBound) return;
+    lightboxBound = true;
+
+    const imageEl = lightbox.querySelector<HTMLImageElement>(".photo-lightbox-image")!;
+    const captionEl = lightbox.querySelector<HTMLElement>(".photo-lightbox-caption")!;
+    const closeBtn = lightbox.querySelector<HTMLButtonElement>(".photo-lightbox-close")!;
+    const prevBtn = lightbox.querySelector<HTMLButtonElement>(".photo-lightbox-prev")!;
+    const nextBtn = lightbox.querySelector<HTMLButtonElement>(".photo-lightbox-next")!;
+
+    let slides: { src: string; alt: string }[] = [];
+    let index = 0;
+    let lastFocus: HTMLElement | null = null;
+
+    const render = () => {
+      const slide = slides[index];
+      if (!slide) return;
+
+      imageEl.src = slide.src;
+      imageEl.alt = slide.alt;
+      captionEl.textContent = slide.alt;
+      captionEl.hidden = !slide.alt;
+
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    };
+
+    const open = (
+      items: { src: string; alt: string }[],
+      startIndex: number,
+      trigger: HTMLElement
+    ) => {
+      slides = items;
+      index = startIndex;
+      lastFocus = trigger;
+      render();
+      lightbox.hidden = false;
+      document.body.classList.add("photo-lightbox-open");
+      closeBtn.focus();
+    };
+
+    const close = () => {
+      lightbox.hidden = true;
+      document.body.classList.remove("photo-lightbox-open");
+      imageEl.removeAttribute("src");
+      lastFocus?.focus();
+      slides = [];
+    };
+
+    const step = (delta: number) => {
+      const next = index + delta;
+      if (next < 0 || next >= slides.length) return;
+      index = next;
+      render();
+    };
+
+    document.addEventListener("click", (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>(
+        ".photo-gallery-item"
+      );
+      if (!button) return;
+
+      const gallery = button.closest<HTMLElement>(".photo-gallery");
+      if (!gallery) return;
+
+      const items = [...gallery.querySelectorAll<HTMLButtonElement>(".photo-gallery-item")].map(
+        (item) => {
+          const img = item.querySelector("img");
+          return {
+            src: getImageSrc(img!),
+            alt: img?.alt ?? "",
+          };
+        }
+      );
+
+      const startIndex = [...gallery.querySelectorAll(".photo-gallery-item")].indexOf(button);
+      open(items, startIndex, button);
+    });
+
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", () => step(-1));
+    nextBtn.addEventListener("click", () => step(1));
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) close();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (lightbox.hidden) return;
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+        close();
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        step(-1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        step(1);
+      }
+    });
+  }
+
+  function ensureLightbox(): HTMLElement {
+    let lightbox = document.querySelector<HTMLElement>(".photo-lightbox");
+    if (!lightbox) {
+      lightbox = document.createElement("div");
+      lightbox.className = "photo-lightbox";
+      lightbox.hidden = true;
+      lightbox.setAttribute("role", "dialog");
+      lightbox.setAttribute("aria-modal", "true");
+      lightbox.setAttribute("aria-label", "Diaporama photo");
+      lightbox.innerHTML = `
+      <button type="button" class="photo-lightbox-close" aria-label="Fermer le diaporama">×</button>
+      <button type="button" class="photo-lightbox-prev" aria-label="Photo précédente">‹</button>
+      <figure class="photo-lightbox-figure">
+        <img class="photo-lightbox-image" alt="">
+        <figcaption class="photo-lightbox-caption"></figcaption>
+      </figure>
+      <button type="button" class="photo-lightbox-next" aria-label="Photo suivante">›</button>
+    `;
+      document.body.append(lightbox);
+    }
+
+    bindLightbox(lightbox);
+    return lightbox;
+  }
+
+  function setupPhotoGalleries() {
+    const prose = document.querySelector<HTMLElement>(".prose");
+    if (!prose || prose.dataset.photoGalleryReady === "true") return;
+
+    buildGalleries(prose);
+
+    const galleries = document.querySelectorAll(".photo-gallery");
+    if (!galleries.length) return;
+
+    prose.dataset.photoGalleryReady = "true";
+    prose.classList.add("prose-has-gallery");
+    ensureLightbox();
+  }
+
+  setupPhotoGalleries();
+  document.addEventListener("astro:page-load", setupPhotoGalleries);
+</script>
+
+<style is:global>
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-sm);
+    margin-block: var(--space-md);
+  }
+
+  .photo-gallery-item {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: zoom-in;
+    background: var(--color-bg-soft);
+    box-shadow: var(--shadow-soft);
+    transition:
+      transform var(--transition),
+      box-shadow var(--transition);
+  }
+
+  .photo-gallery-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .photo-gallery-item:focus-visible {
+    outline: 2px solid var(--color-primary-dark);
+    outline-offset: 3px;
+  }
+
+  .photo-gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .prose .photo-gallery + * {
+    margin-top: var(--space-sm);
+  }
+
+  .prose.prose-has-gallery {
+    max-width: var(--container-max);
+  }
+
+  .prose.prose-wide.prose-has-gallery {
+    max-width: none;
+  }
+
+  .photo-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    background: rgba(18, 16, 16, 0.92);
+  }
+
+  .photo-lightbox[hidden] {
+    display: none !important;
+  }
+
+  body.photo-lightbox-open {
+    overflow: hidden;
+  }
+
+  .photo-lightbox-figure {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 0;
+    margin: 0;
+    padding-inline: 2.75rem;
+  }
+
+  .photo-lightbox-image {
+    display: block;
+    max-width: min(100%, 1200px);
+    max-height: calc(100vh - 8rem);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+  }
+
+  .photo-lightbox-caption {
+    max-width: min(100%, 48rem);
+    margin: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+
+  .photo-lightbox-close,
+  .photo-lightbox-prev,
+  .photo-lightbox-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+
+  .photo-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    font-size: 2rem;
+  }
+
+  .photo-lightbox-prev {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .photo-lightbox-next {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .photo-lightbox-prev:disabled,
+  .photo-lightbox-next:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .photo-lightbox-close:hover,
+  .photo-lightbox-prev:hover:not(:disabled),
+  .photo-lightbox-next:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  .photo-lightbox-close:focus-visible,
+  .photo-lightbox-prev:focus-visible,
+  .photo-lightbox-next:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 767px) {
+    .photo-gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .photo-lightbox {
+      padding: 0.75rem;
+    }
+
+    .photo-lightbox-figure {
+      padding-inline: 0.25rem;
+    }
+
+    .photo-lightbox-prev,
+    .photo-lightbox-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .photo-lightbox-prev {
+      left: 0.5rem;
+    }
+
+    .photo-lightbox-next {
+      right: 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .photo-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

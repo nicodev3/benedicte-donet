@@ -2,8 +2,13 @@
 import BaseLayout from "./BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
-import SiteImage from "@/components/common/SiteImage.astro";
+import Hero from "@/components/sections/Hero.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import PhotoGalleryEnhancer from "@/components/common/PhotoGalleryEnhancer.astro";
+import PageIntroEnhancer from "@/components/common/PageIntroEnhancer.astro";
+import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
+import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
+import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getNavigationSettings } from "@/lib/settings";
 import { getLocaleFromPath } from "@/lib/i18n";
@@ -15,8 +20,9 @@ interface Props {
 }
 
 const { page, structuredData } = Astro.props;
-const { title, description, image, imageAlt, seoTitle, seoDescription } =
-  page.data;
+const { title, heroTitle, description, image, seoTitle, seoDescription } = page.data;
+const hasHero = Boolean(image);
+const isWideContent = page.id === "psychotherapie" || page.id === "phototherapie";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const navigation = await getNavigationSettings(locale);
@@ -35,36 +41,36 @@ const breadcrumbs = buildBreadcrumbs(
   image={image}
   structuredData={structuredData}
 >
-  <Section tone="soft" class="page-hero">
-    <Container narrow>
-      <Breadcrumb items={breadcrumbs} />
-      <h1>{title}</h1>
-      {description && <p class="page-description">{description}</p>}
-    </Container>
-  </Section>
-
   {
-    image && (
-      <Container narrow>
-        <SiteImage
-          src={image}
-          alt={imageAlt || title}
-          class="page-image"
-          width={1400}
-          widths={[600, 900, 1400]}
-          sizes="(max-width: 800px) 100vw, 736px"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </Container>
+    hasHero ? (
+      <Hero
+        title={heroTitle ?? title}
+        subtitle={description ?? ""}
+        backgroundImage={image!}
+        subtitleFirst={Boolean(description)}
+      />
+    ) : (
+      <Section tone="soft" class="page-hero">
+        <Container narrow>
+          <Breadcrumb items={breadcrumbs} />
+          <h1>{title}</h1>
+          {description && <p class="page-description">{description}</p>}
+        </Container>
+      </Section>
     )
   }
 
-  <Container>
-    <article class="prose">
+  <Container wide={isWideContent}>
+    <article class:list={["prose", { "prose-wide": isWideContent }]}>
       <slot />
     </article>
   </Container>
+
+  {isWideContent && <PageIntroEnhancer />}
+  {page.id === "phototherapie" && <PhotoOffersEnhancer />}
+  {page.id === "phototherapie" && <PhotoProcessEnhancer />}
+  {page.id === "phototherapie" && <PhotoTestimonialsEnhancer />}
+  <PhotoGalleryEnhancer />
 </BaseLayout>
 
 <style>
@@ -77,12 +83,6 @@ const breadcrumbs = buildBreadcrumbs(
     margin-top: var(--space-sm);
     font-size: var(--text-lg);
     color: var(--color-text-soft);
-  }
-
-  .page-image {
-    border-radius: var(--radius-md);
-    margin-block: var(--space-lg);
-    box-shadow: var(--shadow-soft);
   }
 
   article {

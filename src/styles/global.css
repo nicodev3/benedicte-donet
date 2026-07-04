@@ -139,6 +139,14 @@ hr {
   margin-block: var(--space-md);
 }
 
+.prose.prose-wide {
+  max-width: none;
+}
+
+.prose.prose-wide > * + * {
+  margin-top: var(--space-sm);
+}
+
 .prose-lucide-icon {
   display: flex;
   justify-content: center;

@@ -75,6 +75,7 @@
   /* Mise en page */
   --container-max: 72rem;
   --container-narrow: 46rem;
+  --container-wide: 84rem;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-full: 999px;

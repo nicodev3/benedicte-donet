@@ -1,17 +1,14 @@
 ---
 title: "Psychothérapie"
-description: ""
-image: ""
+heroTitle: "La psychothérapie"
+description: "Psychologue en ligne"
+image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg"
 imageAlt: ""
-seoTitle: "Psychothérapie"
+seoTitle: "Psychothérapie en ligne | Trauma, anxiété et EMDR"
 seoDescription: ""
 order: 2
 draft: false
 ---
-
-## Psychologue en ligne
-
-# La psychothérapie
 
 ![EMDR psychologie en ligne benedicte donet](../../assets/images/wp/DSC07154.jpg)
 

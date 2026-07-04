@@ -1,15 +1,13 @@
 ---
 title: "Infos pratiques"
-description: ""
-image: ""
+description: "Psychologue à distance | Bénédicte Donet"
+image: "/images/wp/hero-infos-pratiques.png"
 imageAlt: ""
 seoTitle: "Infos pratiques"
 seoDescription: ""
 order: 6
 draft: false
 ---
-
-# Infos pratiques
 
 ![Bénédicte Donet psychologue en ligne avis](../../assets/images/wp/portrait-infos-pratiques-1.png)
 

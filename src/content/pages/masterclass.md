@@ -1,7 +1,8 @@
 ---
 title: "Masterclass"
-description: ""
-image: ""
+heroTitle: "Les Masterclass"
+description: "Psychologie en ligne"
+image: "/images/wp/fleur-sechee-3.png"
 imageAlt: ""
 seoTitle: "Masterclass"
 seoDescription: ""

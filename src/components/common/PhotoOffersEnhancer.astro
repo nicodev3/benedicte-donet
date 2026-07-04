@@ -1,0 +1,265 @@
+---
+/**
+ * Regroupe les offres photothérapie en sections côte à côte sur desktop.
+ */
+---
+
+<script>
+  function isImageOnlyParagraph(element: Element): boolean {
+    if (element.tagName !== "P") return false;
+    const img = element.querySelector("img");
+    if (!img) return false;
+
+    const clone = element.cloneNode(true) as HTMLElement;
+    clone.querySelectorAll("img").forEach((node) => node.remove());
+    return !clone.textContent?.replace(/\[/g, "").trim();
+  }
+
+  function isStandaloneCta(element: Element): boolean {
+    if (element.tagName !== "P" || element.classList.contains("page-cta")) {
+      return false;
+    }
+
+    const link = element.querySelector("a");
+    if (!link || element.querySelector("img")) return false;
+
+    const href = link.getAttribute("href") ?? "";
+    const text = element.textContent?.trim() ?? "";
+    return text === link.textContent?.trim() && href.includes("#form");
+  }
+
+  function enhancePageCtas(prose: HTMLElement) {
+    prose.querySelectorAll("p").forEach((paragraph) => {
+      if (isStandaloneCta(paragraph)) {
+        paragraph.classList.add("page-cta");
+      }
+    });
+  }
+
+  function isOfferCta(element: Element): boolean {
+    return (
+      element.tagName === "P" &&
+      Boolean(element.querySelector("a")) &&
+      !element.querySelector("img")
+    );
+  }
+
+  function buildPhotoOffers(prose: HTMLElement) {
+    const heading = prose.querySelector<HTMLElement>('h2[id^="mes-offres-de-"]');
+    if (!heading || heading.dataset.offersReady === "true") return;
+
+    const blocks: Element[][] = [];
+    let current: Element[] = [];
+    let ctaElement: Element | null = null;
+    let child = heading.nextElementSibling;
+
+    while (child && child.tagName !== "H2") {
+      if (child.tagName === "H3") {
+        if (current.some((node) => node.tagName === "H3")) {
+          const trailingImage = isImageOnlyParagraph(current[current.length - 1]);
+          if (trailingImage) {
+            const imageNode = current.pop()!;
+            blocks.push(current);
+            current = [imageNode, child];
+          } else {
+            blocks.push(current);
+            current = [child];
+          }
+        } else {
+          current.push(child);
+        }
+      } else if (isOfferCta(child) && current.some((node) => node.tagName === "H3")) {
+        blocks.push(current);
+        current = [];
+        ctaElement = child;
+        child = child.nextElementSibling;
+        continue;
+      } else {
+        current.push(child);
+      }
+
+      child = child.nextElementSibling;
+    }
+
+    if (current.some((node) => node.tagName === "H3")) {
+      blocks.push(current);
+    }
+
+    if (blocks.length < 2) return;
+
+    const afterSection = child;
+
+    const grid = document.createElement("div");
+    grid.className = "photo-offers";
+
+    for (const block of blocks) {
+      const offer = document.createElement("section");
+      offer.className = "photo-offer";
+
+      const imageIndex = block.findIndex((node) => isImageOnlyParagraph(node));
+      const ordered =
+        imageIndex > 0
+          ? [block[imageIndex], ...block.filter((_, index) => index !== imageIndex)]
+          : block;
+
+      ordered.forEach((node) => offer.append(node));
+      grid.append(offer);
+    }
+
+    const section = document.createElement("section");
+    section.className = "photo-offers-section";
+    section.setAttribute("aria-labelledby", heading.id);
+    section.append(heading);
+    section.append(grid);
+    if (ctaElement) {
+      ctaElement.className = "page-cta";
+      section.append(ctaElement);
+    }
+
+    prose.insertBefore(section, afterSection);
+    heading.dataset.offersReady = "true";
+  }
+
+  function setupPhotoOffers() {
+    const prose = document.querySelector<HTMLElement>(".prose.prose-wide");
+    if (!prose || prose.dataset.photoOffersReady === "true") return;
+
+    buildPhotoOffers(prose);
+    enhancePageCtas(prose);
+    if (prose.querySelector(".photo-offers-section") || prose.querySelector(".page-cta")) {
+      prose.dataset.photoOffersReady = "true";
+    }
+  }
+
+  setupPhotoOffers();
+  document.addEventListener("astro:page-load", setupPhotoOffers);
+</script>
+
+<style is:global>
+  .photo-offers-section {
+    margin-block: var(--space-lg);
+  }
+
+  .photo-offers-section > h2 {
+    margin-bottom: var(--space-md);
+    text-align: center;
+  }
+
+  .photo-offers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.25rem, 3vw, 4rem);
+  }
+
+  .photo-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.875rem 1.875rem;
+    background: rgb(198 141 133 / 0.09);
+    box-shadow: 3px 3px 12px rgb(0 0 0 / 0.3);
+  }
+
+  .photo-offer > p:first-child:has(img) {
+    width: 66.666%;
+    margin: 0 auto var(--space-sm);
+  }
+
+  .photo-offer > * {
+    width: 100%;
+  }
+
+  .photo-offer > * + * {
+    margin-top: var(--space-sm);
+  }
+
+  .photo-offer > p:first-child:has(img) + * {
+    margin-top: var(--space-md);
+  }
+
+  .photo-offer img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .photo-offer h3 {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 0.85rem + 0.7vw, 1.875rem);
+    font-weight: 400;
+    line-height: 1.35;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--color-secondary);
+  }
+
+  .photo-offer p,
+  .photo-offer li {
+    color: var(--color-text);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .photo-offer ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    text-align: left;
+  }
+
+  .photo-offer li + li {
+    margin-top: 0.35rem;
+  }
+
+  .page-cta {
+    margin-top: var(--space-md);
+    text-align: center;
+  }
+
+  .page-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.45rem;
+    border-radius: 2.1875rem 0;
+    background: var(--color-primary-strong);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition:
+      background var(--transition),
+      transform var(--transition);
+  }
+
+  .page-cta a:hover {
+    background: var(--color-primary-stronger);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 820px) {
+    .photo-offers {
+      grid-template-columns: 1fr;
+      max-width: 28rem;
+      margin-inline: auto;
+    }
+
+    .photo-offer {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .photo-offer > p:first-child:has(img) {
+      width: 75%;
+    }
+
+    .page-cta a {
+      font-size: 1.0625rem;
+    }
+  }
+</style>

@@ -1,7 +1,3 @@
-Psychologie en ligne
-
-# Les Masterclass
-
 ## TON ACCÈS À DU CONTENU EXCLUSIF SUR LA PLEINE CONSCIENCE, LA SEXUALITÉ, LE SYSTÈME NERVEUX.
 
 Cette partie de mon offre est **le cours de psycho-éducation que vous n'avez jamais reçu**. Nous apprenons bien trop peu sur notre psychologie, notre système nerveux et notre sexualité, etc, à l'école.  

@@ -110,17 +110,24 @@ collections:
     preview_path: "/{{slug}}/"
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true }
+      - label: "Titre du bandeau"
+        name: "heroTitle"
+        widget: "string"
+        i18n: true
+        required: false
+        hint: "Titre affiché dans le bandeau en haut de page. Si vide, le titre de la page est utilisé."
       - label: "Description courte"
         name: "description"
         widget: "text"
         i18n: true
         required: false
-        hint: "Utilisée comme introduction sous le titre (facultatif)."
-      - label: "Image principale"
+        hint: "Sous-titre du bandeau (au-dessus du titre) lorsqu'une image de bandeau est définie."
+      - label: "Image de bandeau"
         name: "image"
         widget: "image"
         i18n: duplicate
         required: false
+        hint: "Image de fond du bandeau en haut de page. Si vide, un en-tête simple est affiché."
       - label: "Description de l'image"
         name: "imageAlt"
         widget: "string"

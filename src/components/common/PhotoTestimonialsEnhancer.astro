@@ -1,0 +1,411 @@
+---
+/**
+ * Transforme la section « Elles en parlent… » en carousel de témoignages.
+ */
+---
+
+<script>
+  function isAuthorParagraph(element: Element): boolean {
+    if (element.tagName !== "P") return false;
+    const text = element.textContent?.trim() ?? "";
+    return text.startsWith("\u2053");
+  }
+
+  function isQuoteParagraph(element: Element): boolean {
+    if (element.tagName !== "P") return false;
+    const text = element.textContent?.trim() ?? "";
+    return /^[\u201C\u201D\u00AB\u00BB"]/.test(text);
+  }
+
+  function createChevronIcon(direction: "prev" | "next"): SVGSVGElement {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    svg.setAttribute("width", "24");
+    svg.setAttribute("height", "24");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    svg.setAttribute("aria-hidden", "true");
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", direction === "prev" ? "m15 18-6-6 6-6" : "m9 18 6-6-6-6");
+    svg.append(path);
+
+    return svg;
+  }
+
+  function buildTestimonialsCarousel(prose: HTMLElement) {
+    const heading = prose.querySelector<HTMLElement>('h2[id^="elles-en-parlent"]');
+    if (!heading || heading.dataset.testimonialsReady === "true") return;
+
+    const testimonials: { quotes: Element[]; author: Element }[] = [];
+    let quoteParts: Element[] = [];
+    let child = heading.nextElementSibling;
+
+    while (child && child.tagName !== "H2") {
+      if (child.tagName === "P") {
+        if (isAuthorParagraph(child)) {
+          if (quoteParts.length) {
+            testimonials.push({ quotes: quoteParts, author: child });
+            quoteParts = [];
+          }
+        } else if (isQuoteParagraph(child) || quoteParts.length > 0) {
+          quoteParts.push(child);
+        }
+      }
+      child = child.nextElementSibling;
+    }
+
+    if (!testimonials.length) return;
+
+    const carouselId = `testimonials-${Math.random().toString(36).slice(2, 9)}`;
+    const section = document.createElement("section");
+    section.className = "photo-testimonials-section";
+    section.setAttribute("aria-labelledby", heading.id);
+
+    const carousel = document.createElement("div");
+    carousel.className = "photo-testimonials-carousel carousel";
+    carousel.setAttribute("role", "region");
+    carousel.setAttribute("aria-roledescription", "carousel");
+    carousel.setAttribute("aria-labelledby", heading.id);
+    carousel.dataset.carousel = "";
+    carousel.dataset.carouselPage = "true";
+
+    const prevBtn = document.createElement("button");
+    prevBtn.type = "button";
+    prevBtn.className = "carousel-control carousel-control-prev";
+    prevBtn.setAttribute("aria-controls", `${carouselId}-track`);
+    prevBtn.setAttribute("aria-label", "Témoignage précédent");
+    prevBtn.dataset.carouselPrev = "";
+    prevBtn.append(createChevronIcon("prev"));
+
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    nextBtn.className = "carousel-control carousel-control-next";
+    nextBtn.setAttribute("aria-controls", `${carouselId}-track`);
+    nextBtn.setAttribute("aria-label", "Témoignage suivant");
+    nextBtn.dataset.carouselNext = "";
+    nextBtn.append(createChevronIcon("next"));
+
+    const shell = document.createElement("div");
+    shell.className = "carousel-shell";
+
+    const track = document.createElement("ul");
+    track.id = `${carouselId}-track`;
+    track.className = "carousel-track";
+    track.tabIndex = 0;
+
+    shell.append(track);
+    carousel.append(prevBtn, shell, nextBtn);
+
+    const anchor = testimonials[0].quotes[0];
+    prose.insertBefore(section, anchor);
+    section.append(heading, carousel);
+
+    for (const { quotes, author } of testimonials) {
+      const slide = document.createElement("li");
+      slide.className = "carousel-slide";
+
+      const figure = document.createElement("figure");
+      figure.className = "photo-testimonial";
+
+      const blockquote = document.createElement("blockquote");
+      for (const quote of quotes) {
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = quote.innerHTML;
+        blockquote.append(paragraph);
+        quote.remove();
+      }
+
+      const figcaption = document.createElement("figcaption");
+      figcaption.className = "photo-testimonial-author";
+      figcaption.textContent = author.textContent?.trim() ?? "";
+      author.remove();
+
+      figure.append(blockquote, figcaption);
+      slide.append(figure);
+      track.append(slide);
+    }
+
+    heading.dataset.testimonialsReady = "true";
+  }
+
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>("[data-carousel]").forEach((carousel) => {
+      if (carousel.dataset.initialized === "true") return;
+
+      const track = carousel.querySelector<HTMLElement>(".carousel-track");
+      const prev = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
+      const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
+
+      if (!track || !prev || !next) return;
+
+      carousel.dataset.initialized = "true";
+
+      const slides = () =>
+        Array.from(track.querySelectorAll<HTMLElement>(".carousel-slide"));
+
+      const getCurrentIndex = () => {
+        const trackLeft = track.getBoundingClientRect().left;
+        const index = slides().findIndex(
+          (slide) => slide.getBoundingClientRect().left >= trackLeft - 4
+        );
+        return Math.max(0, index);
+      };
+
+      const getScrollStep = () => {
+        if (carousel.dataset.carouselPage !== "true") return 1;
+
+        const slide = slides()[0];
+        if (!slide) return 1;
+
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const slideWidth = slide.getBoundingClientRect().width + gap;
+        return Math.max(1, Math.floor(track.clientWidth / slideWidth));
+      };
+
+      const updateControls = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const atStart = track.scrollLeft <= 1;
+        const atEnd = track.scrollLeft >= maxScroll - 1;
+
+        prev.disabled = atStart;
+        next.disabled = atEnd;
+        carousel.classList.toggle("at-start", atStart);
+        carousel.classList.toggle("at-end", atEnd);
+      };
+
+      const scrollToIndex = (index: number) => {
+        const slide = slides()[index];
+        if (!slide) return;
+
+        slide.scrollIntoView({
+          behavior: "smooth",
+          inline: "start",
+          block: "nearest",
+        });
+      };
+
+      prev.addEventListener("click", () => {
+        const step = getScrollStep();
+        scrollToIndex(Math.max(0, getCurrentIndex() - step));
+      });
+      next.addEventListener("click", () => {
+        const step = getScrollStep();
+        scrollToIndex(Math.min(slides().length - 1, getCurrentIndex() + step));
+      });
+
+      track.addEventListener("scroll", updateControls, { passive: true });
+      window.addEventListener("resize", updateControls, { passive: true });
+      updateControls();
+    });
+  }
+
+  function setupPhotoTestimonials() {
+    const prose = document.querySelector<HTMLElement>(".prose.prose-wide");
+    if (!prose) return;
+
+    buildTestimonialsCarousel(prose);
+    initCarousels();
+  }
+
+  setupPhotoTestimonials();
+  document.addEventListener("astro:page-load", setupPhotoTestimonials);
+</script>
+
+<style is:global>
+  .photo-testimonials-section {
+    margin-block: var(--space-xl);
+  }
+
+  .photo-testimonials-section > h2 {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    font-family: var(--font-heading);
+    font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary-dark);
+  }
+
+  .photo-testimonials-carousel.carousel {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .photo-testimonials-carousel .carousel-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-bg);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition:
+      background-color var(--transition),
+      color var(--transition),
+      opacity var(--transition),
+      transform 220ms ease,
+      box-shadow 220ms ease;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+
+  .photo-testimonials-carousel .carousel-control:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: #fff;
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(198, 141, 133, 0.35);
+  }
+
+  .photo-testimonials-carousel .carousel-control:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  .photo-testimonials-carousel .carousel-control:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .photo-testimonials-carousel .carousel-shell {
+    position: relative;
+    min-width: 0;
+  }
+
+  .photo-testimonials-carousel .carousel-shell::before,
+  .photo-testimonials-carousel .carousel-shell::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 300ms ease;
+  }
+
+  .photo-testimonials-carousel .carousel-shell::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg), transparent);
+  }
+
+  .photo-testimonials-carousel .carousel-shell::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg), transparent);
+  }
+
+  .photo-testimonials-carousel.at-start .carousel-shell::before,
+  .photo-testimonials-carousel.at-end .carousel-shell::after {
+    opacity: 0;
+  }
+
+  .photo-testimonials-carousel .carousel-track {
+    display: flex;
+    gap: var(--space-lg);
+    margin: 0;
+    padding: 0.25rem 0.125rem 0.5rem;
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 0.125rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .photo-testimonials-carousel .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .photo-testimonials-carousel .carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-width: 0;
+  }
+
+  .photo-testimonial {
+    margin: 0;
+    padding: clamp(1.25rem, 2vw, 2rem);
+    background: var(--color-bg-soft);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    min-height: 12rem;
+  }
+
+  .photo-testimonial blockquote {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--color-text);
+    flex: 1;
+  }
+
+  .photo-testimonial blockquote p {
+    margin: 0;
+  }
+
+  .photo-testimonial blockquote p + p {
+    margin-top: var(--space-sm);
+  }
+
+  .photo-testimonial-author {
+    margin-top: var(--space-md);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--text-sm);
+    color: var(--color-primary-dark);
+    text-align: right;
+  }
+
+  @media (max-width: 767px) {
+    .photo-testimonials-carousel.carousel {
+      grid-template-columns: 1fr;
+    }
+
+    .photo-testimonials-carousel .carousel-control {
+      display: none;
+    }
+
+    .photo-testimonials-carousel .carousel-slide {
+      flex-basis: 88vw;
+    }
+
+    .photo-testimonials-carousel .carousel-shell::before,
+    .photo-testimonials-carousel .carousel-shell::after {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .photo-testimonials-carousel .carousel-track {
+      scroll-behavior: auto;
+    }
+
+    .photo-testimonials-carousel .carousel-control:hover:not(:disabled),
+    .photo-testimonials-carousel .carousel-control:active:not(:disabled) {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+</style>

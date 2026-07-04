@@ -1,13 +1,14 @@
 ---
 interface Props {
   narrow?: boolean;
+  wide?: boolean;
   class?: string;
 }
 
-const { narrow = false, class: className = "" } = Astro.props;
+const { narrow = false, wide = false, class: className = "" } = Astro.props;
 ---
 
-<div class:list={["container", { narrow }, className]}>
+<div class:list={["container", { narrow, wide }, className]}>
   <slot />
 </div>
 
@@ -21,5 +22,9 @@ const { narrow = false, class: className = "" } = Astro.props;
 
   .container.narrow {
     max-width: var(--container-narrow);
+  }
+
+  .container.wide {
+    max-width: var(--container-wide);
   }
 </style>

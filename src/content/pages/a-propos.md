@@ -1,17 +1,13 @@
 ---
 title: "A propos"
-description: ""
-image: ""
+description: "Psychologue à distance | Bénédicte Donet"
+image: "/images/wp/hero-a-propos.png"
 imageAlt: ""
 seoTitle: "A propos"
 seoDescription: ""
 order: 5
 draft: false
 ---
-
-Psychologue à distance |  Bénédicte Donet
-
-# A propos
 
 ![Bénédicte Donet psychologue à distance](../../assets/images/wp/bene-page-accueil.png)
 

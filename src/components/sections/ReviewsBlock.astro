@@ -28,6 +28,7 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
       aria-labelledby={`${carouselId}-heading`}
       aria-label={carouselLabel}
       data-carousel
+      data-carousel-page
     >
       <button
         type="button"
@@ -103,6 +104,17 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
         return Math.max(0, index);
       };
 
+      const getScrollStep = () => {
+        if (carousel.dataset.carouselPage !== "true") return 1;
+
+        const slide = slides()[0];
+        if (!slide) return 1;
+
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const slideWidth = slide.getBoundingClientRect().width + gap;
+        return Math.max(1, Math.floor(track.clientWidth / slideWidth));
+      };
+
       const updateControls = () => {
         const maxScroll = track.scrollWidth - track.clientWidth;
         const atStart = track.scrollLeft <= 1;
@@ -126,10 +138,12 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
       };
 
       prev.addEventListener("click", () => {
-        scrollToIndex(Math.max(0, getCurrentIndex() - 1));
+        const step = getScrollStep();
+        scrollToIndex(Math.max(0, getCurrentIndex() - step));
       });
       next.addEventListener("click", () => {
-        scrollToIndex(Math.min(slides().length - 1, getCurrentIndex() + 1));
+        const step = getScrollStep();
+        scrollToIndex(Math.min(slides().length - 1, getCurrentIndex() + step));
       });
 
       track.addEventListener("scroll", updateControls, { passive: true });
@@ -248,7 +262,7 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
   }
 
   .carousel-slide {
-    flex: 0 0 calc((100% - var(--space-lg)) / 2);
+    flex: 0 0 calc((100% - 3 * var(--space-lg)) / 4);
     scroll-snap-align: start;
     scroll-snap-stop: always;
     min-width: 0;
@@ -287,6 +301,12 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
     align-items: center;
     gap: 0.15rem;
     color: var(--color-highlight);
+  }
+
+  @media (max-width: 1024px) {
+    .carousel-slide {
+      flex-basis: calc((100% - var(--space-lg)) / 2);
+    }
   }
 
   @media (max-width: 767px) {
