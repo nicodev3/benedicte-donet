@@ -6,6 +6,8 @@ import Hero from "@/components/sections/Hero.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
 import PhotoGalleryEnhancer from "@/components/common/PhotoGalleryEnhancer.astro";
 import PageIntroEnhancer from "@/components/common/PageIntroEnhancer.astro";
+import PageCtaEnhancer from "@/components/common/PageCtaEnhancer.astro";
+import AboutImageSplitEnhancer from "@/components/common/AboutImageSplitEnhancer.astro";
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
@@ -22,7 +24,10 @@ interface Props {
 const { page, structuredData } = Astro.props;
 const { title, heroTitle, description, image, seoTitle, seoDescription } = page.data;
 const hasHero = Boolean(image);
-const isWideContent = page.id === "psychotherapie" || page.id === "phototherapie";
+const isWideContent =
+  page.id === "psychotherapie" ||
+  page.id === "phototherapie" ||
+  page.id === "a-propos";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const navigation = await getNavigationSettings(locale);
@@ -67,6 +72,8 @@ const breadcrumbs = buildBreadcrumbs(
   </Container>
 
   {isWideContent && <PageIntroEnhancer />}
+  <PageCtaEnhancer />
+  {page.id === "a-propos" && <AboutImageSplitEnhancer />}
   {page.id === "phototherapie" && <PhotoOffersEnhancer />}
   {page.id === "phototherapie" && <PhotoProcessEnhancer />}
   {page.id === "phototherapie" && <PhotoTestimonialsEnhancer />}
