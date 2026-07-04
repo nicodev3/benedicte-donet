@@ -5,6 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Administration du site — Bénédicte Donet</title>
+    <style>
+      :root {
+        --cms-bg: #f8f4ef;
+        --cms-panel: #fffdf9;
+        --cms-border: #e7ddd4;
+        --cms-text: #3f474f;
+        --cms-muted: #6e756f;
+        --cms-accent: #b98278;
+      }
+
+      body {
+        background: var(--cms-bg);
+        color: var(--cms-text);
+      }
+
+      [class*="AppMainContainer"],
+      [class*="CollectionMain"],
+      [class*="EditorContainer"] {
+        background: var(--cms-bg);
+      }
+
+      [class*="SidebarContainer"] {
+        background: #efe5dc;
+        border-right: 1px solid var(--cms-border);
+      }
+
+      [class*="ControlContainer"],
+      [class*="ObjectWidgetTop"],
+      [class*="ListControl"] {
+        border-color: var(--cms-border);
+      }
+
+      [class*="ObjectWidgetTop"],
+      [class*="ListControl"] {
+        background: var(--cms-panel);
+        border-radius: 10px;
+      }
+
+      label,
+      [class*="FieldLabel"] {
+        color: var(--cms-text);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      input,
+      textarea,
+      select,
+      [contenteditable="true"] {
+        border-color: var(--cms-border) !important;
+        border-radius: 8px !important;
+        color: var(--cms-text) !important;
+      }
+
+      textarea,
+      [contenteditable="true"] {
+        line-height: 1.7 !important;
+      }
+
+      button {
+        border-radius: 8px !important;
+      }
+
+      a,
+      button,
+      [role="button"] {
+        transition:
+          background-color 160ms ease,
+          border-color 160ms ease,
+          color 160ms ease,
+          box-shadow 160ms ease;
+      }
+    </style>
   </head>
   <body>
     <!-- Decap CMS via CDN : simple et sans étape de build -->

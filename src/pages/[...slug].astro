@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import PageLayout from "@/layouts/PageLayout.astro";
 import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
 import type { CollectionEntry } from "astro:content";
+import { getLocaleFromFilePath, localizedPath, stripLocaleFromFilePath } from "@/lib/i18n";
 
 /**
  * Sur le site WordPress d'origine, les articles de blog sont servis
@@ -12,14 +13,25 @@ import type { CollectionEntry } from "astro:content";
 export async function getStaticPaths() {
   const pages = await getCollection("pages", ({ data }) => !data.draft);
   const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const localizedSlug = (id: string) => {
+    const entry = [...pages, ...posts].find((item) => item.id === id);
+    const locale = getLocaleFromFilePath(entry?.filePath);
+    const slug = stripLocaleFromFilePath(entry?.filePath, id);
+    const path = localizedPath(`/${slug}/`, locale);
+    return path === "/" ? "" : path.replace(/^\/|\/$/g, "");
+  };
 
   return [
     ...pages.map((page) => ({
-      params: { slug: page.id },
+      params: {
+        slug: localizedSlug(page.id),
+      },
       props: { type: "page" as const, entry: page },
     })),
     ...posts.map((post) => ({
-      params: { slug: post.id },
+      params: {
+        slug: localizedSlug(post.id),
+      },
       props: { type: "post" as const, entry: post },
     })),
   ];

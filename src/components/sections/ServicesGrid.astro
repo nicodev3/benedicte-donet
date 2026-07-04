@@ -3,6 +3,7 @@ import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import Button from "@/components/common/Button.astro";
+import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Card {
   title: string;
@@ -26,9 +27,6 @@ interface Props {
 
 const { title, cards } = Astro.props;
 
-function richText(value: string): string {
-  return value.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-}
 ---
 
 <Section class="services-section">
@@ -76,18 +74,18 @@ function richText(value: string): string {
                   <a href={card.url}>{card.title}</a>
                 </h3>
                 <div class="service-body">
-                  {card.intro && <p set:html={richText(card.intro)} />}
+                  {card.intro && <p set:html={renderInlineRichText(card.intro)} />}
                   {
                     card.bullets && (
                       <ul>
                         {card.bullets.map((item) => (
-                          <li set:html={richText(item)} />
+                          <li set:html={renderInlineRichText(item)} />
                         ))}
                       </ul>
                     )
                   }
-                  {!card.bullets && card.text && <p set:html={richText(card.text)} />}
-                  {card.bullets && card.text && <p set:html={richText(card.text)} />}
+                  {!card.bullets && card.text && <p set:html={renderInlineRichText(card.text)} />}
+                  {card.bullets && card.text && <p set:html={renderInlineRichText(card.text)} />}
                   {
                     card.linkLabel && (
                       <p class="service-link">

@@ -3,6 +3,7 @@ import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
+import { renderInlineRichText, splitRichParagraphs } from "@/lib/rich-text";
 
 interface Props {
   title: string;
@@ -22,11 +23,7 @@ const {
   imageAlt = "Illustration des masterclass et programmes",
 } = Astro.props;
 
-function richText(value: string): string {
-  return value.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-}
-
-const paragraphs = text.split(/\n\n+/).filter(Boolean);
+const paragraphs = splitRichParagraphs(text);
 ---
 
 <Section>
@@ -50,7 +47,7 @@ const paragraphs = text.split(/\n\n+/).filter(Boolean);
         <h2>{title}</h2>
         <div class="cta-body">
           {paragraphs.map((paragraph) => (
-            <p set:html={richText(paragraph)} />
+            <p set:html={renderInlineRichText(paragraph)} />
           ))}
         </div>
         <Button href={ctaUrl}>{ctaLabel}</Button>

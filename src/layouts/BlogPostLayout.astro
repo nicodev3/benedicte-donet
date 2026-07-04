@@ -6,6 +6,8 @@ import SiteImage from "@/components/common/SiteImage.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getGlobalSettings } from "@/lib/settings";
+import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -24,14 +26,16 @@ const {
   seoDescription,
 } = post.data;
 
-const global = await getGlobalSettings();
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = useTranslations(locale);
+const global = await getGlobalSettings(locale);
 
 const breadcrumbs = buildBreadcrumbs(Astro.url.pathname, title, undefined, {
   label: "Blog",
-  url: "/blog/",
-});
+  url: localizedPath("/blog/", locale),
+}, locale);
 
-const formattedDate = new Intl.DateTimeFormat("fr-FR", {
+const formattedDate = new Intl.DateTimeFormat(t.locale.date, {
   dateStyle: "long",
 }).format(date);
 ---
@@ -75,9 +79,9 @@ const formattedDate = new Intl.DateTimeFormat("fr-FR", {
 
       <footer class="post-footer">
         <p>
-          Envie d'aller plus loin ? Je vous accompagne en téléconsultation.
+          {t.blogPost.footerText}
         </p>
-        <Button href={global.appointmentUrl}>Je prends rendez-vous</Button>
+        <Button href={global.appointmentUrl}>{t.blogPost.footerCta}</Button>
       </footer>
     </article>
   </Container>

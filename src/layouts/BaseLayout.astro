@@ -4,6 +4,8 @@ import "@fontsource-variable/rubik";
 import Seo from "@/components/seo/Seo.astro";
 import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
+import { getLocaleFromPath } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 
 interface Props {
   title?: string;
@@ -16,10 +18,12 @@ interface Props {
 }
 
 const props = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = useTranslations(locale);
 ---
 
 <!doctype html>
-<html lang="fr">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,7 +40,9 @@ const props = Astro.props;
     <Seo {...props} />
   </head>
   <body>
-    <a href="#contenu" class="visually-hidden">Aller au contenu</a>
+    <a href="#contenu" class="visually-hidden">
+      {t.common.skipToContent}
+    </a>
     <Header />
     <main id="contenu">
       <slot />

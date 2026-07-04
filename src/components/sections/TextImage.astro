@@ -4,6 +4,7 @@ import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import doubleEtoiles from "@/assets/images/wp/double-etoiles.svg";
+import { renderInlineRichText, splitRichParagraphs } from "@/lib/rich-text";
 
 interface Props {
   title: string;
@@ -29,11 +30,7 @@ const {
   variant = "default",
 } = Astro.props;
 
-function richText(value: string): string {
-  return value.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-}
-
-const paragraphs = text.split(/\n\n+/).filter(Boolean);
+const paragraphs = splitRichParagraphs(text);
 const isIntro = variant === "intro";
 const isOnline = variant === "online";
 const isRich = isIntro || isOnline;
@@ -73,7 +70,7 @@ const imageFirst = isIntro || reverse;
           isRich ? (
             <div class="ti-body">
               {paragraphs.map((paragraph) => (
-                <p set:html={richText(paragraph)} />
+                <p set:html={renderInlineRichText(paragraph)} />
               ))}
             </div>
           ) : (
@@ -133,11 +130,17 @@ const imageFirst = isIntro || reverse;
     gap: var(--space-xl);
   }
 
-  .ti-grid.intro,
-  .ti-grid.online {
+  .ti-grid.intro {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
     align-items: center;
     gap: clamp(1.5rem, 4vw, 3.75rem);
+    padding-block: clamp(2.5rem, 5vw, 3.75rem);
+  }
+
+  .ti-grid.online {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: clamp(1.5rem, 4vw, 3rem);
     padding-block: clamp(2.5rem, 5vw, 3.75rem);
   }
 
@@ -178,6 +181,27 @@ const imageFirst = isIntro || reverse;
 
   .ti-grid.online .ti-content {
     text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ti-grid.online .ti-image {
+    overflow: hidden;
+    border-radius: 1.25rem 0 0 6.25rem;
+    min-height: 18rem;
+  }
+
+  .ti-grid.online .ti-image :global(img) {
+    width: 100%;
+    height: 100%;
+    min-height: 18rem;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    box-shadow: none;
+    margin-inline: 0;
   }
 
   .ti-body :global(p) {
@@ -208,21 +232,6 @@ const imageFirst = isIntro || reverse;
     max-width: 22rem;
     border-radius: 0;
     box-shadow: none;
-  }
-
-  .ti-grid.online .ti-image {
-    overflow: hidden;
-    border-radius: 1.25rem 0 0 6.25rem;
-  }
-
-  .ti-grid.online .ti-image :global(img) {
-    width: 100%;
-    max-height: 25rem;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0;
-    box-shadow: none;
-    margin-inline: 0;
   }
 
   .ti-cta {

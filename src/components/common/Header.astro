@@ -6,19 +6,33 @@ import {
   getGlobalSettings,
   getNavigationSettings,
 } from "@/lib/settings";
+import {
+  alternateLocalePath,
+  getAlternateLocale,
+  getLocaleFromPath,
+  getLocaleSwitchLabel,
+  localizedPath,
+} from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 
-const global = await getGlobalSettings();
-const navigation = await getNavigationSettings();
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = useTranslations(locale);
+const global = await getGlobalSettings(locale);
+const navigation = await getNavigationSettings(locale);
 
 const items = navigation.items
   .filter((item) => item.visible)
   .sort((a, b) => a.order - b.order);
 
 const currentPath = Astro.url.pathname;
+const languageLabel = getLocaleSwitchLabel(locale);
+const alternateLocale = getAlternateLocale(locale);
+const languageUrl = alternateLocalePath(currentPath, locale);
 
 function isActive(url: string): boolean {
-  if (url === "/") return currentPath === "/";
-  return currentPath.startsWith(url);
+  const localizedUrl = localizedPath(url, locale);
+  if (localizedUrl === "/") return currentPath === "/";
+  return currentPath.startsWith(localizedUrl);
 }
 
 function isItemActive(item: (typeof items)[number]): boolean {
@@ -35,7 +49,7 @@ function visibleChildren(item: (typeof items)[number]) {
 <header class="header">
   <Container>
     <div class="header-inner">
-      <a href="/" class="brand" aria-label={global.siteName}>
+      <a href={localizedPath("/", locale)} class="brand" aria-label={global.siteName}>
         <SiteImage
           src="/images/wp/logo-benedicte-donet.png"
           alt={`Logo ${global.siteName}`}
@@ -46,13 +60,13 @@ function visibleChildren(item: (typeof items)[number]) {
       </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label={t.header.openMenu}>
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <nav class="nav" aria-label="Navigation principale">
+      <nav class="nav" aria-label={t.header.mainNavigation}>
         <ul>
           {
             items.map((item) => {
@@ -78,7 +92,7 @@ function visibleChildren(item: (typeof items)[number]) {
                         {children.map((child) => (
                           <li>
                             <a
-                              href={child.url}
+                              href={localizedPath(child.url, locale)}
                               aria-current={
                                 isActive(child.url) ? "page" : undefined
                               }
@@ -91,7 +105,7 @@ function visibleChildren(item: (typeof items)[number]) {
                     </>
                   ) : (
                     <a
-                      href={item.url}
+                      href={localizedPath(item.url, locale)}
                       aria-current={isActive(item.url) ? "page" : undefined}
                     >
                       {item.label}
@@ -103,8 +117,11 @@ function visibleChildren(item: (typeof items)[number]) {
           }
         </ul>
         <Button href={global.appointmentUrl} class="nav-cta">
-          Prendre RDV
+          {t.header.appointmentCta}
         </Button>
+        <a href={languageUrl} class="language-switch" hreflang={alternateLocale}>
+          {languageLabel}
+        </a>
       </nav>
     </div>
   </Container>
@@ -232,6 +249,13 @@ function visibleChildren(item: (typeof items)[number]) {
   .nav :global(.nav-cta) {
     font-size: var(--text-sm);
     padding: 0.6em 1.4em;
+  }
+
+  .language-switch {
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.35rem 0.6rem;
+    line-height: 1;
   }
 
   /* Menu mobile en CSS pur (pas de JavaScript) */

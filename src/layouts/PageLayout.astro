@@ -6,6 +6,7 @@ import SiteImage from "@/components/common/SiteImage.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getNavigationSettings } from "@/lib/settings";
+import { getLocaleFromPath } from "@/lib/i18n";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -16,11 +17,14 @@ const { page } = Astro.props;
 const { title, description, image, imageAlt, seoTitle, seoDescription } =
   page.data;
 
-const navigation = await getNavigationSettings();
+const locale = getLocaleFromPath(Astro.url.pathname);
+const navigation = await getNavigationSettings(locale);
 const breadcrumbs = buildBreadcrumbs(
   Astro.url.pathname,
   title,
-  navigation
+  navigation,
+  undefined,
+  locale
 );
 ---
 

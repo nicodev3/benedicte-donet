@@ -1,4 +1,6 @@
 import type { NavigationSettings } from "@/lib/settings";
+import { DEFAULT_LOCALE, localizedPath, type Locale } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 
 export interface BreadcrumbItem {
   label: string;
@@ -14,13 +16,17 @@ export function buildBreadcrumbs(
   pathname: string,
   currentLabel: string,
   navigation?: NavigationSettings,
-  parent?: { label: string; url: string }
+  parent?: { label: string; url: string },
+  locale: Locale = DEFAULT_LOCALE
 ): BreadcrumbItem[] {
+  const t = useTranslations(locale);
   const path = normalizePath(pathname);
 
-  if (path === "/") return [];
+  if (path === localizedPath("/", locale)) return [];
 
-  const items: BreadcrumbItem[] = [{ label: "Accueil", url: "/" }];
+  const items: BreadcrumbItem[] = [
+    { label: t.common.home, url: localizedPath("/", locale) },
+  ];
 
   if (parent) {
     items.push({ label: parent.label, url: parent.url });
@@ -36,7 +42,7 @@ export function buildBreadcrumbs(
   for (const navItem of navigation.items) {
     if (navItem.url === "/") continue;
 
-    const navPath = normalizePath(navItem.url);
+    const navPath = normalizePath(localizedPath(navItem.url, locale));
 
     if (navPath === path) {
       items.push({ label: currentLabel || navItem.label });
@@ -44,13 +50,13 @@ export function buildBreadcrumbs(
     }
 
     const child = navItem.children?.find(
-      (c) => c.visible && normalizePath(c.url) === path
+      (c) => c.visible && normalizePath(localizedPath(c.url, locale)) === path
     );
 
     if (child) {
-      items.push({ label: navItem.label, url: navItem.url });
+      items.push({ label: navItem.label, url: localizedPath(navItem.url, locale) });
 
-      if (normalizePath(child.url) !== navPath) {
+      if (normalizePath(localizedPath(child.url, locale)) !== navPath) {
         items.push({ label: currentLabel || child.label });
       } else {
         items.push({ label: currentLabel || navItem.label });

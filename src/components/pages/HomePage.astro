@@ -1,0 +1,90 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/sections/Hero.astro";
+import TextImage from "@/components/sections/TextImage.astro";
+import ServicesGrid from "@/components/sections/ServicesGrid.astro";
+import AppointmentSteps from "@/components/sections/AppointmentSteps.astro";
+import CtaBlock from "@/components/sections/CtaBlock.astro";
+import QuoteBlock from "@/components/sections/QuoteBlock.astro";
+import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
+import ContactBlock from "@/components/sections/ContactBlock.astro";
+import NewsletterBlock from "@/components/sections/NewsletterBlock.astro";
+import { getHomeSettings, getGlobalSettings } from "@/lib/settings";
+import { localizedPath, type Locale } from "@/lib/i18n";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "fr" } = Astro.props;
+const home = await getHomeSettings(locale);
+const global = await getGlobalSettings(locale);
+const serviceCards = home.services.cards.map((card) => ({
+  ...card,
+  url: localizedPath(card.url, locale),
+  linkUrl: card.linkUrl ? localizedPath(card.linkUrl, locale) : card.linkUrl,
+  ctaUrl: card.ctaUrl ? localizedPath(card.ctaUrl, locale) : card.ctaUrl,
+}));
+---
+
+<BaseLayout
+  title={home.seoTitle}
+  description={home.seoDescription}
+  image={home.hero.backgroundImage}
+>
+  <Hero
+    eyebrow={global.siteName}
+    title={home.hero.title}
+    subtitle={home.hero.subtitle}
+    backgroundImage={home.hero.backgroundImage}
+    backgroundImageMobile={home.hero.backgroundImageMobile}
+    ctaLabel={home.hero.primaryCtaLabel}
+    ctaUrl={localizedPath(home.hero.primaryCtaUrl, locale)}
+  />
+
+  <TextImage
+    variant="intro"
+    title={home.intro.title}
+    text={home.intro.text}
+    ctaLabel={home.intro.ctaLabel}
+    ctaUrl={home.intro.ctaUrl ? localizedPath(home.intro.ctaUrl, locale) : undefined}
+    image={home.intro.image}
+    imageAlt="Bénédicte Donet, psychologue en ligne"
+  />
+
+  <TextImage
+    variant="online"
+    title={home.whyOnline.title}
+    text={home.whyOnline.text}
+    ctaLabel={home.whyOnline.ctaLabel}
+    ctaUrl={home.whyOnline.ctaUrl ? localizedPath(home.whyOnline.ctaUrl, locale) : undefined}
+    image={home.whyOnline.image}
+    imageAlt="Psychologue en ligne Bénédicte Donet"
+  />
+
+  <ServicesGrid title={home.services.title} cards={serviceCards} />
+
+  <AppointmentSteps
+    title={home.appointment.title}
+    steps={home.appointment.steps}
+    ctaLabel={home.appointment.ctaLabel}
+    ctaUrl={localizedPath(home.appointment.ctaUrl, locale)}
+  />
+
+  <CtaBlock
+    title={home.masterclass.title}
+    text={home.masterclass.text}
+    ctaLabel={home.masterclass.ctaLabel}
+    ctaUrl={localizedPath(home.masterclass.ctaUrl, locale)}
+    image={home.masterclass.image}
+    imageAlt="Méditation en pleine nature — masterclass et programmes en ligne"
+  />
+
+  <QuoteBlock text={home.quote.text} author={home.quote.author} />
+
+  <ReviewsBlock title={home.reviews.title} items={home.reviews.items} />
+
+  <ContactBlock />
+
+  <NewsletterBlock />
+</BaseLayout>

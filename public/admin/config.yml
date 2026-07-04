@@ -15,6 +15,10 @@ backend:
   auth_endpoint: api/auth
 
 locale: fr
+i18n:
+  structure: multiple_files
+  locales: [fr, en]
+  default_locale: fr
 site_url: https://benedicte-donet.pages.dev
 display_url: https://benedicte-donet.pages.dev
 logo_url: /images/wp/logo-benedicte-donet.png
@@ -37,45 +41,59 @@ collections:
     format: "frontmatter"
     extension: "md"
     slug: "{{slug}}"
+    i18n: true
     preview_path: "/{{slug}}/"
     sortable_fields: ["date", "title"]
     fields:
-      - { label: "Titre", name: "title", widget: "string", hint: "Le titre principal de l'article." }
+      - { label: "Titre", name: "title", widget: "string", i18n: true, hint: "Le titre principal de l'article." }
       - label: "Extrait"
         name: "excerpt"
         widget: "text"
+        i18n: true
         required: false
         hint: "Résumé court affiché sur la page Blog (2-3 phrases)."
-      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "Date de publication", name: "date", widget: "datetime", i18n: duplicate }
       - label: "Date de mise à jour"
         name: "updated"
         widget: "datetime"
+        i18n: duplicate
         required: false
         hint: "À remplir uniquement si vous modifiez un article déjà publié."
       - label: "Image principale"
         name: "image"
         widget: "image"
+        i18n: duplicate
         required: false
         hint: "Image affichée en haut de l'article et sur la page Blog."
       - label: "Description de l'image"
         name: "imageAlt"
         widget: "string"
+        i18n: true
         required: false
         hint: "Décrivez l'image en quelques mots (important pour l'accessibilité et le référencement)."
-      - { label: "Contenu", name: "body", widget: "markdown" }
+      - label: "Contenu"
+        name: "body"
+        widget: "richtext"
+        i18n: true
+        modes: ["rich_text"]
+        buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
+        editor_components: ["image"]
       - label: "Titre SEO"
         name: "seoTitle"
         widget: "string"
+        i18n: true
         required: false
         hint: "Titre affiché dans Google (60 caractères max conseillé). Si vide, le titre de l'article est utilisé."
       - label: "Meta description"
         name: "seoDescription"
         widget: "text"
+        i18n: true
         required: false
         hint: "Description affichée dans Google (155 caractères max conseillé)."
       - label: "Brouillon"
         name: "draft"
         widget: "boolean"
+        i18n: duplicate
         default: false
         hint: "Activé = l'article n'est PAS visible sur le site."
 
@@ -90,40 +108,54 @@ collections:
     delete: false
     format: "frontmatter"
     extension: "md"
+    i18n: true
     preview_path: "/{{slug}}/"
     fields:
-      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Titre", name: "title", widget: "string", i18n: true }
       - label: "Description courte"
         name: "description"
         widget: "text"
+        i18n: true
         required: false
         hint: "Utilisée comme introduction sous le titre (facultatif)."
       - label: "Image principale"
         name: "image"
         widget: "image"
+        i18n: duplicate
         required: false
       - label: "Description de l'image"
         name: "imageAlt"
         widget: "string"
+        i18n: true
         required: false
-      - { label: "Contenu", name: "body", widget: "markdown" }
+      - label: "Contenu"
+        name: "body"
+        widget: "richtext"
+        i18n: true
+        modes: ["rich_text"]
+        buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
+        editor_components: ["image"]
       - label: "Titre SEO"
         name: "seoTitle"
         widget: "string"
+        i18n: true
         required: false
         hint: "Titre affiché dans Google. Si vide, le titre de la page est utilisé."
       - label: "Meta description"
         name: "seoDescription"
         widget: "text"
+        i18n: true
         required: false
         hint: "Description affichée dans Google (155 caractères max conseillé)."
       - label: "Ordre"
         name: "order"
         widget: "hidden"
+        i18n: duplicate
         default: 0
       - label: "Brouillon"
         name: "draft"
         widget: "boolean"
+        i18n: duplicate
         default: false
         hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer une page sans en parler à votre webmaster."
 
@@ -136,7 +168,7 @@ collections:
       - name: "global"
         label: "Coordonnées & réglages généraux"
         file: "src/content/settings/global.json"
-        fields:
+        fields: &global_settings_fields
           - { label: "Nom du site", name: "siteName", widget: "string" }
           - { label: "Sous-titre / baseline", name: "baseline", widget: "string" }
           - label: "Titre SEO par défaut"
@@ -163,7 +195,7 @@ collections:
       - name: "home"
         label: "Page d'accueil"
         file: "src/content/settings/home.json"
-        fields:
+        fields: &home_settings_fields
           - label: "Bandeau principal (haut de page)"
             name: "hero"
             widget: "object"
@@ -182,7 +214,12 @@ collections:
             widget: "object"
             fields:
               - { label: "Titre", name: "title", widget: "string" }
-              - { label: "Texte", name: "text", widget: "text" }
+              - label: "Texte"
+                name: "text"
+                widget: "richtext"
+                modes: ["rich_text"]
+                buttons: ["bold", "italic", "link"]
+                editor_components: []
               - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
               - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
               - { label: "Photo", name: "image", widget: "image", required: false }
@@ -191,9 +228,15 @@ collections:
             widget: "object"
             fields:
               - { label: "Titre", name: "title", widget: "string" }
-              - { label: "Texte", name: "text", widget: "text" }
+              - label: "Texte"
+                name: "text"
+                widget: "richtext"
+                modes: ["rich_text"]
+                buttons: ["bold", "italic", "link"]
+                editor_components: []
               - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
               - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Accompagnements proposés"
             name: "services"
             widget: "object"
@@ -205,15 +248,31 @@ collections:
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
-                  - { label: "Introduction", name: "intro", widget: "text", required: false }
-                  - {
-                      label: "Points clés (un par ligne)",
-                      name: "bullets",
-                      widget: "text",
-                      required: false,
-                      hint: "Utiliser **texte** pour le gras."
-                    }
-                  - { label: "Texte de conclusion", name: "text", widget: "text", required: false }
+                  - label: "Introduction"
+                    name: "intro"
+                    widget: "richtext"
+                    modes: ["rich_text"]
+                    buttons: ["bold", "italic", "link"]
+                    editor_components: []
+                    required: false
+                  - label: "Points clés"
+                    name: "bullets"
+                    widget: "list"
+                    required: false
+                    field:
+                      label: "Point"
+                      name: "item"
+                      widget: "richtext"
+                      modes: ["rich_text"]
+                      buttons: ["bold", "italic", "link"]
+                      editor_components: []
+                  - label: "Texte de conclusion"
+                    name: "text"
+                    widget: "richtext"
+                    modes: ["rich_text"]
+                    buttons: ["bold", "italic", "link"]
+                    editor_components: []
+                    required: false
                   - { label: "Lien", name: "url", widget: "string" }
                   - { label: "Lien de l'image", name: "imageUrl", widget: "string", required: false }
                   - { label: "Texte du lien", name: "linkLabel", widget: "string", required: false }
@@ -239,7 +298,12 @@ collections:
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
-                  - { label: "Texte", name: "text", widget: "text" }
+                  - label: "Texte"
+                    name: "text"
+                    widget: "richtext"
+                    modes: ["rich_text"]
+                    buttons: ["bold", "italic", "link"]
+                    editor_components: []
               - { label: "Texte du bouton", name: "ctaLabel", widget: "string" }
               - { label: "Lien du bouton", name: "ctaUrl", widget: "string" }
           - label: "Masterclass & programmes"
@@ -247,7 +311,12 @@ collections:
             widget: "object"
             fields:
               - { label: "Titre", name: "title", widget: "string" }
-              - { label: "Texte", name: "text", widget: "text" }
+              - label: "Texte"
+                name: "text"
+                widget: "richtext"
+                modes: ["rich_text"]
+                buttons: ["bold", "italic", "link"]
+                editor_components: []
               - { label: "Texte du bouton", name: "ctaLabel", widget: "string" }
               - { label: "Lien du bouton", name: "ctaUrl", widget: "string" }
               - { label: "Image / affiche", name: "image", widget: "image", required: false }
@@ -255,7 +324,12 @@ collections:
             name: "quote"
             widget: "object"
             fields:
-              - { label: "Texte", name: "text", widget: "text" }
+              - label: "Texte"
+                name: "text"
+                widget: "richtext"
+                modes: ["rich_text"]
+                buttons: ["bold", "italic", "link"]
+                editor_components: []
               - { label: "Auteur", name: "author", widget: "string" }
           - label: "Avis de patients"
             name: "reviews"
@@ -268,7 +342,12 @@ collections:
                 summary: "{{fields.author}}"
                 fields:
                   - { label: "Prénom / nom abrégé", name: "author", widget: "string" }
-                  - { label: "Texte de l'avis", name: "text", widget: "text" }
+                  - label: "Texte de l'avis"
+                    name: "text"
+                    widget: "richtext"
+                    modes: ["rich_text"]
+                    buttons: ["bold", "italic", "link"]
+                    editor_components: []
           - label: "Titre SEO de l'accueil"
             name: "seoTitle"
             widget: "string"
@@ -281,7 +360,7 @@ collections:
       - name: "navigation"
         label: "Menu de navigation"
         file: "src/content/settings/navigation.json"
-        fields:
+        fields: &navigation_settings_fields
           - label: "Éléments du menu"
             name: "items"
             widget: "list"
@@ -306,7 +385,7 @@ collections:
       - name: "footer"
         label: "Pied de page"
         file: "src/content/settings/footer.json"
-        fields:
+        fields: &footer_settings_fields
           - { label: "Texte de présentation", name: "text", widget: "text" }
           - label: "Liens rapides"
             name: "quickLinks"
@@ -328,3 +407,23 @@ collections:
             fields:
               - { label: "Texte", name: "label", widget: "string" }
               - { label: "Lien", name: "url", widget: "string" }
+
+      - name: "global_en"
+        label: "EN — Coordonnées & réglages généraux"
+        file: "src/content/settings/global.en.json"
+        fields: *global_settings_fields
+
+      - name: "home_en"
+        label: "EN — Page d'accueil"
+        file: "src/content/settings/home.en.json"
+        fields: *home_settings_fields
+
+      - name: "navigation_en"
+        label: "EN — Menu de navigation"
+        file: "src/content/settings/navigation.en.json"
+        fields: *navigation_settings_fields
+
+      - name: "footer_en"
+        label: "EN — Pied de page"
+        file: "src/content/settings/footer.en.json"
+        fields: *footer_settings_fields

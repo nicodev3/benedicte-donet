@@ -2,6 +2,7 @@
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
+import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
   title: string;
@@ -24,7 +25,7 @@ const { title, steps, ctaLabel, ctaUrl } = Astro.props;
               {index + 1}
             </span>
             <h3>{step.title}</h3>
-            <p>{step.text}</p>
+            <p set:html={renderInlineRichText(step.text)} />
           </li>
         ))
       }

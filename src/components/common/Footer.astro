@@ -3,9 +3,13 @@ import Container from "./Container.astro";
 import Button from "./Button.astro";
 import SiteImage from "./SiteImage.astro";
 import { getGlobalSettings, getFooterSettings } from "@/lib/settings";
+import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 
-const global = await getGlobalSettings();
-const footer = await getFooterSettings();
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = useTranslations(locale);
+const global = await getGlobalSettings(locale);
+const footer = await getFooterSettings(locale);
 
 const year = new Date().getFullYear();
 ---
@@ -25,13 +29,13 @@ const year = new Date().getFullYear();
         <Button href={footer.cta.url}>{footer.cta.label}</Button>
       </div>
 
-      <nav class="footer-links" aria-label="Liens rapides">
-        <h3>Navigation</h3>
+      <nav class="footer-links" aria-label={t.footer.quickLinks}>
+        <h3>{t.common.navigation}</h3>
         <ul>
           {
             footer.quickLinks.map((link) => (
               <li>
-                <a href={link.url}>{link.label}</a>
+                <a href={localizedPath(link.url, locale)}>{link.label}</a>
               </li>
             ))
           }
@@ -39,7 +43,7 @@ const year = new Date().getFullYear();
       </nav>
 
       <div class="footer-contact">
-        <h3>Contact</h3>
+        <h3>{t.common.contact}</h3>
         <ul>
           <li>
             <a href={`tel:${global.phone.replace(/\s/g, "")}`}>{global.phone}</a>
@@ -77,12 +81,12 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="footer-bottom">
-      <p>© {year} {global.siteName}. Tous droits réservés.</p>
+      <p>© {year} {global.siteName}. {t.footer.allRightsReserved}</p>
       <ul>
         {
           footer.legalLinks.map((link) => (
             <li>
-              <a href={link.url}>{link.label}</a>
+              <a href={localizedPath(link.url, locale)}>{link.label}</a>
             </li>
           ))
         }

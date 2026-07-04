@@ -10,15 +10,13 @@
 # Page plan de site WordPress (remplacée par sitemap XML)
 /sitemap/ / 301
 
-# Version anglaise non reprise (voir docs/redirects.md)
-/en/ / 301
-/en/home/ / 301
-/en/about-me/ /a-propos/ 301
-/en/my-services/ /services/ 301
-/en/psychotherapy/ /psychotherapie/ 301
-/en/phototherapy/ /phototherapie/ 301
-/en/masterclass-en/ /masterclass/ 301
-/en/practical-information/ /infos-pratiques/ 301
-/en/diary/ /blog/ 301
-/en/basket/ /masterclass/ 301
-/en/* / 301
+# Anciennes URLs anglaises WordPress
+/en/home/ /en/ 301
+/en/about-me/ /en/a-propos/ 301
+/en/my-services/ /en/services/ 301
+/en/psychotherapy/ /en/psychotherapie/ 301
+/en/phototherapy/ /en/phototherapie/ 301
+/en/masterclass-en/ /en/masterclass/ 301
+/en/practical-information/ /en/infos-pratiques/ 301
+/en/diary/ /en/blog/ 301
+/en/basket/ /en/masterclass/ 301

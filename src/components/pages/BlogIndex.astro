@@ -1,0 +1,172 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import SiteImage from "@/components/common/SiteImage.astro";
+import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import { buildBreadcrumbs } from "@/lib/breadcrumbs";
+import { getNavigationSettings } from "@/lib/settings";
+import {
+  getLocaleFromFilePath,
+  localizedPath,
+  stripLocaleFromFilePath,
+  type Locale,
+} from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "fr" } = Astro.props;
+const t = useTranslations(locale);
+const posts = (await getCollection("blog", ({ data }) => !data.draft))
+  .filter((post) => getLocaleFromFilePath(post.filePath) === locale)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat(t.locale.date, {
+    dateStyle: "long",
+  }).format(date);
+
+const navigation = await getNavigationSettings(locale);
+const breadcrumbs = buildBreadcrumbs(
+  Astro.url.pathname,
+  "Blog",
+  navigation,
+  undefined,
+  locale
+);
+
+---
+
+<BaseLayout title="Blog" description={t.blog.description}>
+  <Section tone="soft" class="blog-hero">
+    <Container narrow>
+      <Breadcrumb items={breadcrumbs} />
+      <h1>{t.blog.title}</h1>
+      <p>{t.blog.intro}</p>
+    </Container>
+  </Section>
+
+  <Container>
+    <div class="posts-grid">
+      {
+        posts.map((post) => {
+          const slug = stripLocaleFromFilePath(post.filePath, post.id);
+          const url = localizedPath(`/${slug}/`, locale);
+
+          return (
+            <article class="post-card">
+              {post.data.image && (
+                <a href={url} tabindex="-1" aria-hidden="true">
+                  <SiteImage
+                    src={post.data.image}
+                    alt={post.data.imageAlt || post.data.title}
+                    width={400}
+                    height={260}
+                    widths={[400, 800]}
+                    sizes="(max-width: 700px) 100vw, 400px"
+                    loading="lazy"
+                  />
+                </a>
+              )}
+              <div class="post-card-body">
+                <time datetime={post.data.date.toISOString()}>
+                  {formatDate(post.data.date)}
+                </time>
+                <h2>
+                  <a href={url}>{post.data.title}</a>
+                </h2>
+                {post.data.excerpt && <p>{post.data.excerpt}</p>}
+                <a href={url} class="post-card-link">
+                  {t.blog.readMore} →
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </Container>
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    padding-block: var(--space-xl);
+    text-align: center;
+  }
+
+  .blog-hero p {
+    margin-top: var(--space-sm);
+    color: var(--color-text-soft);
+    font-size: var(--text-lg);
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    padding-block: var(--space-xl);
+  }
+
+  .post-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .post-card:hover {
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-3px);
+  }
+
+  .post-card :global(img) {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .post-card-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+  }
+
+  .post-card-body time {
+    font-size: var(--text-sm);
+    color: var(--color-text-soft);
+  }
+
+  .post-card-body h2 {
+    font-size: var(--text-xl);
+  }
+
+  .post-card-body h2 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .post-card-body h2 a:hover {
+    color: var(--color-primary-dark);
+  }
+
+  .post-card-body p {
+    color: var(--color-text-soft);
+    font-size: var(--text-sm);
+    flex: 1;
+  }
+
+  .post-card-link {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>

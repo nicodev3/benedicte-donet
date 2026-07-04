@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
+import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
   title: string;
@@ -17,7 +18,7 @@ const { title, items } = Astro.props;
       {
         items.map((review) => (
           <figure class="review">
-            <blockquote>{review.text}</blockquote>
+            <blockquote set:html={renderInlineRichText(review.text)} />
             <figcaption>
               <span class="stars" aria-label="5 étoiles sur 5">
                 ★★★★★

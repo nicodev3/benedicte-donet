@@ -1,4 +1,5 @@
 import { getEntry } from "astro:content";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 
 /**
  * Accès typé aux fichiers de réglages (src/content/settings/*.json).
@@ -100,14 +101,19 @@ export interface FooterSettings {
   cta: { label: string; url: string };
 }
 
-async function getSettings<T>(id: string): Promise<T> {
-  const entry = await getEntry("settings", id);
+async function getSettings<T>(id: string, locale: Locale = DEFAULT_LOCALE): Promise<T> {
+  const localizedId = locale === DEFAULT_LOCALE ? id : `${id}${locale}`;
+  const entry =
+    (await getEntry("settings", localizedId)) ?? (await getEntry("settings", id));
   if (!entry) throw new Error(`Réglages introuvables : ${id}.json`);
   return entry.data as T;
 }
 
-export const getGlobalSettings = () => getSettings<GlobalSettings>("global");
-export const getHomeSettings = () => getSettings<HomeSettings>("home");
-export const getNavigationSettings = () =>
-  getSettings<NavigationSettings>("navigation");
-export const getFooterSettings = () => getSettings<FooterSettings>("footer");
+export const getGlobalSettings = (locale?: Locale) =>
+  getSettings<GlobalSettings>("global", locale);
+export const getHomeSettings = (locale?: Locale) =>
+  getSettings<HomeSettings>("home", locale);
+export const getNavigationSettings = (locale?: Locale) =>
+  getSettings<NavigationSettings>("navigation", locale);
+export const getFooterSettings = (locale?: Locale) =>
+  getSettings<FooterSettings>("footer", locale);

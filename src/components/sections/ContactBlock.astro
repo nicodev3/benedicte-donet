@@ -3,14 +3,18 @@ import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
 import { getGlobalSettings } from "@/lib/settings";
+import { getLocaleFromPath } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 
-const global = await getGlobalSettings();
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = useTranslations(locale);
+const global = await getGlobalSettings(locale);
 ---
 
 <Section tone="soft" id="contact">
   <Container narrow>
     <div class="contact">
-      <h2>Pour me contacter</h2>
+      <h2>{t.contactBlock.title}</h2>
       <ul class="contact-list">
         <li>
           <a href={`tel:${global.phone.replace(/\s/g, "")}`}>{global.phone}</a>
@@ -21,9 +25,9 @@ const global = await getGlobalSettings();
         {global.area && <li>{global.area}</li>}
       </ul>
       <div class="contact-actions">
-        <Button href={global.appointmentUrl}>Je prends RDV via Doctolib</Button>
+        <Button href={global.appointmentUrl}>{t.contactBlock.doctolibCta}</Button>
         <Button href={`mailto:${global.email}`} variant="outline">
-          Je prends RDV via message
+          {t.contactBlock.messageCta}
         </Button>
       </div>
     </div>
