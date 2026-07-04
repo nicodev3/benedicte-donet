@@ -27,8 +27,9 @@ const {
 } = Astro.props;
 
 const image = resolveImage(src);
+const isPublicImage = src.startsWith("/images/");
 
-if (!image) {
+if (!image && !isPublicImage) {
   console.warn(`[SiteImage] Image introuvable : ${src}`);
 }
 ---
@@ -42,6 +43,20 @@ if (!image) {
       height={height ?? (width ? undefined : image.height)}
       widths={widths}
       sizes={sizes}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      class={className}
+    />
+  )
+}
+
+{
+  !image && isPublicImage && (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
       loading={loading}
       fetchpriority={fetchpriority}
       class={className}

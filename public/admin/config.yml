@@ -23,7 +23,7 @@ site_url: https://benedicte-donet.pages.dev
 display_url: https://benedicte-donet.pages.dev
 logo_url: /images/wp/logo-benedicte-donet.png
 
-media_folder: "src/assets/images/uploads"
+media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 # Brouillons validés avant publication
@@ -41,7 +41,6 @@ collections:
     format: "frontmatter"
     extension: "md"
     slug: "{{slug}}"
-    i18n: true
     preview_path: "/{{slug}}/"
     sortable_fields: ["date", "title"]
     fields:
@@ -108,7 +107,6 @@ collections:
     delete: false
     format: "frontmatter"
     extension: "md"
-    i18n: true
     preview_path: "/{{slug}}/"
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true }
@@ -195,6 +193,7 @@ collections:
       - name: "home"
         label: "Page d'accueil"
         file: "src/content/settings/home.json"
+        preview_path: "/"
         fields: &home_settings_fields
           - label: "Bandeau principal (haut de page)"
             name: "hero"
@@ -416,6 +415,7 @@ collections:
       - name: "home_en"
         label: "EN — Page d'accueil"
         file: "src/content/settings/home.en.json"
+        preview_path: "/en/"
         fields: *home_settings_fields
 
       - name: "navigation_en"

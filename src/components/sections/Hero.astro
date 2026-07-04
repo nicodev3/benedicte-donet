@@ -28,10 +28,14 @@ const desktop = resolveImage(backgroundImage);
 const mobile = resolveImage(backgroundImageMobile ?? backgroundImage);
 const desktopBg = desktop
   ? (await getImage({ src: desktop, width: 1920 })).src
-  : undefined;
+  : backgroundImage.startsWith("/images/")
+    ? backgroundImage
+    : undefined;
 const mobileBg = mobile
   ? (await getImage({ src: mobile, width: 900 })).src
-  : undefined;
+  : (backgroundImageMobile ?? backgroundImage).startsWith("/images/")
+    ? (backgroundImageMobile ?? backgroundImage)
+    : undefined;
 ---
 
 <section class="hero">
