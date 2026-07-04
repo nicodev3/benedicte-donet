@@ -52,10 +52,10 @@ function visibleChildren(item: (typeof items)[number]) {
     <div class="header-inner">
       <a href={localizedPath("/", locale)} class="brand" aria-label={global.siteName}>
         <SiteImage
-          src="/images/wp/logo-benedicte-donet.png"
+          src="/images/wp/benedicte-donet-psychologue.png"
           alt={`Logo ${global.siteName}`}
           width={150}
-          height={60}
+          widths={[56, 112, 150]}
           loading="eager"
         />
       </a>
@@ -149,6 +149,7 @@ function visibleChildren(item: (typeof items)[number]) {
   .brand :global(img) {
     height: 56px;
     width: auto;
+    object-fit: contain;
   }
 
   .nav > ul {

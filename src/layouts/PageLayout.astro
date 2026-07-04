@@ -11,9 +11,10 @@ import type { CollectionEntry } from "astro:content";
 
 interface Props {
   page: CollectionEntry<"pages">;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { page } = Astro.props;
+const { page, structuredData } = Astro.props;
 const { title, description, image, imageAlt, seoTitle, seoDescription } =
   page.data;
 
@@ -32,6 +33,7 @@ const breadcrumbs = buildBreadcrumbs(
   title={seoTitle || title}
   description={seoDescription || description}
   image={image}
+  structuredData={structuredData}
 >
   <Section tone="soft" class="page-hero">
     <Container narrow>

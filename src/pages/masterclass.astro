@@ -1,0 +1,55 @@
+---
+import { getEntry } from "astro:content";
+import PageLayout from "@/layouts/PageLayout.astro";
+import ProductsGrid from "@/components/sections/ProductsGrid.astro";
+import { SITE } from "@/site.config";
+import { resolveSeoImagePath } from "@/lib/images";
+import { MASTERCLASS_PRODUCTS } from "@/lib/masterclass-products";
+import { Content as MasterclassIntro } from "@/components/pages/masterclass-intro.md";
+import { Content as MasterclassOutro } from "@/components/pages/masterclass-outro.md";
+
+const page = await getEntry("pages", "masterclass");
+if (!page) {
+  return Astro.redirect("/404/");
+}
+
+function parsePrice(price: string): string | undefined {
+  const match = price.match(/\d+(?:[.,]\d+)?/);
+  return match?.[0]?.replace(",", ".");
+}
+
+const productListStructuredData = {
+  "@type": "ItemList",
+  "@id": new URL("/masterclass/#products", SITE.url).href,
+  name: "Masterclass et programmes",
+  itemListElement: MASTERCLASS_PRODUCTS.map((product, index) => {
+    const productUrl = new URL(product.url, SITE.url).href;
+    const imagePath = resolveSeoImagePath(product.image);
+
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: [product.title, product.subtitle].filter(Boolean).join(" "),
+        image: imagePath ? new URL(imagePath, SITE.url).href : undefined,
+        url: productUrl,
+        offers: {
+          "@type": "Offer",
+          url: new URL(product.ctaUrl, SITE.url).href,
+          priceCurrency: "EUR",
+          price: parsePrice(product.price),
+          availability: "https://schema.org/InStock",
+        },
+      },
+    };
+  }),
+};
+---
+
+<PageLayout page={page} structuredData={productListStructuredData}>
+  <MasterclassIntro />
+  <h2 id="masterclass-et-programmes">Masterclass et programmes</h2>
+  <ProductsGrid products={MASTERCLASS_PRODUCTS} />
+  <MasterclassOutro />
+</PageLayout>

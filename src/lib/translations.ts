@@ -54,6 +54,11 @@ interface UiTranslations {
     cta: string;
     emailSubject: string;
   };
+  reviews: {
+    prev: string;
+    next: string;
+    carouselLabel: string;
+  };
 }
 
 export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
@@ -114,6 +119,11 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       cta: "Je m'abonne",
       emailSubject: "Inscription newsletter",
     },
+    reviews: {
+      prev: "Avis précédent",
+      next: "Avis suivant",
+      carouselLabel: "Témoignages de patients",
+    },
   },
   en: {
     locale: {
@@ -171,6 +181,11 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       text: "Subscribe to the monthly newsletter for thoughtful psychology content: articles to better understand yourself, inspiring interviews and online meditations. Just one email per month.",
       cta: "Subscribe",
       emailSubject: "Newsletter subscription",
+    },
+    reviews: {
+      prev: "Previous review",
+      next: "Next review",
+      carouselLabel: "Patient testimonials",
     },
   },
 };

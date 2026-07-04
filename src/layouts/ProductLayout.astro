@@ -1,0 +1,110 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import SiteImage from "@/components/common/SiteImage.astro";
+import Button from "@/components/common/Button.astro";
+import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import { localizedPath } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  product: CollectionEntry<"products">;
+}
+
+const { product } = Astro.props;
+const {
+  title,
+  price,
+  image,
+  imageAlt,
+  ctaLabel,
+  ctaUrl,
+  seoTitle,
+  seoDescription,
+} = product.data;
+
+const t = useTranslations("fr");
+const breadcrumbs = [
+  { label: t.common.home, url: localizedPath("/", "fr") },
+  { label: "Masterclass", url: localizedPath("/masterclass/", "fr") },
+  { label: title },
+];
+---
+
+<BaseLayout
+  title={seoTitle || title}
+  description={seoDescription}
+  image={image}
+>
+  <Section tone="soft" class="page-hero">
+    <Container narrow>
+      <Breadcrumb items={breadcrumbs} />
+      <h1>{title}</h1>
+      <p class="product-price">{price}</p>
+    </Container>
+  </Section>
+
+  <Container narrow>
+    <SiteImage
+      src={image}
+      alt={imageAlt || title}
+      class="product-image"
+      width={600}
+      widths={[300, 450, 600]}
+      sizes="(max-width: 800px) 100vw, 420px"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </Container>
+
+  <Container>
+    <article class="prose product-content">
+      <slot />
+      <p class="product-cta">
+        <Button href={ctaUrl}>{ctaLabel}</Button>
+      </p>
+    </article>
+  </Container>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding-block: var(--space-xl);
+    text-align: center;
+  }
+
+  .product-price {
+    margin-top: var(--space-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: #746666;
+    letter-spacing: 0.04em;
+  }
+
+  .product-image {
+    margin-block: var(--space-lg);
+  }
+
+  .product-content {
+    padding-block: var(--space-lg) var(--space-xl);
+  }
+
+  .product-cta {
+    margin-top: var(--space-lg);
+    text-align: center;
+  }
+
+  .product-cta :global(.button) {
+    border-radius: 5rem 0;
+    font-family: var(--font-body);
+    font-weight: 500;
+    background: var(--color-accent);
+  }
+
+  .product-cta :global(.button:hover) {
+    background: #ff96a5;
+    color: #fff;
+  }
+</style>

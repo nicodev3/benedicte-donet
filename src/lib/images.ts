@@ -24,3 +24,13 @@ export function resolveImage(src: string): ImageMetadata | undefined {
   if (!assetPath) return undefined;
   return imageModules[assetPath]?.default;
 }
+
+export function resolveSeoImagePath(src: string | undefined): string | undefined {
+  if (!src) return undefined;
+  if (/^https?:\/\//.test(src)) return src;
+
+  const image = resolveImage(src);
+  if (image?.src) return image.src;
+
+  return src.startsWith("/") ? src : undefined;
+}

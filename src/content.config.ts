@@ -37,6 +37,24 @@ const blog = defineCollection({
   }),
 });
 
+/**
+ * Programmes et masterclasses (URLs WordPress /produit/... conservées).
+ */
+const products = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/products" }),
+  schema: z.object({
+    title: z.string(),
+    price: z.string(),
+    image: z.string(),
+    imageAlt: z.string(),
+    ctaLabel: z.string().default("Je commande"),
+    ctaUrl: z.string().default("/infos-pratiques/#form"),
+    seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const linkSchema = z.object({
   label: z.string(),
   url: z.string(),
@@ -171,4 +189,4 @@ const settings = defineCollection({
   ]),
 });
 
-export const collections = { pages, blog, settings };
+export const collections = { pages, blog, products, settings };

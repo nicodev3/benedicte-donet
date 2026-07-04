@@ -5,6 +5,7 @@ import Seo from "@/components/seo/Seo.astro";
 import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
 import { getLocaleFromPath } from "@/lib/i18n";
+import { getAlternateLinks } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
 
 interface Props {
@@ -15,11 +16,13 @@ interface Props {
   publishedTime?: Date;
   modifiedTime?: Date;
   noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const props = Astro.props;
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
+const alternateLinks = await getAlternateLinks(Astro.url.pathname);
 ---
 
 <!doctype html>
@@ -30,6 +33,11 @@ const t = useTranslations(locale);
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {
+      alternateLinks.map((link) => (
+        <link rel="alternate" hreflang={link.hreflang} href={link.href} />
+      ))
+    }
     <link
       rel="preload"
       href="/fonts/CaviarDreams_Bold.woff2"

@@ -1,40 +1,146 @@
 ---
+import { ChevronLeft, ChevronRight, Star } from "@lucide/astro";
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
-import { Star } from "@lucide/astro";
 import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
   title: string;
   items: { author: string; text: string }[];
+  prevLabel: string;
+  nextLabel: string;
+  carouselLabel: string;
 }
 
-const { title, items } = Astro.props;
+const { title, items, prevLabel, nextLabel, carouselLabel } = Astro.props;
 const starCount = 5;
+const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
 ---
 
 <Section>
   <Container>
-    <h2 class="reviews-title">{title}</h2>
-    <div class="reviews-grid">
-      {
-        items.map((review) => (
-          <figure class="review">
-            <blockquote set:html={renderInlineRichText(review.text)} />
-            <figcaption>
-              <span class="stars" aria-label="5 étoiles sur 5">
-                {Array.from({ length: starCount }).map(() => (
-                  <Star size={16} fill="currentColor" aria-hidden="true" />
-                ))}
-              </span>
-              {review.author}
-            </figcaption>
-          </figure>
-        ))
-      }
+    <h2 id={`${carouselId}-heading`} class="reviews-title">{title}</h2>
+
+    <div
+      class="carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-labelledby={`${carouselId}-heading`}
+      aria-label={carouselLabel}
+      data-carousel
+    >
+      <button
+        type="button"
+        class="carousel-control carousel-control-prev"
+        aria-controls={`${carouselId}-track`}
+        aria-label={prevLabel}
+        data-carousel-prev
+      >
+        <ChevronLeft size={24} aria-hidden="true" />
+      </button>
+
+      <div class="carousel-shell">
+        <ul id={`${carouselId}-track`} class="carousel-track" tabindex="0">
+          {
+            items.map((review, index) => (
+              <li class="carousel-slide">
+                <figure
+                  class="review"
+                  aria-labelledby={`${carouselId}-review-${index}-author`}
+                >
+                  <blockquote set:html={renderInlineRichText(review.text)} />
+                  <figcaption>
+                    <span class="stars" aria-label="5 étoiles sur 5">
+                      {Array.from({ length: starCount }).map(() => (
+                        <Star size={16} fill="currentColor" aria-hidden="true" />
+                      ))}
+                    </span>
+                    <span id={`${carouselId}-review-${index}-author`}>
+                      {review.author}
+                    </span>
+                  </figcaption>
+                </figure>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <button
+        type="button"
+        class="carousel-control carousel-control-next"
+        aria-controls={`${carouselId}-track`}
+        aria-label={nextLabel}
+        data-carousel-next
+      >
+        <ChevronRight size={24} aria-hidden="true" />
+      </button>
     </div>
   </Container>
 </Section>
+
+<script>
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>("[data-carousel]").forEach((carousel) => {
+      if (carousel.dataset.initialized === "true") return;
+
+      const track = carousel.querySelector<HTMLElement>(".carousel-track");
+      const prev = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
+      const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
+
+      if (!track || !prev || !next) return;
+
+      carousel.dataset.initialized = "true";
+
+      const slides = () =>
+        Array.from(track.querySelectorAll<HTMLElement>(".carousel-slide"));
+
+      const getCurrentIndex = () => {
+        const trackLeft = track.getBoundingClientRect().left;
+        const index = slides().findIndex(
+          (slide) => slide.getBoundingClientRect().left >= trackLeft - 4
+        );
+        return Math.max(0, index);
+      };
+
+      const updateControls = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const atStart = track.scrollLeft <= 1;
+        const atEnd = track.scrollLeft >= maxScroll - 1;
+
+        prev.disabled = atStart;
+        next.disabled = atEnd;
+        carousel.classList.toggle("at-start", atStart);
+        carousel.classList.toggle("at-end", atEnd);
+      };
+
+      const scrollToIndex = (index: number) => {
+        const slide = slides()[index];
+        if (!slide) return;
+
+        slide.scrollIntoView({
+          behavior: "smooth",
+          inline: "start",
+          block: "nearest",
+        });
+      };
+
+      prev.addEventListener("click", () => {
+        scrollToIndex(Math.max(0, getCurrentIndex() - 1));
+      });
+      next.addEventListener("click", () => {
+        scrollToIndex(Math.min(slides().length - 1, getCurrentIndex() + 1));
+      });
+
+      track.addEventListener("scroll", updateControls, { passive: true });
+      window.addEventListener("resize", updateControls, { passive: true });
+      updateControls();
+    });
+  }
+
+  initCarousels();
+  document.addEventListener("astro:page-load", initCarousels);
+</script>
 
 <style>
   .reviews-title {
@@ -42,10 +148,110 @@ const starCount = 5;
     margin-bottom: var(--space-xl);
   }
 
-  .reviews-grid {
+  .carousel {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .carousel-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-bg);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition:
+      background-color var(--transition),
+      color var(--transition),
+      opacity var(--transition),
+      transform 220ms ease,
+      box-shadow 220ms ease;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+
+  .carousel-control:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: #fff;
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(198, 141, 133, 0.35);
+  }
+
+  .carousel-control:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  .carousel-control:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .carousel-shell {
+    position: relative;
+    min-width: 0;
+  }
+
+  .carousel-shell::before,
+  .carousel-shell::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 300ms ease;
+  }
+
+  .carousel-shell::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg), transparent);
+  }
+
+  .carousel-shell::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg), transparent);
+  }
+
+  .carousel.at-start .carousel-shell::before,
+  .carousel.at-end .carousel-shell::after {
+    opacity: 0;
+  }
+
+  .carousel-track {
+    display: flex;
     gap: var(--space-lg);
+    margin: 0;
+    padding: 0.25rem 0.125rem 0.5rem;
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 0.125rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc((100% - var(--space-lg)) / 2);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-width: 0;
   }
 
   .review {
@@ -55,6 +261,7 @@ const starCount = 5;
     border-radius: var(--radius-md);
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   .review blockquote {
@@ -80,5 +287,36 @@ const starCount = 5;
     align-items: center;
     gap: 0.15rem;
     color: var(--color-highlight);
+  }
+
+  @media (max-width: 767px) {
+    .carousel {
+      grid-template-columns: 1fr;
+    }
+
+    .carousel-control {
+      display: none;
+    }
+
+    .carousel-slide {
+      flex-basis: 85vw;
+    }
+
+    .carousel-shell::before,
+    .carousel-shell::after {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+      scroll-behavior: auto;
+    }
+
+    .carousel-control:hover:not(:disabled),
+    .carousel-control:active:not(:disabled) {
+      transform: none;
+      box-shadow: none;
+    }
   }
 </style>

@@ -1,6 +1,9 @@
 ---
 import { SITE } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
+import { resolveSeoImagePath } from "@/lib/images";
+import { getGlobalSettings } from "@/lib/settings";
+import { localeToSchemaLanguage } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
 
 interface Props {
@@ -11,33 +14,121 @@ interface Props {
   publishedTime?: Date;
   modifiedTime?: Date;
   noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title,
-  description = SITE.defaultDescription,
+  description,
   image,
   type = "website",
   publishedTime,
   modifiedTime,
   noindex = false,
+  structuredData,
 } = Astro.props;
 
-const fullTitle = title ? `${title} | ${SITE.name}` : SITE.defaultTitle;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
-const ogImage = image ? new URL(image, SITE.url).href : undefined;
 const locale = getLocaleFromPath(Astro.url.pathname);
+const global = await getGlobalSettings(locale);
+const cleanTitle = title?.trim();
+const cleanDescription =
+  description?.trim() || global.defaultSeoDescription || SITE.defaultDescription;
+const fullTitle = cleanTitle
+  ? `${cleanTitle} | ${SITE.name}`
+  : global.defaultSeoTitle || SITE.defaultTitle;
+const ogImagePath = resolveSeoImagePath(image);
+const ogImage = ogImagePath ? new URL(ogImagePath, SITE.url).href : undefined;
 const t = useTranslations(locale);
+const language = localeToSchemaLanguage(locale);
+const sameAs = [global.instagramUrl, global.facebookUrl].filter(Boolean);
+const personId = new URL("/#person", SITE.url).href;
+const serviceId = new URL("/#professional-service", SITE.url).href;
+const websiteId = new URL("/#website", SITE.url).href;
+const webpageId = `${canonical}#webpage`;
+
+const graph: Record<string, unknown>[] = [
+  {
+    "@type": "Person",
+    "@id": personId,
+    name: global.siteName,
+    jobTitle:
+      locale === "fr"
+        ? "Psychologue clinicienne en ligne"
+        : "Online clinical psychologist",
+    url: SITE.url,
+    email: global.email,
+    telephone: global.phone,
+    sameAs,
+  },
+  {
+    "@type": "ProfessionalService",
+    "@id": serviceId,
+    name: global.siteName,
+    description: global.defaultSeoDescription,
+    url: SITE.url,
+    email: global.email,
+    telephone: global.phone,
+    areaServed: global.area,
+    availableLanguage: [language],
+    sameAs,
+    provider: { "@id": personId },
+  },
+  {
+    "@type": "WebSite",
+    "@id": websiteId,
+    name: SITE.name,
+    url: SITE.url,
+    inLanguage: language,
+    publisher: { "@id": personId },
+  },
+  {
+    "@type": "WebPage",
+    "@id": webpageId,
+    url: canonical,
+    name: fullTitle,
+    description: cleanDescription,
+    inLanguage: language,
+    isPartOf: { "@id": websiteId },
+    about: { "@id": serviceId },
+  },
+];
+
+if (type === "article" && publishedTime) {
+  graph.push({
+    "@type": "BlogPosting",
+    "@id": `${canonical}#article`,
+    headline: cleanTitle || fullTitle,
+    description: cleanDescription,
+    image: ogImage,
+    datePublished: publishedTime.toISOString(),
+    dateModified: (modifiedTime || publishedTime).toISOString(),
+    author: { "@id": personId },
+    publisher: { "@id": personId },
+    mainEntityOfPage: { "@id": webpageId },
+    inLanguage: language,
+  });
+}
+
+const extraStructuredData = structuredData
+  ? Array.isArray(structuredData)
+    ? structuredData
+    : [structuredData]
+  : [];
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [...graph, ...extraStructuredData],
+};
 ---
 
 <title>{fullTitle}</title>
-<meta name="description" content={description} />
+<meta name="description" content={cleanDescription} />
 <link rel="canonical" href={canonical} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 
 <meta property="og:type" content={type} />
 <meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description} />
+<meta property="og:description" content={cleanDescription} />
 <meta property="og:url" content={canonical} />
 <meta property="og:site_name" content={SITE.name} />
 <meta property="og:locale" content={t.locale.og} />
@@ -61,5 +152,6 @@ const t = useTranslations(locale);
 
 <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
 <meta name="twitter:title" content={fullTitle} />
-<meta name="twitter:description" content={description} />
+<meta name="twitter:description" content={cleanDescription} />
 {ogImage && <meta name="twitter:image" content={ogImage} />}
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

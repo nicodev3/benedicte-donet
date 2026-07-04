@@ -11,7 +11,10 @@ import { getLocaleFromFilePath, localizedPath, stripLocaleFromFilePath } from "@
  * ce comportement pour préserver toutes les URLs indexées.
  */
 export async function getStaticPaths() {
-  const pages = await getCollection("pages", ({ data }) => !data.draft);
+  const staticPageIds = new Set(["masterclass"]);
+  const pages = (await getCollection("pages", ({ data }) => !data.draft)).filter(
+    (page) => !staticPageIds.has(page.id)
+  );
   const posts = await getCollection("blog", ({ data }) => !data.draft);
   const localizedSlug = (id: string) => {
     const entry = [...pages, ...posts].find((item) => item.id === id);

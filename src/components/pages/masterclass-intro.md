@@ -1,17 +1,3 @@
----
-title: "Masterclass"
-description: ""
-image: ""
-imageAlt: ""
-seoTitle: "Masterclass"
-seoDescription: ""
-order: 4
-draft: false
----
-
-<!-- Le contenu éditorial est découpé dans src/components/pages/masterclass-{intro,outro}.md
-     et la grille produits dans src/components/sections/ProductsGrid.astro (page masterclass.astro). -->
-
 Psychologie en ligne
 
 # Les Masterclass
@@ -30,15 +16,3 @@ Il existe des connaissances essentielles pour mieux nous comprendre :
 Ici, je suis ravie de partager avec vous ce que je considère comme essentiel pour vous accepter et vivre en harmonie avec vous-même. Ce sont des pratiques, des techniques et des explorations intérieures que vous pouvez suivre chez vous, à votre rythme.  
   
 J'ai à cœur de vous transmettre les enseignements qui m'aident et aident mes patients à cheminer vers une vie plus harmonieuse.
-
-## Masterclass et programmes
-
-<div data-products-grid></div>
-
-![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](../../assets/images/wp/DSCF1217.jpg)
-
-## Des questions ?
-
-Vous pouvez me contacter par [email](<mailto: donetbenedicte@gmail.com>) ou via le [lien de contact](/infos-pratiques/#form) pour me poser vos questions et avoir un premier échange avant de décider de réserver votre masterclass ou programme. Je vous répondrai dans les plus brefs délais.
-
-[Je réserve ma masterclass](#masterclass)

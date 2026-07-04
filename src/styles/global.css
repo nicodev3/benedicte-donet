@@ -117,9 +117,17 @@ hr {
   margin-top: var(--space-md);
 }
 
+.prose:has(.products-grid) {
+  max-width: var(--container-max);
+}
+
 .prose ul,
 .prose ol {
   padding-left: 1.4rem;
+}
+
+.prose ul.products-grid {
+  padding-left: 0;
 }
 
 .prose li + li {
