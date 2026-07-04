@@ -2,16 +2,17 @@
     "hero": {
         "title": "Psychologue en ligne",
         "subtitle": "Psychologue clinicienne en visio | Trauma-thérapies | EMDR | Sexualité",
-        "image": "/images/wp/hero-accueil-psychologue-en-ligne.png",
+        "backgroundImage": "/images/wp/banniere-2.png",
+        "backgroundImageMobile": "/images/wp/banniere-smartphone-accueil.png",
         "primaryCtaLabel": "Je prends rendez-vous",
         "primaryCtaUrl": "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet"
     },
     "intro": {
         "title": "Bienvenue !",
-        "text": "Je suis Bénédicte Donet, psychologue en ligne et psychothérapeute en ligne passionnée. J'ai à cœur de vous guider dans ce que vous traversez pour évoluer d'un état de survie, peurs, blocages ou difficultés, vers l'aisance, la paix et l'harmonie que vous recherchez. Mon expérience et mes connaissances prennent leurs sources dans une approche holistique. Lors de nos séances, nous explorons toutes les dimensions de votre expérience pour découvrir ensemble ce qui nécessite un accompagnement vers une transformation. Au travers différents outils (EMDR, IFS, parole, méditation), je vous accompagne dans l'exploration des différentes facettes de votre être et soutiens les changements que vous souhaitez accueillir dans votre vie. Je crois fermement en l'incroyable potentiel de guérison et de croissance personnelle chez chacun. Je m'engage à vous offrir un espace thérapeutique sacré, où votre vulnérabilité et confiance peuvent naturellement émerger et la guérison est facilitée.",
+        "text": "Je suis Bénédicte Donet, psychologue en ligne et psychothérapeute en ligne passionnée.\n\nJ'ai à cœur de **vous guider dans ce que vous traversez** pour évoluer d'un état de survie, peurs, blocages ou difficultés, vers l'aisance, la paix et l'harmonie que vous recherchez.\n\nMon expérience et mes connaissances prennent leurs sources dans une approche holistique.\n\nLors de nos séances, nous explorons toutes les dimensions de votre expérience pour découvrir ensemble ce qui nécessite **un accompagnement vers une transformation**.\n\nAu travers différents outils (EMDR, IFS, parole, méditation), je vous accompagne dans l'exploration des différentes facettes de votre être et soutiens les changements que vous souhaitez accueillir dans votre vie.\n\nJe crois fermement en l'incroyable potentiel de guérison et de croissance personnelle chez chacun.\n\n**Je m'engage à vous offrir un espace thérapeutique sacré**, où votre vulnérabilité et confiance peuvent naturellement émerger et la guérison est facilitée.",
         "ctaLabel": "Découvrir ma pratique",
         "ctaUrl": "/a-propos/",
-        "image": "/images/wp/portrait-benedicte-donet-bienvenue.jpg"
+        "image": "/images/wp/bene-accueil-1.png"
     },
     "whyOnline": {
         "title": "Pourquoi choisir une psychologue en ligne ?",

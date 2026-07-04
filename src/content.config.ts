@@ -66,7 +66,8 @@ const settings = defineCollection({
       hero: z.object({
         title: z.string(),
         subtitle: z.string(),
-        image: z.string().optional(),
+        backgroundImage: z.string(),
+        backgroundImageMobile: z.string().optional(),
         primaryCtaLabel: z.string(),
         primaryCtaUrl: z.string(),
       }),

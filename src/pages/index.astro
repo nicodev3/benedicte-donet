@@ -9,32 +9,35 @@ import QuoteBlock from "@/components/sections/QuoteBlock.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
 import ContactBlock from "@/components/sections/ContactBlock.astro";
 import NewsletterBlock from "@/components/sections/NewsletterBlock.astro";
-import { getHomeSettings } from "@/lib/settings";
+import { getHomeSettings, getGlobalSettings } from "@/lib/settings";
 
 const home = await getHomeSettings();
+const global = await getGlobalSettings();
 ---
 
 <BaseLayout
   title={home.seoTitle}
   description={home.seoDescription}
-  image={home.hero.image}
+  image={home.hero.backgroundImage}
 >
   <Hero
+    eyebrow={global.siteName}
     title={home.hero.title}
     subtitle={home.hero.subtitle}
-    image={home.hero.image}
-    imageAlt="Bénédicte Donet, psychologue en ligne spécialisée EMDR et trauma"
+    backgroundImage={home.hero.backgroundImage}
+    backgroundImageMobile={home.hero.backgroundImageMobile}
     ctaLabel={home.hero.primaryCtaLabel}
     ctaUrl={home.hero.primaryCtaUrl}
   />
 
   <TextImage
+    variant="intro"
     title={home.intro.title}
     text={home.intro.text}
     ctaLabel={home.intro.ctaLabel}
     ctaUrl={home.intro.ctaUrl}
     image={home.intro.image}
-    imageAlt="Portrait de Bénédicte Donet, psychologue en ligne"
+    imageAlt="Bénédicte Donet, psychologue en ligne"
   />
 
   <TextImage

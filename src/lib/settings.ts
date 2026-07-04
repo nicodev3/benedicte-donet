@@ -22,7 +22,8 @@ export interface HomeSettings {
   hero: {
     title: string;
     subtitle: string;
-    image?: string;
+    backgroundImage: string;
+    backgroundImageMobile?: string;
     primaryCtaLabel: string;
     primaryCtaUrl: string;
   };
