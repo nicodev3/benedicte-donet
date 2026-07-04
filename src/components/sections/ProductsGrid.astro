@@ -1,18 +1,20 @@
 ---
 import SiteImage from "@/components/common/SiteImage.astro";
 import { productUrl, type MasterclassProduct } from "@/lib/masterclass-products";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 
 interface Props {
   products: MasterclassProduct[];
+  locale?: Locale;
 }
 
-const { products } = Astro.props;
+const { products, locale = DEFAULT_LOCALE } = Astro.props;
 ---
 
 <ul class="products-grid">
   {
     products.map((product) => {
-      const url = productUrl(product.slug);
+      const url = productUrl(product.slug, locale);
 
       return (
       <li class="product-card">

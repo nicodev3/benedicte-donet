@@ -1,0 +1,75 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@/layouts/PageLayout.astro";
+import ProductsGrid from "@/components/sections/ProductsGrid.astro";
+import { SITE } from "@/site.config";
+import { resolveSeoImagePath } from "@/lib/images";
+import { getMasterclassProducts } from "@/lib/masterclass-products";
+import { getContentSlug, getLocaleFromPath, localizedPath, type Locale } from "@/lib/i18n";
+import { Content as MasterclassIntroFr } from "@/components/pages/masterclass-intro.md";
+import { Content as MasterclassOutroFr } from "@/components/pages/masterclass-outro.md";
+import { Content as MasterclassIntroEn } from "@/components/pages/masterclass-intro.en.md";
+import { Content as MasterclassOutroEn } from "@/components/pages/masterclass-outro.en.md";
+
+interface Props {
+  locale?: Locale;
+}
+
+const locale = Astro.props.locale ?? getLocaleFromPath(Astro.url.pathname);
+const products = getMasterclassProducts(locale);
+const MasterclassIntro = locale === "en" ? MasterclassIntroEn : MasterclassIntroFr;
+const MasterclassOutro = locale === "en" ? MasterclassOutroEn : MasterclassOutroFr;
+
+const page = (await getCollection("pages")).find(
+  (entry) =>
+    getContentSlug(entry.filePath, entry.id) === "masterclass" &&
+    entry.filePath?.includes(`.${locale}.`)
+);
+if (!page) {
+  return Astro.redirect(localizedPath("/404/", locale));
+}
+
+function parsePrice(price: string): string | undefined {
+  const match = price.match(/\d+(?:[.,]\d+)?/);
+  return match?.[0]?.replace(",", ".");
+}
+
+const masterclassPath = localizedPath("/masterclass/", locale);
+const productListStructuredData = {
+  "@type": "ItemList",
+  "@id": new URL(`${masterclassPath}#products`, SITE.url).href,
+  name: locale === "en" ? "Masterclasses and programmes" : "Masterclass et programmes",
+  itemListElement: products.map((product, index) => {
+    const productUrl = new URL(localizedPath(`/produit/${product.slug}/`, locale), SITE.url).href;
+    const imagePath = resolveSeoImagePath(product.image);
+
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: [product.title, product.subtitle].filter(Boolean).join(" "),
+        image: imagePath ? new URL(imagePath, SITE.url).href : undefined,
+        url: productUrl,
+        offers: {
+          "@type": "Offer",
+          url: new URL(localizedPath("/infos-pratiques/#form", locale), SITE.url).href,
+          priceCurrency: "EUR",
+          price: parsePrice(product.price),
+          availability: "https://schema.org/InStock",
+        },
+      },
+    };
+  }),
+};
+
+const sectionTitle =
+  locale === "en" ? "Masterclasses and programmes" : "Masterclass et programmes";
+---
+
+<PageLayout page={page} structuredData={productListStructuredData}>
+  <MasterclassIntro />
+  <h2 id="masterclass-et-programmes">{sectionTitle}</h2>
+  <ProductsGrid products={products} locale={locale} />
+  <MasterclassOutro />
+</PageLayout>

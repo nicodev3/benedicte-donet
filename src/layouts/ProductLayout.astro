@@ -5,7 +5,7 @@ import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import Button from "@/components/common/Button.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
-import { localizedPath } from "@/lib/i18n";
+import { getLocaleFromFilePath, getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 import type { CollectionEntry } from "astro:content";
 
@@ -25,10 +25,11 @@ const {
   seoDescription,
 } = product.data;
 
-const t = useTranslations("fr");
+const locale = getLocaleFromFilePath(product.filePath) ?? getLocaleFromPath(Astro.url.pathname);
+const t = useTranslations(locale);
 const breadcrumbs = [
-  { label: t.common.home, url: localizedPath("/", "fr") },
-  { label: "Masterclass", url: localizedPath("/masterclass/", "fr") },
+  { label: t.common.home, url: localizedPath("/", locale) },
+  { label: "Masterclass", url: localizedPath("/masterclass/", locale) },
   { label: title },
 ];
 ---

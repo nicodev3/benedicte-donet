@@ -1,63 +1,63 @@
 {
     "hero": {
-        "title": "Psychologue en ligne",
-        "subtitle": "Psychologue clinicienne en visio | Trauma-thérapies | EMDR | Sexualité",
+        "title": "Online psychologist",
+        "subtitle": "Clinical psychologist via video | Trauma therapy | EMDR | Sexuality",
         "backgroundImage": "/images/wp/banniere-2.png",
         "backgroundImageMobile": "/images/wp/banniere-smartphone-accueil.png",
-        "primaryCtaLabel": "Je prends rendez-vous",
+        "primaryCtaLabel": "Book an appointment",
         "primaryCtaUrl": "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet"
     },
     "intro": {
-        "title": "Bienvenue !",
-        "text": "Je suis Bénédicte Donet, psychologue en ligne et psychothérapeute en ligne passionnée.\n\nJ'ai à cœur de **vous guider dans ce que vous traversez** pour évoluer d'un état de survie, peurs, blocages ou difficultés, vers l'aisance, la paix et l'harmonie que vous recherchez.\n\nMon expérience et mes connaissances prennent leurs sources dans une approche holistique.\n\nLors de nos séances, nous explorons toutes les dimensions de votre expérience pour découvrir ensemble ce qui nécessite **un accompagnement vers une transformation**.\n\nAu travers différents outils (EMDR, IFS, parole, méditation), je vous accompagne dans l'exploration des différentes facettes de votre être et soutiens les changements que vous souhaitez accueillir dans votre vie.\n\nJe crois fermement en l'incroyable potentiel de guérison et de croissance personnelle chez chacun.\n\n**Je m'engage à vous offrir un espace thérapeutique sacré**, où votre vulnérabilité et confiance peuvent naturellement émerger et la guérison est facilitée.",
-        "ctaLabel": "Découvrir ma pratique",
+        "title": "Welcome!",
+        "text": "I am Bénédicte Donet, a passionate online psychologist and psychotherapist.\n\nI am committed to **guiding you through what you are going through** so you can move from a state of survival, fears, blocks, or difficulties towards the ease, peace, and harmony you are seeking.\n\nMy experience and knowledge draw from a holistic approach.\n\nDuring our sessions, we explore every dimension of your experience to discover together what requires **support towards transformation**.\n\nThrough various tools (EMDR, IFS, talk therapy, meditation), I accompany you in exploring the different facets of your being and support the changes you wish to welcome into your life.\n\nI firmly believe in the incredible potential for healing and personal growth within each person.\n\n**I am committed to offering you a sacred therapeutic space**, where your vulnerability and trust can naturally emerge and healing is facilitated.",
+        "ctaLabel": "Discover my practice",
         "ctaUrl": "/a-propos/",
         "image": "/images/wp/bene-accueil-1.png"
     },
     "whyOnline": {
-        "title": "Pourquoi choisir une psychologue en ligne ?",
-        "text": "La **téléconsultation** possède de nombreux avantages.\n\nEn choisissant une psychologue en ligne, vous pouvez recevoir votre accompagnement de chez vous, avec le confort et la chaleur de votre maison. Cela favorise un **sentiment de sécurité** et permet de recevoir la thérapie avec plus d'aisance.\n\nVous n'avez pas besoin de vous déplacer ce qui facilite grandement la prise de rendez-vous et l'organisation de nos séances. Aussi, la relation thérapeutique est précieuse, en choisissant un **psychologue en ligne**, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.",
-        "ctaLabel": "Je veux en savoir plus",
+        "title": "Why choose an online psychologist?",
+        "text": "**Teleconsultation** offers many advantages.\n\nBy choosing an online psychologist, you can receive support from home, with the comfort and warmth of your own space. This fosters a **sense of safety** and makes it easier to engage in therapy.\n\nYou do not need to travel, which greatly simplifies booking appointments and organising our sessions. The therapeutic relationship is precious: by choosing an **online psychologist**, you can keep the same therapist regardless of your plans to move, travel, or live abroad.",
+        "ctaLabel": "I want to know more",
         "ctaUrl": "/infos-pratiques/",
         "image": "/images/wp/DSCF0359.jpg"
     },
     "services": {
-        "title": "Les accompagnements que je propose",
+        "title": "The support I offer",
         "cards": [{
-                "title": "Séance individuelle",
-                "intro": "Pendant nos séances de psychologie en ligne, nous explorons les différentes dimensions de votre Être afin de **vous accompagner vers le changement** que vous souhaitez accueillir dans votre vie. Cela implique d'explorer et d'accueillir :",
+                "title": "Individual session",
+                "intro": "During our online psychology sessions, we explore the different dimensions of your Being in order to **support you towards the change** you wish to welcome into your life. This involves exploring and welcoming:",
                 "bullets": [
-                    "Votre histoire, peurs, croyances, émotions.",
-                    "Votre **style d'attachement**, manière de communiquer et de **percevoir le monde**.",
-                    "Votre **environnement**, routine, et bien d'autres aspects."
+                    "Your history, fears, beliefs, emotions.",
+                    "Your **attachment style**, way of communicating, and **perceiving the world**.",
+                    "Your **environment**, routines, and many other aspects."
                 ],
-                "text": "Chaque thérapie est unique, et je suis enthousiaste à l'idée de pouvoir vous accompagner sur votre propre chemin, en douceur et en respectant votre rythme.",
+                "text": "Each therapy is unique, and I am enthusiastic about accompanying you on your own path, gently and at your own pace.",
                 "url": "/psychotherapie/",
                 "imageUrl": "/services/",
-                "linkLabel": "Consultez les tarifs",
+                "linkLabel": "View rates",
                 "linkUrl": "/psychotherapie/#tarifpsycho",
                 "image": "/images/wp/fleur-sechee-1.png",
                 "imageWidth": "wide"
             },
             {
-                "title": "Ateliers et programmes",
-                "intro": "Au travers des ateliers et programmes, je vous offre des **pratiques et savoirs transformateurs**. Tout ce que je vous transmets sous cette forme sont des savoirs qui me paraissent indispensables pour **vivre en harmonie** avec qui nous sommes. La connaissance de soi, de nos fonctionnements est nécessaire pour pouvoir s'accueillir et vivre avec davantage d'harmonie. Je suis heureuse de vous offrir ce que j'ai reçu d'années de **pratique et recherches** sur mes domaines d'expertise qui sont :",
+                "title": "Workshops and programmes",
+                "intro": "Through workshops and programmes, I offer you **transformative practices and knowledge**. Everything I share in these formats represents knowledge I consider essential for **living in harmony** with who we are. Self-knowledge and understanding our inner workings are necessary to welcome ourselves and live with greater harmony. I am happy to share what I have gained from years of **practice and research** in my areas of expertise:",
                 "bullets": [
-                    "Le traumatisme,",
-                    "La régulation du système nerveux,",
-                    "La sexualité,",
-                    "La méditation,",
-                    "Les pratiques psycho-corporelles."
+                    "Trauma,",
+                    "Nervous system regulation,",
+                    "Sexuality,",
+                    "Meditation,",
+                    "Psycho-corporeal practices."
                 ],
                 "url": "/masterclass/",
                 "image": "/images/wp/fleur-sechee-3.png",
                 "imageWidth": "narrow"
             },
             {
-                "title": "Photothérapie",
-                "text": "Au travers de la photothérapie, je vous accompagne à **explorer votre relation au corps**. C'est un temps et un espace dédié à l'amour de soi et à l'accueil avec bienveillance, de ce qui a besoin d'être mis en lumière et senti. La photothérapie permet d'explorer différentes facettes.",
+                "title": "Phototherapy",
+                "text": "Through phototherapy, I accompany you in **exploring your relationship with your body**. It is a time and space dedicated to self-love and welcoming, with kindness, what needs to be brought into the light and felt. Phototherapy allows you to explore different facets of yourself.",
                 "url": "/phototherapie/",
-                "ctaLabel": "Prendre rendez-vous",
+                "ctaLabel": "Book an appointment",
                 "ctaUrl": "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet",
                 "image": "/images/wp/fleur-sechee-2.png",
                 "imageWidth": "wide",
@@ -66,62 +66,62 @@
         ]
     },
     "appointment": {
-        "title": "Comment prendre rendez-vous avec votre psychologue en ligne ?",
+        "title": "How to book an appointment with your online psychologist?",
         "steps": [{
-                "title": "Demande",
-                "text": "Vous pouvez prendre directement rendez-vous dans l'agenda Doctolib en choisissant votre créneau, ou m'écrire via le lien de contact en bas de page si vous avez des questions. Tout partage est bienvenu, je vous répondrai aussi rapidement que possible."
+                "title": "Request",
+                "text": "You can book directly via the Doctolib calendar by choosing your time slot, or write to me via the contact link at the bottom of the page if you have questions. All sharing is welcome; I will reply as quickly as possible."
             },
             {
-                "title": "Le rendez-vous est pris",
-                "text": "Vous recevrez un lien Doctolib et une confirmation de rendez-vous."
+                "title": "Appointment confirmed",
+                "text": "You will receive a Doctolib link and an appointment confirmation."
             },
             {
-                "title": "Le jour J",
-                "text": "Le jour du rendez-vous, suivez les instructions pour vous connecter à l'appel en visio sur Doctolib. Je vous invite à trouver un lieu calme et privé pour vous sentir à l'aise pendant notre rencontre."
+                "title": "On the day",
+                "text": "On the day of your appointment, follow the instructions to connect to the video call on Doctolib. I invite you to find a calm and private place so you feel at ease during our meeting."
             }
         ],
-        "ctaLabel": "Je prends rendez-vous via Doctolib",
+        "ctaLabel": "Book via Doctolib",
         "ctaUrl": "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet"
     },
     "masterclass": {
-    "title": "Masterclass & Programmes",
-    "text": "Découvrez une expérience d'exploration personnelle grâce à des Masterclass et des programmes **psycho-éducatifs en ligne**.\n\nChacun de ces ateliers et programmes en ligne sont une invitation à pratiquer des outils tels que la méditation, l'amour de soi, la régulation du système nerveux et l'exploration de la sexualité pour cultiver une compréhension profonde de soi-même.\n\nÀ travers ces offres, je vous invite à entreprendre un voyage de **connaissance de soi** et d'apprentissage d'outils vous permettant de cultiver davantage d'harmonie dans votre relation avec vous-même et le monde.",
-    "ctaLabel": "Je réserve",
-    "ctaUrl": "/masterclass/",
-    "image": "/images/wp/DSC07682.jpg"
-  },
+        "title": "Masterclasses & Programmes",
+        "text": "Discover a personal exploration experience through **online psycho-educational** masterclasses and programmes.\n\nEach of these online workshops and programmes is an invitation to practise tools such as meditation, self-love, nervous system regulation, and exploring sexuality to cultivate a deep understanding of yourself.\n\nThrough these offerings, I invite you to embark on a journey of **self-knowledge** and learning tools that help you cultivate greater harmony in your relationship with yourself and the world.",
+        "ctaLabel": "Book now",
+        "ctaUrl": "/masterclass/",
+        "image": "/images/wp/DSC07682.jpg"
+    },
     "quote": {
-        "text": "Ta tâche n'est pas de chercher l'amour, mais simplement de chercher et trouver tous les obstacles que tu as construits contre l'amour.",
-        "author": "Rûmi"
+        "text": "Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it.",
+        "author": "Rumi"
     },
     "reviews": {
-        "title": "Les mots de mes patients",
+        "title": "Words from my patients",
         "items": [{
                 "author": "Margaux D.",
-                "text": "Je recommande vivement cette psychologue qui a une super approche et de très bonnes méthodes d'accompagnement !"
+                "text": "I highly recommend this psychologist who has a wonderful approach and very effective support methods!"
             },
             {
                 "author": "Matt R.",
-                "text": "Cela fait plus d'un an que je consulte Bénédicte, et je ne regrette pas une seule séance. Grâce à des techniques comme l'EMDR ou l'IFS, elle m'aide à résoudre en profondeur les tensions émotionnelles et les traumatismes. Les résultats sont visibles très rapidement."
+                "text": "I have been seeing Bénédicte for over a year, and I do not regret a single session. Thanks to techniques such as EMDR and IFS, she helps me resolve emotional tensions and trauma in depth. The results are visible very quickly."
             },
             {
                 "author": "Élisa B.",
-                "text": "J'ai été accompagnée sur 5 séances d'EMDR pour un trauma complexe et j'ai particulièrement apprécié la bienveillance et la présence de Bénédicte. Je me sens plus sécurisée dans mon corps, moins activée, moins menacée."
+                "text": "I received support over 5 EMDR sessions for complex trauma and particularly appreciated Bénédicte's kindness and presence. I feel safer in my body, less activated, less threatened."
             },
             {
                 "author": "Maëlys K.",
-                "text": "Véritablement à l'écoute, toujours douce et rassurante. À chaque séance, j'en apprends un peu plus sur moi-même et sur mon corps. Je la recommande vivement à toute personne cherchant un accompagnement allant au-delà de la simple parole."
+                "text": "Truly attentive, always gentle and reassuring. With each session, I learn a little more about myself and my body. I highly recommend her to anyone seeking support that goes beyond talk alone."
             },
             {
                 "author": "Ame E.",
-                "text": "Je recommande Bénédicte Donet les yeux fermés. Au lieu de s'intéresser aux symptômes, elle aide à trouver la source du mal-être et à soigner tout en douceur."
+                "text": "I recommend Bénédicte Donet wholeheartedly. Instead of focusing on symptoms, she helps find the source of distress and heal with gentleness."
             },
             {
                 "author": "Marine M.",
-                "text": "Mme Donet propose un accompagnement que j'ai trouvé parfaitement équilibré et doux, s'adaptant à mon rythme. Je recommande vivement cette psychologue !"
+                "text": "Ms Donet offers support that I found perfectly balanced and gentle, adapting to my pace. I highly recommend this psychologist!"
             }
         ]
     },
-    "seoTitle": "Psychologue en ligne spécialisée EMDR, trauma et anxiété",
-    "seoDescription": "Psychologue en ligne, Bénédicte Donet accompagne les adultes en EMDR, trauma, anxiété, stress post-traumatique et sexualité."
+    "seoTitle": "Online psychologist specialising in EMDR, trauma and anxiety",
+    "seoDescription": "Online psychologist Bénédicte Donet supports adults with EMDR, trauma, anxiety, post-traumatic stress and sexuality."
 }

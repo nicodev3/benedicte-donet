@@ -1,3 +1,5 @@
+import { localizedPath, type Locale } from "@/lib/i18n";
+
 export interface MasterclassProduct {
   slug: string;
   title: string;
@@ -8,11 +10,11 @@ export interface MasterclassProduct {
   ctaLabel: string;
 }
 
-export function productUrl(slug: string): string {
-  return `/produit/${slug}/`;
+export function productUrl(slug: string, locale: Locale = "fr"): string {
+  return localizedPath(`/produit/${slug}/`, locale);
 }
 
-export const MASTERCLASS_PRODUCTS: MasterclassProduct[] = [
+const MASTERCLASS_PRODUCTS_FR: MasterclassProduct[] = [
   {
     slug: "programme-de-meditation-se-reposer-en-soi",
     title: "PROGRAMME DE MEDITATION EN LIGNE :",
@@ -48,3 +50,47 @@ export const MASTERCLASS_PRODUCTS: MasterclassProduct[] = [
     ctaLabel: "Ajouter au panier",
   },
 ];
+
+const MASTERCLASS_PRODUCTS_EN: MasterclassProduct[] = [
+  {
+    slug: "programme-de-meditation-se-reposer-en-soi",
+    title: "ONLINE MEDITATION PROGRAMME:",
+    subtitle: "Resting in Yourself",
+    price: "150.00€",
+    image: "/images/wp/se-reposer-en-soi-bis.png",
+    imageAlt: "resting in yourself online meditation programme",
+    ctaLabel: "Add to cart",
+  },
+  {
+    slug: "masterclass-cultiver-lamour",
+    title: "Masterclass: CULTIVATING LOVE",
+    price: "45.00€",
+    image: "/images/wp/cultiver-lamour.png",
+    imageAlt: "masterclass meditation love self-love",
+    ctaLabel: "Add to cart",
+  },
+  {
+    slug: "programme-de-meditation-un-pas-de-plus-vers-ton-monde-interieur",
+    title: "SELF-LOVE PROGRAMME:",
+    subtitle: "One step closer to your inner world",
+    price: "465.00€ – 765.00€",
+    image: "/images/wp/affiche-meditation-1.png",
+    imageAlt: "self-love programme online meditation",
+    ctaLabel: "Choose options",
+  },
+  {
+    slug: "masterclass-au-coeur-de-ta-poitrine",
+    title: "Masterclass: AT THE HEART OF YOUR CHEST",
+    price: "45.00€",
+    image: "/images/wp/affiche-au-coeur-de-ta-poitrine.png",
+    imageAlt: "online meditation workshop",
+    ctaLabel: "Add to cart",
+  },
+];
+
+export function getMasterclassProducts(locale: Locale): MasterclassProduct[] {
+  return locale === "en" ? MASTERCLASS_PRODUCTS_EN : MASTERCLASS_PRODUCTS_FR;
+}
+
+/** @deprecated Use getMasterclassProducts(locale) */
+export const MASTERCLASS_PRODUCTS = MASTERCLASS_PRODUCTS_FR;

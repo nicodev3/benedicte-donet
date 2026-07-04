@@ -4,7 +4,7 @@ import ProductLayout from "@/layouts/ProductLayout.astro";
 import { getProductStaticPaths } from "@/lib/products";
 
 export async function getStaticPaths() {
-  return getProductStaticPaths("fr");
+  return getProductStaticPaths("en");
 }
 
 const { product } = Astro.props;
