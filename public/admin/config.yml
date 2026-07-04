@@ -15,6 +15,8 @@ backend:
   auth_endpoint: api/auth
 
 locale: fr
+# i18n multiple_files : `slug.md` (fr) + `slug.en.md` (en).
+# Requiert i18n: true sur chaque collection folder (blog, pages).
 i18n:
   structure: multiple_files
   locales: [fr, en]
@@ -42,6 +44,7 @@ collections:
     extension: "md"
     slug: "{{slug}}"
     preview_path: "/{{slug}}/"
+    i18n: true
     sortable_fields: ["date", "title"]
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true, hint: "Le titre principal de l'article." }
@@ -108,6 +111,7 @@ collections:
     format: "frontmatter"
     extension: "md"
     preview_path: "/{{slug}}/"
+    i18n: true
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true }
       - label: "Titre du bandeau"
