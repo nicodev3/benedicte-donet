@@ -16,9 +16,10 @@
     },
     "whyOnline": {
         "title": "Pourquoi choisir une psychologue en ligne ?",
-        "text": "La téléconsultation possède de nombreux avantages. En choisissant une psychologue en ligne, vous pouvez recevoir votre accompagnement de chez vous, avec le confort et la chaleur de votre maison. Cela favorise un sentiment de sécurité et permet de recevoir la thérapie avec plus d'aisance. Vous n'avez pas besoin de vous déplacer, ce qui facilite grandement la prise de rendez-vous et l'organisation de nos séances. Aussi, la relation thérapeutique est précieuse : en choisissant un psychologue en ligne, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.",
+        "text": "La **téléconsultation** possède de nombreux avantages.\n\nEn choisissant une psychologue en ligne, vous pouvez recevoir votre accompagnement de chez vous, avec le confort et la chaleur de votre maison. Cela favorise un **sentiment de sécurité** et permet de recevoir la thérapie avec plus d'aisance.\n\nVous n'avez pas besoin de vous déplacer ce qui facilite grandement la prise de rendez-vous et l'organisation de nos séances. Aussi, la relation thérapeutique est précieuse, en choisissant un **psychologue en ligne**, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.",
         "ctaLabel": "Je veux en savoir plus",
-        "ctaUrl": "/infos-pratiques/"
+        "ctaUrl": "/infos-pratiques/",
+        "image": "/images/wp/DSCF0359.jpg"
     },
     "services": {
         "title": "Les accompagnements que je propose",

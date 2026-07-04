@@ -39,6 +39,7 @@ export interface HomeSettings {
     text: string;
     ctaLabel?: string;
     ctaUrl?: string;
+    image?: string;
   };
   services: {
     title: string;

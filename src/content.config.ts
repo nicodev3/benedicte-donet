@@ -83,6 +83,7 @@ const settings = defineCollection({
         text: z.string(),
         ctaLabel: z.string().optional(),
         ctaUrl: z.string().optional(),
+        image: z.string().optional(),
       }),
       services: z.object({
         title: z.string(),
