@@ -11,9 +11,11 @@ import AboutImageSplitEnhancer from "@/components/common/AboutImageSplitEnhancer
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
+import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
-import { getNavigationSettings } from "@/lib/settings";
+import { getHomeSettings, getNavigationSettings } from "@/lib/settings";
 import { getLocaleFromPath } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -30,7 +32,10 @@ const isWideContent =
   page.id === "a-propos";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
+const t = useTranslations(locale);
 const navigation = await getNavigationSettings(locale);
+const homeReviews =
+  page.id === "infos-pratiques" ? (await getHomeSettings(locale)).reviews : null;
 const breadcrumbs = buildBreadcrumbs(
   Astro.url.pathname,
   title,
@@ -71,7 +76,19 @@ const breadcrumbs = buildBreadcrumbs(
     </article>
   </Container>
 
-  {isWideContent && <PageIntroEnhancer />}
+  {
+    homeReviews && (
+      <ReviewsBlock
+        title={homeReviews.title}
+        items={homeReviews.items}
+        prevLabel={t.reviews.prev}
+        nextLabel={t.reviews.next}
+        carouselLabel={t.reviews.carouselLabel}
+      />
+    )
+  }
+
+  <PageIntroEnhancer />
   <PageCtaEnhancer />
   {page.id === "a-propos" && <AboutImageSplitEnhancer />}
   {page.id === "phototherapie" && <PhotoOffersEnhancer />}

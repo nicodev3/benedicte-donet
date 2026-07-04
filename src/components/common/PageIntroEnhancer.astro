@@ -75,13 +75,12 @@
   }
 
   function setupPageIntro() {
-    const prose = document.querySelector<HTMLElement>(".prose.prose-wide");
-    if (!prose || prose.dataset.pageIntroReady === "true") return;
+    document.querySelectorAll<HTMLElement>(".prose").forEach((prose) => {
+      if (prose.dataset.pageIntroReady === "true") return;
 
-    buildPageIntro(prose);
-    if (prose.querySelector(".page-intro")) {
+      buildPageIntro(prose);
       prose.dataset.pageIntroReady = "true";
-    }
+    });
   }
 
   setupPageIntro();
