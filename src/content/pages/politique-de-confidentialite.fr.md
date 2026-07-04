@@ -1,58 +1,117 @@
 ---
 title: "Politique de confidentialité"
-description: ""
+description: "Comment Bénédicte Donet collecte, utilise et protège vos données personnelles sur ce site."
 image: ""
 imageAlt: ""
 seoTitle: "Politique de confidentialité"
-seoDescription: ""
+seoDescription: "Informations sur le traitement des données personnelles, vos droits et l'utilisation des cookies sur le site de Bénédicte Donet, psychologue en ligne."
 order: 91
 draft: false
 ---
 
-## Who we are
+La présente politique de confidentialité a pour objet de vous informer sur la manière dont vos données personnelles sont collectées et traitées lors de votre visite sur le site [benedictedonet-psyenligne.com](/) et lors de vos échanges avec Bénédicte Donet.
 
-Our website address is: [/](/).
+## 1 – Responsable du traitement
 
-## Comments
+**Bénédicte Donet** – Psychologue – n° ADELI : 9D9311351  
+Adresse : 349 routes des canots, 97427 L'Étang-Salé, La Réunion  
+Contact : [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com) – [+33 6 17 78 98 78](tel:+33617789878)
 
-**Suggested text:** When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection.
+## 2 – Délégué à la protection des données
 
-An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.
+Pour toute question relative à vos données personnelles, vous pouvez contacter :  
+**La bisette digitale** – [hello@labisettedigitale.com](mailto:hello@labisettedigitale.com)
 
-## Media
+## 3 – Données collectées, finalités et bases légales
 
-**Suggested text:** If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.
+### 3.1 Navigation sur le site
 
-## Cookies
+Lors de votre visite, des données techniques peuvent être collectées automatiquement (adresse IP, type de navigateur, pages consultées, date et heure de connexion). Ces données sont nécessaires au fonctionnement et à la sécurité du site.
 
-**Suggested text:** If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.
+**Finalité** : assurer le bon fonctionnement technique du site, la sécurité et, le cas échéant, la mesure d'audience agrégée.  
+**Base légale** : intérêt légitime.
 
-If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.
+### 3.2 Prise de contact par e-mail
 
-When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select « Remember Me », your login will persist for two weeks. If you log out of your account, the login cookies will be removed.
+Si vous nous écrivez par e-mail ou via les liens de contact du site, nous collectons les informations que vous choisissez de nous communiquer (nom, prénom, adresse e-mail, numéro de téléphone, contenu de votre message).
 
-If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.
+**Finalité** : répondre à vos demandes d'information et organiser une prise de contact préalable à un rendez-vous.  
+**Base légale** : exécution de mesures précontractuelles ou intérêt légitime.
 
-## Embedded content from other websites
+### 3.3 Prise de rendez-vous en ligne
 
-**Suggested text:** Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.
+Le site propose un lien vers la plateforme **Doctolib** pour la prise de rendez-vous. En utilisant ce service, vous êtes redirigé vers un site tiers qui dispose de sa propre [politique de confidentialité](https://www.doctolib.fr/legal/privacy).
 
-These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.
+Les données de santé liées à la relation thérapeutique sont traitées dans le cadre des séances et ne sont pas collectées via ce site web.
 
-## Who we share your data with
+### 3.4 Newsletter
 
-**Suggested text:** If you request a password reset, your IP address will be included in the reset email.
+L'inscription à la newsletter s'effectue par e-mail. Seules les données que vous nous communiquez (généralement votre adresse e-mail) sont utilisées pour vous envoyer la newsletter mensuelle.
 
-## How long we retain your data
+**Finalité** : envoi d'informations et de contenus liés à la psychologie.  
+**Base légale** : votre consentement.
 
-**Suggested text:** If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.
+Vous pouvez vous désinscrire à tout moment en nous écrivant ou via le lien de désinscription présent dans chaque e-mail.
 
-For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.
+### 3.5 Réseaux sociaux et partage de contenu
 
-## What rights you have over your data
+Le site contient des liens vers nos pages **Instagram** et **Facebook**, ainsi que des boutons de partage (Facebook, LinkedIn, WhatsApp, e-mail). En cliquant sur ces liens, vous accédez à des services tiers susceptibles de collecter vos données selon leurs propres conditions.
 
-**Suggested text:** If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.
+### 3.6 Contenus intégrés
 
-## Where your data is sent
+Certains articles du blog peuvent contenir des contenus intégrés (par exemple des vidéos **YouTube**). Ces contenus peuvent entraîner la collecte de données par le service concerné lorsque vous les consultez.
 
-**Suggested text:** Visitor comments may be checked through an automated spam detection service.
+## 4 – Destinataires des données
+
+Vos données peuvent être transmises aux prestataires suivants, dans la stricte mesure nécessaire à leurs missions :
+
+- **Cloudflare** – hébergement et sécurité du site ;
+- **Doctolib** – prise de rendez-vous en ligne (si vous utilisez ce service) ;
+- **La bisette digitale** – maintenance technique du site et assistance en matière de protection des données.
+
+Bénédicte Donet ne vend ni ne loue vos données personnelles à des tiers.
+
+## 5 – Durée de conservation
+
+- **Données de navigation** : durée maximale de 13 mois.
+- **Données liées à une demande de contact** : 3 ans à compter du dernier contact, sauf obligation légale contraire.
+- **Données de newsletter** : jusqu'à votre désinscription.
+- **Données liées aux séances thérapeutiques** : conformément aux obligations légales et déontologiques applicables aux professionnels de santé.
+
+## 6 – Vos droits
+
+Conformément au Règlement général sur la protection des données (RGPD) et à la loi « Informatique et Libertés », vous disposez des droits suivants :
+
+- **Droit d'accès** à vos données ;
+- **Droit de rectification** de vos données inexactes ;
+- **Droit à l'effacement** (sous réserve des obligations légales de conservation) ;
+- **Droit à la limitation** du traitement ;
+- **Droit d'opposition** ;
+- **Droit à la portabilité** de vos données, lorsque applicable ;
+- **Droit de retirer votre consentement** à tout moment, pour les traitements fondés sur le consentement.
+
+Pour exercer vos droits, contactez : **La bisette digitale** – [hello@labisettedigitale.com](mailto:hello@labisettedigitale.com) ou **Bénédicte Donet** – [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com).
+
+Vous pouvez également introduire une réclamation auprès de la **CNIL** : [www.cnil.fr](https://www.cnil.fr).
+
+## 7 – Cookies
+
+Un « cookie » est un petit fichier déposé sur votre terminal lors de la visite d'un site web.
+
+Le site peut déposer des **cookies strictement nécessaires** au fonctionnement et à la sécurité (par exemple via notre prestataire d'hébergement).
+
+Toute mesure d'audience ou cookie non essentiel ne sera déposé qu'**avec votre consentement**. Vous pouvez à tout moment accepter ou refuser les cookies non essentiels via les paramètres de votre navigateur.
+
+Les cookies soumis au consentement sont conservés pour une durée maximale de **13 mois**. Pour en savoir plus, consultez nos [mentions légales](/mentions-legales/).
+
+## 8 – Sécurité
+
+Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès, modification, divulgation ou destruction non autorisés.
+
+## 9 – Modifications
+
+Cette politique de confidentialité peut être mise à jour. Nous vous invitons à la consulter régulièrement.
+
+* * *
+
+*Dernière mise à jour : juillet 2026*

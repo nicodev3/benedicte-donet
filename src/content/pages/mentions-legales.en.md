@@ -55,7 +55,7 @@ Where applicable, **Bénédicte Donet – psychologist – ADELI No.: 9D9311351*
 
 In accordance with the provisions of [French Law No. 78-17 of 6 January 1978 as amended](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000886460), the user of the site **/** has the right to access, modify, and delete collected information. To exercise this right, send a message to our Data Protection Officer: **La bisette digitale** – **hello@labisettedigitale.com**.
 
-For more information on how we process your data (type of data, purpose, recipients, etc.), read our [privacy policy](/en/politique-de-confidentialite/). [Instructions: add the hyperlink to your privacy policy here]
+For more information on how we process your data (type of data, purpose, recipients, etc.), read our [privacy policy](/en/politique-de-confidentialite/).
 
 * * *
 
@@ -71,7 +71,7 @@ You have the option to **accept or refuse cookies** by modifying your browser se
 
 Cookies are stored for a maximum period of 1 month.
 
-For more information on how we use cookies, read our [privacy policy](/en/politique-de-confidentialite/). [Instructions: add the hyperlink to your privacy policy or cookie policy here if you have one (this is the case if you use Complianz)]
+For more information on how we use cookies, read our [privacy policy](/en/politique-de-confidentialite/).
 
 * * *
 

@@ -1,58 +1,117 @@
 ---
 title: "Privacy policy"
-description: ""
+description: "How Bénédicte Donet collects, uses and protects your personal data on this website."
 image: ""
 imageAlt: ""
 seoTitle: "Privacy policy"
-seoDescription: ""
+seoDescription: "Information on personal data processing, your rights and cookie use on the Bénédicte Donet online psychology website."
 order: 91
 draft: false
 ---
 
-## Who we are
+This privacy policy explains how your personal data is collected and processed when you visit [benedictedonet-psyenligne.com](/en/) and when you communicate with Bénédicte Donet.
 
-Our website address is: [/](/).
+## 1 – Data controller
 
-## Comments
+**Bénédicte Donet** – Psychologist – ADELI No.: 9D9311351  
+Address: 349 routes des canots, 97427 L'Étang-Salé, Réunion Island  
+Contact: [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com) – [+33 6 17 78 98 78](tel:+33617789878)
 
-**Suggested text:** When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection.
+## 2 – Data protection officer
 
-An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.
+For any questions regarding your personal data, please contact:  
+**La bisette digitale** – [hello@labisettedigitale.com](mailto:hello@labisettedigitale.com)
 
-## Media
+## 3 – Data collected, purposes and legal bases
 
-**Suggested text:** If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.
+### 3.1 Browsing the website
 
-## Cookies
+When you visit the site, technical data may be collected automatically (IP address, browser type, pages viewed, date and time of connection). This data is necessary for the operation and security of the website.
 
-**Suggested text:** If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.
+**Purpose**: ensure the technical operation and security of the website, and where applicable aggregated audience measurement.  
+**Legal basis**: legitimate interest.
 
-If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.
+### 3.2 Contact by email
 
-When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select « Remember Me », your login will persist for two weeks. If you log out of your account, the login cookies will be removed.
+If you write to us by email or via the contact links on the site, we collect the information you choose to provide (name, email address, phone number, message content).
 
-If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.
+**Purpose**: respond to your requests for information and arrange initial contact before an appointment.  
+**Legal basis**: pre-contractual measures or legitimate interest.
 
-## Embedded content from other websites
+### 3.3 Online appointment booking
 
-**Suggested text:** Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.
+The website provides a link to the **Doctolib** platform for booking appointments. When you use this service, you are redirected to a third-party website with its own [privacy policy](https://www.doctolib.fr/legal/privacy).
 
-These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.
+Health data related to the therapeutic relationship is processed within the context of sessions and is not collected through this website.
 
-## Who we share your data with
+### 3.4 Newsletter
 
-**Suggested text:** If you request a password reset, your IP address will be included in the reset email.
+Newsletter subscription is done by email. Only the data you provide (usually your email address) is used to send you the monthly newsletter.
 
-## How long we retain your data
+**Purpose**: sending information and content related to psychology.  
+**Legal basis**: your consent.
 
-**Suggested text:** If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.
+You may unsubscribe at any time by writing to us or using the unsubscribe link included in each email.
 
-For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.
+### 3.5 Social networks and content sharing
 
-## What rights you have over your data
+The website contains links to our **Instagram** and **Facebook** pages, as well as sharing buttons (Facebook, LinkedIn, WhatsApp, email). By clicking these links, you access third-party services that may collect your data under their own terms.
 
-**Suggested text:** If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.
+### 3.6 Embedded content
 
-## Where your data is sent
+Some blog articles may contain embedded content (for example **YouTube** videos). Viewing this content may result in data collection by the relevant service.
 
-**Suggested text:** Visitor comments may be checked through an automated spam detection service.
+## 4 – Data recipients
+
+Your data may be shared with the following service providers, strictly as necessary for their tasks:
+
+- **Cloudflare** – website hosting and security;
+- **Doctolib** – online appointment booking (if you use this service);
+- **La bisette digitale** – technical maintenance of the website and data protection support.
+
+Bénédicte Donet does not sell or rent your personal data to third parties.
+
+## 5 – Retention periods
+
+- **Browsing data**: maximum of 13 months.
+- **Contact request data**: 3 years from the last contact, unless a longer legal obligation applies.
+- **Newsletter data**: until you unsubscribe.
+- **Data related to therapy sessions**: in accordance with legal and professional obligations applicable to healthcare professionals.
+
+## 6 – Your rights
+
+Under the General Data Protection Regulation (GDPR) and French data protection law, you have the following rights:
+
+- **Right of access** to your data;
+- **Right to rectification** of inaccurate data;
+- **Right to erasure** (subject to legal retention obligations);
+- **Right to restriction** of processing;
+- **Right to object**;
+- **Right to data portability**, where applicable;
+- **Right to withdraw your consent** at any time for processing based on consent.
+
+To exercise your rights, contact: **La bisette digitale** – [hello@labisettedigitale.com](mailto:hello@labisettedigitale.com) or **Bénédicte Donet** – [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com).
+
+You may also lodge a complaint with the **CNIL** (French data protection authority): [www.cnil.fr](https://www.cnil.fr).
+
+## 7 – Cookies
+
+A « cookie » is a small file placed on your device when you visit a website.
+
+The website may use **strictly necessary cookies** for operation and security (for example via our hosting provider).
+
+Any audience measurement or non-essential cookie will only be placed **with your consent**. You may accept or refuse non-essential cookies at any time through your browser settings.
+
+Cookies subject to consent are stored for a maximum of **13 months**. For more information, see our [legal notice](/en/mentions-legales/).
+
+## 8 – Security
+
+We implement appropriate technical and organisational measures to protect your data against unauthorised access, modification, disclosure or destruction.
+
+## 9 – Changes
+
+This privacy policy may be updated. We encourage you to review it regularly.
+
+* * *
+
+*Last updated: July 2026*

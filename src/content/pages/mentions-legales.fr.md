@@ -55,7 +55,7 @@ Le cas échéant, **Bénédicte Donet – psychologue – n°ADELI : 9D9311351*
 
 Conformément aux dispositions de [la loi 78-17 du 6 janvier 1978 modifiée](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000886460), l’utilisateur du site **/** dispose d’un droit d’accès, de modification et de suppression des informations collectées. Pour exercer ce droit, envoyez un message à notre Délégué à la Protection des Données : **La bisette digitale** – **hello@labisettedigitale.com**.
 
-Pour plus d’informations sur la façon dont nous traitons vos données (type de données, finalité, destinataire…), lisez notre **/politique-de-confidentialite/**. \[Consignes : ajoutez ici le lien hypertexte vers votre politique de confidentialité\]
+Pour plus d’informations sur la façon dont nous traitons vos données (type de données, finalité, destinataire…), lisez notre [politique de confidentialité](/politique-de-confidentialite/).
 
 * * *
 
@@ -71,7 +71,7 @@ Vous avez la possibilité **d’accepter ou de refuser les cookies** en modifi
 
 Les cookies sont enregistrés pour une durée maximale de 1 mois.
 
-Pour plus d’informations sur la façon dont nous faisons usage des cookies, lisez notre **/politique-de-confidentialite/**. \[Consignes : ajoutez ici le lien hypertexte vers votre politique de confidentialité ou vers votre politique de cookies si vous en avez une (c’est le cas si vous utilisez Complianz)\]
+Pour plus d’informations sur la façon dont nous faisons usage des cookies, lisez notre [politique de confidentialité](/politique-de-confidentialite/).
 
 * * *
 
