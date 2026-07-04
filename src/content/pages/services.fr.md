@@ -163,14 +163,14 @@ Dans la quête du bien-être mental, la combinaison de la méditation et de la t
 
 [![méditation pleine conscience thérapie](../../assets/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg)](/meditation-pleine-conscience-therapie/)
 
-#### [OUR RELATIONSHIP WITH MONEY](/en/our-relationship-with-money-therapy/)
+#### [OUR RELATIONSHIP WITH MONEY](/en/relation-a-l-argent-psychologie/)
 
 Often, when one thinks about working with a psychologist, the idea of addressing one’s relationship with money might not immediately come to mind. However, it’s a topic that affects everyone, every day. How we feel and engage with money speaks volumes about our past experiences, what our parents and grandparents went through in terms of financial abundance or lack.
 
 -   30/10/2023
 -   [Positive psychology](/en/category/positive-psychology/), [Psycho-education](/en/category/psycho-education/), [relationshipwithmoney](/en/category/relationshipwithmoney/)
 
-[![probleme avec l'argent psychologie relation à l'argent](../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/en/our-relationship-with-money-therapy/)
+[![probleme avec l'argent psychologie relation à l'argent](../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/en/relation-a-l-argent-psychologie/)
 
 #### [La relation à l’argent : un sujet universel et souvent négligé](/relation-a-l-argent-psychologie/)
 
