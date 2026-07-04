@@ -29,6 +29,14 @@ export function stripLocaleFromId(id: string): string {
     : id;
 }
 
+/** Slug canonique d'une entrée pages/blog (sans suffixe `.fr` / `.en`). */
+export function getContentSlug(
+  filePath: string | undefined,
+  fallbackId: string
+): string {
+  return stripLocaleFromFilePath(filePath, fallbackId);
+}
+
 export function stripLocaleFromFilePath(
   filePath: string | undefined,
   fallbackId: string

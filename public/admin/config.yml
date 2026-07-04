@@ -15,7 +15,7 @@ backend:
   auth_endpoint: api/auth
 
 locale: fr
-# i18n multiple_files : `slug.md` (fr) + `slug.en.md` (en).
+# i18n multiple_files : `slug.fr.md` (fr) + `slug.en.md` (en).
 # Requiert i18n: true sur chaque collection folder (blog, pages).
 i18n:
   structure: multiple_files

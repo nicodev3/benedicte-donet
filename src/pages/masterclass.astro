@@ -1,5 +1,6 @@
 ---
-import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { getContentSlug } from "@/lib/i18n";
 import PageLayout from "@/layouts/PageLayout.astro";
 import ProductsGrid from "@/components/sections/ProductsGrid.astro";
 import { SITE } from "@/site.config";
@@ -8,7 +9,9 @@ import { MASTERCLASS_PRODUCTS } from "@/lib/masterclass-products";
 import { Content as MasterclassIntro } from "@/components/pages/masterclass-intro.md";
 import { Content as MasterclassOutro } from "@/components/pages/masterclass-outro.md";
 
-const page = await getEntry("pages", "masterclass");
+const page = (await getCollection("pages")).find(
+  (entry) => getContentSlug(entry.filePath, entry.id) === "masterclass"
+);
 if (!page) {
   return Astro.redirect("/404/");
 }
