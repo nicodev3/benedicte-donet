@@ -16,6 +16,7 @@ interface Props {
   prevLabel: string;
   nextLabel: string;
   carouselLabel: string;
+  goToSlideLabel: string;
 }
 
 const {
@@ -27,6 +28,7 @@ const {
   prevLabel,
   nextLabel,
   carouselLabel,
+  goToSlideLabel,
 } = Astro.props;
 
 const formatCardDate = (date: Date) =>
@@ -54,6 +56,7 @@ const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
           aria-labelledby={`${carouselId}-heading`}
           aria-label={carouselLabel}
           data-carousel
+          data-go-to-slide-label={goToSlideLabel}
         >
           <button
             type="button"
@@ -136,6 +139,8 @@ const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
           >
             <ChevronRight size={24} aria-hidden="true" />
           </button>
+
+          <div class="carousel-dots" data-carousel-dots role="group" aria-label={carouselLabel} />
         </div>
       </Container>
     </Section>
@@ -150,10 +155,13 @@ const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
       const track = carousel.querySelector<HTMLElement>(".carousel-track");
       const prev = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
       const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
+      const dots = carousel.querySelector<HTMLElement>("[data-carousel-dots]");
 
       if (!track || !prev || !next) return;
 
       carousel.dataset.initialized = "true";
+
+      const goToSlideLabel = carousel.dataset.goToSlideLabel ?? "Go to slide {n}";
 
       const slides = () =>
         Array.from(track.querySelectorAll<HTMLElement>(".carousel-slide"));
@@ -166,17 +174,6 @@ const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
         return Math.max(0, index);
       };
 
-      const updateControls = () => {
-        const maxScroll = track.scrollWidth - track.clientWidth;
-        const atStart = track.scrollLeft <= 1;
-        const atEnd = track.scrollLeft >= maxScroll - 1;
-
-        prev.disabled = atStart;
-        next.disabled = atEnd;
-        carousel.classList.toggle("at-start", atStart);
-        carousel.classList.toggle("at-end", atEnd);
-      };
-
       const scrollToIndex = (index: number) => {
         const slide = slides()[index];
         if (!slide) return;
@@ -186,6 +183,36 @@ const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
           inline: "start",
           block: "nearest",
         });
+      };
+
+      if (dots) {
+        slides().forEach((_, index) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "carousel-dot";
+          dot.setAttribute("aria-label", goToSlideLabel.replace("{n}", String(index + 1)));
+          dot.addEventListener("click", () => scrollToIndex(index));
+          dots.append(dot);
+        });
+      }
+
+      const updateControls = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const atStart = track.scrollLeft <= 1;
+        const atEnd = track.scrollLeft >= maxScroll - 1;
+
+        prev.disabled = atStart;
+        next.disabled = atEnd;
+        carousel.classList.toggle("at-start", atStart);
+        carousel.classList.toggle("at-end", atEnd);
+
+        if (dots) {
+          const current = getCurrentIndex();
+          Array.from(dots.children).forEach((dot, index) => {
+            dot.classList.toggle("is-active", index === current);
+            dot.setAttribute("aria-current", index === current ? "true" : "false");
+          });
+        }
       };
 
       prev.addEventListener("click", () => {
@@ -280,6 +307,29 @@ const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
   .carousel-control:disabled {
     opacity: 0.35;
     cursor: default;
+  }
+
+  .carousel-dots {
+    display: none;
+  }
+
+  .carousel-dots :global(.carousel-dot) {
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-primary);
+    opacity: 0.3;
+    cursor: pointer;
+    transition:
+      opacity var(--transition),
+      transform var(--transition);
+  }
+
+  .carousel-dots :global(.carousel-dot.is-active) {
+    opacity: 1;
+    transform: scale(1.25);
   }
 
   .carousel-shell {
@@ -495,6 +545,14 @@ const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
     .carousel-shell::before,
     .carousel-shell::after {
       display: none;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: var(--space-xs);
     }
 
     .post-card-header {
