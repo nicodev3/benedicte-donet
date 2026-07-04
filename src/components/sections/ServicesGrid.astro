@@ -305,14 +305,16 @@ function richText(value: string): string {
 
   @media (max-width: 767px) {
     .services-stack {
-      width: min(100%, 22rem);
+      width: calc(100% + 2 * var(--space-md));
+      max-width: none;
+      margin-inline: calc(-1 * var(--space-md));
     }
 
     .service-card,
     .service-card.align-start,
     .service-card.align-end {
-      align-self: center;
-      width: 80%;
+      align-self: stretch;
+      width: 100%;
     }
 
     .service-card-inner {
