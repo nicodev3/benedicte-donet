@@ -22,6 +22,8 @@ interface UiTranslations {
   };
   blog: {
     title: string;
+    heroTitle: string;
+    heroSubtitle: string;
     description: string;
     intro: string;
     readMore: string;
@@ -29,6 +31,17 @@ interface UiTranslations {
   blogPost: {
     footerText: string;
     footerCta: string;
+    shareTitle: string;
+    shareFacebook: string;
+    shareLinkedIn: string;
+    shareWhatsApp: string;
+    shareEmail: string;
+    shareCopyLink: string;
+    shareLinkCopied: string;
+    relatedTitle: string;
+    relatedPrev: string;
+    relatedNext: string;
+    relatedCarouselLabel: string;
   };
   contactBlock: {
     title: string;
@@ -66,6 +79,8 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     },
     blog: {
       title: "Le blog",
+      heroTitle: "Mon journal",
+      heroSubtitle: "Pensées et actualités",
       description:
         "Articles de psychologie par Bénédicte Donet : trauma, EMDR, méditation, anxiété, relation au corps et bien plus.",
       intro:
@@ -76,6 +91,17 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       footerText:
         "Envie d'aller plus loin ? Je vous accompagne en téléconsultation.",
       footerCta: "Je prends rendez-vous",
+      shareTitle: "Partager cet article",
+      shareFacebook: "Partager sur Facebook",
+      shareLinkedIn: "Partager sur LinkedIn",
+      shareWhatsApp: "Partager sur WhatsApp",
+      shareEmail: "Partager par e-mail",
+      shareCopyLink: "Copier le lien de l'article",
+      shareLinkCopied: "Lien copié",
+      relatedTitle: "À lire également",
+      relatedPrev: "Article précédent",
+      relatedNext: "Article suivant",
+      relatedCarouselLabel: "Autres articles du blog",
     },
     contactBlock: {
       title: "Pour me contacter",
@@ -111,6 +137,8 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     },
     blog: {
       title: "The blog",
+      heroTitle: "My journal",
+      heroSubtitle: "Thoughts and updates",
       description:
         "Psychology articles by Bénédicte Donet: trauma, EMDR, meditation, anxiety, body awareness and more.",
       intro:
@@ -121,6 +149,17 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       footerText:
         "Would you like to go further? I offer online consultations.",
       footerCta: "Book a session",
+      shareTitle: "Share this article",
+      shareFacebook: "Share on Facebook",
+      shareLinkedIn: "Share on LinkedIn",
+      shareWhatsApp: "Share on WhatsApp",
+      shareEmail: "Share by email",
+      shareCopyLink: "Copy article link",
+      shareLinkCopied: "Link copied",
+      relatedTitle: "You may also like",
+      relatedPrev: "Previous article",
+      relatedNext: "Next article",
+      relatedCarouselLabel: "More blog articles",
     },
     contactBlock: {
       title: "Contact me",

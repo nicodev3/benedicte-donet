@@ -2,6 +2,7 @@
 import Container from "./Container.astro";
 import Button from "./Button.astro";
 import SiteImage from "./SiteImage.astro";
+import { ChevronDown, Menu, X } from "@lucide/astro";
 import {
   getGlobalSettings,
   getNavigationSettings,
@@ -61,9 +62,8 @@ function visibleChildren(item: (typeof items)[number]) {
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
       <label for="nav-toggle" class="nav-toggle-label" aria-label={t.header.openMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+        <Menu class="nav-icon nav-icon-open" size={24} aria-hidden="true" />
+        <X class="nav-icon nav-icon-close" size={24} aria-hidden="true" />
       </label>
 
       <nav class="nav" aria-label={t.header.mainNavigation}>
@@ -87,6 +87,7 @@ function visibleChildren(item: (typeof items)[number]) {
                         aria-controls={dropdownId}
                       >
                         {item.label}
+                        <ChevronDown size={16} aria-hidden="true" class="nav-chevron" />
                       </button>
                       <ul class="dropdown" id={dropdownId}>
                         {children.map((child) => (
@@ -189,15 +190,17 @@ function visibleChildren(item: (typeof items)[number]) {
   }
 
   .has-dropdown > .nav-trigger::after {
-    content: "";
-    display: inline-block;
-    width: 0.45em;
-    height: 0.45em;
-    margin-left: 0.35em;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: translateY(-0.15em) rotate(45deg);
-    vertical-align: middle;
+    content: none;
+  }
+
+  .nav-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-chevron {
+    flex-shrink: 0;
   }
 
   .dropdown {
@@ -265,18 +268,23 @@ function visibleChildren(item: (typeof items)[number]) {
 
   .nav-toggle-label {
     display: none;
-    flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     padding: 8px;
+    color: var(--color-text);
   }
 
-  .nav-toggle-label span {
+  .nav-icon-close {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label .nav-icon-open {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label .nav-icon-close {
     display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--color-text);
-    transition: transform var(--transition), opacity var(--transition);
   }
 
   @media (max-width: 900px) {
@@ -314,6 +322,10 @@ function visibleChildren(item: (typeof items)[number]) {
       display: none;
     }
 
+    .nav-chevron {
+      display: none;
+    }
+
     .nav-trigger {
       display: block;
       padding: 0.7rem 0;
@@ -345,18 +357,6 @@ function visibleChildren(item: (typeof items)[number]) {
 
     .nav-toggle:checked ~ .nav {
       display: flex;
-    }
-
-    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
     }
   }
 </style>

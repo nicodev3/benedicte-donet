@@ -2,6 +2,7 @@
 import Container from "./Container.astro";
 import Button from "./Button.astro";
 import SiteImage from "./SiteImage.astro";
+import SocialIcon from "./SocialIcon.astro";
 import { getGlobalSettings, getFooterSettings } from "@/lib/settings";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
@@ -60,8 +61,10 @@ const year = new Date().getFullYear();
                 href={global.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
-                Instagram
+                <SocialIcon name="instagram" size={20} />
+                <span>Instagram</span>
               </a>
             )
           }
@@ -71,8 +74,10 @@ const year = new Date().getFullYear();
                 href={global.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
-                Facebook
+                <SocialIcon name="facebook" size={20} />
+                <span>Facebook</span>
               </a>
             )
           }
@@ -153,6 +158,9 @@ const year = new Date().getFullYear();
   }
 
   .socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     font-weight: 500;
     color: var(--color-primary-dark);
   }

@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
+import { Star } from "@lucide/astro";
 import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const { title, items } = Astro.props;
+const starCount = 5;
 ---
 
 <Section>
@@ -21,7 +23,9 @@ const { title, items } = Astro.props;
             <blockquote set:html={renderInlineRichText(review.text)} />
             <figcaption>
               <span class="stars" aria-label="5 étoiles sur 5">
-                ★★★★★
+                {Array.from({ length: starCount }).map(() => (
+                  <Star size={16} fill="currentColor" aria-hidden="true" />
+                ))}
               </span>
               {review.author}
             </figcaption>
@@ -72,7 +76,9 @@ const { title, items } = Astro.props;
   }
 
   .stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
     color: var(--color-highlight);
-    letter-spacing: 2px;
   }
 </style>

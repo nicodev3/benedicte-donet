@@ -3,7 +3,7 @@ import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
-import doubleEtoiles from "@/assets/images/wp/double-etoiles.svg";
+import { Sparkles } from "@lucide/astro";
 import { renderInlineRichText, splitRichParagraphs } from "@/lib/rich-text";
 
 interface Props {
@@ -88,13 +88,7 @@ const imageFirst = isIntro || reverse;
                   : {}}
               >
                 <span>{ctaLabel}</span>
-                <img
-                  src={doubleEtoiles.src}
-                  alt=""
-                  width="41"
-                  height="34"
-                  aria-hidden="true"
-                />
+                <Sparkles size={32} aria-hidden="true" />
               </a>
             ) : (
               <Button href={ctaUrl} variant="outline">
@@ -260,6 +254,10 @@ const imageFirst = isIntro || reverse;
   .ti-cta img {
     width: 2rem;
     height: auto;
+    flex-shrink: 0;
+  }
+
+  .ti-cta :global(svg) {
     flex-shrink: 0;
   }
 

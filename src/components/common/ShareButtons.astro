@@ -1,0 +1,181 @@
+---
+import { SITE } from "@/site.config";
+import { Copy } from "@lucide/astro";
+import SocialIcon from "@/components/common/SocialIcon.astro";
+
+interface Labels {
+  title: string;
+  facebook: string;
+  linkedin: string;
+  whatsapp: string;
+  email: string;
+  copyLink: string;
+  linkCopied: string;
+}
+
+interface Props {
+  title: string;
+  labels: Labels;
+  placement?: "top" | "bottom";
+}
+
+const { title, labels, placement = "top" } = Astro.props;
+
+const url = new URL(Astro.url.pathname, SITE.url).href;
+const encodedUrl = encodeURIComponent(url);
+const encodedTitle = encodeURIComponent(title);
+const whatsappText = encodeURIComponent(`${title} ${url}`);
+
+const links = [
+  {
+    id: "facebook" as const,
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    label: labels.facebook,
+  },
+  {
+    id: "linkedin" as const,
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    label: labels.linkedin,
+  },
+  {
+    id: "whatsapp" as const,
+    href: `https://wa.me/?text=${whatsappText}`,
+    label: labels.whatsapp,
+  },
+  {
+    id: "gmail" as const,
+    href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
+    label: labels.email,
+  },
+];
+---
+
+<aside class:list={["share", `share-${placement}`]} aria-label={labels.title}>
+  <p class="share-title">{labels.title}</p>
+  <ul class="share-list">
+    {
+      links.map(({ href, label, id }) => (
+        <li>
+          <a
+            class="share-link"
+            href={href}
+            {...id === "gmail"
+              ? {}
+              : { target: "_blank", rel: "noopener noreferrer" }}
+            aria-label={label}
+          >
+            <SocialIcon name={id} size={22} monochrome />
+          </a>
+        </li>
+      ))
+    }
+    <li>
+      <button
+        type="button"
+        class="share-link share-copy"
+        data-share-copy
+        data-url={url}
+        data-default-label={labels.copyLink}
+        data-success-label={labels.linkCopied}
+        aria-label={labels.copyLink}
+      >
+        <Copy size={22} aria-hidden="true" />
+      </button>
+    </li>
+  </ul>
+</aside>
+
+<script>
+  function setupShareCopy() {
+    document.querySelectorAll<HTMLButtonElement>("[data-share-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const url = button.dataset.url;
+        if (!url) return;
+
+        const defaultLabel = button.dataset.defaultLabel ?? "";
+        const successLabel = button.dataset.successLabel ?? defaultLabel;
+
+        try {
+          await navigator.clipboard.writeText(url);
+          button.setAttribute("aria-label", successLabel);
+          button.classList.add("is-copied");
+
+          window.setTimeout(() => {
+            button.setAttribute("aria-label", defaultLabel);
+            button.classList.remove("is-copied");
+          }, 2000);
+        } catch {
+          window.prompt(defaultLabel, url);
+        }
+      });
+    });
+  }
+
+  setupShareCopy();
+  document.addEventListener("astro:page-load", setupShareCopy);
+</script>
+
+<style>
+  .share {
+    text-align: center;
+  }
+
+  .share-top {
+    margin: 0 0 var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .share-bottom {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .share-title {
+    margin: 0 0 var(--space-sm);
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+
+  .share-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .share-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-strong);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background var(--transition),
+      transform var(--transition);
+  }
+
+  .share-link:hover {
+    background: var(--color-primary-stronger);
+    transform: translateY(-2px);
+  }
+
+  .share-copy.is-copied {
+    background: var(--color-secondary-dark);
+  }
+</style>

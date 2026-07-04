@@ -1,7 +1,7 @@
 ---
 import { getImage } from "astro:assets";
+import { Sparkles } from "@lucide/astro";
 import { resolveImage } from "@/lib/images";
-import doubleEtoiles from "@/assets/images/wp/double-etoiles.svg";
 
 interface Props {
   eyebrow?: string;
@@ -9,8 +9,9 @@ interface Props {
   subtitle: string;
   backgroundImage: string;
   backgroundImageMobile?: string;
-  ctaLabel: string;
-  ctaUrl: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
+  subtitleFirst?: boolean;
 }
 
 const {
@@ -21,9 +22,12 @@ const {
   backgroundImageMobile,
   ctaLabel,
   ctaUrl,
+  subtitleFirst = false,
 } = Astro.props;
 
-const isExternal = ctaUrl.startsWith("http");
+const showCta = Boolean(ctaLabel && ctaUrl);
+
+const isExternal = ctaUrl?.startsWith("http") ?? false;
 const desktop = resolveImage(backgroundImage);
 const mobile = resolveImage(backgroundImageMobile ?? backgroundImage);
 const desktopBg = desktop
@@ -63,16 +67,31 @@ const mobileBg = mobile
     <div class="hero-overlay" aria-hidden="true" />
     <div class="hero-content">
       {eyebrow && <p class="hero-eyebrow">{eyebrow}</p>}
-      <h1>{title}</h1>
-      <p class="hero-subtitle">{subtitle}</p>
-      <a
-        class="hero-cta"
-        href={ctaUrl}
-        {...isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {}}
-      >
-        <span>{ctaLabel}</span>
-        <img src={doubleEtoiles.src} alt="" width="41" height="34" aria-hidden="true" />
-      </a>
+      {
+        subtitleFirst ? (
+          <>
+            <p class="hero-subtitle">{subtitle}</p>
+            <h1>{title}</h1>
+          </>
+        ) : (
+          <>
+            <h1>{title}</h1>
+            <p class="hero-subtitle">{subtitle}</p>
+          </>
+        )
+      }
+      {
+        showCta && ctaUrl && (
+          <a
+            class="hero-cta"
+            href={ctaUrl}
+            {...isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {}}
+          >
+            <span>{ctaLabel}</span>
+            <Sparkles size={32} aria-hidden="true" />
+          </a>
+        )
+      }
     </div>
   </div>
 </section>
@@ -239,6 +258,10 @@ const mobileBg = mobile
   .hero-cta img {
     width: 2rem;
     height: auto;
+    flex-shrink: 0;
+  }
+
+  .hero-cta :global(svg) {
     flex-shrink: 0;
   }
 

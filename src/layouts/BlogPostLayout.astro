@@ -1,10 +1,14 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Button from "@/components/common/Button.astro";
-import SiteImage from "@/components/common/SiteImage.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import ShareButtons from "@/components/common/ShareButtons.astro";
+import PostHero from "@/components/sections/PostHero.astro";
+import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
+import { getRelatedPosts } from "@/lib/blog";
 import { getGlobalSettings } from "@/lib/settings";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
@@ -21,7 +25,6 @@ const {
   date,
   updated,
   image,
-  imageAlt,
   seoTitle,
   seoDescription,
 } = post.data;
@@ -35,9 +38,9 @@ const breadcrumbs = buildBreadcrumbs(Astro.url.pathname, title, undefined, {
   url: localizedPath("/blog/", locale),
 }, locale);
 
-const formattedDate = new Intl.DateTimeFormat(t.locale.date, {
-  dateStyle: "long",
-}).format(date);
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const relatedPosts = getRelatedPosts(allPosts, post.id, locale);
+
 ---
 
 <BaseLayout
@@ -48,30 +51,33 @@ const formattedDate = new Intl.DateTimeFormat(t.locale.date, {
   publishedTime={date}
   modifiedTime={updated}
 >
+  <PostHero
+    title={title}
+    date={date}
+    dateLocale={t.locale.date}
+    backgroundImage={image}
+  />
+
   <Container narrow>
     <article class="post">
-      <header class="post-header">
+      <div class="post-breadcrumb">
         <Breadcrumb items={breadcrumbs} />
-        <p class="post-meta">
-          <time datetime={date.toISOString()}>{formattedDate}</time>
-        </p>
-        <h1>{title}</h1>
-        {excerpt && <p class="post-excerpt">{excerpt}</p>}
-        {
-          image && (
-            <SiteImage
-              src={image}
-              alt={imageAlt || title}
-              class="post-image"
-              width={1400}
-              widths={[600, 900, 1400]}
-              sizes="(max-width: 800px) 100vw, 736px"
-              loading="eager"
-              fetchpriority="high"
-            />
-          )
-        }
-      </header>
+      </div>
+
+      <ShareButtons
+        title={title}
+        labels={{
+          title: t.blogPost.shareTitle,
+          facebook: t.blogPost.shareFacebook,
+          linkedin: t.blogPost.shareLinkedIn,
+          whatsapp: t.blogPost.shareWhatsApp,
+          email: t.blogPost.shareEmail,
+          copyLink: t.blogPost.shareCopyLink,
+          linkCopied: t.blogPost.shareLinkCopied,
+        }}
+      />
+
+      {excerpt && <p class="post-excerpt">{excerpt}</p>}
 
       <div class="prose">
         <slot />
@@ -85,33 +91,36 @@ const formattedDate = new Intl.DateTimeFormat(t.locale.date, {
       </footer>
     </article>
   </Container>
+
+  <RelatedPostsCarousel
+    posts={relatedPosts}
+    locale={locale}
+    heading={t.blogPost.relatedTitle}
+    readMoreLabel={t.blog.readMore}
+    dateLocale={t.locale.date}
+    prevLabel={t.blogPost.relatedPrev}
+    nextLabel={t.blogPost.relatedNext}
+    carouselLabel={t.blogPost.relatedCarouselLabel}
+  />
 </BaseLayout>
 
 <style>
+  .post-breadcrumb {
+    margin-bottom: var(--space-md);
+  }
+
+  .post-breadcrumb :global(.breadcrumb) {
+    margin-bottom: 0;
+  }
+
   .post {
     padding-block: var(--space-xl);
   }
 
-  .post-header {
-    margin-bottom: var(--space-lg);
-  }
-
-  .post-meta {
-    font-size: var(--text-sm);
-    color: var(--color-text-soft);
-    margin-bottom: var(--space-md);
-  }
-
   .post-excerpt {
-    margin-top: var(--space-sm);
+    margin: 0 0 var(--space-lg);
     font-size: var(--text-lg);
     color: var(--color-text-soft);
-  }
-
-  .post-image {
-    margin-top: var(--space-md);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
   }
 
   .post-footer {

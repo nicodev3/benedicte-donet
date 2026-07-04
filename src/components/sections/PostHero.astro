@@ -1,0 +1,217 @@
+---
+import { getImage } from "astro:assets";
+import { resolveImage } from "@/lib/images";
+import { preventPunctuationWrap } from "@/lib/typography";
+
+interface Props {
+  title: string;
+  date: Date;
+  dateLocale: string;
+  backgroundImage?: string;
+}
+
+const { title, date, dateLocale, backgroundImage } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat(dateLocale, {
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(date);
+
+const desktop = backgroundImage ? resolveImage(backgroundImage) : undefined;
+const desktopBg = desktop
+  ? (await getImage({ src: desktop, width: 1920 })).src
+  : backgroundImage?.startsWith("/images/")
+    ? backgroundImage
+    : undefined;
+---
+
+<section class="post-hero">
+  <div class="post-hero-panel" data-post-hero-panel>
+    {
+      desktopBg && (
+        <div class="post-hero-backdrop" aria-hidden="true">
+          <img
+            class="post-hero-backdrop-img"
+            src={desktopBg}
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      )
+    }
+    <div class="post-hero-overlay" aria-hidden="true" />
+    <div class="post-hero-content">
+      <p class="post-hero-meta">
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </p>
+      <h1>{preventPunctuationWrap(title)}</h1>
+    </div>
+  </div>
+</section>
+
+<script>
+  function setupPostHeroFixedBackground() {
+    const panel = document.querySelector<HTMLElement>("[data-post-hero-panel]");
+    const img = panel?.querySelector<HTMLImageElement>(".post-hero-backdrop-img");
+    if (!panel || !img) return;
+
+    const desktopMq = window.matchMedia("(min-width: 768px)");
+    const reducedMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    let ticking = false;
+
+    const update = () => {
+      if (!desktopMq.matches || reducedMotionMq.matches) {
+        img.style.top = "";
+        panel.classList.remove("post-hero-parallax-active");
+        return;
+      }
+
+      panel.classList.add("post-hero-parallax-active");
+      img.style.top = `${-panel.getBoundingClientRect().top}px`;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          update();
+          ticking = false;
+        });
+      }
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", update, { passive: true });
+    desktopMq.addEventListener("change", update);
+    reducedMotionMq.addEventListener("change", update);
+  }
+
+  setupPostHeroFixedBackground();
+</script>
+
+<style>
+  .post-hero {
+    padding-block: 0;
+  }
+
+  .post-hero-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 0 0 5rem 0;
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-bg-soft);
+  }
+
+  .post-hero-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .post-hero-backdrop-img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    min-width: 100%;
+    height: 100%;
+    max-width: none;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  .post-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+  }
+
+  .post-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5625rem;
+    width: 100%;
+    max-width: 52rem;
+    padding: 3.125rem 1.5rem;
+  }
+
+  .post-hero-meta {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: clamp(0.875rem, 0.8rem + 0.35vw, 1.125rem);
+    font-weight: 300;
+    letter-spacing: 0.056em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  .post-hero-content h1 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.6875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  @media (min-width: 768px) {
+    .post-hero-panel {
+      width: calc(100vw - var(--space-md));
+      margin-left: calc(50% - 50vw);
+    }
+
+    .post-hero-panel.post-hero-parallax-active .post-hero-backdrop-img {
+      height: 100vh;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .post-hero {
+      padding-inline: var(--space-md);
+    }
+
+    .post-hero-panel {
+      border-radius: 0 0 3.75rem 0;
+    }
+
+    .post-hero-backdrop-img {
+      left: 0;
+      width: 100%;
+      transform: none;
+      object-position: top center;
+    }
+
+    .post-hero-content {
+      padding: 2.5rem 1rem;
+      gap: 1.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .post-hero-backdrop-img {
+      height: 100%;
+    }
+  }
+</style>

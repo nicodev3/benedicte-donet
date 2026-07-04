@@ -1,0 +1,533 @@
+---
+import { ChevronLeft, ChevronRight } from "@lucide/astro";
+import Container from "@/components/common/Container.astro";
+import Section from "@/components/common/Section.astro";
+import SiteImage from "@/components/common/SiteImage.astro";
+import { localizedPath, stripLocaleFromFilePath, type Locale } from "@/lib/i18n";
+import { preventPunctuationWrap } from "@/lib/typography";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+  locale: Locale;
+  heading: string;
+  readMoreLabel: string;
+  dateLocale: string;
+  prevLabel: string;
+  nextLabel: string;
+  carouselLabel: string;
+}
+
+const {
+  posts,
+  locale,
+  heading,
+  readMoreLabel,
+  dateLocale,
+  prevLabel,
+  nextLabel,
+  carouselLabel,
+} = Astro.props;
+
+const formatCardDate = (date: Date) =>
+  new Intl.DateTimeFormat(dateLocale, {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(date);
+
+const carouselId = `related-posts-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+{
+  posts.length > 0 && (
+    <Section tone="soft" class="related-posts">
+      <Container>
+        <h2 id={`${carouselId}-heading`} class="related-posts-title">
+          {heading}
+        </h2>
+
+        <div
+          class="carousel"
+          role="region"
+          aria-roledescription="carousel"
+          aria-labelledby={`${carouselId}-heading`}
+          aria-label={carouselLabel}
+          data-carousel
+        >
+          <button
+            type="button"
+            class="carousel-control carousel-control-prev"
+            aria-controls={`${carouselId}-track`}
+            aria-label={prevLabel}
+            data-carousel-prev
+          >
+            <ChevronLeft size={24} aria-hidden="true" />
+          </button>
+
+          <div class="carousel-shell">
+            <ul
+              id={`${carouselId}-track`}
+              class="carousel-track"
+              tabindex="0"
+            >
+              {posts.map((post) => {
+                const slug = stripLocaleFromFilePath(post.filePath, post.id);
+                const url = localizedPath(`/${slug}/`, locale);
+
+                return (
+                  <li class="carousel-slide">
+                    <article
+                      class="post-card"
+                      aria-labelledby={`${carouselId}-${post.id}-title`}
+                    >
+                      <header class="post-card-header">
+                        <h3
+                          class="post-card-title"
+                          id={`${carouselId}-${post.id}-title`}
+                        >
+                          <a href={url}>
+                            {preventPunctuationWrap(post.data.title)}
+                          </a>
+                        </h3>
+                        <p class="post-card-meta">
+                          <time datetime={post.data.date.toISOString()}>
+                            {formatCardDate(post.data.date)}
+                          </time>
+                        </p>
+                      </header>
+                      {post.data.image && (
+                        <a
+                          href={url}
+                          class="post-card-media"
+                          tabindex="-1"
+                          aria-hidden="true"
+                        >
+                          <SiteImage
+                            src={post.data.image}
+                            alt={post.data.imageAlt || post.data.title}
+                            width={450}
+                            height={320}
+                            widths={[450, 900]}
+                            sizes="(max-width: 700px) 85vw, 320px"
+                            loading="lazy"
+                          />
+                        </a>
+                      )}
+                      {post.data.excerpt && (
+                        <p class="post-card-excerpt">{post.data.excerpt}</p>
+                      )}
+                      <a href={url} class="post-card-readmore">
+                        ~ {readMoreLabel}
+                      </a>
+                    </article>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            class="carousel-control carousel-control-next"
+            aria-controls={`${carouselId}-track`}
+            aria-label={nextLabel}
+            data-carousel-next
+          >
+            <ChevronRight size={24} aria-hidden="true" />
+          </button>
+        </div>
+      </Container>
+    </Section>
+  )
+}
+
+<script>
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>("[data-carousel]").forEach((carousel) => {
+      if (carousel.dataset.initialized === "true") return;
+
+      const track = carousel.querySelector<HTMLElement>(".carousel-track");
+      const prev = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
+      const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
+
+      if (!track || !prev || !next) return;
+
+      carousel.dataset.initialized = "true";
+
+      const slides = () =>
+        Array.from(track.querySelectorAll<HTMLElement>(".carousel-slide"));
+
+      const getCurrentIndex = () => {
+        const trackLeft = track.getBoundingClientRect().left;
+        const index = slides().findIndex(
+          (slide) => slide.getBoundingClientRect().left >= trackLeft - 4
+        );
+        return Math.max(0, index);
+      };
+
+      const updateControls = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const atStart = track.scrollLeft <= 1;
+        const atEnd = track.scrollLeft >= maxScroll - 1;
+
+        prev.disabled = atStart;
+        next.disabled = atEnd;
+        carousel.classList.toggle("at-start", atStart);
+        carousel.classList.toggle("at-end", atEnd);
+      };
+
+      const scrollToIndex = (index: number) => {
+        const slide = slides()[index];
+        if (!slide) return;
+
+        slide.scrollIntoView({
+          behavior: "smooth",
+          inline: "start",
+          block: "nearest",
+        });
+      };
+
+      prev.addEventListener("click", () => {
+        scrollToIndex(Math.max(0, getCurrentIndex() - 1));
+      });
+      next.addEventListener("click", () => {
+        scrollToIndex(Math.min(slides().length - 1, getCurrentIndex() + 1));
+      });
+
+      track.addEventListener("scroll", updateControls, { passive: true });
+      window.addEventListener("resize", updateControls, { passive: true });
+      updateControls();
+    });
+  }
+
+  initCarousels();
+  document.addEventListener("astro:page-load", initCarousels);
+</script>
+
+<style>
+  @keyframes related-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.25rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .related-posts-title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  @supports (animation-timeline: view()) {
+    .related-posts-title {
+      animation: related-fade-up 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+    .carousel-slide {
+      animation: related-fade-up 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 35%;
+    }
+  }
+
+  .carousel {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .carousel-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-bg);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition:
+      background-color var(--transition),
+      color var(--transition),
+      opacity var(--transition),
+      transform 220ms ease,
+      box-shadow 220ms ease;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+
+  .carousel-control:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: #fff;
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(198, 141, 133, 0.35);
+  }
+
+  .carousel-control:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  .carousel-control:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .carousel-shell {
+    position: relative;
+    min-width: 0;
+  }
+
+  .carousel-shell::before,
+  .carousel-shell::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 300ms ease;
+  }
+
+  .carousel-shell::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg-soft), transparent);
+  }
+
+  .carousel-shell::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg-soft), transparent);
+  }
+
+  .carousel.at-start .carousel-shell::before,
+  .carousel.at-end .carousel-shell::after {
+    opacity: 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0.25rem 0.125rem 0.5rem;
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 0.125rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc((100% - 2.5rem) / 3);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-width: 0;
+  }
+
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-bg);
+    border: 2px solid var(--color-primary);
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 3.5rem 0.625rem 0;
+    text-align: center;
+    height: 100%;
+    transition:
+      transform 280ms ease,
+      box-shadow 280ms ease,
+      border-color 280ms ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--color-primary-dark);
+  }
+
+  .post-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    min-height: calc(1.125rem * 1.125 * 4 + 0.75rem + 1.125rem);
+    flex-shrink: 0;
+  }
+
+  .post-card-title {
+    margin: 0;
+    flex: 0 1 auto;
+    max-height: calc(1.125rem * 1.125 * 4);
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.125;
+    letter-spacing: 0.025em;
+  }
+
+  .post-card-title a {
+    color: var(--color-text);
+    text-decoration: underline;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    line-height: 1.125;
+    text-wrap: pretty;
+    transition: color var(--transition);
+  }
+
+  .post-card-title a:hover {
+    color: var(--color-primary-dark);
+  }
+
+  .post-card-meta {
+    margin: 0;
+    margin-top: auto;
+    flex-shrink: 0;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.056em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  .post-card-media {
+    display: block;
+    width: 90%;
+    margin-block: 0.5rem;
+    text-decoration: none;
+  }
+
+  .post-card-media :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    transition: opacity var(--transition);
+  }
+
+  .post-card-media:hover :global(img) {
+    opacity: 0.2;
+  }
+
+  .post-card-excerpt {
+    width: 100%;
+    margin: 0;
+    padding-inline: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: 0.025em;
+    text-align: left;
+    color: var(--color-text);
+    flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+
+  .post-card-readmore {
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding-inline: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.0125em;
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: color var(--transition);
+  }
+
+  .post-card-readmore:hover {
+    color: var(--color-primary-dark);
+  }
+
+  @media (max-width: 1024px) {
+    .carousel-slide {
+      flex-basis: calc((100% - 1.25rem) / 2);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .carousel {
+      grid-template-columns: 1fr;
+    }
+
+    .carousel-control {
+      display: none;
+    }
+
+    .carousel-slide {
+      flex-basis: 85vw;
+    }
+
+    .carousel-shell::before,
+    .carousel-shell::after {
+      display: none;
+    }
+
+    .post-card-header {
+      min-height: auto;
+    }
+
+    .post-card-title a {
+      display: inline;
+      -webkit-line-clamp: unset;
+      overflow: visible;
+    }
+
+    .post-card-title {
+      font-size: 1rem;
+      max-height: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+      scroll-behavior: auto;
+    }
+
+    .post-card,
+    .post-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .carousel-control:hover:not(:disabled),
+    .carousel-control:active:not(:disabled) {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+</style>

@@ -131,6 +131,22 @@ hr {
   margin-block: var(--space-md);
 }
 
+.prose-lucide-icon {
+  display: flex;
+  justify-content: center;
+  margin-block: var(--space-md);
+  color: var(--color-primary-dark);
+}
+
+.prose-lucide-icon svg {
+  display: block;
+}
+
+/* Lucide — style global par défaut */
+.lucide {
+  stroke-width: 2;
+}
+
 /* ============ Accessibilité ============ */
 :focus-visible {
   outline: 2px solid var(--color-secondary-dark);
