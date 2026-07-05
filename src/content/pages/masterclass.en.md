@@ -4,8 +4,8 @@ heroTitle: "Masterclasses"
 description: "Online psychology"
 image: "/images/wp/fleur-sechee-3.png"
 imageAlt: "Dried flower — Bénédicte Donet masterclasses"
-seoTitle: "Masterclass"
-seoDescription: "Online masterclasses and programmes on mindfulness, sexuality, and the nervous system with Bénédicte Donet."
+seoTitle: "Online Masterclass | Mindfulness and Psychology"
+seoDescription: "Online masterclasses and programmes to explore mindfulness, the nervous system, self-love, meditation and psycho-education."
 order: 4
 draft: false
 ---

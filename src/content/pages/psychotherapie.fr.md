@@ -4,8 +4,8 @@ heroTitle: "La psychothérapie"
 description: "Psychologue en ligne"
 image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg"
 imageAlt: ""
-seoTitle: "Psychothérapie en ligne | Trauma, anxiété et EMDR"
-seoDescription: ""
+seoTitle: "Psychothérapie en ligne | EMDR, trauma et anxiété"
+seoDescription: "Séances de psychothérapie en ligne avec Bénédicte Donet, psychologue clinicienne : accompagnement du trauma, de l'anxiété, du stress post-traumatique et EMDR en visio."
 order: 2
 draft: false
 ---

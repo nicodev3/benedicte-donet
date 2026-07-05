@@ -3,8 +3,8 @@ title: "About me"
 description: "Online psychologist | Bénédicte Donet"
 image: "/images/wp/hero-a-propos.png"
 imageAlt: "Bénédicte Donet, online psychologist"
-seoTitle: "About me"
-seoDescription: "Discover Bénédicte Donet's journey as an online psychologist: clinical training, mindfulness, yoga, EMDR, and a holistic approach to supporting you."
+seoTitle: "Bénédicte Donet | Online Clinical Psychologist"
+seoDescription: "Learn about Bénédicte Donet, online clinical psychologist specialising in trauma support, EMDR and body-based therapeutic approaches."
 order: 5
 draft: false
 ---

@@ -21,18 +21,22 @@ Les URLs conservées à l'identique n'ont besoin d'aucune règle.
 | Ancienne URL | Redirection | Raison |
 |---|---|---|
 | `/boutique/`, `/panier/`, `/commander/`, `/mon-compte/` | `/masterclass/` | WooCommerce non repris ; la vente passe par Doctolib/contact |
+| `/categorie-produit/*`, `/en/categorie-produit/*` | `/masterclass/`, `/en/masterclass/` | Archives WooCommerce encore visibles dans Ahrefs |
+| `/category/*`, `/en/category/*` | `/blog/`, `/en/blog/` | Archives de catégories WordPress supprimées |
+| `/feed/`, `/comments/feed/` | `/blog/` | Flux RSS WordPress supprimés dans le site statique |
 | `/sitemap/` | `/` | Page « plan de site » WordPress remplacée par le sitemap XML |
-| `/en/*` | équivalents FR | Version anglaise non reprise dans la V1 |
+| `/comment-les-traumatismes-impactent-les-relations-amoureuses/` | `/traumatisme-relation-amoureuse/` | Ancien slug d'un article qui capte déjà du trafic organique |
+| `/meditation-et-therapie-une-synergie-puissante/` | `/meditation-pleine-conscience-therapie/` | Ancien slug d'article WordPress |
+| `/en/*` historiques | équivalents `/en/...` actuels | Anciennes URLs anglaises WordPress |
 
 ## Version anglaise
 
 Le site WordPress avait une version anglaise partielle (`/en/...`) ainsi que
 des articles de blog en anglais à la racine (`/how-to-breathe-better-naturally/`…).
 
-- Les **articles anglais à la racine** sont conservés tels quels (URLs identiques).
-- Les **pages `/en/...`** sont redirigées vers leurs équivalents français.
-- Si un vrai site multilingue est souhaité plus tard, prévoir l'i18n Astro
-  (`astro.config.mjs > i18n`) et retirer ces redirections.
+- Les **articles anglais à la racine** ont maintenant des équivalents sous `/en/...`.
+- Les **anciennes pages `/en/...` WordPress** sont redirigées vers leurs équivalents Astro.
+- Les nouvelles pages Astro génèrent des liens `hreflang` FR/EN dans le `<head>`.
 
 ## Ajouter une redirection
 

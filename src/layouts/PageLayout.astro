@@ -12,6 +12,7 @@ import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
+import { SITE } from "@/site.config";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getHomeSettings } from "@/lib/settings";
 import { getNavigationItems } from "@/lib/navigation";
@@ -44,13 +45,78 @@ const breadcrumbs = buildBreadcrumbs(
   undefined,
   locale
 );
+
+function getServiceFaqStructuredData() {
+  const questions =
+    locale === "fr"
+      ? [
+          {
+            name: "Suis-je la bonne psychologue pour vous ?",
+            text: "Je vous invite à parcourir mon site et à prendre le temps de sentir si mon approche peut vous convenir. Mon approche est holistique et engagée, et toute question sur ma pratique ou mon cadre thérapeutique est bienvenue.",
+          },
+          {
+            name: "Quelle est la régularité conseillée pour les séances ?",
+            text: "Nous en discutons lors de la première séance. Le rythme dépend de votre capacité à recevoir, du temps d'intégration, de vos envies et de vos besoins.",
+          },
+          {
+            name: "Pourquoi les séances durent 1 h 30 ?",
+            text: "Ce format offre un espace suffisamment spacieux pour sentir, se déposer et partager sans précipiter le processus thérapeutique.",
+          },
+          {
+            name: "Quel espace je propose ?",
+            text: "Je propose un environnement accueillant, avec une écoute bienveillante et sereine, afin d'être présente et disponible lors de chaque séance.",
+          },
+        ]
+      : [
+          {
+            name: "Am I the right psychologist for you?",
+            text: "I invite you to explore the website and sense whether my approach feels right for you. My work is holistic and engaged, and questions about my practice or therapeutic framework are welcome.",
+          },
+          {
+            name: "How often should sessions take place?",
+            text: "We discuss this during the first session. The rhythm depends on your capacity, integration time, wishes and needs.",
+          },
+          {
+            name: "Why do sessions last 1 hour 30 minutes?",
+            text: "This format offers enough space to feel, settle and share without rushing the therapeutic process.",
+          },
+          {
+            name: "What kind of space do I offer?",
+            text: "I offer a welcoming environment with attentive and calm listening, so I can be present and available during each session.",
+          },
+        ];
+
+  return {
+    "@type": "FAQPage",
+    "@id": `${new URL(Astro.url.pathname, SITE.url).href}#faq`,
+    mainEntity: questions.map((question) => ({
+      "@type": "Question",
+      name: question.name,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: question.text,
+      },
+    })),
+  };
+}
+
+const pageStructuredData =
+  pageSlug === "services" ? [getServiceFaqStructuredData()] : [];
+const combinedStructuredData = [
+  ...pageStructuredData,
+  ...(structuredData
+    ? Array.isArray(structuredData)
+      ? structuredData
+      : [structuredData]
+    : []),
+];
 ---
 
 <BaseLayout
   title={seoTitle || title}
   description={seoDescription || description}
   image={image}
-  structuredData={structuredData}
+  structuredData={combinedStructuredData}
 >
   {
     hasHero ? (

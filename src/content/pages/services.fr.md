@@ -1,10 +1,10 @@
 ---
 title: "Services"
-description: ""
+description: "Psychologue en ligne"
 image: ""
 imageAlt: ""
-seoTitle: "Services"
-seoDescription: ""
+seoTitle: "Psychologue en ligne | Services en visio"
+seoDescription: "Consultations avec une psychologue en ligne : psychothérapie en visio, EMDR, trauma-thérapies, photothérapie, programmes et ateliers de pleine conscience."
 order: 1
 draft: false
 ---

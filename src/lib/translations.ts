@@ -31,6 +31,15 @@ interface UiTranslations {
   blogPost: {
     footerText: string;
     footerCta: string;
+    serviceLinksTitle: string;
+    serviceLinks: {
+      psychotherapyTitle: string;
+      psychotherapyText: string;
+      emdrTitle: string;
+      emdrText: string;
+      practicalInfoTitle: string;
+      practicalInfoText: string;
+    };
     shareTitle: string;
     shareFacebook: string;
     shareLinkedIn: string;
@@ -96,6 +105,18 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       footerText:
         "Envie d'aller plus loin ? Je vous accompagne en téléconsultation.",
       footerCta: "Je prends rendez-vous",
+      serviceLinksTitle: "Approfondir l'accompagnement",
+      serviceLinks: {
+        psychotherapyTitle: "Psychothérapie en ligne",
+        psychotherapyText:
+          "Séances en visio pour traverser trauma, anxiété, stress post-traumatique et difficultés relationnelles.",
+        emdrTitle: "Comprendre l'EMDR",
+        emdrText:
+          "Une approche reconnue pour accompagner les souvenirs douloureux et soutenir le système nerveux.",
+        practicalInfoTitle: "Infos pratiques",
+        practicalInfoText:
+          "Durée des séances, cadre de la téléconsultation, prise de rendez-vous et questions fréquentes.",
+      },
       shareTitle: "Partager cet article",
       shareFacebook: "Partager sur Facebook",
       shareLinkedIn: "Partager sur LinkedIn",
@@ -159,6 +180,18 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       footerText:
         "Would you like to go further? I offer online consultations.",
       footerCta: "Book a session",
+      serviceLinksTitle: "Go deeper with support",
+      serviceLinks: {
+        psychotherapyTitle: "Online psychotherapy",
+        psychotherapyText:
+          "Video sessions for trauma, anxiety, post-traumatic stress and relationship difficulties.",
+        emdrTitle: "Understanding EMDR",
+        emdrText:
+          "A recognised approach to support painful memories and nervous system regulation.",
+        practicalInfoTitle: "Practical info",
+        practicalInfoText:
+          "Session length, online consultation setting, booking details and common questions.",
+      },
       shareTitle: "Share this article",
       shareFacebook: "Share on Facebook",
       shareLinkedIn: "Share on LinkedIn",

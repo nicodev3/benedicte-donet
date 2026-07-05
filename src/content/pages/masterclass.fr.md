@@ -4,8 +4,8 @@ heroTitle: "Les Masterclass"
 description: "Psychologie en ligne"
 image: "/images/wp/fleur-sechee-3.png"
 imageAlt: ""
-seoTitle: "Masterclass"
-seoDescription: ""
+seoTitle: "Masterclass en ligne | Pleine conscience et psychologie"
+seoDescription: "Masterclass et programmes en ligne pour explorer la pleine conscience, le système nerveux, l'amour de soi, la méditation et la psycho-éducation."
 order: 4
 draft: false
 ---

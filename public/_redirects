@@ -10,6 +10,18 @@
 # Page plan de site WordPress (remplacée par sitemap XML)
 /sitemap/ / 301
 
+# Archives, flux RSS et taxonomies WordPress supprimés
+/feed/ /blog/ 301
+/comments/feed/ /blog/ 301
+/category/* /blog/ 301
+/en/category/* /en/blog/ 301
+/categorie-produit/* /masterclass/ 301
+/en/categorie-produit/* /en/masterclass/ 301
+
+# Anciens slugs FR identifiés dans Ahrefs / WordPress
+/comment-les-traumatismes-impactent-les-relations-amoureuses/ /traumatisme-relation-amoureuse/ 301
+/meditation-et-therapie-une-synergie-puissante/ /meditation-pleine-conscience-therapie/ 301
+
 # Anciennes URLs anglaises WordPress
 /en/home/ /en/ 301
 /en/about-me/ /en/a-propos/ 301
@@ -24,6 +36,7 @@
 # Articles blog EN — anciens slugs WordPress (slugs anglais) → slugs alignés sur le FR
 /en/kob-khun-maak-ka-gratitude/ /en/kob-khun-maak-ka-la-gratitude/ 301
 /en/how-to-stop-complaining-thoughts/ /en/comment-apaiser-pensees-plaintives/ 301
+/en/how-to-navigate-through-our-complaining-thoughts/ /en/comment-apaiser-pensees-plaintives/ 301
 /en/how-to-breathe-better-naturally/ /en/comment-mieux-respirer-pour-supporter-ta-sante-mental/ 301
 /en/how-do-you-connect-with-others/ /en/comment-te-relies-tu-aux-autres/ 301
 /en/personal-growth-happiness-balance/ /en/developpement-personnelle-vs-bonheur-bien-etre/ 301

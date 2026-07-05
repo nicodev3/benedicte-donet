@@ -1,10 +1,10 @@
 ---
 title: "Services"
-description: ""
+description: "Online psychologist"
 image: ""
 imageAlt: ""
-seoTitle: "Services"
-seoDescription: ""
+seoTitle: "Online Psychologist | Video Consultation Services"
+seoDescription: "Online psychology consultations with Bénédicte Donet: psychotherapy, EMDR, trauma-informed support, phototherapy, mindfulness programmes and workshops."
 order: 1
 draft: false
 ---
