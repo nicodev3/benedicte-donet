@@ -68,6 +68,9 @@ interface UiTranslations {
     next: string;
     carouselLabel: string;
   };
+  carousel: {
+    goToSlide: string;
+  };
 }
 
 export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
@@ -145,6 +148,9 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       next: "Avis suivant",
       carouselLabel: "Témoignages de patients",
     },
+    carousel: {
+      goToSlide: "Aller à la diapositive {n}",
+    },
   },
   en: {
     locale: {
@@ -219,6 +225,9 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       prev: "Previous review",
       next: "Next review",
       carouselLabel: "Patient testimonials",
+    },
+    carousel: {
+      goToSlide: "Go to slide {n}",
     },
   },
 };

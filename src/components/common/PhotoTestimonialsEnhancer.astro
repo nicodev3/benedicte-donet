@@ -99,7 +99,14 @@
     track.tabIndex = 0;
 
     shell.append(track);
-    carousel.append(prevBtn, shell, nextBtn);
+
+    const dots = document.createElement("div");
+    dots.className = "carousel-dots";
+    dots.dataset.carouselDots = "";
+    dots.setAttribute("role", "group");
+    dots.setAttribute("aria-label", "Choisir un témoignage");
+
+    carousel.append(prevBtn, shell, nextBtn, dots);
 
     const anchor = testimonials[0].quotes[0];
     prose.insertBefore(section, anchor);
@@ -140,6 +147,7 @@
       const track = carousel.querySelector<HTMLElement>(".carousel-track");
       const prev = carousel.querySelector<HTMLButtonElement>("[data-carousel-prev]");
       const next = carousel.querySelector<HTMLButtonElement>("[data-carousel-next]");
+      const dots = carousel.querySelector<HTMLElement>("[data-carousel-dots]");
 
       if (!track || !prev || !next) return;
 
@@ -167,17 +175,6 @@
         return Math.max(1, Math.floor(track.clientWidth / slideWidth));
       };
 
-      const updateControls = () => {
-        const maxScroll = track.scrollWidth - track.clientWidth;
-        const atStart = track.scrollLeft <= 1;
-        const atEnd = track.scrollLeft >= maxScroll - 1;
-
-        prev.disabled = atStart;
-        next.disabled = atEnd;
-        carousel.classList.toggle("at-start", atStart);
-        carousel.classList.toggle("at-end", atEnd);
-      };
-
       const scrollToIndex = (index: number) => {
         const slide = slides()[index];
         if (!slide) return;
@@ -187,6 +184,36 @@
           inline: "start",
           block: "nearest",
         });
+      };
+
+      if (dots) {
+        slides().forEach((_, index) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "carousel-dot";
+          dot.setAttribute("aria-label", `Aller au témoignage ${index + 1}`);
+          dot.addEventListener("click", () => scrollToIndex(index));
+          dots.append(dot);
+        });
+      }
+
+      const updateControls = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const atStart = track.scrollLeft <= 1;
+        const atEnd = track.scrollLeft >= maxScroll - 1;
+
+        prev.disabled = atStart;
+        next.disabled = atEnd;
+        carousel.classList.toggle("at-start", atStart);
+        carousel.classList.toggle("at-end", atEnd);
+
+        if (dots) {
+          const current = getCurrentIndex();
+          Array.from(dots.children).forEach((dot, index) => {
+            dot.classList.toggle("is-active", index === current);
+            dot.setAttribute("aria-current", index === current ? "true" : "false");
+          });
+        }
       };
 
       prev.addEventListener("click", () => {
@@ -275,6 +302,10 @@
   .photo-testimonials-carousel .carousel-control:disabled {
     opacity: 0.35;
     cursor: default;
+  }
+
+  .photo-testimonials-carousel .carousel-dots {
+    display: none;
   }
 
   .photo-testimonials-carousel .carousel-shell {
@@ -394,6 +425,33 @@
     .photo-testimonials-carousel .carousel-shell::before,
     .photo-testimonials-carousel .carousel-shell::after {
       display: none;
+    }
+
+    .photo-testimonials-carousel .carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: var(--space-xs);
+    }
+
+    .photo-testimonials-carousel .carousel-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: var(--color-primary);
+      opacity: 0.3;
+      cursor: pointer;
+      transition:
+        opacity var(--transition),
+        transform var(--transition);
+    }
+
+    .photo-testimonials-carousel .carousel-dot.is-active {
+      opacity: 1;
+      transform: scale(1.25);
     }
   }
 
