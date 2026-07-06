@@ -1,0 +1,326 @@
+---
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
+
+interface Props {
+  locale?: Locale;
+}
+
+const locale = Astro.props.locale ?? DEFAULT_LOCALE;
+
+const copy =
+  locale === "en"
+    ? {
+        title: "Online psychologist",
+        subtitle: "My services",
+        specialtiesLabel: "My specialities:",
+        specialties: [
+          "Trauma",
+          "Sexuality (trauma, addictions…)",
+          "EMDR practice",
+          "Psycho-corporeal practices",
+        ],
+      }
+    : {
+        title: "Psychologue en visio",
+        subtitle: "Mes services",
+        specialtiesLabel: "Mes spécialités :",
+        specialties: [
+          "Le traumatisme",
+          "La sexualité (trauma, addictions…)",
+          "La pratique de l'Emdr",
+          "Pratiques psycho-corporelles",
+        ],
+      };
+
+const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
+---
+
+<section class="services-hero">
+  <div class="services-hero-panel" data-services-hero-panel>
+    <div class="services-hero-backdrop" aria-hidden="true">
+      <img
+        class="services-hero-backdrop-img"
+        src={backgroundImage}
+        alt=""
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+    <div class="services-hero-overlay" aria-hidden="true" />
+    <div class="services-hero-content">
+      <p class="services-hero-eyebrow">{copy.title}</p>
+      <div class="services-hero-body">
+        <h1 class="services-hero-title">{copy.subtitle}</h1>
+        <div class="services-hero-specialties">
+          <p class="services-hero-specialties-label">{copy.specialtiesLabel}</p>
+          <ul>
+            {copy.specialties.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function setupServicesHeroParallax() {
+    const panel = document.querySelector<HTMLElement>("[data-services-hero-panel]");
+    const img = panel?.querySelector<HTMLImageElement>(".services-hero-backdrop-img");
+    if (!panel || !img) return;
+
+    const desktopMq = window.matchMedia("(min-width: 1025px)");
+    const reducedMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    let ticking = false;
+
+    const update = () => {
+      if (!desktopMq.matches || reducedMotionMq.matches) {
+        img.style.top = "";
+        img.style.height = "";
+        panel.classList.remove("services-hero-parallax-active");
+        return;
+      }
+
+      panel.classList.add("services-hero-parallax-active");
+      img.style.top = `${-panel.getBoundingClientRect().top}px`;
+      img.style.height = "100vh";
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          update();
+          ticking = false;
+        });
+      }
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", update, { passive: true });
+    desktopMq.addEventListener("change", update);
+    reducedMotionMq.addEventListener("change", update);
+  }
+
+  setupServicesHeroParallax();
+  document.addEventListener("astro:page-load", setupServicesHeroParallax);
+</script>
+
+<style>
+  .services-hero {
+    padding-block: 0;
+  }
+
+  .services-hero-panel {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(18rem, 24vw, 26rem);
+    border-radius: 0 0 5rem 0;
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-bg-muted);
+  }
+
+  .services-hero-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .services-hero-backdrop-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    min-width: 100%;
+    height: 100%;
+    max-width: none;
+    transform: translateX(-50%) scale(1.04);
+    object-fit: cover;
+    object-position: left bottom;
+    filter: saturate(0.85) brightness(1.05);
+  }
+
+  .services-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    background:
+      linear-gradient(
+        105deg,
+        rgb(255 255 255 / 0.42) 0%,
+        rgb(255 251 249 / 0.78) 38%,
+        rgb(255 251 249 / 0.94) 62%,
+        rgb(255 251 249 / 0.97) 100%
+      );
+    pointer-events: none;
+  }
+
+  .services-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: clamp(2.25rem, 4.5vw, 3.5rem) clamp(1.25rem, 4vw, 3rem);
+  }
+
+  .services-hero-eyebrow {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.375rem, 1rem + 1.4vw, 2.6875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+    text-align: center;
+    text-wrap: balance;
+    color: var(--color-text);
+    text-shadow: 0 1px 18px rgb(255 255 255 / 0.95);
+  }
+
+  .services-hero-body {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    width: min(100%, 52rem);
+    padding: clamp(1rem, 2vw, 1.5rem) 0;
+  }
+
+  .services-hero-title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.375rem, 1rem + 1.1vw, 2.125rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    text-align: left;
+    text-wrap: balance;
+    color: var(--color-text);
+    text-shadow: 0 1px 14px rgb(255 255 255 / 0.9);
+  }
+
+  .services-hero-specialties {
+    padding: clamp(1rem, 2vw, 1.35rem) clamp(1.1rem, 2.5vw, 1.5rem);
+    border-radius: 0 0 0 1.75rem;
+    background: rgb(255 255 255 / 0.88);
+    border: 1px solid rgb(234 223 219 / 0.9);
+    box-shadow: 0 10px 28px rgb(59 46 56 / 0.07);
+    backdrop-filter: blur(6px);
+    text-align: left;
+  }
+
+  .services-hero-specialties-label {
+    margin: 0 0 0.65rem;
+    font-family: var(--font-body);
+    font-size: clamp(0.9375rem, 0.88rem + 0.2vw, 1.0625rem);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary-dark);
+    text-underline-offset: 0.18em;
+    color: var(--color-text);
+  }
+
+  .services-hero-specialties ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .services-hero-specialties li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-family: var(--font-body);
+    font-size: clamp(0.9375rem, 0.88rem + 0.15vw, 1rem);
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--color-text-soft);
+  }
+
+  .services-hero-specialties li::before {
+    content: "";
+    position: absolute;
+    top: 0.62em;
+    left: 0;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--color-secondary-dark);
+  }
+
+  .services-hero-specialties li + li {
+    margin-top: 0.35rem;
+  }
+
+  @media (min-width: 768px) {
+    .services-hero-panel {
+      width: calc(100vw - var(--space-md));
+      margin-left: calc(50% - 50vw);
+    }
+
+    .services-hero-body {
+      margin-inline: auto;
+    }
+
+    .services-hero-title {
+      padding-right: clamp(0.5rem, 2vw, 1.5rem);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .services-hero {
+      padding-inline: var(--space-md);
+    }
+
+    .services-hero-panel {
+      min-height: auto;
+      border-radius: 0 0 3.75rem 0;
+    }
+
+    .services-hero-overlay {
+      background: linear-gradient(
+        180deg,
+        rgb(255 251 249 / 0.72) 0%,
+        rgb(255 251 249 / 0.94) 55%,
+        rgb(255 251 249 / 0.98) 100%
+      );
+    }
+
+    .services-hero-backdrop-img {
+      left: 0;
+      width: 100%;
+      transform: none;
+      object-position: center bottom;
+    }
+
+    .services-hero-body {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .services-hero-title {
+      text-align: center;
+      padding-right: 0;
+    }
+
+    .services-hero-specialties {
+      border-radius: 0 0 0 1.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .services-hero-backdrop-img {
+      height: 100%;
+      transform: translateX(-50%);
+    }
+  }
+</style>

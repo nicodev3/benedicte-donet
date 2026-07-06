@@ -1,8 +1,8 @@
 ---
 title: "Services"
 description: "Psychologue en ligne"
-image: ""
-imageAlt: ""
+image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg"
+imageAlt: "Fleurs séchées — psychologue en visio"
 seoTitle: "Psychologue en ligne | Services en visio"
 seoDescription: "Consultations avec une psychologue en ligne : psychothérapie en visio, EMDR, trauma-thérapies, photothérapie, programmes et ateliers de pleine conscience."
 order: 1
@@ -90,93 +90,3 @@ Ainsi, nous pouvons prendre le temps que requiert la rencontre avec votre monde 
 Quel espace je propose ?
 
 En tant que psychologue en visio, dans mon accompagnement, j'aime créer un environnement accueillant en vous offrant une écoute bienveillante et sereine. Je m'engage donc à être ressourcée, présente et disponible à vos côtés lors de chacune de nos séances. Pour cela, j'ai à cœur de prévoir des intervalles entre chaque séance que je propose. J'organise mon emploi du temps de manière à vous offrir le meilleur de ma capacité de présence et d'écoute.
-
-## Le journal
-
-#### [Éloge de la présence : l’acte complètement fou d’habiter son corps](/habiter-son-corps/)
-
--   04/06/2026
--   [Pleine conscience](/category/pleine-conscience/), [Trauma](/category/trauma/)
-
-[![bienfaits dissociation méditation](../../assets/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg)](/habiter-son-corps/)
-
-#### [Exploration de croyance: Un état de paix continue est-il vraiment impossible ?](/exploration-de-croyance-un-etat-de-paix-continue-est-il-vraiment-impossible/)
-
-J’ai longtemps cru que le bonheur demandait des efforts. Qu’il fallait travailler sur soi, se transformer, se réparer presque, pour accéder à un état de paix intérieure plus stable, plus continu. Derrière cela, une croyance silencieuse mais profondément ancrée : la paix ne serait pas notre état naturel, mais quelque chose à atteindre, à construire, à mériter… au prix d’un travail exigeant.
-
--   17/04/2026
--   [EMDR](/category/emdr/), [Pleine conscience](/category/pleine-conscience/), [Psycho](/category/psycho/), [Psychologie positive](/category/psychologie-positive/), [Trauma](/category/trauma/)
-
-[![公園　新緑](../../assets/images/wp/AdobeStock_150001132-1-scaled.jpeg)](/exploration-de-croyance-un-etat-de-paix-continue-est-il-vraiment-impossible/)
-
-#### [L’EMDR : un processus naturel, pas une solution magique](/emdr-traitement-trauma-processus-naturel/)
-
-L’EMDR respecte profondément le fonctionnement naturel du cerveau. Il n’impose rien. Il ne force pas les souvenirs. Il n’efface pas l’histoire. Il ne prend pas le contrôle. Contrairement à certaines idées reçues, l’EMDR n’est pas une technique « magique » qui ferait disparaître le traumatisme. Il s’agit d’un processus neuropsychologique naturel, qui remet en mouvement les mécanismes innés de traitement de l’information.
-
--   28/12/2025
--   [EMDR](/category/emdr/), [Psycho](/category/psycho/), [Trauma](/category/trauma/)
-
-[![EMDR traitement traumatisme](../../assets/images/wp/daniel-oberg-41Wuv1xsmGM-unsplash-scaled.jpg)](/emdr-traitement-trauma-processus-naturel/)
-
-#### [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/)
-
-Vous traversez une période difficile, ou portez en vous un vécu douloureux qui semble encore peser ? L’EMDR (Eye Movement Desensitization and Reprocessing) est une méthode thérapeutique reconnue qui permet de traiter les traumatismes psychiques en profondeur. Dans cet article, découvrez comment cette approche douce et puissante peut vous aider à retrouver plus de légèreté et de sécurité intérieure, à votre rythme.
-
--   20/05/2025
--   [EMDR](/category/emdr/), [Psycho](/category/psycho/), [Trauma](/category/trauma/)
-
-[![therapie emdr definition](../../assets/images/wp/EMDR-therapie-scaled.jpeg)](/therapie-emdr/)
-
-#### [Traumatisme et relation amoureuse : comprendre l’impact pour mieux guérir](/traumatisme-relation-amoureuse/)
-
-Les traumatismes laissent une empreinte durable sur la psyché humaine, influençant non seulement notre bien-être individuel mais également nos relations intimes. En tant que psychologue clinicienne, j’ai souvent observé comment les traumatismes peuvent tisser des fils invisibles dans le tissu des relations amoureuses. Dans cet article, nous explorerons la manière dont les traumatismes peuvent influencer ces relations, les défis qui en découlent, et comment une compréhension approfondie peut guider vers une guérison individuelle et relationnelle.
-
--   30/01/2024
--   [Psycho](/category/psycho/), [Trauma](/category/trauma/)
-
-[![traumatisme et relation amoureuse](../../assets/images/wp/justin-follis-A7Um4oi-UYU-unsplash-scaled.jpg)](/traumatisme-relation-amoureuse/)
-
-#### [Mémoire et traumatisme : comprendre leur lien pour mieux guérir](/memoire-traumatisme-guerison/)
-
-La mémoire est un mécanisme complexe qui façonne notre compréhension du monde et influence notre comportement.
-
--   27/01/2024
--   [EMDR](/category/emdr/), [Psycho](/category/psycho/), [Trauma](/category/trauma/)
-
-[![guérir d'un traumatisme](../../assets/images/wp/ian-dooley-FgSyP02I0gw-unsplash-scaled.jpg)](/memoire-traumatisme-guerison/)
-
-#### [Dissociation et reconnexion : comment la méditation peut aider](/dissociation-comprendre-le-lien-avec-la-meditation/)
-
-La dissociation, un phénomène complexe qui peut affecter la santé mentale, est souvent méconnue du grand public. En tant que psychologue, je m’intéresse particulièrement à la façon dont la méditation peut jouer un rôle essentiel dans le processus de reconnexion pour ceux qui vivent cette expérience. Dans cet article, nous explorerons la dissociation, son impact sur la vie quotidienne, et comment la méditation peut être un outil précieux pour favoriser une reconnexion profonde avec soi-même.
-
--   25/01/2024
--   [Pleine conscience](/category/pleine-conscience/), [Psycho](/category/psycho/)
-
-[![Dissociation méditation bienfaits](../../assets/images/wp/motoki-tonn-ezOKZhYJAFo-unsplash-scaled.jpg)](/dissociation-comprendre-le-lien-avec-la-meditation/)
-
-#### [Méditation pleine conscience thérapie : une synergie puissante pour le bien-être](/meditation-pleine-conscience-therapie/)
-
-Dans la quête du bien-être mental, la combinaison de la méditation et de la thérapie offre une approche holistique et puissante pour accompagner les individus sur le chemin de la transformation personnelle.
-
--   23/01/2024
--   [Pleine conscience](/category/pleine-conscience/), [Psycho](/category/psycho/)
-
-[![méditation pleine conscience thérapie](../../assets/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg)](/meditation-pleine-conscience-therapie/)
-
-#### [OUR RELATIONSHIP WITH MONEY](/en/relation-a-l-argent-psychologie/)
-
-Often, when one thinks about working with a psychologist, the idea of addressing one’s relationship with money might not immediately come to mind. However, it’s a topic that affects everyone, every day. How we feel and engage with money speaks volumes about our past experiences, what our parents and grandparents went through in terms of financial abundance or lack.
-
--   30/10/2023
--   [Positive psychology](/en/category/positive-psychology/), [Psycho-education](/en/category/psycho-education/), [relationshipwithmoney](/en/category/relationshipwithmoney/)
-
-[![probleme avec l'argent psychologie relation à l'argent](../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/en/relation-a-l-argent-psychologie/)
-
-#### [La relation à l’argent : un sujet universel et souvent négligé](/relation-a-l-argent-psychologie/)
-
-Souvent quand on pense a travailler avec un psychologue, on ne pense pas nécessairement a y aller pour travailler sur sa relation a l’argent. Et pourtant, c’est un sujet qui touche tout le monde, chaque jour. La manière dont nous nous sentons et entrons en relation avec l’argent dit énormément de ce que nous avons vécu, ce que nos parents et grand parents ont vécu en relation avec l’abondance ou le manque financier.
-
--   30/10/2023
--   [relational'argent](/category/relationalargent/), [Trauma](/category/trauma/)
-
-[![probleme avec l'argent psychologie relation à l'argent](../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg)](/relation-a-l-argent-psychologie/)

@@ -71,6 +71,10 @@ interface UiTranslations {
   carousel: {
     goToSlide: string;
   };
+  services: {
+    journalTitle: string;
+    journalCarouselLabel: string;
+  };
 }
 
 export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
@@ -151,6 +155,10 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     carousel: {
       goToSlide: "Aller à la diapositive {n}",
     },
+    services: {
+      journalTitle: "Le journal",
+      journalCarouselLabel: "Articles du journal",
+    },
   },
   en: {
     locale: {
@@ -228,6 +236,10 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     },
     carousel: {
       goToSlide: "Go to slide {n}",
+    },
+    services: {
+      journalTitle: "The journal",
+      journalCarouselLabel: "Journal articles",
     },
   },
 };

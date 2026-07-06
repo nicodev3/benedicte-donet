@@ -54,9 +54,10 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.625rem 4.0625rem;
     list-style: none;
-    margin: var(--space-md) auto 0;
+    width: 100%;
+    max-width: none;
+    margin: var(--space-md) 0 0;
     padding: 0;
-    max-width: 56rem;
   }
 
   .product-card {
@@ -146,7 +147,6 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
     .products-grid {
       grid-template-columns: 1fr;
       gap: 2.5rem;
-      max-width: 28rem;
     }
 
     .product-card {

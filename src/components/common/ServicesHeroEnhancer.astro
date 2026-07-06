@@ -1,0 +1,58 @@
+---
+/**
+ * Retire l'intro dupliquée du markdown Services (déjà dans ServicesHero).
+ */
+---
+
+<script>
+  function isImageParagraph(element: Element): boolean {
+    if (element.tagName !== "P") return false;
+    const imgs = element.querySelectorAll("img");
+    if (!imgs.length) return false;
+    const clone = element.cloneNode(true) as HTMLElement;
+    clone.querySelectorAll("img").forEach((img) => img.remove());
+    return !(clone.textContent?.trim() ?? "");
+  }
+
+  function stripServicesIntro(prose: HTMLElement) {
+    if (prose.dataset.servicesIntroReady === "true") return;
+
+    const heading = prose.querySelector("h1");
+    if (!heading) return;
+
+    const subheading = heading.nextElementSibling;
+    if (!subheading || subheading.tagName !== "H2") return;
+
+    let next = subheading.nextElementSibling;
+    const toRemove: Element[] = [heading, subheading];
+
+    while (next) {
+      if (isImageParagraph(next)) break;
+
+      if (next.tagName === "H2" || next.tagName === "H1") break;
+
+      if (next.tagName === "UL" || next.tagName === "P") {
+        toRemove.push(next);
+        next = next.nextElementSibling;
+        continue;
+      }
+
+      break;
+    }
+
+    if (toRemove.length < 3) return;
+
+    toRemove.forEach((node) => node.remove());
+    prose.dataset.servicesIntroReady = "true";
+  }
+
+  function setupServicesIntro() {
+    const prose = document.querySelector<HTMLElement>(".prose");
+    if (!prose) return;
+
+    stripServicesIntro(prose);
+  }
+
+  setupServicesIntro();
+  document.addEventListener("astro:page-load", setupServicesIntro);
+</script>

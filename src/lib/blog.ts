@@ -17,3 +17,16 @@ export function getRelatedPosts(
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .slice(0, limit);
 }
+
+export function getLatestPosts(
+  posts: CollectionEntry<"blog">[],
+  locale: Locale,
+  limit = 12
+): CollectionEntry<"blog">[] {
+  return posts
+    .filter(
+      (post) => !post.data.draft && getLocaleFromFilePath(post.filePath) === locale
+    )
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, limit);
+}

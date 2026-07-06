@@ -2,7 +2,7 @@
 title: "Masterclass"
 heroTitle: "Masterclasses"
 description: "Online psychology"
-image: "/images/wp/fleur-sechee-3.png"
+image: "/images/wp/hero-sexualite.png"
 imageAlt: "Dried flower — Bénédicte Donet masterclasses"
 seoTitle: "Online Masterclass | Mindfulness and Psychology"
 seoDescription: "Online masterclasses and programmes to explore mindfulness, the nervous system, self-love, meditation and psycho-education."

@@ -3,6 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import Hero from "@/components/sections/Hero.astro";
+import ServicesHero from "@/components/sections/ServicesHero.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
 import PhotoGalleryEnhancer from "@/components/common/PhotoGalleryEnhancer.astro";
 import PageIntroEnhancer from "@/components/common/PageIntroEnhancer.astro";
@@ -11,10 +12,16 @@ import AboutImageSplitEnhancer from "@/components/common/AboutImageSplitEnhancer
 import PsychotherapieApproachEnhancer from "@/components/common/PsychotherapieApproachEnhancer.astro";
 import PsychotherapieSpecialitesEnhancer from "@/components/common/PsychotherapieSpecialitesEnhancer.astro";
 import PsychotherapieTarifEnhancer from "@/components/common/PsychotherapieTarifEnhancer.astro";
+import ServicesHeroEnhancer from "@/components/common/ServicesHeroEnhancer.astro";
+import ServicesIntroEnhancer from "@/components/common/ServicesIntroEnhancer.astro";
+import ServicesFaqEnhancer from "@/components/common/ServicesFaqEnhancer.astro";
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
+import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.astro";
+import { getLatestPosts } from "@/lib/blog";
+import { getCollection } from "astro:content";
 import { SITE } from "@/site.config";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getHomeSettings } from "@/lib/settings";
@@ -41,6 +48,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
 const homeReviews =
   pageSlug === "infos-pratiques" ? (await getHomeSettings(locale)).reviews : null;
+const journalPosts =
+  pageSlug === "services"
+    ? getLatestPosts(await getCollection("blog"), locale)
+    : [];
 const breadcrumbs = buildBreadcrumbs(
   Astro.url.pathname,
   title,
@@ -122,7 +133,9 @@ const combinedStructuredData = [
   structuredData={combinedStructuredData}
 >
   {
-    hasHero ? (
+    pageSlug === "services" ? (
+      <ServicesHero locale={locale} />
+    ) : hasHero ? (
       <Hero
         title={heroTitle ?? title}
         subtitle={description ?? ""}
@@ -148,6 +161,22 @@ const combinedStructuredData = [
   </Container>
 
   {
+    pageSlug === "services" && journalPosts.length > 0 && (
+      <RelatedPostsCarousel
+        posts={journalPosts}
+        locale={locale}
+        heading={t.services.journalTitle}
+        readMoreLabel={t.blog.readMore}
+        dateLocale={t.locale.date}
+        prevLabel={t.blogPost.relatedPrev}
+        nextLabel={t.blogPost.relatedNext}
+        carouselLabel={t.services.journalCarouselLabel}
+        goToSlideLabel={t.carousel.goToSlide}
+      />
+    )
+  }
+
+  {
     homeReviews && (
       <ReviewsBlock
         title={homeReviews.title}
@@ -166,6 +195,9 @@ const combinedStructuredData = [
   {pageSlug === "psychotherapie" && <PsychotherapieApproachEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieSpecialitesEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieTarifEnhancer />}
+  {pageSlug === "services" && <ServicesHeroEnhancer />}
+  {pageSlug === "services" && <ServicesIntroEnhancer />}
+  {pageSlug === "services" && <ServicesFaqEnhancer />}
   {pageSlug === "phototherapie" && <PhotoOffersEnhancer />}
   {pageSlug === "phototherapie" && <PhotoProcessEnhancer />}
   {pageSlug === "phototherapie" && <PhotoTestimonialsEnhancer />}
