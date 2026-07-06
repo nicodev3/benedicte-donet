@@ -1,0 +1,260 @@
+---
+/**
+ * Transforme la section « Mon approche » en grille 3 colonnes
+ * (illustrations SVG + cartes), comme sur la prod Elementor.
+ */
+---
+
+<script>
+  const approachIllustrations = [
+    "/images/wp/approche-1-1.svg",
+    "/images/wp/approche-2-1.svg",
+    "/images/wp/approche-3-1.svg",
+  ];
+
+  function isCtaParagraph(element: Element): boolean {
+    return (
+      element.tagName === "P" &&
+      Boolean(element.querySelector("a")) &&
+      !element.querySelector("img")
+    );
+  }
+
+  function buildApproachSection(prose: HTMLElement) {
+    const heading = prose.querySelector<HTMLElement>(
+      'h2[id^="mon-approche"], h2[id^="my-approach"]'
+    );
+    if (!heading || heading.dataset.approachReady === "true") return;
+
+    const nodes: Element[] = [];
+    let child = heading.nextElementSibling;
+
+    while (child && child.tagName !== "H2") {
+      const next = child.nextElementSibling;
+      if (child.classList.contains("prose-lucide-icon")) {
+        child.remove();
+      } else {
+        nodes.push(child);
+      }
+      child = next;
+    }
+
+    if (!nodes.length) return;
+
+    let ctaElement: Element | null = null;
+    const lastNode = nodes[nodes.length - 1];
+    if (isCtaParagraph(lastNode)) {
+      ctaElement = lastNode;
+      nodes.pop();
+    }
+
+    const columns: Element[][] = [];
+    let current: Element[] = [];
+
+    for (const node of nodes) {
+      if (node.tagName === "H3" && current.length) {
+        columns.push(current);
+        current = [node];
+      } else {
+        current.push(node);
+      }
+    }
+
+    if (current.length) columns.push(current);
+    if (columns.length < 3) return;
+
+    const afterSection = child;
+    const section = document.createElement("section");
+    section.className = "approach-section";
+    section.setAttribute("aria-labelledby", heading.id);
+    section.append(heading);
+
+    const grid = document.createElement("div");
+    grid.className = "approach-grid";
+
+    columns.slice(0, 3).forEach((block, index) => {
+      const column = document.createElement("article");
+      column.className = "approach-column";
+
+      const illustration = document.createElement("img");
+      illustration.className = "approach-illustration";
+      illustration.src = approachIllustrations[index] ?? approachIllustrations[0];
+      illustration.alt = "";
+      illustration.loading = "lazy";
+      illustration.decoding = "async";
+      column.append(illustration);
+
+      const card = document.createElement("div");
+      card.className = "approach-card";
+
+      const title = block.find((node) => node.tagName === "H3");
+      if (title) {
+        card.append(title);
+      }
+
+      const text = document.createElement("div");
+      text.className = "approach-text";
+      block.filter((node) => node !== title).forEach((node) => text.append(node));
+      card.append(text);
+
+      column.append(card);
+      grid.append(column);
+    });
+
+    section.append(grid);
+
+    if (ctaElement) {
+      ctaElement.className = "page-cta";
+      section.append(ctaElement);
+    }
+
+    prose.insertBefore(section, afterSection);
+    heading.dataset.approachReady = "true";
+  }
+
+  function setupApproachSection() {
+    const prose = document.querySelector<HTMLElement>(".prose.prose-wide");
+    if (!prose || prose.dataset.approachReady === "true") return;
+
+    buildApproachSection(prose);
+    if (prose.querySelector(".approach-section")) {
+      prose.dataset.approachReady = "true";
+    }
+  }
+
+  setupApproachSection();
+  document.addEventListener("astro:page-load", setupApproachSection);
+</script>
+
+<style is:global>
+  .approach-section {
+    margin-block: var(--space-lg);
+  }
+
+  .approach-section > h2 {
+    margin: 0 0 var(--space-md);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: clamp(1.375rem, 1.1rem + 0.8vw, 1.875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
+  }
+
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4375rem;
+  }
+
+  .approach-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .approach-illustration {
+    display: block;
+    width: 70%;
+    max-width: 15rem;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .approach-card {
+    width: 100%;
+    margin-top: -0.9375rem;
+    padding: 1.875rem 3.125rem 2.5rem;
+    border-radius: 90px 0;
+    background: rgb(103 199 202 / 0.13);
+    text-align: center;
+  }
+
+  .approach-card > h3 {
+    margin: 0 0 var(--space-sm);
+    font-family: var(--font-heading);
+    font-size: clamp(1.125rem, 1rem + 0.45vw, 1.5625rem);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.35;
+    color: var(--color-text);
+  }
+
+  .approach-text {
+    margin-inline: -0.75rem;
+    padding: 0.625rem 1.875rem;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: left;
+  }
+
+  .approach-text > * {
+    margin: 0;
+  }
+
+  .approach-text > * + * {
+    margin-top: 0.75rem;
+  }
+
+  .approach-text p,
+  .approach-text li {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--color-text);
+  }
+
+  .approach-section > .page-cta {
+    margin-top: var(--space-lg);
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .approach-grid {
+      grid-template-columns: 1fr;
+      max-width: 37.5rem;
+      margin-inline: auto;
+    }
+
+    .approach-illustration {
+      width: 50%;
+    }
+
+    .approach-card {
+      width: 80%;
+      margin-top: -0.625rem;
+      padding: 0.9375rem 0.9375rem 2.5rem;
+      border-radius: 60px 0;
+    }
+
+    .approach-card > h3 {
+      font-size: 1.125rem;
+    }
+
+    .approach-text {
+      padding-inline: 1rem;
+      font-size: 0.875rem;
+    }
+
+    .approach-text p,
+    .approach-text li {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .approach-section > h2 {
+      width: 70%;
+      margin-inline: auto;
+      font-size: 1.375rem;
+      letter-spacing: -0.03em;
+    }
+
+    .approach-illustration {
+      width: 50%;
+    }
+  }
+</style>

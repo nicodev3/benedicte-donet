@@ -1,0 +1,215 @@
+---
+/**
+ * Section « Le tarif » : fond pêche, liste à pointillés, note en italique (comme la prod).
+ */
+---
+
+<script>
+  function splitPriceLine(text: string): { title: string; price: string } | null {
+    const trimmed = text.replace(/\s+/g, " ").trim();
+    const match = trimmed.match(/^(.+?)\s+((?:\d+[\s\u00a0]*€)|(?:€[\s\u00a0]*\d+))$/u);
+    if (!match) return null;
+
+    return {
+      title: match[1].trim(),
+      price: match[2].replace(/\s+/g, " ").trim(),
+    };
+  }
+
+  function buildPriceItem(listItem: HTMLLIElement): HTMLElement | null {
+    const paragraphs = [...listItem.querySelectorAll(":scope > p")];
+    const mainText = paragraphs.length
+      ? (paragraphs[0].textContent ?? "")
+      : (listItem.textContent ?? "");
+
+    const line = splitPriceLine(mainText);
+    if (!line) return null;
+
+    const item = document.createElement("li");
+    item.className = "tarif-price-item";
+
+    const header = document.createElement("div");
+    header.className = "tarif-price-header";
+
+    const title = document.createElement("span");
+    title.className = "tarif-price-title";
+    title.textContent = line.title;
+
+    const separator = document.createElement("span");
+    separator.className = "tarif-price-separator";
+    separator.setAttribute("aria-hidden", "true");
+
+    const price = document.createElement("span");
+    price.className = "tarif-price-amount";
+    price.textContent = line.price;
+
+    header.append(title, separator, price);
+    item.append(header);
+
+    const descText =
+      paragraphs.length > 1
+        ? paragraphs
+            .slice(1)
+            .map((paragraph) => paragraph.textContent?.trim() ?? "")
+            .filter(Boolean)
+            .join(" ")
+        : "";
+
+    if (descText) {
+      const descriptionEl = document.createElement("p");
+      descriptionEl.className = "tarif-price-description";
+      descriptionEl.textContent = descText;
+      item.append(descriptionEl);
+    }
+
+    return item;
+  }
+
+  function buildTarifBlock(prose: HTMLElement) {
+    const heading = prose.querySelector<HTMLElement>(
+      'h2[id^="le-tarif"], h2[id^="fees"]'
+    );
+    if (!heading || heading.dataset.tarifReady === "true") return;
+
+    const list = heading.nextElementSibling;
+    if (!list || list.tagName !== "UL") return;
+
+    const note = list.nextElementSibling;
+    if (!note || note.tagName !== "P") return;
+
+    const priceItems = [...list.querySelectorAll<HTMLLIElement>(":scope > li")]
+      .map(buildPriceItem)
+      .filter((item): item is HTMLElement => Boolean(item));
+
+    if (!priceItems.length) return;
+
+    const anchor = note.nextElementSibling;
+
+    const block = document.createElement("div");
+    block.className = "tarif-block";
+
+    const priceList = document.createElement("ul");
+    priceList.className = "tarif-price-list";
+    priceItems.forEach((item) => priceList.append(item));
+
+    const noteEl = note.cloneNode(true) as HTMLElement;
+    noteEl.className = "tarif-note";
+
+    block.append(heading, priceList, noteEl);
+    list.remove();
+    note.remove();
+    prose.insertBefore(block, anchor);
+    heading.dataset.tarifReady = "true";
+  }
+
+  function setupTarifBlock() {
+    const prose = document.querySelector<HTMLElement>(".prose.prose-wide");
+    if (!prose || prose.dataset.tarifReady === "true") return;
+
+    buildTarifBlock(prose);
+    if (prose.querySelector(".tarif-block")) {
+      prose.dataset.tarifReady = "true";
+    }
+  }
+
+  setupTarifBlock();
+  document.addEventListener("astro:page-load", setupTarifBlock);
+</script>
+
+<style is:global>
+  .tarif-block {
+    margin-block: var(--space-lg);
+    padding: clamp(1.25rem, 2vw, 3.125rem) clamp(1.25rem, 3vw, 1.875rem);
+    background: var(--color-bg-soft);
+    text-align: center;
+  }
+
+  .tarif-block > h2 {
+    margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+    font-family: var(--font-heading);
+    font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary-dark);
+  }
+
+  .tarif-price-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 clamp(0.75rem, 3vw, 1.875rem);
+    max-width: 52rem;
+  }
+
+  .tarif-price-item + .tarif-price-item {
+    margin-top: var(--space-sm);
+  }
+
+  .tarif-price-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.625rem;
+    text-align: left;
+  }
+
+  .tarif-price-title {
+    flex: 0 1 auto;
+    font-family: var(--font-body);
+    font-size: clamp(0.9375rem, 0.88rem + 0.2vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+  }
+
+  .tarif-price-separator {
+    flex: 1 1 auto;
+    min-width: 1.5rem;
+    border-bottom: 2px dotted var(--color-secondary);
+    transform: translateY(-0.2em);
+  }
+
+  .tarif-price-amount {
+    flex: 0 0 auto;
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 0.9rem + 0.45vw, 1.5625rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text);
+    white-space: nowrap;
+  }
+
+  .tarif-price-description {
+    margin: 0.35rem 0 0;
+    padding-left: 0;
+    font-family: var(--font-body);
+    font-size: clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--color-text);
+  }
+
+  .tarif-note {
+    margin: clamp(1rem, 2vw, 1.5rem) auto 0;
+    padding: 0 clamp(0.75rem, 3vw, 1.25rem);
+    max-width: 52rem;
+    font-family: var(--font-body);
+    font-size: clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.65;
+    text-align: left;
+    color: var(--color-text);
+  }
+
+  .tarif-note a {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+
+  .tarif-note a:hover {
+    color: var(--color-primary-strong);
+  }
+</style>

@@ -8,6 +8,9 @@ import PhotoGalleryEnhancer from "@/components/common/PhotoGalleryEnhancer.astro
 import PageIntroEnhancer from "@/components/common/PageIntroEnhancer.astro";
 import PageCtaEnhancer from "@/components/common/PageCtaEnhancer.astro";
 import AboutImageSplitEnhancer from "@/components/common/AboutImageSplitEnhancer.astro";
+import PsychotherapieApproachEnhancer from "@/components/common/PsychotherapieApproachEnhancer.astro";
+import PsychotherapieSpecialitesEnhancer from "@/components/common/PsychotherapieSpecialitesEnhancer.astro";
+import PsychotherapieTarifEnhancer from "@/components/common/PsychotherapieTarifEnhancer.astro";
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
@@ -160,6 +163,9 @@ const combinedStructuredData = [
   <PageIntroEnhancer />
   <PageCtaEnhancer />
   {pageSlug === "a-propos" && <AboutImageSplitEnhancer />}
+  {pageSlug === "psychotherapie" && <PsychotherapieApproachEnhancer />}
+  {pageSlug === "psychotherapie" && <PsychotherapieSpecialitesEnhancer />}
+  {pageSlug === "psychotherapie" && <PsychotherapieTarifEnhancer />}
   {pageSlug === "phototherapie" && <PhotoOffersEnhancer />}
   {pageSlug === "phototherapie" && <PhotoProcessEnhancer />}
   {pageSlug === "phototherapie" && <PhotoTestimonialsEnhancer />}
