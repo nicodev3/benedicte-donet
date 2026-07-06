@@ -1,47 +1,187 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
-import Button from "@/components/common/Button.astro";
-import { getGlobalSettings } from "@/lib/settings";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 
-/**
- * La newsletter WordPress utilisait un formulaire embarqué.
- * En attendant un endpoint dédié (ou un service type Brevo/Mailerlite),
- * on renvoie vers un contact email — voir docs/redirects.md.
- */
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
-const global = await getGlobalSettings(locale);
+const newsletterUrl =
+  "https://3bf87f5e.sibforms.com/serve/MUIFAKUDJsFqFitT9o-UVXr9dI8wFgsivpdGWN6gzM25QQwNQEdYuls659I3_Qe2cmvL5FZr_QgBApi1b8WmZzEsrIupbMdmCQEf8qI5vSKTpgmOr6CxOaKnr6e9R6lTpGJbyPQRtorCxRv2xRslWSbePQ-F2Whztve3nuIUygBGhQZo-XkvoKaTngaIwt_aM1fnEw5aFt3Gooyc";
 ---
 
-<Section tone="muted">
-  <Container narrow>
-    <div class="newsletter">
-      <h2>{t.newsletter.title}</h2>
-      <p>{t.newsletter.text}</p>
-      <Button
-        href={`mailto:${global.email}?subject=${encodeURIComponent(t.newsletter.emailSubject)}`}
-        variant="secondary"
-      >
-        {t.newsletter.cta}
-      </Button>
+<Section class="newsletter-section">
+  <Container>
+    <div class="newsletter-content">
+      <div class="newsletter-copy">
+        {
+          locale === "fr" ? (
+            <>
+              <p>
+                Abonne-toi à la <strong>newsletter mensuelle</strong> t'offrant du
+                contenu de qualité sur la psychologie :<br />des articles pour mieux
+                te comprendre, des interviews inspirantes et des méditations en ligne.
+              </p>
+              <p>
+                <strong>Seulement un email par mois !</strong>
+              </p>
+            </>
+          ) : (
+            <>
+              <p>
+                Subscribe to the <strong>monthly newsletter</strong> for thoughtful
+                psychology content:<br />articles to better understand yourself,
+                inspiring interviews and online meditations.
+              </p>
+              <p>
+                <strong>Just one email per month!</strong>
+              </p>
+            </>
+          )
+        }
+      </div>
+
+      <a class="newsletter-button" href={newsletterUrl} target="_blank" rel="noopener noreferrer">
+        <span>{t.newsletter.cta}</span>
+        <img src="/images/wp/newsletter.svg" alt="" width="22" height="22" loading="lazy" />
+      </a>
     </div>
   </Container>
 </Section>
 
 <style>
-  .newsletter {
+  :global(.section.newsletter-section) {
+    position: relative;
+    overflow: hidden;
+    margin-top: clamp(4.375rem, 8vw, 6.25rem);
+    padding-block: 0;
+    border-radius: 80px 0;
+    box-shadow: 3px 6px 15px 1px rgba(0, 0, 0, 0.25);
+    background-image: url("/images/wp/NL.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: 1025px) {
+    :global(.section.newsletter-section) {
+      background-attachment: fixed;
+    }
+  }
+
+  :global(.section.newsletter-section)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.45);
+    pointer-events: none;
+  }
+
+  :global(.section.newsletter-section > .container) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .newsletter-content {
+    display: flex;
+    min-height: clamp(18rem, 28vw, 20.75rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3.125rem;
     text-align: center;
   }
 
-  .newsletter h2 {
-    margin-bottom: var(--space-sm);
+  .newsletter-copy p {
+    margin: 0 0 1.25rem;
+    padding-inline: 3.125rem;
+    font-family: var(--font-body);
+    font-size: 1.1875rem;
+    font-weight: 400;
+    letter-spacing: 0.04375rem;
+    line-height: 1.58;
+    color: var(--color-text);
   }
 
-  .newsletter p {
-    margin-bottom: var(--space-md);
-    color: var(--color-text-soft);
+  .newsletter-copy p:last-child {
+    margin-bottom: 1.25rem;
+  }
+
+  .newsletter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 35px 0;
+    padding: 0.75rem 1.4375rem;
+    background: var(--color-accent);
+    color: var(--color-bg-soft);
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform var(--transition);
+  }
+
+  .newsletter-button:hover {
+    transform: scale(1.05);
+    color: var(--color-bg-soft);
+  }
+
+  .newsletter-button img {
+    display: block;
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+
+  @media (max-width: 1024px) {
+    :global(.section.newsletter-section) {
+      margin-top: 4.375rem;
+      margin-left: 1.25rem;
+      padding-right: 1.875rem;
+    }
+
+    .newsletter-copy p {
+      padding: 0 0 0 0.625rem;
+      font-size: 1rem;
+      letter-spacing: 0.0125rem;
+      line-height: 1.7;
+    }
+
+    .newsletter-button {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    :global(.section.newsletter-section) {
+      background-attachment: scroll;
+    }
+  }
+
+  @media (max-width: 767px) {
+    :global(.section.newsletter-section) {
+      margin-top: 5rem;
+      margin-left: 0.9375rem;
+      padding-inline: 0.625rem;
+      border-radius: 60px 0 0;
+      background-position: center right;
+    }
+
+    .newsletter-content {
+      min-height: 20.75rem;
+      gap: 1.25rem;
+      padding-top: 1.875rem;
+    }
+
+    .newsletter-copy p {
+      margin-bottom: 0;
+      padding-inline: 0;
+      font-size: 0.9375rem;
+    }
+
+    .newsletter-button {
+      font-size: 0.9375rem;
+    }
   }
 </style>

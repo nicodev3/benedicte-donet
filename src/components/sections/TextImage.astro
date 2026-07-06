@@ -153,7 +153,7 @@ const imageFirst = isIntro || reverse;
     margin-bottom: var(--space-md);
   }
 
-  .ti-content p {
+  .ti-content > p {
     margin-bottom: var(--space-md);
     color: var(--color-text-soft);
   }
@@ -198,15 +198,12 @@ const imageFirst = isIntro || reverse;
     margin-inline: 0;
   }
 
-  .ti-body :global(p) {
+  .ti-content .ti-body :global(p) {
     text-align: start;
     color: var(--color-text);
     font-weight: 300;
     line-height: 1.7;
-  }
-
-  .ti-body :global(p + p) {
-    margin-top: 0.75rem;
+    margin-block: 0;
   }
 
   .ti-image :global(img) {
@@ -232,7 +229,7 @@ const imageFirst = isIntro || reverse;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 0.5rem;
+    margin-top: var(--space-md);
     padding: 0.75rem 1.45rem;
     border-radius: 2.1875rem 0;
     background: var(--color-primary-strong);

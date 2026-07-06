@@ -73,9 +73,9 @@
   --space-2xl: 6rem;
 
   /* Mise en page */
-  --container-max: 72rem;
-  --container-narrow: 46rem;
-  --container-wide: 84rem;
+  --container-max: 84rem;
+  --container-narrow: 52rem;
+  --container-wide: 96rem;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-full: 999px;

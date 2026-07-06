@@ -1,6 +1,5 @@
 ---
 import Container from "@/components/common/Container.astro";
-import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
 import { renderInlineRichText } from "@/lib/rich-text";
 
@@ -14,76 +13,238 @@ interface Props {
 const { title, steps, ctaLabel, ctaUrl } = Astro.props;
 ---
 
-<Section>
-  <Container>
-    <h2 class="steps-title">{title}</h2>
-    <ol class="steps">
-      {
-        steps.map((step, index) => (
-          <li class="step">
-            <span class="step-number" aria-hidden="true">
-              {index + 1}
-            </span>
-            <h3>{step.title}</h3>
-            <p set:html={renderInlineRichText(step.text)} />
-          </li>
-        ))
-      }
-    </ol>
-    <div class="steps-cta">
-      <Button href={ctaUrl}>{ctaLabel}</Button>
-    </div>
-  </Container>
-</Section>
+<section class="appointment-steps" id="teleconsult">
+  <div
+    class="appointment-steps-panel"
+    style={{
+      "--appointment-bg-desktop": "url(/images/wp/banniere.png)",
+      "--appointment-bg-mobile": "url(/images/wp/Accueil-2.png)",
+    }}
+  >
+    <div class="appointment-overlay" aria-hidden="true" />
+    <Container>
+      <h2 class="steps-title">{title}</h2>
+
+      <div class="steps-flow">
+        <div class="steps-timeline" aria-hidden="true">
+          <img
+            src="/images/wp/fleche.png"
+            alt=""
+            width={1067}
+            height={102}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <ol class="steps">
+          {
+            steps.map((step) => (
+              <li class="step">
+                <h3>{step.title}</h3>
+                <div class="step-body" set:html={renderInlineRichText(step.text)} />
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <div class="steps-cta">
+        <Button href={ctaUrl} class="steps-button">
+          {ctaLabel}
+        </Button>
+      </div>
+    </Container>
+  </div>
+</section>
 
 <style>
+  .appointment-steps {
+    margin-top: clamp(5rem, 10vw, 9.375rem);
+    padding-block: 0;
+  }
+
+  .appointment-steps-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 80px 0 0 0;
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
+    padding-block: clamp(2.5rem, 5vw, 3.75rem);
+    background-color: var(--color-bg-soft);
+    background-image: var(--appointment-bg-mobile, var(--appointment-bg-desktop));
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .appointment-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    background: rgba(255, 241, 235, 0.8);
+    pointer-events: none;
+  }
+
+  .appointment-steps-panel > :global(.container) {
+    position: relative;
+    z-index: 2;
+  }
+
   .steps-title {
+    margin: 0 0 clamp(1.5rem, 3vw, 1.875rem);
     text-align: center;
-    margin-bottom: var(--space-xl);
+    font-family: var(--font-heading);
+    font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+  }
+
+  .steps-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .steps-timeline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .steps-timeline img {
+    width: min(80%, 66rem);
+    margin-inline: auto;
   }
 
   .steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: var(--space-lg);
-    list-style: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-md);
+    width: 100%;
     margin: 0;
     padding: 0;
-    counter-reset: step;
+    list-style: none;
   }
 
   .step {
+    background: #fff;
+    border-radius: 0 90px;
+    margin-top: 0;
+    padding: 1.875rem clamp(1.5rem, 3vw, 3.125rem) 2.5rem;
     text-align: center;
-    padding: var(--space-md);
-  }
-
-  .step-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: var(--radius-full);
-    background: var(--color-secondary-dark);
-    color: #fff;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: var(--text-xl);
-    margin-bottom: var(--space-sm);
   }
 
   .step h3 {
-    margin-bottom: var(--space-xs);
-    font-size: var(--text-xl);
+    margin: 0 0 0.75rem;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--color-text);
   }
 
-  .step p {
-    color: var(--color-text-soft);
-    font-size: var(--text-sm);
+  .step-body :global(p),
+  .step-body :global(ul) {
+    margin: 0 0 0.75rem;
+    color: var(--color-text);
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .step-body :global(p:last-child),
+  .step-body :global(ul:last-child) {
+    margin-bottom: 0;
+  }
+
+  .step-body :global(ul) {
+    padding-left: 1.2rem;
+  }
+
+  .step-body :global(li + li) {
+    margin-top: 0.35rem;
+  }
+
+  .step-body :global(a) {
+    color: var(--color-text);
+    text-decoration: underline;
   }
 
   .steps-cta {
-    text-align: center;
     margin-top: var(--space-xl);
+    text-align: center;
+  }
+
+  .steps-cta :global(.steps-button) {
+    border-radius: 35px 0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.45rem;
+  }
+
+  @media (min-width: 768px) {
+    .appointment-steps-panel {
+      background-image: var(--appointment-bg-desktop);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .appointment-steps-panel {
+      background-attachment: fixed;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .steps {
+      grid-template-columns: 1fr;
+      max-width: 36rem;
+      margin-inline: auto;
+    }
+
+    .step {
+      margin-top: 0;
+      border-radius: 0 50px;
+      padding: 1.25rem 1rem 1.5rem;
+    }
+
+    .step + .step {
+      margin-top: 0;
+    }
+
+    .steps-timeline img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .appointment-steps {
+      margin-top: 5rem;
+    }
+
+    .appointment-steps-panel {
+      width: 96%;
+      margin-inline: auto;
+      border-radius: 60px 0 0 0;
+      background-attachment: scroll;
+    }
+
+    .steps-title {
+      padding-inline: 1.25rem;
+    }
+
+    .steps-flow {
+      width: 90%;
+      margin-inline: auto;
+    }
+
+    .step {
+      width: 85%;
+      margin-inline: auto;
+    }
   }
 </style>

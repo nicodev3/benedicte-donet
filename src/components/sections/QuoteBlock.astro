@@ -11,17 +11,56 @@ interface Props {
 const { text, author } = Astro.props;
 ---
 
-<Section tone="primary">
+<Section class="quote-section">
   <Container narrow>
     <figure class="quote">
-      <blockquote set:html={`« ${renderInlineRichText(text)} »`} />
-      <figcaption>— {author}</figcaption>
+      <blockquote set:html={renderInlineRichText(text)} />
+      <figcaption>{author}</figcaption>
     </figure>
   </Container>
 </Section>
 
 <style>
+  :global(.section.quote-section) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: clamp(12rem, 18vw, 15rem);
+    display: flex;
+    align-items: center;
+    padding-block: clamp(3rem, 5vw, 4rem);
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.2);
+    background-image: url("/images/wp/bg-citation-2.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-text);
+  }
+
+  @media (min-width: 1025px) {
+    :global(.section.quote-section) {
+      background-attachment: fixed;
+    }
+  }
+
+  :global(.section.quote-section)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.78);
+    pointer-events: none;
+  }
+
+  :global(.section.quote-section > .container) {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
   .quote {
+    position: relative;
+    z-index: 1;
     margin: 0;
     text-align: center;
   }
@@ -31,14 +70,23 @@ const { text, author } = Astro.props;
     padding: 0;
     font-family: var(--font-heading);
     font-style: italic;
-    font-size: var(--text-2xl);
+    font-size: clamp(1rem, 0.9rem + 0.45vw, 1.25rem);
     line-height: 1.5;
-    color: #fff;
+    color: var(--color-text);
   }
 
   .quote figcaption {
-    margin-top: var(--space-md);
-    font-size: var(--text-lg);
-    color: #fff;
+    margin-top: var(--space-sm);
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+
+  @media (max-width: 1024px) {
+    :global(.section.quote-section) {
+      background-attachment: scroll;
+    }
   }
 </style>

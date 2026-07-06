@@ -9,6 +9,7 @@ interface Props {
   subtitle: string;
   backgroundImage: string;
   backgroundImageMobile?: string;
+  backgroundPosition?: string;
   ctaLabel?: string;
   ctaUrl?: string;
   subtitleFirst?: boolean;
@@ -20,37 +21,36 @@ const {
   subtitle,
   backgroundImage,
   backgroundImageMobile,
+  backgroundPosition = "center right",
   ctaLabel,
   ctaUrl,
   subtitleFirst = false,
 } = Astro.props;
 
 const showCta = Boolean(ctaLabel && ctaUrl);
-
 const isExternal = ctaUrl?.startsWith("http") ?? false;
-const desktop = resolveImage(backgroundImage);
-const mobile = resolveImage(backgroundImageMobile ?? backgroundImage);
-const desktopBg = desktop
-  ? (await getImage({ src: desktop, width: 1920 })).src
-  : backgroundImage.startsWith("/images/")
-    ? backgroundImage
-    : undefined;
-const mobileBg = mobile
-  ? (await getImage({ src: mobile, width: 900 })).src
-  : (backgroundImageMobile ?? backgroundImage).startsWith("/images/")
-    ? (backgroundImageMobile ?? backgroundImage)
-    : undefined;
+
+async function resolveBackgroundUrl(path: string): Promise<string | undefined> {
+  if (!path) return undefined;
+  if (path.startsWith("/images/")) return path;
+
+  const resolved = resolveImage(path);
+  if (resolved) return (await getImage({ src: resolved, width: 1920 })).src;
+
+  return path.startsWith("/") ? path : undefined;
+}
+
+const desktopBg = await resolveBackgroundUrl(backgroundImage);
+const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundImage);
 ---
 
 <section class="hero">
-  <div class="hero-panel" data-hero-panel>
+  <div class="hero-panel" data-hero-panel style={`--hero-bg-position: ${backgroundPosition};`}>
     {
       (desktopBg || mobileBg) && (
         <div class="hero-backdrop" aria-hidden="true">
           <picture>
-            {mobileBg && (
-              <source media="(max-width: 767px)" srcset={mobileBg} />
-            )}
+            {mobileBg && <source media="(max-width: 767px)" srcset={mobileBg} />}
             {desktopBg && (
               <img
                 class="hero-backdrop-img"
@@ -102,7 +102,7 @@ const mobileBg = mobile
     const img = panel?.querySelector<HTMLImageElement>(".hero-backdrop-img");
     if (!panel || !img) return;
 
-    const desktopMq = window.matchMedia("(min-width: 768px)");
+    const desktopMq = window.matchMedia("(min-width: 1025px)");
     const reducedMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     let ticking = false;
@@ -110,12 +110,14 @@ const mobileBg = mobile
     const update = () => {
       if (!desktopMq.matches || reducedMotionMq.matches) {
         img.style.top = "";
+        img.style.height = "";
         panel.classList.remove("hero-parallax-active");
         return;
       }
 
       panel.classList.add("hero-parallax-active");
       img.style.top = `${-panel.getBoundingClientRect().top}px`;
+      img.style.height = "100vh";
     };
 
     const onScroll = () => {
@@ -150,6 +152,7 @@ const mobileBg = mobile
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    min-height: 12.5rem;
     text-align: center;
     border-radius: 0 0 5rem 0;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
@@ -178,7 +181,7 @@ const mobileBg = mobile
     max-width: none;
     transform: translateX(-50%);
     object-fit: cover;
-    object-position: center right;
+    object-position: var(--hero-bg-position, center right);
   }
 
   .hero-overlay {
@@ -186,7 +189,7 @@ const mobileBg = mobile
     inset: 0;
     z-index: 1;
     border-radius: inherit;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.51);
     pointer-events: none;
   }
 
@@ -255,25 +258,14 @@ const mobileBg = mobile
     transform: translateY(-2px);
   }
 
-  .hero-cta img {
-    width: 2rem;
-    height: auto;
-    flex-shrink: 0;
-  }
-
   .hero-cta :global(svg) {
     flex-shrink: 0;
   }
 
-  /* Desktop : pleine largeur viewport, marge à droite pour l’ombre */
   @media (min-width: 768px) {
     .hero-panel {
       width: calc(100vw - var(--space-md));
       margin-left: calc(50% - 50vw);
-    }
-
-    .hero-panel.hero-parallax-active .hero-backdrop-img {
-      height: 100vh;
     }
   }
 

@@ -8,9 +8,16 @@ interface Props {
   date: Date;
   dateLocale: string;
   backgroundImage?: string;
+  backgroundPosition?: string;
 }
 
-const { title, date, dateLocale, backgroundImage } = Astro.props;
+const {
+  title,
+  date,
+  dateLocale,
+  backgroundImage,
+  backgroundPosition = "center right",
+} = Astro.props;
 
 const formattedDate = new Intl.DateTimeFormat(dateLocale, {
   day: "2-digit",
@@ -18,16 +25,25 @@ const formattedDate = new Intl.DateTimeFormat(dateLocale, {
   year: "numeric",
 }).format(date);
 
-const desktop = backgroundImage ? resolveImage(backgroundImage) : undefined;
-const desktopBg = desktop
-  ? (await getImage({ src: desktop, width: 1920 })).src
-  : backgroundImage?.startsWith("/images/")
-    ? backgroundImage
-    : undefined;
+async function resolveBackgroundUrl(path: string | undefined): Promise<string | undefined> {
+  if (!path) return undefined;
+  if (path.startsWith("/images/")) return path;
+
+  const resolved = resolveImage(path);
+  if (resolved) return (await getImage({ src: resolved, width: 1920 })).src;
+
+  return path.startsWith("/") ? path : undefined;
+}
+
+const desktopBg = await resolveBackgroundUrl(backgroundImage);
 ---
 
 <section class="post-hero">
-  <div class="post-hero-panel" data-post-hero-panel>
+  <div
+    class="post-hero-panel"
+    data-post-hero-panel
+    style={`--post-hero-bg-position: ${backgroundPosition};`}
+  >
     {
       desktopBg && (
         <div class="post-hero-backdrop" aria-hidden="true">
@@ -57,7 +73,7 @@ const desktopBg = desktop
     const img = panel?.querySelector<HTMLImageElement>(".post-hero-backdrop-img");
     if (!panel || !img) return;
 
-    const desktopMq = window.matchMedia("(min-width: 768px)");
+    const desktopMq = window.matchMedia("(min-width: 1025px)");
     const reducedMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     let ticking = false;
@@ -65,12 +81,14 @@ const desktopBg = desktop
     const update = () => {
       if (!desktopMq.matches || reducedMotionMq.matches) {
         img.style.top = "";
+        img.style.height = "";
         panel.classList.remove("post-hero-parallax-active");
         return;
       }
 
       panel.classList.add("post-hero-parallax-active");
       img.style.top = `${-panel.getBoundingClientRect().top}px`;
+      img.style.height = "100vh";
     };
 
     const onScroll = () => {
@@ -105,6 +123,7 @@ const desktopBg = desktop
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    min-height: 12.5rem;
     text-align: center;
     border-radius: 0 0 5rem 0;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
@@ -129,7 +148,7 @@ const desktopBg = desktop
     max-width: none;
     transform: translateX(-50%);
     object-fit: cover;
-    object-position: center right;
+    object-position: var(--post-hero-bg-position, center right);
   }
 
   .post-hero-overlay {
@@ -137,7 +156,7 @@ const desktopBg = desktop
     inset: 0;
     z-index: 1;
     border-radius: inherit;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.51);
     pointer-events: none;
   }
 
@@ -180,10 +199,6 @@ const desktopBg = desktop
     .post-hero-panel {
       width: calc(100vw - var(--space-md));
       margin-left: calc(50% - 50vw);
-    }
-
-    .post-hero-panel.post-hero-parallax-active .post-hero-backdrop-img {
-      height: 100vh;
     }
   }
 
