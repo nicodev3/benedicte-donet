@@ -1,7 +1,6 @@
 ---
 import { getImage } from "astro:assets";
 import { Sparkles } from "@lucide/astro";
-import SiteImage from "@/components/common/SiteImage.astro";
 import { resolveImage } from "@/lib/images";
 
 interface Props {
@@ -46,24 +45,14 @@ const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundI
 ---
 
 <section class="hero">
-  <div class="hero-panel" data-hero-panel style={`--hero-bg-position: ${backgroundPosition};`}>
-    {
-      (desktopBg || mobileBg) && (
-        <div class="hero-backdrop" aria-hidden="true">
-          <picture>
-            {mobileBg && <source media="(max-width: 767px)" srcset={mobileBg} />}
-            {desktopBg && (
-              <SiteImage
-                class="hero-backdrop-img"
-                src={desktopBg}
-                alt=""
-                loading="eager"
-              />
-            )}
-          </picture>
-        </div>
-      )
-    }
+  <div
+    class="hero-panel"
+    style={{
+      "--hero-bg-desktop": desktopBg ? `url(${desktopBg})` : "none",
+      "--hero-bg-mobile": mobileBg ? `url(${mobileBg})` : "none",
+      "--hero-bg-position": backgroundPosition,
+    }}
+  >
     <div class="hero-overlay" aria-hidden="true" />
     <div class="hero-content">
       {eyebrow && <p class="hero-eyebrow">{eyebrow}</p>}
@@ -96,50 +85,6 @@ const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundI
   </div>
 </section>
 
-<script>
-  function setupHeroFixedBackground() {
-    const panel = document.querySelector<HTMLElement>("[data-hero-panel]");
-    const img = panel?.querySelector<HTMLImageElement>(".hero-backdrop-img");
-    if (!panel || !img) return;
-
-    const desktopMq = window.matchMedia("(min-width: 1025px)");
-    const reducedMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    let ticking = false;
-
-    const update = () => {
-      if (!desktopMq.matches || reducedMotionMq.matches) {
-        img.style.top = "";
-        img.style.height = "";
-        panel.classList.remove("hero-parallax-active");
-        return;
-      }
-
-      panel.classList.add("hero-parallax-active");
-      img.style.top = `${-panel.getBoundingClientRect().top}px`;
-      img.style.height = "100vh";
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(() => {
-          update();
-          ticking = false;
-        });
-      }
-    };
-
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", update, { passive: true });
-    desktopMq.addEventListener("change", update);
-    reducedMotionMq.addEventListener("change", update);
-  }
-
-  setupHeroFixedBackground();
-</script>
-
 <style>
   .hero {
     padding-block: 0;
@@ -157,31 +102,10 @@ const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundI
     border-radius: 0 0 5rem 0;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
     background-color: var(--color-bg-soft);
-  }
-
-  .hero-backdrop {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-  }
-
-  .hero-backdrop picture,
-  .hero-backdrop-img {
-    display: block;
-  }
-
-  .hero-backdrop-img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100vw;
-    min-width: 100%;
-    height: 100%;
-    max-width: none;
-    transform: translateX(-50%);
-    object-fit: cover;
-    object-position: var(--hero-bg-position, center right);
+    background-image: var(--hero-bg-mobile, var(--hero-bg-desktop));
+    background-position: var(--hero-bg-position, center right);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .hero-overlay {
@@ -266,6 +190,13 @@ const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundI
     .hero-panel {
       width: calc(100vw - var(--space-md));
       margin-left: calc(50% - 50vw);
+      background-image: var(--hero-bg-desktop);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .hero-panel {
+      background-attachment: fixed;
     }
   }
 
@@ -276,13 +207,8 @@ const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundI
 
     .hero-panel {
       border-radius: 0 0 3.75rem 0;
-    }
-
-    .hero-backdrop-img {
-      left: 0;
-      width: 100%;
-      transform: none;
-      object-position: top center;
+      background-position: top center;
+      background-attachment: scroll;
     }
 
     .hero-content {
@@ -292,12 +218,6 @@ const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundI
 
     .hero-cta {
       font-size: 1.0625rem;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero-backdrop-img {
-      height: 100%;
     }
   }
 </style>
