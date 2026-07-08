@@ -23,6 +23,8 @@ const currentPath = Astro.url.pathname;
 const languageLabel = getLocaleSwitchLabel(locale);
 const alternateLocale = getAlternateLocale(locale);
 const languageUrl = alternateLocalePath(currentPath, locale);
+const languageFlagSrc =
+  alternateLocale === "fr" ? "/images/ui/flag-fr.svg" : "/images/ui/flag-en.svg";
 
 function isActive(url: string): boolean {
   const localizedUrl = localizedPath(url, locale);
@@ -113,7 +115,8 @@ function visibleChildren(item: (typeof items)[number]) {
           {t.header.appointmentCta}
         </Button>
         <a href={languageUrl} class="language-switch" hreflang={alternateLocale}>
-          {languageLabel}
+          <SiteImage class="language-flag" src={languageFlagSrc} alt="" width={20} height={14} />
+          <span>{languageLabel}</span>
         </a>
       </nav>
     </div>
@@ -138,8 +141,20 @@ function visibleChildren(item: (typeof items)[number]) {
     padding-block: 1rem;
   }
 
+  @media (min-width: 901px) {
+    .header-inner {
+      height: 170px;
+      padding-block: 0;
+    }
+
+    .nav a,
+    .nav-trigger {
+      font-size: 20px;
+    }
+  }
+
   .brand :global(img) {
-    height: 64px;
+    height: 100%;
     width: auto;
     object-fit: contain;
   }
@@ -248,10 +263,22 @@ function visibleChildren(item: (typeof items)[number]) {
   }
 
   .language-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     border: 1px solid var(--color-border);
     border-radius: 999px;
     padding: 0.35rem 0.6rem;
     line-height: 1;
+  }
+
+  .language-flag {
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
   }
 
   /* Menu mobile en CSS pur (pas de JavaScript) */
@@ -281,6 +308,11 @@ function visibleChildren(item: (typeof items)[number]) {
   }
 
   @media (max-width: 900px) {
+    .brand :global(img) {
+      height: 48px;
+      width: auto;
+    }
+
     .nav-toggle-label {
       display: flex;
     }
@@ -350,6 +382,25 @@ function visibleChildren(item: (typeof items)[number]) {
 
     .nav-toggle:checked ~ .nav {
       display: flex;
+    }
+  }
+
+  @media (min-width: 901px) {
+    .brand {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .nav a,
+    .nav-trigger {
+      font-size: 20px;
+    }
+
+    .brand :global(img) {
+      height: auto;
+      max-height: 100%;
+      width: auto;
     }
   }
 </style>
