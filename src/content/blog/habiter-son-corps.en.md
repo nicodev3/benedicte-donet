@@ -1,6 +1,9 @@
 ---
 title: "In praise of presence: the utterly radical act of inhabiting your body"
 excerpt: "In this article, I want to share more intimately the journey that led me to the most salvaging act I have ever been given to experience: inhabiting my body. Whatever therapeutic techniques I study, meditation teachings I receive, or experiments I go through, I always return to my dear friend the…"
+tags:
+  - "Mindfulness"
+  - "Trauma"
 date: 2026-06-04T09:09:20Z
 updated: 2026-06-08T12:35:28Z
 image: "../../assets/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg"

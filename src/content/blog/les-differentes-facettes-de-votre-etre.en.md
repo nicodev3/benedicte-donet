@@ -1,6 +1,9 @@
 ---
 title: "The Different Facets of Your Being"
 excerpt: "An ancient tradition tells us that within each of us reside two wolves, and the one that predominates is the one we feed. In our quest to be good and loving, we often neglect to recognize, observe, and acknowledge the part of us that feels hatred and separation. It’s these parts within us that hurt both others and ourselves."
+tags:
+  - "Mindfulness"
+  - "Psychoeducation"
 date: 2023-09-13T12:30:26Z
 updated: 2026-06-08T12:25:23Z
 image: "../../assets/images/wp/illustration-facettes-personnalite.png"

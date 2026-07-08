@@ -1,6 +1,10 @@
 ---
 title: "Qu’est-ce que la thérapie EMDR ?"
 excerpt: "Vous traversez une période difficile, ou portez en vous un vécu douloureux qui semble encore peser ? L’EMDR (Eye Movement Desensitization and Reprocessing) est une méthode thérapeutique reconnue qui permet de traiter les traumatismes psychiques en profondeur. Dans cet article, découvrez comment cette approche douce et puissante peut vous aider à retrouver plus de légèreté et de sécurité intérieure, à votre rythme."
+tags:
+  - "EMDR"
+  - "Psycho"
+  - "Trauma"
 date: 2025-05-20T07:43:13Z
 updated: 2026-06-08T12:33:19Z
 image: "../../assets/images/wp/EMDR-therapie-scaled.jpeg"

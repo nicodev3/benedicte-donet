@@ -1,6 +1,9 @@
 ---
 title: "Comment Apaiser Nos Pensées de Plainte : Une Approche Consciente et Bienveillante"
 excerpt: "Il est fréquent d’être envahi par des pensées de jugement concernant notre environnement ou nous-mêmes. La plainte peut être définie comme l’expression d’un mécontentement, ou même plus profondément, comme une expression vocale de la douleur. Ainsi, nos plaintes sont des moyens d’exprimer une souffrance, un mal-être, ou une difficulté."
+tags:
+  - "Pleine conscience"
+  - "Psychoéducation"
 date: 2023-09-06T12:39:47Z
 updated: 2026-06-08T12:22:20Z
 image: "../../assets/images/wp/AdobeStock_692112417-scaled.jpeg"

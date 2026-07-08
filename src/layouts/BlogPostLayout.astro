@@ -11,6 +11,7 @@ import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getRelatedPosts } from "@/lib/blog";
 import { getGlobalSettings } from "@/lib/settings";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
+import { slugifyTag } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
 import type { CollectionEntry } from "astro:content";
 
@@ -22,6 +23,7 @@ const { post } = Astro.props;
 const {
   title,
   excerpt,
+  tags,
   date,
   updated,
   image,
@@ -94,6 +96,16 @@ const serviceLinks = [
         }}
       />
 
+      {tags.length > 0 && (
+        <ul class="post-tags" aria-label={t.blogPost.tagsLabel}>
+          {tags.map((tag) => (
+            <li>
+              <a href={localizedPath(`/blog/tag/${slugifyTag(tag)}/`, locale)}>{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )}
+
       {excerpt && <p class="post-excerpt">{excerpt}</p>}
 
       <div class="prose">
@@ -149,6 +161,33 @@ const serviceLinks = [
 
   .post {
     padding-block: var(--space-xl);
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 var(--space-md);
+    padding: 0;
+    list-style: none;
+  }
+
+  .post-tags a {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition:
+      background-color var(--transition),
+      color var(--transition);
+  }
+
+  .post-tags a:hover {
+    background-color: var(--color-primary);
+    color: #fff;
   }
 
   .post-excerpt {

@@ -1,6 +1,9 @@
 ---
 title: "Éloge de la présence : l’acte complètement fou d’habiter son corps"
 excerpt: "Dans cet article, je veux partager plus intimement le cheminement qui m’a menée vers l’acte le plus salvateur qu’il m’ait été donné d’expérimenter : habiter mon corps. Quelles que soient les techniques thérapeutiques que j’étudie, les enseignements de méditation que je reçois ou les expérimentations que je traverse, je reviens toujours à mon ami le…"
+tags:
+  - "Pleine conscience"
+  - "Trauma"
 date: 2026-06-04T09:09:20Z
 updated: 2026-06-08T12:35:28Z
 image: "../../assets/images/wp/hopefilmphoto-QiYZCKJQMck-unsplash-scaled.jpg"

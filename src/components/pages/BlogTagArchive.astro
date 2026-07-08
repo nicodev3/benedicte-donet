@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/common/Container.astro";
+import Hero from "@/components/sections/Hero.astro";
+import PostGrid from "@/components/blog/PostGrid.astro";
+import { localizedPath, type Locale } from "@/lib/i18n";
+import { getPostsByTagSlug, getTagsForLocale } from "@/lib/tags";
+import { useTranslations } from "@/lib/translations";
+
+interface Props {
+  locale: Locale;
+  tagSlug: string;
+}
+
+const { locale, tagSlug } = Astro.props;
+const t = useTranslations(locale);
+
+const allPosts = await getCollection("blog");
+const tagInfo = getTagsForLocale(allPosts, locale).find((tag) => tag.slug === tagSlug);
+const posts = getPostsByTagSlug(allPosts, locale, tagSlug);
+const tagLabel = tagInfo?.label ?? tagSlug;
+
+const blogHeroImage = "/images/wp/hero-blog.png";
+---
+
+<BaseLayout
+  title={`${t.blog.tagPrefix} : ${tagLabel}`}
+  description={t.blog.description}
+  image={blogHeroImage}
+>
+  <Hero
+    title={`${t.blog.tagPrefix} : ${tagLabel}`}
+    subtitle={t.blog.heroSubtitle}
+    backgroundImage={blogHeroImage}
+    subtitleFirst
+  />
+
+  <Container>
+    <p class="tag-archive-back">
+      <a href={localizedPath("/blog/", locale)}>{t.blog.backToBlog}</a>
+    </p>
+    <PostGrid posts={posts} locale={locale} />
+  </Container>
+</BaseLayout>
+
+<style>
+  .tag-archive-back {
+    margin-top: var(--space-lg);
+  }
+
+  .tag-archive-back a {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  .tag-archive-back a:hover {
+    color: var(--color-primary-dark);
+  }
+</style>

@@ -1,6 +1,12 @@
 ---
 title: "Exploration de croyance: Un état de paix continue est-il vraiment impossible ?"
 excerpt: "J’ai longtemps cru que le bonheur demandait des efforts. Qu’il fallait travailler sur soi, se transformer, se réparer presque, pour accéder à un état de paix intérieure plus stable, plus continu. Derrière cela, une croyance silencieuse mais profondément ancrée : la paix ne serait pas notre état naturel, mais quelque chose à atteindre, à construire, à mériter… au prix d’un travail exigeant."
+tags:
+  - "EMDR"
+  - "Pleine conscience"
+  - "Psycho"
+  - "Psychologie positive"
+  - "Trauma"
 date: 2026-04-17T02:14:00Z
 updated: 2026-06-08T12:34:43Z
 image: "../../assets/images/wp/AdobeStock_150001132-1-scaled.jpeg"

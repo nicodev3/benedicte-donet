@@ -1,6 +1,9 @@
 ---
 title: "Trauma and romantic relationships: understanding the impact to heal better"
 excerpt: "Trauma leaves a lasting imprint on the human psyche, influencing not only our individual well-being but also our intimate relationships. As a clinical psychologist, I have often observed how trauma can weave invisible threads into the fabric of romantic relationships. In this article, we will explore how trauma can influence these relationships, the challenges that arise, and how a deeper understanding can guide us towards individual and relational healing."
+tags:
+  - "Psychology"
+  - "Trauma"
 date: 2024-01-30T12:07:00Z
 updated: 2026-06-08T12:32:06Z
 image: "../../assets/images/wp/justin-follis-A7Um4oi-UYU-unsplash-scaled.jpg"

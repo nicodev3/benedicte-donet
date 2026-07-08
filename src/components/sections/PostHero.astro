@@ -1,6 +1,5 @@
 ---
 import { getImage } from "astro:assets";
-import SiteImage from "@/components/common/SiteImage.astro";
 import { resolveImage } from "@/lib/images";
 import { preventPunctuationWrap } from "@/lib/typography";
 
@@ -42,21 +41,11 @@ const desktopBg = await resolveBackgroundUrl(backgroundImage);
 <section class="post-hero">
   <div
     class="post-hero-panel"
-    data-post-hero-panel
-    style={`--post-hero-bg-position: ${backgroundPosition};`}
+    style={{
+      "--post-hero-bg": desktopBg ? `url(${desktopBg})` : "none",
+      "--post-hero-bg-position": backgroundPosition,
+    }}
   >
-    {
-      desktopBg && (
-        <div class="post-hero-backdrop" aria-hidden="true">
-          <SiteImage
-            class="post-hero-backdrop-img"
-            src={desktopBg}
-            alt=""
-            loading="eager"
-          />
-        </div>
-      )
-    }
     <div class="post-hero-overlay" aria-hidden="true" />
     <div class="post-hero-content">
       <p class="post-hero-meta">
@@ -66,50 +55,6 @@ const desktopBg = await resolveBackgroundUrl(backgroundImage);
     </div>
   </div>
 </section>
-
-<script>
-  function setupPostHeroFixedBackground() {
-    const panel = document.querySelector<HTMLElement>("[data-post-hero-panel]");
-    const img = panel?.querySelector<HTMLImageElement>(".post-hero-backdrop-img");
-    if (!panel || !img) return;
-
-    const desktopMq = window.matchMedia("(min-width: 1025px)");
-    const reducedMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    let ticking = false;
-
-    const update = () => {
-      if (!desktopMq.matches || reducedMotionMq.matches) {
-        img.style.top = "";
-        img.style.height = "";
-        panel.classList.remove("post-hero-parallax-active");
-        return;
-      }
-
-      panel.classList.add("post-hero-parallax-active");
-      img.style.top = `${-panel.getBoundingClientRect().top}px`;
-      img.style.height = "100vh";
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(() => {
-          update();
-          ticking = false;
-        });
-      }
-    };
-
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", update, { passive: true });
-    desktopMq.addEventListener("change", update);
-    reducedMotionMq.addEventListener("change", update);
-  }
-
-  setupPostHeroFixedBackground();
-</script>
 
 <style>
   .post-hero {
@@ -128,27 +73,10 @@ const desktopBg = await resolveBackgroundUrl(backgroundImage);
     border-radius: 0 0 5rem 0;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
     background-color: var(--color-bg-soft);
-  }
-
-  .post-hero-backdrop {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-  }
-
-  .post-hero-backdrop-img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100vw;
-    min-width: 100%;
-    height: 100%;
-    max-width: none;
-    transform: translateX(-50%);
-    object-fit: cover;
-    object-position: var(--post-hero-bg-position, center right);
+    background-image: var(--post-hero-bg);
+    background-position: var(--post-hero-bg-position, center right);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .post-hero-overlay {
@@ -197,8 +125,14 @@ const desktopBg = await resolveBackgroundUrl(backgroundImage);
 
   @media (min-width: 768px) {
     .post-hero-panel {
-      width: calc(100vw - var(--space-md));
+      width: 100vw;
       margin-left: calc(50% - 50vw);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .post-hero-panel {
+      background-attachment: fixed;
     }
   }
 
@@ -209,24 +143,13 @@ const desktopBg = await resolveBackgroundUrl(backgroundImage);
 
     .post-hero-panel {
       border-radius: 0 0 3.75rem 0;
-    }
-
-    .post-hero-backdrop-img {
-      left: 0;
-      width: 100%;
-      transform: none;
-      object-position: top center;
+      background-position: top center;
+      background-attachment: scroll;
     }
 
     .post-hero-content {
       padding: 2.5rem 1rem;
       gap: 1.25rem;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .post-hero-backdrop-img {
-      height: 100%;
     }
   }
 </style>

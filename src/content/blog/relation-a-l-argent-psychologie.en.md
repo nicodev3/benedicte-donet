@@ -1,6 +1,9 @@
 ---
 title: "OUR RELATIONSHIP WITH MONEY"
 excerpt: "Often, when one thinks about working with a psychologist, the idea of addressing one’s relationship with money might not immediately come to mind. However, it’s a topic that affects everyone, every day. How we feel and engage with money speaks volumes about our past experiences, what our parents and grandparents went through in terms of financial abundance or lack."
+tags:
+  - "Relationship with money"
+  - "Trauma"
 date: 2023-10-30T07:34:27Z
 updated: 2026-06-08T12:29:12Z
 image: "../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg"

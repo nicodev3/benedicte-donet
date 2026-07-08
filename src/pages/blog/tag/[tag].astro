@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import BlogTagArchive from "@/components/pages/BlogTagArchive.astro";
+import { getTagsForLocale } from "@/lib/tags";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  const tags = getTagsForLocale(posts, "fr");
+
+  return tags.map((tag) => ({
+    params: { tag: tag.slug },
+  }));
+}
+
+const { tag } = Astro.params;
+---
+
+<BlogTagArchive locale="fr" tagSlug={tag} />

@@ -54,6 +54,12 @@ collections:
         i18n: true
         required: false
         hint: "Résumé court affiché sur la page Blog (2-3 phrases)."
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        i18n: true
+        required: false
+        hint: "Un tag par ligne. Réutilisez si possible : Psycho, EMDR, Trauma, Pleine conscience, Psychoéducation, Psychologie positive, Relations humaines, Théorie de l'attachement, Respiration, Santé, Gratitude."
       - { label: "Date de publication", name: "date", widget: "datetime", i18n: duplicate }
       - label: "Date de mise à jour"
         name: "updated"

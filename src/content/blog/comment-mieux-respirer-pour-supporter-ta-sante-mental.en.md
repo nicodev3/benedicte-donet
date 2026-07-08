@@ -1,6 +1,11 @@
 ---
 title: "You Might Be Breathing Wrong — And It’s Totally Normal (But Let’s Fix It)"
 excerpt: "Our way of breathing has deteriorated over the course of our evolution. Indeed, our brain has grown, leaving less space for the airways. Our diet and lifestyle have also greatly influenced how we breathe. It’s important to know that many psychological and physical diseases can originate from our breathing patterns. This is due to the domino effect: improper breathing leads to sleep apnea, stress, fatigue, higher blood pressure, and so on. It can even lead to chronic insomnia, attention disorders, etc."
+tags:
+  - "Mindfulness"
+  - "Psychoeducation"
+  - "Breathing"
+  - "Health"
 date: 2023-10-23T17:49:24Z
 updated: 2026-06-08T12:26:52Z
 image: "../../assets/images/wp/illustration-ateliers-meditation.jpeg"

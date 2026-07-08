@@ -1,6 +1,9 @@
 ---
 title: "Mindfulness meditation and therapy: a powerful synergy for well-being"
 excerpt: "In the quest for mental well-being, combining meditation and therapy offers a holistic and powerful approach to support individuals on the path of personal transformation."
+tags:
+  - "Mindfulness"
+  - "Psychology"
 date: 2024-01-23T03:13:26Z
 updated: 2026-06-08T12:30:02Z
 image: "../../assets/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg"

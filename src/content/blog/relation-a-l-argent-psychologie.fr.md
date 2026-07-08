@@ -1,6 +1,9 @@
 ---
 title: "La relation à l’argent : un sujet universel et souvent négligé"
 excerpt: "Souvent quand on pense a travailler avec un psychologue, on ne pense pas nécessairement a y aller pour travailler sur sa relation a l’argent. Et pourtant, c’est un sujet qui touche tout le monde, chaque jour. La manière dont nous nous sentons et entrons en relation avec l’argent dit énormément de ce que nous avons vécu, ce que nos parents et grand parents ont vécu en relation avec l’abondance ou le manque financier."
+tags:
+  - "Relation à l'argent"
+  - "Trauma"
 date: 2023-10-30T07:13:05Z
 updated: 2026-06-08T12:28:51Z
 image: "../../assets/images/wp/christine-roy-ir5MHI6rPg0-unsplash-scaled.jpg"

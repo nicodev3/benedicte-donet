@@ -1,6 +1,10 @@
 ---
 title: "Kob khun maak ka, la gratitude"
 excerpt: "Les mains jointes en prière près de ma poitrine, le regard plongé dans le sien, la tête légèrement baissée, je prononce humblement ces mots : ขอบคุณมากครับ, en phonétique : Kob khun maak khrap/ka. Ils signifient « Merci beaucoup » en thaïlandais. Ce rituel est sacré. Pendant longtemps, vivant en Thaïlande, je n’ai pas pleinement saisi l’importance de ce rituel. L’importance de ce moment quotidien de gratitude."
+tags:
+  - "Gratitude"
+  - "Pleine conscience"
+  - "Psychologie positive"
 date: 2023-08-16T15:16:28Z
 updated: 2026-06-08T12:20:41Z
 image: "../../assets/images/wp/illustration-gratitude-thailande.png"

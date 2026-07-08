@@ -1,6 +1,9 @@
 ---
 title: "Dissociation et reconnexion : comment la méditation peut aider"
 excerpt: "La dissociation, un phénomène complexe qui peut affecter la santé mentale, est souvent méconnue du grand public. En tant que psychologue, je m’intéresse particulièrement à la façon dont la méditation peut jouer un rôle essentiel dans le processus de reconnexion pour ceux qui vivent cette expérience. Dans cet article, nous explorerons la dissociation, son impact sur la vie quotidienne, et comment la méditation peut être un outil précieux pour favoriser une reconnexion profonde avec soi-même."
+tags:
+  - "Pleine conscience"
+  - "Psycho"
 date: 2024-01-25T15:27:00Z
 updated: 2026-06-08T12:30:41Z
 image: "../../assets/images/wp/motoki-tonn-ezOKZhYJAFo-unsplash-scaled.jpg"

@@ -1,6 +1,12 @@
 ---
 title: "Exploring a belief: Is a continuous state of peace truly impossible?"
 excerpt: "For a long time, I believed that happiness required effort. That one had to work on oneself, transform oneself, almost repair oneself, to access a more stable, more continuous inner state of peace. Behind this lay a silent but deeply rooted belief: peace would not be our natural state, but something to achieve, to build, to deserve… at the cost of demanding work."
+tags:
+  - "EMDR"
+  - "Mindfulness"
+  - "Psychology"
+  - "Positive psychology"
+  - "Trauma"
 date: 2026-04-17T02:14:00Z
 updated: 2026-06-08T12:34:43Z
 image: "../../assets/images/wp/AdobeStock_150001132-1-scaled.jpeg"

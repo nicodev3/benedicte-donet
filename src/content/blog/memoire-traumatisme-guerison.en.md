@@ -1,6 +1,10 @@
 ---
 title: "Memory and trauma: understanding their connection to heal better"
 excerpt: "Memory is a complex mechanism that shapes our understanding of the world and influences our behaviour."
+tags:
+  - "EMDR"
+  - "Psychology"
+  - "Trauma"
 date: 2024-01-27T12:45:00Z
 updated: 2026-06-08T12:31:24Z
 image: "../../assets/images/wp/ian-dooley-FgSyP02I0gw-unsplash-scaled.jpg"

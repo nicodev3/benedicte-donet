@@ -1,6 +1,9 @@
 ---
 title: "Méditation pleine conscience thérapie : une synergie puissante pour le bien-être"
 excerpt: "Dans la quête du bien-être mental, la combinaison de la méditation et de la thérapie offre une approche holistique et puissante pour accompagner les individus sur le chemin de la transformation personnelle."
+tags:
+  - "Pleine conscience"
+  - "Psycho"
 date: 2024-01-23T03:13:26Z
 updated: 2026-06-08T12:30:02Z
 image: "../../assets/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg"

@@ -1,6 +1,9 @@
 ---
 title: "Dissociation and reconnection: how meditation can help"
 excerpt: "Dissociation, a complex phenomenon that can affect mental health, is often little known to the general public. As a psychologist, I am particularly interested in how meditation can play an essential role in the reconnection process for those who live with this experience. In this article, we will explore dissociation, its impact on daily life, and how meditation can be a valuable tool to foster a deep reconnection with oneself."
+tags:
+  - "Mindfulness"
+  - "Psychology"
 date: 2024-01-25T15:27:00Z
 updated: 2026-06-08T12:30:41Z
 image: "../../assets/images/wp/motoki-tonn-ezOKZhYJAFo-unsplash-scaled.jpg"

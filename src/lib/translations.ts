@@ -27,8 +27,11 @@ interface UiTranslations {
     description: string;
     intro: string;
     readMore: string;
+    tagPrefix: string;
+    backToBlog: string;
   };
   blogPost: {
+    tagsLabel: string;
     footerText: string;
     footerCta: string;
     serviceLinksTitle: string;
@@ -107,8 +110,11 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       intro:
         "Des articles pour mieux te comprendre : trauma, EMDR, méditation, anxiété, relation au corps.",
       readMore: "Lire l'article",
+      tagPrefix: "Mot-clé",
+      backToBlog: "← Retour au blog",
     },
     blogPost: {
+      tagsLabel: "Mots-clés de l'article",
       footerText:
         "Envie d'aller plus loin ? Je vous accompagne en téléconsultation.",
       footerCta: "Je prends rendez-vous",
@@ -189,8 +195,11 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       intro:
         "Articles to better understand yourself: trauma, EMDR, meditation, anxiety and your relationship with the body.",
       readMore: "Read article",
+      tagPrefix: "Tag",
+      backToBlog: "← Back to the blog",
     },
     blogPost: {
+      tagsLabel: "Article tags",
       footerText:
         "Would you like to go further? I offer online consultations.",
       footerCta: "Book a session",

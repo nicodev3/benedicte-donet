@@ -1,6 +1,9 @@
 ---
 title: "How to Stop Complaining Thoughts: A Mindful Guide to Reclaim Your Peace"
 excerpt: "It’s common to be inundated with judgmental thoughts about our surroundings or ourselves. Complaint can be defined as the expression of discontent or, even more deeply, as a vocal expression of pain. Thus, our complaints are ways of expressing suffering, discomfort, or difficulty."
+tags:
+  - "Mindfulness"
+  - "Psychoeducation"
 date: 2023-09-14T12:31:49Z
 updated: 2026-06-08T12:24:32Z
 image: "../../assets/images/wp/christopher-lemercier-12yvdCiLaVE-unsplash-scaled.jpg"

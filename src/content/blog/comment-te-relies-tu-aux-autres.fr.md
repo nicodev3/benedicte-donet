@@ -1,6 +1,10 @@
 ---
 title: "Comment te relies-tu aux autres ?"
 excerpt: "La manière dont nous établissons des liens les uns avec les autres exerce une influence considérable sur notre vie et notre bien-être. Pour discuter de l’attachement, nous pouvons explorer différents modèles de compréhension."
+tags:
+  - "Psycho"
+  - "Relations humaines"
+  - "Théorie de l'attachement"
 date: 2023-08-16T15:16:41Z
 updated: 2026-06-08T12:21:34Z
 image: "../../assets/images/wp/illustration-lien-aux-autres.png"

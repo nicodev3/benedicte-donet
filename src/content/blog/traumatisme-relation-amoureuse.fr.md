@@ -1,6 +1,9 @@
 ---
 title: "Traumatisme et relation amoureuse : comprendre l’impact pour mieux guérir"
 excerpt: "Les traumatismes laissent une empreinte durable sur la psyché humaine, influençant non seulement notre bien-être individuel mais également nos relations intimes. En tant que psychologue clinicienne, j’ai souvent observé comment les traumatismes peuvent tisser des fils invisibles dans le tissu des relations amoureuses. Dans cet article, nous explorerons la manière dont les traumatismes peuvent influencer ces relations, les défis qui en découlent, et comment une compréhension approfondie peut guider vers une guérison individuelle et relationnelle."
+tags:
+  - "Psycho"
+  - "Trauma"
 date: 2024-01-30T12:07:00Z
 updated: 2026-06-08T12:32:06Z
 image: "../../assets/images/wp/justin-follis-A7Um4oi-UYU-unsplash-scaled.jpg"

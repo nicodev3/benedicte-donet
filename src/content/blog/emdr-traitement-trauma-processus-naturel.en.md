@@ -1,6 +1,10 @@
 ---
 title: "EMDR: a natural process, not a magic solution"
 excerpt: "EMDR deeply respects the brain's natural functioning. It imposes nothing. It does not force memories. It does not erase history. It does not take control. Contrary to certain misconceptions, EMDR is not a « magic » technique that makes trauma disappear. It is a natural neuropsychological process that sets the brain's innate information-processing mechanisms back in motion."
+tags:
+  - "EMDR"
+  - "Psychology"
+  - "Trauma"
 date: 2025-12-28T03:09:14Z
 updated: 2026-06-08T12:33:58Z
 image: "../../assets/images/wp/daniel-oberg-41Wuv1xsmGM-unsplash-scaled.jpg"

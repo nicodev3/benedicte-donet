@@ -1,6 +1,5 @@
 ---
 import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
-import SiteImage from "@/components/common/SiteImage.astro";
 
 interface Props {
   locale?: Locale;
@@ -37,15 +36,7 @@ const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
 ---
 
 <section class="services-hero">
-  <div class="services-hero-panel" data-services-hero-panel>
-    <div class="services-hero-backdrop" aria-hidden="true">
-      <SiteImage
-        class="services-hero-backdrop-img"
-        src={backgroundImage}
-        alt=""
-        loading="eager"
-      />
-    </div>
+  <div class="services-hero-panel" style={{ "--services-hero-bg": `url(${backgroundImage})` }}>
     <div class="services-hero-overlay" aria-hidden="true" />
     <div class="services-hero-content">
       <p class="services-hero-eyebrow">{copy.title}</p>
@@ -62,51 +53,6 @@ const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
   </div>
 </section>
 
-<script>
-  function setupServicesHeroParallax() {
-    const panel = document.querySelector<HTMLElement>("[data-services-hero-panel]");
-    const img = panel?.querySelector<HTMLImageElement>(".services-hero-backdrop-img");
-    if (!panel || !img) return;
-
-    const desktopMq = window.matchMedia("(min-width: 1025px)");
-    const reducedMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    let ticking = false;
-
-    const update = () => {
-      if (!desktopMq.matches || reducedMotionMq.matches) {
-        img.style.top = "";
-        img.style.height = "";
-        panel.classList.remove("services-hero-parallax-active");
-        return;
-      }
-
-      panel.classList.add("services-hero-parallax-active");
-      img.style.top = `${-panel.getBoundingClientRect().top}px`;
-      img.style.height = "100vh";
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(() => {
-          update();
-          ticking = false;
-        });
-      }
-    };
-
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", update, { passive: true });
-    desktopMq.addEventListener("change", update);
-    reducedMotionMq.addEventListener("change", update);
-  }
-
-  setupServicesHeroParallax();
-  document.addEventListener("astro:page-load", setupServicesHeroParallax);
-</script>
-
 <style>
   .services-hero {
     padding-block: 0;
@@ -121,24 +67,15 @@ const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
     background-color: var(--color-bg-muted);
   }
 
-  .services-hero-backdrop {
+  .services-hero-panel::before {
+    content: "";
     position: absolute;
     inset: 0;
     z-index: 0;
-    overflow: hidden;
-  }
-
-  .services-hero-backdrop-img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100vw;
-    min-width: 100%;
-    height: 100%;
-    max-width: none;
-    transform: translateX(-50%) scale(1.04);
-    object-fit: cover;
-    object-position: left bottom;
+    background-image: var(--services-hero-bg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
     filter: saturate(0.85) brightness(1.05);
   }
 
@@ -275,6 +212,12 @@ const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
     }
   }
 
+  @media (min-width: 1025px) {
+    .services-hero-panel::before {
+      background-attachment: fixed;
+    }
+  }
+
   @media (max-width: 767px) {
     .services-hero {
       padding-inline: var(--space-md);
@@ -294,11 +237,9 @@ const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
       );
     }
 
-    .services-hero-backdrop-img {
-      left: 0;
-      width: 100%;
-      transform: none;
-      object-position: center bottom;
+    .services-hero-panel::before {
+      background-position: center bottom;
+      background-attachment: scroll;
     }
 
     .services-hero-body {
@@ -314,13 +255,6 @@ const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
 
     .services-hero-specialties {
       border-radius: 0 0 0 1.25rem;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .services-hero-backdrop-img {
-      height: 100%;
-      transform: translateX(-50%);
     }
   }
 </style>
