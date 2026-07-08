@@ -1,6 +1,7 @@
 ---
 import { getImage } from "astro:assets";
 import { Sparkles } from "@lucide/astro";
+import SiteImage from "@/components/common/SiteImage.astro";
 import { resolveImage } from "@/lib/images";
 
 interface Props {
@@ -52,12 +53,11 @@ const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundI
           <picture>
             {mobileBg && <source media="(max-width: 767px)" srcset={mobileBg} />}
             {desktopBg && (
-              <img
+              <SiteImage
                 class="hero-backdrop-img"
                 src={desktopBg}
                 alt=""
                 loading="eager"
-                decoding="async"
               />
             )}
           </picture>

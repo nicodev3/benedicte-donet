@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
+import SiteImage from "@/components/common/SiteImage.astro";
 import { getGlobalSettings } from "@/lib/settings";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
@@ -37,11 +38,11 @@ const formLabels =
         <h2>{t.contactBlock.title}</h2>
         <ul class="contact-list">
           <li>
-            <img class="contact-icon" src="/images/wp/whatsapp-1.svg" alt="" aria-hidden="true" />
+            <SiteImage class="contact-icon" src="/images/wp/whatsapp-1.svg" alt="" />
             <a href={`tel:${global.phone.replace(/\s/g, "")}`}>{global.phone}</a>
           </li>
           <li>
-            <img class="contact-icon" src="/images/wp/gmail-1.svg" alt="" aria-hidden="true" />
+            <SiteImage class="contact-icon" src="/images/wp/gmail-1.svg" alt="" />
             <a href={`mailto:${global.email}`}>{global.email}</a>
           </li>
           {global.area && <li class="contact-area">{global.area}</li>}

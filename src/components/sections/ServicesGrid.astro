@@ -3,7 +3,6 @@ import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import Button from "@/components/common/Button.astro";
-import { Flower2 } from "@lucide/astro";
 import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Card {
@@ -45,12 +44,6 @@ const { title, cards } = Astro.props;
                 {
                   card.image && (
                     <div class="service-visual">
-                      <Flower2
-                        class="service-frame"
-                        size={120}
-                        stroke-width={1.25}
-                        aria-hidden="true"
-                      />
                       <div
                         class:list={[
                           "service-image",
@@ -167,28 +160,17 @@ const { title, cards } = Astro.props;
   }
 
   .service-visual {
-    position: relative;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     width: 68%;
     max-width: 17rem;
     margin-bottom: 0.25rem;
   }
 
-  .service-frame {
-    grid-area: 1 / 1;
-    width: 100%;
-    height: auto;
-    color: var(--color-primary);
-    pointer-events: none;
-  }
-
   .service-image {
-    grid-area: 1 / 1;
     display: block;
     width: 46%;
     max-width: 9rem;
-    z-index: 1;
   }
 
   .service-image.narrow {

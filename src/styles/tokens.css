@@ -37,7 +37,7 @@
   /* Couleurs — charte WP avec variantes accessibles (WCAG 2.1 AA) */
   --color-primary: #c68d85; /* décoratif uniquement */
   --color-primary-dark: #9f655e; /* liens, texte interactif (4.67:1 sur blanc) */
-  --color-primary-strong: #8f5b54; /* fonds avec texte blanc (5.54:1) */
+  --color-primary-strong: #c1837b; /* fonds avec texte blanc */
   --color-primary-stronger: #87544d; /* survol boutons (6.17:1) */
   --color-secondary: #67c7ca; /* décoratif uniquement */
   --color-secondary-dark: #3a878a; /* fonds avec texte blanc (4.19:1) */

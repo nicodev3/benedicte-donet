@@ -1,5 +1,6 @@
 ---
 import { getImage } from "astro:assets";
+import SiteImage from "@/components/common/SiteImage.astro";
 import { resolveImage } from "@/lib/images";
 import { preventPunctuationWrap } from "@/lib/typography";
 
@@ -47,12 +48,11 @@ const desktopBg = await resolveBackgroundUrl(backgroundImage);
     {
       desktopBg && (
         <div class="post-hero-backdrop" aria-hidden="true">
-          <img
+          <SiteImage
             class="post-hero-backdrop-img"
             src={desktopBg}
             alt=""
             loading="eager"
-            decoding="async"
           />
         </div>
       )

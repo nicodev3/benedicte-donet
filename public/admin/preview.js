@@ -105,7 +105,7 @@
 
           .cms-preview-home {
             --primary: #9f655e;
-            --primary-strong: #8f5b54;
+            --primary-strong: #c1837b;
             --secondary: #67c7ca;
             --text: #3b2e38;
             --soft: #fff1eb;

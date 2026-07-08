@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
+import SiteImage from "@/components/common/SiteImage.astro";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 
@@ -43,7 +44,7 @@ const newsletterUrl =
 
       <a class="newsletter-button" href={newsletterUrl} target="_blank" rel="noopener noreferrer">
         <span>{t.newsletter.cta}</span>
-        <img src="/images/wp/newsletter.svg" alt="" width="22" height="22" loading="lazy" />
+        <SiteImage src="/images/wp/newsletter.svg" alt="" width={22} height={22} loading="lazy" />
       </a>
     </div>
   </Container>

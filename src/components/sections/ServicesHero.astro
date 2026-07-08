@@ -1,5 +1,6 @@
 ---
 import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
+import SiteImage from "@/components/common/SiteImage.astro";
 
 interface Props {
   locale?: Locale;
@@ -38,12 +39,11 @@ const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
 <section class="services-hero">
   <div class="services-hero-panel" data-services-hero-panel>
     <div class="services-hero-backdrop" aria-hidden="true">
-      <img
+      <SiteImage
         class="services-hero-backdrop-img"
         src={backgroundImage}
         alt=""
         loading="eager"
-        decoding="async"
       />
     </div>
     <div class="services-hero-overlay" aria-hidden="true" />

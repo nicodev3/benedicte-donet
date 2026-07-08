@@ -27,9 +27,9 @@ const {
 } = Astro.props;
 
 const image = resolveImage(src);
-const isPublicImage = src.startsWith("/images/");
+const canFallbackToImg = src.startsWith("/") || /^https?:\/\//.test(src);
 
-if (!image && !isPublicImage) {
+if (!image && !canFallbackToImg) {
   console.warn(`[SiteImage] Image introuvable : ${src}`);
 }
 ---
@@ -51,7 +51,7 @@ if (!image && !isPublicImage) {
 }
 
 {
-  !image && isPublicImage && (
+  !image && canFallbackToImg && (
     <img
       src={src}
       alt={alt}
