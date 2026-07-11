@@ -84,6 +84,7 @@ collections:
         widget: "richtext"
         i18n: true
         modes: ["rich_text"]
+        sanitize_preview: false
         buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
       - label: "Titre SEO"
@@ -152,6 +153,7 @@ collections:
         widget: "richtext"
         i18n: true
         modes: ["rich_text"]
+        sanitize_preview: false
         buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
       - label: "Titre SEO"

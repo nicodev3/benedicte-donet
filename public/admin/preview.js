@@ -453,15 +453,22 @@
 
   const normalizeImagePath = (value) => {
     if (!value) return "";
-    const path = String(value);
-    const match = path.match(/(?:\.\.\/)*assets\/images\/(?:wp\/)?(.+)$/);
-    if (match) return `/images/wp/${match[1]}`;
+    const path = String(value).trim();
+    if (/^(?:blob:|data:|https?:)/.test(path)) return path;
+    if (path.startsWith("/images/")) return path;
+
+    const assetsMatch = path.match(/(?:\.\.\/)*assets\/images\/(?:wp\/)?(.+)$/);
+    if (assetsMatch) return `/images/wp/${assetsMatch[1]}`;
+
+    const wpMatch = path.match(/(?:^|\/)images\/wp\/(.+)$/);
+    if (wpMatch) return `/images/wp/${wpMatch[1]}`;
+
     return path;
   };
 
   const resolvePreviewImageSrc = (src, getAsset) => {
     if (!src) return src;
-    const path = String(src);
+    const path = String(src).trim();
     if (/^(?:blob:|data:|https?:)/.test(path)) return path;
 
     if (getAsset) {
@@ -475,42 +482,89 @@
     return normalizeImagePath(path);
   };
 
-  const rewritePreviewImages = (root, getAsset) => {
-    if (!root) return;
-    root.querySelectorAll("img[src]").forEach((img) => {
-      const src = img.getAttribute("src");
-      const resolved = resolvePreviewImageSrc(src, getAsset);
-      if (resolved && resolved !== src) {
-        img.setAttribute("src", resolved);
+  const walkAst = (node, visitor) => {
+    visitor(node);
+    if (Array.isArray(node.children)) {
+      node.children.forEach((child) => walkAst(child, visitor));
+    }
+  };
+
+  window.CMS.registerRemarkPlugin(function rewritePreviewImageUrls() {
+    return function transformer(tree) {
+      walkAst(tree, (node) => {
+        if (node.type === "image" && node.url) {
+          node.url = normalizeImagePath(node.url);
+        }
+      });
+      return tree;
+    };
+  });
+
+  const getFieldMarkdown = (entry, fieldName) => {
+    const value = entry.getIn(["data", fieldName]);
+    if (!value) return "";
+    if (typeof value === "string") return value;
+    if (value.toJS) {
+      const converted = value.toJS();
+      if (typeof converted === "string") return converted;
+    }
+    return String(value);
+  };
+
+  const rewriteMarkdownImages = (markdown, getAsset) =>
+    String(markdown).replace(
+      /!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)/g,
+      (match, alt, url, title) => {
+        const src = resolvePreviewImageSrc(url, getAsset);
+        return title ? `![${alt}](${src} "${title}")` : `![${alt}](${src})`;
       }
-    });
-  };
-
-  const attachPreviewImageRewriter = (node, getAsset) => {
-    if (!node || node.dataset.cmsImagesAttached) return;
-    node.dataset.cmsImagesAttached = "true";
-
-    const rewrite = () => rewritePreviewImages(node, getAsset);
-    rewrite();
-
-    const observer = new MutationObserver(rewrite);
-    observer.observe(node, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["src"],
-    });
-  };
-
-  const ProsePreview = ({ widgetFor, getAsset, className, fieldName = "body" }) =>
-    h(
-      "div",
-      {
-        className,
-        ref: (node) => attachPreviewImageRewriter(node, getAsset),
-      },
-      widgetFor(fieldName)
     );
+
+  const rewriteHtmlImages = (html, getAsset) =>
+    String(html).replace(
+      /<img\b([^>]*?\bsrc=["'])([^"']+)(["'][^>]*)>/gi,
+      (match, before, src, after) => {
+        const resolved = resolvePreviewImageSrc(src, getAsset);
+        return `<img${before}${resolved}${after}>`;
+      }
+    );
+
+  const renderMarkdownHtml = (markdown, getAsset) => {
+    if (!markdown) return "";
+    const normalized = rewriteMarkdownImages(markdown, getAsset);
+
+    if (window.marked && typeof window.marked.parse === "function") {
+      const html = window.marked.parse(normalized, { gfm: true, breaks: false });
+      return rewriteHtmlImages(html, getAsset);
+    }
+
+    return rewriteMarkdownImages(normalized, getAsset)
+      .split(/\n{2,}/)
+      .map((block) => block.trim())
+      .filter(Boolean)
+      .map((block) => {
+        if (/^!\[/.test(block)) {
+          return block.replace(
+            /^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/,
+            (_, alt, url) => {
+              const src = resolvePreviewImageSrc(url, getAsset);
+              const safeAlt = alt.replace(/"/g, "&quot;");
+              return `<img src="${src}" alt="${safeAlt}">`;
+            }
+          );
+        }
+        return `<p>${block.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")}</p>`;
+      })
+      .join("");
+  };
+
+  const ProsePreview = ({ entry, getAsset, className, fieldName = "body" }) => {
+    const html = renderMarkdownHtml(getFieldMarkdown(entry, fieldName), getAsset);
+    return h("div", {
+      className,
+      dangerouslySetInnerHTML: { __html: html },
+    });
+  };
 
   const formatDate = (value) => {
     if (!value) return "";
@@ -557,7 +611,7 @@
             tags.map((tag) => h("li", { key: tag }, h("span", null, tag)))
           ),
         excerpt && h("p", { className: "cms-preview-post-excerpt" }, excerpt),
-        h(ProsePreview, { widgetFor, getAsset, className: "prose" })
+        h(ProsePreview, { entry, getAsset, className: "prose" })
       )
     );
   };
@@ -605,7 +659,7 @@
         "article",
         { className: "cms-preview-page-body" },
         h(ProsePreview, {
-          widgetFor,
+          entry,
           getAsset,
           className: "prose prose-wide",
         })
