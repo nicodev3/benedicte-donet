@@ -459,6 +459,59 @@
     return path;
   };
 
+  const resolvePreviewImageSrc = (src, getAsset) => {
+    if (!src) return src;
+    const path = String(src);
+    if (/^(?:blob:|data:|https?:)/.test(path)) return path;
+
+    if (getAsset) {
+      const resolved = getAsset(path);
+      if (resolved && resolved.toString) {
+        const assetUrl = resolved.toString();
+        if (assetUrl) return assetUrl;
+      }
+    }
+
+    return normalizeImagePath(path);
+  };
+
+  const rewritePreviewImages = (root, getAsset) => {
+    if (!root) return;
+    root.querySelectorAll("img[src]").forEach((img) => {
+      const src = img.getAttribute("src");
+      const resolved = resolvePreviewImageSrc(src, getAsset);
+      if (resolved && resolved !== src) {
+        img.setAttribute("src", resolved);
+      }
+    });
+  };
+
+  const attachPreviewImageRewriter = (node, getAsset) => {
+    if (!node || node.dataset.cmsImagesAttached) return;
+    node.dataset.cmsImagesAttached = "true";
+
+    const rewrite = () => rewritePreviewImages(node, getAsset);
+    rewrite();
+
+    const observer = new MutationObserver(rewrite);
+    observer.observe(node, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["src"],
+    });
+  };
+
+  const ProsePreview = ({ widgetFor, getAsset, className, fieldName = "body" }) =>
+    h(
+      "div",
+      {
+        className,
+        ref: (node) => attachPreviewImageRewriter(node, getAsset),
+      },
+      widgetFor(fieldName)
+    );
+
   const formatDate = (value) => {
     if (!value) return "";
     const date = new Date(value);
@@ -504,7 +557,7 @@
             tags.map((tag) => h("li", { key: tag }, h("span", null, tag)))
           ),
         excerpt && h("p", { className: "cms-preview-post-excerpt" }, excerpt),
-        h("div", { className: "prose" }, widgetFor("body"))
+        h(ProsePreview, { widgetFor, getAsset, className: "prose" })
       )
     );
   };
@@ -551,7 +604,11 @@
       h(
         "article",
         { className: "cms-preview-page-body" },
-        h("div", { className: "prose prose-wide" }, widgetFor("body"))
+        h(ProsePreview, {
+          widgetFor,
+          getAsset,
+          className: "prose prose-wide",
+        })
       )
     );
   };
