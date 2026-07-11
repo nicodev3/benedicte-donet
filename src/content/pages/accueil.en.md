@@ -131,6 +131,6 @@ home:
       text: I had a 1:1 connected breathing session with Bénédicte. She held the space beautifully and softly. I felt accompanied throughout and truly cared for. I definitely recommend it.
   seoTitle: Online psychologist specialising in EMDR, trauma and anxiety
   seoDescription: Online psychologist Bénédicte Donet supports adults with EMDR, trauma, anxiety, post-traumatic stress and sexuality.
-order: 0
+order: 1
 draft: false
 ---

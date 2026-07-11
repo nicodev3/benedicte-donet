@@ -5,7 +5,7 @@ image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg"
 imageAlt: "Dried flowers — online psychologist"
 seoTitle: "Online Psychologist | Video Consultation Services"
 seoDescription: "Online psychology consultations with Bénédicte Donet: psychotherapy, EMDR, trauma-informed support, phototherapy, mindfulness programmes and workshops."
-order: 1
+order: 2
 draft: false
 ---
 

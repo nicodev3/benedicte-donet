@@ -6,7 +6,7 @@ image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg.webp"
 imageAlt: ""
 seoTitle: "Online Psychotherapy | EMDR, Trauma and Anxiety"
 seoDescription: "Online psychotherapy sessions with Bénédicte Donet, clinical psychologist: support for trauma, anxiety, post-traumatic stress and EMDR by video call."
-order: 2
+order: 3
 draft: false
 ---
 

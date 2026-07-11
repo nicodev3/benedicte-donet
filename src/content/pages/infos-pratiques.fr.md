@@ -5,7 +5,7 @@ image: "/images/wp/hero-infos-pratiques.png"
 imageAlt: ""
 seoTitle: "Consultation psychologue en ligne | Infos pratiques"
 seoDescription: "Informations pour consulter une psychologue en ligne : durée des séances, téléconsultation, prise de rendez-vous, remboursement mutuelle et cadre thérapeutique."
-order: 6
+order: 7
 draft: false
 ---
 

@@ -5,7 +5,7 @@ image: "/images/wp/hero-a-propos.png"
 imageAlt: "Bénédicte Donet, online psychologist"
 seoTitle: "Bénédicte Donet | Online Clinical Psychologist"
 seoDescription: "Learn about Bénédicte Donet, online clinical psychologist specialising in trauma support, EMDR and body-based therapeutic approaches."
-order: 5
+order: 6
 draft: false
 ---
 

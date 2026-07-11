@@ -6,7 +6,7 @@ image: "/images/wp/DSCF4124-scaled.jpg"
 imageAlt: ""
 seoTitle: "Phototherapy | Self-confidence photo session"
 seoDescription: ""
-order: 3
+order: 4
 draft: false
 ---
 

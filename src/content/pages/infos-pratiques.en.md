@@ -5,7 +5,7 @@ image: "/images/wp/hero-infos-pratiques.png"
 imageAlt: "Bénédicte Donet, online psychologist"
 seoTitle: "Online Psychologist Consultation | Practical Info"
 seoDescription: "Practical information for booking an online psychologist consultation: session length, video setting, appointments, reimbursement and therapeutic framework."
-order: 6
+order: 7
 draft: false
 ---
 

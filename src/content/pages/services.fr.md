@@ -5,7 +5,7 @@ image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg"
 imageAlt: "Fleurs séchées — psychologue en visio"
 seoTitle: "Psychologue en ligne | Services en visio"
 seoDescription: "Consultations avec une psychologue en ligne : psychothérapie en visio, EMDR, trauma-thérapies, photothérapie, programmes et ateliers de pleine conscience."
-order: 1
+order: 2
 draft: false
 ---
 

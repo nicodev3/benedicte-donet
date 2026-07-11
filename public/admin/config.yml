@@ -118,6 +118,10 @@ collections:
     extension: "md"
     preview_path: "/{{slug}}/"
     i18n: true
+    summary: "{{title}}"
+    sortable_fields:
+      - { field: order, default_sort: asc }
+      - title
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true }
       - label: "Titre du bandeau"
