@@ -1,16 +1,34 @@
 ---
 /**
  * Transforme la section « Mon approche » en grille 3 colonnes
- * (illustrations SVG + cartes), comme sur la prod Elementor.
+ * (illustrations + cartes), comme sur la prod Elementor.
  */
+import { getOptimizedSrc } from "@/lib/images";
+
+const approachIllustrationPaths = [
+  "/images/wp/approche-1-1.webp",
+  "/images/wp/approche-2-1.webp",
+  "/images/wp/approche-3-1.webp",
+];
+
+const approachIllustrations = (
+  await Promise.all(
+    approachIllustrationPaths.map((path) => getOptimizedSrc(path, { width: 400 }))
+  )
+).filter((src): src is string => typeof src === "string");
 ---
 
+<div
+  id="approach-illustrations-data"
+  data-illustrations={JSON.stringify(approachIllustrations)}
+  hidden
+></div>
+
 <script>
-  const approachIllustrations = [
-    "/images/wp/approche-1-1.svg",
-    "/images/wp/approche-2-1.svg",
-    "/images/wp/approche-3-1.svg",
-  ];
+  const approachIllustrations = JSON.parse(
+    document.getElementById("approach-illustrations-data")?.dataset.illustrations ??
+      "[]"
+  );
 
   function isCtaParagraph(element: Element): boolean {
     return (

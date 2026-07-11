@@ -2,6 +2,7 @@
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
+import { getOptimizedBackgroundUrl } from "@/lib/images";
 import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
@@ -29,9 +30,16 @@ const formLabels =
         message: "Your request, your needs...",
         submit: "Send",
       };
+const contactBackground = await getOptimizedBackgroundUrl(
+  "/images/wp/kien-do-NjT4O7WYmwk-unsplash-scaled.jpg.webp",
+  1920
+);
 ---
 
-<Section id="contact">
+<Section
+  id="contact"
+  style={contactBackground ? { "--contact-bg": contactBackground } : undefined}
+>
   <Container>
     <div class="contact-grid">
       <div class="contact-info">
@@ -116,7 +124,7 @@ const formLabels =
     padding-block: 1.25rem 2.5rem;
     border-radius: 0 0 5rem 0;
     box-shadow: 3px 6px 15px 1px rgba(0, 0, 0, 0.25);
-    background-image: url("/images/wp/kien-do-NjT4O7WYmwk-unsplash-scaled.jpg.webp");
+    background-image: var(--contact-bg, none);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

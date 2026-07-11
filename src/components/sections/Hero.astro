@@ -1,7 +1,6 @@
 ---
-import { getImage } from "astro:assets";
 import { Sparkles } from "@lucide/astro";
-import { resolveImage } from "@/lib/images";
+import { getOptimizedSrc } from "@/lib/images";
 
 interface Props {
   eyebrow?: string;
@@ -30,18 +29,10 @@ const {
 const showCta = Boolean(ctaLabel && ctaUrl);
 const isExternal = ctaUrl?.startsWith("http") ?? false;
 
-async function resolveBackgroundUrl(path: string): Promise<string | undefined> {
-  if (!path) return undefined;
-  if (path.startsWith("/images/")) return path;
-
-  const resolved = resolveImage(path);
-  if (resolved) return (await getImage({ src: resolved, width: 1920 })).src;
-
-  return path.startsWith("/") ? path : undefined;
-}
-
-const desktopBg = await resolveBackgroundUrl(backgroundImage);
-const mobileBg = await resolveBackgroundUrl(backgroundImageMobile ?? backgroundImage);
+const desktopBg = await getOptimizedSrc(backgroundImage, { width: 1920 });
+const mobileBg = await getOptimizedSrc(backgroundImageMobile ?? backgroundImage, {
+  width: 1920,
+});
 ---
 
 <section class="hero">

@@ -36,7 +36,7 @@ const cleanDescription =
 const fullTitle = cleanTitle
   ? `${cleanTitle} | ${SITE.name}`
   : global.defaultSeoTitle;
-const ogImagePath = resolveSeoImagePath(image);
+const ogImagePath = await resolveSeoImagePath(image);
 const ogImage = ogImagePath ? new URL(ogImagePath, SITE.url).href : undefined;
 const t = useTranslations(locale);
 const language = localeToSchemaLanguage(locale);

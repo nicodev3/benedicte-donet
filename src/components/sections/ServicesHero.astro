@@ -1,5 +1,6 @@
 ---
 import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
+import { getOptimizedBackgroundUrl } from "@/lib/images";
 
 interface Props {
   locale?: Locale;
@@ -33,10 +34,14 @@ const copy =
       };
 
 const backgroundImage = "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg";
+const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1920);
 ---
 
 <section class="services-hero">
-  <div class="services-hero-panel" style={{ "--services-hero-bg": `url(${backgroundImage})` }}>
+  <div
+    class="services-hero-panel"
+    style={backgroundStyle ? { "--services-hero-bg": backgroundStyle } : undefined}
+  >
     <div class="services-hero-overlay" aria-hidden="true" />
     <div class="services-hero-content">
       <p class="services-hero-eyebrow">{copy.title}</p>

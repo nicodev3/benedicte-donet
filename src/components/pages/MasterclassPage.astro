@@ -35,13 +35,16 @@ function parsePrice(price: string): string | undefined {
 }
 
 const masterclassPath = localizedPath("/masterclass/", locale);
+const productImagePaths = await Promise.all(
+  products.map((product) => resolveSeoImagePath(product.image))
+);
 const productListStructuredData = {
   "@type": "ItemList",
   "@id": new URL(`${masterclassPath}#products`, SITE.url).href,
   name: locale === "en" ? "Masterclasses and programmes" : "Masterclass et programmes",
   itemListElement: products.map((product, index) => {
     const productUrl = new URL(localizedPath(`/produit/${product.slug}/`, locale), SITE.url).href;
-    const imagePath = resolveSeoImagePath(product.image);
+    const imagePath = productImagePaths[index];
 
     return {
       "@type": "ListItem",

@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
+import { getOptimizedBackgroundUrl } from "@/lib/images";
 import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
@@ -9,9 +10,13 @@ interface Props {
 }
 
 const { text, author } = Astro.props;
+const quoteBackground = await getOptimizedBackgroundUrl("/images/wp/bg-citation-2.png", 1920);
 ---
 
-<Section class="quote-section">
+<Section
+  class="quote-section"
+  style={quoteBackground ? { "--quote-bg": quoteBackground } : undefined}
+>
   <Container narrow>
     <figure class="quote">
       <blockquote set:html={renderInlineRichText(text)} />
@@ -30,7 +35,7 @@ const { text, author } = Astro.props;
     align-items: center;
     padding-block: clamp(3rem, 5vw, 4rem);
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.2);
-    background-image: url("/images/wp/bg-citation-2.png");
+    background-image: var(--quote-bg, none);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

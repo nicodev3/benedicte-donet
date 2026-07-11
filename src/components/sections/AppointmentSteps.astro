@@ -2,6 +2,7 @@
 import Container from "@/components/common/Container.astro";
 import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
+import { getOptimizedBackgroundUrl } from "@/lib/images";
 import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
@@ -12,14 +13,17 @@ interface Props {
 }
 
 const { title, steps, ctaLabel, ctaUrl } = Astro.props;
+
+const appointmentBgDesktop = await getOptimizedBackgroundUrl("/images/wp/banniere.png", 1920);
+const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/wp/Accueil-2.png", 1024);
 ---
 
 <section class="appointment-steps" id="teleconsult">
   <div
     class="appointment-steps-panel"
     style={{
-      "--appointment-bg-desktop": "url(/images/wp/banniere.png)",
-      "--appointment-bg-mobile": "url(/images/wp/Accueil-2.png)",
+      "--appointment-bg-desktop": appointmentBgDesktop ?? "none",
+      "--appointment-bg-mobile": appointmentBgMobile ?? appointmentBgDesktop ?? "none",
     }}
   >
     <div class="appointment-overlay" aria-hidden="true" />

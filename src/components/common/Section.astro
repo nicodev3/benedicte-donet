@@ -3,12 +3,13 @@ interface Props {
   tone?: "default" | "soft" | "muted" | "primary";
   id?: string;
   class?: string;
+  style?: Record<string, string | undefined>;
 }
 
-const { tone = "default", id, class: className = "" } = Astro.props;
+const { tone = "default", id, class: className = "", style } = Astro.props;
 ---
 
-<section {id} class:list={["section", `tone-${tone}`, className]}>
+<section {id} class:list={["section", `tone-${tone}`, className]} style={style}>
   <slot />
 </section>
 

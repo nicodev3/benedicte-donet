@@ -1,6 +1,5 @@
 ---
-import { getImage } from "astro:assets";
-import { resolveImage } from "@/lib/images";
+import { getOptimizedSrc } from "@/lib/images";
 import { preventPunctuationWrap } from "@/lib/typography";
 
 interface Props {
@@ -25,17 +24,7 @@ const formattedDate = new Intl.DateTimeFormat(dateLocale, {
   year: "numeric",
 }).format(date);
 
-async function resolveBackgroundUrl(path: string | undefined): Promise<string | undefined> {
-  if (!path) return undefined;
-  if (path.startsWith("/images/")) return path;
-
-  const resolved = resolveImage(path);
-  if (resolved) return (await getImage({ src: resolved, width: 1920 })).src;
-
-  return path.startsWith("/") ? path : undefined;
-}
-
-const desktopBg = await resolveBackgroundUrl(backgroundImage);
+const desktopBg = await getOptimizedSrc(backgroundImage, { width: 1920 });
 ---
 
 <section class="post-hero">
