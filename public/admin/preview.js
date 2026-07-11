@@ -444,6 +444,66 @@
     );
   };
 
+  const normalizeImagePath = (value) => {
+    if (!value) return "";
+    const path = String(value);
+    const match = path.match(/(?:\.\.\/)*assets\/images\/(?:wp\/)?(.+)$/);
+    if (match) return `/images/wp/${match[1]}`;
+    return path;
+  };
+
+  const formatDate = (value) => {
+    if (!value) return "";
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return new Intl.DateTimeFormat("fr-FR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    }).format(date);
+  };
+
+  const BlogPreview = ({ entry, widgetFor, getAsset }) => {
+    const data = entry.get("data");
+    const title = data.get("title") || "";
+    const excerpt = data.get("excerpt") || "";
+    const date = data.get("date");
+    const image = asset(getAsset, normalizeImagePath(data.get("image")));
+    const tags = toJs(data.get("tags"), []);
+
+    return h(
+      "main",
+      { className: "cms-preview-blog" },
+      h(
+        "section",
+        {
+          className: "cms-preview-post-hero",
+          style: image ? { backgroundImage: `url("${image}")` } : undefined,
+        },
+        h(
+          "div",
+          { className: "cms-preview-post-hero-content" },
+          date && h("p", { className: "cms-preview-post-hero-meta" }, formatDate(date)),
+          h("h1", null, title)
+        )
+      ),
+      h(
+        "article",
+        { className: "cms-preview-post" },
+        tags.length > 0 &&
+          h(
+            "ul",
+            { className: "cms-preview-post-tags" },
+            tags.map((tag) => h("li", { key: tag }, h("span", null, tag)))
+          ),
+        excerpt && h("p", { className: "cms-preview-post-excerpt" }, excerpt),
+        h("div", { className: "prose" }, widgetFor("body"))
+      )
+    );
+  };
+
+  window.CMS.registerPreviewStyle("/admin/preview-blog.css");
+  window.CMS.registerPreviewTemplate("blog", BlogPreview);
   window.CMS.registerPreviewTemplate("home", HomePreview);
   window.CMS.registerPreviewTemplate("home_en", HomePreview);
 })();
