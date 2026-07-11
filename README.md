@@ -49,7 +49,6 @@ docs/                  Guide CMS, checklist SEO, redirections
 |---|---|---|
 | Articles de blog | `src/content/blog/*.md` | Création libre |
 | Pages | `src/content/pages/*.md` | Modification uniquement |
-| Coordonnées & réglages | `src/content/settings/global.json` | Champs contrôlés |
 | Page d'accueil | `src/content/settings/home.json` | Sections contrôlées |
 | Menu | `src/content/settings/navigation.json` | Liste contrôlée |
 | Pied de page | `src/content/settings/footer.json` | Champs contrôlés |

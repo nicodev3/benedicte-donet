@@ -2,13 +2,13 @@
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
-import { getGlobalSettings } from "@/lib/settings";
+import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
-const global = await getGlobalSettings(locale);
+const global = getSiteGlobal(locale);
 const formLabels =
   locale === "fr"
     ? {

@@ -58,26 +58,11 @@ const products = defineCollection({
 });
 
 /**
- * Réglages globaux et page d'accueil (fichiers JSON contrôlés).
+ * Réglages page d'accueil (fichiers JSON contrôlés via Decap CMS).
  */
 const settings = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/settings" }),
-  schema: z.union([
-    // global.json
-    z.object({
-      siteName: z.string(),
-      baseline: z.string(),
-      defaultSeoTitle: z.string(),
-      defaultSeoDescription: z.string(),
-      email: z.string(),
-      phone: z.string(),
-      appointmentUrl: z.string(),
-      instagramUrl: z.string().optional(),
-      facebookUrl: z.string().optional(),
-      area: z.string().optional(),
-    }),
-    // home.json
-    z.object({
+  schema: z.object({
       hero: z.object({
         title: z.string(),
         subtitle: z.string(),
@@ -153,7 +138,6 @@ const settings = defineCollection({
       seoTitle: z.string().optional(),
       seoDescription: z.string().optional(),
     }),
-  ]),
 });
 
 export const collections = { pages, blog, products, settings };

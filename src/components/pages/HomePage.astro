@@ -9,7 +9,8 @@ import QuoteBlock from "@/components/sections/QuoteBlock.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
 import ContactBlock from "@/components/sections/ContactBlock.astro";
 import NewsletterBlock from "@/components/sections/NewsletterBlock.astro";
-import { getHomeSettings, getGlobalSettings } from "@/lib/settings";
+import { getHomeSettings } from "@/lib/settings";
+import { getSiteGlobal } from "@/site.config";
 import { localizedPath, type Locale } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 
@@ -19,7 +20,7 @@ interface Props {
 
 const { locale = "fr" } = Astro.props;
 const home = await getHomeSettings(locale);
-const global = await getGlobalSettings(locale);
+const global = getSiteGlobal(locale);
 const t = useTranslations(locale);
 const serviceCards = home.services.cards.map((card) => ({
   ...card,

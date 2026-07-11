@@ -6,19 +6,6 @@ import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
  * La validation Zod est faite par la collection `settings` au build.
  */
 
-export interface GlobalSettings {
-  siteName: string;
-  baseline: string;
-  defaultSeoTitle: string;
-  defaultSeoDescription: string;
-  email: string;
-  phone: string;
-  appointmentUrl: string;
-  instagramUrl?: string;
-  facebookUrl?: string;
-  area?: string;
-}
-
 export interface HomeSettings {
   hero: {
     title: string;
@@ -90,7 +77,5 @@ async function getSettings<T>(id: string, locale: Locale = DEFAULT_LOCALE): Prom
   return entry.data as T;
 }
 
-export const getGlobalSettings = (locale?: Locale) =>
-  getSettings<GlobalSettings>("global", locale);
 export const getHomeSettings = (locale?: Locale) =>
   getSettings<HomeSettings>("home", locale);

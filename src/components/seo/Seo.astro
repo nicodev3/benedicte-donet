@@ -1,8 +1,7 @@
 ---
-import { SITE } from "@/site.config";
+import { SITE, getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { resolveSeoImagePath } from "@/lib/images";
-import { getGlobalSettings } from "@/lib/settings";
 import { localeToSchemaLanguage } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
 
@@ -30,13 +29,13 @@ const {
 
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const locale = getLocaleFromPath(Astro.url.pathname);
-const global = await getGlobalSettings(locale);
+const global = getSiteGlobal(locale);
 const cleanTitle = title?.trim();
 const cleanDescription =
-  description?.trim() || global.defaultSeoDescription || SITE.defaultDescription;
+  description?.trim() || global.defaultSeoDescription;
 const fullTitle = cleanTitle
   ? `${cleanTitle} | ${SITE.name}`
-  : global.defaultSeoTitle || SITE.defaultTitle;
+  : global.defaultSeoTitle;
 const ogImagePath = resolveSeoImagePath(image);
 const ogImage = ogImagePath ? new URL(ogImagePath, SITE.url).href : undefined;
 const t = useTranslations(locale);

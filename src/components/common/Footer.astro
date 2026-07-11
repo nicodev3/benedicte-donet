@@ -3,14 +3,14 @@ import Container from "./Container.astro";
 import Button from "./Button.astro";
 import SiteImage from "./SiteImage.astro";
 import SocialIcon from "./SocialIcon.astro";
-import { getGlobalSettings } from "@/lib/settings";
+import { getSiteGlobal } from "@/site.config";
 import { getFooterContent } from "@/lib/footer";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
-const global = await getGlobalSettings(locale);
+const global = getSiteGlobal(locale);
 const footer = getFooterContent(locale);
 
 const year = new Date().getFullYear();

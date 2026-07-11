@@ -3,7 +3,7 @@ import Container from "./Container.astro";
 import Button from "./Button.astro";
 import SiteImage from "./SiteImage.astro";
 import { ChevronDown, Menu, X } from "@lucide/astro";
-import { getGlobalSettings } from "@/lib/settings";
+import { getSiteGlobal } from "@/site.config";
 import { getNavigationItems } from "@/lib/navigation";
 import {
   alternateLocalePath,
@@ -16,7 +16,7 @@ import { useTranslations } from "@/lib/translations";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
-const global = await getGlobalSettings(locale);
+const global = getSiteGlobal(locale);
 const items = getNavigationItems(locale);
 
 const currentPath = Astro.url.pathname;

@@ -9,7 +9,7 @@ import PostHero from "@/components/sections/PostHero.astro";
 import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
 import { getRelatedPosts } from "@/lib/blog";
-import { getGlobalSettings } from "@/lib/settings";
+import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { slugifyTag } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
@@ -33,7 +33,7 @@ const {
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
-const global = await getGlobalSettings(locale);
+const global = getSiteGlobal(locale);
 
 const breadcrumbs = buildBreadcrumbs(Astro.url.pathname, title, undefined, {
   label: "Blog",

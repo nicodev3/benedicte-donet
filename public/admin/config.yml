@@ -180,33 +180,6 @@ collections:
   - name: "settings"
     label: "Réglages du site"
     files:
-      - name: "global"
-        label: "Coordonnées & réglages généraux"
-        file: "src/content/settings/global.json"
-        fields: &global_settings_fields
-          - { label: "Nom du site", name: "siteName", widget: "string" }
-          - { label: "Sous-titre / baseline", name: "baseline", widget: "string" }
-          - label: "Titre SEO par défaut"
-            name: "defaultSeoTitle"
-            widget: "string"
-            hint: "Utilisé quand une page n'a pas de titre SEO spécifique."
-          - label: "Meta description par défaut"
-            name: "defaultSeoDescription"
-            widget: "text"
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Téléphone", name: "phone", widget: "string" }
-          - label: "Lien de prise de rendez-vous (Doctolib)"
-            name: "appointmentUrl"
-            widget: "string"
-            hint: "Lien complet vers votre page Doctolib."
-          - { label: "Instagram", name: "instagramUrl", widget: "string", required: false }
-          - { label: "Facebook", name: "facebookUrl", widget: "string", required: false }
-          - label: "Zone d'activité"
-            name: "area"
-            widget: "string"
-            required: false
-            hint: "Ex : Téléconsultation en visio (Zoom / Doctolib)"
-
       - name: "home"
         label: "Page d'accueil"
         file: "src/content/settings/home.json"
@@ -372,11 +345,6 @@ collections:
             name: "seoDescription"
             widget: "text"
             required: false
-
-      - name: "global_en"
-        label: "EN — Coordonnées & réglages généraux"
-        file: "src/content/settings/global.en.json"
-        fields: *global_settings_fields
 
       - name: "home_en"
         label: "EN — Page d'accueil"

@@ -45,11 +45,6 @@ nouvelle page, contactez votre webmaster.
    accompagnements, étapes de prise de rendez-vous, citation, avis, etc.
 3. Enregistrez puis publiez.
 
-## Modifier vos coordonnées
-
-Menu **Réglages du site** → **Coordonnées & réglages généraux** :
-téléphone, email, lien Doctolib, réseaux sociaux.
-
 ## Ajouter une image
 
 Dans n'importe quel champ image ou dans le contenu d'un article :
