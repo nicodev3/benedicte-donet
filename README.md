@@ -37,7 +37,7 @@ public/images/wp/      Médias migrés depuis WordPress
 public/images/uploads/ Médias ajoutés par la cliente via le CMS
 src/content/pages/     Pages éditables (Markdown)
 src/content/blog/      Articles de blog (Markdown)
-src/content/settings/  Réglages JSON (global, home, navigation, footer)
+src/content/pages/  Pages Markdown (dont accueil.*.md)
 src/content.config.ts  Schémas Zod des collections
 src/site.config.ts     Configuration technique du site
 docs/                  Guide CMS, checklist SEO, redirections
@@ -49,7 +49,7 @@ docs/                  Guide CMS, checklist SEO, redirections
 |---|---|---|
 | Articles de blog | `src/content/blog/*.md` | Création libre |
 | Pages | `src/content/pages/*.md` | Modification uniquement |
-| Page d'accueil | `src/content/settings/home.json` | Sections contrôlées |
+| Pages (dont accueil) | `src/content/pages/*.md` | Modification uniquement |
 | Menu | `src/content/settings/navigation.json` | Liste contrôlée |
 | Pied de page | `src/content/settings/footer.json` | Champs contrôlés |
 

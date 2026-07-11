@@ -3,7 +3,7 @@ import type { Locale } from "@/lib/i18n";
 /**
  * Configuration technique du site.
  * Coordonnées et réglages généraux (non éditables via Decap CMS).
- * Les contenus éditables par la cliente sont dans src/content/settings/ (home).
+ * Les contenus éditables par la cliente sont dans src/content/pages/ et src/content/blog/.
  */
 export const SITE = {
   name: "Bénédicte Donet — Psychologue en ligne",

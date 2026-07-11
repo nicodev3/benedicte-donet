@@ -173,18 +173,14 @@ collections:
         i18n: duplicate
         default: false
         hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer une page sans en parler à votre webmaster."
-
-  # ------------------------------------------------------------------
-  # RÉGLAGES — fichiers uniques contrôlés
-  # ------------------------------------------------------------------
-  - name: "settings"
-    label: "Réglages du site"
-    files:
-      - name: "home"
-        label: "Page d'accueil"
-        file: "src/content/settings/home.json"
-        preview_path: "/"
-        fields: &home_settings_fields
+      - { label: "Type de page", name: "pageType", widget: "hidden", default: "page", i18n: duplicate }
+      - label: "Page d'accueil"
+        name: "home"
+        widget: "object"
+        required: false
+        collapsed: true
+        hint: "Réservé à la page d'accueil. Laisser vide pour les autres pages."
+        fields: &home_page_fields
           - label: "Bandeau principal (haut de page)"
             name: "hero"
             widget: "object"
@@ -345,9 +341,3 @@ collections:
             name: "seoDescription"
             widget: "text"
             required: false
-
-      - name: "home_en"
-        label: "EN — Page d'accueil"
-        file: "src/content/settings/home.en.json"
-        preview_path: "/en/"
-        fields: *home_settings_fields

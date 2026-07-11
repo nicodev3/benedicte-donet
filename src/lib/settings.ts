@@ -2,8 +2,7 @@ import { getEntry } from "astro:content";
 import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
 
 /**
- * Accès typé aux fichiers de réglages (src/content/settings/*.json).
- * La validation Zod est faite par la collection `settings` au build.
+ * Accès typé au contenu de la page d'accueil (src/content/pages/accueil.*.md).
  */
 
 export interface HomeSettings {
@@ -69,13 +68,17 @@ export interface HomeSettings {
   seoDescription?: string;
 }
 
-async function getSettings<T>(id: string, locale: Locale = DEFAULT_LOCALE): Promise<T> {
-  const localizedId = locale === DEFAULT_LOCALE ? id : `${id}${locale}`;
-  const entry =
-    (await getEntry("settings", localizedId)) ?? (await getEntry("settings", id));
-  if (!entry) throw new Error(`Réglages introuvables : ${id}.json`);
-  return entry.data as T;
-}
+const HOME_PAGE_IDS: Record<Locale, string> = {
+  fr: "accueilfr",
+  en: "accueilen",
+};
 
-export const getHomeSettings = (locale?: Locale) =>
-  getSettings<HomeSettings>("home", locale);
+export async function getHomeSettings(
+  locale: Locale = DEFAULT_LOCALE
+): Promise<HomeSettings> {
+  const entry = await getEntry("pages", HOME_PAGE_IDS[locale]);
+  if (!entry || !("home" in entry.data)) {
+    throw new Error(`Page d'accueil introuvable pour la locale « ${locale} ».`);
+  }
+  return entry.data.home as HomeSettings;
+}
