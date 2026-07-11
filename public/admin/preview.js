@@ -66,16 +66,23 @@
       )
     );
 
+  const getHomeContent = (data) => {
+    const nested = toJs(data.get("home"), null);
+    if (nested) return nested;
+    return toJs(data, {});
+  };
+
   const HomePreview = ({ entry, getAsset }) => {
     const data = entry.get("data");
-    const hero = toJs(data.get("hero"), {});
-    const intro = toJs(data.get("intro"), {});
-    const whyOnline = toJs(data.get("whyOnline"), {});
-    const services = toJs(data.get("services"), {});
-    const appointment = toJs(data.get("appointment"), {});
-    const masterclass = toJs(data.get("masterclass"), {});
-    const quote = toJs(data.get("quote"), {});
-    const reviews = toJs(data.get("reviews"), {});
+    const content = getHomeContent(data);
+    const hero = content.hero || {};
+    const intro = content.intro || {};
+    const whyOnline = content.whyOnline || {};
+    const services = content.services || {};
+    const appointment = content.appointment || {};
+    const masterclass = content.masterclass || {};
+    const quote = content.quote || {};
+    const reviews = content.reviews || {};
     const cards = services.cards || [];
     const steps = appointment.steps || [];
     const reviewItems = reviews.items || [];
@@ -473,7 +480,7 @@
 
     return h(
       "main",
-      { className: "cms-preview-blog" },
+      { className: "cms-preview-content cms-preview-blog" },
       h(
         "section",
         {
@@ -502,8 +509,56 @@
     );
   };
 
-  window.CMS.registerPreviewStyle("/admin/preview-blog.css");
+  const PagePreview = ({ entry, widgetFor, getAsset }) => {
+    const data = entry.get("data");
+    const pageType = data.get("pageType");
+
+    if (pageType === "home" || data.get("home")) {
+      return h(HomePreview, { entry, getAsset });
+    }
+
+    const title = data.get("title") || "";
+    const heroTitle = data.get("heroTitle") || title;
+    const description = data.get("description") || "";
+    const image = asset(getAsset, normalizeImagePath(data.get("image")));
+    const hasHero = Boolean(image);
+
+    return h(
+      "main",
+      { className: "cms-preview-content cms-preview-page" },
+      hasHero
+        ? h(
+            "section",
+            {
+              className: "cms-preview-page-hero",
+              style: { backgroundImage: `url("${image}")` },
+            },
+            h(
+              "div",
+              { className: "cms-preview-page-hero-content" },
+              description &&
+                h("p", { className: "cms-preview-page-hero-subtitle" }, description),
+              h("h1", null, heroTitle)
+            )
+          )
+        : h(
+            "section",
+            { className: "cms-preview-page-header" },
+            h("h1", null, title),
+            description &&
+              h("p", { className: "cms-preview-page-description" }, description)
+          ),
+      h(
+        "article",
+        { className: "cms-preview-page-body" },
+        h("div", { className: "prose prose-wide" }, widgetFor("body"))
+      )
+    );
+  };
+
+  window.CMS.registerPreviewStyle("/admin/preview-content.css");
   window.CMS.registerPreviewTemplate("blog", BlogPreview);
+  window.CMS.registerPreviewTemplate("pages", PagePreview);
   window.CMS.registerPreviewTemplate("home", HomePreview);
   window.CMS.registerPreviewTemplate("home_en", HomePreview);
 })();
