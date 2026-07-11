@@ -30,8 +30,12 @@ import { getContentSlug, getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 import type { CollectionEntry } from "astro:content";
 
+type StandardPageEntry = Omit<CollectionEntry<"pages">, "data"> & {
+  data: Exclude<CollectionEntry<"pages">["data"], { pageType: "home" }>;
+};
+
 interface Props {
-  page: CollectionEntry<"pages">;
+  page: StandardPageEntry;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -39,10 +43,6 @@ const { page, structuredData } = Astro.props;
 const { title, heroTitle, description, image, seoTitle, seoDescription } = page.data;
 const hasHero = Boolean(image);
 const pageSlug = getContentSlug(page.filePath, page.id);
-const isWideContent =
-  pageSlug === "psychotherapie" ||
-  pageSlug === "phototherapie" ||
-  pageSlug === "a-propos";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
@@ -154,8 +154,8 @@ const combinedStructuredData = [
     )
   }
 
-  <Container wide={isWideContent}>
-    <article class:list={["prose", { "prose-wide": isWideContent }]}>
+  <Container wide>
+    <article class="prose prose-wide">
       <slot />
     </article>
   </Container>
