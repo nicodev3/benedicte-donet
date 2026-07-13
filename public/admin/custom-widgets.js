@@ -1,8 +1,7 @@
-(function registerCustomWidgets() {
-  const h = window.h || (window.React && window.React.createElement);
-
-  if (!window.CMS || !h) {
-    window.setTimeout(registerCustomWidgets, 50);
+// Configure un media handler qui normalise les chemins d'images
+(function setupImagePathNormalization() {
+  if (!window.CMS) {
+    window.setTimeout(setupImagePathNormalization, 50);
     return;
   }
 
@@ -21,83 +20,38 @@
     return path;
   };
 
-  const resolvePreviewImageSrc = (src, getAsset) => {
-    if (!src) return src;
-    const path = String(src).trim();
-    if (/^(?:blob:|data:|https?:)/.test(path)) return path;
+  // Inject global stylesheet pour corriger l'affichage
+  const style = document.createElement("style");
+  style.textContent = `
+    /* Forcer le chargement des images via les URLs normalisées */
+    [class*="ImageWrapper"] img,
+    [class*="ImageControl"] img {
+      max-width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+    }
+  `;
+  document.head.appendChild(style);
 
-    if (getAsset) {
-      const resolved = getAsset(path);
-      if (resolved && resolved.toString) {
-        const assetUrl = resolved.toString();
-        if (assetUrl) return assetUrl;
+  // Après que Decap soit complètement chargé, on intercepte les images
+  const checkAndFixImages = () => {
+    // Trouver tous les éléments image
+    document.querySelectorAll("img").forEach((img) => {
+      const src = img.getAttribute("src");
+      if (src) {
+        const normalized = normalizeImagePath(src);
+        if (normalized !== src && !normalized.startsWith("blob:") && !normalized.startsWith("data:")) {
+          img.setAttribute("src", normalized);
+        }
       }
-    }
-
-    return normalizeImagePath(path);
-  };
-
-  const ImageControl = ({ value, onChange, onValidate, classNameWrapper, imageKey, t, field, forID }) => {
-    return h(
-      "div",
-      { className: classNameWrapper },
-      h("input", {
-        id: forID,
-        type: "text",
-        value: value || "",
-        onChange: (e) => onChange(e.target.value),
-        placeholder: "Chemin de l'image ou URL",
-        style: {
-          width: "100%",
-          padding: "0.5rem",
-          borderRadius: "4px",
-          border: "1px solid #ccc",
-        },
-      })
-    );
-  };
-
-  const ImagePreview = ({ value, getAsset }) => {
-    if (!value) {
-      return h(
-        "div",
-        {
-          style: {
-            padding: "2rem",
-            textAlign: "center",
-            color: "#999",
-            border: "2px dashed #ddd",
-            borderRadius: "4px",
-            backgroundColor: "#f9f9f9",
-          },
-        },
-        "Aucune image sélectionnée"
-      );
-    }
-
-    const src = resolvePreviewImageSrc(value, getAsset);
-    if (!src) {
-      return h(
-        "div",
-        { style: { padding: "1rem", color: "#999" } },
-        "Impossible de résoudre le chemin de l'image"
-      );
-    }
-
-    return h("img", {
-      src,
-      alt: "Aperçu de l'image",
-      style: {
-        maxWidth: "100%",
-        maxHeight: "400px",
-        objectFit: "contain",
-        borderRadius: "4px",
-      },
-      onError: () => {
-        console.warn("Failed to load image:", src);
-      },
     });
   };
 
-  window.CMS.registerWidget("image", ImageControl, ImagePreview);
+  // Exécuter la vérification périodiquement et après les changements
+  setInterval(checkAndFixImages, 2000);
+  document.addEventListener("change", checkAndFixImages, true);
+  document.addEventListener("input", checkAndFixImages, true);
+
+  // Exécution initiale
+  setTimeout(checkAndFixImages, 500);
 })();
