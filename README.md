@@ -48,7 +48,7 @@ docs/                  Guide CMS, checklist SEO, redirections
 - **Catégories** : `ui/`, `heroes/`, `backgrounds/`, `portraits/`, `phototherapie/`, `illustrations/`, `products/`, `stock/`
 - **Format** : kebab-case, minuscules, sans accents — `{type}-{sujet}[-{variant}].{ext}`
 - **Variantes** : `-01`, `-02` ou `-desktop`, `-mobile`
-- **CMS** : nouveaux uploads dans `src/assets/images/uploads/` (optimisés au prochain build)
+- **CMS** : bibliothèque dans `src/assets/images/` (uploads à la racine ou dans `uploads/`, optimisés au build)
 
 ## Contenu éditable par la cliente (Decap CMS)
 
