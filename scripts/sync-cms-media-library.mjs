@@ -15,6 +15,7 @@ const root = join(fileURLToPath(import.meta.url), "../..");
 const assetsRoot = join(root, "src/assets/images");
 const assetsLibrary = join(assetsRoot, "cms-library");
 const publicLibrary = join(root, "public/images/cms-library");
+const publicImages = join(root, "public/images");
 
 const imageExt = /\.(jpe?g|png|gif|webp|avif|svg)$/i;
 const skipDirs = new Set(["cms-library", "uploads"]);
@@ -35,11 +36,18 @@ function linkLibraries(linkName, category, file) {
   const assetsTarget = join("..", category, file);
   symlinkSync(assetsTarget, join(assetsLibrary, linkName));
 
-  // Copier le fichier réel dans public/ au lieu de créer un symlink
+  // Copier le fichier réel dans public/images/cms-library/ avec le nom préfixé
   // (les symlinks ne fonctionnent pas en HTTP pour Decap CMS)
   const publicSource = join(assetsRoot, category, file);
   const publicDest = join(publicLibrary, linkName);
   copyFileSync(publicSource, publicDest);
+
+  // Copier aussi dans public/images/ avec la structure d'origine
+  // (pour que les paths relatifs comme ../../assets/images/category/file se résolvent correctement)
+  const categoryDir = join(publicImages, category);
+  mkdirSync(categoryDir, { recursive: true });
+  const publicImagesDest = join(categoryDir, file);
+  copyFileSync(publicSource, publicImagesDest);
 }
 
 clearLibrary(assetsLibrary);
