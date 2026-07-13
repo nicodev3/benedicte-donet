@@ -25,10 +25,10 @@ site_url: https://benedicte-donet.pages.dev
 display_url: https://benedicte-donet.pages.dev
 logo_url: /images/ui/logo-benedicte-donet.png
 
-# Bibliothèque : tout src/assets/images/ (sous-dossiers inclus).
-# Les nouveaux uploads sont enregistrés à la racine de ce dossier.
-media_folder: "src/assets/images"
-public_folder: "../../assets/images"
+# Decap ne liste pas les sous-dossiers : bibliothèque plate (liens vers les images).
+# Régénérer après ajout d'images : npm run sync:cms-media
+media_folder: "src/assets/images/cms-library"
+public_folder: "../../assets/images/cms-library"
 
 # Brouillons validés avant publication
 publish_mode: editorial_workflow

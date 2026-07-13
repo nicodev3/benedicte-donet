@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run sync:cms-media && astro build",
+    "sync:cms-media": "node scripts/sync-cms-media-library.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "pages:dev": "npm run build && wrangler pages dev dist"
