@@ -6,14 +6,14 @@ tags:
   - "Trauma"
 date: 2024-01-30T12:07:00Z
 updated: 2026-06-08T12:32:06Z
-image: "../../assets/images/stock/stock-relation-couple.jpg"
+image: "/images/stock/stock-relation-couple.jpg"
 imageAlt: "trauma and romantic relationship"
 seoTitle: "Trauma and romantic relationships: understanding the impact to heal better"
 seoDescription: "Trauma leaves a lasting imprint on the human psyche, influencing not only our individual well-being but also our intimate relationships. As a clinical psychologist, I have often observed how trauma can weave invisible threads into the fabric of romantic relationships. In this article, we will explore how trauma can influence these relationships, the challenges that arise, and how a deeper understanding can guide us towards individual and relational healing."
 draft: false
 ---
 
-![Couple in conversation, illustration of relational trauma](../../assets/images/stock/stock-relation-couple.jpg)
+![Couple in conversation, illustration of relational trauma](/images/stock/stock-relation-couple.jpg)
 
 Trauma leaves a lasting imprint on our psyche. It influences not only our personal well-being, but also the way we build our romantic relationships.  
 As a clinical psychologist, I support people whose past wounds come to impact their emotional bonds.  
@@ -36,7 +36,7 @@ For example, some people develop a **fear of rejection**, others a constant need
 
 👉 [Also worth reading: understanding attachment styles](/en/comment-te-relies-tu-aux-autres/)
 
-![Person alone, symbolising solitude after relational trauma](../../assets/images/stock/stock-solitude.jpg)
+![Person alone, symbolising solitude after relational trauma](/images/stock/stock-solitude.jpg)
 
 ## **The effects of trauma on trust and intimacy**
 

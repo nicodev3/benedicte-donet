@@ -7,7 +7,7 @@ tags:
   - "Théorie de l'attachement"
 date: 2023-08-16T15:16:41Z
 updated: 2026-06-08T12:21:34Z
-image: "../../assets/images/illustrations/illustration-lien-aux-autres.png"
+image: "/images/illustrations/illustration-lien-aux-autres.png"
 imageAlt: "attachement connexion aux autres"
 seoTitle: "Comment te relies-tu aux autres ?"
 seoDescription: "La manière dont nous établissons des liens les uns avec les autres exerce une influence considérable sur notre vie et notre bien-être. Pour discuter de l’attachement, nous pouvons explorer différents modèles de compréhension."

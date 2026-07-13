@@ -10,7 +10,7 @@ order: 4
 draft: false
 ---
 
-![photothérapeute benedicte donet séance photo confiance en soi](../../assets/images/portraits/portrait-autoportrait.png)
+![photothérapeute benedicte donet séance photo confiance en soi](/images/portraits/portrait-autoportrait.png)
 
 ## A propos
 
@@ -26,16 +26,16 @@ Dans une société qui nous pousse instinctivement à juger et à rejeter certai
 
 [Découvrir les options](#option)
 
-![Séance photo photothérapie — portrait en extérieur](../../assets/images/phototherapie/photo-phototherapie-01.jpg)
-![Séance photo confiance en soi — portrait naturel](../../assets/images/phototherapie/photo-phototherapie-02.jpg)
-![Photothérapie — mise en lumière de la beauté intérieure](../../assets/images/phototherapie/photo-phototherapie-03.jpg)
-![Séance photo bienveillance et amour de soi](../../assets/images/phototherapie/photo-phototherapie-04.jpg)
-![Portrait photothérapie confiance en soi](../../assets/images/phototherapie/photo-phototherapie-05.jpg)
-![Séance photo célébration du corps](../../assets/images/phototherapie/photo-phototherapie-06.jpg)
+![Séance photo photothérapie — portrait en extérieur](/images/phototherapie/photo-phototherapie-01.jpg)
+![Séance photo confiance en soi — portrait naturel](/images/phototherapie/photo-phototherapie-02.jpg)
+![Photothérapie — mise en lumière de la beauté intérieure](/images/phototherapie/photo-phototherapie-03.jpg)
+![Séance photo bienveillance et amour de soi](/images/phototherapie/photo-phototherapie-04.jpg)
+![Portrait photothérapie confiance en soi](/images/phototherapie/photo-phototherapie-05.jpg)
+![Séance photo célébration du corps](/images/phototherapie/photo-phototherapie-06.jpg)
 
 ## Mes offres de photothérapie
 
-![séance photo confiance en soi photothérapie](../../assets/images/phototherapie/photo-phototherapie-montage-01.png)
+![séance photo confiance en soi photothérapie](/images/phototherapie/photo-phototherapie-montage-01.png)
 
 ### Les graines d'amour
 
@@ -49,7 +49,7 @@ Durée : ~ **3 heures** ~
 
 Prix : **300 euros**
 
-![séance photo confiance en soi phototherapie psy](../../assets/images/phototherapie/photo-phototherapie-montage-02.png)
+![séance photo confiance en soi phototherapie psy](/images/phototherapie/photo-phototherapie-montage-02.png)
 
 ### Un jardin d'amour
 
@@ -88,7 +88,7 @@ Nous nous familiarisons avec vos aspirations et prendrons le temps d’écouter 
 Une Seconde Rencontre  
 Nous approfondirons le travail amorcé lors de notre première séance, en ouvrant un espace d’écoute pour les émotions présentes et pour la libération des blocages entravant l’amour de soi. Des méthodes variées telles que la parole, l’EMDR, la constellation familiale ou les pratiques somatiques seront proposées.
 
-![séance photo confiance en soi amour phototherapie](../../assets/images/phototherapie/photo-phototherapie-07.jpg)
+![séance photo confiance en soi amour phototherapie](/images/phototherapie/photo-phototherapie-07.jpg)
 
 Le Photoshoot  
 Pendant 2 heures, nous plongerons dans la photographie et la sensation pour explorer les thèmes abordés lors de notre rencontre. Les émotions et les états d’esprit seront accueillis avec bienveillance. Les outils utilisés incluent la méditation, la danse, la respiration, les mouvements et la parole.
@@ -96,14 +96,14 @@ Pendant 2 heures, nous plongerons dans la photographie et la sensation pour expl
 Après le photoshoot  
 Je prendrai le temps d’éditer les photos avec toute ma sensibilité et ma passion. Ce moment exceptionnel me permet souvent de découvrir des éléments qui ont enrichi notre expérience. Ce processus révélera l’évolution et mettra en lumière la personne que vous êtes. Vous recevrez une centaine de photos éditées et nous aurons une séance bilan pour intégrer les éléments du photoshoot. Je pourrai également vous offrir des axes de travail sur soi : pratiques, méditations, etc.
 
-![Galerie photothérapie — portrait expressif](../../assets/images/phototherapie/photo-phototherapie-08.jpg)
-![Galerie photothérapie — séance en lumière naturelle](../../assets/images/phototherapie/photo-phototherapie-09.jpg)
-![Galerie photothérapie — moment d'introspection](../../assets/images/phototherapie/photo-phototherapie-10.jpg)
-![Galerie photothérapie — connexion à soi](../../assets/images/phototherapie/photo-phototherapie-11.jpg)
-![Galerie photothérapie — célébration de la singularité](../../assets/images/phototherapie/photo-phototherapie-12.jpg)
-![Galerie photothérapie — amour de soi](../../assets/images/phototherapie/photo-phototherapie-13.jpg)
+![Galerie photothérapie — portrait expressif](/images/phototherapie/photo-phototherapie-08.jpg)
+![Galerie photothérapie — séance en lumière naturelle](/images/phototherapie/photo-phototherapie-09.jpg)
+![Galerie photothérapie — moment d'introspection](/images/phototherapie/photo-phototherapie-10.jpg)
+![Galerie photothérapie — connexion à soi](/images/phototherapie/photo-phototherapie-11.jpg)
+![Galerie photothérapie — célébration de la singularité](/images/phototherapie/photo-phototherapie-12.jpg)
+![Galerie photothérapie — amour de soi](/images/phototherapie/photo-phototherapie-13.jpg)
 
-![Bénédicte Donet séance photo pour avoir confiance en soi](../../assets/images/phototherapie/photo-phototherapie-14.jpg)
+![Bénédicte Donet séance photo pour avoir confiance en soi](/images/phototherapie/photo-phototherapie-14.jpg)
 
 Je suis impatiente de vous offrir l’une ou l’autre de ces expériences.  
 Les deux choix partagent les mêmes valeurs et intentions :  

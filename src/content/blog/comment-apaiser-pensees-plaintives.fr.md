@@ -6,14 +6,14 @@ tags:
   - "Psychoéducation"
 date: 2023-09-06T12:39:47Z
 updated: 2026-06-08T12:22:20Z
-image: "../../assets/images/stock/stock-pensees-apaisement-02.jpeg"
+image: "/images/stock/stock-pensees-apaisement-02.jpeg"
 imageAlt: "exercice comment arreter de se plaindre"
 seoTitle: "Comment Apaiser Nos Pensées de Plainte : Une Approche Consciente et Bienveillante"
 seoDescription: "Il est fréquent d’être envahi par des pensées de jugement concernant notre environnement ou nous-mêmes. La plainte peut être définie comme l’expression d’un mécontentement, ou même plus profondément, comme une expression vocale de la douleur. Ainsi, nos plaintes sont des moyens d’exprimer une souffrance, un mal-être, ou une difficulté."
 draft: false
 ---
 
-![Personne apaisant ses pensées négatives](../../assets/images/stock/stock-pensees-negatives.jpeg)
+![Personne apaisant ses pensées négatives](/images/stock/stock-pensees-negatives.jpeg)
 
 ll est courant d’être envahi par des pensées de plainte, que ce soit envers les autres, notre environnement ou nous-mêmes. Pourtant, apprendre à accueillir ces pensées avec curiosité et douceur peut nous permettre de réduire le stress, de mieux nous comprendre et de vivre plus sereinement.
 
@@ -33,7 +33,7 @@ Et plus cette habitude s’installe, plus elle peut nourrir **l’anxiété**. 
 
 Ces pensées ne sont pas là pour rien. Elles remplissent une fonction essentielle : **nous protéger**. Nos jugements repèrent ce qui semble menaçant – chez les autres ou en nous-mêmes. Le problème, c’est que notre cerveau ne fait pas toujours la différence entre une menace réelle et une menace perçue. **Dans les deux cas, le stress ressenti est le même**.
 
-![Illustration pour apaiser les pensées plaintives](../../assets/images/stock/stock-pensees-apaisement-02.jpeg)
+![Illustration pour apaiser les pensées plaintives](/images/stock/stock-pensees-apaisement-02.jpeg)
 
 Playing violin song behind the window with water drops on a rainy day. Sad music for travel road.
 

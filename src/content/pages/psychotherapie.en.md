@@ -10,7 +10,7 @@ order: 3
 draft: false
 ---
 
-![EMDR online psychology benedicte donet](../../assets/images/portraits/portrait-emdr-01.jpg)
+![EMDR online psychology benedicte donet](/images/portraits/portrait-emdr-01.jpg)
 
 ## I SUPPORT YOU
 
@@ -56,7 +56,7 @@ Support around sexuality
 
 In the field of sexuality, I pay particular attention to fostering a delicate exploration of past traumas, your personal journey and the impact of these experiences on the difficulties you face. Sexual disorders can take different forms, including pain during intercourse, a lack of interest or sexual desire, difficulties related to arousal or orgasm, or challenges in establishing intimate relationships, among others.
 
-![masterclass online psychology benedicte donet](../../assets/images/portraits/portrait-masterclass.jpg)
+![masterclass online psychology benedicte donet](/images/portraits/portrait-masterclass.jpg)
 
 Whatever the origins of your difficulties, known or buried, we undertake together a sensitive and caring exploration of your story, addressing the psychological and psychosomatic dimensions of the disorders you are experiencing. My interest in the delicate exploration of sexuality, often surrounded by taboos and mysteries, deeply motivates me. In the family, educational and social context, there is undeniably a **significant lack of education and transmission around sexuality**.
 
@@ -81,7 +81,7 @@ The psychotherapeutic work we undertake together aims not only to reduce symptom
 
 \* I strive to facilitate access to therapeutic support for as many people as possible. **If your personal situation makes access to therapy difficult**, I have reserved a number of places at reduced rates. Depending on your situation (student, job seeker, etc.), I would be happy to discuss fees with you before our first session. Do not hesitate to [contact me](/en/infos-pratiques/) to discuss this.
 
-![EMDR online psychology benedicte donet psychotherapist](../../assets/images/portraits/portrait-emdr-02.jpg)
+![EMDR online psychology benedicte donet psychotherapist](/images/portraits/portrait-emdr-02.jpg)
 
 ## Questions?
 

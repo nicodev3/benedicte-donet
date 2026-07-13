@@ -7,7 +7,7 @@ tags:
   - "Attachment theory"
 date: 2023-09-13T09:25:01Z
 updated: 2026-06-08T12:23:52Z
-image: "../../assets/images/illustrations/illustration-lien-aux-autres.png"
+image: "/images/illustrations/illustration-lien-aux-autres.png"
 imageAlt: "attachement connexion aux autres"
 seoTitle: "How do you connect with others?"
 seoDescription: "The way we establish connections with one another has a significant impact on our lives and well-being. To discuss attachment, we can explore different models of understanding. First and foremost, there is a model that distinguishes between secure and insecure attachment."

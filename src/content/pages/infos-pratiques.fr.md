@@ -9,7 +9,7 @@ order: 7
 draft: false
 ---
 
-![Bénédicte Donet psychologue en ligne avis](../../assets/images/portraits/portrait-infos-pratiques-02.png)
+![Bénédicte Donet psychologue en ligne avis](/images/portraits/portrait-infos-pratiques-02.png)
 
 ## Prise de rendez-vous
 

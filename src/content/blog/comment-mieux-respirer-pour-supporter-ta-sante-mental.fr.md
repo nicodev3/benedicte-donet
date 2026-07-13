@@ -8,14 +8,14 @@ tags:
   - "Santé"
 date: 2023-10-16T17:01:05Z
 updated: 2026-06-08T12:26:14Z
-image: "../../assets/images/stock/stock-respiration-consciente.jpeg"
+image: "/images/stock/stock-respiration-consciente.jpeg"
 imageAlt: "exercice pour mieux respirer"
 seoTitle: "Et si on apprenait à respirer (vraiment) ?"
 seoDescription: "Notre manière de respirer s’est détériorée au cours de notre évolution. En effet, notre cerveau a grossi, laissant ainsi moins de place pour les voies respiratoires. Notre alimentation et notre mode de vie ont également grandement influencé notre façon de respirer. Il faut savoir que de nombreuses maladies psychologiques et physiques peuvent trouver leur source dans notre façon de respirer. Cela est dû à l’effet domino : une mauvaise respiration entraîne l’apnée du sommeil, le stress, la fatigue, une pression artérielle plus élevée, etc. Cela peut même aller jusqu’à l’insomnie chronique, les troubles de l’attention, etc."
 draft: false
 ---
 
-![Personne pratiquant la respiration consciente pour la santé mentale](../../assets/images/stock/stock-respiration-consciente.jpeg)
+![Personne pratiquant la respiration consciente pour la santé mentale](/images/stock/stock-respiration-consciente.jpeg)
 
 Sprung ins wasser
 

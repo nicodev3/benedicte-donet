@@ -7,14 +7,14 @@ tags:
   - "Trauma"
 date: 2024-01-27T12:45:00Z
 updated: 2026-06-08T12:31:24Z
-image: "../../assets/images/stock/stock-traumatisme-guerison.jpg"
+image: "/images/stock/stock-traumatisme-guerison.jpg"
 imageAlt: "guérir d'un traumatisme"
 seoTitle: "Mémoire et traumatisme : comprendre leur lien pour mieux guérir"
 seoDescription: "La mémoire est un mécanisme complexe qui façonne notre compréhension du monde et influence notre comportement."
 draft: false
 ---
 
-![Illustration du lien entre traumatisme et mémoire](../../assets/images/illustrations/illustration-traumatisme-memoire.jpg)
+![Illustration du lien entre traumatisme et mémoire](/images/illustrations/illustration-traumatisme-memoire.jpg)
 
 La mémoire est un mécanisme fascinant qui influence notre comportement et façonne notre compréhension du monde. Depuis mes débuts en psychologie, ce sujet me passionne. Lorsqu’un individu traverse un événement traumatique, la mémoire réagit de façon particulière aux traumatismes, avec des effets parfois durables sur la santé mentale.
 
@@ -50,7 +50,7 @@ Comprendre comment la mémoire fonctionne après une mémoire traumatique permet
 
 Ces approches favorisent la réintégration des souvenirs dans le récit de vie, sans qu’ils dominent le présent
 
-![Fleurs, symbole de guérison après un traumatisme](../../assets/images/stock/stock-traumatisme-guerison.jpg)
+![Fleurs, symbole de guérison après un traumatisme](/images/stock/stock-traumatisme-guerison.jpg)
 
 ## 🎯 Un accompagnement thérapeutique centré sur la mémoire
 

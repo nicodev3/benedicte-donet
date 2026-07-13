@@ -6,14 +6,14 @@ tags:
   - "Trauma"
 date: 2026-06-04T09:09:20Z
 updated: 2026-06-08T12:35:28Z
-image: "../../assets/images/stock/stock-corps-meditation.jpg"
+image: "/images/stock/stock-corps-meditation.jpg"
 imageAlt: "benefits of dissociation meditation"
 seoTitle: "In praise of presence: the utterly radical act of inhabiting your body"
 seoDescription: "In this article, I want to share more intimately the journey that led me to the most salvaging act I have ever been given to experience: inhabiting my body. Whatever therapeutic techniques I study, meditation teachings I receive, or experiments I go through, I always return to my dear friend the…"
 draft: false
 ---
 
-![Mindfulness practice for inhabiting the body](../../assets/images/illustrations/illustration-pleine-conscience.jpg)
+![Mindfulness practice for inhabiting the body](/images/illustrations/illustration-pleine-conscience.jpg)
 
 In this article, I want to share more intimately the journey that led me to the most salvaging act I have ever been given to experience: inhabiting my body.
 
@@ -79,7 +79,7 @@ It may seem like a lot.
 
 And yet, today it seems astonishing to me to spend twenty-three hours of our day without fully coming to inhabit, feel, and meet our being.
 
-![Benefits of dissociation meditation](../../assets/images/stock/stock-corps-meditation.jpg)
+![Benefits of dissociation meditation](/images/stock/stock-corps-meditation.jpg)
 
 **Inhabiting the body in daily life**
 

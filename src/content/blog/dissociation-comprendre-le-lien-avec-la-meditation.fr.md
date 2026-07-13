@@ -6,14 +6,14 @@ tags:
   - "Psycho"
 date: 2024-01-25T15:27:00Z
 updated: 2026-06-08T12:30:41Z
-image: "../../assets/images/stock/stock-dissociation-meditation.jpg"
+image: "/images/stock/stock-dissociation-meditation.jpg"
 imageAlt: "Dissociation méditation bienfaits"
 seoTitle: "Dissociation et reconnexion : comment la méditation peut aider"
 seoDescription: "La dissociation, un phénomène complexe qui peut affecter la santé mentale, est souvent méconnue du grand public. En tant que psychologue, je m’intéresse particulièrement à la façon dont la méditation peut jouer un rôle essentiel dans le processus de reconnexion pour ceux qui vivent cette expérience. Dans cet article, nous explorerons la dissociation, son impact sur la vie quotidienne, et comment la méditation peut être un outil précieux pour favoriser une reconnexion profonde avec soi-même."
 draft: false
 ---
 
-![Personne en méditation, illustration de la dissociation](../../assets/images/stock/stock-dissociation-meditation.jpg)
+![Personne en méditation, illustration de la dissociation](/images/stock/stock-dissociation-meditation.jpg)
 
 La **dissociation**, un phénomène encore trop souvent mal compris, peut avoir un impact profond sur la santé mentale. En tant que psychologue clinicienne, je m’intéresse tout particulièrement aux approches douces qui permettent de favoriser la reconnexion à soi. **La méditation** se révèle être, dans de nombreux cas, un véritable outil de soutien. Explorons ensemble comment elle peut accompagner les personnes confrontées à la dissociation.
 
@@ -66,7 +66,7 @@ Quelques minutes par jour peuvent suffire à créer des **routines de présence
 
 * * *
 
-![Personne reconnectée à son corps par la méditation](../../assets/images/stock/stock-corps-meditation.jpg)
+![Personne reconnectée à son corps par la méditation](/images/stock/stock-corps-meditation.jpg)
 
 ## Un chemin doux vers la guérison
 
@@ -83,4 +83,4 @@ Je te partage ici ma [page YouTube](https://www.youtube.com/user/2abene) ou tu p
 👉 [Comprendre la mémoire traumatique](/memoire-traumatisme-guerison/)  
 👉 [Les bienfaits de la pleine conscience](/meditation-et-therapie-une-synergie-puissante/)
 
-![Paysage naturel, illustration de la présence au corps](../../assets/images/stock/stock-nature-presence.jpg)
+![Paysage naturel, illustration de la présence au corps](/images/stock/stock-nature-presence.jpg)
