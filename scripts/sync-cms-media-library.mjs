@@ -35,8 +35,11 @@ function linkLibraries(linkName, category, file) {
   const assetsTarget = join("..", category, file);
   symlinkSync(assetsTarget, join(assetsLibrary, linkName));
 
-  const publicTarget = join("../../../src/assets/images", category, file);
-  symlinkSync(publicTarget, join(publicLibrary, linkName));
+  // Copier le fichier réel dans public/ au lieu de créer un symlink
+  // (les symlinks ne fonctionnent pas en HTTP pour Decap CMS)
+  const publicSource = join(assetsRoot, category, file);
+  const publicDest = join(publicLibrary, linkName);
+  copyFileSync(publicSource, publicDest);
 }
 
 clearLibrary(assetsLibrary);
