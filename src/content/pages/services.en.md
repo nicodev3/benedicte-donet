@@ -20,7 +20,7 @@ My specialities:
 -   EMDR practice
 -   Psycho-corporeal practices
 
-![online psychologist benedicte donet](../../assets/images/portraits/portrait-teleconsultation.png)
+![online psychologist benedicte donet](/images/portraits/portrait-teleconsultation.png)
 
 ## I support you through various tools
 
@@ -44,9 +44,9 @@ The main modalities I use in my sessions are:
 
 [Find out more](/en/psychotherapie/)
 
-![online psychologist emdr](../../assets/images/illustrations/illustration-services.png)
+![online psychologist emdr](/images/illustrations/illustration-services.png)
 
-![online psychologist self-confidence](../../assets/images/phototherapie/photo-phototherapie-15.jpg)
+![online psychologist self-confidence](/images/phototherapie/photo-phototherapie-15.jpg)
 
 ## Photo-therapy
 
@@ -65,7 +65,7 @@ It is with joy that I share what I have acquired over many years of practice and
 
 [Find out more](/en/masterclass/)
 
-![online meditation programme psychologist](../../assets/images/portraits/portrait-02.jpg)
+![online meditation programme psychologist](/images/portraits/portrait-02.jpg)
 
 You think you are the wound, in reality you are the medicine that heals it. You think you are the lock on your heart, in reality you are the key that opens it.
 

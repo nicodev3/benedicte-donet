@@ -6,14 +6,14 @@ tags:
   - "Trauma"
 date: 2023-10-30T07:34:27Z
 updated: 2026-06-08T12:29:12Z
-image: "../../assets/images/stock/stock-relation-argent-reflexion.jpg"
+image: "/images/stock/stock-relation-argent-reflexion.jpg"
 imageAlt: "probleme avec l'argent psychologie relation à l'argent"
 seoTitle: "OUR RELATIONSHIP WITH MONEY"
 seoDescription: "Often, when one thinks about working with a psychologist, the idea of addressing one’s relationship with money might not immediately come to mind. However, it’s a topic that affects everyone, every day. How we feel and engage with money speaks volumes about our past experiences, what our parents and grandparents went through in terms of financial abundance or lack."
 draft: false
 ---
 
-![Pièces de monnaie, illustration de la relation à l'argent](../../assets/images/stock/stock-relation-argent-monnaie-02.jpg)
+![Pièces de monnaie, illustration de la relation à l'argent](/images/stock/stock-relation-argent-monnaie-02.jpg)
 
 # Exploring Our Relationship with Money
 
@@ -37,7 +37,7 @@ It’s not unusual to carry beliefs like:
 
 These beliefs often operate in the background until we consciously examine them.
 
-![Personne réfléchissant à sa relation avec l'argent](../../assets/images/stock/stock-relation-argent-reflexion-02.jpg)
+![Personne réfléchissant à sa relation avec l'argent](/images/stock/stock-relation-argent-reflexion-02.jpg)
 
 ## Questions to Deepen Your Awareness
 

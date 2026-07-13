@@ -9,14 +9,14 @@ tags:
   - "Relations humaines"
 date: 2023-10-23T18:08:47Z
 updated: 2026-06-08T12:27:43Z
-image: "../../assets/images/stock/stock-developpement-personnel.jpg"
+image: "/images/stock/stock-developpement-personnel.jpg"
 imageAlt: "transformation intérieure et moment présent équilibre"
 seoTitle: "Transformation intérieure et Moment présent : Trouver le Juste Équilibre"
 seoDescription: "Devons-nous nous consacrer à notre évolution personnelle, ou le secret du bonheur réside-t-il simplement dans le fait de savourer le moment présent avec joie ? À première vue, ces deux chemins semblent opposés. Et pourtant… Et si la quête constante de transformation nous empêchait de goûter à la joie authentique ? Et si, à l’inverse, la recherche continue de plaisir nous coupait de la profondeur et du sens qu’offre la croissance intérieure ?"
 draft: false
 ---
 
-![Parc verdoyant, illustration du développement personnel](../../assets/images/illustrations/illustration-seance-individuelle-psychologie.jpeg)
+![Parc verdoyant, illustration du développement personnel](/images/illustrations/illustration-seance-individuelle-psychologie.jpeg)
 
 Une question a récemment résonné en moi:  
 **Devons-nous nous consacrer à notre transformation intérieure, ou le secret du bonheur réside-t-il simplement dans le fait de savourer le moment présent avec joie ?**
@@ -27,7 +27,7 @@ Et si, à l’inverse, la recherche continue de plaisir nous coupait de la profo
 
 Explorons cela ensemble.
 
-![Moment de partage entre amis, illustration du bien-être](../../assets/images/stock/stock-bien-etre-amis.jpg)
+![Moment de partage entre amis, illustration du bien-être](/images/stock/stock-bien-etre-amis.jpg)
 
 ### Le paradoxe entre évolution et plaisir
 
@@ -55,7 +55,7 @@ Mais lorsqu’il naît de la curiosité et de la bienveillance, il devient plus 
 Il ne s’agit pas de **choisir entre joie et croissance**, mais de se demander :  
 👉 _Avec quelle qualité de présence est-ce que je cherche à évoluer ?_
 
-![Personne en réflexion sur le bonheur et le bien-être](../../assets/images/stock/stock-reflexion-bonheur.jpg)
+![Personne en réflexion sur le bonheur et le bien-être](/images/stock/stock-reflexion-bonheur.jpg)
 
 ### Observation autour de moi… et en moi
 

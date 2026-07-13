@@ -36,7 +36,7 @@ J'ai à cœur de vous transmettre les enseignements qui m'aident et aident mes p
 
 <div data-products-grid></div>
 
-![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](../../assets/images/portraits/portrait-masterclass-meditation.jpg)
+![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](/images/portraits/portrait-masterclass-meditation.jpg)
 
 ## Des questions ?
 

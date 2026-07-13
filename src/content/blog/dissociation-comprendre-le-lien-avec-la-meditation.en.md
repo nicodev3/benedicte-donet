@@ -6,14 +6,14 @@ tags:
   - "Psychology"
 date: 2024-01-25T15:27:00Z
 updated: 2026-06-08T12:30:41Z
-image: "../../assets/images/stock/stock-dissociation-meditation.jpg"
+image: "/images/stock/stock-dissociation-meditation.jpg"
 imageAlt: "Dissociation meditation benefits"
 seoTitle: "Dissociation and reconnection: how meditation can help"
 seoDescription: "Dissociation, a complex phenomenon that can affect mental health, is often little known to the general public. As a psychologist, I am particularly interested in how meditation can play an essential role in the reconnection process for those who live with this experience. In this article, we will explore dissociation, its impact on daily life, and how meditation can be a valuable tool to foster a deep reconnection with oneself."
 draft: false
 ---
 
-![Person meditating, illustration of dissociation](../../assets/images/stock/stock-dissociation-meditation.jpg)
+![Person meditating, illustration of dissociation](/images/stock/stock-dissociation-meditation.jpg)
 
 **Dissociation**, a phenomenon that is still too often misunderstood, can have a profound impact on mental health. As a clinical psychologist, I am particularly interested in gentle approaches that foster reconnection with oneself. **Meditation** proves, in many cases, to be a genuine support tool. Let us explore together how it can accompany people facing dissociation.
 
@@ -66,7 +66,7 @@ A few minutes a day can be enough to create **routines of presence**: breathing 
 
 * * *
 
-![Person reconnected to their body through meditation](../../assets/images/stock/stock-corps-meditation.jpg)
+![Person reconnected to their body through meditation](/images/stock/stock-corps-meditation.jpg)
 
 ## A gentle path towards healing
 
@@ -83,4 +83,4 @@ I share my [YouTube page](https://www.youtube.com/user/2abene) here, where you c
 👉 [Understanding traumatic memory](/en/memoire-traumatisme-guerison/)  
 👉 [The benefits of mindfulness](/en/meditation-pleine-conscience-therapie/)
 
-![Natural landscape, illustration of presence in the body](../../assets/images/stock/stock-nature-presence.jpg)
+![Natural landscape, illustration of presence in the body](/images/stock/stock-nature-presence.jpg)

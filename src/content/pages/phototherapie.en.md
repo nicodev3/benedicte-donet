@@ -10,7 +10,7 @@ order: 4
 draft: false
 ---
 
-![phototherapist benedicte donet self-confidence photo session](../../assets/images/portraits/portrait-autoportrait.png)
+![phototherapist benedicte donet self-confidence photo session](/images/portraits/portrait-autoportrait.png)
 
 ## About
 
@@ -26,16 +26,16 @@ In a society that instinctively pushes us to judge and reject certain facets of 
 
 [Discover the options](#option)
 
-![Phototherapy photo session — outdoor portrait](../../assets/images/phototherapie/photo-phototherapie-01.jpg)
-![Self-confidence photo session — natural portrait](../../assets/images/phototherapie/photo-phototherapie-02.jpg)
-![Phototherapy — highlighting inner beauty](../../assets/images/phototherapie/photo-phototherapie-03.jpg)
-![Self-love and kindness photo session](../../assets/images/phototherapie/photo-phototherapie-04.jpg)
-![Phototherapy self-confidence portrait](../../assets/images/phototherapie/photo-phototherapie-05.jpg)
-![Body celebration photo session](../../assets/images/phototherapie/photo-phototherapie-06.jpg)
+![Phototherapy photo session — outdoor portrait](/images/phototherapie/photo-phototherapie-01.jpg)
+![Self-confidence photo session — natural portrait](/images/phototherapie/photo-phototherapie-02.jpg)
+![Phototherapy — highlighting inner beauty](/images/phototherapie/photo-phototherapie-03.jpg)
+![Self-love and kindness photo session](/images/phototherapie/photo-phototherapie-04.jpg)
+![Phototherapy self-confidence portrait](/images/phototherapie/photo-phototherapie-05.jpg)
+![Body celebration photo session](/images/phototherapie/photo-phototherapie-06.jpg)
 
 ## My phototherapy offers
 
-![self-confidence photo session phototherapy](../../assets/images/phototherapie/photo-phototherapie-montage-01.png)
+![self-confidence photo session phototherapy](/images/phototherapie/photo-phototherapie-montage-01.png)
 
 ### Seeds of love
 
@@ -49,7 +49,7 @@ Through this self-confidence photo session, I will guide you to sow new seeds of
 
 Price: **300 euros**
 
-![self-confidence photo session phototherapy psy](../../assets/images/phototherapie/photo-phototherapie-montage-02.png)
+![self-confidence photo session phototherapy psy](/images/phototherapie/photo-phototherapie-montage-02.png)
 
 ### A garden of love
 
@@ -88,7 +88,7 @@ We will become familiar with your aspirations and take the time to listen to wha
 A Second Meeting  
 We will deepen the work begun during our first session, opening a space of listening for present emotions and for the release of blockages hindering self-love. Various methods such as talk therapy, EMDR, family constellation or somatic practices will be offered.
 
-![self-confidence photo session love phototherapy](../../assets/images/phototherapie/photo-phototherapie-07.jpg)
+![self-confidence photo session love phototherapy](/images/phototherapie/photo-phototherapie-07.jpg)
 
 The Photoshoot  
 For 2 hours, we will immerse ourselves in photography and sensation to explore the themes addressed during our meeting. Emotions and states of mind will be welcomed with kindness. The tools used include meditation, dance, breathing, movement and speech.
@@ -96,14 +96,14 @@ For 2 hours, we will immerse ourselves in photography and sensation to explore t
 After the photoshoot  
 I will take the time to edit the photos with all my sensitivity and passion. This exceptional moment often allows me to discover elements that enriched our experience. This process will reveal the evolution and highlight the person you are. You will receive around a hundred edited photos and we will have a review session to integrate the elements of the photoshoot. I can also offer you avenues for inner work: practices, meditations, etc.
 
-![Phototherapy gallery — expressive portrait](../../assets/images/phototherapie/photo-phototherapie-08.jpg)
-![Phototherapy gallery — session in natural light](../../assets/images/phototherapie/photo-phototherapie-09.jpg)
-![Phototherapy gallery — moment of introspection](../../assets/images/phototherapie/photo-phototherapie-10.jpg)
-![Phototherapy gallery — connection to self](../../assets/images/phototherapie/photo-phototherapie-11.jpg)
-![Phototherapy gallery — celebration of uniqueness](../../assets/images/phototherapie/photo-phototherapie-12.jpg)
-![Phototherapy gallery — self-love](../../assets/images/phototherapie/photo-phototherapie-13.jpg)
+![Phototherapy gallery — expressive portrait](/images/phototherapie/photo-phototherapie-08.jpg)
+![Phototherapy gallery — session in natural light](/images/phototherapie/photo-phototherapie-09.jpg)
+![Phototherapy gallery — moment of introspection](/images/phototherapie/photo-phototherapie-10.jpg)
+![Phototherapy gallery — connection to self](/images/phototherapie/photo-phototherapie-11.jpg)
+![Phototherapy gallery — celebration of uniqueness](/images/phototherapie/photo-phototherapie-12.jpg)
+![Phototherapy gallery — self-love](/images/phototherapie/photo-phototherapie-13.jpg)
 
-![Bénédicte Donet self-confidence photo session](../../assets/images/phototherapie/photo-phototherapie-14.jpg)
+![Bénédicte Donet self-confidence photo session](/images/phototherapie/photo-phototherapie-14.jpg)
 
 I look forward to offering you one of these experiences.  
 Both options share the same values and intentions:  

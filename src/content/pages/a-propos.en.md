@@ -9,7 +9,7 @@ order: 6
 draft: false
 ---
 
-![Bénédicte Donet, online psychologist](../../assets/images/portraits/portrait-a-propos.png)
+![Bénédicte Donet, online psychologist](/images/portraits/portrait-a-propos.png)
 
 ## Who am I?
 
@@ -50,13 +50,13 @@ I am now passionate about the idea of passing on this knowledge, practices, and 
 
 [Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
 
-![Online psychologist reviews — Bénédicte Donet](../../assets/images/portraits/portrait-infos-pratiques.png)
+![Online psychologist reviews — Bénédicte Donet](/images/portraits/portrait-infos-pratiques.png)
 
 Happiness is not acquired; it does not reside in appearances. Each of us builds it at every moment of our life with our heart.
 
 African proverb
 
-![Online psychologist about — Bénédicte Donet](../../assets/images/illustrations/illustration-a-propos-formation.png)
+![Online psychologist about — Bénédicte Donet](/images/illustrations/illustration-a-propos-formation.png)
 
 ## My training path
 

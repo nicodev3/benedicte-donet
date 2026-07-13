@@ -6,7 +6,7 @@ tags:
   - "Psychoéducation"
 date: 2023-08-16T15:15:59Z
 updated: 2026-06-08T12:19:15Z
-image: "../../assets/images/illustrations/illustration-facettes-personnalite.png"
+image: "/images/illustrations/illustration-facettes-personnalite.png"
 imageAlt: "soutien amour"
 seoTitle: "Les différentes facettes de votre être"
 seoDescription: "Une ancienne tradition raconte qu’en chacun de nous résident deux loups et que celui qui prédomine est celui que nous nourrissons. En cherchant à être bons et aimants, nous négligeons souvent de reconnaître, d’observer et de reconnaître la partie en nous qui ressent de la haine et de la séparation. Ce sont ces parties en nous qui blessent autant les autres que nous-mêmes."

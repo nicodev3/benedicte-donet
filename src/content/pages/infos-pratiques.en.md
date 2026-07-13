@@ -9,7 +9,7 @@ order: 7
 draft: false
 ---
 
-![Bénédicte Donet online psychologist reviews](../../assets/images/portraits/portrait-infos-pratiques-02.png)
+![Bénédicte Donet online psychologist reviews](/images/portraits/portrait-infos-pratiques-02.png)
 
 ## Booking an appointment
 

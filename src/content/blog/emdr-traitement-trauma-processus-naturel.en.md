@@ -7,7 +7,7 @@ tags:
   - "Trauma"
 date: 2025-12-28T03:09:14Z
 updated: 2026-06-08T12:33:58Z
-image: "../../assets/images/stock/stock-emdr-desert.jpg"
+image: "/images/stock/stock-emdr-desert.jpg"
 imageAlt: "EMDR trauma treatment"
 seoTitle: "EMDR: a natural process, not a magic solution"
 seoDescription: "EMDR deeply respects the brain's natural functioning. It imposes nothing. It does not force memories. It does not erase history. It does not take control. Contrary to certain misconceptions, EMDR is not a « magic » technique that makes trauma disappear. It is a natural neuropsychological process that sets the brain's innate information-processing mechanisms back in motion."
@@ -16,7 +16,7 @@ draft: false
 
 # **EMDR: a natural process, not a magic solution**
 
-![Desert landscape, illustration of the natural EMDR healing process](../../assets/images/stock/stock-emdr-paysage.jpg)
+![Desert landscape, illustration of the natural EMDR healing process](/images/stock/stock-emdr-paysage.jpg)
 
 **EMDR deeply respects the brain's natural functioning.**  
 It imposes nothing.  
