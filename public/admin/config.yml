@@ -23,10 +23,10 @@ i18n:
   default_locale: fr
 site_url: https://benedicte-donet.pages.dev
 display_url: https://benedicte-donet.pages.dev
-logo_url: /images/wp/logo-benedicte-donet.png
+logo_url: /images/ui/logo-benedicte-donet.png
 
-media_folder: "public/images/wp"
-public_folder: "/images/wp"
+media_folder: "src/assets/images/uploads"
+public_folder: "../../assets/images/uploads"
 
 # Brouillons validés avant publication
 publish_mode: editorial_workflow

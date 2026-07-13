@@ -457,11 +457,11 @@
     if (/^(?:blob:|data:|https?:)/.test(path)) return path;
     if (path.startsWith("/images/")) return path;
 
-    const assetsMatch = path.match(/(?:\.\.\/)*assets\/images\/(?:wp\/)?(.+)$/);
-    if (assetsMatch) return `/images/wp/${assetsMatch[1]}`;
+    const assetsMatch = path.match(/(?:\.\.\/)*assets\/images\/(.+)$/);
+    if (assetsMatch) return `/images/${assetsMatch[1]}`;
 
-    const wpMatch = path.match(/(?:^|\/)images\/wp\/(.+)$/);
-    if (wpMatch) return `/images/wp/${wpMatch[1]}`;
+    const imageMatch = path.match(/(?:^|\/)images\/(.+)$/);
+    if (imageMatch) return `/images/${imageMatch[1]}`;
 
     return path;
   };
@@ -493,7 +493,11 @@
     return function transformer(tree) {
       walkAst(tree, (node) => {
         if (node.type === "image" && node.url) {
-          node.url = normalizeImagePath(node.url);
+          const url = String(node.url);
+          // Conserver les chemins relatifs vers src/assets pour getAsset dans la preview
+          if (!/^(?:\.\.\/)*assets\/images\//.test(url)) {
+            node.url = normalizeImagePath(url);
+          }
         }
       });
       return tree;

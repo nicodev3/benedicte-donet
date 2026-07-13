@@ -1,7 +1,7 @@
 ---
 title: "PROGRAMME amour de soi : Un pas de plus vers ton monde intérieur"
 price: "465.00€ – 765.00€"
-image: "/images/wp/affiche-meditation-1.png"
+image: "/images/products/poster-meditation-01.png"
 imageAlt: "programme amour de soi meditation en ligne"
 ctaLabel: "Choix des options"
 ctaUrl: "/infos-pratiques/#form"

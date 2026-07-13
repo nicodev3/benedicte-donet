@@ -6,7 +6,7 @@ tags:
   - "Psychology"
 date: 2024-01-23T03:13:26Z
 updated: 2026-06-08T12:30:02Z
-image: "../../assets/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg"
+image: "../../assets/images/stock/stock-meditation-pleine-conscience.jpg"
 imageAlt: "mindfulness meditation therapy"
 seoTitle: "Mindfulness meditation and therapy: a powerful synergy for well-being"
 seoDescription: "In the quest for mental well-being, combining meditation and therapy offers a holistic and powerful approach to support individuals on the path of personal transformation."
@@ -31,7 +31,7 @@ In therapy, this capacity to feel without judging oneself makes it possible to g
 
 * * *
 
-![Person practising mindfulness meditation](../../assets/images/wp/AdobeStock_270347315-scaled.jpeg)
+![Person practising mindfulness meditation](../../assets/images/stock/stock-meditation-conscience.jpeg)
 
 Elderly couple blowing bubbles. Face portrait of joyous cheerful beaming contended nice-appealing loving elderly man and wife wearing funny sunglasses engaging in blowing bubbles outdoors
 

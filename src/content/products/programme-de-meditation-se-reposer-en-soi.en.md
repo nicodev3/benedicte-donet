@@ -1,7 +1,7 @@
 ---
 title: "ONLINE MEDITATION PROGRAMME: Rest Within Yourself"
 price: "150.00€"
-image: "/images/wp/se-reposer-en-soi-bis.png"
+image: "/images/products/poster-se-reposer-en-soi.png"
 imageAlt: "Rest within yourself online meditation programme"
 ctaLabel: "Order now"
 ctaUrl: "/en/infos-pratiques/#form"

@@ -6,7 +6,7 @@ tags:
   - "Psycho"
 date: 2024-01-23T03:13:26Z
 updated: 2026-06-08T12:30:02Z
-image: "../../assets/images/wp/madison-lavern-4gcqRf3-f2I-unsplash-scaled.jpg"
+image: "../../assets/images/stock/stock-meditation-pleine-conscience.jpg"
 imageAlt: "méditation pleine conscience thérapie"
 seoTitle: "Méditation pleine conscience thérapie : une synergie puissante pour le bien-être"
 seoDescription: "Dans la quête du bien-être mental, la combinaison de la méditation et de la thérapie offre une approche holistique et puissante pour accompagner les individus sur le chemin de la transformation personnelle."
@@ -31,7 +31,7 @@ En thérapie, cette capacité à ressentir sans se juger permet d’aller plus l
 
 * * *
 
-![Personne en méditation de pleine conscience](../../assets/images/wp/AdobeStock_270347315-scaled.jpeg)
+![Personne en méditation de pleine conscience](../../assets/images/stock/stock-meditation-conscience.jpeg)
 
 Elderly couple blowing bubbles. Face portrait of joyous cheerful beaming contended nice-appealing loving elderly man and wife wearing funny sunglasses engaging in blowing bubbles outdoors
 

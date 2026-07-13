@@ -7,14 +7,14 @@ tags:
   - "Trauma"
 date: 2024-01-27T12:45:00Z
 updated: 2026-06-08T12:31:24Z
-image: "../../assets/images/wp/ian-dooley-FgSyP02I0gw-unsplash-scaled.jpg"
+image: "../../assets/images/stock/stock-traumatisme-guerison.jpg"
 imageAlt: "healing from trauma"
 seoTitle: "Memory and trauma: understanding their connection to heal better"
 seoDescription: "Memory is a complex mechanism that shapes our understanding of the world and influences our behaviour."
 draft: false
 ---
 
-![Illustration of the link between trauma and memory](../../assets/images/wp/Traumatisme-et-memoire-scaled.jpg)
+![Illustration of the link between trauma and memory](../../assets/images/illustrations/illustration-traumatisme-memoire.jpg)
 
 Memory is a fascinating mechanism that influences our behaviour and shapes our understanding of the world. Since my early days in psychology, this subject has fascinated me. When an individual goes through a traumatic event, memory reacts in a particular way to trauma, with effects that can sometimes be long-lasting on mental health.
 
@@ -50,7 +50,7 @@ Understanding how memory works after traumatic encoding allows us to develop con
 
 These approaches support the reintegration of memories into the life narrative, without letting them dominate the present.
 
-![Flowers, symbol of healing after trauma](../../assets/images/wp/ian-dooley-FgSyP02I0gw-unsplash-scaled.jpg)
+![Flowers, symbol of healing after trauma](../../assets/images/stock/stock-traumatisme-guerison.jpg)
 
 ## 🎯 Therapeutic support centred on memory
 

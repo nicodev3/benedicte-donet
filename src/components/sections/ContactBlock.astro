@@ -31,7 +31,7 @@ const formLabels =
         submit: "Send",
       };
 const contactBackground = await getOptimizedBackgroundUrl(
-  "/images/wp/kien-do-NjT4O7WYmwk-unsplash-scaled.jpg.webp",
+  "/images/backgrounds/bg-contact.webp",
   1920
 );
 ---
@@ -46,11 +46,11 @@ const contactBackground = await getOptimizedBackgroundUrl(
         <h2>{t.contactBlock.title}</h2>
         <ul class="contact-list">
           <li>
-            <SiteImage class="contact-icon" src="/images/wp/whatsapp-1.svg" alt="" />
+            <SiteImage class="contact-icon" src="/images/ui/icon-whatsapp.svg" alt="" />
             <a href={`tel:${global.phone.replace(/\s/g, "")}`}>{global.phone}</a>
           </li>
           <li>
-            <SiteImage class="contact-icon" src="/images/wp/gmail-1.svg" alt="" />
+            <SiteImage class="contact-icon" src="/images/ui/icon-gmail.svg" alt="" />
             <a href={`mailto:${global.email}`}>{global.email}</a>
           </li>
           {global.area && <li class="contact-area">{global.area}</li>}

@@ -6,14 +6,14 @@ tags:
   - "Trauma"
 date: 2024-01-30T12:07:00Z
 updated: 2026-06-08T12:32:06Z
-image: "../../assets/images/wp/justin-follis-A7Um4oi-UYU-unsplash-scaled.jpg"
+image: "../../assets/images/stock/stock-relation-couple.jpg"
 imageAlt: "traumatisme et relation amoureuse"
 seoTitle: "Traumatisme et relation amoureuse : comprendre l’impact pour mieux guérir"
 seoDescription: "Les traumatismes laissent une empreinte durable sur la psyché humaine, influençant non seulement notre bien-être individuel mais également nos relations intimes. En tant que psychologue clinicienne, j’ai souvent observé comment les traumatismes peuvent tisser des fils invisibles dans le tissu des relations amoureuses. Dans cet article, nous explorerons la manière dont les traumatismes peuvent influencer ces relations, les défis qui en découlent, et comment une compréhension approfondie peut guider vers une guérison individuelle et relationnelle."
 draft: false
 ---
 
-![Couple en discussion, illustration du traumatisme relationnel](../../assets/images/wp/justin-follis-A7Um4oi-UYU-unsplash-scaled.jpg)
+![Couple en discussion, illustration du traumatisme relationnel](../../assets/images/stock/stock-relation-couple.jpg)
 
 Les traumatismes laissent une empreinte durable sur notre psychisme. Ils influencent non seulement notre bien-être personnel, mais aussi la manière dont nous construisons nos relations amoureuses.  
 En tant que psychologue clinicienne, j’accompagne des personnes dont les blessures du passé viennent impacter leurs liens affectifs.  
@@ -36,7 +36,7 @@ Par exemple, certains développent une **peur du rejet**, d’autres un besoin 
 
 👉 [À lire aussi : comprendre les styles d’attachement](/comment-te-relies-tu-aux-autres/)
 
-![Personne seule, symbolisant la solitude après un traumatisme relationnel](../../assets/images/wp/gus-moretta-BCyfpZE3aVE-unsplash-scaled.jpg)
+![Personne seule, symbolisant la solitude après un traumatisme relationnel](../../assets/images/stock/stock-solitude.jpg)
 
 ## **Les effets du traumatisme sur la confiance et l’intimité**
 

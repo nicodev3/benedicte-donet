@@ -7,7 +7,7 @@ tags:
   - "Positive psychology"
 date: 2023-09-13T12:16:13Z
 updated: 2026-06-08T12:23:15Z
-image: "../../assets/images/wp/illustration-gratitude-thailande.png"
+image: "../../assets/images/illustrations/illustration-gratitude-thailande.png"
 imageAlt: "gratitude pratiquer la gratitude"
 seoTitle: "Kob khun maak ka, Gratitude"
 seoDescription: "With hands pressed together in prayer near my chest, my gaze locked onto theirs, and my head slightly bowed, I humbly utter these words: ขอบคุณมากครับ, phonetically: Kob khun maak khrap/ka. They mean « Thank you very much » in Thai. This ritual is sacred. For a long time, living in Thailand, I didn’t fully grasp the importance of this ritual. The significance of this daily moment of gratitude."

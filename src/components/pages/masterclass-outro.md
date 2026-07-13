@@ -1,4 +1,4 @@
-![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](../../assets/images/wp/DSCF1217.jpg)
+![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](../../assets/images/portraits/portrait-masterclass-meditation.jpg)
 
 ## Des questions ?
 

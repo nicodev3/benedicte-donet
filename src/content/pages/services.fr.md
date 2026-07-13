@@ -1,7 +1,7 @@
 ---
 title: "Services"
 description: "Psychologue en ligne"
-image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg"
+image: "/images/heroes/hero-services.jpg"
 imageAlt: "Fleurs séchées — psychologue en visio"
 seoTitle: "Psychologue en ligne | Services en visio"
 seoDescription: "Consultations avec une psychologue en ligne : psychothérapie en visio, EMDR, trauma-thérapies, photothérapie, programmes et ateliers de pleine conscience."
@@ -20,7 +20,7 @@ Mes spécialités :
 -   La pratique de l’Emdr
 -   Pratiques psycho-corporelles
 
-![psychologue en visio benedicte donet](../../assets/images/wp/benedicte-Teleconsultation.png)
+![psychologue en visio benedicte donet](../../assets/images/portraits/portrait-teleconsultation.png)
 
 ## Je vous accompagne à travers divers outils
 
@@ -44,9 +44,9 @@ Les principales modalités que j’utilise dans mes séances sont :
 
 [En savoir plus](/psychotherapie/)
 
-![psychologue en visio emdr](../../assets/images/wp/psycho-services.png)
+![psychologue en visio emdr](../../assets/images/illustrations/illustration-services.png)
 
-![psychologue en visio confiance en soi](../../assets/images/wp/DSCF7418-scaled.jpg)
+![psychologue en visio confiance en soi](../../assets/images/phototherapie/photo-phototherapie-15.jpg)
 
 ## Photo-thérapie
 
@@ -65,7 +65,7 @@ C’est avec joie que je partage ce que j’ai acquis au fil de nombreuses anné
 
 [En savoir plus](/masterclass/)
 
-![programme de méditation en ligne psychologue](../../assets/images/wp/DSC07682.jpg)
+![programme de méditation en ligne psychologue](../../assets/images/portraits/portrait-02.jpg)
 
 Vous pensez être la peine, en réalité vous êtes le médicament qui la guérit. Vous pensez être la serrure de votre cœur, en réalité vous êtes la clé qui l’ouvre.
 

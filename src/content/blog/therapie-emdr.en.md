@@ -7,7 +7,7 @@ tags:
   - "Trauma"
 date: 2025-05-20T07:43:13Z
 updated: 2026-06-08T12:33:19Z
-image: "../../assets/images/wp/EMDR-therapie-scaled.jpeg"
+image: "../../assets/images/illustrations/illustration-emdr-seance.jpeg"
 imageAlt: "EMDR therapy definition"
 seoTitle: "What is EMDR therapy?"
 seoDescription: "Are you going through a difficult period, or carrying a painful experience that still seems to weigh on you? EMDR (Eye Movement Desensitization and Reprocessing) is a recognised therapeutic method that allows psychological trauma to be treated in depth. In this article, discover how this gentle yet powerful approach can help you regain more lightness and inner safety, at your own pace."
@@ -16,7 +16,7 @@ draft: false
 
 # A gentle and recognised approach
 
-![EMDR therapy session, illustration of desensitisation](../../assets/images/wp/EMDR-therapie-scaled.jpeg)
+![EMDR therapy session, illustration of desensitisation](../../assets/images/illustrations/illustration-emdr-seance.jpeg)
 
 **EMDR psychotherapy** (Eye Movement Desensitization and Reprocessing) is a psychotherapeutic approach recognised for its effectiveness in treating **psychological trauma**, **anxiety**, **phobias**, and **post-traumatic stress**.
 
@@ -52,7 +52,7 @@ Yes. Psychological care through EMDR is a safe and respectful method. Contrary t
 
 EMDR is often complemented by other tools, such as **mindfulness**, **bodywork**, or **guided breathing**, in order to support a deeper return to balance.
 
-![Diagram illustrating the EMDR reprocessing process](../../assets/images/wp/therapie-EMDR-scaled.jpeg)
+![Diagram illustrating the EMDR reprocessing process](../../assets/images/illustrations/illustration-emdr-schema.jpeg)
 
 ## In conclusion
 

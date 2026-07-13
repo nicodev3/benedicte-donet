@@ -1,7 +1,7 @@
 ---
 title: "Practical information"
 description: "Online psychologist | Bénédicte Donet"
-image: "/images/wp/hero-infos-pratiques.png"
+image: "/images/heroes/hero-infos-pratiques.png"
 imageAlt: "Bénédicte Donet, online psychologist"
 seoTitle: "Online Psychologist Consultation | Practical Info"
 seoDescription: "Practical information for booking an online psychologist consultation: session length, video setting, appointments, reimbursement and therapeutic framework."
@@ -9,7 +9,7 @@ order: 7
 draft: false
 ---
 
-![Bénédicte Donet online psychologist reviews](../../assets/images/wp/portrait-infos-pratiques-1.png)
+![Bénédicte Donet online psychologist reviews](../../assets/images/portraits/portrait-infos-pratiques-02.png)
 
 ## Booking an appointment
 

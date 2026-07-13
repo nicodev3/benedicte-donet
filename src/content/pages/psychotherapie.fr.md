@@ -2,7 +2,7 @@
 title: "Psychothérapie"
 heroTitle: "La psychothérapie"
 description: "Psychologue en ligne"
-image: "/images/wp/annie-spratt-ZUULm-nourc-unsplash.jpg.webp"
+image: "/images/heroes/hero-psychotherapie.webp"
 imageAlt: ""
 seoTitle: "Psychothérapie en ligne | EMDR, trauma et anxiété"
 seoDescription: "Séances de psychothérapie en ligne avec Bénédicte Donet, psychologue clinicienne : accompagnement du trauma, de l'anxiété, du stress post-traumatique et EMDR en visio."
@@ -10,7 +10,7 @@ order: 3
 draft: false
 ---
 
-![EMDR psychologie en ligne benedicte donet](../../assets/images/wp/DSC07154.jpg)
+![EMDR psychologie en ligne benedicte donet](../../assets/images/portraits/portrait-emdr-01.jpg)
 
 ## JE VOUS ACCOMPAGNE
 
@@ -56,7 +56,7 @@ Accompagnement autour de la sexualité
 
 Dans le domaine de la sexualité, je porte une attention particulière à favoriser une exploration délicate des traumatismes passés, de votre parcours personnel et de l’impact de ces expériences sur les difficultés que vous affrontez. Les troubles sexuels peuvent prendre différentes formes, notamment des douleurs lors des rapports, un manque d’intérêt ou de désir sexuel, des difficultés liées à l’excitation ou à l’orgasme, ou encore des défis à établir des relations intimes, entre autres.
 
-![masterclass psychologie en ligne benedicte donet](../../assets/images/wp/DSC06705.jpg)
+![masterclass psychologie en ligne benedicte donet](../../assets/images/portraits/portrait-masterclass.jpg)
 
 Quelles que soient les origines de vos difficultés, connues ou enfouies, nous entreprenons ensemble une exploration sensible et bienveillante de votre histoire, abordant ainsi les dimensions psychologiques et psychosomatiques des troubles que vous vivez. Mon intérêt pour l’exploration délicate de la sexualité, souvent entourée de tabous et de mystères, m’anime profondément. Dans le contexte familial, éducatif et social, il est indéniable qu’il existe un **manque important en matière d’éducation et de transmission sur la sexualité**.
 
@@ -81,7 +81,7 @@ Le travail psychothérapeutique que nous entreprendrons ensemble ne vise pas seu
 
 \* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](/infos-pratiques/) pour aborder ce sujet.
 
-![EMDR psychologie en ligne benedicte donet psychothérapeute](../../assets/images/wp/DSCF1201.jpg)
+![EMDR psychologie en ligne benedicte donet psychothérapeute](../../assets/images/portraits/portrait-emdr-02.jpg)
 
 ## Des questions ?
 

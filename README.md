@@ -33,8 +33,7 @@ npm run preview   # prévisualisation du build
 ```
 public/admin/          Decap CMS (index.html + config.yml)
 functions/api/         OAuth GitHub (Pages Functions : /api/auth, /api/callback)
-public/images/wp/      Médias migrés depuis WordPress
-public/images/uploads/ Médias ajoutés par la cliente via le CMS
+src/assets/images/     Médias du site (optimisés par Astro, dont uploads CMS)
 src/content/pages/     Pages éditables (Markdown)
 src/content/blog/      Articles de blog (Markdown)
 src/content/pages/  Pages Markdown (dont accueil.*.md)
@@ -42,6 +41,14 @@ src/content.config.ts  Schémas Zod des collections
 src/site.config.ts     Configuration technique du site
 docs/                  Guide CMS, checklist SEO, redirections
 ```
+
+### Convention de nommage des images
+
+- **Emplacement** : `src/assets/images/{catégorie}/` — chemins publics `/images/{catégorie}/fichier.ext`
+- **Catégories** : `ui/`, `heroes/`, `backgrounds/`, `portraits/`, `phototherapie/`, `illustrations/`, `products/`, `stock/`
+- **Format** : kebab-case, minuscules, sans accents — `{type}-{sujet}[-{variant}].{ext}`
+- **Variantes** : `-01`, `-02` ou `-desktop`, `-mobile`
+- **CMS** : nouveaux uploads dans `src/assets/images/uploads/` (optimisés au prochain build)
 
 ## Contenu éditable par la cliente (Decap CMS)
 

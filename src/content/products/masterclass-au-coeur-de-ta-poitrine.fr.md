@@ -1,7 +1,7 @@
 ---
 title: "Masterclass : AU CŒUR DE TA POITRINE"
 price: "45.00€"
-image: "/images/wp/affiche-au-coeur-de-ta-poitrine.png"
+image: "/images/products/poster-au-coeur-de-ta-poitrine.png"
 imageAlt: "méditation en ligne atelier en ligne"
 ctaLabel: "Je commande"
 ctaUrl: "/infos-pratiques/#form"

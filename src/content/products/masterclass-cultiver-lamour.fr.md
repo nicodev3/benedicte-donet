@@ -1,7 +1,7 @@
 ---
 title: "Masterclass : CULTIVER L’AMOUR"
 price: "45.00€"
-image: "/images/wp/cultiver-lamour.png"
+image: "/images/products/poster-cultiver-lamour.png"
 imageAlt: "Masterclass méditation amour cultiver amour"
 ctaLabel: "Je commande"
 ctaUrl: "/infos-pratiques/#form"

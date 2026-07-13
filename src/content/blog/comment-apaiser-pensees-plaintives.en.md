@@ -6,14 +6,14 @@ tags:
   - "Psychoeducation"
 date: 2023-09-14T12:31:49Z
 updated: 2026-06-08T12:24:32Z
-image: "../../assets/images/wp/christopher-lemercier-12yvdCiLaVE-unsplash-scaled.jpg"
+image: "../../assets/images/stock/stock-pensees-apaisement.jpg"
 imageAlt: "stop complaining"
 seoTitle: "How to Stop Complaining Thoughts: A Mindful Guide to Reclaim Your Peace"
 seoDescription: "It’s common to be inundated with judgmental thoughts about our surroundings or ourselves. Complaint can be defined as the expression of discontent or, even more deeply, as a vocal expression of pain. Thus, our complaints are ways of expressing suffering, discomfort, or difficulty."
 draft: false
 ---
 
-![Paysage apaisant, illustration pour calmer les pensées plaintives](../../assets/images/wp/christopher-lemercier-12yvdCiLaVE-unsplash-scaled.jpg)
+![Paysage apaisant, illustration pour calmer les pensées plaintives](../../assets/images/stock/stock-pensees-apaisement.jpg)
 
 It’s common to be flooded with **judgmental or complaining thoughts**, whether directed at ourselves, others, or our environment. But understanding these thoughts—and learning how to interact with them mindfully—can reduce stress, boost mental clarity, and foster emotional well-being.
 

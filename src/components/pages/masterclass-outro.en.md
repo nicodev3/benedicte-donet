@@ -1,4 +1,4 @@
-![Online meditation Masterclass Cultivating Love — Bénédicte Donet](../../assets/images/wp/DSCF1217.jpg)
+![Online meditation Masterclass Cultivating Love — Bénédicte Donet](../../assets/images/portraits/portrait-masterclass-meditation.jpg)
 
 ## Any questions?
 

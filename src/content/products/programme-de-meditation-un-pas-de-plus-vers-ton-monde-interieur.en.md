@@ -1,7 +1,7 @@
 ---
 title: "SELF-LOVE PROGRAMME: One Step Closer to Your Inner World"
 price: "465.00€ – 765.00€"
-image: "/images/wp/affiche-meditation-1.png"
+image: "/images/products/poster-meditation-01.png"
 imageAlt: "Online self-love meditation programme"
 ctaLabel: "Choose options"
 ctaUrl: "/en/infos-pratiques/#form"

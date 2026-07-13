@@ -2,7 +2,7 @@
 title: "Masterclass"
 heroTitle: "Les Masterclass"
 description: "Psychologie en ligne"
-image: "/images/wp/hero-sexualite.png"
+image: "/images/heroes/hero-masterclass.png"
 imageAlt: ""
 seoTitle: "Masterclass en ligne | Pleine conscience et psychologie"
 seoDescription: "Masterclass et programmes en ligne pour explorer la pleine conscience, le système nerveux, l'amour de soi, la méditation et la psycho-éducation."
@@ -36,7 +36,7 @@ J'ai à cœur de vous transmettre les enseignements qui m'aident et aident mes p
 
 <div data-products-grid></div>
 
-![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](../../assets/images/wp/DSCF1217.jpg)
+![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](../../assets/images/portraits/portrait-masterclass-meditation.jpg)
 
 ## Des questions ?
 

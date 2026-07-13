@@ -14,8 +14,8 @@ interface Props {
 
 const { title, steps, ctaLabel, ctaUrl } = Astro.props;
 
-const appointmentBgDesktop = await getOptimizedBackgroundUrl("/images/wp/banniere.png", 1920);
-const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/wp/Accueil-2.png", 1024);
+const appointmentBgDesktop = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-desktop.png", 1920);
+const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-mobile.png", 1024);
 ---
 
 <section class="appointment-steps" id="teleconsult">
@@ -33,7 +33,7 @@ const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/wp/Accueil-
       <div class="steps-flow">
         <div class="steps-timeline" aria-hidden="true">
           <SiteImage
-            src="/images/wp/fleche.png"
+            src="/images/ui/icon-arrow.png"
             alt=""
             width={1067}
             height={102}

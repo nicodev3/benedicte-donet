@@ -53,6 +53,8 @@ ordinateur. Conseils :
 
 - Préférez des images de moins de 500 Ko (redimensionnez avant l'envoi).
 - Donnez des noms de fichiers parlants : `seance-emdr.jpg` plutôt que `IMG_1234.jpg`.
+- Les images sont automatiquement optimisées (format WebP, taille adaptée) lors de la
+  mise en ligne du site, après publication (1 à 3 minutes).
 
 ## Bien remplir les champs SEO
 

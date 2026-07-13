@@ -5,8 +5,8 @@ home:
   hero:
     title: Online psychologist
     subtitle: Clinical psychologist via video | Trauma therapy | EMDR | Sexuality
-    backgroundImage: /images/wp/banniere-2.png
-    backgroundImageMobile: /images/wp/banniere-smartphone-accueil.png
+    backgroundImage: /images/heroes/hero-accueil-desktop.png
+    backgroundImageMobile: /images/heroes/hero-accueil-mobile.png
     primaryCtaLabel: Book an appointment
     primaryCtaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
   intro:
@@ -32,7 +32,7 @@ home:
       **I am committed to offering you a sacred therapeutic space**, where your vulnerability and trust can naturally emerge and healing is facilitated.'
     ctaLabel: Discover my practice
     ctaUrl: /a-propos/
-    image: /images/wp/bene-accueil-1.png
+    image: /images/portraits/portrait-accueil.png
   whyOnline:
     title: Why choose an online psychologist?
     text: '**Teleconsultation** offers many advantages.
@@ -44,7 +44,7 @@ home:
       You do not need to travel, which greatly simplifies booking appointments and organising our sessions. The therapeutic relationship is precious: by choosing an **online psychologist**, you can keep the same therapist regardless of your plans to move, travel, or live abroad.'
     ctaLabel: I want to know more
     ctaUrl: /infos-pratiques/
-    image: /images/wp/DSCF0359.jpg
+    image: /images/portraits/portrait-01.jpg
   services:
     title: The support I offer
     cards:
@@ -59,7 +59,7 @@ home:
       imageUrl: /services/
       linkLabel: View rates
       linkUrl: /psychotherapie/#tarifpsycho
-      image: /images/wp/fleur-sechee-1.png
+      image: /images/illustrations/illustration-fleur-sechee-01.png
       imageWidth: wide
     - title: Workshops and programmes
       intro: 'Through workshops and programmes, I offer you **transformative practices and knowledge**. Everything I share in these formats represents knowledge I consider essential for **living in harmony** with who we are. Self-knowledge and understanding our inner workings are necessary to welcome ourselves and live with greater harmony. I am happy to share what I have gained from years of **practice and research** in my areas of expertise:'
@@ -70,14 +70,14 @@ home:
       - Meditation,
       - Psycho-corporeal practices.
       url: /masterclass/
-      image: /images/wp/fleur-sechee-3.png
+      image: /images/illustrations/illustration-fleur-sechee-03.png
       imageWidth: narrow
     - title: Phototherapy
       text: Through phototherapy, I accompany you in **exploring your relationship with your body**. It is a time and space dedicated to self-love and welcoming, with kindness, what needs to be brought into the light and felt. Phototherapy allows you to explore different facets of yourself.
       url: /phototherapie/
       ctaLabel: Book an appointment
       ctaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
-      image: /images/wp/fleur-sechee-2.png
+      image: /images/illustrations/illustration-fleur-sechee-02.png
       imageWidth: wide
       titleUnderline: true
   appointment:
@@ -102,7 +102,7 @@ home:
       Through these offerings, I invite you to embark on a journey of **self-knowledge** and learning tools that help you cultivate greater harmony in your relationship with yourself and the world.'
     ctaLabel: Book now
     ctaUrl: /masterclass/
-    image: /images/wp/DSC07682.jpg
+    image: /images/portraits/portrait-02.jpg
   quote:
     text: Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it.
     author: Rumi

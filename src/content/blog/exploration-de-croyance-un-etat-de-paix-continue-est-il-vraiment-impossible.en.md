@@ -9,14 +9,14 @@ tags:
   - "Trauma"
 date: 2026-04-17T02:14:00Z
 updated: 2026-06-08T12:34:43Z
-image: "../../assets/images/wp/AdobeStock_150001132-1-scaled.jpeg"
+image: "../../assets/images/stock/stock-paix-interieure.jpeg"
 imageAlt: "Green park landscape, symbol of inner peace"
 seoTitle: "Exploring a belief: Is a continuous state of peace truly impossible?"
 seoDescription: "For a long time, I believed that happiness required effort. That one had to work on oneself, transform oneself, almost repair oneself, to access a more stable, more continuous inner state of peace. Behind this lay a silent but deeply rooted belief: peace would not be our natural state, but something to achieve, to build, to deserve… at the cost of demanding work."
 draft: false
 ---
 
-![Green park landscape, symbol of inner peace](../../assets/images/wp/AdobeStock_150001132-1-scaled.jpeg)
+![Green park landscape, symbol of inner peace](../../assets/images/stock/stock-paix-interieure.jpeg)
 
 Here, my intention is not to denounce truths drawn from a book, but to share my experience as it has settled within me over time — between meditation, therapy, and inner exploration.
 

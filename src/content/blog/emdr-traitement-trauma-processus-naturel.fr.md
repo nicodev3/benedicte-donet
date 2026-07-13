@@ -7,7 +7,7 @@ tags:
   - "Trauma"
 date: 2025-12-28T03:09:14Z
 updated: 2026-06-08T12:33:58Z
-image: "../../assets/images/wp/daniel-oberg-41Wuv1xsmGM-unsplash-scaled.jpg"
+image: "../../assets/images/stock/stock-emdr-desert.jpg"
 imageAlt: "EMDR traitement traumatisme"
 seoTitle: "L’EMDR : un processus naturel, pas une solution magique"
 seoDescription: "L’EMDR respecte profondément le fonctionnement naturel du cerveau. Il n’impose rien. Il ne force pas les souvenirs. Il n’efface pas l’histoire. Il ne prend pas le contrôle. Contrairement à certaines idées reçues, l’EMDR n’est pas une technique « magique » qui ferait disparaître le traumatisme. Il s’agit d’un processus neuropsychologique naturel, qui remet en mouvement les mécanismes innés de traitement de l’information."
@@ -16,7 +16,7 @@ draft: false
 
 # **L’EMDR : un processus naturel, pas une solution magique**
 
-![Paysage désertique, illustration du processus naturel de guérison EMDR](../../assets/images/wp/neom-tSwRu3Jh0EM-unsplash-scaled.jpg)
+![Paysage désertique, illustration du processus naturel de guérison EMDR](../../assets/images/stock/stock-emdr-paysage.jpg)
 
 neom-tSwRu3Jh0EM-unsplash
 

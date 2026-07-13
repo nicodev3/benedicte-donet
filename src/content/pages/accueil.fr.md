@@ -5,8 +5,8 @@ home:
   hero:
     title: Psychologue en ligne
     subtitle: Psychologue clinicienne en visio | Trauma-thérapies | EMDR | Sexualité
-    backgroundImage: /images/wp/banniere-2.png
-    backgroundImageMobile: /images/wp/banniere-smartphone-accueil.png
+    backgroundImage: /images/heroes/hero-accueil-desktop.png
+    backgroundImageMobile: /images/heroes/hero-accueil-mobile.png
     primaryCtaLabel: Je prends rendez-vous
     primaryCtaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
   intro:
@@ -32,7 +32,7 @@ home:
       **Je m''engage à vous offrir un espace thérapeutique sacré**, où votre vulnérabilité et confiance peuvent naturellement émerger et la guérison est facilitée.'
     ctaLabel: Découvrir ma pratique
     ctaUrl: /a-propos/
-    image: /images/wp/bene-accueil-1.png
+    image: /images/portraits/portrait-accueil.png
   whyOnline:
     title: Pourquoi choisir une psychologue en ligne ?
     text: 'La **téléconsultation** possède de nombreux avantages.
@@ -44,7 +44,7 @@ home:
       Vous n''avez pas besoin de vous déplacer ce qui facilite grandement la prise de rendez-vous et l''organisation de nos séances. Aussi, la relation thérapeutique est précieuse, en choisissant un **psychologue en ligne**, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.'
     ctaLabel: Je veux en savoir plus
     ctaUrl: /infos-pratiques/
-    image: /images/wp/DSCF0359.jpg
+    image: /images/portraits/portrait-01.jpg
   services:
     title: Les accompagnements que je propose
     cards:
@@ -59,7 +59,7 @@ home:
       imageUrl: /services/
       linkLabel: Consultez les tarifs
       linkUrl: /psychotherapie/#tarifpsycho
-      image: /images/wp/fleur-sechee-1.png
+      image: /images/illustrations/illustration-fleur-sechee-01.png
       imageWidth: wide
     - title: Ateliers et programmes
       intro: 'Au travers des ateliers et programmes, je vous offre des **pratiques et savoirs transformateurs**. Tout ce que je vous transmets sous cette forme sont des savoirs qui me paraissent indispensables pour **vivre en harmonie** avec qui nous sommes. La connaissance de soi, de nos fonctionnements est nécessaire pour pouvoir s''accueillir et vivre avec davantage d''harmonie. Je suis heureuse de vous offrir ce que j''ai reçu d''années de **pratique et recherches** sur mes domaines d''expertise qui sont :'
@@ -70,14 +70,14 @@ home:
       - La méditation,
       - Les pratiques psycho-corporelles.
       url: /masterclass/
-      image: /images/wp/fleur-sechee-3.png
+      image: /images/illustrations/illustration-fleur-sechee-03.png
       imageWidth: narrow
     - title: Photothérapie
       text: Au travers de la photothérapie, je vous accompagne à **explorer votre relation au corps**. C'est un temps et un espace dédié à l'amour de soi et à l'accueil avec bienveillance, de ce qui a besoin d'être mis en lumière et senti. La photothérapie permet d'explorer différentes facettes.
       url: /phototherapie/
       ctaLabel: Prendre rendez-vous
       ctaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
-      image: /images/wp/fleur-sechee-2.png
+      image: /images/illustrations/illustration-fleur-sechee-02.png
       imageWidth: wide
       titleUnderline: true
   appointment:
@@ -102,7 +102,7 @@ home:
       À travers ces offres, je vous invite à entreprendre un voyage de **connaissance de soi** et d''apprentissage d''outils vous permettant de cultiver davantage d''harmonie dans votre relation avec vous-même et le monde.'
     ctaLabel: Je réserve
     ctaUrl: /masterclass/
-    image: /images/wp/DSC07682.jpg
+    image: /images/portraits/portrait-02.jpg
   quote:
     text: Ta tâche n'est pas de chercher l'amour, mais simplement de chercher et trouver tous les obstacles que tu as construits contre l'amour.
     author: Rûmi

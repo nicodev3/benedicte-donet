@@ -10,7 +10,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
 const newsletterUrl =
   "https://3bf87f5e.sibforms.com/serve/MUIFAKUDJsFqFitT9o-UVXr9dI8wFgsivpdGWN6gzM25QQwNQEdYuls659I3_Qe2cmvL5FZr_QgBApi1b8WmZzEsrIupbMdmCQEf8qI5vSKTpgmOr6CxOaKnr6e9R6lTpGJbyPQRtorCxRv2xRslWSbePQ-F2Whztve3nuIUygBGhQZo-XkvoKaTngaIwt_aM1fnEw5aFt3Gooyc";
-const newsletterBackground = await getOptimizedBackgroundUrl("/images/wp/NL.png", 1920);
+const newsletterBackground = await getOptimizedBackgroundUrl("/images/backgrounds/bg-newsletter.png", 1920);
 ---
 
 <Section
@@ -49,7 +49,7 @@ const newsletterBackground = await getOptimizedBackgroundUrl("/images/wp/NL.png"
 
       <a class="newsletter-button" href={newsletterUrl} target="_blank" rel="noopener noreferrer">
         <span>{t.newsletter.cta}</span>
-        <SiteImage src="/images/wp/newsletter.svg" alt="" width={22} height={22} loading="lazy" />
+        <SiteImage src="/images/ui/icon-newsletter.svg" alt="" width={22} height={22} loading="lazy" />
       </a>
     </div>
   </Container>
