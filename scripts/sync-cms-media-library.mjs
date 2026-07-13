@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 /**
- * Génère src/assets/images/cms-library/ : dossier plat de liens symboliques
- * vers toutes les images catégorisées, pour la bibliothèque Media Decap CMS
- * (qui ne liste pas les sous-dossiers récursivement).
+ * Génère la bibliothèque plate Decap CMS :
+ * - public/images/cms-library/  → servie en HTTP (prévisualisations CMS)
+ * - src/assets/images/cms-library/ → résolue par Astro (optimisation build)
+ *
+ * Decap ne liste pas les sous-dossiers ; les deux dossiers contiennent des
+ * liens symboliques plats vers les images catégorisées.
  */
-import { existsSync, lstatSync, mkdirSync, readdirSync, rmSync, symlinkSync } from "node:fs";
-import { basename, join, relative } from "node:path";
+import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, rmSync, symlinkSync } from "node:fs";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(fileURLToPath(import.meta.url), "../..");
 const assetsRoot = join(root, "src/assets/images");
-const cmsLibrary = join(assetsRoot, "cms-library");
+const assetsLibrary = join(assetsRoot, "cms-library");
+const publicLibrary = join(root, "public/images/cms-library");
 
 const imageExt = /\.(jpe?g|png|gif|webp|avif|svg)$/i;
 const skipDirs = new Set(["cms-library", "uploads"]);
@@ -19,14 +23,24 @@ function isImageFile(name) {
   return imageExt.test(name);
 }
 
-mkdirSync(cmsLibrary, { recursive: true });
-
-// Supprimer les anciens liens (conserver .gitkeep)
-for (const entry of readdirSync(cmsLibrary)) {
-  if (entry === ".gitkeep") continue;
-  const full = join(cmsLibrary, entry);
-  rmSync(full, { recursive: true, force: true });
+function clearLibrary(dir) {
+  mkdirSync(dir, { recursive: true });
+  for (const entry of readdirSync(dir)) {
+    if (entry === ".gitkeep") continue;
+    rmSync(join(dir, entry), { recursive: true, force: true });
+  }
 }
+
+function linkLibraries(linkName, category, file) {
+  const assetsTarget = join("..", category, file);
+  symlinkSync(assetsTarget, join(assetsLibrary, linkName));
+
+  const publicTarget = join("../../../src/assets/images", category, file);
+  symlinkSync(publicTarget, join(publicLibrary, linkName));
+}
+
+clearLibrary(assetsLibrary);
+clearLibrary(publicLibrary);
 
 let count = 0;
 for (const category of readdirSync(assetsRoot)) {
@@ -41,11 +55,8 @@ for (const category of readdirSync(assetsRoot)) {
     if (!lstatSync(source).isFile()) continue;
 
     const linkName = `${category}-${file}`;
-    const linkPath = join(cmsLibrary, linkName);
-    const target = join("..", category, file);
-
     try {
-      symlinkSync(target, linkPath);
+      linkLibraries(linkName, category, file);
       count++;
     } catch (error) {
       console.error(`✗ ${linkName}: ${error.message}`);
@@ -53,4 +64,15 @@ for (const category of readdirSync(assetsRoot)) {
   }
 }
 
-console.log(`✓ ${count} liens créés dans src/assets/images/cms-library/`);
+// Uploads CMS : copier les fichiers réels de public vers src/assets pour l'optimisation Astro
+for (const entry of readdirSync(publicLibrary)) {
+  if (entry === ".gitkeep") continue;
+  const publicPath = join(publicLibrary, entry);
+  const assetsPath = join(assetsLibrary, entry);
+  if (!existsSync(assetsPath) && lstatSync(publicPath).isFile()) {
+    copyFileSync(publicPath, assetsPath);
+    console.log(`✓ Upload CMS copié vers assets : ${entry}`);
+  }
+}
+
+console.log(`✓ ${count} liens créés dans public/ et src/assets/ cms-library/`);

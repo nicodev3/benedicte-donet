@@ -48,6 +48,7 @@ export async function getOptimizedSrc(
 
   const image = resolveImage(src);
   if (!image) {
+    if (src.startsWith("/images/")) return src;
     console.warn(`[images] Asset introuvable pour optimisation : ${src}`);
     return undefined;
   }

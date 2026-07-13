@@ -63,3 +63,17 @@ if (!image && !isExternal) {
     />
   )
 }
+
+{
+  !image && !isExternal && src.startsWith("/images/") && (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      class={className}
+    />
+  )
+}

@@ -25,10 +25,10 @@ site_url: https://benedicte-donet.pages.dev
 display_url: https://benedicte-donet.pages.dev
 logo_url: /images/ui/logo-benedicte-donet.png
 
-# Decap ne liste pas les sous-dossiers : bibliothèque plate (liens vers les images).
+# Decap ne liste pas les sous-dossiers : bibliothèque plate dans public/ (prévisualisations).
 # Régénérer après ajout d'images : npm run sync:cms-media
-media_folder: "src/assets/images/cms-library"
-public_folder: "../../assets/images/cms-library"
+media_folder: "public/images/cms-library"
+public_folder: "/images/cms-library"
 
 # Brouillons validés avant publication
 publish_mode: editorial_workflow

@@ -48,7 +48,7 @@ docs/                  Guide CMS, checklist SEO, redirections
 - **Catégories** : `ui/`, `heroes/`, `backgrounds/`, `portraits/`, `phototherapie/`, `illustrations/`, `products/`, `stock/`
 - **Format** : kebab-case, minuscules, sans accents — `{type}-{sujet}[-{variant}].{ext}`
 - **Variantes** : `-01`, `-02` ou `-desktop`, `-mobile`
-- **CMS** : bibliothèque plate dans `src/assets/images/cms-library/` (générée via `npm run sync:cms-media`)
+- **CMS** : bibliothèque plate `public/images/cms-library/` (prévisualisations) + miroir Astro via `npm run sync:cms-media`
 
 ## Contenu éditable par la cliente (Decap CMS)
 
