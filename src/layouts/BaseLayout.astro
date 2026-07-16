@@ -5,7 +5,6 @@ import Seo from "@/components/seo/Seo.astro";
 import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
 import LazyBackgrounds from "@/components/common/LazyBackgrounds.astro";
-import CookieConsent from "@/components/common/CookieConsent.astro";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { getAlternateLinks } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
@@ -41,6 +40,8 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://analytics.nicodev.fr" crossorigin />
     <link rel="dns-prefetch" href="https://analytics.nicodev.fr" />
+    <link rel="preconnect" href="https://analytics.ahrefs.com" crossorigin />
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
     {
       alternateLinks.map((link) => (
         <link rel="alternate" hreflang={link.hreflang} href={link.href} />
@@ -73,9 +74,14 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
       src="https://analytics.nicodev.fr/script.js"
       data-website-id="a2285778-2843-448a-a777-25dce0633d12"
     ></script>
+    <script
+      is:inline
+      async
+      src="https://analytics.ahrefs.com/analytics.js"
+      data-key="rgHU3hRy3rHRn0BXIeWHxw"
+    ></script>
   </head>
   <body>
-    <CookieConsent locale={locale} />
     <a href="#contenu" class="skip-link">
       {t.common.skipToContent}
     </a>

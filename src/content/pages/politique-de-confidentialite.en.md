@@ -26,9 +26,11 @@ For any questions regarding your personal data, please contact:
 
 ### 3.1 Browsing the website
 
-When you visit the site, technical data may be collected automatically (IP address, browser type, pages viewed, date and time of connection). This data is necessary for the operation and security of the website.
+When you visit the site, technical data may be collected automatically (browser type, pages viewed, date and time of connection). This data is necessary for the operation and security of the website.
 
-**Purpose**: ensure the technical operation and security of the website, and where applicable aggregated audience measurement.  
+For audience measurement, the site uses **Ahrefs Web Analytics** and a hosted analytics tool (Umami via Nicodev). These services are designed to work **without cookies** and without collecting identifying personal data (no profiling, no cross-site tracking).
+
+**Purpose**: ensure the technical operation and security of the website, and aggregated audience measurement.  
 **Legal basis**: legitimate interest.
 
 ### 3.2 Contact by email
@@ -66,6 +68,8 @@ Some blog articles may contain embedded content (for example **YouTube** videos)
 Your data may be shared with the following service providers, strictly as necessary for their tasks:
 
 - **Cloudflare** – website hosting and security;
+- **Ahrefs Pte. Ltd.** – audience measurement (Ahrefs Web Analytics);
+- **Nicodev** – audience measurement (Umami);
 - **Doctolib** – online appointment booking (if you use this service);
 - **La bisette digitale** – technical maintenance of the website and data protection support.
 
@@ -94,15 +98,17 @@ To exercise your rights, contact: **La bisette digitale** – [hello@labisettedi
 
 You may also lodge a complaint with the **CNIL** (French data protection authority): [www.cnil.fr](https://www.cnil.fr).
 
-## 7 – Cookies
+## 7 – Cookies and audience measurement
 
 A « cookie » is a small file placed on your device when you visit a website.
 
-The website may use **strictly necessary cookies** for operation and security (for example via our hosting provider).
+The website may use **strictly necessary cookies** for operation and security (for example via our hosting provider Cloudflare).
 
-Any third-party audience measurement (including **Ahrefs Web Analytics**) or non-essential cookie will only be placed **with your consent**, via the cookie management banner (tarteaucitron). You can change your choice at any time using the cookie icon at the bottom right of the screen.
+Audience measurement (**Ahrefs Web Analytics** and Umami) works **without placing cookies** and without reading persistent identifiers on your device. A consent banner is therefore not required for these tools. You may still object to processing based on legitimate interest by contacting us (see section 6).
 
-Cookies subject to consent are stored for a maximum of **13 months**. For more information, see our [legal notice](/en/mentions-legales/).
+Third-party content that you choose to activate (for example an embedded YouTube video) may place cookies under that service’s own terms.
+
+For more information, see also our [legal notice](/en/mentions-legales/).
 
 ## 8 – Security
 

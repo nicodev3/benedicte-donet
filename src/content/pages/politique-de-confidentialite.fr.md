@@ -26,9 +26,11 @@ Pour toute question relative à vos données personnelles, vous pouvez contacter
 
 ### 3.1 Navigation sur le site
 
-Lors de votre visite, des données techniques peuvent être collectées automatiquement (adresse IP, type de navigateur, pages consultées, date et heure de connexion). Ces données sont nécessaires au fonctionnement et à la sécurité du site.
+Lors de votre visite, des données techniques peuvent être collectées automatiquement (type de navigateur, pages consultées, date et heure de connexion). Ces données sont nécessaires au fonctionnement et à la sécurité du site.
 
-**Finalité** : assurer le bon fonctionnement technique du site, la sécurité et, le cas échéant, la mesure d'audience agrégée.  
+Pour la mesure d'audience, le site utilise **Ahrefs Web Analytics** et un outil d'analytics hébergé (Umami via Nicodev). Ces services sont conçus pour fonctionner **sans cookies** et sans collecter de données personnelles identifiantes (pas de profilage, pas de suivi intersites).
+
+**Finalité** : assurer le bon fonctionnement technique du site, la sécurité et la mesure d'audience agrégée.  
 **Base légale** : intérêt légitime.
 
 ### 3.2 Prise de contact par e-mail
@@ -66,6 +68,8 @@ Certains articles du blog peuvent contenir des contenus intégrés (par exemple 
 Vos données peuvent être transmises aux prestataires suivants, dans la stricte mesure nécessaire à leurs missions :
 
 - **Cloudflare** – hébergement et sécurité du site ;
+- **Ahrefs Pte. Ltd.** – mesure d'audience (Ahrefs Web Analytics) ;
+- **Nicodev** – mesure d'audience (Umami) ;
 - **Doctolib** – prise de rendez-vous en ligne (si vous utilisez ce service) ;
 - **La bisette digitale** – maintenance technique du site et assistance en matière de protection des données.
 
@@ -94,15 +98,17 @@ Pour exercer vos droits, contactez : **La bisette digitale** – [hello@labisett
 
 Vous pouvez également introduire une réclamation auprès de la **CNIL** : [www.cnil.fr](https://www.cnil.fr).
 
-## 7 – Cookies
+## 7 – Cookies et mesure d'audience
 
 Un « cookie » est un petit fichier déposé sur votre terminal lors de la visite d'un site web.
 
-Le site peut déposer des **cookies strictement nécessaires** au fonctionnement et à la sécurité (par exemple via notre prestataire d'hébergement).
+Le site peut déposer des **cookies strictement nécessaires** au fonctionnement et à la sécurité (par exemple via notre prestataire d'hébergement Cloudflare).
 
-Toute mesure d'audience tierce (notamment **Ahrefs Web Analytics**) ou cookie non essentiel ne sera déposé qu'**avec votre consentement**, via la bannière de gestion des cookies (tarteaucitron). Vous pouvez modifier votre choix à tout moment via l'icône cookies en bas à droite de l'écran.
+La mesure d'audience (**Ahrefs Web Analytics** et Umami) fonctionne **sans dépôt de cookies** et sans lecture d'identifiants persistants sur votre terminal. Aucune bannière de consentement n'est donc requise pour ces outils. Vous pouvez néanmoins vous opposer au traitement fondé sur l'intérêt légitime en nous contactant (voir section 6).
 
-Les cookies soumis au consentement sont conservés pour une durée maximale de **13 mois**. Pour en savoir plus, consultez nos [mentions légales](/mentions-legales/).
+Les contenus tiers que vous choisissez d'activer (par exemple une vidéo YouTube intégrée) peuvent, eux, déposer des cookies selon les conditions du service concerné.
+
+Pour en savoir plus, consultez également nos [mentions légales](/mentions-legales/).
 
 ## 8 – Sécurité
 

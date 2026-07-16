@@ -63,15 +63,9 @@ For more information on how we process your data (type of data, purpose, recipie
 
 The site **/** contains hyperlinks to other sites and disclaims all responsibility regarding these external links or links created by other sites to **/**.
 
-Browsing the site **/** may cause cookie(s) to be installed on the user's computer.
+The site may place **strictly necessary cookies** for operation and security. Audience measurement on this site does not rely on non-essential cookies.
 
-A « cookie » is a small file that records information relating to a user's browsing on a site. The data thus obtained makes it possible to obtain traffic statistics, for example.
-
-You have the option to **accept or refuse cookies** by modifying your browser settings. No cookie will be placed without your consent.
-
-Cookies are stored for a maximum period of 1 month.
-
-For more information on how we use cookies, read our [privacy policy](/en/politique-de-confidentialite/).
+For more information, read our [privacy policy](/en/politique-de-confidentialite/).
 
 * * *
 
