@@ -84,4 +84,4 @@ So let’s evolve. Let’s change, expand, learn. But let’s also laugh, rest, 
 
 Because, in the end, the most powerful transformation might come from remembering that we are already enough—even as we keep growing.
 
-If you wish to go on this path, I am passionate about guiding people to found this balance. You can write to me [following this link.](/en/home/)
+If you wish to go on this path, I am passionate about guiding people to found this balance. You can write to me [following this link.](/en/infos-pratiques/#form)

@@ -1,7 +1,7 @@
 ---
 title: "Photothérapie"
 heroTitle: "La photothérapie"
-description: "Séance photo confiance en soi"
+description: "Séance de photothérapie pour renforcer la confiance en soi : photographie et psychologie avec Bénédicte Donet, en ligne."
 image: "/images/phototherapie/photo-phototherapie-cover.jpg"
 imageAlt: ""
 seoTitle: "Photothérapie | Séance photo confiance en soi"

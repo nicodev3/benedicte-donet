@@ -103,4 +103,4 @@ And if you want to dive deeper into the _why_ and _how_ of breath, I highly 
 
 Want more guided breathing and tapping videos? Stay tuned — my YouTube channel is coming soon 🎥💨
 
-Meanwhile: you can keep learning about your mental health, psychology [on my blog](/en/how-to-navigate-through-our-complaining-thoughts/).
+Meanwhile: you can keep learning about your mental health, psychology [on my blog](/en/comment-apaiser-pensees-plaintives/).

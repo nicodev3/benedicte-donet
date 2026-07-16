@@ -114,4 +114,4 @@ Complaining thoughts are not enemies—they are **clues** to what we truly nee
 
 * * *
 
-To learn more about psychology from a specialist in trauma, [keep reading the blog](/en/diary/).
+To learn more about psychology from a specialist in trauma, [keep reading the blog](/en/blog/).

@@ -35,7 +35,7 @@ La prise de rendez-vous se fait par email ou par le lien de contact [ci-dessous]
 -   Je suis ouverte à travailler auprès d’adolescents mineurs **à partir de 13 ans**, seulement sous condition que l’adolescent souhaite, par lui-même, recevoir des séances.
 -   Quelle que soit ton orientation sexuelle et/ou ton idée de genre, tu es le/la bienvenu/e. Je me sensibilise et me forme autant que possible pour offrir un **espace sécurisant** et accueillant pour tous. Je suis aussi ouverte à évoluer et à apprendre de mes patients.
 
-Si vous avez d’autres interrogations, je serai heureuse de vous répondre par le [formulaire de contact](#form) ou par [email](<mailto: donetbenedicte@gmail.com>).
+Si vous avez d’autres interrogations, je serai heureuse de vous répondre par le [formulaire de contact](#form) ou par [email](mailto:donetbenedicte@gmail.com).
 
 Prenez bien soin de vous.  
 Bénédicte Donet
@@ -43,7 +43,7 @@ Bénédicte Donet
 Pour me contacter :
 
 -   [+33 6 17 78 98 78](tel:0033617789878)
--   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com%20)
+-   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
 -   Téléconsultation sur Zoom
 
 ## Je passe à l’action

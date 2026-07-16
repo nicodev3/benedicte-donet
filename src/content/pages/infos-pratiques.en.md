@@ -35,7 +35,7 @@ Appointments can be made by email or via the contact link [below](#form).
 -   I am open to working with minors **from the age of 13**, only on condition that the adolescent themselves wishes to receive sessions.
 -   Whatever your sexual orientation and/or gender identity, you are welcome. I sensitise myself and train as much as possible to offer a **safe and welcoming space** for all. I am also open to evolving and learning from my patients.
 
-If you have any other questions, I will be happy to answer you via the [contact form](#form) or by [email](<mailto: donetbenedicte@gmail.com>).
+If you have any other questions, I will be happy to answer you via the [contact form](#form) or by [email](mailto:donetbenedicte@gmail.com).
 
 Take good care of yourself.  
 Bénédicte Donet
@@ -43,7 +43,7 @@ Bénédicte Donet
 To contact me:
 
 -   [+33 6 17 78 98 78](tel:0033617789878)
--   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com%20)
+-   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
 -   Teleconsultation on Zoom
 
 ## I take action

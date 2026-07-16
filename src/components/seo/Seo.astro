@@ -54,9 +54,11 @@ const language = localeToSchemaLanguage(locale);
 const alternateOgLocale = locale === "fr" ? "en_US" : "fr_FR";
 const sameAs = [global.instagramUrl, global.facebookUrl].filter(Boolean);
 const personId = new URL("/#person", SITE.url).href;
+const organizationId = new URL("/#organization", SITE.url).href;
 const serviceId = new URL("/#professional-service", SITE.url).href;
 const websiteId = new URL("/#website", SITE.url).href;
 const webpageId = `${canonical}#webpage`;
+const emailMailto = `mailto:${global.email}`;
 const postalAddress = {
   "@type": "PostalAddress",
   streetAddress: global.address.streetAddress,
@@ -65,6 +67,13 @@ const postalAddress = {
   addressRegion: global.address.addressRegion,
   addressCountry: global.address.addressCountry,
 };
+const areaServed = {
+  "@type": "Place",
+  name: global.area,
+};
+const primaryImage = ogImage
+  ? { "@type": "ImageObject", url: ogImage }
+  : undefined;
 
 const graph: Record<string, unknown>[] = [
   {
@@ -76,11 +85,23 @@ const graph: Record<string, unknown>[] = [
         ? "Psychologue clinicienne en ligne"
         : "Online clinical psychologist",
     url: SITE.url,
-    email: global.email,
+    email: emailMailto,
     telephone: global.phone,
     address: postalAddress,
     knowsAbout: [...global.knowsAbout],
     sameAs,
+  },
+  {
+    "@type": "Organization",
+    "@id": organizationId,
+    name: SITE.name,
+    url: SITE.url,
+    email: emailMailto,
+    telephone: global.phone,
+    address: postalAddress,
+    sameAs,
+    founder: { "@id": personId },
+    ...(primaryImage ? { logo: primaryImage } : {}),
   },
   {
     "@type": "ProfessionalService",
@@ -88,11 +109,11 @@ const graph: Record<string, unknown>[] = [
     name: global.siteName,
     description: global.defaultSeoDescription,
     url: SITE.url,
-    email: global.email,
+    email: emailMailto,
     telephone: global.phone,
     address: postalAddress,
-    areaServed: global.area,
-    availableLanguage: ["fr-FR", "en-US"],
+    areaServed,
+    availableLanguage: ["fr", "en"],
     knowsAbout: [...global.knowsAbout],
     sameAs,
     provider: { "@id": personId },
@@ -103,7 +124,7 @@ const graph: Record<string, unknown>[] = [
     name: SITE.name,
     url: SITE.url,
     inLanguage: language,
-    publisher: { "@id": personId },
+    publisher: { "@id": organizationId },
   },
   {
     "@type": "WebPage",
@@ -114,7 +135,7 @@ const graph: Record<string, unknown>[] = [
     inLanguage: language,
     isPartOf: { "@id": websiteId },
     about: { "@id": serviceId },
-    ...(ogImage ? { primaryImageOfPage: ogImage } : {}),
+    ...(primaryImage ? { primaryImageOfPage: primaryImage } : {}),
   },
 ];
 
@@ -124,11 +145,11 @@ if (type === "article" && publishedTime) {
     "@id": `${canonical}#article`,
     headline: cleanTitle || fullTitle,
     description: cleanDescription,
-    image: ogImage,
+    ...(primaryImage ? { image: primaryImage } : {}),
     datePublished: publishedTime.toISOString(),
     dateModified: (modifiedTime || publishedTime).toISOString(),
     author: { "@id": personId },
-    publisher: { "@id": personId },
+    publisher: { "@id": organizationId },
     mainEntityOfPage: { "@id": webpageId },
     inLanguage: language,
   });

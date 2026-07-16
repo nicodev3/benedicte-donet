@@ -110,7 +110,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       heroTitle: "Mon journal",
       heroSubtitle: "Pensées et actualités",
       description:
-        "Articles de psychologie par Bénédicte Donet : trauma, EMDR, méditation, anxiété, relation au corps et bien plus.",
+        "Articles de psychologie par Bénédicte Donet : trauma, EMDR, méditation, anxiété, relation au corps et mieux-être émotionnel.",
       intro:
         "Des articles pour mieux te comprendre : trauma, EMDR, méditation, anxiété, relation au corps.",
       readMore: "Lire l'article",
@@ -197,7 +197,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       heroTitle: "My journal",
       heroSubtitle: "Thoughts and updates",
       description:
-        "Psychology articles by Bénédicte Donet: trauma, EMDR, meditation, anxiety, body awareness and more.",
+        "Psychology articles by Bénédicte Donet on trauma, EMDR, meditation, anxiety, body awareness and emotional healing for adults.",
       intro:
         "Articles to better understand yourself: trauma, EMDR, meditation, anxiety and your relationship with the body.",
       readMore: "Read article",
