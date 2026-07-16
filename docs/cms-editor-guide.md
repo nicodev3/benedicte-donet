@@ -4,8 +4,7 @@ Ce guide explique comment modifier votre site vous-même, sans connaissance tech
 
 ## Accéder à l'éditeur
 
-1. Rendez-vous sur **https://benedicte-donet.pages.dev/admin/**
-   (à la mise en ligne : `https://www.benedictedonet-psyenligne.com/admin/`)
+1. Rendez-vous sur **https://www.benedictedonet-psyenligne.com/admin/**
 2. Cliquez sur **« Se connecter avec GitHub »** et identifiez-vous.
 3. Vous arrivez sur le tableau de bord de l'éditeur.
 

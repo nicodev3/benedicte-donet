@@ -2,8 +2,7 @@
 # Decap CMS — éditeur de contenu pour Bénédicte Donet
 # Seules les zones listées ici sont éditables par la cliente.
 #
-# URL publique actuelle : https://benedicte-donet.pages.dev
-# Production (à activer à la bascule DNS) : https://www.benedictedonet-psyenligne.com
+# URL publique actuelle : https://www.benedictedonet-psyenligne.com
 # =====================================================================
 
 backend:
@@ -11,7 +10,7 @@ backend:
   repo: nicodev3/benedicte-donet
   branch: main
   # OAuth GitHub via Pages Functions — doit correspondre à l’URL où /admin/ est servi
-  base_url: https://benedicte-donet.pages.dev
+  base_url: https://www.benedictedonet-psyenligne.com
   auth_endpoint: api/auth
 
 locale: fr
@@ -21,8 +20,8 @@ i18n:
   structure: multiple_files
   locales: [fr, en]
   default_locale: fr
-site_url: https://benedicte-donet.pages.dev
-display_url: https://benedicte-donet.pages.dev
+site_url: https://www.benedictedonet-psyenligne.com
+display_url: https://www.benedictedonet-psyenligne.com
 logo_url: /images/ui/logo-benedicte-donet.png
 
 # Decap ne liste pas les sous-dossiers : bibliothèque plate dans public/ (prévisualisations).

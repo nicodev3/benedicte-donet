@@ -1,8 +1,8 @@
 # Checklist SEO — migration WordPress → Astro
 
-À dérouler **avant** puis **juste après** la bascule DNS.
+À dérouler pour finaliser et surveiller la mise en production.
 
-## Avant la mise en ligne
+## Vérifications de mise en production
 
 - [ ] Exporter la liste des URLs indexées (Search Console → Pages, ou `site:benedictedonet-psyenligne.com` dans Google).
 - [ ] Vérifier que chaque URL indexée a soit une page équivalente (même slug), soit une redirection 301 dans `public/_redirects`.
@@ -13,13 +13,13 @@
 - [ ] Vérifier l'Open Graph (partage Facebook/LinkedIn) avec [opengraph.xyz](https://www.opengraph.xyz/).
 - [ ] `npm run build` sans erreur, sitemap généré (`dist/sitemap-index.xml`).
 - [ ] `robots.txt` accessible et correct (`Disallow: /admin/`).
-- [ ] Tester le site en préversion Cloudflare (`*.pages.dev`) : navigation, mobile, 404.
+- [ ] Tester le site en production (`https://www.benedictedonet-psyenligne.com`) : navigation, mobile, 404.
 - [ ] Vérifier le maillage interne : liens relatifs (pas de liens absolus vers l'ancien domaine WordPress).
 - [ ] Lighthouse : viser > 90 en Performance / SEO / Accessibilité.
 
-## Le jour de la bascule
+## Vérifications DNS et redirections
 
-- [ ] Brancher le domaine sur Cloudflare Pages (DNS).
+- [ ] Vérifier que le domaine est branché sur Cloudflare Pages (DNS).
 - [ ] Forcer HTTPS + redirection www/apex cohérente avec l'existant (le site utilise `www.`).
 - [ ] Tester une dizaine d'URLs importantes (accueil, services, 3 articles, mentions légales).
 - [ ] Tester les redirections : `/boutique/`, `/panier/`, `/en/about-me/`, `/sitemap/`.

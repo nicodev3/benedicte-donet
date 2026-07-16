@@ -140,7 +140,7 @@ Pages existantes : `a-propos`, `infos-pratiques`, `masterclass`, `mentions-legal
 | `npm run build` | Build production → `dist/` |
 | `npm run pages:dev` | Preview local Cloudflare Pages |
 
-OAuth GitHub : `functions/api/auth.js` + `callback.js`. Secrets Cloudflare : `GITHUB_CLIENT_ID` + secret. `base_url` dans `config.yml` doit correspondre à l'URL où `/admin/` est servi (actuellement `https://benedicte-donet.pages.dev`, prod `https://www.benedictedonet-psyenligne.com`).
+OAuth GitHub : `functions/api/auth.js` + `callback.js`. Secrets Cloudflare : `GITHUB_CLIENT_ID` + secret. `base_url` dans `config.yml` doit correspondre à l'URL où `/admin/` est servi (actuellement `https://www.benedictedonet-psyenligne.com`).
 
 ## SEO & migrations (contraintes fortes)
 

@@ -9,7 +9,7 @@ backend:
   name: github
   repo: nicodev3/benedicte-donet
   branch: main
-  base_url: https://benedicte-donet.pages.dev   # doit = URL servant /admin/
+  base_url: https://www.benedictedonet-psyenligne.com   # doit = URL servant /admin/
   auth_endpoint: api/auth
 publish_mode: editorial_workflow
 locale: fr

@@ -6,10 +6,10 @@ Refonte du site WordPress [benedictedonet-psyenligne.com](https://www.benedicted
 
 | Environnement | URL | Usage actuel |
 |---|---|---|
-| **Préprod** | https://benedicte-donet.pages.dev | Déploiement Cloudflare Pages, tests, Decap CMS |
-| **Production** | https://www.benedictedonet-psyenligne.com | Domaine final (WordPress actuel → bascule DNS) |
+| **Preview** | https://benedicte-donet.pages.dev | Déploiements de test Cloudflare Pages |
+| **Production** | https://www.benedictedonet-psyenligne.com | Site public actuel, Decap CMS |
 
-Canonical SEO (`astro.config.mjs`, `src/site.config.ts`) pointe déjà vers la **production**. Decap CMS (`public/admin/config.yml`) utilise la **préprod** tant que le domaine final n’est pas branché.
+Canonical SEO (`astro.config.mjs`, `src/site.config.ts`) et Decap CMS (`public/admin/config.yml`) pointent vers la **production**.
 
 ## Stack
 
@@ -84,30 +84,19 @@ npx wrangler deploy   # déploiement
 
 Le dépôt inclut les **Pages Functions** OAuth (`functions/api/auth.js`, `functions/api/callback.js`).
 
-#### Phase préprod (site pas encore en ligne)
-
-Utilisez l’URL de préprod : **https://benedicte-donet.pages.dev**
+#### Configuration production (https://www.benedictedonet-psyenligne.com)
 
 1. **GitHub OAuth App** → [github.com/settings/developers](https://github.com/settings/developers) :
-   - **Application name** : `Decap CMS — Bénédicte Donet (dev)`
-   - **Homepage URL** : `https://benedicte-donet.pages.dev`
-   - **Authorization callback URL** : `https://benedicte-donet.pages.dev/api/callback`
-2. **Cloudflare Pages → Settings → Environment variables** (Production **et** Preview) :
+   - **Application name** : `Decap CMS — Bénédicte Donet`
+   - **Homepage URL** : `https://www.benedictedonet-psyenligne.com`
+   - **Authorization callback URL** : `https://www.benedictedonet-psyenligne.com/api/callback`
+2. **Cloudflare Pages → Settings → Environment variables** (Production) :
    - `GITHUB_CLIENT_ID`
    - `GITHUB_CLIENT_SECRET` (Secret)
 3. Vérifier que `public/admin/config.yml` utilise la **même URL** pour `base_url`, `site_url` et `display_url`.
-4. Tester : `https://benedicte-donet.pages.dev/admin/`
+4. Tester : `https://www.benedictedonet-psyenligne.com/admin/`
 
-> Une OAuth App GitHub n’accepte qu’**une seule** callback URL. En préprod, pointez-la vers `*.pages.dev`. À la mise en ligne, mettez à jour la callback vers le domaine final (ou créez une 2ᵉ OAuth App pour la prod).
-
-#### Mise en ligne (https://www.benedictedonet-psyenligne.com)
-
-1. Brancher le domaine `www.benedictedonet-psyenligne.com` sur le projet Cloudflare Pages.
-2. Mettre à jour `public/admin/config.yml` :
-   - `base_url`, `site_url`, `display_url` → `https://www.benedictedonet-psyenligne.com`
-3. Mettre à jour la **Authorization callback URL** de l’OAuth App GitHub → `https://www.benedictedonet-psyenligne.com/api/callback`
-4. Vérifier que `site` dans `astro.config.mjs` et `url` dans `src/site.config.ts` sont bien `https://www.benedictedonet-psyenligne.com` (déjà le cas).
-5. Tester `/admin/` et les redirections (`public/_redirects`), puis suivre `docs/seo-migration-checklist.md`.
+> Une OAuth App GitHub n’accepte qu’**une seule** callback URL. Pour utiliser aussi une URL de preview `*.pages.dev`, créer une 2ᵉ OAuth App dédiée à la preview.
 
 **Test local** (avec `.dev.vars` copié depuis `.dev.vars.example`) :
 
@@ -117,6 +106,6 @@ npm run pages:dev
 # puis ouvrir http://localhost:8788/admin/
 ```
 
-## Avant la mise en ligne
+## Suivi post-mise en ligne
 
 Suivre la checklist `docs/seo-migration-checklist.md` (redirections, canonical, Search Console, etc.).
