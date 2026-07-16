@@ -15,6 +15,13 @@ export const SITE = {
     "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet",
   /** Code fourni par Google Search Console (méthode balise HTML). Laisser vide si vérification DNS. */
   googleSiteVerification: "",
+  address: {
+    streetAddress: "349 routes des canots",
+    postalCode: "97427",
+    addressLocality: "L'Étang-Salé",
+    addressRegion: "La Réunion",
+    addressCountry: "RE",
+  },
   social: {
     instagram: "https://www.instagram.com/benedicte.psyenligne/",
     facebook: "https://www.facebook.com/BenedicteDonetPhotography",
@@ -25,12 +32,28 @@ export const SITE = {
       defaultSeoDescription:
         "Psychologue en ligne, Bénédicte Donet accompagne les adultes en EMDR, trauma, anxiété, stress post-traumatique et sexualité.",
       area: "Téléconsultation en visio (Zoom / Doctolib)",
+      knowsAbout: [
+        "EMDR",
+        "Trauma",
+        "Anxiété",
+        "Stress post-traumatique",
+        "Psychothérapie en ligne",
+        "Pleine conscience",
+      ],
     },
     en: {
       defaultSeoTitle: "Online psychologist specializing in EMDR, trauma and anxiety",
       defaultSeoDescription:
         "Online psychologist Bénédicte Donet supports adults with EMDR, trauma, anxiety, post-traumatic stress and sexuality.",
       area: "Online consultations by video (Zoom / Doctolib)",
+      knowsAbout: [
+        "EMDR",
+        "Trauma",
+        "Anxiety",
+        "Post-traumatic stress",
+        "Online psychotherapy",
+        "Mindfulness",
+      ],
     },
   },
 } as const;
@@ -44,8 +67,10 @@ export function getSiteGlobal(locale: Locale) {
     appointmentUrl: SITE.appointmentUrl,
     instagramUrl: SITE.social.instagram,
     facebookUrl: SITE.social.facebook,
+    address: SITE.address,
     defaultSeoTitle: localized.defaultSeoTitle,
     defaultSeoDescription: localized.defaultSeoDescription,
     area: localized.area,
+    knowsAbout: localized.knowsAbout,
   };
 }

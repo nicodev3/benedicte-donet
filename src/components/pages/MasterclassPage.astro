@@ -5,6 +5,7 @@ import ProductsGrid from "@/components/sections/ProductsGrid.astro";
 import { SITE } from "@/site.config";
 import { resolveSeoImagePath } from "@/lib/images";
 import { getMasterclassProducts } from "@/lib/masterclass-products";
+import { parsePrice } from "@/lib/pricing";
 import { getContentSlug, getLocaleFromPath, localizedPath, type Locale } from "@/lib/i18n";
 import { Content as MasterclassIntroFr } from "@/components/pages/masterclass-intro.md";
 import { Content as MasterclassOutroFr } from "@/components/pages/masterclass-outro.md";
@@ -27,11 +28,6 @@ const page = (await getCollection("pages")).find(
 );
 if (!page) {
   return Astro.redirect(localizedPath("/404/", locale));
-}
-
-function parsePrice(price: string): string | undefined {
-  const match = price.match(/\d+(?:[.,]\d+)?/);
-  return match?.[0]?.replace(",", ".");
 }
 
 const masterclassPath = localizedPath("/masterclass/", locale);

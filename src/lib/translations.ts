@@ -9,6 +9,7 @@ interface UiTranslations {
     skipToContent: string;
     home: string;
     navigation: string;
+    breadcrumb: string;
     contact: string;
   };
   header: {
@@ -22,6 +23,7 @@ interface UiTranslations {
   };
   blog: {
     title: string;
+    seoTitle: string;
     heroTitle: string;
     heroSubtitle: string;
     description: string;
@@ -90,6 +92,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       skipToContent: "Aller au contenu",
       home: "Accueil",
       navigation: "Navigation",
+      breadcrumb: "Fil d'Ariane",
       contact: "Contact",
     },
     header: {
@@ -103,6 +106,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     },
     blog: {
       title: "Le blog",
+      seoTitle: "Blog psychologie en ligne | Trauma, EMDR, méditation",
       heroTitle: "Mon journal",
       heroSubtitle: "Pensées et actualités",
       description:
@@ -175,6 +179,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       skipToContent: "Skip to content",
       home: "Home",
       navigation: "Navigation",
+      breadcrumb: "Breadcrumb",
       contact: "Contact",
     },
     header: {
@@ -188,6 +193,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     },
     blog: {
       title: "The blog",
+      seoTitle: "Online psychology blog | Trauma, EMDR, meditation",
       heroTitle: "My journal",
       heroSubtitle: "Thoughts and updates",
       description:

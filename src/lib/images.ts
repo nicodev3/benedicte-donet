@@ -77,9 +77,49 @@ export async function getOptimizedBackgroundUrl(
   return optimized ? `url(${optimized})` : undefined;
 }
 
+export interface SeoImage {
+  src: string;
+  width: number;
+  height: number;
+}
+
+export async function resolveSeoImage(
+  src: string | undefined
+): Promise<SeoImage | undefined> {
+  if (!src) return undefined;
+  if (isExternalImage(src)) {
+    return { src, width: 1200, height: 630 };
+  }
+
+  const image = resolveImage(src);
+  if (!image) {
+    if (src.startsWith("/images/")) {
+      return { src, width: 1200, height: 630 };
+    }
+    return undefined;
+  }
+
+  const { getImage } = await import("astro:assets");
+  const optimized = await getImage({
+    src: image,
+    width: 1200,
+    format: "jpg",
+  });
+
+  return {
+    src: optimized.src,
+    width: optimized.attributes.width
+      ? Number(optimized.attributes.width)
+      : 1200,
+    height: optimized.attributes.height
+      ? Number(optimized.attributes.height)
+      : Math.round(1200 * (image.height / image.width)),
+  };
+}
+
 export async function resolveSeoImagePath(
   src: string | undefined
 ): Promise<string | undefined> {
-  if (!src) return undefined;
-  return getOptimizedSrc(src, { width: 1200 });
+  const seoImage = await resolveSeoImage(src);
+  return seoImage?.src;
 }

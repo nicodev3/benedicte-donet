@@ -36,7 +36,7 @@ const t = useTranslations(locale);
 const global = getSiteGlobal(locale);
 
 const breadcrumbs = buildBreadcrumbs(Astro.url.pathname, title, undefined, {
-  label: "Blog",
+  label: t.blog.title,
   url: localizedPath("/blog/", locale),
 }, locale);
 
@@ -80,7 +80,7 @@ const serviceLinks = [
   <Container narrow>
     <article class="post">
       <div class="post-breadcrumb">
-        <Breadcrumb items={breadcrumbs} />
+        <Breadcrumb items={breadcrumbs} locale={locale} />
       </div>
 
       <ShareButtons

@@ -20,7 +20,11 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft))
 const blogHeroImage = "/images/heroes/hero-blog.png";
 ---
 
-<BaseLayout title="Blog" description={t.blog.description} image={blogHeroImage}>
+<BaseLayout
+  title={t.blog.seoTitle}
+  description={t.blog.description}
+  image={blogHeroImage}
+>
   <Hero
     title={t.blog.heroTitle}
     subtitle={t.blog.heroSubtitle}

@@ -1,7 +1,7 @@
 ---
 import { SITE, getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
-import { resolveSeoImagePath } from "@/lib/images";
+import { resolveSeoImage } from "@/lib/images";
 import { localeToSchemaLanguage } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
 
@@ -45,17 +45,26 @@ const cleanDescription = shorten(
   description?.trim() || global.defaultSeoDescription,
   155
 );
-const ogImagePath = await resolveSeoImagePath(
+const seoImage = await resolveSeoImage(
   image || "/images/heroes/hero-accueil-desktop.png"
 );
-const ogImage = ogImagePath ? new URL(ogImagePath, SITE.url).href : undefined;
+const ogImage = seoImage ? new URL(seoImage.src, SITE.url).href : undefined;
 const t = useTranslations(locale);
 const language = localeToSchemaLanguage(locale);
+const alternateOgLocale = locale === "fr" ? "en_US" : "fr_FR";
 const sameAs = [global.instagramUrl, global.facebookUrl].filter(Boolean);
 const personId = new URL("/#person", SITE.url).href;
 const serviceId = new URL("/#professional-service", SITE.url).href;
 const websiteId = new URL("/#website", SITE.url).href;
 const webpageId = `${canonical}#webpage`;
+const postalAddress = {
+  "@type": "PostalAddress",
+  streetAddress: global.address.streetAddress,
+  postalCode: global.address.postalCode,
+  addressLocality: global.address.addressLocality,
+  addressRegion: global.address.addressRegion,
+  addressCountry: global.address.addressCountry,
+};
 
 const graph: Record<string, unknown>[] = [
   {
@@ -69,6 +78,8 @@ const graph: Record<string, unknown>[] = [
     url: SITE.url,
     email: global.email,
     telephone: global.phone,
+    address: postalAddress,
+    knowsAbout: [...global.knowsAbout],
     sameAs,
   },
   {
@@ -79,8 +90,10 @@ const graph: Record<string, unknown>[] = [
     url: SITE.url,
     email: global.email,
     telephone: global.phone,
+    address: postalAddress,
     areaServed: global.area,
-    availableLanguage: [language],
+    availableLanguage: ["fr-FR", "en-US"],
+    knowsAbout: [...global.knowsAbout],
     sameAs,
     provider: { "@id": personId },
   },
@@ -101,6 +114,7 @@ const graph: Record<string, unknown>[] = [
     inLanguage: language,
     isPartOf: { "@id": websiteId },
     about: { "@id": serviceId },
+    ...(ogImage ? { primaryImageOfPage: ogImage } : {}),
   },
 ];
 
@@ -150,7 +164,11 @@ const jsonLd = {
 <meta property="og:url" content={canonical} />
 <meta property="og:site_name" content={SITE.name} />
 <meta property="og:locale" content={t.locale.og} />
+<meta property="og:locale:alternate" content={alternateOgLocale} />
 {ogImage && <meta property="og:image" content={ogImage} />}
+{seoImage && <meta property="og:image:width" content={String(seoImage.width)} />}
+{seoImage && <meta property="og:image:height" content={String(seoImage.height)} />}
+{ogImage && <meta property="og:image:alt" content={cleanTitle || SITE.name} />}
 {
   type === "article" && publishedTime && (
     <meta
@@ -172,4 +190,5 @@ const jsonLd = {
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={cleanDescription} />
 {ogImage && <meta name="twitter:image" content={ogImage} />}
+{ogImage && <meta name="twitter:image:alt" content={cleanTitle || SITE.name} />}
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

@@ -23,7 +23,10 @@ import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.ast
 import { getLatestPosts } from "@/lib/blog";
 import { getCollection } from "astro:content";
 import { SITE } from "@/site.config";
-import { buildBreadcrumbs } from "@/lib/breadcrumbs";
+import {
+  buildBreadcrumbStructuredData,
+  buildBreadcrumbs,
+} from "@/lib/breadcrumbs";
 import { getHomeSettings } from "@/lib/settings";
 import { getNavigationItems } from "@/lib/navigation";
 import { getContentSlug, getLocaleFromPath } from "@/lib/i18n";
@@ -114,10 +117,16 @@ function getServiceFaqStructuredData() {
   };
 }
 
+const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
+const breadcrumbStructuredData = buildBreadcrumbStructuredData(
+  breadcrumbs,
+  pageUrl
+);
 const pageStructuredData =
   pageSlug === "services" ? [getServiceFaqStructuredData()] : [];
 const combinedStructuredData = [
   ...pageStructuredData,
+  ...(breadcrumbStructuredData ? [breadcrumbStructuredData] : []),
   ...(structuredData
     ? Array.isArray(structuredData)
       ? structuredData
@@ -146,7 +155,7 @@ const combinedStructuredData = [
     ) : (
       <Section tone="soft" class="page-hero">
         <Container narrow>
-          <Breadcrumb items={breadcrumbs} />
+          <Breadcrumb items={breadcrumbs} locale={locale} schema={false} />
           <h1>{title}</h1>
           {description && <p class="page-description">{description}</p>}
         </Container>

@@ -1,10 +1,30 @@
 import type { NavigationItem } from "@/lib/navigation";
+import { SITE } from "@/site.config";
 import { DEFAULT_LOCALE, localizedPath, type Locale } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
 
 export interface BreadcrumbItem {
   label: string;
   url?: string;
+}
+
+/** Schema.org BreadcrumbList (sans @context, pour fusion dans @graph). */
+export function buildBreadcrumbStructuredData(
+  items: BreadcrumbItem[],
+  pageUrl: string
+): Record<string, unknown> | undefined {
+  if (items.length < 2) return undefined;
+
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      ...(item.url ? { item: new URL(item.url, SITE.url).href } : {}),
+    })),
+  };
 }
 
 function normalizePath(path: string): string {

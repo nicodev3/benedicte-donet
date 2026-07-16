@@ -1,12 +1,18 @@
 ---
 import { SITE } from "@/site.config";
 import type { BreadcrumbItem } from "@/lib/breadcrumbs";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
+import { useTranslations } from "@/lib/translations";
 
 interface Props {
   items: BreadcrumbItem[];
+  locale?: Locale;
+  /** Si false, le JSON-LD est géré ailleurs (ex. @graph du layout). */
+  schema?: boolean;
 }
 
-const { items } = Astro.props;
+const { items, locale = DEFAULT_LOCALE, schema = true } = Astro.props;
+const t = useTranslations(locale);
 const show = items.length > 1;
 
 const jsonLd = {
@@ -23,7 +29,7 @@ const jsonLd = {
 
 {
   show && (
-    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <nav class="breadcrumb" aria-label={t.common.breadcrumb}>
       <ol>
         {items.map((item) => (
           <li>
@@ -35,7 +41,9 @@ const jsonLd = {
           </li>
         ))}
       </ol>
-      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      {schema && (
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      )}
     </nav>
   )
 }

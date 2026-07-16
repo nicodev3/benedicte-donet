@@ -5,7 +5,11 @@ import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import Button from "@/components/common/Button.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
+import { SITE } from "@/site.config";
+import { buildBreadcrumbStructuredData } from "@/lib/breadcrumbs";
 import { getLocaleFromFilePath, getLocaleFromPath, localizedPath } from "@/lib/i18n";
+import { resolveSeoImagePath } from "@/lib/images";
+import { parsePriceRange } from "@/lib/pricing";
 import { useTranslations } from "@/lib/translations";
 import type { CollectionEntry } from "astro:content";
 
@@ -32,16 +36,52 @@ const breadcrumbs = [
   { label: "Masterclass", url: localizedPath("/masterclass/", locale) },
   { label: title },
 ];
+
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const productImagePath = await resolveSeoImagePath(image);
+const priceRange = parsePriceRange(price);
+const offerUrl = new URL(ctaUrl, SITE.url).href;
+const productStructuredData = {
+  "@type": "Product",
+  "@id": `${canonical}#product`,
+  name: title,
+  description: seoDescription || title,
+  image: productImagePath ? new URL(productImagePath, SITE.url).href : undefined,
+  url: canonical,
+  brand: {
+    "@type": "Person",
+    name: SITE.siteName,
+  },
+  offers: priceRange
+    ? {
+        "@type": priceRange.low === priceRange.high ? "Offer" : "AggregateOffer",
+        url: offerUrl,
+        priceCurrency: "EUR",
+        ...(priceRange.low === priceRange.high
+          ? { price: priceRange.low }
+          : { lowPrice: priceRange.low, highPrice: priceRange.high }),
+        availability: "https://schema.org/InStock",
+      }
+    : undefined,
+};
+const breadcrumbStructuredData = buildBreadcrumbStructuredData(
+  breadcrumbs,
+  canonical
+);
 ---
 
 <BaseLayout
   title={seoTitle || title}
   description={seoDescription}
   image={image}
+  structuredData={[
+    productStructuredData,
+    ...(breadcrumbStructuredData ? [breadcrumbStructuredData] : []),
+  ]}
 >
   <Section tone="soft" class="page-hero">
     <Container narrow>
-      <Breadcrumb items={breadcrumbs} />
+      <Breadcrumb items={breadcrumbs} locale={locale} schema={false} />
       <h1>{title}</h1>
       <p class="product-price">{price}</p>
     </Container>
