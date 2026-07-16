@@ -22,7 +22,12 @@ const items = getNavigationItems(locale);
 const currentPath = Astro.url.pathname;
 const languageLabel = getLocaleSwitchLabel(locale);
 const alternateLocale = getAlternateLocale(locale);
-const languageUrl = alternateLocalePath(currentPath, locale);
+// Tag slugs are translated independently (for example, "respiration" and
+// "breathing"). Switching only the locale would otherwise point to a 404.
+const isTagArchive = /^\/(?:en\/)?blog\/tag\/[^/]+\/$/.test(currentPath);
+const languageUrl = isTagArchive
+  ? localizedPath("/blog/", alternateLocale)
+  : alternateLocalePath(currentPath, locale);
 const languageFlagSrc =
   alternateLocale === "fr" ? "/images/ui/flag-fr.svg" : "/images/ui/flag-en.svg";
 

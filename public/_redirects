@@ -18,6 +18,25 @@
 /categorie-produit/* /masterclass/ 301
 /en/categorie-produit/* /en/masterclass/ 301
 
+# Étiquettes de blog : les slugs sont traduits et ne peuvent pas être obtenus
+# par un simple ajout/retrait de /en/.
+/blog/tag/relationship-with-money/ /blog/tag/relation-a-l-argent/ 301
+/blog/tag/psychology/ /blog/tag/psycho/ 301
+/blog/tag/health/ /blog/tag/sante/ 301
+/blog/tag/positive-psychology/ /blog/tag/psychologie-positive/ 301
+/blog/tag/human-relationships/ /blog/tag/relations-humaines/ 301
+/blog/tag/mindfulness/ /blog/tag/pleine-conscience/ 301
+/blog/tag/breathing/ /blog/tag/respiration/ 301
+/blog/tag/attachment-theory/ /blog/tag/theorie-de-l-attachement/ 301
+/en/blog/tag/sante/ /en/blog/tag/health/ 301
+/en/blog/tag/theorie-de-l-attachement/ /en/blog/tag/attachment-theory/ 301
+/en/blog/tag/relation-a-l-argent/ /en/blog/tag/relationship-with-money/ 301
+/en/blog/tag/relations-humaines/ /en/blog/tag/human-relationships/ 301
+/en/blog/tag/respiration/ /en/blog/tag/breathing/ 301
+/en/blog/tag/pleine-conscience/ /en/blog/tag/mindfulness/ 301
+/en/blog/tag/psychologie-positive/ /en/blog/tag/positive-psychology/ 301
+/en/blog/tag/psycho/ /en/blog/tag/psychology/ 301
+
 # Anciens slugs FR identifiés dans Ahrefs / WordPress
 /comment-les-traumatismes-impactent-les-relations-amoureuses/ /traumatisme-relation-amoureuse/ 301
 /meditation-et-therapie-une-synergie-puissante/ /meditation-pleine-conscience-therapie/ 301

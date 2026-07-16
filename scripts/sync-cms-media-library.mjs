@@ -2,18 +2,18 @@
 /**
  * Génère la bibliothèque plate Decap CMS :
  * - public/images/cms-library/  → servie en HTTP (prévisualisations CMS)
- * - src/assets/images/cms-library/ → résolue par Astro (optimisation build)
+ * Les aperçus CMS sont servis depuis `public/`; Astro résout les images
+ * source directement depuis leurs dossiers catégorisés.
  *
  * Decap ne liste pas les sous-dossiers ; les deux dossiers contiennent des
  * liens symboliques plats vers les images catégorisées.
  */
-import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, rmSync, symlinkSync } from "node:fs";
+import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(fileURLToPath(import.meta.url), "../..");
 const assetsRoot = join(root, "src/assets/images");
-const assetsLibrary = join(assetsRoot, "cms-library");
 const publicLibrary = join(root, "public/images/cms-library");
 const publicImages = join(root, "public/images");
 
@@ -33,9 +33,6 @@ function clearLibrary(dir) {
 }
 
 function linkLibraries(linkName, category, file) {
-  const assetsTarget = join("..", category, file);
-  symlinkSync(assetsTarget, join(assetsLibrary, linkName));
-
   // Copier le fichier réel dans public/images/cms-library/ avec le nom préfixé
   // (les symlinks ne fonctionnent pas en HTTP pour Decap CMS)
   const publicSource = join(assetsRoot, category, file);
@@ -50,7 +47,6 @@ function linkLibraries(linkName, category, file) {
   copyFileSync(publicSource, publicImagesDest);
 }
 
-clearLibrary(assetsLibrary);
 clearLibrary(publicLibrary);
 
 let count = 0;
@@ -75,15 +71,4 @@ for (const category of readdirSync(assetsRoot)) {
   }
 }
 
-// Uploads CMS : copier les fichiers réels de public vers src/assets pour l'optimisation Astro
-for (const entry of readdirSync(publicLibrary)) {
-  if (entry === ".gitkeep") continue;
-  const publicPath = join(publicLibrary, entry);
-  const assetsPath = join(assetsLibrary, entry);
-  if (!existsSync(assetsPath) && lstatSync(publicPath).isFile()) {
-    copyFileSync(publicPath, assetsPath);
-    console.log(`✓ Upload CMS copié vers assets : ${entry}`);
-  }
-}
-
-console.log(`✓ ${count} liens créés dans public/ et src/assets/ cms-library/`);
+console.log(`✓ ${count} images synchronisées dans public/images/cms-library/`);
