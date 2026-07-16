@@ -14,7 +14,7 @@ seoDescription: "Are you going through a difficult period, or carrying a painful
 draft: false
 ---
 
-# A gentle and recognised approach
+## A gentle and recognised approach
 
 ![EMDR therapy session, illustration of desensitisation](/images/illustrations/illustration-emdr-seance.jpeg)
 

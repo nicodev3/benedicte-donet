@@ -14,7 +14,7 @@ seoDescription: "EMDR deeply respects the brain's natural functioning. It impose
 draft: false
 ---
 
-# **EMDR: a natural process, not a magic solution**
+## **EMDR: a natural process, not a magic solution**
 
 ![Desert landscape, illustration of the natural EMDR healing process](/images/stock/stock-emdr-paysage.jpg)
 
@@ -50,7 +50,7 @@ Within a safe framework, with precise therapeutic support, the brain regains its
 
 👉 Trauma is not erased: it is **digested**.
 
-# **What happens when trauma is truly digested?**
+## **What happens when trauma is truly digested?**
 
 When a traumatic memory is successfully processed through EMDR, the change is sometimes difficult to describe in simple words. It is not a disappearance of the memory, but a **radical transformation in the way the brain and body carry it**.
 

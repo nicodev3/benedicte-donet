@@ -14,7 +14,7 @@ seoDescription: "Vous traversez une période difficile, ou portez en vous un vé
 draft: false
 ---
 
-# Une approche douce et reconnue
+## Une approche douce et reconnue
 
 ![Séance de thérapie EMDR, illustration de la désensibilisation](/images/illustrations/illustration-emdr-seance.jpeg)
 

@@ -13,7 +13,7 @@ seoDescription: "In the quest for mental well-being, combining meditation and th
 draft: false
 ---
 
-# Mindfulness meditation and therapy: a powerful synergy for well-being
+## Mindfulness meditation and therapy: a powerful synergy for well-being
 
 > _« By living in the present moment, we discover that it is possible to free ourselves not only from the past but also from the future. We thus avoid all unnecessary worry. »_ — Ram Dass
 

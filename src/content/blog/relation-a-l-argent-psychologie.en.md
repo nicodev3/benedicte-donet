@@ -15,7 +15,7 @@ draft: false
 
 ![Pièces de monnaie, illustration de la relation à l'argent](/images/stock/stock-relation-argent-monnaie-02.jpg)
 
-# Exploring Our Relationship with Money
+## Exploring Our Relationship with Money
 
 When people consider seeing a psychologist, money isn’t usually the first topic that comes to mind. However, our relationship with money is a powerful and often overlooked aspect of emotional and psychological well-being.
 

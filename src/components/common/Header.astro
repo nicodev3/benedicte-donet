@@ -120,7 +120,13 @@ function visibleChildren(item: (typeof items)[number]) {
           {t.header.appointmentCta}
         </Button>
         <a href={languageUrl} class="language-switch" hreflang={alternateLocale}>
-          <SiteImage class="language-flag" src={languageFlagSrc} alt="" width={20} height={14} />
+          <SiteImage
+            class="language-flag"
+            src={languageFlagSrc}
+            alt={alternateLocale === "fr" ? "Français" : "English"}
+            width={20}
+            height={14}
+          />
           <span>{languageLabel}</span>
         </a>
       </nav>

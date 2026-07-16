@@ -13,7 +13,7 @@ seoDescription: "Dans la quête du bien-être mental, la combinaison de la médi
 draft: false
 ---
 
-# Méditation pleine conscience thérapie : une synergie puissante pour le bien-être
+## Méditation pleine conscience thérapie : une synergie puissante pour le bien-être
 
 > _« En vivant dans l’instant présent, nous découvrons qu’il est possible de se libérer non seulement du passé mais également du futur. Nous évitons ainsi tout tracas inutile. »_ — Ram Dass
 

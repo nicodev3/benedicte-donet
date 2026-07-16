@@ -14,7 +14,7 @@ seoDescription: "L’EMDR respecte profondément le fonctionnement naturel du ce
 draft: false
 ---
 
-# **L’EMDR : un processus naturel, pas une solution magique**
+## **L’EMDR : un processus naturel, pas une solution magique**
 
 ![Paysage désertique, illustration du processus naturel de guérison EMDR](/images/stock/stock-emdr-paysage.jpg)
 
@@ -52,7 +52,7 @@ Dans un cadre sécurisé, avec un accompagnement thérapeutique précis, le cerv
 
 👉 Le trauma n’est pas supprimé : il est **digéré**.
 
-# **Que se passe-t-il quand un trauma est réellement digéré ?**
+## **Que se passe-t-il quand un trauma est réellement digéré ?**
 
 Lorsqu’un souvenir traumatique est traité avec succès grâce à l’EMDR, le changement est parfois difficile à décrire avec des mots simples. Ce n’est pas une disparition du souvenir, mais une **transformation radicale de la manière dont le cerveau et le corps le portent**.
 

@@ -81,6 +81,6 @@ Je te partage ici ma [page YouTube](https://www.youtube.com/user/2abene) ou tu p
 ### À lire aussi :
 
 👉 [Comprendre la mémoire traumatique](/memoire-traumatisme-guerison/)  
-👉 [Les bienfaits de la pleine conscience](/meditation-et-therapie-une-synergie-puissante/)
+👉 [Les bienfaits de la pleine conscience](/meditation-pleine-conscience-therapie/)
 
 ![Paysage naturel, illustration de la présence au corps](/images/stock/stock-nature-presence.jpg)
