@@ -16,6 +16,9 @@ const { tone = "default", id, class: className = "", style } = Astro.props;
 <style>
   .section {
     padding-block: var(--space-2xl);
+    /* Diffère le layout des sections hors viewport → moins de travail au chargement */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 32rem;
   }
 
   .tone-soft {

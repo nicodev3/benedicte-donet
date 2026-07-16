@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { text, author } = Astro.props;
-const quoteBackground = await getOptimizedBackgroundUrl("/images/backgrounds/bg-citation.png", 1920);
+const quoteBackground = await getOptimizedBackgroundUrl("/images/backgrounds/bg-citation.png", 1200);
 ---
 
 <Section
@@ -26,6 +26,14 @@ const quoteBackground = await getOptimizedBackgroundUrl("/images/backgrounds/bg-
 </Section>
 
 <style>
+  @font-face {
+    font-family: "Caviar Dreams";
+    src: url("/fonts/CaviarDreams_Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: optional;
+  }
+
   :global(.section.quote-section) {
     position: relative;
     isolation: isolate;
@@ -40,12 +48,6 @@ const quoteBackground = await getOptimizedBackgroundUrl("/images/backgrounds/bg-
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--color-text);
-  }
-
-  @media (min-width: 1025px) {
-    :global(.section.quote-section) {
-      background-attachment: fixed;
-    }
   }
 
   :global(.section.quote-section)::before {
@@ -89,9 +91,4 @@ const quoteBackground = await getOptimizedBackgroundUrl("/images/backgrounds/bg-
     color: var(--color-text);
   }
 
-  @media (max-width: 1024px) {
-    :global(.section.quote-section) {
-      background-attachment: scroll;
-    }
-  }
 </style>

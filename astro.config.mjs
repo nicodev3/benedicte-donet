@@ -19,5 +19,7 @@ export default defineConfig({
   ],
   build: {
     format: "directory",
+    // CSS homepage ~40 Ko : inline pour supprimer les requêtes render-blocking
+    inlineStylesheets: "always",
   },
 });

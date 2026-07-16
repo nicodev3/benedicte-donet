@@ -1,6 +1,6 @@
 ---
 import { Sparkles } from "@lucide/astro";
-import { getOptimizedSrc } from "@/lib/images";
+import { getOptimizedImage } from "@/lib/images";
 
 interface Props {
   eyebrow?: string;
@@ -29,9 +29,15 @@ const {
 const showCta = Boolean(ctaLabel && ctaUrl);
 const isExternal = ctaUrl?.startsWith("http") ?? false;
 
-const desktopBg = await getOptimizedSrc(backgroundImage, { width: 1920 });
-const mobileBg = await getOptimizedSrc(backgroundImageMobile ?? backgroundImage, {
-  width: 1920,
+const desktopImage = await getOptimizedImage(backgroundImage, {
+  widths: [800, 1200, 1600],
+  format: "webp",
+  quality: 65,
+});
+const mobileImage = await getOptimizedImage(backgroundImageMobile ?? backgroundImage, {
+  widths: [414, 640, 828],
+  format: "webp",
+  quality: 65,
 });
 ---
 
@@ -39,11 +45,36 @@ const mobileBg = await getOptimizedSrc(backgroundImageMobile ?? backgroundImage,
   <div
     class="hero-panel"
     style={{
-      "--hero-bg-desktop": desktopBg ? `url(${desktopBg})` : "none",
-      "--hero-bg-mobile": mobileBg ? `url(${mobileBg})` : "none",
       "--hero-bg-position": backgroundPosition,
     }}
   >
+    {
+      (mobileImage || desktopImage) && (
+        <picture class="hero-media" aria-hidden="true">
+          {desktopImage && (
+            <source
+              media="(min-width: 768px)"
+              srcset={desktopImage.srcset || desktopImage.src}
+              sizes="100vw"
+            />
+          )}
+          <img
+            class="hero-bg"
+            src={mobileImage?.src || desktopImage?.src}
+            srcset={mobileImage?.srcset}
+            sizes="100vw"
+            alt=""
+            width={Number(mobileImage?.attributes.width || desktopImage?.attributes.width || 828)}
+            height={Number(
+              mobileImage?.attributes.height || desktopImage?.attributes.height || 1104
+            )}
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+          />
+        </picture>
+      )
+    }
     <div class="hero-overlay" aria-hidden="true" />
     <div class="hero-content">
       {eyebrow && <p class="hero-eyebrow">{eyebrow}</p>}
@@ -88,15 +119,26 @@ const mobileBg = await getOptimizedSrc(backgroundImageMobile ?? backgroundImage,
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    min-height: 12.5rem;
+    /* Hauteur stable dès le 1er paint — évite d’attendre les polices pour le LCP */
+    min-height: clamp(18rem, 52vw, 28rem);
     text-align: center;
     border-radius: 0 0 5rem 0;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
     background-color: var(--color-bg-soft);
-    background-image: var(--hero-bg-mobile, var(--hero-bg-desktop));
-    background-position: var(--hero-bg-position, center right);
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
+
+  .hero-media,
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-bg {
+    object-fit: cover;
+    object-position: var(--hero-bg-position, center right);
   }
 
   .hero-overlay {
@@ -189,13 +231,6 @@ const mobileBg = await getOptimizedSrc(backgroundImageMobile ?? backgroundImage,
     .hero-panel {
       width: calc(100vw - var(--space-md));
       margin-left: calc(50% - 50vw);
-      background-image: var(--hero-bg-desktop);
-    }
-  }
-
-  @media (min-width: 1025px) {
-    .hero-panel {
-      background-attachment: fixed;
     }
   }
 
@@ -206,8 +241,10 @@ const mobileBg = await getOptimizedSrc(backgroundImageMobile ?? backgroundImage,
 
     .hero-panel {
       border-radius: 0 0 3.75rem 0;
-      background-position: top center;
-      background-attachment: scroll;
+    }
+
+    .hero-bg {
+      object-position: top center;
     }
 
     .hero-content {

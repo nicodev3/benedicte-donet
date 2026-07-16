@@ -12,7 +12,14 @@ export interface OptimizeImageOptions {
   width?: number;
   widths?: number[];
   height?: number;
-  format?: "webp" | "png" | "jpg" | "jpeg";
+  format?: "webp" | "avif" | "png" | "jpg" | "jpeg";
+  quality?: number;
+}
+
+export interface OptimizedImageResult {
+  src: string;
+  srcset?: string;
+  attributes: Record<string, string | number | undefined>;
 }
 
 /**
@@ -40,18 +47,20 @@ export function isExternalImage(src: string): boolean {
 }
 
 /**
- * Retourne l'URL optimisée par astro:assets pour un chemin local ou externe.
+ * Retourne l'image optimisée (src + srcset) pour un chemin local ou externe.
  */
-export async function getOptimizedSrc(
+export async function getOptimizedImage(
   src: string | undefined,
   options: OptimizeImageOptions = {}
-): Promise<string | undefined> {
+): Promise<OptimizedImageResult | undefined> {
   if (!src) return undefined;
-  if (isExternalImage(src)) return src;
+  if (isExternalImage(src)) {
+    return { src, attributes: {} };
+  }
 
   const image = resolveImage(src);
   if (!image) {
-    if (src.startsWith("/images/")) return src;
+    if (src.startsWith("/images/")) return { src, attributes: {} };
     console.warn(`[images] Asset introuvable pour optimisation : ${src}`);
     return undefined;
   }
@@ -62,18 +71,38 @@ export async function getOptimizedSrc(
     width: options.width,
     widths: options.widths,
     height: options.height,
-    format: options.format,
+    format: options.format ?? "webp",
+    quality: options.quality ?? 75,
   });
 
-  return optimized.src;
+  return {
+    src: optimized.src,
+    srcset: optimized.srcSet.attribute,
+    attributes: optimized.attributes,
+  };
+}
+
+/**
+ * Retourne l'URL optimisée par astro:assets pour un chemin local ou externe.
+ */
+export async function getOptimizedSrc(
+  src: string | undefined,
+  options: OptimizeImageOptions = {}
+): Promise<string | undefined> {
+  const optimized = await getOptimizedImage(src, options);
+  return optimized?.src;
 }
 
 /** URL CSS `url(...)` pour un fond optimisé. */
 export async function getOptimizedBackgroundUrl(
   src: string | undefined,
-  width = 1920
+  width = 1280
 ): Promise<string | undefined> {
-  const optimized = await getOptimizedSrc(src, { width });
+  const optimized = await getOptimizedSrc(src, {
+    width,
+    format: "webp",
+    quality: 70,
+  });
   return optimized ? `url(${optimized})` : undefined;
 }
 
@@ -104,6 +133,7 @@ export async function resolveSeoImage(
     src: image,
     width: 1200,
     format: "jpg",
+    quality: 80,
   });
 
   return {

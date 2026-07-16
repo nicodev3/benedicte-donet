@@ -39,7 +39,7 @@ const formLabels =
       };
 const contactBackground = await getOptimizedBackgroundUrl(
   "/images/backgrounds/bg-contact.webp",
-  1920
+  1200
 );
 ---
 
@@ -215,12 +215,6 @@ const contactBackground = await getOptimizedBackgroundUrl(
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  @media (min-width: 1025px) {
-    :global(.section#contact) {
-      background-attachment: fixed;
-    }
   }
 
   :global(.section#contact)::before {
@@ -447,12 +441,6 @@ const contactBackground = await getOptimizedBackgroundUrl(
 
     .contact-area {
       padding-left: 0;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    :global(.section#contact) {
-      background-attachment: scroll;
     }
   }
 

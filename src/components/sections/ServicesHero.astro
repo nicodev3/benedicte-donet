@@ -34,7 +34,7 @@ const copy =
       };
 
 const backgroundImage = "/images/heroes/hero-services.jpg";
-const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1920);
+const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1400);
 ---
 
 <section class="services-hero">
@@ -217,12 +217,6 @@ const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1920);
     }
   }
 
-  @media (min-width: 1025px) {
-    .services-hero-panel::before {
-      background-attachment: fixed;
-    }
-  }
-
   @media (max-width: 767px) {
     .services-hero {
       padding-inline: var(--space-md);
@@ -244,7 +238,6 @@ const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1920);
 
     .services-hero-panel::before {
       background-position: center bottom;
-      background-attachment: scroll;
     }
 
     .services-hero-body {

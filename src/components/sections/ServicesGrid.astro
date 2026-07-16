@@ -53,9 +53,10 @@ const { title, cards } = Astro.props;
                         <SiteImage
                           src={card.image}
                           alt={`Illustration : ${card.title}`}
-                          width={400}
-                          widths={[200, 300, 400]}
-                          sizes="(max-width: 767px) 50vw, 225px"
+                          width={160}
+                          widths={[96, 120, 160]}
+                          sizes="100px"
+                          quality={65}
                           loading="lazy"
                         />
                       </div>

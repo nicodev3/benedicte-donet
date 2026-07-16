@@ -9,6 +9,7 @@ interface Props {
   height?: number;
   widths?: number[];
   sizes?: string;
+  quality?: number;
   loading?: "lazy" | "eager";
   fetchpriority?: "high" | "low" | "auto";
   class?: string;
@@ -21,6 +22,7 @@ const {
   height,
   widths,
   sizes,
+  quality = 75,
   loading = "lazy",
   fetchpriority,
   class: className,
@@ -28,6 +30,7 @@ const {
 
 const image = resolveImage(src);
 const isExternal = isExternalImage(src);
+const isSvg = Boolean(image?.format === "svg" || src.toLowerCase().endsWith(".svg"));
 
 if (!image && !isExternal) {
   console.warn(`[SiteImage] Image introuvable dans src/assets : ${src}`);
@@ -41,11 +44,14 @@ if (!image && !isExternal) {
       alt={alt}
       width={width ?? (height ? undefined : image.width)}
       height={height ?? (width ? undefined : image.height)}
-      widths={widths}
+      widths={isSvg ? undefined : widths}
       sizes={sizes}
+      quality={isSvg ? undefined : quality}
+      format={isSvg ? "svg" : "webp"}
       loading={loading}
       fetchpriority={fetchpriority}
       class={className}
+      decoding="async"
     />
   )
 }

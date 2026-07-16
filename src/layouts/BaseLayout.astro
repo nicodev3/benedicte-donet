@@ -1,13 +1,12 @@
 ---
+import "@/styles/fonts.css";
 import "@/styles/global.css";
-import "@fontsource-variable/rubik";
 import Seo from "@/components/seo/Seo.astro";
 import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { getAlternateLinks } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
-
 interface Props {
   title?: string;
   description?: string;
@@ -17,9 +16,11 @@ interface Props {
   modifiedTime?: Date;
   noindex?: boolean;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  /** Image LCP à précharger (URL optimisée) */
+  lcpImage?: string;
 }
 
-const props = Astro.props;
+const { lcpImage, ...seoProps } = Astro.props;
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
 const alternateLinks = await getAlternateLinks(Astro.url.pathname);
@@ -33,10 +34,17 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://analytics.ahrefs.com" crossorigin />
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
     {
       alternateLinks.map((link) => (
         <link rel="alternate" hreflang={link.hreflang} href={link.href} />
       ))
+    }
+    {
+      lcpImage && (
+        <link rel="preload" as="image" href={lcpImage} fetchpriority="high" />
+      )
     }
     <link
       rel="preload"
@@ -45,12 +53,30 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
       type="font/woff2"
       crossorigin
     />
-    <Seo {...props} />
-    <script
-      src="https://analytics.ahrefs.com/analytics.js"
-      data-key="rgHU3hRy3rHRn0BXIeWHxw"
-      async
-    ></script>
+    <slot name="head" />
+    <Seo {...seoProps} />
+    <script is:inline>
+      function loadAhrefs() {
+        if (window.__ahrefsLoaded) return;
+        window.__ahrefsLoaded = true;
+        const s = document.createElement("script");
+        s.src = "https://analytics.ahrefs.com/analytics.js";
+        s.dataset.key = "rgHU3hRy3rHRn0BXIeWHxw";
+        s.async = true;
+        document.head.appendChild(s);
+      }
+      const bootAhrefs = () => {
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(loadAhrefs, { timeout: 6000 });
+        } else {
+          setTimeout(loadAhrefs, 6000);
+        }
+      };
+      ["scroll", "click", "touchstart", "keydown"].forEach((evt) => {
+        addEventListener(evt, loadAhrefs, { once: true, passive: true });
+      });
+      addEventListener("load", bootAhrefs, { once: true });
+    </script>
   </head>
   <body>
     <a href="#contenu" class="skip-link">

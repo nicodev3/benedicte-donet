@@ -119,12 +119,6 @@ const desktopBg = await getOptimizedSrc(backgroundImage, { width: 1920 });
     }
   }
 
-  @media (min-width: 1025px) {
-    .post-hero-panel {
-      background-attachment: fixed;
-    }
-  }
-
   @media (max-width: 767px) {
     .post-hero {
       padding-inline: var(--space-md);
@@ -133,7 +127,6 @@ const desktopBg = await getOptimizedSrc(backgroundImage, { width: 1920 });
     .post-hero-panel {
       border-radius: 0 0 3.75rem 0;
       background-position: top center;
-      background-attachment: scroll;
     }
 
     .post-hero-content {

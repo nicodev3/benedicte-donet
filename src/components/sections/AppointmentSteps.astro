@@ -14,8 +14,8 @@ interface Props {
 
 const { title, steps, ctaLabel, ctaUrl } = Astro.props;
 
-const appointmentBgDesktop = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-desktop.png", 1920);
-const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-mobile.png", 1024);
+const appointmentBgDesktop = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-desktop.png", 1400);
+const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-mobile.png", 800);
 ---
 
 <section class="appointment-steps" id="teleconsult">
@@ -197,12 +197,6 @@ const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds
     }
   }
 
-  @media (min-width: 1025px) {
-    .appointment-steps-panel {
-      background-attachment: fixed;
-    }
-  }
-
   @media (max-width: 1024px) {
     .steps {
       grid-template-columns: 1fr;
@@ -234,7 +228,6 @@ const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds
       width: 96%;
       margin-inline: auto;
       border-radius: 60px 0 0 0;
-      background-attachment: scroll;
     }
 
     .steps-title {
