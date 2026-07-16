@@ -46,7 +46,7 @@ const cleanDescription = shorten(
   155
 );
 const seoImage = await resolveSeoImage(
-  image || "/images/heroes/hero-accueil-desktop.png"
+  image || "/images/heroes/hero-accueil-desktop.jpg"
 );
 const ogImage = seoImage ? new URL(seoImage.src, SITE.url).href : undefined;
 const t = useTranslations(locale);

@@ -7,7 +7,7 @@ tags:
   - "Psychologie positive"
 date: 2023-08-16T15:16:28Z
 updated: 2026-06-08T12:20:41Z
-image: "/images/illustrations/illustration-gratitude-thailande.png"
+image: "/images/illustrations/illustration-gratitude-thailande.jpg"
 imageAlt: "gratitude pratiquer la gratitude"
 seoTitle: "Kob khun maak ka, la gratitude"
 seoDescription: "Les mains jointes en prière près de ma poitrine, le regard plongé dans le sien, la tête légèrement baissée, je prononce humblement ces mots : ขอบคุณมากครับ, en phonétique : Kob khun maak khrap/ka. Ils signifient « Merci beaucoup » en thaïlandais. Ce rituel est sacré. Pendant longtemps, vivant en Thaïlande, je n’ai pas pleinement saisi l’importance de ce rituel. L’importance de ce moment quotidien de gratitude."

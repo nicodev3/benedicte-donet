@@ -1,7 +1,7 @@
 ---
 title: "About me"
 description: "Online psychologist | Bénédicte Donet"
-image: "/images/heroes/hero-a-propos.png"
+image: "/images/heroes/hero-a-propos.jpg"
 imageAlt: "Bénédicte Donet, online psychologist"
 seoTitle: "Bénédicte Donet | Online Clinical Psychologist"
 seoDescription: "Learn about Bénédicte Donet, online clinical psychologist specialising in trauma support, EMDR and body-based therapeutic approaches."
@@ -50,13 +50,13 @@ I am now passionate about the idea of passing on this knowledge, practices, and 
 
 [Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
 
-![Online psychologist reviews — Bénédicte Donet](/images/portraits/portrait-infos-pratiques.png)
+![Online psychologist reviews — Bénédicte Donet](/images/portraits/portrait-infos-pratiques.jpg)
 
 Happiness is not acquired; it does not reside in appearances. Each of us builds it at every moment of our life with our heart.
 
 African proverb
 
-![Online psychologist about — Bénédicte Donet](/images/illustrations/illustration-a-propos-formation.png)
+![Online psychologist about — Bénédicte Donet](/images/illustrations/illustration-a-propos-formation.jpg)
 
 ## My training path
 

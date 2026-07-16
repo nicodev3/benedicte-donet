@@ -15,11 +15,11 @@ interface Props {
 const { title, steps, ctaLabel, ctaUrl } = Astro.props;
 
 const appointmentBgDesktop = await getOptimizedSrc(
-  "/images/backgrounds/bg-rendez-vous-desktop.png",
+  "/images/backgrounds/bg-rendez-vous-desktop.jpg",
   { width: 1200, format: "webp", quality: 60 }
 );
 const appointmentBgMobile = await getOptimizedSrc(
-  "/images/backgrounds/bg-rendez-vous-mobile.png",
+  "/images/backgrounds/bg-rendez-vous-mobile.jpg",
   { width: 800, format: "webp", quality: 60 }
 );
 ---

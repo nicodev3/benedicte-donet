@@ -2,7 +2,7 @@
 title: "Masterclass"
 heroTitle: "Les Masterclass"
 description: "Psychologie en ligne"
-image: "/images/heroes/hero-masterclass.png"
+image: "/images/heroes/hero-masterclass.jpg"
 imageAlt: ""
 seoTitle: "Masterclass en ligne | Pleine conscience et psychologie"
 seoDescription: "Masterclass et programmes en ligne pour explorer la pleine conscience, le système nerveux, l'amour de soi, la méditation et la psycho-éducation."

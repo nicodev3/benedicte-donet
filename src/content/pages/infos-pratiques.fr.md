@@ -1,7 +1,7 @@
 ---
 title: "Infos pratiques"
 description: "Psychologue à distance | Bénédicte Donet"
-image: "/images/heroes/hero-infos-pratiques.png"
+image: "/images/heroes/hero-infos-pratiques.jpg"
 imageAlt: ""
 seoTitle: "Consultation psychologue en ligne | Infos pratiques"
 seoDescription: "Informations pour consulter une psychologue en ligne : durée des séances, téléconsultation, prise de rendez-vous, remboursement mutuelle et cadre thérapeutique."
@@ -9,7 +9,7 @@ order: 7
 draft: false
 ---
 
-![Bénédicte Donet psychologue en ligne avis](/images/portraits/portrait-infos-pratiques-02.png)
+![Bénédicte Donet psychologue en ligne avis](/images/portraits/portrait-infos-pratiques-02.jpg)
 
 ## Prise de rendez-vous
 

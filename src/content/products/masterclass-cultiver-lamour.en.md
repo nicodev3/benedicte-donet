@@ -1,7 +1,7 @@
 ---
 title: "Masterclass: CULTIVATING LOVE"
 price: "45.00€"
-image: "/images/products/poster-cultiver-lamour.png"
+image: "/images/products/poster-cultiver-lamour.jpg"
 imageAlt: "Online masterclass meditation cultivating love"
 ctaLabel: "Order now"
 ctaUrl: "/en/infos-pratiques/#form"

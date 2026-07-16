@@ -20,7 +20,7 @@ My specialities:
 -   EMDR practice
 -   Psycho-corporeal practices
 
-![online psychologist benedicte donet](/images/portraits/portrait-teleconsultation.png)
+![online psychologist benedicte donet](/images/portraits/portrait-teleconsultation.jpg)
 
 ## I support you through various tools
 
@@ -44,7 +44,7 @@ The main modalities I use in my sessions are:
 
 [Find out more](/en/psychotherapie/)
 
-![online psychologist emdr](/images/illustrations/illustration-services.png)
+![online psychologist emdr](/images/illustrations/illustration-services.jpg)
 
 ![online psychologist self-confidence](/images/phototherapie/photo-phototherapie-15.jpg)
 

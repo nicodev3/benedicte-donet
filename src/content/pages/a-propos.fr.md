@@ -1,7 +1,7 @@
 ---
 title: "A propos"
 description: "Psychologue à distance | Bénédicte Donet"
-image: "/images/heroes/hero-a-propos.png"
+image: "/images/heroes/hero-a-propos.jpg"
 imageAlt: ""
 seoTitle: "Bénédicte Donet | Psychologue clinicienne en ligne"
 seoDescription: "Découvrez le parcours de Bénédicte Donet, psychologue clinicienne en ligne spécialisée dans l'accompagnement du trauma, de l'EMDR et des approches psycho-corporelles."
@@ -50,13 +50,13 @@ Je suis maintenant passionnée par l’idée de vous transmettre ces savoirs, pr
 
 [Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
 
-![psychologue en ligne avis benedicte donet](/images/portraits/portrait-infos-pratiques.png)
+![psychologue en ligne avis benedicte donet](/images/portraits/portrait-infos-pratiques.jpg)
 
 Le bonheur ne s’acquiert pas, il ne réside pas dans les apparences, chacun d’entre nous le construit à chaque instant de sa vie avec son cœur.
 
 Proverbe africain
 
-![psychologue a distance a propos benedicte donet](/images/illustrations/illustration-a-propos-formation.png)
+![psychologue a distance a propos benedicte donet](/images/illustrations/illustration-a-propos-formation.jpg)
 
 ## Mon parcours de formation
 

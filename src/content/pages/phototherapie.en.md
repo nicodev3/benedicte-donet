@@ -10,7 +10,7 @@ order: 4
 draft: false
 ---
 
-![phototherapist benedicte donet self-confidence photo session](/images/portraits/portrait-autoportrait.png)
+![phototherapist benedicte donet self-confidence photo session](/images/portraits/portrait-autoportrait.jpg)
 
 ## About
 

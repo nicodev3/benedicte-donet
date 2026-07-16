@@ -1,7 +1,7 @@
 ---
 title: "Masterclass: AT THE HEART OF YOUR CHEST"
 price: "45.00€"
-image: "/images/products/poster-au-coeur-de-ta-poitrine.png"
+image: "/images/products/poster-au-coeur-de-ta-poitrine.jpg"
 imageAlt: "Online meditation workshop"
 ctaLabel: "Order now"
 ctaUrl: "/en/infos-pratiques/#form"

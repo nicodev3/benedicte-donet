@@ -1,7 +1,7 @@
 ---
 title: "PROGRAMME DE MEDITATION EN LIGNE : Se Reposer en Soi"
 price: "150.00€"
-image: "/images/products/poster-se-reposer-en-soi.png"
+image: "/images/products/poster-se-reposer-en-soi.jpg"
 imageAlt: "se reposer en soi Programme de méditation"
 ctaLabel: "Je commande"
 ctaUrl: "/infos-pratiques/#form"

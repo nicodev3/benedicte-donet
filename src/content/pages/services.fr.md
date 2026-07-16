@@ -20,7 +20,7 @@ Mes spécialités :
 -   La pratique de l’Emdr
 -   Pratiques psycho-corporelles
 
-![psychologue en visio benedicte donet](/images/portraits/portrait-teleconsultation.png)
+![psychologue en visio benedicte donet](/images/portraits/portrait-teleconsultation.jpg)
 
 ## Je vous accompagne à travers divers outils
 
@@ -44,7 +44,7 @@ Les principales modalités que j’utilise dans mes séances sont :
 
 [En savoir plus](/psychotherapie/)
 
-![psychologue en visio emdr](/images/illustrations/illustration-services.png)
+![psychologue en visio emdr](/images/illustrations/illustration-services.jpg)
 
 ![psychologue en visio confiance en soi](/images/phototherapie/photo-phototherapie-15.jpg)
 

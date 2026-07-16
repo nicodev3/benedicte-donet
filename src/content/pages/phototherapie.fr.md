@@ -10,7 +10,7 @@ order: 4
 draft: false
 ---
 
-![photothérapeute benedicte donet séance photo confiance en soi](/images/portraits/portrait-autoportrait.png)
+![photothérapeute benedicte donet séance photo confiance en soi](/images/portraits/portrait-autoportrait.jpg)
 
 ## A propos
 
