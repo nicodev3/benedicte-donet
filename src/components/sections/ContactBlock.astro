@@ -10,6 +10,7 @@ import { useTranslations } from "@/lib/translations";
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
 const global = getSiteGlobal(locale);
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdnepdb";
 const formLabels =
   locale === "fr"
     ? {
@@ -20,6 +21,9 @@ const formLabels =
         phone: "Téléphone",
         message: "Votre demande, vos besoins...",
         submit: "J'envoie",
+        success: "Merci ! Votre message a bien été envoyé.",
+        error: "Une erreur est survenue. Réessayez ou contactez-moi par email.",
+        sending: "Envoi…",
       }
     : {
         title: "Book by message",
@@ -29,6 +33,9 @@ const formLabels =
         phone: "Phone",
         message: "Your request, your needs...",
         submit: "Send",
+        success: "Thank you! Your message has been sent.",
+        error: "Something went wrong. Please try again or email me directly.",
+        sending: "Sending…",
       };
 const contactBackground = await getOptimizedBackgroundUrl(
   "/images/backgrounds/bg-contact.webp",
@@ -59,29 +66,36 @@ const contactBackground = await getOptimizedBackgroundUrl(
 
       <form
         class="contact-form"
+        action={FORMSPREE_ENDPOINT}
+        method="POST"
         data-contact-form
-        data-email={global.email}
-        data-subject={formLabels.title}
+        data-success={formLabels.success}
+        data-error={formLabels.error}
+        data-sending={formLabels.sending}
+        data-submit-label={formLabels.submit}
       >
         <h2>{formLabels.title}</h2>
         <div class="form-card">
+          <input type="hidden" name="_subject" value={formLabels.title} />
           <div class="form-row">
             <label>
               <span>{formLabels.lastName}</span>
               <input
                 type="text"
-                name={formLabels.lastName}
+                name="lastName"
                 autocomplete="family-name"
                 placeholder={formLabels.lastName}
+                required
               />
             </label>
             <label>
               <span>{formLabels.firstName}</span>
               <input
                 type="text"
-                name={formLabels.firstName}
+                name="firstName"
                 autocomplete="given-name"
                 placeholder={formLabels.firstName}
+                required
               />
             </label>
           </div>
@@ -90,16 +104,17 @@ const contactBackground = await getOptimizedBackgroundUrl(
               <span>{formLabels.email}</span>
               <input
                 type="email"
-                name={formLabels.email}
+                name="email"
                 autocomplete="email"
                 placeholder={formLabels.email}
+                required
               />
             </label>
             <label>
               <span>{formLabels.phone}</span>
               <input
                 type="tel"
-                name={formLabels.phone}
+                name="phone"
                 autocomplete="tel"
                 placeholder={formLabels.phone}
               />
@@ -108,11 +123,13 @@ const contactBackground = await getOptimizedBackgroundUrl(
           <label class="message-field">
             <span>{formLabels.message}</span>
             <textarea
-              name={formLabels.message}
+              name="message"
               rows="4"
               placeholder={formLabels.message}
+              required
             ></textarea>
           </label>
+          <p class="form-status" data-form-status hidden></p>
           <button type="submit">{formLabels.submit}</button>
         </div>
       </form>
@@ -126,21 +143,57 @@ const contactBackground = await getOptimizedBackgroundUrl(
       if (form.dataset.initialized === "true") return;
       form.dataset.initialized = "true";
 
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const email = form.dataset.email?.trim();
-        if (!email) return;
+      const statusEl = form.querySelector<HTMLElement>("[data-form-status]");
+      const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
 
-        const data = new FormData(form);
-        const lines: string[] = [];
-        for (const [key, value] of data.entries()) {
-          const text = String(value).trim();
-          if (text) lines.push(`${key}: ${text}`);
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const endpoint = form.action;
+        if (!endpoint) return;
+
+        const submitLabel = form.dataset.submitLabel || "Send";
+        const sendingLabel = form.dataset.sending || "Sending…";
+        const successMessage = form.dataset.success || "Thank you!";
+        const errorMessage = form.dataset.error || "Something went wrong.";
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = sendingLabel;
+        }
+        if (statusEl) {
+          statusEl.hidden = true;
+          statusEl.textContent = "";
+          statusEl.removeAttribute("data-state");
         }
 
-        const subject = encodeURIComponent(form.dataset.subject || "Contact");
-        const body = encodeURIComponent(lines.join("\n"));
-        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+
+          if (!response.ok) throw new Error("Formspree error");
+
+          form.reset();
+          if (statusEl) {
+            statusEl.hidden = false;
+            statusEl.textContent = successMessage;
+            statusEl.dataset.state = "success";
+          }
+        } catch {
+          if (statusEl) {
+            statusEl.hidden = false;
+            statusEl.textContent = errorMessage;
+            statusEl.dataset.state = "error";
+          }
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = submitLabel;
+          }
+        }
       });
     });
   }
@@ -333,6 +386,28 @@ const contactBackground = await getOptimizedBackgroundUrl(
 
   .message-field {
     margin-top: 1.5625rem;
+  }
+
+  .form-status {
+    margin: 1rem 0 0;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: none;
+  }
+
+  .form-status[data-state="success"] {
+    color: #2f6b4f;
+  }
+
+  .form-status[data-state="error"] {
+    color: #9b3b3b;
+  }
+
+  .form-card button:disabled {
+    opacity: 0.7;
+    cursor: wait;
   }
 
   .form-card button {
