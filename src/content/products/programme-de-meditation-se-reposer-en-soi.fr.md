@@ -6,6 +6,7 @@ imageAlt: "se reposer en soi Programme de méditation"
 ctaLabel: "Je commande"
 ctaUrl: "/infos-pratiques/#form"
 seoTitle: "Se reposer en soi | Méditation en ligne"
+seoDescription: "Programme de méditation en ligne pour débutants : livret détaillé, méditations guidées et séances individuelles pour revenir en soi avec douceur."
 draft: false
 ---
 

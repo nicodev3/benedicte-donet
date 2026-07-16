@@ -1,6 +1,8 @@
 # Stratégie de redirections
 
-Le fichier effectif est `public/_redirects` (format Cloudflare Pages, copié dans `dist/` au build).
+Le fichier effectif est `public/_redirects` (format Cloudflare Pages / Workers Static Assets, copié dans `dist/` au build).
+
+Pris en charge nativement par **Cloudflare Pages** et **Workers Static Assets** (`wrangler.jsonc` → `assets.directory`).
 
 ## Principe
 

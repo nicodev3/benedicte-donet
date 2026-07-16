@@ -135,6 +135,14 @@ const jsonLd = {
 <meta name="description" content={cleanDescription} />
 <link rel="canonical" href={canonical} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
+{
+  SITE.googleSiteVerification && (
+    <meta
+      name="google-site-verification"
+      content={SITE.googleSiteVerification}
+    />
+  )
+}
 
 <meta property="og:type" content={type} />
 <meta property="og:title" content={fullTitle} />

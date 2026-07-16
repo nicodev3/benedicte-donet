@@ -6,6 +6,7 @@ imageAlt: "méditation en ligne atelier en ligne"
 ctaLabel: "Je commande"
 ctaUrl: "/infos-pratiques/#form"
 seoTitle: "Au cœur de ta poitrine | Masterclass en ligne"
+seoDescription: "Masterclass en ligne « Au cœur de ta poitrine » : science, pleine conscience et tantra pour reconnecter le pouvoir de ta poitrine."
 draft: false
 ---
 

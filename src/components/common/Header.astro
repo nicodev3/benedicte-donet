@@ -12,7 +12,9 @@ import {
   getLocaleSwitchLabel,
   localizedPath,
 } from "@/lib/i18n";
+import { getAlternateTagSlug } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
+import { getCollection } from "astro:content";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
@@ -23,11 +25,16 @@ const currentPath = Astro.url.pathname;
 const languageLabel = getLocaleSwitchLabel(locale);
 const alternateLocale = getAlternateLocale(locale);
 // Tag slugs are translated independently (for example, "respiration" and
-// "breathing"). Switching only the locale would otherwise point to a 404.
-const isTagArchive = /^\/(?:en\/)?blog\/tag\/[^/]+\/$/.test(currentPath);
-const languageUrl = isTagArchive
-  ? localizedPath("/blog/", alternateLocale)
-  : alternateLocalePath(currentPath, locale);
+// "breathing"). Switch to the paired tag when possible, else fall back to /blog/.
+const tagMatch = currentPath.match(/^\/(?:en\/)?blog\/tag\/([^/]+)\/$/);
+let languageUrl = alternateLocalePath(currentPath, locale);
+if (tagMatch?.[1]) {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const alternateTag = getAlternateTagSlug(posts, locale, tagMatch[1]);
+  languageUrl = alternateTag
+    ? localizedPath(`/blog/tag/${alternateTag}/`, alternateLocale)
+    : localizedPath("/blog/", alternateLocale);
+}
 const languageFlagSrc =
   alternateLocale === "fr" ? "/images/ui/flag-fr.svg" : "/images/ui/flag-en.svg";
 

@@ -1,5 +1,10 @@
 import type { CollectionEntry } from "astro:content";
-import { getLocaleFromFilePath, type Locale } from "@/lib/i18n";
+import {
+  getAlternateLocale,
+  getLocaleFromFilePath,
+  stripLocaleFromFilePath,
+  type Locale,
+} from "@/lib/i18n";
 
 export function slugifyTag(tag: string): string {
   return tag
@@ -53,4 +58,51 @@ export function getPostsByTagSlug(
         post.data.tags.some((tag) => slugifyTag(tag) === tagSlug)
     )
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+}
+
+/**
+ * Map FR↔EN tag slugs from paired blog posts (same base slug, tags aligned by index).
+ */
+export function getAlternateTagSlug(
+  posts: CollectionEntry<"blog">[],
+  locale: Locale,
+  tagSlug: string
+): string | undefined {
+  const published = posts.filter((post) => !post.data.draft);
+  const byBaseSlug = new Map<string, Partial<Record<Locale, CollectionEntry<"blog">>>>();
+
+  for (const post of published) {
+    const baseSlug = stripLocaleFromFilePath(post.filePath, post.id);
+    const postLocale = getLocaleFromFilePath(post.filePath);
+    const pair = byBaseSlug.get(baseSlug) ?? {};
+    pair[postLocale] = post;
+    byBaseSlug.set(baseSlug, pair);
+  }
+
+  const votes = new Map<string, number>();
+
+  for (const pair of byBaseSlug.values()) {
+    const current = pair[locale];
+    const alternate = pair[getAlternateLocale(locale)];
+    if (!current || !alternate) continue;
+
+    const currentTags = current.data.tags.map(slugifyTag);
+    const alternateTags = alternate.data.tags.map(slugifyTag);
+    const index = currentTags.indexOf(tagSlug);
+    if (index === -1 || !alternateTags[index]) continue;
+
+    const candidate = alternateTags[index];
+    votes.set(candidate, (votes.get(candidate) ?? 0) + 1);
+  }
+
+  let best: string | undefined;
+  let bestScore = 0;
+  for (const [candidate, score] of votes) {
+    if (score > bestScore) {
+      best = candidate;
+      bestScore = score;
+    }
+  }
+
+  return best;
 }

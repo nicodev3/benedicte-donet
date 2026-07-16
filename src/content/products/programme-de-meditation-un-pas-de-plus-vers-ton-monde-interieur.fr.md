@@ -6,6 +6,7 @@ imageAlt: "programme amour de soi meditation en ligne"
 ctaLabel: "Choix des options"
 ctaUrl: "/infos-pratiques/#form"
 seoTitle: "Un pas de plus vers ton monde intérieur | Programme de méditation"
+seoDescription: "Programme amour de soi sur 8 semaines : pleine conscience, pratiques somatiques, méditation et séances Zoom pour explorer ton monde intérieur."
 draft: false
 ---
 

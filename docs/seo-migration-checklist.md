@@ -19,13 +19,14 @@
 
 ## Vérifications DNS et redirections
 
-- [ ] Vérifier que le domaine est branché sur Cloudflare Pages (DNS).
+- [ ] Vérifier que le domaine est branché sur Cloudflare (Pages ou Workers + assets).
 - [ ] Forcer HTTPS + redirection www/apex cohérente avec l'existant (le site utilise `www.`).
 - [ ] Tester une dizaine d'URLs importantes (accueil, services, 3 articles, mentions légales).
 - [ ] Tester les redirections : `/boutique/`, `/panier/`, `/en/about-me/`, `/sitemap/`.
 
 ## Après la mise en ligne
 
+- [ ] Vérifier la propriété du site dans Google Search Console (DNS ou balise HTML via `SITE.googleSiteVerification` dans `src/site.config.ts`).
 - [ ] Soumettre `https://www.benedictedonet-psyenligne.com/sitemap-index.xml` dans Google Search Console.
 - [ ] Vérifier dans Search Console qu'aucune erreur 404 inhabituelle n'apparaît (rapport Pages, sous 2-4 semaines).
 - [ ] Surveiller les positions des pages principales (EMDR, psychologue en ligne…).
@@ -37,4 +38,4 @@
 - Les avis Google (widget Trustindex) sont désormais des contenus statiques éditables dans la page d'accueil.
 - Le formulaire de contact et la newsletter WordPress sont remplacés par des liens mailto en attendant un endpoint dédié.
 - La boutique WooCommerce n'est pas reprise (redirections vers /masterclass/).
-- Les pages anglaises `/en/*` ne sont pas reprises (redirections 301 vers les pages françaises).
+- Le site est bilingue FR/EN : FR à la racine, EN sous `/en/`, avec liens `hreflang` (pages, blog, produits, tags).

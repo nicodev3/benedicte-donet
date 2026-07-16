@@ -44,7 +44,9 @@ export function stripLocaleFromFilePath(
   if (!filePath) return stripLocaleFromId(fallbackId);
 
   const normalized = filePath.replace(/\\/g, "/");
-  const contentMatch = normalized.match(/src\/content\/(?:pages|blog)\/(.+)$/);
+  const contentMatch = normalized.match(
+    /src\/content\/(?:pages|blog|products)\/(.+)$/
+  );
   const relativePath = contentMatch?.[1] ?? normalized.split("/").at(-1) ?? fallbackId;
 
   return relativePath
