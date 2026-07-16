@@ -1,7 +1,7 @@
 ---
 import SiteImage from "@/components/common/SiteImage.astro";
 import { productUrl, type MasterclassProduct } from "@/lib/masterclass-products";
-import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
+import { DEFAULT_LOCALE, localizedPath, type Locale } from "@/lib/i18n";
 
 interface Props {
   products: MasterclassProduct[];
@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { products, locale = DEFAULT_LOCALE } = Astro.props;
+const contactUrl = localizedPath("/infos-pratiques/#form", locale);
 ---
 
 <ul class="products-grid">
@@ -39,7 +40,7 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
           </h3>
           <p class="product-card-price">{product.price}</p>
         </a>
-        <a class="product-card-button" href={url}>
+        <a class="product-card-button" href={contactUrl}>
           {product.ctaLabel}
         </a>
       </li>
@@ -58,20 +59,26 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
     max-width: none;
     margin: var(--space-md) 0 0;
     padding: 0;
+    align-items: stretch;
   }
 
   .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.9375rem;
     text-align: center;
+    height: 100%;
     padding: 2.5rem 1.875rem 1.875rem;
     background: rgb(198 141 133 / 0.09);
     box-shadow: 3px 3px 12px rgb(0 0 0 / 0.3);
   }
 
   .product-card-link {
-    display: block;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     color: inherit;
     text-decoration: none;
@@ -96,7 +103,7 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
     line-height: 1.35;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    color: var(--color-secondary);
+    color: var(--color-secondary-dark);
   }
 
   .product-card-price {
@@ -110,7 +117,7 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
 
   .product-card-button {
     display: inline-block;
-    margin-top: 0.9375rem;
+    margin-top: auto;
     padding: 0.9375rem 1.5625rem;
     border-radius: 5rem 0;
     background: var(--color-accent);

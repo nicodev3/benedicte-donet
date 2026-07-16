@@ -13,13 +13,6 @@ draft: false
 
 ## MY SERVICES
 
-My specialities:
-
--   Trauma
--   Sexuality (trauma, addictions…)
--   EMDR practice
--   Psycho-corporeal practices
-
 ![online psychologist benedicte donet](/images/portraits/portrait-teleconsultation.jpg)
 
 ## I support you through various tools
@@ -42,7 +35,7 @@ The main modalities I use in my sessions are:
 -   **Mindfulness**: meditation, observation of emotions and sensations.
 -   **Emotional release techniques** through breathing and the use of the voice.
 
-[Find out more](/en/psychotherapie/)
+[Discover psychotherapy](/en/psychotherapie/)
 
 ![online psychologist emdr](/images/illustrations/illustration-services.jpg)
 
@@ -55,7 +48,7 @@ This exercise offers a specific moment and environment to **cultivate self-estee
   
 Through phototherapy, you have the opportunity to explore the different dimensions at play.
 
-[Find out more](/en/phototherapie/)
+[Explore phototherapy](/en/phototherapie/)
 
 ## Masterclass
 
@@ -63,7 +56,7 @@ Through a variety of online programmes and workshops, I offer teachings and prac
 Everything I share in these formats represents knowledge I consider essential for **achieving harmony with our own being**. Understanding ourselves, our inner mechanisms, is a prerequisite for fully welcoming ourselves and living in greater harmony.  
 It is with joy that I share what I have acquired over many years of practice and research in my areas of expertise such as trauma, nervous system regulation, sexuality, online meditation and psycho-corporeal practices.
 
-[Find out more](/en/masterclass/)
+[View masterclasses and workshops](/en/masterclass/)
 
 ![online meditation programme psychologist](/images/portraits/portrait-02.jpg)
 

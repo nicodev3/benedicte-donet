@@ -1,48 +1,33 @@
 ---
 /**
- * Retire l'intro dupliquée du markdown Services (déjà dans ServicesHero).
+ * Retire les titres dupliqués du markdown Services (déjà dans ServicesHero).
+ * Conserve la liste des spécialités, affichée une seule fois dans le contenu.
  */
 ---
 
 <script>
-  function isImageParagraph(element: Element): boolean {
-    if (element.tagName !== "P") return false;
-    const imgs = element.querySelectorAll("img");
-    if (!imgs.length) return false;
-    const clone = element.cloneNode(true) as HTMLElement;
-    clone.querySelectorAll("img").forEach((img) => img.remove());
-    return !(clone.textContent?.trim() ?? "");
-  }
-
   function stripServicesIntro(prose: HTMLElement) {
     if (prose.dataset.servicesIntroReady === "true") return;
 
-    const heading = prose.querySelector("h1");
-    if (!heading) return;
+    const headings = [...prose.querySelectorAll(":scope > h1, :scope > h2")].slice(
+      0,
+      2
+    );
+    if (headings.length < 2) return;
 
-    const subheading = heading.nextElementSibling;
-    if (!subheading || subheading.tagName !== "H2") return;
+    const [eyebrow, subtitle] = headings;
+    const eyebrowText = eyebrow.textContent?.trim().toLowerCase() ?? "";
+    const subtitleText = subtitle.textContent?.trim().toLowerCase() ?? "";
 
-    let next = subheading.nextElementSibling;
-    const toRemove: Element[] = [heading, subheading];
+    const isServicesEyebrow =
+      eyebrowText.includes("psychologue") || eyebrowText.includes("psychologist");
+    const isServicesSubtitle =
+      subtitleText.includes("services") || subtitleText.includes("mes services");
 
-    while (next) {
-      if (isImageParagraph(next)) break;
+    if (!isServicesEyebrow || !isServicesSubtitle) return;
 
-      if (next.tagName === "H2" || next.tagName === "H1") break;
-
-      if (next.tagName === "UL" || next.tagName === "P") {
-        toRemove.push(next);
-        next = next.nextElementSibling;
-        continue;
-      }
-
-      break;
-    }
-
-    if (toRemove.length < 3) return;
-
-    toRemove.forEach((node) => node.remove());
+    eyebrow.remove();
+    subtitle.remove();
     prose.dataset.servicesIntroReady = "true";
   }
 

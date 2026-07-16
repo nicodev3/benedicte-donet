@@ -116,15 +116,20 @@ Si vous vous sentez prête à entreprendre ce cheminement, vous pouvez m’écri
 
 ## Elles en parlent…
 
-“J’ai reçu un magnifique photoshoot avec Bénédicte. J’avais besoin de photo professionnel, naturelle et feminine pour mon business. Je me sens en général inconfortable et nerveuse devant un appareil photo. Mais Béné a été incroyable ! Elle a commencé notre séance avec une méditation et ma donné tout le temps dont j’avais besoin pour me détendre et revenir à mon être. Elle a apporté une douce guidance et m’a réconfortée avec ses mots tout au long du photoshoot. Elle se déplaçait délicatement autour de moi ;  
-Bénédicte a pris le temps de réellement écouter et comprendre mes besoins et elle l’a parfaitement capturé. Encore mieux que ce que je n’avais imaginé moi-même. Mais le réel cadeau que j’ai reçu de Bénédicte est davantage d’amour  
-et d’appréciations pour mon corps. Elle a pris des photos de moi si belle  
-que je n’ai pu m’empêcher de voir ma propre beauté ! Merci pour ce cadeau.”
+“J’ai reçu un magnifique photoshoot avec Bénédicte. J’avais besoin de photos professionnelles, naturelles et féminines pour mon business. Je me sens en général inconfortable et nerveuse devant un appareil photo. Mais Béné a été incroyable !”
 
 ⁓ J.
 
-“J’ai beaucoup apprécié recevoir ce photoshoot avec Bénédicte. Bénédicte a une très belle énergie. Elle crée une atmosphere relaxante et apporte beaucoup d’ouverture à l’expérience.  
-Elle est une photographe expérimentée avec un oeil incroyable et un style unique que j’aime beaucoup. Je recommande définitivement !”
+“Elle a commencé notre séance avec une méditation et m’a donné tout le temps dont j’avais besoin pour me détendre et revenir à mon être. Elle a apporté une douce guidance et m’a réconfortée avec ses mots tout au long du photoshoot.”
+
+⁓ J.
+
+“Bénédicte a pris le temps de réellement écouter et comprendre mes besoins et elle l’a parfaitement capturé. Le réel cadeau que j’ai reçu est davantage d’amour et d’appréciation pour mon corps. Elle a pris des photos de moi si belles que je n’ai pu m’empêcher de voir ma propre beauté !”
+
+⁓ J.
+
+“J’ai beaucoup apprécié recevoir ce photoshoot avec Bénédicte. Bénédicte a une très belle énergie. Elle crée une atmosphère relaxante et apporte beaucoup d’ouverture à l’expérience.  
+Elle est une photographe expérimentée avec un œil incroyable et un style unique que j’aime beaucoup. Je recommande définitivement !”
 
 ⁓ S.
 

@@ -44,7 +44,7 @@
 
     if (!textNodes.length) return;
 
-    const intro = document.createElement("div");
+    const intro = document.createElement("section");
     intro.className = "page-intro services-intro";
 
     const imageCol = document.createElement("div");
@@ -63,6 +63,11 @@
     const textCol = document.createElement("div");
     textCol.className = "page-intro-content prose";
     textNodes.forEach((node) => textCol.append(node));
+
+    const heading = textCol.querySelector("h2");
+    if (heading?.id) {
+      intro.setAttribute("aria-labelledby", heading.id);
+    }
 
     intro.append(imageCol, textCol);
     imageParagraph.remove();
@@ -99,7 +104,12 @@
   }
 
   .services-intro .page-intro-content h2 {
+    margin: 0 0 clamp(1.25rem, 2.5vw, 1.75rem);
+    font-family: var(--font-heading);
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
     color: var(--color-text);
   }
 

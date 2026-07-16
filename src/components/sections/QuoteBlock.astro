@@ -19,7 +19,8 @@ const quoteBackground = await getOptimizedSrc("/images/backgrounds/bg-citation.j
 
 <Section class="quote-section" lazyBg={quoteBackground} lazyBgVar="--quote-bg">
   <Container narrow>
-    <figure class="quote">
+    <figure class="site-quote site-quote--featured">
+      <span class="site-quote-mark" aria-hidden="true">“</span>
       <blockquote set:html={renderInlineRichText(text)} />
       <figcaption>{author}</figcaption>
     </figure>
@@ -65,31 +66,4 @@ const quoteBackground = await getOptimizedSrc("/images/backgrounds/bg-citation.j
     z-index: 1;
     width: 100%;
   }
-
-  .quote {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    text-align: center;
-  }
-
-  .quote blockquote {
-    border: none;
-    padding: 0;
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: clamp(1rem, 0.9rem + 0.45vw, 1.25rem);
-    line-height: 1.5;
-    color: var(--color-text);
-  }
-
-  .quote figcaption {
-    margin-top: var(--space-sm);
-    font-family: var(--font-heading);
-    font-size: var(--text-base);
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--color-text);
-  }
-
 </style>

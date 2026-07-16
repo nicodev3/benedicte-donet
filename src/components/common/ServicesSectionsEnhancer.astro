@@ -1,0 +1,88 @@
+---
+/**
+ * Enveloppe chaque bloc h2 + contenu associé dans une <section>
+ * (sémantique HTML5 / accessibilité).
+ */
+---
+
+<script>
+  function wrapServicesSections(prose: HTMLElement) {
+    if (prose.dataset.servicesSectionsReady === "true") return;
+
+    const headings = [...prose.querySelectorAll<HTMLElement>(":scope > h2")];
+
+    for (const heading of headings) {
+      if (!heading.id) continue;
+
+      const section = document.createElement("section");
+      section.className = "services-section";
+      section.setAttribute("aria-labelledby", heading.id);
+
+      prose.insertBefore(section, heading);
+      section.append(heading);
+
+      let next = section.nextElementSibling;
+      while (
+        next &&
+        next.tagName !== "H2" &&
+        next.tagName !== "SECTION" &&
+        !next.classList.contains("page-intro")
+      ) {
+        const current = next;
+        next = next.nextElementSibling;
+        section.append(current);
+      }
+    }
+
+    prose.dataset.servicesSectionsReady = "true";
+  }
+
+  function setupServicesSections() {
+    const prose = document.querySelector<HTMLElement>(".prose");
+    if (!prose) return;
+    wrapServicesSections(prose);
+  }
+
+  setupServicesSections();
+  document.addEventListener("astro:page-load", setupServicesSections);
+</script>
+
+<style is:global>
+  .prose.prose-wide > .services-section,
+  .prose.prose-wide > .services-faq {
+    margin-block: var(--space-lg);
+    padding: clamp(1.75rem, 3.5vw, 2.75rem) clamp(1.25rem, 3vw, 2.25rem);
+    border-radius: 0 0 0 2.5rem;
+  }
+
+  .prose.prose-wide > .services-section:nth-of-type(odd),
+  .prose.prose-wide > .services-faq:nth-of-type(odd) {
+    background: var(--color-bg-soft);
+  }
+
+  .prose.prose-wide > .services-section:nth-of-type(even),
+  .prose.prose-wide > .services-faq:nth-of-type(even) {
+    background: var(--color-bg-muted);
+  }
+
+  .services-section > :first-child,
+  .services-faq > :first-child {
+    margin-top: 0;
+  }
+
+  .services-section > * + * {
+    margin-top: var(--space-sm);
+  }
+
+  /* Titres de section Services — même style partout (y compris FAQ) */
+  .services-section > h2,
+  .services-faq-title {
+    margin: 0 0 clamp(1.25rem, 2.5vw, 1.75rem);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: var(--color-text);
+  }
+</style>

@@ -22,7 +22,7 @@ const MASTERCLASS_PRODUCTS_FR: MasterclassProduct[] = [
     price: "150.00€",
     image: "/images/products/poster-se-reposer-en-soi.jpg",
     imageAlt: "se reposer en soi Programme de méditation",
-    ctaLabel: "Ajouter au panier",
+    ctaLabel: "Me contacter",
   },
   {
     slug: "masterclass-cultiver-lamour",
@@ -30,7 +30,7 @@ const MASTERCLASS_PRODUCTS_FR: MasterclassProduct[] = [
     price: "45.00€",
     image: "/images/products/poster-cultiver-lamour.jpg",
     imageAlt: "Masterclass méditation amour cultiver amour",
-    ctaLabel: "Ajouter au panier",
+    ctaLabel: "Me contacter",
   },
   {
     slug: "programme-de-meditation-un-pas-de-plus-vers-ton-monde-interieur",
@@ -39,7 +39,7 @@ const MASTERCLASS_PRODUCTS_FR: MasterclassProduct[] = [
     price: "465.00€ – 765.00€",
     image: "/images/products/poster-meditation-01.jpg",
     imageAlt: "programme amour de soi meditation en ligne",
-    ctaLabel: "Choix des options",
+    ctaLabel: "Me contacter",
   },
   {
     slug: "masterclass-au-coeur-de-ta-poitrine",
@@ -47,7 +47,7 @@ const MASTERCLASS_PRODUCTS_FR: MasterclassProduct[] = [
     price: "45.00€",
     image: "/images/products/poster-au-coeur-de-ta-poitrine.jpg",
     imageAlt: "méditation en ligne atelier en ligne",
-    ctaLabel: "Ajouter au panier",
+    ctaLabel: "Me contacter",
   },
 ];
 
@@ -59,7 +59,7 @@ const MASTERCLASS_PRODUCTS_EN: MasterclassProduct[] = [
     price: "150.00€",
     image: "/images/products/poster-se-reposer-en-soi.jpg",
     imageAlt: "resting in yourself online meditation programme",
-    ctaLabel: "Add to cart",
+    ctaLabel: "Contact me",
   },
   {
     slug: "masterclass-cultiver-lamour",
@@ -67,7 +67,7 @@ const MASTERCLASS_PRODUCTS_EN: MasterclassProduct[] = [
     price: "45.00€",
     image: "/images/products/poster-cultiver-lamour.jpg",
     imageAlt: "masterclass meditation love self-love",
-    ctaLabel: "Add to cart",
+    ctaLabel: "Contact me",
   },
   {
     slug: "programme-de-meditation-un-pas-de-plus-vers-ton-monde-interieur",
@@ -76,7 +76,7 @@ const MASTERCLASS_PRODUCTS_EN: MasterclassProduct[] = [
     price: "465.00€ – 765.00€",
     image: "/images/products/poster-meditation-01.jpg",
     imageAlt: "self-love programme online meditation",
-    ctaLabel: "Choose options",
+    ctaLabel: "Contact me",
   },
   {
     slug: "masterclass-au-coeur-de-ta-poitrine",
@@ -84,7 +84,7 @@ const MASTERCLASS_PRODUCTS_EN: MasterclassProduct[] = [
     price: "45.00€",
     image: "/images/products/poster-au-coeur-de-ta-poitrine.jpg",
     imageAlt: "online meditation workshop",
-    ctaLabel: "Add to cart",
+    ctaLabel: "Contact me",
   },
 ];
 

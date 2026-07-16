@@ -15,20 +15,14 @@ draft: false
 
 Appointments can be made by email or via the contact link [below](#form).
 
--   Sessions last **1 hour 30 minutes** so that you have time to share, settle in, and work through what you need.  
-      
-    
--   The number of sessions depends on what you wish to work on, as well as your sensitivity.  
-      
-    
--   Sessions are by teleconsultation only. Although an address is listed on my Google page, it is not the address of a practice.  
-      
-    
--   If I have no availability to offer you for several months, I will suggest referring you to another trusted professional.
+-   **Duration —** Sessions last **1 hour 30 minutes**, so you have time to share, settle in, and work through what you need.
+-   **Pace —** The number of sessions depends on what you wish to work on and on your sensitivity.
+-   **Format —** Teleconsultation only. The address on Google is not that of a practice.
+-   **Availability —** If I have nothing to offer for several months, I can refer you to another trusted professional.
 
 [Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
 
-## Important information
+## What to know before booking
 
 -   I do not participate in the French « Mon soutien psy » scheme. You therefore cannot be reimbursed for sessions under this specific programme.
 -   However, outside of this scheme, some **health insurance providers** may offer reimbursement for a certain number of sessions. Do not hesitate to contact your insurer to ask. If they offer reimbursements, please let me know in advance so that I can send you an invoice for each of our sessions.
@@ -45,11 +39,3 @@ To contact me:
 -   [+33 6 17 78 98 78](tel:0033617789878)
 -   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
 -   Teleconsultation on Zoom
-
-## I take action
-
-   
-
-Your availability
-
-Send

@@ -1,0 +1,176 @@
+---
+/**
+ * Section « Prise de rendez-vous » : liste → points clés avec icônes.
+ */
+import { CalendarRange, Clock, Handshake, Video } from "@lucide/astro";
+
+const icons = [
+  { key: "duree", Icon: Clock },
+  { key: "rythme", Icon: CalendarRange },
+  { key: "format", Icon: Video },
+  { key: "dispo", Icon: Handshake },
+] as const;
+---
+
+<div id="infos-booking-icons" hidden aria-hidden="true">
+  {
+    icons.map(({ key, Icon }) => (
+      <span data-infos-booking-icon={key}>
+        <Icon size={20} stroke-width={1.75} aria-hidden="true" />
+      </span>
+    ))
+  }
+</div>
+
+<script>
+  function buildInfosBooking(prose: HTMLElement) {
+    const heading = prose.querySelector<HTMLElement>(
+      'h2[id^="prise-de-rendez"], h2[id^="booking-an-appointment"]'
+    );
+    if (!heading || heading.dataset.infosBookingReady === "true") return;
+
+    const lead = heading.nextElementSibling;
+    if (!lead || lead.tagName !== "P") return;
+
+    const list = lead.nextElementSibling;
+    if (!list || list.tagName !== "UL") return;
+
+    const items = [...list.querySelectorAll(":scope > li")];
+    if (items.length < 2) return;
+
+    const iconRoot = document.getElementById("infos-booking-icons");
+    const iconSlots = iconRoot
+      ? [...iconRoot.querySelectorAll<HTMLElement>("[data-infos-booking-icon]")]
+      : [];
+
+    lead.classList.add("infos-booking-lead");
+
+    const facts = document.createElement("ul");
+    facts.className = "infos-booking-list";
+    facts.setAttribute("aria-label", heading.textContent?.trim() ?? "");
+
+    items.forEach((item, index) => {
+      const row = document.createElement("li");
+      row.className = "infos-booking-item";
+
+      const iconWrap = document.createElement("span");
+      iconWrap.className = "infos-booking-icon";
+      iconWrap.setAttribute("aria-hidden", "true");
+
+      const source = iconSlots[index] ?? iconSlots[iconSlots.length - 1];
+      const svg = source?.querySelector("svg")?.cloneNode(true);
+      if (svg) iconWrap.append(svg);
+
+      const body = document.createElement("div");
+      body.className = "infos-booking-body";
+      body.innerHTML = item.innerHTML;
+
+      row.append(iconWrap, body);
+      facts.append(row);
+    });
+
+    list.replaceWith(facts);
+    heading.dataset.infosBookingReady = "true";
+  }
+
+  function setupInfosBooking() {
+    const root =
+      document.querySelector<HTMLElement>(".page-intro-content") ??
+      document.querySelector<HTMLElement>(".prose.prose-wide");
+    if (!root || root.dataset.infosBookingReady === "true") return;
+
+    buildInfosBooking(root);
+    if (root.querySelector(".infos-booking-list")) {
+      root.dataset.infosBookingReady = "true";
+    }
+  }
+
+  setupInfosBooking();
+  document.addEventListener("astro:page-load", setupInfosBooking);
+</script>
+
+<style is:global>
+  .page-intro-content .infos-booking-lead {
+    margin: 0;
+    color: var(--color-text-soft);
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  .infos-booking-list {
+    list-style: none;
+    margin: var(--space-sm) 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .infos-booking-item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.85rem;
+    align-items: start;
+    margin: 0;
+    padding: 0.85rem 0.95rem;
+    background: linear-gradient(
+      165deg,
+      var(--color-bg-muted) 0%,
+      var(--color-bg) 85%
+    );
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .infos-booking-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    border-radius: var(--radius-sm);
+    background: color-mix(in srgb, var(--color-secondary) 22%, #fff);
+    color: var(--color-secondary-dark);
+  }
+
+  .infos-booking-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke: currentColor;
+  }
+
+  .infos-booking-body {
+    min-width: 0;
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  .infos-booking-body p {
+    margin: 0;
+  }
+
+  .infos-booking-body strong {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+  }
+
+  .page-intro-content .page-cta {
+    margin-top: var(--space-md);
+    text-align: left;
+  }
+
+  .page-intro-content .page-cta a {
+    font-size: 1.0625rem;
+    padding: 0.7rem 1.35rem;
+  }
+
+  @media (max-width: 820px) {
+    .infos-booking-item {
+      padding: 0.8rem 0.85rem;
+    }
+  }
+</style>

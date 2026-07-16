@@ -94,6 +94,73 @@ blockquote {
   color: var(--color-text-soft);
 }
 
+/* Citation mise en avant (pages + accueil) */
+.site-quote {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 40rem;
+  margin: var(--space-xl) auto;
+  padding: clamp(1.75rem, 3.5vw, 2.75rem) clamp(1.5rem, 3.5vw, 2.5rem);
+  text-align: center;
+  background:
+    linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--color-bg-soft) 88%, #fff) 0%,
+      var(--color-bg-muted) 100%
+    );
+  border: 1px solid var(--color-border);
+  border-radius: 0 0 0 2.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.site-quote-mark {
+  display: block;
+  margin: 0 auto -0.4rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.75rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 0.75;
+  color: var(--color-primary-dark);
+  opacity: 0.9;
+}
+
+.site-quote blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1rem + 0.55vw, 1.375rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+.site-quote figcaption {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+}
+
+.site-quote figcaption::before {
+  content: "— ";
+}
+
+.site-quote--featured {
+  margin-block: 0;
+  max-width: none;
+  background: rgb(255 255 255 / 0.72);
+  border-color: rgb(234 223 219 / 0.85);
+  backdrop-filter: blur(4px);
+}
+
 hr {
   border: none;
   border-top: 1px solid var(--color-border);

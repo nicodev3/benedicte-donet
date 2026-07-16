@@ -13,13 +13,6 @@ draft: false
 
 ## MES SERVICES
 
-Mes spécialités :
-
--   Le traumatisme
--   La sexualité (trauma, addictions…)
--   La pratique de l’Emdr
--   Pratiques psycho-corporelles
-
 ![psychologue en visio benedicte donet](/images/portraits/portrait-teleconsultation.jpg)
 
 ## Je vous accompagne à travers divers outils
@@ -42,7 +35,7 @@ Les principales modalités que j’utilise dans mes séances sont :
 -   **La pleine conscience** : méditation, observation des émotions et sensations.
 -   **Les techniques de libération émotionnelle** par la respiration et l’utilisation de la voix.
 
-[En savoir plus](/psychotherapie/)
+[Découvrir la psychothérapie](/psychotherapie/)
 
 ![psychologue en visio emdr](/images/illustrations/illustration-services.jpg)
 
@@ -55,7 +48,7 @@ Cet exercice offre un moment et un environnement spécifiques pour **cultiver l�
   
 À travers la photothérapie, vous avez l’opportunité d’explorer les différentes dimensions en jeu.
 
-[En savoir plus](/phototherapie/)
+[Explorer la photothérapie](/phototherapie/)
 
 ## Masterclass
 
@@ -63,7 +56,7 @@ Cet exercice offre un moment et un environnement spécifiques pour **cultiver l�
 Tout ce que je partage dans ces formats représente des connaissances que je considère comme essentielles pour **atteindre une harmonie avec notre propre être**. La compréhension de nous-mêmes, de nos mécanismes internes, est un prérequis pour nous accueillir pleinement et vivre en plus grande harmonie.  
 C’est avec joie que je partage ce que j’ai acquis au fil de nombreuses années de pratique et de recherche dans mes domaines d’expertise tels que le traumatisme, la régulation du système nerveux, la sexualité, la méditation en ligne et les pratiques psycho-corporelles.
 
-[En savoir plus](/masterclass/)
+[Voir les masterclass et ateliers](/masterclass/)
 
 ![programme de méditation en ligne psychologue](/images/portraits/portrait-02.jpg)
 

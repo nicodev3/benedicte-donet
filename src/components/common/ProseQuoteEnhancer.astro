@@ -1,0 +1,63 @@
+---
+/**
+ * Transforme les paires paragraphe + attribution (Rûmi, proverbe…)
+ * en figure.site-quote — UI partagée (voir global.css).
+ */
+---
+
+<script>
+  const ATTRIBUTION_RE =
+    /^(r[uû]mi|proverbe africain|african proverb)\.?$/i;
+
+  function isQuoteAttribution(text: string): boolean {
+    return ATTRIBUTION_RE.test(text.trim());
+  }
+
+  function buildProseQuotes(prose: HTMLElement) {
+    if (prose.dataset.proseQuotesReady === "true") return;
+
+    const paragraphs = [...prose.querySelectorAll(":scope > p")];
+
+    for (let i = 0; i < paragraphs.length - 1; i++) {
+      const quoteP = paragraphs[i];
+      const attrP = paragraphs[i + 1];
+      if (!quoteP || !attrP) continue;
+      if (quoteP.classList.contains("site-quote") || quoteP.closest(".site-quote")) {
+        continue;
+      }
+      if (!isQuoteAttribution(attrP.textContent ?? "")) continue;
+
+      const quoteText = quoteP.textContent?.trim() ?? "";
+      if (quoteText.length < 40) continue;
+
+      const figure = document.createElement("figure");
+      figure.className = "site-quote";
+
+      const mark = document.createElement("span");
+      mark.className = "site-quote-mark";
+      mark.setAttribute("aria-hidden", "true");
+      mark.textContent = "“";
+
+      const blockquote = document.createElement("blockquote");
+      blockquote.textContent = quoteText;
+
+      const caption = document.createElement("figcaption");
+      caption.textContent = attrP.textContent?.trim() ?? "";
+
+      figure.append(mark, blockquote, caption);
+      quoteP.replaceWith(figure);
+      attrP.remove();
+    }
+
+    prose.dataset.proseQuotesReady = "true";
+  }
+
+  function setupProseQuotes() {
+    const prose = document.querySelector<HTMLElement>(".prose");
+    if (!prose) return;
+    buildProseQuotes(prose);
+  }
+
+  setupProseQuotes();
+  document.addEventListener("astro:page-load", setupProseQuotes);
+</script>

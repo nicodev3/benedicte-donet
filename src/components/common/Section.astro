@@ -37,10 +37,17 @@ const {
 
 <style>
   .section {
-    padding-block: var(--space-2xl);
+    padding-block: var(--section-y);
     /* Diffère le layout des sections hors viewport → moins de travail au chargement */
     content-visibility: auto;
     contain-intrinsic-size: auto 32rem;
+  }
+
+  /* Même fond : un seul rythme au lieu de doubler le padding */
+  .section.tone-default + .section.tone-default,
+  .section.tone-soft + .section.tone-soft,
+  .section.tone-muted + .section.tone-muted {
+    padding-top: calc(var(--section-y) * 0.45);
   }
 
   .tone-soft {
@@ -59,11 +66,5 @@ const {
   .tone-primary :global(h2),
   .tone-primary :global(h3) {
     color: #fff;
-  }
-
-  @media (max-width: 640px) {
-    .section {
-      padding-block: var(--space-xl);
-    }
   }
 </style>

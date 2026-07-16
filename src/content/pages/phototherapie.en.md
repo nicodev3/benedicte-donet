@@ -116,10 +116,15 @@ If you feel ready to embark on this journey, you can write to me via the contact
 
 ## They talk about it…
 
-"I received a beautiful photoshoot with Bénédicte. I needed professional, natural and feminine photos for my business. I generally feel uncomfortable and nervous in front of a camera. But Béné was incredible! She started our session with a meditation and gave me all the time I needed to relax and return to my being. She brought gentle guidance and comforted me with her words throughout the photoshoot. She moved delicately around me;  
-Bénédicte took the time to truly listen and understand my needs and she captured them perfectly. Even better than I had imagined myself. But the real gift I received from Bénédicte is more love  
-and appreciation for my body. She took photos of me so beautiful  
-that I could not help but see my own beauty! Thank you for this gift."
+"I received a beautiful photoshoot with Bénédicte. I needed professional, natural and feminine photos for my business. I generally feel uncomfortable and nervous in front of a camera. But Béné was incredible!"
+
+⁓ J.
+
+"She started our session with a meditation and gave me all the time I needed to relax and return to my being. She brought gentle guidance and comforted me with her words throughout the photoshoot."
+
+⁓ J.
+
+"Bénédicte took the time to truly listen and understand my needs and she captured them perfectly. The real gift I received is more love and appreciation for my body. She took photos of me so beautiful that I could not help but see my own beauty!"
 
 ⁓ J.
 

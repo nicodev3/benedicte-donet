@@ -1,0 +1,166 @@
+---
+/**
+ * Section « À savoir avant de consulter » : liste → cartes avec icônes Lucide.
+ */
+import { Ban, HandCoins, HeartHandshake, UsersRound } from "@lucide/astro";
+
+const icons = [
+  { key: "ban", Icon: Ban },
+  { key: "mutuelle", Icon: HandCoins },
+  { key: "ados", Icon: UsersRound },
+  { key: "inclusif", Icon: HeartHandshake },
+] as const;
+---
+
+<div id="infos-notes-icons" hidden aria-hidden="true">
+  {
+    icons.map(({ key, Icon }) => (
+      <span data-infos-note-icon={key}>
+        <Icon size={22} stroke-width={1.75} aria-hidden="true" />
+      </span>
+    ))
+  }
+</div>
+
+<script>
+  function buildInfosNotes(prose: HTMLElement) {
+    const heading = prose.querySelector<HTMLElement>(
+      'h2[id^="à-savoir-avant"], h2[id^="a-savoir-avant"], h2[id^="what-to-know"]'
+    );
+    if (!heading || heading.dataset.infosNotesReady === "true") return;
+
+    const list = heading.nextElementSibling;
+    if (!list || list.tagName !== "UL") return;
+
+    const items = [...list.querySelectorAll(":scope > li")];
+    if (items.length < 2) return;
+
+    const iconRoot = document.getElementById("infos-notes-icons");
+    const iconSlots = iconRoot
+      ? [...iconRoot.querySelectorAll<HTMLElement>("[data-infos-note-icon]")]
+      : [];
+
+    const section = document.createElement("section");
+    section.className = "infos-notes";
+    section.setAttribute("aria-labelledby", heading.id);
+
+    const grid = document.createElement("ul");
+    grid.className = "infos-notes-grid";
+
+    items.forEach((item, index) => {
+      const card = document.createElement("li");
+      card.className = "infos-notes-card";
+
+      const iconWrap = document.createElement("span");
+      iconWrap.className = "infos-notes-icon";
+      iconWrap.setAttribute("aria-hidden", "true");
+
+      const source = iconSlots[index] ?? iconSlots[iconSlots.length - 1];
+      const svg = source?.querySelector("svg")?.cloneNode(true);
+      if (svg) iconWrap.append(svg);
+
+      const body = document.createElement("div");
+      body.className = "infos-notes-body";
+      // Conserve le HTML enrichi (**gras**, liens, etc.)
+      body.innerHTML = item.innerHTML;
+
+      card.append(iconWrap, body);
+      grid.append(card);
+    });
+
+    heading.before(section);
+    section.append(heading, grid);
+    list.remove();
+    heading.dataset.infosNotesReady = "true";
+  }
+
+  function setupInfosNotes() {
+    const prose = document.querySelector<HTMLElement>(".prose.prose-wide");
+    if (!prose || prose.dataset.infosNotesReady === "true") return;
+
+    buildInfosNotes(prose);
+    if (prose.querySelector(".infos-notes")) {
+      prose.dataset.infosNotesReady = "true";
+    }
+  }
+
+  setupInfosNotes();
+  document.addEventListener("astro:page-load", setupInfosNotes);
+</script>
+
+<style is:global>
+  .infos-notes {
+    margin-block: var(--space-md) var(--space-lg);
+  }
+
+  .infos-notes > h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+  }
+
+  .infos-notes-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .infos-notes-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.9rem;
+    align-items: start;
+    margin: 0;
+    padding: 1.15rem 1.2rem;
+    background: linear-gradient(
+      165deg,
+      var(--color-bg-muted) 0%,
+      var(--color-bg) 70%
+    );
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .infos-notes-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    background: color-mix(in srgb, var(--color-primary) 18%, #fff);
+    color: var(--color-primary-dark);
+  }
+
+  .infos-notes-icon svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    stroke: currentColor;
+  }
+
+  .infos-notes-body {
+    min-width: 0;
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .infos-notes-body p {
+    margin: 0;
+  }
+
+  .infos-notes-body strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  @media (max-width: 720px) {
+    .infos-notes-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

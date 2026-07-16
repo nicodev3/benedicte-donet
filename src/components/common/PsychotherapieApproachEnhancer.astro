@@ -145,15 +145,14 @@ const approachIllustrations = (
 </script>
 
 <style is:global>
-  .approach-section {
-    margin-block: var(--space-lg);
+  .prose.prose-wide > .approach-section {
+    margin-block: var(--space-xl);
   }
 
   .approach-section > h2 {
-    margin: 0 0 var(--space-md);
+    margin: 0 0 var(--space-sm);
     text-align: center;
     font-family: var(--font-heading);
-    font-size: clamp(1.375rem, 1.1rem + 0.8vw, 1.875rem);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -163,7 +162,9 @@ const approachIllustrations = (
   .approach-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.4375rem;
+    align-items: stretch;
+    column-gap: 1.25rem;
+    row-gap: var(--space-sm);
   }
 
   .approach-column {
@@ -178,12 +179,16 @@ const approachIllustrations = (
     max-width: 15rem;
     height: auto;
     margin: 0 auto;
+    flex-shrink: 0;
   }
 
   .approach-card {
     width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     margin-top: -0.9375rem;
-    padding: 1.875rem 3.125rem 2.5rem;
+    padding: 1.5rem 2.5rem 1.75rem;
     border-radius: 90px 0;
     background: rgb(103 199 202 / 0.13);
     text-align: center;
@@ -226,7 +231,7 @@ const approachIllustrations = (
   }
 
   .approach-section > .page-cta {
-    margin-top: var(--space-lg);
+    margin-top: var(--space-sm);
     text-align: center;
   }
 
@@ -235,6 +240,7 @@ const approachIllustrations = (
       grid-template-columns: 1fr;
       max-width: 37.5rem;
       margin-inline: auto;
+      row-gap: 0.25rem;
     }
 
     .approach-illustration {
@@ -244,7 +250,7 @@ const approachIllustrations = (
     .approach-card {
       width: 80%;
       margin-top: -0.625rem;
-      padding: 0.9375rem 0.9375rem 2.5rem;
+      padding: 0.9375rem 0.9375rem 1.5rem;
       border-radius: 60px 0;
     }
 
@@ -267,8 +273,6 @@ const approachIllustrations = (
     .approach-section > h2 {
       width: 70%;
       margin-inline: auto;
-      font-size: 1.375rem;
-      letter-spacing: -0.03em;
     }
 
     .approach-illustration {

@@ -1,0 +1,240 @@
+---
+/**
+ * Regroupe les images Services en mosaïque bento
+ * (paires asymétriques + images seules mises en avant).
+ */
+---
+
+<script>
+  function extractImageParagraph(paragraph: Element): HTMLImageElement | null {
+    if (paragraph.tagName !== "P") return null;
+
+    const imgs = [...paragraph.querySelectorAll("img")];
+    if (imgs.length !== 1) return null;
+
+    const clone = paragraph.cloneNode(true) as HTMLElement;
+    clone.querySelectorAll("img").forEach((img) => img.remove());
+    const leftover = clone.textContent?.replace(/\[/g, "").trim() ?? "";
+    if (leftover) return null;
+
+    return imgs[0];
+  }
+
+  function isIllustration(img: HTMLImageElement): boolean {
+    const src = img.currentSrc || img.src || "";
+    return /illustration/i.test(src);
+  }
+
+  function createBentoItem(img: HTMLImageElement, variant: string): HTMLElement {
+    const figure = document.createElement("figure");
+    figure.className = `services-bento-item services-bento-item--${variant}`;
+
+    const clone = img.cloneNode(true) as HTMLImageElement;
+    clone.removeAttribute("width");
+    clone.removeAttribute("height");
+    clone.loading = "lazy";
+    clone.decoding = "async";
+    figure.append(clone);
+    return figure;
+  }
+
+  function buildBento(
+    paragraphs: { paragraph: Element; img: HTMLImageElement }[]
+  ): HTMLElement {
+    const bento = document.createElement("div");
+    bento.className = "services-bento";
+    bento.setAttribute("role", "group");
+
+    if (paragraphs.length === 1) {
+      bento.classList.add("services-bento--single");
+      const img = paragraphs[0].img;
+      const variant = isIllustration(img) ? "illustration" : "photo";
+      bento.append(createBentoItem(img, variant));
+    } else {
+      bento.classList.add("services-bento--pair");
+      paragraphs.forEach(({ img }, index) => {
+        const variant = isIllustration(img)
+          ? "illustration"
+          : index === 0
+            ? "photo-lead"
+            : "photo";
+        bento.append(createBentoItem(img, variant));
+      });
+    }
+
+    return bento;
+  }
+
+  function enhanceImageGroups(root: HTMLElement) {
+    const children = [...root.children];
+    let group: { paragraph: Element; img: HTMLImageElement }[] = [];
+
+    const flush = () => {
+      if (!group.length) return;
+
+      // Ne pas transformer les galeries déjà formées
+      if (group[0].paragraph.closest(".photo-gallery, .services-bento")) {
+        group = [];
+        return;
+      }
+
+      const bento = buildBento(group);
+      group[0].paragraph.replaceWith(bento);
+      group.slice(1).forEach((item) => item.paragraph.remove());
+      group = [];
+    };
+
+    for (const child of children) {
+      if (child.classList.contains("services-bento")) {
+        flush();
+        continue;
+      }
+
+      const img = extractImageParagraph(child);
+      if (img) {
+        group.push({ paragraph: child, img });
+      } else {
+        flush();
+      }
+    }
+
+    flush();
+  }
+
+  function setupServicesMedia() {
+    const prose = document.querySelector<HTMLElement>(".prose");
+    if (!prose || prose.dataset.servicesMediaReady === "true") return;
+
+    enhanceImageGroups(prose);
+    prose.querySelectorAll<HTMLElement>(".services-section").forEach(enhanceImageGroups);
+
+    prose.dataset.servicesMediaReady = "true";
+  }
+
+  setupServicesMedia();
+  document.addEventListener("astro:page-load", setupServicesMedia);
+</script>
+
+<style is:global>
+  .services-bento {
+    display: grid;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    margin-block: var(--space-md);
+  }
+
+  .services-bento-item {
+    margin: 0;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--color-bg-muted) 70%, #fff);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .services-bento-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  /* Image seule — format large maîtrisé */
+  .services-bento--single {
+    max-width: min(100%, 44rem);
+    margin-inline: auto;
+  }
+
+  .services-bento--single .services-bento-item {
+    border-radius: 0 0 0 2.75rem;
+  }
+
+  .services-bento--single .services-bento-item--photo img {
+    aspect-ratio: 16 / 10;
+    object-position: center;
+  }
+
+  .services-bento--single .services-bento-item--illustration {
+    border-radius: 2.75rem 0 0 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .services-bento--single .services-bento-item--illustration img {
+    aspect-ratio: auto;
+    max-height: 22rem;
+    width: auto;
+    max-width: 100%;
+    margin-inline: auto;
+    object-fit: contain;
+  }
+
+  /* Paire — mosaïque asymétrique type bento */
+  .services-bento--pair {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr);
+    align-items: stretch;
+    min-height: clamp(16rem, 32vw, 22rem);
+  }
+
+  .services-bento--pair .services-bento-item--illustration {
+    border-radius: 2.5rem 0 0 0;
+    background: color-mix(in srgb, var(--color-bg-soft) 55%, #fff);
+    display: grid;
+    place-items: center;
+    padding: clamp(0.75rem, 2vw, 1.25rem);
+    box-shadow: none;
+  }
+
+  .services-bento--pair .services-bento-item--illustration img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .services-bento--pair .services-bento-item--photo,
+  .services-bento--pair .services-bento-item--photo-lead {
+    border-radius: 0 0 0 2.75rem;
+  }
+
+  .services-bento--pair .services-bento-item--photo img,
+  .services-bento--pair .services-bento-item--photo-lead img {
+    min-height: clamp(16rem, 32vw, 22rem);
+    object-position: center;
+  }
+
+  /* Si la photo est en premier dans la paire */
+  .services-bento--pair .services-bento-item--photo-lead {
+    border-radius: 0 2.5rem 0 0;
+  }
+
+  .services-section > .services-bento {
+    margin-top: var(--space-md);
+  }
+
+  @media (max-width: 720px) {
+    .services-bento--pair {
+      grid-template-columns: 1fr;
+      min-height: 0;
+    }
+
+    .services-bento--pair .services-bento-item--illustration {
+      border-radius: 2rem 0 0 0;
+      min-height: 12rem;
+    }
+
+    .services-bento--pair .services-bento-item--photo,
+    .services-bento--pair .services-bento-item--photo-lead {
+      border-radius: 0 0 0 2rem;
+    }
+
+    .services-bento--pair .services-bento-item--photo img,
+    .services-bento--pair .services-bento-item--photo-lead img {
+      min-height: 14rem;
+      aspect-ratio: 4 / 3;
+    }
+
+    .services-bento--single .services-bento-item {
+      border-radius: 0 0 0 2rem;
+    }
+  }
+</style>

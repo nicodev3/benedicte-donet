@@ -274,15 +274,19 @@ function visibleChildren(item: (typeof items)[number]) {
     display: flex;
     align-items: center;
     gap: var(--space-md);
+    min-width: 0;
   }
 
   .nav :global(.nav-cta) {
+    flex-shrink: 0;
+    white-space: nowrap;
     font-size: var(--text-sm);
     padding: 0.6em 1.4em;
   }
 
   .language-switch {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     gap: 0.35rem;
     border: 1px solid var(--color-border);
@@ -420,6 +424,30 @@ function visibleChildren(item: (typeof items)[number]) {
       height: auto;
       max-height: 100%;
       width: auto;
+    }
+  }
+
+  /* Desktop étroit : éviter que le CTA « Prendre RDV » se comprime */
+  @media (min-width: 901px) and (max-width: 1180px) {
+    .header-inner {
+      gap: var(--space-sm);
+    }
+
+    .nav {
+      gap: var(--space-sm);
+    }
+
+    .nav > ul {
+      gap: 0.75rem;
+    }
+
+    .nav a,
+    .nav-trigger {
+      font-size: var(--text-base);
+    }
+
+    .nav :global(.nav-cta) {
+      padding: 0.55em 1.35em;
     }
   }
 </style>

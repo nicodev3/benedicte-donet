@@ -54,6 +54,33 @@
     return textCol;
   }
 
+  /** Met en avant l’année en fin d’item (ex. « …, 2012 ») */
+  function enhanceFormationItems(textCol: HTMLElement) {
+    textCol.querySelectorAll("li").forEach((li) => {
+      if (li.classList.contains("formation-item")) return;
+
+      const text = li.textContent?.replace(/\s+/g, " ").trim() ?? "";
+      const match = text.match(/^(.*?)(?:,\s*)?(\d{4})\s*$/);
+      if (!match) return;
+
+      const body = match[1].replace(/\s*[-–—]\s*$/, "").trim();
+      const year = match[2];
+
+      li.textContent = "";
+      li.classList.add("formation-item");
+
+      const yearEl = document.createElement("span");
+      yearEl.className = "formation-item-year";
+      yearEl.textContent = year;
+
+      const bodyEl = document.createElement("span");
+      bodyEl.className = "formation-item-text";
+      bodyEl.textContent = body;
+
+      li.append(yearEl, bodyEl);
+    });
+  }
+
   function buildMonCheminementSplit(prose: HTMLElement) {
     const heading = prose.querySelector<HTMLElement>('h2[id^="mon-cheminement"]');
     if (!heading || heading.dataset.cheminementReady === "true") return;
@@ -137,8 +164,10 @@
 
     for (const { image, texts, insertBefore } of splits) {
       const split = document.createElement("div");
-      split.className = "page-intro";
-      split.append(createImageColumn(image), createTextColumn(texts));
+      split.className = "page-intro page-intro-formation";
+      const textCol = createTextColumn(texts);
+      enhanceFormationItems(textCol);
+      split.append(createImageColumn(image), textCol);
       prose.insertBefore(split, insertBefore);
     }
   }
@@ -161,9 +190,107 @@
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   }
 
+  .page-intro-formation {
+    align-items: stretch;
+  }
+
+  .page-intro-formation .page-intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    background: linear-gradient(
+      165deg,
+      var(--color-bg-muted) 0%,
+      var(--color-bg) 55%
+    );
+    border: 1px solid var(--color-border);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .page-intro-formation .page-intro-content > * + * {
+    margin-top: 0;
+  }
+
+  .page-intro-formation .page-intro-content h2 {
+    margin: 0 0 0.35rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.25;
+  }
+
+  .page-intro-formation .page-intro-content h2:not(:first-child) {
+    margin-top: 1.75rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .page-intro-formation .page-intro-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .page-intro-formation .formation-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: 0.85rem;
+    align-items: start;
+    margin: 0;
+    padding: 0.7rem 0 0.7rem 1rem;
+    border-left: 2px solid color-mix(in srgb, var(--color-primary) 55%, var(--color-border));
+    color: var(--color-text);
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  .page-intro-formation .formation-item::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 1rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary-dark);
+    box-shadow: 0 0 0 3px var(--color-bg-muted);
+  }
+
+  .page-intro-formation .formation-item-year {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-primary-dark);
+    line-height: 1.4;
+  }
+
+  .page-intro-formation .formation-item-text {
+    display: block;
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
   @media (max-width: 820px) {
     .page-intro-reverse .page-intro-image {
       order: -1;
+    }
+
+    .page-intro-formation .page-intro-content {
+      border-radius: var(--radius-md);
+    }
+
+    .page-intro-formation .formation-item {
+      grid-template-columns: 3.25rem minmax(0, 1fr);
+      gap: 0.65rem;
+      padding-left: 0.75rem;
     }
   }
 </style>

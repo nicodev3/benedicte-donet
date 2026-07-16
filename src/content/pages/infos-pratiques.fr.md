@@ -15,20 +15,14 @@ draft: false
 
 La prise de rendez-vous se fait par email ou par le lien de contact [ci-dessous](#form).
 
--   Les séances ont une durée de **1h30** pour que vous ayez le temps de partager, vous déposer et cheminer.  
-      
-    
--   Le nombre de séances dépend de ce que vous souhaitez travailler lors de celles-ci, ainsi que de votre sensibilité.  
-      
-    
--   Les séances sont uniquement en téléconsultation. Bien qu’une adresse soit enregistrée sur ma page Google, celle-ci n’est pas l’adresse d’un cabinet.  
-      
-    
--   Si je n’ai pas de disponibilité à vous proposer avant plusieurs mois, je vous proposerai de vous orienter vers un autre professionnel de confiance.
+-   **Durée —** Les séances durent **1 h 30**, pour avoir le temps de partager, se déposer et cheminer.
+-   **Rythme —** Le nombre de séances dépend de ce que vous souhaitez travailler et de votre sensibilité.
+-   **Format —** Uniquement en téléconsultation. L’adresse sur Google n’est pas celle d’un cabinet.
+-   **Disponibilités —** Si je n’ai rien à proposer avant plusieurs mois, je pourrai vous orienter vers un autre professionnel de confiance.
 
 [Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
 
-## Informations importantes
+## À savoir avant de consulter
 
 -   Je ne participe pas au parcours « Mon soutien psy ». Vous ne pouvez donc pas vous faire rembourser les séances dans ce cadre précis.
 -   En revanche, en dehors de ce dispositif, certaines **mutuelles** vous permettront d’obtenir un remboursement sur un certain nombre de séances. N’hésitez donc pas à contacter votre mutuelle pour lui demander. Si celle-ci vous propose des remboursements, précisez-le-moi au préalable pour que je vous envoie une facture lors de chacune de nos séances.
@@ -46,10 +40,3 @@ Pour me contacter :
 -   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
 -   Téléconsultation sur Zoom
 
-## Je passe à l’action
-
-   
-
-Vos disponibiltés
-
-J'envoie

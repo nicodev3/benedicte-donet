@@ -48,11 +48,11 @@ Initially driven by a passion for the psychology of infants, children, adolescen
 -   **Anxiety**, phobias and stress
 -   Trauma and **post-traumatic stress**
 
-What is trauma?
+### What is trauma?
 
 Trauma manifests when the emotions associated with an event or situation overwhelm a person and leave lasting imprints on their psyche. When traumas occur, the brain can sometimes struggle to fully integrate them, creating traces in memory that can be reactivated by everyday events. Therapy thus proves to be **crucial support for understanding, accompanying and overcoming suffering linked to post-traumatic stress**, including intrusive images, persistent thoughts, persistent anxiety, unpleasant physical reactions and associated emotional imbalances.
 
-Support around sexuality
+### Support around sexuality
 
 In the field of sexuality, I pay particular attention to fostering a delicate exploration of past traumas, your personal journey and the impact of these experiences on the difficulties you face. Sexual disorders can take different forms, including pain during intercourse, a lack of interest or sexual desire, difficulties related to arousal or orgasm, or challenges in establishing intimate relationships, among others.
 
@@ -62,7 +62,7 @@ Whatever the origins of your difficulties, known or buried, we undertake togethe
 
 My desire is to guide each individual on a path of reconnection with this fundamental sphere of their existence. My specialisation lies in supporting survivors of sexual trauma such as **rape, incest and abuse**. I am here to offer you support as you explore the psychological consequences arising from these experiences. After working on resolving trauma, it becomes possible to rediscover pleasure by drawing on approaches from mindfulness and the psychology of sexuality. My deep commitment is to create a path towards emotional healing and personal fulfilment for each individual I support.
 
-Anxiety, stress and phobias
+### Anxiety, stress and phobias
 
 I am here to support you with kindness and expertise through the challenges of anxiety, stress and phobias that can sometimes feel overwhelming.  
 These are natural states that we all encounter at some point in our lives. I believe in the importance of deeply understanding the origins and patterns that fuel them. By exploring your thoughts, emotions and behaviours, we will work hand in hand to **identify triggers** and the underlying mechanisms of these states.

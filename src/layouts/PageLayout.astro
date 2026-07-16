@@ -9,15 +9,20 @@ import PhotoGalleryEnhancer from "@/components/common/PhotoGalleryEnhancer.astro
 import PageIntroEnhancer from "@/components/common/PageIntroEnhancer.astro";
 import PageCtaEnhancer from "@/components/common/PageCtaEnhancer.astro";
 import AboutImageSplitEnhancer from "@/components/common/AboutImageSplitEnhancer.astro";
+import ProseQuoteEnhancer from "@/components/common/ProseQuoteEnhancer.astro";
 import PsychotherapieApproachEnhancer from "@/components/common/PsychotherapieApproachEnhancer.astro";
 import PsychotherapieSpecialitesEnhancer from "@/components/common/PsychotherapieSpecialitesEnhancer.astro";
 import PsychotherapieTarifEnhancer from "@/components/common/PsychotherapieTarifEnhancer.astro";
 import ServicesHeroEnhancer from "@/components/common/ServicesHeroEnhancer.astro";
 import ServicesIntroEnhancer from "@/components/common/ServicesIntroEnhancer.astro";
 import ServicesFaqEnhancer from "@/components/common/ServicesFaqEnhancer.astro";
+import ServicesSectionsEnhancer from "@/components/common/ServicesSectionsEnhancer.astro";
+import ServicesMediaEnhancer from "@/components/common/ServicesMediaEnhancer.astro";
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
+import InfosPratiquesBookingEnhancer from "@/components/common/InfosPratiquesBookingEnhancer.astro";
+import InfosPratiquesNotesEnhancer from "@/components/common/InfosPratiquesNotesEnhancer.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
 import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.astro";
 import { getLatestPosts } from "@/lib/blog";
@@ -215,12 +220,17 @@ const combinedStructuredData = [
   <PageIntroEnhancer />
   <PageCtaEnhancer />
   {pageSlug === "a-propos" && <AboutImageSplitEnhancer />}
+  {(pageSlug === "a-propos" || pageSlug === "services") && <ProseQuoteEnhancer />}
+  {pageSlug === "infos-pratiques" && <InfosPratiquesBookingEnhancer />}
+  {pageSlug === "infos-pratiques" && <InfosPratiquesNotesEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieApproachEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieSpecialitesEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieTarifEnhancer />}
   {pageSlug === "services" && <ServicesHeroEnhancer />}
   {pageSlug === "services" && <ServicesIntroEnhancer />}
   {pageSlug === "services" && <ServicesFaqEnhancer />}
+  {pageSlug === "services" && <ServicesSectionsEnhancer />}
+  {pageSlug === "services" && <ServicesMediaEnhancer />}
   {pageSlug === "phototherapie" && <PhotoOffersEnhancer />}
   {pageSlug === "phototherapie" && <PhotoProcessEnhancer />}
   {pageSlug === "phototherapie" && <PhotoTestimonialsEnhancer />}

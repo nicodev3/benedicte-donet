@@ -48,11 +48,11 @@ Initialement animée par une passion pour la psychologie du nourrisson, de l’e
 -   L’**anxiété**, les phobies et le stress
 -   Les traumatismes et le **stress post-traumatique**
 
-Qu’est-ce que le traumatisme ?
+### Qu’est-ce que le traumatisme ?
 
 Le traumatisme se manifeste lorsque les émotions associées à un événement ou à une situation submergent une personne et laissent des empreintes durables dans son psychisme. Lorsque des traumatismes surviennent, le cerveau peut parfois éprouver des difficultés à les intégrer pleinement, engendrant des traces dans la mémoire qui peuvent être réactivées par des événements du quotidien. La thérapie se révèle ainsi un **soutien crucial pour comprendre, accompagner et surmonter les souffrances liées au stress post-traumatique**, notamment les images envahissantes, les pensées persistantes, l’angoisse tenace, les réactions physiques désagréables et les déséquilibres émotionnels associés.
 
-Accompagnement autour de la sexualité
+### Accompagnement autour de la sexualité
 
 Dans le domaine de la sexualité, je porte une attention particulière à favoriser une exploration délicate des traumatismes passés, de votre parcours personnel et de l’impact de ces expériences sur les difficultés que vous affrontez. Les troubles sexuels peuvent prendre différentes formes, notamment des douleurs lors des rapports, un manque d’intérêt ou de désir sexuel, des difficultés liées à l’excitation ou à l’orgasme, ou encore des défis à établir des relations intimes, entre autres.
 
@@ -62,7 +62,7 @@ Quelles que soient les origines de vos difficultés, connues ou enfouies, nous e
 
 Mon désir est de guider chaque individu dans un parcours de reconnexion avec cette sphère fondamentale de leur existence. Ma spécialisation réside dans l’accompagnement des survivants de traumatismes sexuels tels que **le viol, l’inceste et les abus**. Je suis là pour vous offrir un soutien lors de l’exploration des conséquences psychologiques découlant de ces expériences. Après avoir travaillé sur la résolution des traumatismes, il devient envisageable de redécouvrir le plaisir en empruntant des approches issues de la pleine conscience et de la psychologie de la sexualité. Mon profond engagement consiste à créer un chemin vers la guérison émotionnelle et l’épanouissement personnel pour chaque individu que j’accompagne.
 
-Anxiété, Stress et Phobies
+### Anxiété, Stress et Phobies
 
 Je suis là pour vous accompagner avec bienveillance et expertise à travers les défis de l’anxiété, du stress et des phobies qui peuvent parfois sembler accablants.  
 Ce sont des états naturels que nous rencontrons tous à un moment donné de notre vie. Je crois en l’importance de comprendre en profondeur les origines et les schémas qui les alimentent. En explorant vos pensées, émotions et comportements, nous travaillerons main dans la main pour **identifier les déclencheurs** et les mécanismes sous-jacents à ces états.
