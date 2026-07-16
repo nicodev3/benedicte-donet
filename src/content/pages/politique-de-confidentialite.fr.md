@@ -100,7 +100,7 @@ Un « cookie » est un petit fichier déposé sur votre terminal lors de la visi
 
 Le site peut déposer des **cookies strictement nécessaires** au fonctionnement et à la sécurité (par exemple via notre prestataire d'hébergement).
 
-Toute mesure d'audience ou cookie non essentiel ne sera déposé qu'**avec votre consentement**. Vous pouvez à tout moment accepter ou refuser les cookies non essentiels via les paramètres de votre navigateur.
+Toute mesure d'audience tierce (notamment **Ahrefs Web Analytics**) ou cookie non essentiel ne sera déposé qu'**avec votre consentement**, via la bannière de gestion des cookies (tarteaucitron). Vous pouvez modifier votre choix à tout moment via l'icône cookies en bas à droite de l'écran.
 
 Les cookies soumis au consentement sont conservés pour une durée maximale de **13 mois**. Pour en savoir plus, consultez nos [mentions légales](/mentions-legales/).
 

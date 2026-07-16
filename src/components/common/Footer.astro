@@ -87,7 +87,15 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="footer-bottom">
-      <p>© {year} {global.siteName}. {t.footer.allRightsReserved}</p>
+      <div class="footer-credits">
+        <p>© {year} {global.siteName}. {t.footer.allRightsReserved}</p>
+        <p class="footer-credit">
+          {t.footer.creditPrefix}{" "}
+          <a href="https://nicodev.fr/" target="_blank" rel="noopener"
+            >{t.footer.creditLinkLabel}</a
+          >
+        </p>
+      </div>
       <ul>
         {
           footer.legalLinks.map((link) => (
@@ -178,6 +186,17 @@ const year = new Date().getFullYear();
     border-top: 1px solid var(--color-border);
     font-size: var(--text-sm);
     color: var(--color-text-soft);
+  }
+
+  .footer-credits {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .footer-credit a {
+    font-weight: 500;
   }
 
   .footer-bottom ul {

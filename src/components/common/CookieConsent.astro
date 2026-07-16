@@ -1,0 +1,79 @@
+---
+import { localizedPath, type Locale } from "@/lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const privacyUrl = localizedPath("/politique-de-confidentialite/", locale);
+const ahrefsKey = "rgHU3hRy3rHRn0BXIeWHxw";
+---
+
+<script is:inline define:vars={{ locale }}>
+  window.tarteaucitronForceLanguage = locale;
+</script>
+<script is:inline src="/tarteaucitron/tarteaucitron.min.js"></script>
+<script is:inline define:vars={{ privacyUrl, ahrefsKey }}>
+  tarteaucitron.init({
+    privacyUrl: privacyUrl,
+    bodyPosition: "top",
+    hashtag: "#tarteaucitron",
+    cookieName: "tarteaucitron",
+    orientation: "middle",
+    groupServices: true,
+    showDetailsOnClick: true,
+    serviceDefaultState: "wait",
+    showAlertSmall: false,
+    showTitleBanner: false,
+    cookieslist: false,
+    cookieslistEmbed: false,
+    closePopup: true,
+    showIcon: true,
+    iconPosition: "BottomRight",
+    adblocker: false,
+    DenyAllCta: true,
+    AcceptAllCta: true,
+    highPrivacy: true,
+    alwaysNeedConsent: false,
+    handleBrowserDNTRequest: false,
+    removeCredit: false,
+    moreInfoLink: true,
+    useExternalCss: false,
+    useExternalJs: false,
+    readmoreLink: privacyUrl,
+    mandatory: true,
+    mandatoryCta: false,
+    googleConsentMode: false,
+    bingConsentMode: false,
+    pianoConsentMode: false,
+    softConsentMode: false,
+    dataLayer: false,
+    serverSide: false,
+    partnersList: true,
+  });
+
+  tarteaucitron.services.ahrefs = {
+    key: "ahrefs",
+    type: "analytic",
+    name: "Ahrefs Web Analytics",
+    needConsent: true,
+    cookies: [],
+    js: function () {
+      "use strict";
+      tarteaucitron.addScript(
+        "https://analytics.ahrefs.com/analytics.js",
+        "ahrefs-analytics",
+        undefined,
+        undefined,
+        "data-key",
+        ahrefsKey
+      );
+    },
+    fallback: function () {
+      "use strict";
+    },
+  };
+
+  (tarteaucitron.job = tarteaucitron.job || []).push("ahrefs");
+</script>

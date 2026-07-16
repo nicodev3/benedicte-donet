@@ -100,7 +100,7 @@ A « cookie » is a small file placed on your device when you visit a website.
 
 The website may use **strictly necessary cookies** for operation and security (for example via our hosting provider).
 
-Any audience measurement or non-essential cookie will only be placed **with your consent**. You may accept or refuse non-essential cookies at any time through your browser settings.
+Any third-party audience measurement (including **Ahrefs Web Analytics**) or non-essential cookie will only be placed **with your consent**, via the cookie management banner (tarteaucitron). You can change your choice at any time using the cookie icon at the bottom right of the screen.
 
 Cookies subject to consent are stored for a maximum of **13 months**. For more information, see our [legal notice](/en/mentions-legales/).
 

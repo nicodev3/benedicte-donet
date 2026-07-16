@@ -20,6 +20,8 @@ interface UiTranslations {
   footer: {
     quickLinks: string;
     allRightsReserved: string;
+    creditPrefix: string;
+    creditLinkLabel: string;
   };
   blog: {
     title: string;
@@ -104,6 +106,8 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     footer: {
       quickLinks: "Liens rapides",
       allRightsReserved: "Tous droits réservés.",
+      creditPrefix: "Refonte et optimisation SEO par",
+      creditLinkLabel: "Nicodev, sites web pour psychologues",
     },
     blog: {
       title: "Le blog",
@@ -192,6 +196,8 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     footer: {
       quickLinks: "Quick links",
       allRightsReserved: "All rights reserved.",
+      creditPrefix: "Redesign and SEO optimization by",
+      creditLinkLabel: "Nicodev, websites for psychologists",
     },
     blog: {
       title: "The blog",
