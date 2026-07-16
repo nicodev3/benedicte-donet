@@ -4,12 +4,34 @@ interface Props {
   id?: string;
   class?: string;
   style?: Record<string, string | undefined>;
+  /** URL d'image de fond chargée seulement près du viewport */
+  lazyBg?: string;
+  lazyBgVar?: string;
+  lazyBgDesktop?: string;
+  lazyBgMobile?: string;
 }
 
-const { tone = "default", id, class: className = "", style } = Astro.props;
+const {
+  tone = "default",
+  id,
+  class: className = "",
+  style,
+  lazyBg,
+  lazyBgVar,
+  lazyBgDesktop,
+  lazyBgMobile,
+} = Astro.props;
 ---
 
-<section {id} class:list={["section", `tone-${tone}`, className]} style={style}>
+<section
+  {id}
+  class:list={["section", `tone-${tone}`, className]}
+  style={style}
+  data-lazy-bg={lazyBg}
+  data-lazy-bg-var={lazyBgVar}
+  data-lazy-bg-desktop={lazyBgDesktop}
+  data-lazy-bg-mobile={lazyBgMobile}
+>
   <slot />
 </section>
 

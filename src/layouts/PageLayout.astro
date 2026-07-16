@@ -31,7 +31,7 @@ import { getHomeSettings } from "@/lib/settings";
 import { getNavigationItems } from "@/lib/navigation";
 import { getContentSlug, getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
-import { getOptimizedSrc } from "@/lib/images";
+import { getOptimizedImage } from "@/lib/images";
 import type { CollectionEntry } from "astro:content";
 
 type StandardPageEntry = Omit<CollectionEntry<"pages">, "data"> & {
@@ -47,8 +47,10 @@ const { page, structuredData } = Astro.props;
 const { title, heroTitle, description, image, seoTitle, seoDescription } = page.data;
 const hasHero = Boolean(image);
 const pageSlug = getContentSlug(page.filePath, page.id);
-const lcpImage = hasHero
-  ? await getOptimizedSrc(image, {
+const lcpSource =
+  pageSlug === "services" ? "/images/heroes/hero-services.jpg" : hasHero ? image : undefined;
+const lcpImage = lcpSource
+  ? await getOptimizedImage(lcpSource, {
       widths: [414, 640, 828],
       format: "webp",
       quality: 65,
@@ -147,7 +149,9 @@ const combinedStructuredData = [
   title={seoTitle || title}
   description={seoDescription || description}
   image={image}
-  lcpImage={lcpImage}
+  lcpImage={lcpImage?.src}
+  lcpImageSrcset={lcpImage?.srcset}
+  lcpImageSizes="100vw"
   structuredData={combinedStructuredData}
 >
   {

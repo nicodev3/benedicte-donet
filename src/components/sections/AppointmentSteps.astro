@@ -2,7 +2,7 @@
 import Container from "@/components/common/Container.astro";
 import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
-import { getOptimizedBackgroundUrl } from "@/lib/images";
+import { getOptimizedSrc } from "@/lib/images";
 import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
@@ -14,17 +14,21 @@ interface Props {
 
 const { title, steps, ctaLabel, ctaUrl } = Astro.props;
 
-const appointmentBgDesktop = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-desktop.png", 1400);
-const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds/bg-rendez-vous-mobile.png", 800);
+const appointmentBgDesktop = await getOptimizedSrc(
+  "/images/backgrounds/bg-rendez-vous-desktop.png",
+  { width: 1200, format: "webp", quality: 60 }
+);
+const appointmentBgMobile = await getOptimizedSrc(
+  "/images/backgrounds/bg-rendez-vous-mobile.png",
+  { width: 800, format: "webp", quality: 60 }
+);
 ---
 
 <section class="appointment-steps" id="teleconsult">
   <div
     class="appointment-steps-panel"
-    style={{
-      "--appointment-bg-desktop": appointmentBgDesktop ?? "none",
-      "--appointment-bg-mobile": appointmentBgMobile ?? appointmentBgDesktop ?? "none",
-    }}
+    data-lazy-bg-desktop={appointmentBgDesktop}
+    data-lazy-bg-mobile={appointmentBgMobile ?? appointmentBgDesktop}
   >
     <div class="appointment-overlay" aria-hidden="true" />
     <Container>
@@ -75,7 +79,8 @@ const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
     padding-block: clamp(2.5rem, 5vw, 3.75rem);
     background-color: var(--color-bg-soft);
-    background-image: var(--appointment-bg-mobile, var(--appointment-bg-desktop));
+    background-color: var(--color-bg-soft);
+    background-image: var(--lazy-bg-mobile, var(--lazy-bg-desktop, none));
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -193,7 +198,7 @@ const appointmentBgMobile = await getOptimizedBackgroundUrl("/images/backgrounds
 
   @media (min-width: 768px) {
     .appointment-steps-panel {
-      background-image: var(--appointment-bg-desktop);
+      background-image: var(--lazy-bg-desktop, none);
     }
   }
 

@@ -1,0 +1,58 @@
+---
+/**
+ * Applique les fonds `data-lazy-bg` uniquement près du viewport,
+ * pour ne pas concurrencer l'image LCP au chargement initial.
+ */
+---
+
+<script>
+  function applyLazyBackground(el: HTMLElement) {
+    if (el.dataset.bgLoaded === "true") return;
+
+    const bg = el.dataset.lazyBg;
+    const bgDesktop = el.dataset.lazyBgDesktop;
+    const bgMobile = el.dataset.lazyBgMobile;
+    const cssVar = el.dataset.lazyBgVar || "--lazy-bg";
+
+    if (bgDesktop) {
+      el.style.setProperty("--lazy-bg-desktop", `url(${bgDesktop})`);
+    }
+    if (bgMobile) {
+      el.style.setProperty("--lazy-bg-mobile", `url(${bgMobile})`);
+    }
+    if (bg) {
+      el.style.setProperty(cssVar, `url(${bg})`);
+    }
+
+    el.dataset.bgLoaded = "true";
+    el.classList.add("has-lazy-bg");
+  }
+
+  function initLazyBackgrounds() {
+    const elements = document.querySelectorAll<HTMLElement>(
+      "[data-lazy-bg], [data-lazy-bg-desktop], [data-lazy-bg-mobile]"
+    );
+    if (!elements.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach(applyLazyBackground);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          applyLazyBackground(entry.target as HTMLElement);
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: "120px 0px", threshold: 0.01 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  }
+
+  initLazyBackgrounds();
+  document.addEventListener("astro:page-load", initLazyBackgrounds);
+</script>

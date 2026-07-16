@@ -13,6 +13,7 @@ import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { slugifyTag } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
+import { getOptimizedImage } from "@/lib/images";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -32,6 +33,13 @@ const {
 } = post.data;
 
 const locale = getLocaleFromPath(Astro.url.pathname);
+const lcpImage = image
+  ? await getOptimizedImage(image, {
+      widths: [414, 640, 828],
+      format: "webp",
+      quality: 65,
+    })
+  : undefined;
 const t = useTranslations(locale);
 const global = getSiteGlobal(locale);
 
@@ -69,6 +77,9 @@ const serviceLinks = [
   type="article"
   publishedTime={date}
   modifiedTime={updated}
+  lcpImage={lcpImage?.src}
+  lcpImageSrcset={lcpImage?.srcset}
+  lcpImageSizes="100vw"
 >
   <PostHero
     title={title}

@@ -1,6 +1,6 @@
 ---
 import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n";
-import { getOptimizedBackgroundUrl } from "@/lib/images";
+import { getOptimizedImage } from "@/lib/images";
 
 interface Props {
   locale?: Locale;
@@ -34,14 +34,32 @@ const copy =
       };
 
 const backgroundImage = "/images/heroes/hero-services.jpg";
-const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1400);
+const heroImage = await getOptimizedImage(backgroundImage, {
+  widths: [414, 640, 828, 1200],
+  format: "webp",
+  quality: 65,
+});
 ---
 
 <section class="services-hero">
-  <div
-    class="services-hero-panel"
-    style={backgroundStyle ? { "--services-hero-bg": backgroundStyle } : undefined}
-  >
+  <div class="services-hero-panel">
+    {
+      heroImage && (
+        <img
+          class="services-hero-bg"
+          src={heroImage.src}
+          srcset={heroImage.srcset}
+          sizes="100vw"
+          alt=""
+          width={Number(heroImage.attributes.width || 828)}
+          height={Number(heroImage.attributes.height || 1104)}
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
+          aria-hidden="true"
+        />
+      )
+    }
     <div class="services-hero-overlay" aria-hidden="true" />
     <div class="services-hero-content">
       <h1 class="services-hero-eyebrow">{copy.title}</h1>
@@ -72,15 +90,14 @@ const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1400);
     background-color: var(--color-bg-muted);
   }
 
-  .services-hero-panel::before {
-    content: "";
+  .services-hero-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: var(--services-hero-bg);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
     filter: saturate(0.85) brightness(1.05);
   }
 
@@ -227,6 +244,10 @@ const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1400);
       border-radius: 0 0 3.75rem 0;
     }
 
+    .services-hero-bg {
+      object-position: center bottom;
+    }
+
     .services-hero-overlay {
       background: linear-gradient(
         180deg,
@@ -234,10 +255,6 @@ const backgroundStyle = await getOptimizedBackgroundUrl(backgroundImage, 1400);
         rgb(255 251 249 / 0.94) 55%,
         rgb(255 251 249 / 0.98) 100%
       );
-    }
-
-    .services-hero-panel::before {
-      background-position: center bottom;
     }
 
     .services-hero-body {

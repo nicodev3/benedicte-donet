@@ -4,9 +4,11 @@ import "@/styles/global.css";
 import Seo from "@/components/seo/Seo.astro";
 import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
+import LazyBackgrounds from "@/components/common/LazyBackgrounds.astro";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { getAlternateLinks } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
+
 interface Props {
   title?: string;
   description?: string;
@@ -18,9 +20,11 @@ interface Props {
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
   /** Image LCP à précharger (URL optimisée) */
   lcpImage?: string;
+  lcpImageSrcset?: string;
+  lcpImageSizes?: string;
 }
 
-const { lcpImage, ...seoProps } = Astro.props;
+const { lcpImage, lcpImageSrcset, lcpImageSizes, ...seoProps } = Astro.props;
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
 const alternateLinks = await getAlternateLinks(Astro.url.pathname);
@@ -43,7 +47,14 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
     }
     {
       lcpImage && (
-        <link rel="preload" as="image" href={lcpImage} fetchpriority="high" />
+        <link
+          rel="preload"
+          as="image"
+          href={lcpImage}
+          imagesrcset={lcpImageSrcset}
+          imagesizes={lcpImageSizes ?? "100vw"}
+          fetchpriority="high"
+        />
       )
     }
     <link
@@ -87,5 +98,6 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
       <slot />
     </main>
     <Footer />
+    <LazyBackgrounds />
   </body>
 </html>

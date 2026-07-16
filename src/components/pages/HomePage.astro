@@ -13,7 +13,7 @@ import { getHomeSettings } from "@/lib/settings";
 import { getSiteGlobal } from "@/site.config";
 import { localizedPath, type Locale } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
-import { getOptimizedSrc } from "@/lib/images";
+import { getOptimizedImage } from "@/lib/images";
 
 interface Props {
   locale?: Locale;
@@ -29,7 +29,7 @@ const serviceCards = home.services.cards.map((card) => ({
   linkUrl: card.linkUrl ? localizedPath(card.linkUrl, locale) : card.linkUrl,
   ctaUrl: card.ctaUrl ? localizedPath(card.ctaUrl, locale) : card.ctaUrl,
 }));
-const lcpImage = await getOptimizedSrc(
+const lcpImage = await getOptimizedImage(
   home.hero.backgroundImageMobile ?? home.hero.backgroundImage,
   { widths: [414, 640, 828], format: "webp", quality: 65 }
 );
@@ -39,7 +39,9 @@ const lcpImage = await getOptimizedSrc(
   title={home.seoTitle}
   description={home.seoDescription}
   image={home.hero.backgroundImage}
-  lcpImage={lcpImage}
+  lcpImage={lcpImage?.src}
+  lcpImageSrcset={lcpImage?.srcset}
+  lcpImageSizes="100vw"
 >
   <Hero
     eyebrow={global.siteName}

@@ -2,7 +2,7 @@
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
-import { getOptimizedBackgroundUrl } from "@/lib/images";
+import { getOptimizedSrc } from "@/lib/images";
 import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
@@ -37,16 +37,14 @@ const formLabels =
         error: "Something went wrong. Please try again or email me directly.",
         sending: "Sending…",
       };
-const contactBackground = await getOptimizedBackgroundUrl(
-  "/images/backgrounds/bg-contact.webp",
-  1200
-);
+const contactBackground = await getOptimizedSrc("/images/backgrounds/bg-contact.webp", {
+  width: 1000,
+  format: "webp",
+  quality: 60,
+});
 ---
 
-<Section
-  id="contact"
-  style={contactBackground ? { "--contact-bg": contactBackground } : undefined}
->
+<Section id="contact" lazyBg={contactBackground} lazyBgVar="--contact-bg">
   <Container>
     <div class="contact-grid">
       <div class="contact-info">
