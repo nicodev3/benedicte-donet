@@ -57,7 +57,12 @@ const contactBackground = await getOptimizedBackgroundUrl(
         </ul>
       </div>
 
-      <form class="contact-form" action={`mailto:${global.email}`} method="post" enctype="text/plain">
+      <form
+        class="contact-form"
+        data-contact-form
+        data-email={global.email}
+        data-subject={formLabels.title}
+      >
         <h2>{formLabels.title}</h2>
         <div class="form-card">
           <div class="form-row">
@@ -114,6 +119,35 @@ const contactBackground = await getOptimizedBackgroundUrl(
     </div>
   </Container>
 </Section>
+
+<script>
+  function initContactForms() {
+    document.querySelectorAll<HTMLFormElement>("[data-contact-form]").forEach((form) => {
+      if (form.dataset.initialized === "true") return;
+      form.dataset.initialized = "true";
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const email = form.dataset.email?.trim();
+        if (!email) return;
+
+        const data = new FormData(form);
+        const lines: string[] = [];
+        for (const [key, value] of data.entries()) {
+          const text = String(value).trim();
+          if (text) lines.push(`${key}: ${text}`);
+        }
+
+        const subject = encodeURIComponent(form.dataset.subject || "Contact");
+        const body = encodeURIComponent(lines.join("\n"));
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      });
+    });
+  }
+
+  initContactForms();
+  document.addEventListener("astro:page-load", initContactForms);
+</script>
 
 <style>
   :global(.section#contact) {
@@ -288,8 +322,13 @@ const contactBackground = await getOptimizedBackgroundUrl(
 
   .form-card input:focus,
   .form-card textarea:focus {
-    outline: none;
     border-bottom-color: var(--color-primary-strong);
+  }
+
+  .form-card input:focus-visible,
+  .form-card textarea:focus-visible {
+    outline: 2px solid var(--color-primary-dark);
+    outline-offset: 2px;
   }
 
   .message-field {
@@ -303,12 +342,17 @@ const contactBackground = await getOptimizedBackgroundUrl(
     border: 0;
     border-radius: 5rem 0;
     padding: 0.625rem 2.1875rem;
-    background: var(--color-primary);
-    color: #fff;
+    background: var(--color-button);
+    color: var(--color-button-text);
     font-family: var(--font-body);
     font-size: 1.0625rem;
     letter-spacing: 0.08125rem;
     cursor: pointer;
+  }
+
+  .form-card button:hover {
+    background: var(--color-button-hover);
+    color: var(--color-button-text);
   }
 
   @media (max-width: 900px) {

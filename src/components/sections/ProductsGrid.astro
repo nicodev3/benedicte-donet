@@ -114,7 +114,7 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
     padding: 0.9375rem 1.5625rem;
     border-radius: 5rem 0;
     background: var(--color-accent);
-    color: #fff;
+    color: var(--color-button-text);
     font-family: var(--font-body);
     font-size: clamp(0.9375rem, 0.85rem + 0.35vw, 1.25rem);
     font-weight: 500;
@@ -127,7 +127,7 @@ const { products, locale = DEFAULT_LOCALE } = Astro.props;
 
   .product-card-button:hover {
     background: #ff96a5;
-    color: #fff;
+    color: var(--color-button-text);
     transform: translateY(-2px);
   }
 

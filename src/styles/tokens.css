@@ -36,12 +36,16 @@
 :root {
   /* Couleurs — charte WP avec variantes accessibles (WCAG 2.1 AA) */
   --color-primary: #c68d85; /* décoratif uniquement */
-  --color-primary-dark: #9f655e; /* liens, texte interactif (4.67:1 sur blanc) */
-  --color-primary-strong: #c1837b; /* fonds avec texte blanc */
-  --color-primary-stronger: #87544d; /* survol boutons (6.17:1) */
+  --color-primary-dark: #87544d; /* liens, texte interactif (≥4.5:1 sur blanc et fond soft) */
+  --color-primary-strong: #87544d; /* fonds avec texte blanc (6.17:1) */
+  --color-primary-stronger: #6e433d; /* survol fonds primary-strong (8.29:1) */
+  /* Boutons CTA — rose charte d’origine + texte foncé (blanc seul ne passe pas AA) */
+  --color-button: #c1837b;
+  --color-button-text: #241a22; /* 5.46:1 sur --color-button */
+  --color-button-hover: #b87870; /* 4.78:1 avec --color-button-text */
   --color-secondary: #67c7ca; /* décoratif uniquement */
-  --color-secondary-dark: #3a878a; /* fonds avec texte blanc (4.19:1) */
-  --color-secondary-stronger: #347d80; /* survol boutons secondaires */
+  --color-secondary-dark: #347d80; /* fonds avec texte blanc (4.78:1) */
+  --color-secondary-stronger: #2f7275; /* survol boutons secondaires (5.55:1) */
   --color-accent: #ffacb7;
   --color-highlight: #c4781a; /* étoiles, accents (3.15:1 sur fond soft) */
   --color-text: #3b2e38;

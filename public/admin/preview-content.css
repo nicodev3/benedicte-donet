@@ -18,8 +18,11 @@
 
 .cms-preview-content {
   --color-primary: #c68d85;
-  --color-primary-dark: #9f655e;
-  --color-primary-strong: #c1837b;
+  --color-primary-dark: #87544d;
+  --color-primary-strong: #87544d;
+  --color-button: #c1837b;
+  --color-button-text: #241a22;
+  --color-button-hover: #b87870;
   --color-text: #3b2e38;
   --color-text-soft: #6d5f68;
   --color-bg: #ffffff;
@@ -269,13 +272,14 @@
 
 .cms-preview-page-hero-subtitle {
   margin: 0;
-  max-width: 36rem;
+  max-width: 40rem;
   font-family: var(--font-heading);
-  font-size: clamp(1rem, 0.9rem + 0.45vw, 1.5625rem);
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  font-size: clamp(1.125rem, 1rem + 0.55vw, 1.6875rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1.45;
   color: var(--color-text);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85), 0 0 18px rgba(255, 255, 255, 0.55);
 }
 
 .cms-preview-page-hero-content h1 {

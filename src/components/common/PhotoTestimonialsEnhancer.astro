@@ -436,12 +436,16 @@
     }
 
     .photo-testimonials-carousel .carousel-dot {
+      box-sizing: content-box;
       width: 0.5rem;
       height: 0.5rem;
-      padding: 0;
+      min-width: 0.5rem;
+      min-height: 0.5rem;
+      padding: 0.5rem;
       border: none;
       border-radius: 50%;
       background: var(--color-primary);
+      background-clip: content-box;
       opacity: 0.3;
       cursor: pointer;
       transition:
@@ -451,7 +455,7 @@
 
     .photo-testimonials-carousel .carousel-dot.is-active {
       opacity: 1;
-      transform: scale(1.25);
+      transform: scale(1.15);
     }
   }
 

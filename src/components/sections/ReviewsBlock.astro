@@ -11,9 +11,11 @@ interface Props {
   nextLabel: string;
   carouselLabel: string;
   goToSlideLabel: string;
+  starsLabel: string;
 }
 
-const { title, items, prevLabel, nextLabel, carouselLabel, goToSlideLabel } = Astro.props;
+const { title, items, prevLabel, nextLabel, carouselLabel, goToSlideLabel, starsLabel } =
+  Astro.props;
 const starCount = 5;
 const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
 ---
@@ -53,7 +55,7 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
                 >
                   <blockquote set:html={renderInlineRichText(review.text)} />
                   <figcaption>
-                    <span class="stars" aria-label="5 étoiles sur 5">
+                    <span class="stars" role="img" aria-label={starsLabel}>
                       {Array.from({ length: starCount }).map(() => (
                         <Star size={16} fill="currentColor" aria-hidden="true" />
                       ))}
@@ -238,12 +240,16 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
   }
 
   .carousel-dots :global(.carousel-dot) {
+    box-sizing: content-box;
     width: 0.5rem;
     height: 0.5rem;
-    padding: 0;
+    min-width: 0.5rem;
+    min-height: 0.5rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 50%;
     background: var(--color-primary);
+    background-clip: content-box;
     opacity: 0.3;
     cursor: pointer;
     transition:
@@ -253,7 +259,7 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
 
   .carousel-dots :global(.carousel-dot.is-active) {
     opacity: 1;
-    transform: scale(1.25);
+    transform: scale(1.15);
   }
 
   .carousel-shell {

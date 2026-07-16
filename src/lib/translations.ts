@@ -72,6 +72,7 @@ interface UiTranslations {
     prev: string;
     next: string;
     carouselLabel: string;
+    starsLabel: string;
   };
   carousel: {
     goToSlide: string;
@@ -161,6 +162,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       prev: "Avis précédent",
       next: "Avis suivant",
       carouselLabel: "Témoignages de patients",
+      starsLabel: "5 étoiles sur 5",
     },
     carousel: {
       goToSlide: "Aller à la diapositive {n}",
@@ -248,6 +250,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       prev: "Previous review",
       next: "Next review",
       carouselLabel: "Patient testimonials",
+      starsLabel: "5 out of 5 stars",
     },
     carousel: {
       goToSlide: "Go to slide {n}",
