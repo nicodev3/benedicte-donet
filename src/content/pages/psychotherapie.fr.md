@@ -18,7 +18,7 @@ Je suis **psychologue EMDR en ligne** : j’accompagne les adultes en télécons
 
 Pour comprendre la méthode en détail : [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/)
 
-**Ressources du cluster EMDR :**
+**Pour aller plus loin sur l'EMDR :**
 
 - [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)
 - [L’EMDR : un processus naturel](/emdr-traitement-trauma-processus-naturel/)

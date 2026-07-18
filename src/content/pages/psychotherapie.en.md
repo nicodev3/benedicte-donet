@@ -18,7 +18,7 @@ I am an **online EMDR psychologist**: I support adults via video consultation (Z
 
 Learn more about the method: [What is EMDR therapy?](/en/therapie-emdr/)
 
-**EMDR cluster resources:**
+**More on EMDR:**
 
 - [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)
 - [EMDR as a natural process](/en/emdr-traitement-trauma-processus-naturel/)

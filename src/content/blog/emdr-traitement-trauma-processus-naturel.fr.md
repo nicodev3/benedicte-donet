@@ -69,9 +69,9 @@ C’est pour cette raison que les changements observés après une EMDR réussie
 le cerveau n’a pas appris quelque chose de nouveau —  
 il a **retrouvé son fonctionnement naturel**.
 
-## Pour aller plus loin (cluster EMDR)
+## Pour aller plus loin
 
-- [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/) — page pilier
+- [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/)
 - [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)
 - [Mémoire et traumatisme](/memoire-traumatisme-guerison/)
 - [Psychologue EMDR en ligne](/psychotherapie/)

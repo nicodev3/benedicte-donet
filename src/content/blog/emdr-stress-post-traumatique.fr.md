@@ -58,9 +58,9 @@ Chaque parcours est unique : la préparation, le rythme et les cibles de travail
 
 Il est possible de suivre une **EMDR en ligne** en téléconsultation, avec le même cadre de confidentialité et de prudence qu’en présentiel. Si vous cherchez un **psychologue EMDR en ligne**, découvrez [mon approche en psychothérapie](/psychotherapie/) ou [prenez rendez-vous](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet).
 
-## Pour aller plus loin (cluster EMDR)
+## Pour aller plus loin
 
-- [Thérapie EMDR : méthode et indications](/therapie-emdr/) — page pilier
+- [Thérapie EMDR : méthode et indications](/therapie-emdr/)
 - [L’EMDR, un processus naturel](/emdr-traitement-trauma-processus-naturel/)
 - [Mémoire et traumatisme](/memoire-traumatisme-guerison/)
 - [Psychologue EMDR en ligne](/psychotherapie/)

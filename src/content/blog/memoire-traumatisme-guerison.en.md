@@ -64,7 +64,7 @@ Each memory is a piece of the puzzle of our story. By working with respect, gent
 
 The relationship between memory and traumatic encoding reveals how fragile and powerful our psyche is at the same time. By learning to decode this interaction, we open doors towards healing and lasting well-being.
 
-## Explore the EMDR cluster
+## Explore more on EMDR
 
 - [What is EMDR therapy?](/en/therapie-emdr/)
 - [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)

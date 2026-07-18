@@ -64,7 +64,7 @@ EMDR is often complemented by other tools, such as **mindfulness**, **bodywork**
 
 **EMDR therapy** offers a gentle and powerful path to transform past wounds into resources. It allows you to **regain serenity, lightness, and emotional stability**.
 
-## Explore the EMDR cluster
+## Explore more on EMDR
 
 - [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)
 - [EMDR as a natural process](/en/emdr-traitement-trauma-processus-naturel/)

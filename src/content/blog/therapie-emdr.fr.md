@@ -68,7 +68,7 @@ La **thérapie EMDR** offre une voie douce et puissante pour transformer les b
 
 Si vous souhaitez être accompagné·e par une **psy EMDR** en téléconsultation, vous pouvez découvrir [ma pratique de psychothérapie](/psychotherapie/) ou prendre rendez-vous.
 
-## Pour aller plus loin (cluster EMDR)
+## Pour aller plus loin
 
 - [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)
 - [L’EMDR : un processus naturel](/emdr-traitement-trauma-processus-naturel/)

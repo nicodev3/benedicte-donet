@@ -69,7 +69,7 @@ This is why the changes observed after successful EMDR are often deep and lastin
 the brain has not learned something new —  
 it has **regained its natural functioning**.
 
-## Explore the EMDR cluster
+## Explore more on EMDR
 
 - [What is EMDR therapy?](/en/therapie-emdr/)
 - [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)

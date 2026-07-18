@@ -47,7 +47,7 @@ EMDR does not force the memory or take control for you. It relies on the brainâ€
 
 **Online EMDR** is possible via video consultation, with the same confidentiality and care as in person. Learn about [my psychotherapy approach](/en/psychotherapie/) or [book an appointment](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet).
 
-## Explore the EMDR cluster
+## Explore more on EMDR
 
 - [EMDR therapy: method and indications](/en/therapie-emdr/)
 - [EMDR as a natural process](/en/emdr-traitement-trauma-processus-naturel/)

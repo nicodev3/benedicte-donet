@@ -64,7 +64,7 @@ Chaque souvenir est une pièce du puzzle de notre histoire. En travaillant avec 
 
 La relation entre mémoire et encodage traumatique révèle combien notre psyché est à la fois fragile et puissante. En apprenant à décoder cette interaction, on ouvre des portes vers la guérison et un mieux-être durable.
 
-## Pour aller plus loin (cluster EMDR)
+## Pour aller plus loin
 
 - [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/)
 - [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)
