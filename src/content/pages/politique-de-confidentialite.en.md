@@ -15,7 +15,7 @@ This privacy policy explains how your personal data is collected and processed w
 
 **Bénédicte Donet** – Psychologist – ADELI No.: 9D9311351  
 Address: 349 routes des canots, 97427 L'Étang-Salé, Réunion Island  
-Contact: [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com) – [+33 6 17 78 98 78](tel:+33617789878)
+Contact: [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
 
 ## 2 – Data protection officer
 

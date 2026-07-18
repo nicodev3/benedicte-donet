@@ -36,6 +36,5 @@ Bénédicte Donet
 
 To contact me:
 
--   [+33 6 17 78 98 78](tel:0033617789878)
 -   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
 -   Teleconsultation on Zoom

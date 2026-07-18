@@ -15,7 +15,7 @@ La présente politique de confidentialité a pour objet de vous informer sur la 
 
 **Bénédicte Donet** – Psychologue – n° ADELI : 9D9311351  
 Adresse : 349 routes des canots, 97427 L'Étang-Salé, La Réunion  
-Contact : [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com) – [+33 6 17 78 98 78](tel:+33617789878)
+Contact : [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
 
 ## 2 – Délégué à la protection des données
 

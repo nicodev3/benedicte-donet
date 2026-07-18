@@ -13,7 +13,7 @@ draft: false
 
 En vertu de [l’article 6 de la loi n° 2004-575 du 21 juin 2004](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000801164#LEGIARTI000042038977) pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site internet **/** l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
 
-**Propriétaire du site :** Bénédicte Donet – psychologue – n°ADELI : 9D9311351 – Contact : donetbenedicte@gmail.com +33 6 17 78 98 78 – Adresse : 349 routes des canots 97427 L’ETANG SALE Réunion .
+**Propriétaire du site :** Bénédicte Donet – psychologue – n°ADELI : 9D9311351 – Contact : donetbenedicte@gmail.com – Adresse : 349 routes des canots 97427 L’ETANG SALE Réunion .
 
 **Identification de l’entreprise :** Bénédicte Donet – psychologue – n°ADELI : 9D9311351 au capital social de € – SIREN : 92 309 286 0000 17 – RCS ou RM : – Adresse postale : 349 routes des canots 97427 L’ETANG SALE Réunion – \[Consignes : ajoutez ici le lien hypertexte vers la page de vos conditions générales de vente si vous en avez une\]
 

@@ -9,7 +9,6 @@ export const SITE = {
   name: "Bénédicte Donet — Psychologue en ligne",
   siteName: "Bénédicte Donet",
   url: "https://www.benedictedonet-psyenligne.com",
-  phone: "+33 6 17 78 98 78",
   email: "donetbenedicte@gmail.com",
   appointmentUrl:
     "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet",
@@ -63,7 +62,6 @@ export function getSiteGlobal(locale: Locale) {
   return {
     siteName: SITE.siteName,
     email: SITE.email,
-    phone: SITE.phone,
     appointmentUrl: SITE.appointmentUrl,
     instagramUrl: SITE.social.instagram,
     facebookUrl: SITE.social.facebook,

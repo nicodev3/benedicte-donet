@@ -48,9 +48,6 @@ const year = new Date().getFullYear();
         <h3>{t.common.contact}</h3>
         <ul>
           <li>
-            <a href={`tel:${global.phone.replace(/\s/g, "")}`}>{global.phone}</a>
-          </li>
-          <li>
             <a href={`mailto:${global.email}`}>{global.email}</a>
           </li>
           {global.area && <li>{global.area}</li>}

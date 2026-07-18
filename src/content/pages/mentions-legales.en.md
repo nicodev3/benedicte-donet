@@ -13,7 +13,7 @@ draft: false
 
 Pursuant to [Article 6 of French Law No. 2004-575 of 21 June 2004](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000801164#LEGIARTI000042038977) on confidence in the digital economy, users of the website **/** are informed of the identity of the various parties involved in its creation and monitoring:
 
-**Site owner:** Bénédicte Donet – psychologist – ADELI No.: 9D9311351 – Contact: donetbenedicte@gmail.com +33 6 17 78 98 78 – Address: 349 routes des canots 97427 L'ÉTANG SALÉ Réunion.
+**Site owner:** Bénédicte Donet – psychologist – ADELI No.: 9D9311351 – Contact: donetbenedicte@gmail.com – Address: 349 routes des canots 97427 L'ÉTANG SALÉ Réunion.
 
 **Company identification:** Bénédicte Donet – psychologist – ADELI No.: 9D9311351 – share capital € – SIREN: 92 309 286 0000 17 – RCS or RM: – Postal address: 349 routes des canots 97427 L'ÉTANG SALÉ Réunion – [Instructions: add the hyperlink to your terms and conditions of sale page here if you have one]
 
