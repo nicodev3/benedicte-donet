@@ -18,6 +18,12 @@ I am an **online EMDR psychologist**: I support adults via video consultation (Z
 
 Learn more about the method: [What is EMDR therapy?](/en/therapie-emdr/)
 
+**EMDR cluster resources:**
+
+- [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)
+- [EMDR as a natural process](/en/emdr-traitement-trauma-processus-naturel/)
+- [Memory and trauma](/en/memoire-traumatisme-guerison/)
+
 ## I SUPPORT YOU
 
 At the heart of my therapeutic practice lie speech and listening, two fundamental pillars that guide my sessions towards a deep understanding of your experiences, emotions and needs. This empathic approach makes it possible to establish a **space of trust and openness** where you can move forward at your own pace.  

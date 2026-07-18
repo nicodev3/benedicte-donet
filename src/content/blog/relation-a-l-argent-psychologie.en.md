@@ -1,15 +1,15 @@
 ---
-title: "OUR RELATIONSHIP WITH MONEY"
-excerpt: "Often, when one thinks about working with a psychologist, the idea of addressing one’s relationship with money might not immediately come to mind. However, it’s a topic that affects everyone, every day. How we feel and engage with money speaks volumes about our past experiences, what our parents and grandparents went through in terms of financial abundance or lack."
+title: "Relationship with money: psychology, beliefs and control"
+excerpt: "Understand your relationship with money — including when control or manipulation is involved. Psychological pathways to explore this bond."
 tags:
   - "Relationship with money"
   - "Trauma"
 date: 2023-10-30T07:34:27Z
-updated: 2026-06-08T12:29:12Z
+updated: 2026-07-18T17:00:00Z
 image: "/images/stock/stock-relation-argent-reflexion.jpg"
-imageAlt: "probleme avec l'argent psychologie relation à l'argent"
-seoTitle: "OUR RELATIONSHIP WITH MONEY"
-seoDescription: "Often, when one thinks about working with a psychologist, the idea of addressing one’s relationship with money might not immediately come to mind. However, it’s a topic that affects everyone, every day. How we feel and engage with money speaks volumes about our past experiences, what our parents and grandparents went through in terms of financial abundance or lack."
+imageAlt: "relationship with money psychology"
+seoTitle: "Relationship with money psychology"
+seoDescription: "Relationship with money in psychology: beliefs, financial anxiety, and controlling dynamics. Paths to understand and get support."
 draft: false
 ---
 
@@ -24,6 +24,10 @@ When people consider seeing a psychologist, money isn’t usually the first topi
 Money impacts our daily lives. It’s not just about how much we have, but how we **experience** money. Two people can have the same bank balance but feel entirely different about it. For instance, you might have a large savings account and still feel anxious. On the other hand, someone else might have very little and feel perfectly content.
 
 This emotional relationship with money often stems from past experiences—our upbringing, family narratives, and even inherited beliefs from previous generations.
+
+## When money becomes a tool of control
+
+In some relationships, money is used to dominate: restricted access to accounts, constant justification of expenses, unpaid “urgent” debts, gifts followed by reproach. Without labelling someone for you, these patterns often leave fear, shame and confusion. Working on your relationship with money can then mean reclaiming safety and choice — sometimes alongside trauma-focused work such as [EMDR therapy](/en/therapie-emdr/).
 
 ## How Our History Shapes Our Relationship with money
 

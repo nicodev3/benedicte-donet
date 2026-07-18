@@ -14,11 +14,13 @@ seoDescription: "Qu’est-ce que la thérapie EMDR ? Méthode, fonctionnement et
 draft: false
 ---
 
-## Une approche douce et reconnue
+## EMDR : signification et méthode
 
 ![Séance de thérapie EMDR, illustration de la désensibilisation](/images/illustrations/illustration-emdr-seance.jpeg)
 
-La **thérapie EMDR** (Eye Movement Desensitization and Reprocessing) est une approche psychothérapeutique reconnue pour son efficacité dans le traitement des **traumatismes psychiques**, de l’**anxiété**, des **phobies** ou encore du **stress post-traumatique**. C’est aussi la méthode que j’utilise en tant que **psychologue EMDR en ligne**, en téléconsultation.
+**EMDR** signifie *Eye Movement Desensitization and Reprocessing* : désensibilisation et retraitement par les mouvements oculaires. En français, on parle souvent de **thérapie EMDR** ou de **méthode EMDR**.
+
+C’est une approche psychothérapeutique reconnue pour le traitement des **traumatismes psychiques**, de l’**anxiété**, des **phobies** et du **stress post-traumatique**. C’est aussi la méthode que j’utilise en tant que **psychologue EMDR en ligne**, en téléconsultation.
 
 Recommandée par l’[OMS](https://www.who.int/fr/news-room/fact-sheets/detail/post-traumatic-stress-disorder) et la [Haute Autorité de Santé](https://www.has-sante.fr/), le retraitement adaptatif de l’information permet de **débloquer les souvenirs douloureux** restés « coincés » dans le système nerveux, afin de les **retraiter naturellement**, sans douleur ni reviviscence.
 
@@ -65,6 +67,13 @@ La **méthode EMDR** est souvent complétée par d’autres outils, comme la **
 La **thérapie EMDR** offre une voie douce et puissante pour transformer les blessures du passé en ressources. Elle vous permet de **retrouver sérénité, légèreté et stabilité émotionnelle**.
 
 Si vous souhaitez être accompagné·e par une **psy EMDR** en téléconsultation, vous pouvez découvrir [ma pratique de psychothérapie](/psychotherapie/) ou prendre rendez-vous.
+
+## Pour aller plus loin (cluster EMDR)
+
+- [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)
+- [L’EMDR : un processus naturel](/emdr-traitement-trauma-processus-naturel/)
+- [Mémoire et traumatisme](/memoire-traumatisme-guerison/)
+- [Psychologue EMDR en ligne](/psychotherapie/)
 
 ## Me contacter
 

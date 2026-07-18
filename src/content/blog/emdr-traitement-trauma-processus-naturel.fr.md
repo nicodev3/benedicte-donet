@@ -6,23 +6,21 @@ tags:
   - "Psycho"
   - "Trauma"
 date: 2025-12-28T03:09:14Z
-updated: 2026-06-08T12:33:58Z
+updated: 2026-07-18T17:00:00Z
 image: "/images/stock/stock-emdr-desert.jpg"
 imageAlt: "EMDR traitement traumatisme"
-seoTitle: "L’EMDR : un processus naturel, pas une solution magique"
-seoDescription: "L’EMDR respecte profondément le fonctionnement naturel du cerveau. Il n’impose rien. Il ne force pas les souvenirs. Il n’efface pas l’histoire. Il ne prend pas le contrôle. Contrairement à certaines idées reçues, l’EMDR n’est pas une technique « magique » qui ferait disparaître le traumatisme. Il s’agit d’un processus neuropsychologique naturel, qui remet en mouvement les mécanismes innés de traitement de l’information."
+seoTitle: "EMDR : un processus naturel"
+seoDescription: "L’EMDR n’est pas magique : c’est un processus naturel de retraitement du trauma. Comprendre ce qui change quand un souvenir est vraiment digéré."
 draft: false
 ---
 
-## **L’EMDR : un processus naturel, pas une solution magique**
+## L’EMDR : un processus naturel, pas une solution magique
 
 ![Paysage désertique, illustration du processus naturel de guérison EMDR](/images/stock/stock-emdr-paysage.jpg)
 
-neom-tSwRu3Jh0EM-unsplash
-
-**L’EMDR respecte profondéme**nt le fonctionnement naturel du cerveau.  
+**L’EMDR respecte profondément** le fonctionnement naturel du cerveau.  
 Il n’impose rien.  
-Ne force pas les souvenirs.  
+Il ne force pas les souvenirs.  
 Il n’efface pas l’histoire.
 
 Contrairement à certaines idées reçues, l’EMDR n’est pas une technique « magique » qui ferait disparaître le traumatisme. **Il s’agit d’un processus neuropsychologique naturel**, qui remet en mouvement les mécanismes innés de traitement de l’information.
@@ -71,11 +69,14 @@ C’est pour cette raison que les changements observés après une EMDR réussie
 le cerveau n’a pas appris quelque chose de nouveau —  
 il a **retrouvé son fonctionnement naturel**.
 
-### **🔎 Informations générales et recherche EMDR**
+## Pour aller plus loin (cluster EMDR)
 
--   **IFEMDR – Recherche en EMDR**  
-    Présentation des résultats de recherches et des recommandations internationales pour l’utilisation de l’EMDR dans le traitement des traumatismes psychologiques.  
-    [https://www.ifemdr.fr/therapie-emdr/ressources-emdr/recherche-emdr/ IFEMDR](https://www.ifemdr.fr/therapie-emdr/ressources-emdr/recherche-emdr/ IFEMDR)
--   **IFEMDR – Recommandations internationales de traitement pour l’EMDR**  
-    Résumé des organismes qui reconnaissent l’EMDR comme psychothérapie efficace pour le TSPT et les traumatismes.  
-    [https://www.ifemdr.fr/recommandations-internationales-de-traitement-pour-lemdr/](https://www.ifemdr.fr/recommandations-internationales-de-traitement-pour-lemdr/?utm_source=chatgpt.com) [IFEMDR](https://www.ifemdr.fr/recommandations-internationales-de-traitement-pour-lemdr/?utm_source=chatgpt.com)
+- [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/) — page pilier
+- [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)
+- [Mémoire et traumatisme](/memoire-traumatisme-guerison/)
+- [Psychologue EMDR en ligne](/psychotherapie/)
+
+### Informations et recherche EMDR
+
+- [IFEMDR – Recherche en EMDR](https://www.ifemdr.fr/therapie-emdr/ressources-emdr/recherche-emdr/)
+- [IFEMDR – Recommandations internationales](https://www.ifemdr.fr/recommandations-internationales-de-traitement-pour-lemdr/)

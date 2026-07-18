@@ -6,11 +6,11 @@ tags:
   - "Psycho"
   - "Trauma"
 date: 2024-01-27T12:45:00Z
-updated: 2026-06-08T12:31:24Z
+updated: 2026-07-18T17:00:00Z
 image: "/images/stock/stock-traumatisme-guerison.jpg"
 imageAlt: "guérir d'un traumatisme"
-seoTitle: "Mémoire et traumatisme : comprendre leur lien pour mieux guérir"
-seoDescription: "La mémoire est un mécanisme complexe qui façonne notre compréhension du monde et influence notre comportement."
+seoTitle: "Mémoire et traumatisme"
+seoDescription: "Mémoire et traumatisme : comment le cerveau encode le choc, et comment l’EMDR aide à retraiter les souvenirs pour mieux guérir."
 draft: false
 ---
 
@@ -46,7 +46,7 @@ Comprendre comment la mémoire fonctionne après une mémoire traumatique permet
 
 -   **Techniques de respiration ou de relaxation** pour calmer le système nerveux.
 -   **Pleine conscience** pour observer les souvenirs sans s’y identifier.
--   **[EMDR](https://www.emdr-france.org/fr/la-therapie-emdr/l-emdr-pour-soigner-les-traumatismes-1028) ou thérapies corporelles** pour retraiter les souvenirs traumatiques.
+-   **[Thérapie EMDR](/therapie-emdr/)** ou thérapies corporelles pour retraiter les souvenirs traumatiques (voir aussi [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)).
 
 Ces approches favorisent la réintégration des souvenirs dans le récit de vie, sans qu’ils dominent le présent
 
@@ -64,4 +64,10 @@ Chaque souvenir est une pièce du puzzle de notre histoire. En travaillant avec 
 
 La relation entre mémoire et encodage traumatique révèle combien notre psyché est à la fois fragile et puissante. En apprenant à décoder cette interaction, on ouvre des portes vers la guérison et un mieux-être durable.
 
-Si ce sujet vous interpelle, je vous invite à consulter [mon article sur l’EMDR](/therapie-emdr/) ou celui sur [l’attachement](/comment-te-relies-tu-aux-autres/), pour approfondir ces thématiques essentielles.
+## Pour aller plus loin (cluster EMDR)
+
+- [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/)
+- [EMDR et stress post-traumatique](/emdr-stress-post-traumatique/)
+- [L’EMDR : un processus naturel](/emdr-traitement-trauma-processus-naturel/)
+- [Psychologue EMDR en ligne](/psychotherapie/)
+- [Comment te relies-tu aux autres ?](/comment-te-relies-tu-aux-autres/)

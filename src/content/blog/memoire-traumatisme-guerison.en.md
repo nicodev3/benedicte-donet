@@ -46,7 +46,7 @@ Understanding how memory works after traumatic encoding allows us to develop con
 
 - **Breathing or relaxation techniques** to calm the nervous system.
 - **Mindfulness** to observe memories without identifying with them.
-- **[EMDR](https://www.emdr-france.org/fr/la-therapie-emdr/l-emdr-pour-soigner-les-traumatismes-1028) or body-based therapies** to reprocess traumatic memories.
+- **[EMDR therapy](/en/therapie-emdr/)** or body-based therapies to reprocess traumatic memories (see also [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)).
 
 These approaches support the reintegration of memories into the life narrative, without letting them dominate the present.
 
@@ -64,4 +64,10 @@ Each memory is a piece of the puzzle of our story. By working with respect, gent
 
 The relationship between memory and traumatic encoding reveals how fragile and powerful our psyche is at the same time. By learning to decode this interaction, we open doors towards healing and lasting well-being.
 
-If this subject speaks to you, I invite you to read [my article on EMDR](/en/therapie-emdr/) or the one on [attachment](/en/comment-te-relies-tu-aux-autres/), to explore these essential themes further.
+## Explore the EMDR cluster
+
+- [What is EMDR therapy?](/en/therapie-emdr/)
+- [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)
+- [EMDR as a natural process](/en/emdr-traitement-trauma-processus-naturel/)
+- [Online EMDR psychologist](/en/psychotherapie/)
+- [How do you relate to others?](/en/comment-te-relies-tu-aux-autres/)

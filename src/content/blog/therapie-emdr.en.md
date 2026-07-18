@@ -14,11 +14,13 @@ seoDescription: "What is EMDR therapy? Method, how it works and indications. See
 draft: false
 ---
 
-## A gentle and recognised approach
+## EMDR: meaning and method
 
 ![EMDR therapy session, illustration of desensitisation](/images/illustrations/illustration-emdr-seance.jpeg)
 
-**EMDR therapy** (Eye Movement Desensitization and Reprocessing) is a psychotherapeutic approach recognised for its effectiveness in treating **psychological trauma**, **anxiety**, **phobias**, and **post-traumatic stress**. It is also the method I use as an **online EMDR psychologist**, via video consultation.
+**EMDR** stands for *Eye Movement Desensitization and Reprocessing*. In practice we speak of **EMDR therapy** or the **EMDR method**.
+
+It is recognised for treating **psychological trauma**, **anxiety**, **phobias**, and **post-traumatic stress**. It is also the method I use as an **online EMDR psychologist**, via video consultation.
 
 Recommended by the [WHO](https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder) and the [Haute Autorité de Santé](https://www.has-sante.fr/), adaptive information reprocessing allows **painful memories** that remain « stuck » in the nervous system to be **unblocked**, so they can be **naturally reprocessed** without pain or reliving the experience.
 
@@ -62,10 +64,17 @@ EMDR is often complemented by other tools, such as **mindfulness**, **bodywork**
 
 **EMDR therapy** offers a gentle and powerful path to transform past wounds into resources. It allows you to **regain serenity, lightness, and emotional stability**.
 
+## Explore the EMDR cluster
+
+- [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)
+- [EMDR as a natural process](/en/emdr-traitement-trauma-processus-naturel/)
+- [Memory and trauma](/en/memoire-traumatisme-guerison/)
+- [Online EMDR psychologist](/en/psychotherapie/)
+
 ## Contact me
 
 Would you like to find out more or book an appointment?
 
-→ [Contact me directly](/en/)
+→ [Contact me](/en/infos-pratiques/)
 
 → [Book an appointment online](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)

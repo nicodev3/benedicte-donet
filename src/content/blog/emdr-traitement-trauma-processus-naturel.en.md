@@ -6,11 +6,11 @@ tags:
   - "Psychology"
   - "Trauma"
 date: 2025-12-28T03:09:14Z
-updated: 2026-06-08T12:33:58Z
+updated: 2026-07-18T17:00:00Z
 image: "/images/stock/stock-emdr-desert.jpg"
 imageAlt: "EMDR trauma treatment"
-seoTitle: "EMDR: a natural process, not a magic solution"
-seoDescription: "EMDR deeply respects the brain's natural functioning. It imposes nothing. It does not force memories. It does not erase history. It does not take control. Contrary to certain misconceptions, EMDR is not a « magic » technique that makes trauma disappear. It is a natural neuropsychological process that sets the brain's innate information-processing mechanisms back in motion."
+seoTitle: "EMDR: a natural process"
+seoDescription: "EMDR is not magic: it is a natural trauma reprocessing process. Understand what changes when a memory is truly digested."
 draft: false
 ---
 
@@ -69,11 +69,14 @@ This is why the changes observed after successful EMDR are often deep and lastin
 the brain has not learned something new —  
 it has **regained its natural functioning**.
 
-### **🔎 General information and EMDR research**
+## Explore the EMDR cluster
 
-- **IFEMDR – EMDR research**  
-  Presentation of research results and international recommendations for the use of EMDR in the treatment of psychological trauma.  
-  [https://www.ifemdr.fr/therapie-emdr/ressources-emdr/recherche-emdr/](https://www.ifemdr.fr/therapie-emdr/ressources-emdr/recherche-emdr/)
-- **IFEMDR – International treatment recommendations for EMDR**  
-  Summary of organisations that recognise EMDR as an effective psychotherapy for PTSD and trauma.  
-  [https://www.ifemdr.fr/recommandations-internationales-de-traitement-pour-lemdr/](https://www.ifemdr.fr/recommandations-internationales-de-traitement-pour-lemdr/)
+- [What is EMDR therapy?](/en/therapie-emdr/)
+- [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)
+- [Memory and trauma](/en/memoire-traumatisme-guerison/)
+- [Online EMDR psychologist](/en/psychotherapie/)
+
+### EMDR research
+
+- [IFEMDR – EMDR research](https://www.ifemdr.fr/therapie-emdr/ressources-emdr/recherche-emdr/)
+- [IFEMDR – International recommendations](https://www.ifemdr.fr/recommandations-internationales-de-traitement-pour-lemdr/)
