@@ -4,20 +4,26 @@ heroTitle: "La psychothérapie"
 description: "Psychologue en ligne"
 image: "/images/heroes/hero-psychotherapie.webp"
 imageAlt: ""
-seoTitle: "Psychothérapie en ligne | EMDR, trauma et anxiété"
-seoDescription: "Séances de psychothérapie en ligne avec Bénédicte Donet, psychologue clinicienne : accompagnement du trauma, de l'anxiété, du stress post-traumatique et EMDR en visio."
+seoTitle: "Psychologue EMDR en ligne | Trauma et anxiété"
+seoDescription: "Psychologue EMDR en ligne : séances de psychothérapie en visio pour trauma, anxiété et stress post-traumatique. Accompagnement avec Bénédicte Donet, psychologue clinicienne."
 order: 3
 draft: false
 ---
 
 ![EMDR psychologie en ligne benedicte donet](/images/portraits/portrait-emdr-01.jpg)
 
+## Psychologue EMDR en ligne
+
+Je suis **psychologue EMDR en ligne** : j’accompagne les adultes en téléconsultation (Zoom / Doctolib) pour le traitement des traumatismes, de l’anxiété et du stress post-traumatique. L’**EMDR en ligne** permet un suivi régulier, dans un cadre sécurisé, où que vous soyez.
+
+Pour comprendre la méthode en détail : [Qu’est-ce que la thérapie EMDR ?](/therapie-emdr/)
+
 ## JE VOUS ACCOMPAGNE
 
 Au cœur de ma pratique thérapeutique résident la parole et l’écoute, deux piliers fondamentaux qui guident mes séances vers une compréhension profonde de vos expériences, émotions et besoins. Cette approche empathique permet d’établir un **espace de confiance et d’ouverture** où vous pouvez avancer à votre propre rythme.  
 J’intègre à ce socle d’autres méthodes thérapeutiques qui me semblent alignées avec votre situation :
 
--   L’**EMDR** (désensibilisation et retraitement de l’information par les mouvements oculaires) est une technique psychothérapeutique reconnue pour le traitement du trouble de stress post-traumatique. Les mouvements oculaires ou d’autres stimuli sensoriels sont utilisés pendant l’évocation de souvenirs perturbants. Cette thérapie permet le traitement et la résolution des traumatismes passés, en facilitant la digestion des souvenirs et en réduisant leur impact émotionnel. [Plus d’infos sur EMDR psychologie en ligne](https://www.emdr-france.org/lemdr-cest-quoi/la-therapie-emdr/).
+-   L’**EMDR** (désensibilisation et retraitement de l’information par les mouvements oculaires) est une technique psychothérapeutique reconnue pour le traitement du trouble de stress post-traumatique. Les mouvements oculaires ou d’autres stimuli sensoriels sont utilisés pendant l’évocation de souvenirs perturbants. Cette thérapie permet le traitement et la résolution des traumatismes passés, en facilitant la digestion des souvenirs et en réduisant leur impact émotionnel. En savoir plus : [thérapie EMDR](/therapie-emdr/) · [EMDR France](https://www.emdr-france.org/lemdr-cest-quoi/la-therapie-emdr/).
 -   La **pleine conscience**, est un outil puissant ayant des effets bénéfiques sur notre bien-être, notre conscience corporelle et notre capacité à vivre pleinement le moment présent. Il est fréquent que j’introduise des moments de méditation et d’exploration de la pleine conscience dans mon accompagnement pour vous aider à reconnecter avec l’instant présent, approfondir votre connaissance de vous-même et accueillir vos expériences internes sans résistance.
 -   Le **Système familial intérieur** (IFS), pratique d’intégration des identités, est une approche fascinante. Chaque individu porte en lui un monde complexe, composé de plusieurs identités. Ces identités ne sont pas toutes alignées en termes d’âge ou de désirs. Une partie de nous peut souhaiter avant tout se protéger, être en sécurité. Cependant, nous avons également une autre partie en nous qui aspire à évoluer et à découvrir le monde qui nous entoure. La pratique d’intégration des identités consiste à reconnaître et à accueillir toutes ces parties de nous-mêmes. Nous travaillons avec ces différentes identités, en les aidant à grandir si nécessaire, à évoluer et à retrouver un sentiment de sécurité.
 -   La **respiration et l’utilisation de la voix**. Lorsque vous faites face à des niveaux de stress et d’anxiété élevés, il est bénéfique d’explorer votre façon de respirer. Parfois, une rééducation de la respiration est nécessaire afin de soutenir le système nerveux. Aussi, votre voix est étroitement liée à votre système nerveux et à vos émotions. En travaillant sur la modulation de la voix, nous pouvons libérer des tensions émotionnelles, exprimer nos besoins et renforcer notre confiance en nous. Ces techniques créent un espace thérapeutique puissant.

@@ -6,11 +6,11 @@ tags:
   - "Psychology"
   - "Trauma"
 date: 2025-05-20T07:43:13Z
-updated: 2026-06-08T12:33:19Z
+updated: 2026-07-18T16:00:00Z
 image: "/images/illustrations/illustration-emdr-seance.jpeg"
 imageAlt: "EMDR therapy definition"
-seoTitle: "What is EMDR therapy?"
-seoDescription: "Are you going through a difficult period, or carrying a painful experience that still seems to weigh on you? EMDR (Eye Movement Desensitization and Reprocessing) is a recognised therapeutic method that allows psychological trauma to be treated in depth. In this article, discover how this gentle yet powerful approach can help you regain more lightness and inner safety, at your own pace."
+seoTitle: "EMDR therapy: method, indications and online psychologist"
+seoDescription: "What is EMDR therapy? Method, how it works and indications. See an online EMDR psychologist for trauma, anxiety and post-traumatic stress."
 draft: false
 ---
 
@@ -18,7 +18,7 @@ draft: false
 
 ![EMDR therapy session, illustration of desensitisation](/images/illustrations/illustration-emdr-seance.jpeg)
 
-**EMDR psychotherapy** (Eye Movement Desensitization and Reprocessing) is a psychotherapeutic approach recognised for its effectiveness in treating **psychological trauma**, **anxiety**, **phobias**, and **post-traumatic stress**.
+**EMDR therapy** (Eye Movement Desensitization and Reprocessing) is a psychotherapeutic approach recognised for its effectiveness in treating **psychological trauma**, **anxiety**, **phobias**, and **post-traumatic stress**. It is also the method I use as an **online EMDR psychologist**, via video consultation.
 
 Recommended by the [WHO](https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder) and the [Haute Autorité de Santé](https://www.has-sante.fr/), adaptive information reprocessing allows **painful memories** that remain « stuck » in the nervous system to be **unblocked**, so they can be **naturally reprocessed** without pain or reliving the experience.
 
@@ -42,7 +42,11 @@ EMDR therapy is particularly indicated for:
 - **Phobias, OCD, psychosomatic pain**
 - **Emotional blocks** or episodes of dissociation
 
-> To find out more about my therapeutic support: [My therapeutic approach](/en/psychotherapie/)
+> To find out more about my therapeutic support: [Online EMDR psychologist — my approach](/en/psychotherapie/)
+
+## Online EMDR: how do sessions work?
+
+Seeing an **online EMDR psychologist** follows the same framework as in person: confidentiality, adapted pacing, preparation then reprocessing phases. Sessions take place by video (Zoom or Doctolib). Bilateral stimulation can be adapted remotely (guided eye movements on screen, tapping, sounds).
 
 ## Is it a safe method?
 

@@ -58,7 +58,6 @@ const organizationId = new URL("/#organization", SITE.url).href;
 const serviceId = new URL("/#professional-service", SITE.url).href;
 const websiteId = new URL("/#website", SITE.url).href;
 const webpageId = `${canonical}#webpage`;
-const emailMailto = `mailto:${global.email}`;
 const postalAddress = {
   "@type": "PostalAddress",
   streetAddress: global.address.streetAddress,
@@ -66,10 +65,6 @@ const postalAddress = {
   addressLocality: global.address.addressLocality,
   addressRegion: global.address.addressRegion,
   addressCountry: global.address.addressCountry,
-};
-const areaServed = {
-  "@type": "Place",
-  name: global.area,
 };
 const primaryImage = ogImage
   ? { "@type": "ImageObject", url: ogImage }
@@ -85,9 +80,10 @@ const graph: Record<string, unknown>[] = [
         ? "Psychologue clinicienne en ligne"
         : "Online clinical psychologist",
     url: SITE.url,
-    email: emailMailto,
+    email: global.email,
     address: postalAddress,
     knowsAbout: [...global.knowsAbout],
+    knowsLanguage: ["fr", "en"],
     sameAs,
   },
   {
@@ -95,25 +91,29 @@ const graph: Record<string, unknown>[] = [
     "@id": organizationId,
     name: SITE.name,
     url: SITE.url,
-    email: emailMailto,
+    email: global.email,
     address: postalAddress,
     sameAs,
     founder: { "@id": personId },
     ...(primaryImage ? { logo: primaryImage } : {}),
   },
   {
+    // ProfessionalService ⊆ LocalBusiness (not Service): no `provider` / Service-only props.
     "@type": "ProfessionalService",
     "@id": serviceId,
     name: global.siteName,
     description: global.defaultSeoDescription,
     url: SITE.url,
-    email: emailMailto,
+    email: global.email,
     address: postalAddress,
-    areaServed,
-    availableLanguage: ["fr", "en"],
-    knowsAbout: [...global.knowsAbout],
+    areaServed: {
+      "@type": "Country",
+      name: "France",
+    },
     sameAs,
-    provider: { "@id": personId },
+    employee: { "@id": personId },
+    founder: { "@id": personId },
+    ...(primaryImage ? { image: primaryImage } : {}),
   },
   {
     "@type": "WebSite",

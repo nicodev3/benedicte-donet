@@ -49,8 +49,9 @@ const productStructuredData = {
   image: productImagePath ? new URL(productImagePath, SITE.url).href : undefined,
   url: canonical,
   brand: {
-    "@type": "Person",
-    name: SITE.siteName,
+    "@type": "Organization",
+    "@id": new URL("/#organization", SITE.url).href,
+    name: SITE.name,
   },
   offers: priceRange
     ? {

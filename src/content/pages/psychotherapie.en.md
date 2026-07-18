@@ -4,13 +4,19 @@ heroTitle: "Psychotherapy"
 description: "Online psychologist"
 image: "/images/heroes/hero-psychotherapie.webp"
 imageAlt: ""
-seoTitle: "Online Psychotherapy | EMDR, Trauma and Anxiety"
-seoDescription: "Online psychotherapy sessions with Bénédicte Donet, clinical psychologist: support for trauma, anxiety, post-traumatic stress and EMDR by video call."
+seoTitle: "Online EMDR Psychologist | Trauma and Anxiety"
+seoDescription: "Online EMDR psychologist: video psychotherapy for trauma, anxiety and post-traumatic stress with Bénédicte Donet, clinical psychologist."
 order: 3
 draft: false
 ---
 
 ![EMDR online psychology benedicte donet](/images/portraits/portrait-emdr-01.jpg)
+
+## Online EMDR psychologist
+
+I am an **online EMDR psychologist**: I support adults via video consultation (Zoom / Doctolib) for trauma, anxiety and post-traumatic stress. **Online EMDR** allows regular care in a safe framework, wherever you are.
+
+Learn more about the method: [What is EMDR therapy?](/en/therapie-emdr/)
 
 ## I SUPPORT YOU
 

@@ -33,6 +33,8 @@ export const SITE = {
       area: "Téléconsultation en visio (Zoom / Doctolib)",
       knowsAbout: [
         "EMDR",
+        "Psychologue EMDR",
+        "EMDR en ligne",
         "Trauma",
         "Anxiété",
         "Stress post-traumatique",
@@ -47,6 +49,8 @@ export const SITE = {
       area: "Online consultations by video (Zoom / Doctolib)",
       knowsAbout: [
         "EMDR",
+        "Online EMDR psychologist",
+        "Online EMDR",
         "Trauma",
         "Anxiety",
         "Post-traumatic stress",

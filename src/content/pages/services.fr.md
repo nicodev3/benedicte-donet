@@ -3,8 +3,8 @@ title: "Services"
 description: "Psychologue en ligne"
 image: "/images/heroes/hero-services.jpg"
 imageAlt: "Fleurs séchées — psychologue en visio"
-seoTitle: "Psychologue en ligne | Services en visio"
-seoDescription: "Consultations avec une psychologue en ligne : psychothérapie en visio, EMDR, trauma-thérapies, photothérapie, programmes et ateliers de pleine conscience."
+seoTitle: "Psychologue en ligne & EMDR | Services en visio"
+seoDescription: "Psychologue en ligne et EMDR en visio : psychothérapie, trauma, anxiété, photothérapie et ateliers. Consultations avec Bénédicte Donet."
 order: 2
 draft: false
 ---
