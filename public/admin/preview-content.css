@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/**
+ * Preview Decap — styles alignés sur src/styles/tokens.css + composants clés.
+ * Injecté en brut dans l'iframe (voir preview.js).
+ */
 
 @font-face {
   font-family: "Caviar Dreams";
@@ -24,8 +27,7 @@
   font-display: swap;
 }
 
-/* Tokens alignés sur src/styles/tokens.css */
-.cms-preview-content {
+:root {
   --color-primary: #c68d85;
   --color-primary-dark: #87544d;
   --color-primary-strong: #87544d;
@@ -34,19 +36,21 @@
   --color-button-text: #241a22;
   --color-button-hover: #b87870;
   --color-secondary: #67c7ca;
+  --color-secondary-dark: #347d80;
   --color-text: #3b2e38;
   --color-text-soft: #6d5f68;
   --color-bg: #ffffff;
   --color-bg-soft: #fff1eb;
   --color-bg-muted: #faf6f4;
+  --color-border: #eadfdb;
   --font-heading: "Caviar Dreams", "Trebuchet MS", sans-serif;
   --font-body: "Rubik", "Rubik Variable", system-ui, sans-serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
-  --text-xl: 1.5rem;
-  --text-2xl: 2rem;
-  --text-3xl: 2.75rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-3xl: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem);
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
@@ -58,48 +62,54 @@
   --radius-full: 999px;
   --shadow-soft: 0 8px 30px rgba(59, 46, 56, 0.08);
   --transition: 180ms ease;
+}
 
-  box-sizing: border-box;
+/* Reset iframe Decap */
+body {
+  margin: 0;
   font-family: var(--font-body);
   font-size: var(--text-base);
   font-weight: 300;
   line-height: 1.7;
   color: var(--color-text);
   background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
 }
 
-.cms-preview-content *,
-.cms-preview-content *::before,
-.cms-preview-content *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-.cms-preview-content img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.cms-preview-content h1,
-.cms-preview-content h2,
-.cms-preview-content h3 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   font-weight: 400;
   line-height: 1.2;
   color: var(--color-text);
 }
 
-/*
- * CTA principal du site (hero, TextImage, page-cta) :
- * forme asymétrique + Rubik, pas le bouton pilule.
- */
-.cms-preview-content a.cms-preview-cta,
-.cms-preview-content a.cms-preview-hero-cta {
+a {
+  color: var(--color-primary-dark);
+}
+
+/* ---- CTA site (hero / sections / pages) ---- */
+
+a.cms-preview-cta,
+a.cms-preview-hero-cta {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
-  width: fit-content;
+  width: fit-content !important;
   max-width: 100%;
   gap: 0.75rem;
   margin-top: var(--space-md);
@@ -116,28 +126,13 @@
   box-shadow: none !important;
 }
 
-.cms-preview-content .cms-preview-hero a.cms-preview-hero-cta {
-  margin-top: 0;
-}
-
-.cms-preview-content .cms-preview-text-image:not(.reverse) a.cms-preview-cta {
-  align-self: center;
-}
-
-.cms-preview-content .cms-preview-masterclass a.cms-preview-button {
-  align-self: flex-start;
-}
-
-/* Bouton pilule = composant Button.astro (ex. étapes RDV) */
-.cms-preview-content a.cms-preview-button {
+a.cms-preview-button {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  align-self: center;
-  width: fit-content;
+  width: fit-content !important;
   max-width: 100%;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  margin-top: var(--space-md);
   padding: 0.8em 1.8em !important;
   border: none !important;
   border-radius: var(--radius-full) !important;
@@ -150,29 +145,13 @@
   box-shadow: none !important;
 }
 
-/* Liens CTA isolés dans le corps des pages (comme PageCtaEnhancer) */
-.cms-preview-content .prose > p:has(> a:only-child),
-.cms-preview-content .prose > p.cms-preview-page-cta {
-  margin-top: var(--space-md);
-  text-align: center;
+.cms-preview-content {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
-.cms-preview-content .prose > p:has(> a:only-child) > a,
-.cms-preview-content .prose > p.cms-preview-page-cta > a {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.45rem !important;
-  border-radius: 2.1875rem 0 !important;
-  background: var(--color-button) !important;
-  color: var(--color-button-text) !important;
-  font-family: var(--font-body) !important;
-  font-size: 1.25rem !important;
-  font-weight: 400 !important;
-  text-decoration: none !important;
-}
-
-/* ---- Prose (articles + pages) ---- */
+/* ---- Prose ---- */
 
 .cms-preview-content .prose {
   margin-inline: auto;
@@ -180,20 +159,6 @@
 
 .cms-preview-content .prose > * + * {
   margin-top: var(--space-sm);
-}
-
-.cms-preview-content .prose h1,
-.cms-preview-content .prose h2,
-.cms-preview-content .prose h3,
-.cms-preview-content .prose h4 {
-  font-family: var(--font-heading);
-  font-weight: 400;
-  line-height: 1.25;
-  color: var(--color-text);
-}
-
-.cms-preview-content .prose h1 {
-  font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.5rem);
 }
 
 .cms-preview-content .prose h2 {
@@ -227,10 +192,6 @@
   padding-left: 1.25rem;
 }
 
-.cms-preview-content .prose li + li {
-  margin-top: 0.25rem;
-}
-
 .cms-preview-content .prose img {
   border-radius: var(--radius-md);
   margin-block: var(--space-md);
@@ -244,9 +205,30 @@
   max-width: var(--container-narrow);
 }
 
-/* ---- Blog ---- */
+/* Liens CTA isolés dans le corps des pages */
+.cms-preview-content .prose > p:has(> a:only-child) {
+  margin-top: var(--space-md);
+  text-align: center;
+}
 
-.cms-preview-post-hero {
+.cms-preview-content .prose > p:has(> a:only-child) > a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.45rem !important;
+  border-radius: 2.1875rem 0 !important;
+  background: var(--color-button) !important;
+  color: var(--color-button-text) !important;
+  font-family: var(--font-body) !important;
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+/* ---- Blog / pages heroes ---- */
+
+.cms-preview-post-hero,
+.cms-preview-page-hero {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -263,7 +245,12 @@
   background-size: cover;
 }
 
-.cms-preview-post-hero::before {
+.cms-preview-page-hero {
+  background-position: bottom center;
+}
+
+.cms-preview-post-hero::before,
+.cms-preview-page-hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -271,13 +258,13 @@
   pointer-events: none;
 }
 
-.cms-preview-post-hero-content {
+.cms-preview-post-hero-content,
+.cms-preview-page-hero-content {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1.5625rem;
   width: 100%;
   max-width: 52rem;
@@ -286,24 +273,29 @@
 
 .cms-preview-post-hero-meta {
   margin: 0;
-  font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.056em;
   text-transform: uppercase;
-  color: var(--color-text);
   text-decoration: underline;
 }
 
-.cms-preview-post-hero-content h1 {
+.cms-preview-post-hero-content h1,
+.cms-preview-page-hero-content h1 {
   margin: 0;
-  font-family: var(--font-heading);
   font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.6875rem);
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  line-height: 1.2;
-  color: var(--color-text);
+}
+
+.cms-preview-page-hero-subtitle {
+  margin: 0;
+  max-width: 40rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1rem + 0.55vw, 1.6875rem);
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85), 0 0 18px rgba(255, 255, 255, 0.55);
 }
 
 .cms-preview-post {
@@ -336,68 +328,6 @@
   color: var(--color-text-soft);
 }
 
-/* ---- Pages ---- */
-
-.cms-preview-page-hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  min-height: 12.5rem;
-  text-align: center;
-  border-radius: 0 0 5rem 0;
-  box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
-  background-color: var(--color-bg-soft);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.cms-preview-page-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.51);
-  pointer-events: none;
-}
-
-.cms-preview-page-hero-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5625rem;
-  width: 100%;
-  padding: 3.125rem 1.5rem;
-}
-
-.cms-preview-page-hero-subtitle {
-  margin: 0;
-  max-width: 40rem;
-  font-family: var(--font-heading);
-  font-size: clamp(1.125rem, 1rem + 0.55vw, 1.6875rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.45;
-  color: var(--color-text);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85), 0 0 18px rgba(255, 255, 255, 0.55);
-}
-
-.cms-preview-page-hero-content h1 {
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.6875rem);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
-  color: var(--color-text);
-}
-
 .cms-preview-page-header {
   padding: var(--space-xl) var(--space-md);
   text-align: center;
@@ -406,11 +336,7 @@
 
 .cms-preview-page-header h1 {
   margin: 0;
-  font-family: var(--font-heading);
   font-size: var(--text-3xl);
-  font-weight: 400;
-  line-height: 1.25;
-  color: var(--color-text);
 }
 
 .cms-preview-page-description {
@@ -467,7 +393,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1.5625rem;
   width: 100%;
   max-width: 48rem;
@@ -478,20 +403,14 @@
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5625rem);
-  font-weight: 400;
   letter-spacing: 0.04em;
-  color: var(--color-text);
 }
 
 .cms-preview-home .cms-preview-hero h1 {
   margin: 0;
-  font-family: var(--font-heading);
   font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.6875rem);
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  line-height: 1.2;
-  color: var(--color-text);
 }
 
 .cms-preview-home .cms-preview-hero-subtitle {
@@ -499,11 +418,13 @@
   max-width: 40rem;
   font-family: var(--font-heading);
   font-size: clamp(1.125rem, 1rem + 0.55vw, 1.6875rem);
-  font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.45;
-  color: var(--color-text);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85), 0 0 18px rgba(255, 255, 255, 0.55);
+}
+
+.cms-preview-home .cms-preview-hero a.cms-preview-hero-cta {
+  margin-top: 0;
 }
 
 .cms-preview-home .cms-preview-text-image {
@@ -554,21 +475,17 @@
 
 .cms-preview-home .cms-preview-section-copy h2 {
   margin: 0 0 clamp(1.25rem, 2.5vw, 1.875rem);
-  font-family: var(--font-heading);
-  font-weight: 400;
+  color: var(--color-primary-dark);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--color-primary-dark);
   font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
 }
 
 .cms-preview-home .cms-preview-richtext p {
   margin: 0 0 1rem;
-  font-family: var(--font-body);
+  text-align: start;
   font-weight: 300;
   line-height: 1.7;
-  color: var(--color-text);
-  text-align: start;
 }
 
 .cms-preview-home .cms-preview-richtext p:last-child {
@@ -576,7 +493,6 @@
 }
 
 .cms-preview-home .cms-preview-services,
-.cms-preview-home .cms-preview-steps,
 .cms-preview-home .cms-preview-reviews {
   max-width: 52rem;
   margin: 0 auto;
@@ -588,11 +504,9 @@
 .cms-preview-home .cms-preview-steps h2,
 .cms-preview-home .cms-preview-reviews h2 {
   margin: 0 0 1.875rem;
-  font-family: var(--font-heading);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: var(--color-text);
   font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
 }
 
@@ -600,7 +514,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
-  width: 100%;
 }
 
 .cms-preview-home .cms-preview-card {
@@ -631,9 +544,7 @@
 
 .cms-preview-home .cms-preview-card h3 {
   margin: 0 0 0.75rem;
-  font-family: var(--font-heading);
   font-size: clamp(1.125rem, 1rem + 0.5vw, 1.625rem);
-  font-weight: 400;
   letter-spacing: 0.04em;
   color: var(--color-primary-dark);
   text-decoration: underline;
@@ -657,13 +568,12 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
-  text-align: left;
 }
 
 .cms-preview-home .cms-preview-steps {
-  max-width: none;
   margin: clamp(3rem, 8vw, 6rem) 0 0;
   padding: clamp(2.5rem, 5vw, 3.75rem) 1.5rem;
+  text-align: center;
   border-radius: 80px 0 0 0;
   background: color-mix(in srgb, var(--color-bg-soft) 80%, transparent);
   box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.15);
@@ -675,7 +585,6 @@
   background: transparent;
   border-radius: 0;
   padding: 0;
-  text-align: center;
 }
 
 .cms-preview-home .cms-preview-steps .cms-preview-card h3 {
@@ -696,7 +605,6 @@
 }
 
 .cms-preview-home .cms-preview-quote {
-  position: relative;
   padding: clamp(3rem, 5vw, 4rem) 1.5rem;
   text-align: center;
   background: var(--color-bg-muted);
@@ -704,15 +612,12 @@
 }
 
 .cms-preview-home .cms-preview-quote blockquote {
-  position: relative;
   max-width: 40rem;
   margin: 0 auto;
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem);
   font-style: italic;
-  font-weight: 400;
   line-height: 1.45;
-  color: var(--color-text);
 }
 
 .cms-preview-home .cms-preview-quote cite {
@@ -721,7 +626,6 @@
   font-family: var(--font-body);
   font-size: 1rem;
   font-style: normal;
-  font-weight: 400;
   color: var(--color-text-soft);
 }
 
@@ -782,6 +686,11 @@
 
   .cms-preview-home .cms-preview-steps {
     border-radius: 3.75rem 0 0 0;
+  }
+
+  a.cms-preview-cta,
+  a.cms-preview-hero-cta {
+    font-size: 1.0625rem !important;
   }
 }
 
