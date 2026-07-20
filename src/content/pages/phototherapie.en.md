@@ -8,6 +8,7 @@ seoTitle: "Phototherapy | Self-confidence photo session"
 seoDescription: "Phototherapy session with Bénédicte Donet: photography and psychology to rebuild self-confidence and ease your relationship with your body."
 order: 4
 draft: false
+pageType: page
 ---
 
 ![phototherapist benedicte donet self-confidence photo session](/images/portraits/portrait-autoportrait.jpg)

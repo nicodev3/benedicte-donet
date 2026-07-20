@@ -7,6 +7,7 @@ seoTitle: "Consultation psychologue en ligne | Infos pratiques"
 seoDescription: "Informations pour consulter une psychologue en ligne : durée des séances, téléconsultation, prise de rendez-vous, remboursement mutuelle et cadre thérapeutique."
 order: 7
 draft: false
+pageType: page
 ---
 
 ![Bénédicte Donet psychologue en ligne avis](/images/portraits/portrait-infos-pratiques-02.jpg)

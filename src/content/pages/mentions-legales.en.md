@@ -7,6 +7,7 @@ seoTitle: "Legal notice"
 seoDescription: "Legal notice, intellectual property, liability, personal data, cookies, and applicable law for the Bénédicte Donet website."
 order: 90
 draft: false
+pageType: page
 ---
 
 ## 1 – Site publication

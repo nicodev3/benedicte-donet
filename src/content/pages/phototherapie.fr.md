@@ -8,6 +8,7 @@ seoTitle: "Photothérapie | Séance photo confiance en soi"
 seoDescription: "Séance de photothérapie avec Bénédicte Donet : photographie et psychologie pour renforcer la confiance en soi et apaiser le rapport au corps."
 order: 4
 draft: false
+pageType: page
 ---
 
 ![photothérapeute benedicte donet séance photo confiance en soi](/images/portraits/portrait-autoportrait.jpg)

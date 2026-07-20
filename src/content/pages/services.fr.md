@@ -7,6 +7,7 @@ seoTitle: "Psychologue en ligne & EMDR | Services en visio"
 seoDescription: "Psychologue en ligne et EMDR en visio : psychothérapie, trauma, anxiété, photothérapie et ateliers. Consultations avec Bénédicte Donet."
 order: 2
 draft: false
+pageType: page
 ---
 
 ## PSYCHOLOGUE EN VISIO

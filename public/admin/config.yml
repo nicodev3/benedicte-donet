@@ -108,88 +108,41 @@ collections:
         hint: "Activé = l'article n'est PAS visible sur le site."
 
   # ------------------------------------------------------------------
-  # PAGES — modification des pages existantes uniquement (pas de création)
+  # ACCUEIL — page d'accueil (contenu = sections home, pas le markdown body)
   # ------------------------------------------------------------------
-  - name: "pages"
-    label: "Pages"
-    label_singular: "Page"
+  - name: "accueil"
+    label: "Page d'accueil"
+    label_singular: "Page d'accueil"
     folder: "src/content/pages"
+    filter: { field: "pageType", value: "home" }
     create: false
     delete: false
     format: "frontmatter"
     extension: "md"
-    preview_path: "/{{slug}}/"
+    preview_path: "/"
     i18n: true
     summary: "{{title}}"
-    sortable_fields:
-      - { field: order, default_sort: asc }
-      - title
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true }
-      - label: "Titre du bandeau"
-        name: "heroTitle"
-        widget: "string"
-        i18n: true
-        required: false
-        hint: "Titre affiché dans le bandeau en haut de page. Si vide, le titre de la page est utilisé."
-      - label: "Description courte"
-        name: "description"
-        widget: "text"
-        i18n: true
-        required: false
-        hint: "Sous-titre du bandeau (au-dessus du titre) lorsqu'une image de bandeau est définie."
-      - label: "Image de bandeau"
-        name: "image"
-        widget: "image"
-        i18n: duplicate
-        required: false
-        hint: "Image de fond du bandeau en haut de page. Si vide, un en-tête simple est affiché."
-      - label: "Description de l'image"
-        name: "imageAlt"
-        widget: "string"
-        i18n: true
-        required: false
-      - label: "Contenu"
-        name: "body"
-        widget: "richtext"
-        i18n: true
-        modes: ["rich_text"]
-        sanitize_preview: false
-        buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
-        editor_components: ["image"]
-      - label: "Titre SEO"
-        name: "seoTitle"
-        widget: "string"
-        i18n: true
-        required: false
-        hint: "Titre affiché dans Google. Si vide, le titre de la page est utilisé."
-      - label: "Meta description"
-        name: "seoDescription"
-        widget: "text"
-        i18n: true
-        required: false
-        hint: "Description affichée dans Google (155 caractères max conseillé)."
+      # Conservé en hidden pour ne pas perdre le body markdown technique (".") à l'enregistrement
+      - { label: "Contenu", name: "body", widget: "hidden", default: ".", i18n: true }
       - label: "Ordre"
         name: "order"
         widget: "hidden"
         i18n: duplicate
-        default: 0
+        default: 1
       - label: "Brouillon"
         name: "draft"
         widget: "boolean"
         i18n: duplicate
         default: false
-        hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer une page sans en parler à votre webmaster."
-      - { label: "Type de page", name: "pageType", widget: "hidden", default: "page", i18n: duplicate }
-      # Champ `home` : i18n: true obligatoire (collection pages en i18n).
-      # Sans cela, Decap ignore le frontmatter et l'éditeur apparaît vide.
-      - label: "Page d'accueil"
+        hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer sans en parler à votre webmaster."
+      - { label: "Type de page", name: "pageType", widget: "hidden", default: "home", i18n: duplicate }
+      - label: "Contenu de l'accueil"
         name: "home"
         widget: "object"
         i18n: true
-        required: false
-        collapsed: true
-        hint: "Réservé à la page d'accueil. Déplier pour éditer le contenu. Laisser vide pour les autres pages."
+        collapsed: false
         fields: &home_page_fields
           - label: "Bandeau principal (haut de page)"
             name: "hero"
@@ -370,3 +323,79 @@ collections:
             widget: "text"
             i18n: true
             required: false
+
+  # ------------------------------------------------------------------
+  # PAGES — autres pages (pas de création / suppression)
+  # ------------------------------------------------------------------
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "src/content/pages"
+    filter: { field: "pageType", value: "page" }
+    create: false
+    delete: false
+    format: "frontmatter"
+    extension: "md"
+    preview_path: "/{{slug}}/"
+    i18n: true
+    summary: "{{title}}"
+    sortable_fields:
+      - { field: order, default_sort: asc }
+      - title
+    fields:
+      - { label: "Titre", name: "title", widget: "string", i18n: true }
+      - label: "Titre du bandeau"
+        name: "heroTitle"
+        widget: "string"
+        i18n: true
+        required: false
+        hint: "Titre affiché dans le bandeau en haut de page. Si vide, le titre de la page est utilisé."
+      - label: "Description courte"
+        name: "description"
+        widget: "text"
+        i18n: true
+        required: false
+        hint: "Sous-titre du bandeau (au-dessus du titre) lorsqu'une image de bandeau est définie."
+      - label: "Image de bandeau"
+        name: "image"
+        widget: "image"
+        i18n: duplicate
+        required: false
+        hint: "Image de fond du bandeau en haut de page. Si vide, un en-tête simple est affiché."
+      - label: "Description de l'image"
+        name: "imageAlt"
+        widget: "string"
+        i18n: true
+        required: false
+      - label: "Contenu"
+        name: "body"
+        widget: "richtext"
+        i18n: true
+        modes: ["rich_text"]
+        sanitize_preview: false
+        buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
+        editor_components: ["image"]
+      - label: "Titre SEO"
+        name: "seoTitle"
+        widget: "string"
+        i18n: true
+        required: false
+        hint: "Titre affiché dans Google. Si vide, le titre de la page est utilisé."
+      - label: "Meta description"
+        name: "seoDescription"
+        widget: "text"
+        i18n: true
+        required: false
+        hint: "Description affichée dans Google (155 caractères max conseillé)."
+      - label: "Ordre"
+        name: "order"
+        widget: "hidden"
+        i18n: duplicate
+        default: 0
+      - label: "Brouillon"
+        name: "draft"
+        widget: "boolean"
+        i18n: duplicate
+        default: false
+        hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer une page sans en parler à votre webmaster."
+      - { label: "Type de page", name: "pageType", widget: "hidden", default: "page", i18n: duplicate }

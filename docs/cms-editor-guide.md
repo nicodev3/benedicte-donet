@@ -39,10 +39,13 @@ nouvelle page, contactez votre webmaster.
 
 ## Modifier la page d'accueil
 
-1. Menu **Pages** → **Page d'accueil** (ou **Home page** en anglais).
-2. Dépliez la section **Page d'accueil** pour modifier le bandeau, les textes,
-   les accompagnements, les étapes de prise de rendez-vous, la citation, les avis, etc.
+1. Menu **Page d'accueil** (entrée dédiée, distincte de **Pages**).
+2. Modifiez le bandeau, les textes, les accompagnements, les étapes de prise de
+   rendez-vous, la citation, les avis, etc.
 3. Enregistrez puis publiez.
+
+> Il n'y a pas de champ « Contenu » libre sur l'accueil : tout passe par les
+> sections listées ci-dessus.
 
 ## Ajouter une image
 

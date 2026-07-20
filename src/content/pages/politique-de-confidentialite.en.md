@@ -7,6 +7,7 @@ seoTitle: "Privacy policy"
 seoDescription: "Information on personal data processing, your rights and cookie use on the Bénédicte Donet online psychology website."
 order: 91
 draft: false
+pageType: page
 ---
 
 This privacy policy explains how your personal data is collected and processed when you visit [benedictedonet-psyenligne.com](/en/) and when you communicate with Bénédicte Donet.

@@ -8,6 +8,7 @@ seoTitle: "Online Masterclass | Mindfulness and Psychology"
 seoDescription: "Online masterclasses and programmes to explore mindfulness, the nervous system, self-love, meditation and psycho-education."
 order: 5
 draft: false
+pageType: page
 ---
 
 <!-- Editorial content is split in src/components/pages/masterclass-{intro,outro}.md

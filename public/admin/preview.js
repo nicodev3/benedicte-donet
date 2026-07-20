@@ -674,6 +674,7 @@
   window.CMS.registerPreviewStyle("/admin/preview-content.css");
   window.CMS.registerPreviewTemplate("blog", BlogPreview);
   window.CMS.registerPreviewTemplate("pages", PagePreview);
+  window.CMS.registerPreviewTemplate("accueil", PagePreview);
   window.CMS.registerPreviewTemplate("home", HomePreview);
   window.CMS.registerPreviewTemplate("home_en", HomePreview);
 })();

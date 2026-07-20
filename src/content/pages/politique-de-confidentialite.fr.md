@@ -7,6 +7,7 @@ seoTitle: "Politique de confidentialité"
 seoDescription: "Informations sur le traitement des données personnelles, vos droits et l'utilisation des cookies sur le site de Bénédicte Donet, psychologue en ligne."
 order: 91
 draft: false
+pageType: page
 ---
 
 La présente politique de confidentialité a pour objet de vous informer sur la manière dont vos données personnelles sont collectées et traitées lors de votre visite sur le site [benedictedonet-psyenligne.com](/) et lors de vos échanges avec Bénédicte Donet.

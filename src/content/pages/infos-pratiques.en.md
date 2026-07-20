@@ -7,6 +7,7 @@ seoTitle: "Online Psychologist Consultation | Practical Info"
 seoDescription: "Practical information for booking an online psychologist consultation: session length, video setting, appointments, reimbursement and therapeutic framework."
 order: 7
 draft: false
+pageType: page
 ---
 
 ![Bénédicte Donet online psychologist reviews](/images/portraits/portrait-infos-pratiques-02.jpg)

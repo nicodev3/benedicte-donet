@@ -8,6 +8,7 @@ seoTitle: "Online EMDR Psychologist | Trauma and Anxiety"
 seoDescription: "Online EMDR psychologist: video psychotherapy for trauma, anxiety and post-traumatic stress with Bénédicte Donet, clinical psychologist."
 order: 3
 draft: false
+pageType: page
 ---
 
 ![EMDR online psychology benedicte donet](/images/portraits/portrait-emdr-01.jpg)

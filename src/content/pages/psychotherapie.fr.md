@@ -8,6 +8,7 @@ seoTitle: "Psychologue EMDR en ligne | Trauma et anxiété"
 seoDescription: "Psychologue EMDR en ligne : séances de psychothérapie en visio pour trauma, anxiété et stress post-traumatique. Accompagnement avec Bénédicte Donet, psychologue clinicienne."
 order: 3
 draft: false
+pageType: page
 ---
 
 ![EMDR psychologie en ligne benedicte donet](/images/portraits/portrait-emdr-01.jpg)

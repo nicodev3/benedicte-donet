@@ -7,6 +7,7 @@ seoTitle: "Bénédicte Donet | Online Clinical Psychologist"
 seoDescription: "Learn about Bénédicte Donet, online clinical psychologist specialising in trauma support, EMDR and body-based therapeutic approaches."
 order: 6
 draft: false
+pageType: page
 ---
 
 ![Bénédicte Donet, online psychologist](/images/portraits/portrait-a-propos.png)

@@ -8,6 +8,7 @@ seoTitle: "Masterclass en ligne | Pleine conscience et psychologie"
 seoDescription: "Masterclass et programmes en ligne pour explorer la pleine conscience, le système nerveux, l'amour de soi, la méditation et la psycho-éducation."
 order: 5
 draft: false
+pageType: page
 ---
 
 <!-- Le contenu éditorial est découpé dans src/components/pages/masterclass-{intro,outro}.md

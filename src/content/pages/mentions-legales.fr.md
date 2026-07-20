@@ -7,6 +7,7 @@ seoTitle: "Mentions légales"
 seoDescription: "Mentions légales du site de Bénédicte Donet, psychologue en ligne : édition, propriété intellectuelle, responsabilité, données personnelles et cookies."
 order: 90
 draft: false
+pageType: page
 ---
 
 ## 1 – Édition du site

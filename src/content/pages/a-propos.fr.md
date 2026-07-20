@@ -7,6 +7,7 @@ seoTitle: "Bénédicte Donet | Psychologue clinicienne en ligne"
 seoDescription: "Découvrez le parcours de Bénédicte Donet, psychologue clinicienne en ligne spécialisée dans l'accompagnement du trauma, de l'EMDR et des approches psycho-corporelles."
 order: 6
 draft: false
+pageType: page
 ---
 
 ![Bénédicte Donet psychologue à distance](/images/portraits/portrait-a-propos.png)

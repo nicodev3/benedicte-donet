@@ -97,6 +97,7 @@ const pages = defineCollection({
     }),
     z.object({
       title: z.string(),
+      pageType: z.literal("page").optional().default("page"),
       heroTitle: z.string().optional(),
       description: z.string().optional(),
       image: z.string().optional(),
