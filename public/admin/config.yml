@@ -129,12 +129,30 @@ collections:
             name: "hero"
             widget: "object"
             i18n: true
+            hint: "Le grand bandeau en haut de la page d'accueil."
             fields:
-              - { label: "Titre", name: "title", widget: "string", i18n: true }
-              - { label: "Sous-titre", name: "subtitle", widget: "string", i18n: true }
-              - { label: "Image de fond (bureau)", name: "backgroundImage", widget: "image", i18n: duplicate }
-              - { label: "Image de fond (mobile)", name: "backgroundImageMobile", widget: "image", required: false, i18n: duplicate }
-              - { label: "Texte du bouton", name: "primaryCtaLabel", widget: "string", i18n: true }
+              - label: "Titre"
+                name: "title"
+                widget: "string"
+                i18n: true
+                hint: "Ex. « Psychologue en ligne »."
+              - label: "Sous-titre"
+                name: "subtitle"
+                widget: "string"
+                i18n: true
+                hint: "Courte phrase sous le titre (spécialités, approche…)."
+              - label: "Image de fond"
+                name: "backgroundImage"
+                widget: "image"
+                i18n: duplicate
+                hint: "Image affichée derrière le titre. Une seule image suffit : le site l'adapte automatiquement sur téléphone et ordinateur."
+              # Variante mobile gérée côté code (pas exposée)
+              - { label: "Image de fond (mobile)", name: "backgroundImageMobile", widget: "hidden", required: false, i18n: duplicate }
+              - label: "Texte du bouton"
+                name: "primaryCtaLabel"
+                widget: "string"
+                i18n: true
+                hint: "Ex. « Je prends rendez-vous »."
               - label: "Lien du bouton"
                 name: "primaryCtaUrl"
                 widget: "string"
@@ -144,6 +162,7 @@ collections:
             name: "intro"
             widget: "object"
             i18n: true
+            hint: "Section de présentation juste sous le bandeau."
             fields:
               - { label: "Titre", name: "title", widget: "string", i18n: true }
               - label: "Texte"
@@ -153,9 +172,25 @@ collections:
                 modes: ["rich_text"]
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false, i18n: true }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false, i18n: true }
-              - { label: "Photo", name: "image", widget: "image", required: false, i18n: duplicate }
+                hint: "Votre texte de présentation. Vous pouvez mettre des mots en gras ou ajouter des liens."
+              - label: "Texte du bouton"
+                name: "ctaLabel"
+                widget: "string"
+                required: false
+                i18n: true
+                hint: "Ex. « Découvrir ma pratique ». Laissez vide pour masquer le bouton."
+              - label: "Lien du bouton"
+                name: "ctaUrl"
+                widget: "string"
+                required: false
+                i18n: true
+                hint: "Page vers laquelle mène le bouton (ex. /a-propos/)."
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                required: false
+                i18n: duplicate
+                hint: "Votre photo affichée à côté du texte."
           - label: "Pourquoi une psychologue en ligne ?"
             name: "whyOnline"
             widget: "object"
@@ -169,13 +204,28 @@ collections:
                 modes: ["rich_text"]
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false, i18n: true }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false, i18n: true }
-              - { label: "Image", name: "image", widget: "image", required: false, i18n: duplicate }
+              - label: "Texte du bouton"
+                name: "ctaLabel"
+                widget: "string"
+                required: false
+                i18n: true
+                hint: "Laissez vide pour masquer le bouton."
+              - label: "Lien du bouton"
+                name: "ctaUrl"
+                widget: "string"
+                required: false
+                i18n: true
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                i18n: duplicate
+                hint: "Photo ou illustration à côté du texte."
           - label: "Accompagnements proposés"
             name: "services"
             widget: "object"
             i18n: true
+            hint: "Les 3 cartes présentant vos accompagnements (séance, ateliers, photothérapie…)."
             fields:
               - { label: "Titre de la section", name: "title", widget: "string", i18n: true }
               # List widgets : seul i18n: true est supporté (sous-champs ignorés pour i18n).
@@ -184,6 +234,7 @@ collections:
                 widget: "list"
                 i18n: true
                 summary: "{{fields.title}}"
+                hint: "Chaque carte = un accompagnement. L'ordre des cartes est celui affiché sur le site."
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
                   - label: "Introduction"
@@ -193,10 +244,12 @@ collections:
                     buttons: ["bold", "italic", "link"]
                     editor_components: []
                     required: false
+                    hint: "Paragraphe d'ouverture de la carte (optionnel)."
                   - label: "Points clés"
                     name: "bullets"
                     widget: "list"
                     required: false
+                    hint: "Liste à puces sous l'introduction (un point par ligne)."
                     field:
                       label: "Point"
                       name: "item"
@@ -211,24 +264,45 @@ collections:
                     buttons: ["bold", "italic", "link"]
                     editor_components: []
                     required: false
-                  - { label: "Lien", name: "url", widget: "string" }
-                  - { label: "Lien de l'image", name: "imageUrl", widget: "string", required: false }
-                  - { label: "Texte du lien", name: "linkLabel", widget: "string", required: false }
-                  - { label: "URL du lien de bas de carte", name: "linkUrl", widget: "string", required: false }
-                  - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
-                  - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
-                  - { label: "Image", name: "image", widget: "image", required: false }
-                  - { label: "Titre souligné", name: "titleUnderline", widget: "boolean", default: false, required: false }
-                  - label: "Largeur de l'image"
-                    name: "imageWidth"
-                    widget: "select"
+                    hint: "Paragraphe de fin sous les points clés (optionnel)."
+                  - label: "Lien du titre"
+                    name: "url"
+                    widget: "string"
+                    hint: "Page ouverte quand on clique sur le titre (ex. /psychotherapie/)."
+                  - label: "Texte du lien en bas"
+                    name: "linkLabel"
+                    widget: "string"
                     required: false
-                    options: ["wide", "narrow"]
-                    default: "wide"
+                    hint: "Lien texte en bas de la carte (ex. « Consultez les tarifs »). Laissez vide si inutile."
+                  - label: "Adresse du lien en bas"
+                    name: "linkUrl"
+                    widget: "string"
+                    required: false
+                    hint: "Où mène le lien en bas. Si vide, le lien du titre est utilisé."
+                  - label: "Texte du bouton"
+                    name: "ctaLabel"
+                    widget: "string"
+                    required: false
+                    hint: "Bouton sous la carte (ex. « Prendre rendez-vous »). Laissez vide pour le masquer."
+                  - label: "Lien du bouton"
+                    name: "ctaUrl"
+                    widget: "string"
+                    required: false
+                    hint: "Adresse du bouton (lien Doctolib ou page interne)."
+                  - label: "Illustration"
+                    name: "image"
+                    widget: "image"
+                    required: false
+                    hint: "Petite image décorative au-dessus du titre."
+                  # Options de mise en page gérées côté code (pas exposées)
+                  - { label: "Lien de l'image", name: "imageUrl", widget: "hidden", required: false }
+                  - { label: "Titre souligné", name: "titleUnderline", widget: "hidden", default: false, required: false }
+                  - { label: "Largeur de l'image", name: "imageWidth", widget: "hidden", required: false, default: "wide" }
           - label: "Comment prendre rendez-vous"
             name: "appointment"
             widget: "object"
             i18n: true
+            hint: "Les étapes pour prendre rendez-vous, avec le bouton Doctolib."
             fields:
               - { label: "Titre de la section", name: "title", widget: "string", i18n: true }
               - label: "Étapes"
@@ -236,6 +310,7 @@ collections:
                 widget: "list"
                 i18n: true
                 summary: "{{fields.title}}"
+                hint: "Chaque étape apparaît dans l'ordre (Demande → Confirmation → Jour J)."
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
                   - label: "Texte"
@@ -244,8 +319,15 @@ collections:
                     modes: ["rich_text"]
                     buttons: ["bold", "italic", "link"]
                     editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", i18n: true }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", i18n: duplicate }
+              - label: "Texte du bouton"
+                name: "ctaLabel"
+                widget: "string"
+                i18n: true
+              - label: "Lien du bouton"
+                name: "ctaUrl"
+                widget: "string"
+                i18n: duplicate
+                hint: "En général votre lien Doctolib."
           - label: "Masterclass & programmes"
             name: "masterclass"
             widget: "object"
@@ -260,12 +342,22 @@ collections:
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
               - { label: "Texte du bouton", name: "ctaLabel", widget: "string", i18n: true }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", i18n: true }
-              - { label: "Image / affiche", name: "image", widget: "image", required: false, i18n: duplicate }
+              - label: "Lien du bouton"
+                name: "ctaUrl"
+                widget: "string"
+                i18n: true
+                hint: "En général /masterclass/."
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                i18n: duplicate
+                hint: "Photo ou illustration de la section."
           - label: "Citation"
             name: "quote"
             widget: "object"
             i18n: true
+            hint: "Citation affichée entre les masterclass et les avis."
             fields:
               - label: "Texte"
                 name: "text"
@@ -274,11 +366,16 @@ collections:
                 modes: ["rich_text"]
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
-              - { label: "Auteur", name: "author", widget: "string", i18n: true }
+              - label: "Auteur"
+                name: "author"
+                widget: "string"
+                i18n: true
+                hint: "Nom de l'auteur de la citation."
           - label: "Avis de patients"
             name: "reviews"
             widget: "object"
             i18n: true
+            hint: "Témoignages affichés en carrousel en bas de page."
             fields:
               - { label: "Titre de la section", name: "title", widget: "string", i18n: true }
               - label: "Avis"
@@ -286,8 +383,12 @@ collections:
                 widget: "list"
                 i18n: true
                 summary: "{{fields.author}}"
+                hint: "Ajoutez, modifiez ou réordonnez les avis. L'ordre ici = l'ordre sur le site."
                 fields:
-                  - { label: "Prénom / nom abrégé", name: "author", widget: "string" }
+                  - label: "Prénom / nom abrégé"
+                    name: "author"
+                    widget: "string"
+                    hint: "Ex. « Margaux D. » — gardez l'anonymat."
                   - label: "Texte de l'avis"
                     name: "text"
                     widget: "richtext"
@@ -324,24 +425,25 @@ collections:
         i18n: true
         required: false
         hint: "Titre affiché dans le bandeau en haut de page. Si vide, le titre de la page est utilisé."
-      - label: "Description courte"
+      - label: "Sous-titre du bandeau"
         name: "description"
         widget: "text"
         i18n: true
         required: false
-        hint: "Sous-titre du bandeau (au-dessus du titre) lorsqu'une image de bandeau est définie."
+        hint: "Courte phrase au-dessus du titre, visible uniquement s'il y a une image de bandeau."
       - label: "Image de bandeau"
         name: "image"
         widget: "image"
         i18n: duplicate
         required: false
-        hint: "Image de fond du bandeau en haut de page. Si vide, un en-tête simple est affiché."
+        hint: "Image de fond du haut de page. Si vous laissez vide, un en-tête simple (sans image) s'affiche."
       - label: "Description de l'image"
         name: "imageAlt"
         widget: "string"
         i18n: true
         required: false
-      - label: "Contenu"
+        hint: "Décrivez l'image en quelques mots (accessibilité et référencement)."
+      - label: "Contenu de la page"
         name: "body"
         widget: "richtext"
         i18n: true
@@ -349,6 +451,7 @@ collections:
         sanitize_preview: false
         buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
+        hint: "Le texte principal de la page. Utilisez les titres pour structurer, et le bouton image pour illustrer."
       # SEO / brouillon gérés côté code (pas exposés à la cliente)
       - { label: "Titre SEO", name: "seoTitle", widget: "hidden", i18n: true, required: false }
       - { label: "Meta description", name: "seoDescription", widget: "hidden", i18n: true, required: false }
