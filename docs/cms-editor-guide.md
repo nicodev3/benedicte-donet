@@ -52,8 +52,12 @@ ordinateur. Conseils :
 
 - Préférez des images de moins de 500 Ko (redimensionnez avant l'envoi).
 - Donnez des noms de fichiers parlants : `seance-emdr.jpg` plutôt que `IMG_1234.jpg`.
+- Depuis un iPhone : choisissez **JPG** (ou « Compatible le plus largement ») plutôt
+  que HEIC, pour que l’aperçu s’affiche correctement dans le CMS.
+- Après publication, attendez 1 à 3 minutes le déploiement : l’aperçu CMS charge
+  les images depuis le site en ligne.
 - Les images sont automatiquement optimisées (format WebP, taille adaptée) lors de la
-  mise en ligne du site, après publication (1 à 3 minutes).
+  mise en ligne du site.
 
 ## Bien remplir les champs SEO
 
