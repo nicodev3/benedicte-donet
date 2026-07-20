@@ -2,6 +2,10 @@
 dist/
 .astro/
 
+# Miroir build des uploads Decap (généré par npm run sync:cms-media)
+src/assets/images/uploads/*
+!src/assets/images/uploads/.gitkeep
+
 # Dépendances
 node_modules/
 

@@ -25,7 +25,8 @@ display_url: https://www.benedictedonet-psyenligne.com
 logo_url: /images/ui/logo-benedicte-donet.png
 
 # Decap ne liste pas les sous-dossiers : bibliothèque plate dans public/ (prévisualisations).
-# Régénérer après ajout d'images : npm run sync:cms-media
+# Au build, sync:cms-media miroire les uploads vers src/assets/images/uploads/
+# → Astro génère WebP + tailles mobile/desktop automatiquement.
 media_folder: "public/images/cms-library"
 public_folder: "/images/cms-library"
 
@@ -145,7 +146,7 @@ collections:
                 name: "backgroundImage"
                 widget: "image"
                 i18n: duplicate
-                hint: "Image affichée derrière le titre. Une seule image suffit : le site l'adapte automatiquement sur téléphone et ordinateur."
+                hint: "Image affichée derrière le titre. Une seule image suffit : le site la convertit en WebP et l'adapte automatiquement sur téléphone et ordinateur."
               # Variante mobile gérée côté code (pas exposée)
               - { label: "Image de fond (mobile)", name: "backgroundImageMobile", widget: "hidden", required: false, i18n: duplicate }
               - label: "Texte du bouton"

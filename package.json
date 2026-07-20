@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "npm run sync:cms-media && astro dev",
     "build": "npm run sync:cms-media && astro build",
     "sync:cms-media": "node scripts/sync-cms-media-library.mjs",
     "preview": "astro preview",

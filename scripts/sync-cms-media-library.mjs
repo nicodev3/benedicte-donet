@@ -2,17 +2,16 @@
 /**
  * Génère la bibliothèque plate Decap CMS :
  * - public/images/cms-library/  → servie en HTTP (prévisualisations CMS)
- * Les aperçus CMS sont servis depuis `public/`; Astro résout les images
- * source directement depuis leurs dossiers catégorisés.
+ * - src/assets/images/uploads/  → miroir des uploads libres pour astro:assets
+ *   (WebP + srcset au build ; invisible pour la cliente)
  *
  * Decap ne liste pas les sous-dossiers ; on y copie aussi les images
  * catégorisées sous un nom plat `${catégorie}-${fichier}`.
  *
- * Les fichiers uploadés via le CMS (ex. img_0233.jpeg) sont conservés :
- * ils ne suivent pas le préfixe catégorie et ne doivent pas être effacés
- * au build.
+ * Les fichiers uploadés via le CMS (ex. img_0233.jpeg) sont conservés
+ * dans public/ et mirorés dans uploads/ pour l'optimisation Astro.
  */
-import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -20,6 +19,7 @@ const root = join(fileURLToPath(import.meta.url), "../..");
 const assetsRoot = join(root, "src/assets/images");
 const publicLibrary = join(root, "public/images/cms-library");
 const publicImages = join(root, "public/images");
+const uploadsAssets = join(assetsRoot, "uploads");
 
 const imageExt = /\.(jpe?g|png|gif|webp|avif|svg)$/i;
 const skipDirs = new Set(["cms-library", "uploads"]);
@@ -68,6 +68,41 @@ function linkLibraries(linkName, category, file) {
   copyFileSync(publicSource, publicImagesDest);
 }
 
+/**
+ * Miroir des uploads CMS libres → src/assets/images/uploads/
+ * pour que getOptimizedImage / SiteImage puissent générer WebP + srcset.
+ */
+function mirrorCmsUploads(categories) {
+  mkdirSync(uploadsAssets, { recursive: true });
+  mkdirSync(publicLibrary, { recursive: true });
+
+  const kept = new Set([".gitkeep"]);
+  let mirrored = 0;
+
+  for (const entry of readdirSync(publicLibrary)) {
+    if (entry === ".gitkeep") continue;
+    if (isSyncedLibraryName(entry, categories)) continue;
+    if (!isImageFile(entry)) continue;
+
+    const source = join(publicLibrary, entry);
+    if (!lstatSync(source).isFile()) continue;
+    // Ignorer d'éventuels stubs texte (chemins relatifs)
+    if (lstatSync(source).size < 256) continue;
+
+    copyFileSync(source, join(uploadsAssets, entry));
+    kept.add(entry);
+    mirrored++;
+  }
+
+  for (const entry of readdirSync(uploadsAssets)) {
+    if (kept.has(entry)) continue;
+    rmSync(join(uploadsAssets, entry), { recursive: true, force: true });
+  }
+
+  writeFileSync(join(uploadsAssets, ".gitkeep"), "");
+  return mirrored;
+}
+
 const categories = listAssetCategories();
 const syncedNames = new Set();
 const planned = [];
@@ -105,7 +140,10 @@ for (const { linkName, category, file } of planned) {
   }
 }
 
+const mirroredUploads = mirrorCmsUploads(categories);
+
 console.log(
   `✓ ${count} images synchronisées dans public/images/cms-library/` +
-    (preserved ? ` (${preserved} upload(s) CMS conservé(s))` : ""),
+    (preserved ? ` (${preserved} upload(s) CMS conservé(s))` : "") +
+    (mirroredUploads ? ` → ${mirroredUploads} miroré(s) pour optimisation Astro` : ""),
 );

@@ -3,6 +3,7 @@ import type { ImageMetadata } from "astro";
 const imageModules = import.meta.glob<{ default: ImageMetadata }>(
   [
     "/src/assets/images/**/*.{jpeg,jpg,jpe,png,gif,webp,avif,svg}",
+    // Stubs texte Decap (chemins relatifs) — pas de vrais binaires
     "!/src/assets/images/cms-library/**/*",
   ],
   { eager: true }
@@ -25,11 +26,22 @@ export interface OptimizedImageResult {
 /**
  * Résout un chemin public (/images/...) ou relatif (../../assets/images/...)
  * vers les métadonnées Astro Image.
+ *
+ * Les uploads Decap (`/images/cms-library/…`) sont mirorés au build dans
+ * `src/assets/images/uploads/` pour permettre WebP + srcset.
  */
 export function resolveImage(src: string): ImageMetadata | undefined {
   if (!src) return undefined;
 
   let assetPath: string | undefined;
+
+  if (src.startsWith("/images/cms-library/")) {
+    const file = src.slice("/images/cms-library/".length);
+    const uploadPath = `/src/assets/images/uploads/${file}`;
+    if (imageModules[uploadPath]?.default) {
+      return imageModules[uploadPath].default;
+    }
+  }
 
   if (src.startsWith("/images/")) {
     assetPath = src.replace(/^\/images\//, "/src/assets/images/");
