@@ -47,8 +47,8 @@ home:
   hero:
     title: Psychologue en ligne
     subtitle: Psychologue clinicienne en visio | Trauma-thérapies | EMDR | Sexualité
-    backgroundImage: /images/cms-library/img_0233.jpeg
-    backgroundImageMobile: /images/cms-library/img_0233.jpeg
+    backgroundImage: /images/cms-library/nicodev_minimal_japanese_zen_composition_a_single_flowering_c_aa5583bd-5a51-44fb-8092-c5e696016de7_0.png
+    backgroundImageMobile: /images/cms-library/nicodev_minimal_japanese_zen_composition_a_single_flowering_c_aa5583bd-5a51-44fb-8092-c5e696016de7_0.png
     primaryCtaLabel: Je prends rendez-vous
     primaryCtaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
   reviews:
