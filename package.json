@@ -16,7 +16,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource-variable/rubik": "^5.2.8",
     "@lucide/astro": "^1.23.0",
-    "astro": "^7.1.1",
+    "astro": "^7.1.3",
     "simple-icons-astro": "^16.1.0"
   },
   "devDependencies": {
