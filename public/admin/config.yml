@@ -181,62 +181,74 @@ collections:
         default: false
         hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer une page sans en parler à votre webmaster."
       - { label: "Type de page", name: "pageType", widget: "hidden", default: "page", i18n: duplicate }
+      # Champ `home` : i18n: true obligatoire (collection pages en i18n).
+      # Sans cela, Decap ignore le frontmatter et l'éditeur apparaît vide.
       - label: "Page d'accueil"
         name: "home"
         widget: "object"
+        i18n: true
         required: false
         collapsed: true
-        hint: "Réservé à la page d'accueil. Laisser vide pour les autres pages."
+        hint: "Réservé à la page d'accueil. Déplier pour éditer le contenu. Laisser vide pour les autres pages."
         fields: &home_page_fields
           - label: "Bandeau principal (haut de page)"
             name: "hero"
             widget: "object"
+            i18n: true
             fields:
-              - { label: "Titre", name: "title", widget: "string" }
-              - { label: "Sous-titre", name: "subtitle", widget: "string" }
-              - { label: "Image de fond (bureau)", name: "backgroundImage", widget: "image" }
-              - { label: "Image de fond (mobile)", name: "backgroundImageMobile", widget: "image", required: false }
-              - { label: "Texte du bouton", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string", i18n: true }
+              - { label: "Sous-titre", name: "subtitle", widget: "string", i18n: true }
+              - { label: "Image de fond (bureau)", name: "backgroundImage", widget: "image", i18n: duplicate }
+              - { label: "Image de fond (mobile)", name: "backgroundImageMobile", widget: "image", required: false, i18n: duplicate }
+              - { label: "Texte du bouton", name: "primaryCtaLabel", widget: "string", i18n: true }
               - label: "Lien du bouton"
                 name: "primaryCtaUrl"
                 widget: "string"
+                i18n: duplicate
                 hint: "En général votre lien Doctolib. Ne pas modifier sans vérifier."
           - label: "Bienvenue (présentation)"
             name: "intro"
             widget: "object"
+            i18n: true
             fields:
-              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string", i18n: true }
               - label: "Texte"
                 name: "text"
                 widget: "richtext"
+                i18n: true
                 modes: ["rich_text"]
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
-              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false, i18n: true }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false, i18n: true }
+              - { label: "Photo", name: "image", widget: "image", required: false, i18n: duplicate }
           - label: "Pourquoi une psychologue en ligne ?"
             name: "whyOnline"
             widget: "object"
+            i18n: true
             fields:
-              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string", i18n: true }
               - label: "Texte"
                 name: "text"
                 widget: "richtext"
+                i18n: true
                 modes: ["rich_text"]
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false }
-              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", required: false, i18n: true }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", required: false, i18n: true }
+              - { label: "Image", name: "image", widget: "image", required: false, i18n: duplicate }
           - label: "Accompagnements proposés"
             name: "services"
             widget: "object"
+            i18n: true
             fields:
-              - { label: "Titre de la section", name: "title", widget: "string" }
+              - { label: "Titre de la section", name: "title", widget: "string", i18n: true }
+              # List widgets : seul i18n: true est supporté (sous-champs ignorés pour i18n).
               - label: "Cartes"
                 name: "cards"
                 widget: "list"
+                i18n: true
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
@@ -282,11 +294,13 @@ collections:
           - label: "Comment prendre rendez-vous"
             name: "appointment"
             widget: "object"
+            i18n: true
             fields:
-              - { label: "Titre de la section", name: "title", widget: "string" }
+              - { label: "Titre de la section", name: "title", widget: "string", i18n: true }
               - label: "Étapes"
                 name: "steps"
                 widget: "list"
+                i18n: true
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
@@ -296,41 +310,47 @@ collections:
                     modes: ["rich_text"]
                     buttons: ["bold", "italic", "link"]
                     editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string" }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string" }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", i18n: true }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", i18n: duplicate }
           - label: "Masterclass & programmes"
             name: "masterclass"
             widget: "object"
+            i18n: true
             fields:
-              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string", i18n: true }
               - label: "Texte"
                 name: "text"
                 widget: "richtext"
+                i18n: true
                 modes: ["rich_text"]
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string" }
-              - { label: "Lien du bouton", name: "ctaUrl", widget: "string" }
-              - { label: "Image / affiche", name: "image", widget: "image", required: false }
+              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", i18n: true }
+              - { label: "Lien du bouton", name: "ctaUrl", widget: "string", i18n: true }
+              - { label: "Image / affiche", name: "image", widget: "image", required: false, i18n: duplicate }
           - label: "Citation"
             name: "quote"
             widget: "object"
+            i18n: true
             fields:
               - label: "Texte"
                 name: "text"
                 widget: "richtext"
+                i18n: true
                 modes: ["rich_text"]
                 buttons: ["bold", "italic", "link"]
                 editor_components: []
-              - { label: "Auteur", name: "author", widget: "string" }
+              - { label: "Auteur", name: "author", widget: "string", i18n: true }
           - label: "Avis de patients"
             name: "reviews"
             widget: "object"
+            i18n: true
             fields:
-              - { label: "Titre de la section", name: "title", widget: "string" }
+              - { label: "Titre de la section", name: "title", widget: "string", i18n: true }
               - label: "Avis"
                 name: "items"
                 widget: "list"
+                i18n: true
                 summary: "{{fields.author}}"
                 fields:
                   - { label: "Prénom / nom abrégé", name: "author", widget: "string" }
@@ -343,8 +363,10 @@ collections:
           - label: "Titre SEO de l'accueil"
             name: "seoTitle"
             widget: "string"
+            i18n: true
             required: false
           - label: "Meta description de l'accueil"
             name: "seoDescription"
             widget: "text"
+            i18n: true
             required: false
