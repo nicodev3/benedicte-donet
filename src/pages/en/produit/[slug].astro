@@ -1,6 +1,7 @@
 ---
 import { render } from "astro:content";
 import ProductLayout from "@/layouts/ProductLayout.astro";
+import OptimizedContent from "@/components/common/OptimizedContent.astro";
 import { getProductStaticPaths } from "@/lib/products";
 
 export async function getStaticPaths() {
@@ -12,5 +13,5 @@ const { Content } = await render(product);
 ---
 
 <ProductLayout product={product}>
-  <Content />
+  <OptimizedContent Content={Content} eagerFirst={false} sizes="(max-width: 768px) 100vw, 640px" />
 </ProductLayout>

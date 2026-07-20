@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import PageLayout from "@/layouts/PageLayout.astro";
 import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
+import OptimizedContent from "@/components/common/OptimizedContent.astro";
 import type { CollectionEntry } from "astro:content";
 import { getContentSlug, getLocaleFromFilePath, localizedPath } from "@/lib/i18n";
 
@@ -52,11 +53,20 @@ const { Content } = await render(entry);
 {
   type === "page" ? (
     <PageLayout page={entry}>
-      <Content />
+      <OptimizedContent
+        Content={Content}
+        eagerFirst
+        sizes="(max-width: 820px) 90vw, 480px"
+      />
     </PageLayout>
   ) : (
     <BlogPostLayout post={entry}>
-      <Content />
+      <OptimizedContent
+        Content={Content}
+        eagerFirst={false}
+        sizes="(max-width: 768px) 100vw, 720px"
+        widths={[480, 720, 960, 1200]}
+      />
     </BlogPostLayout>
   )
 }

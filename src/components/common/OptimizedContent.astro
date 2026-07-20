@@ -1,0 +1,25 @@
+---
+/**
+ * Rend le composant Content Astro puis optimise les <img> locales en WebP.
+ */
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import { optimizeHtmlImages, type OptimizeHtmlImagesOptions } from "@/lib/optimize-html-images";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+
+interface Props extends OptimizeHtmlImagesOptions {
+  Content: AstroComponentFactory;
+}
+
+const { Content, eagerFirst = true, widths, quality, sizes } = Astro.props;
+
+const container = await AstroContainer.create();
+const rawHtml = await container.renderToString(Content);
+const html = await optimizeHtmlImages(rawHtml, {
+  eagerFirst,
+  widths,
+  quality,
+  sizes,
+});
+---
+
+<Fragment set:html={html} />
