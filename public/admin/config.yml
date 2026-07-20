@@ -72,6 +72,7 @@ collections:
       - label: "Image principale"
         name: "image"
         widget: "image"
+        choose_url: false
         i18n: duplicate
         required: false
         hint: "Image affichée en haut de l'article et sur la page Blog."
@@ -145,6 +146,7 @@ collections:
               - label: "Image de fond"
                 name: "backgroundImage"
                 widget: "image"
+                choose_url: false
                 i18n: duplicate
                 hint: "Image affichée derrière le titre. Une seule image suffit : le site la convertit en WebP et l'adapte automatiquement sur téléphone et ordinateur."
               - label: "Texte du bouton"
@@ -187,6 +189,7 @@ collections:
               - label: "Photo"
                 name: "image"
                 widget: "image"
+                choose_url: false
                 required: false
                 i18n: duplicate
                 hint: "Votre photo affichée à côté du texte."
@@ -217,6 +220,7 @@ collections:
               - label: "Image"
                 name: "image"
                 widget: "image"
+                choose_url: false
                 required: false
                 i18n: duplicate
                 hint: "Photo ou illustration à côté du texte."
@@ -291,6 +295,7 @@ collections:
                   - label: "Illustration"
                     name: "image"
                     widget: "image"
+                    choose_url: false
                     required: false
                     hint: "Petite image décorative au-dessus du titre."
                   # Options de mise en page gérées côté code (pas exposées)
@@ -349,6 +354,7 @@ collections:
               - label: "Image"
                 name: "image"
                 widget: "image"
+                choose_url: false
                 required: false
                 i18n: duplicate
                 hint: "Photo ou illustration de la section."
@@ -433,6 +439,7 @@ collections:
       - label: "Image de bandeau"
         name: "image"
         widget: "image"
+        choose_url: false
         i18n: duplicate
         required: false
         hint: "Image de fond du haut de page. Si vous laissez vide, un en-tête simple (sans image) s'affiche."
