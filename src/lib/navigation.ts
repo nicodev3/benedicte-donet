@@ -14,7 +14,6 @@ export interface NavigationItem {
 
 const NAVIGATION: Record<Locale, NavigationItem[]> = {
   fr: [
-    { label: "Accueil", url: "/", order: 1 },
     {
       label: "Services",
       url: "/services/",
@@ -31,7 +30,6 @@ const NAVIGATION: Record<Locale, NavigationItem[]> = {
     { label: "Blog", url: "/blog/", order: 8 },
   ],
   en: [
-    { label: "Home", url: "/", order: 1 },
     {
       label: "Services",
       url: "/services/",

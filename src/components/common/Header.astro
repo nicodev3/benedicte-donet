@@ -60,10 +60,10 @@ function visibleChildren(item: (typeof items)[number]) {
         <SiteImage
           src="/images/ui/logo-benedicte-donet-text.png"
           alt={`Logo ${global.siteName}`}
-          width={150}
-          widths={[56, 112, 150]}
+          width={400}
+          widths={[200, 400, 800]}
           loading="eager"
-          fetchpriority="low"
+          fetchpriority="high"
         />
       </a>
 
@@ -124,19 +124,21 @@ function visibleChildren(item: (typeof items)[number]) {
             })
           }
         </ul>
-        <Button href={global.appointmentUrl} class="nav-cta">
-          {t.header.appointmentCta}
-        </Button>
-        <a href={languageUrl} class="language-switch" hreflang={alternateLocale}>
-          <SiteImage
-            class="language-flag"
-            src={languageFlagSrc}
-            alt={alternateLocale === "fr" ? "Français" : "English"}
-            width={20}
-            height={14}
-          />
-          <span>{languageLabel}</span>
-        </a>
+        <div class="nav-actions">
+          <Button href={global.appointmentUrl} class="nav-cta">
+            {t.header.appointmentCta}
+          </Button>
+          <a href={languageUrl} class="language-switch" hreflang={alternateLocale}>
+            <SiteImage
+              class="language-flag"
+              src={languageFlagSrc}
+              alt={alternateLocale === "fr" ? "Français" : "English"}
+              width={20}
+              height={14}
+            />
+            <span>{languageLabel}</span>
+          </a>
+        </div>
       </nav>
     </div>
   </Container>
@@ -162,13 +164,14 @@ function visibleChildren(item: (typeof items)[number]) {
 
   @media (min-width: 901px) {
     .header-inner {
-      height: 170px;
+      height: 85px;
       padding-block: 0;
     }
 
     .nav a,
     .nav-trigger {
-      font-size: 20px;
+      font-size: 16px;
+      letter-spacing: 0.5px;
     }
   }
 
@@ -304,6 +307,24 @@ function visibleChildren(item: (typeof items)[number]) {
     flex-shrink: 0;
   }
 
+  .nav-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  @media (min-width: 901px) {
+    .nav-actions {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+      border-left: 1px solid var(--color-border);
+      padding-left: var(--space-md);
+      gap: 1rem;
+    }
+  }
+
   /* Menu mobile en CSS pur (pas de JavaScript) */
   .nav-toggle {
     display: none;
@@ -415,11 +436,6 @@ function visibleChildren(item: (typeof items)[number]) {
       height: 100%;
     }
 
-    .nav a,
-    .nav-trigger {
-      font-size: 20px;
-    }
-
     .brand :global(img) {
       height: auto;
       max-height: 100%;
@@ -439,11 +455,6 @@ function visibleChildren(item: (typeof items)[number]) {
 
     .nav > ul {
       gap: 0.75rem;
-    }
-
-    .nav a,
-    .nav-trigger {
-      font-size: var(--text-base);
     }
 
     .nav :global(.nav-cta) {
