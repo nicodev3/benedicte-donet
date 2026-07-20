@@ -114,19 +114,10 @@ collections:
     i18n: true
     summary: "{{title}}"
     fields:
-      - { label: "Titre", name: "title", widget: "string", i18n: true }
-      # body markdown technique (".") : injecté via preSave dans custom-widgets.js (pas affiché)
-      - label: "Ordre"
-        name: "order"
-        widget: "hidden"
-        i18n: duplicate
-        default: 1
-      - label: "Brouillon"
-        name: "draft"
-        widget: "boolean"
-        i18n: duplicate
-        default: false
-        hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer sans en parler à votre webmaster."
+      # Titre / brouillon / body : gérés côté code (pas exposés à la cliente)
+      - { label: "Titre", name: "title", widget: "hidden", i18n: true, default: "Page d'accueil" }
+      - { label: "Ordre", name: "order", widget: "hidden", i18n: duplicate, default: 1 }
+      - { label: "Brouillon", name: "draft", widget: "hidden", i18n: duplicate, default: false }
       - { label: "Type de page", name: "pageType", widget: "hidden", default: "home", i18n: duplicate }
       - label: "Contenu de l'accueil"
         name: "home"
@@ -358,18 +349,9 @@ collections:
         sanitize_preview: false
         buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
-      # SEO géré dans les fichiers markdown (pas dans le CMS)
+      # SEO / brouillon gérés côté code (pas exposés à la cliente)
       - { label: "Titre SEO", name: "seoTitle", widget: "hidden", i18n: true, required: false }
       - { label: "Meta description", name: "seoDescription", widget: "hidden", i18n: true, required: false }
-      - label: "Ordre"
-        name: "order"
-        widget: "hidden"
-        i18n: duplicate
-        default: 0
-      - label: "Brouillon"
-        name: "draft"
-        widget: "boolean"
-        i18n: duplicate
-        default: false
-        hint: "Activé = la page n'est PAS visible sur le site. Attention : ne pas masquer une page sans en parler à votre webmaster."
+      - { label: "Ordre", name: "order", widget: "hidden", i18n: duplicate, default: 0 }
+      - { label: "Brouillon", name: "draft", widget: "hidden", i18n: duplicate, default: false }
       - { label: "Type de page", name: "pageType", widget: "hidden", default: "page", i18n: duplicate }

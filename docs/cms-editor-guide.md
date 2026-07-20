@@ -66,7 +66,6 @@ ordinateur. Conseils :
 
 - Les **liens (URL)** du menu et du pied de page.
 - Le **lien Doctolib** (sauf si votre page Doctolib change réellement).
-- Le champ **Brouillon** d'une page existante (la page disparaîtrait du site).
 - Ne supprimez jamais un article publié depuis longtemps sans en parler :
   il faut mettre en place une redirection pour ne pas perdre le référencement.
 
