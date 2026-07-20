@@ -88,18 +88,9 @@ collections:
         sanitize_preview: false
         buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
-      - label: "Titre SEO"
-        name: "seoTitle"
-        widget: "string"
-        i18n: true
-        required: false
-        hint: "Titre affiché dans Google (60 caractères max conseillé). Si vide, le titre de l'article est utilisé."
-      - label: "Meta description"
-        name: "seoDescription"
-        widget: "text"
-        i18n: true
-        required: false
-        hint: "Description affichée dans Google (155 caractères max conseillé)."
+      # SEO géré dans les fichiers markdown (pas dans le CMS)
+      - { label: "Titre SEO", name: "seoTitle", widget: "hidden", i18n: true, required: false }
+      - { label: "Meta description", name: "seoDescription", widget: "hidden", i18n: true, required: false }
       - label: "Brouillon"
         name: "draft"
         widget: "boolean"
@@ -124,8 +115,7 @@ collections:
     summary: "{{title}}"
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true }
-      # Conservé en hidden pour ne pas perdre le body markdown technique (".") à l'enregistrement
-      - { label: "Contenu", name: "body", widget: "hidden", default: ".", i18n: true }
+      # body markdown technique (".") : injecté via preSave dans custom-widgets.js (pas affiché)
       - label: "Ordre"
         name: "order"
         widget: "hidden"
@@ -313,16 +303,9 @@ collections:
                     modes: ["rich_text"]
                     buttons: ["bold", "italic", "link"]
                     editor_components: []
-          - label: "Titre SEO de l'accueil"
-            name: "seoTitle"
-            widget: "string"
-            i18n: true
-            required: false
-          - label: "Meta description de l'accueil"
-            name: "seoDescription"
-            widget: "text"
-            i18n: true
-            required: false
+          # SEO géré dans les fichiers markdown (pas dans le CMS)
+          - { label: "Titre SEO", name: "seoTitle", widget: "hidden", i18n: true, required: false }
+          - { label: "Meta description", name: "seoDescription", widget: "hidden", i18n: true, required: false }
 
   # ------------------------------------------------------------------
   # PAGES — autres pages (pas de création / suppression)
@@ -375,18 +358,9 @@ collections:
         sanitize_preview: false
         buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
-      - label: "Titre SEO"
-        name: "seoTitle"
-        widget: "string"
-        i18n: true
-        required: false
-        hint: "Titre affiché dans Google. Si vide, le titre de la page est utilisé."
-      - label: "Meta description"
-        name: "seoDescription"
-        widget: "text"
-        i18n: true
-        required: false
-        hint: "Description affichée dans Google (155 caractères max conseillé)."
+      # SEO géré dans les fichiers markdown (pas dans le CMS)
+      - { label: "Titre SEO", name: "seoTitle", widget: "hidden", i18n: true, required: false }
+      - { label: "Meta description", name: "seoDescription", widget: "hidden", i18n: true, required: false }
       - label: "Ordre"
         name: "order"
         widget: "hidden"

@@ -62,14 +62,6 @@ ordinateur. Conseils :
 - Les images sont automatiquement optimisées (format WebP, taille adaptée) lors de la
   mise en ligne du site.
 
-## Bien remplir les champs SEO
-
-- **Titre SEO** : le titre affiché dans Google. Idéalement moins de
-  **60 caractères**, avec les mots que vos patients recherchent
-  (ex. « EMDR en ligne : comment ça marche ? »). Si vide, le titre normal est utilisé.
-- **Meta description** : le petit texte sous le titre dans Google. Idéalement
-  moins de **155 caractères**, donnant envie de cliquer.
-
 ## À ne pas modifier sans demander
 
 - Les **liens (URL)** du menu et du pied de page.

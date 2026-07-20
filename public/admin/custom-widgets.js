@@ -1,3 +1,22 @@
+// Accueil : pas de champ Contenu dans l'UI — on réinjecte le body technique "." à l'enregistrement.
+(function setupAccueilBodyPreserve() {
+  if (!window.CMS) {
+    window.setTimeout(setupAccueilBodyPreserve, 50);
+    return;
+  }
+
+  window.CMS.registerEventListener({
+    name: "preSave",
+    handler: ({ entry }) => {
+      let data = entry.get("data");
+      if (entry.get("collection") === "accueil") {
+        data = data.set("body", ".");
+      }
+      return data;
+    },
+  });
+})();
+
 // Configure un media handler qui normalise les chemins d'images
 (function setupImagePathNormalization() {
   if (!window.CMS) {
