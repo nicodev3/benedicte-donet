@@ -51,6 +51,7 @@ home:
     backgroundImage: /images/cms-library/nicodev_minimal_japanese_zen_composition_a_single_flowering_c_aa5583bd-5a51-44fb-8092-c5e696016de7_0.png
     primaryCtaLabel: Book an appointment
     primaryCtaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
+    backgroundImageMobile: null
   reviews:
     title: Words from my patients
     items:

@@ -103,7 +103,7 @@ home:
 
 
       Vous n'avez pas besoin de vous déplacer ce qui facilite grandement la prise de rendez-vous et l'organisation de nos séances. Aussi, la relation thérapeutique est précieuse, en choisissant un **psychologue en ligne**, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.
-    ctaLabel: Je veux en savoir plus
+    ctaLabel: En savoir plus
     ctaUrl: /infos-pratiques/
     image: /images/portraits/portrait-01.jpg
   seoTitle: Psychologue en ligne spécialisée EMDR, trauma et anxiété
