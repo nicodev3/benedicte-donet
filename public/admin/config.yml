@@ -147,8 +147,6 @@ collections:
                 widget: "image"
                 i18n: duplicate
                 hint: "Image affichée derrière le titre. Une seule image suffit : le site la convertit en WebP et l'adapte automatiquement sur téléphone et ordinateur."
-              # Variante mobile gérée côté code (pas exposée)
-              - { label: "Image de fond (mobile)", name: "backgroundImageMobile", widget: "hidden", required: false, i18n: duplicate }
               - label: "Texte du bouton"
                 name: "primaryCtaLabel"
                 widget: "string"

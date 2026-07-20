@@ -1,6 +1,12 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
+/** Decap écrit souvent `null` pour les champs vides / hidden — on le traite comme absent. */
+const optionalString = z.preprocess(
+  (val) => (val === null || val === "" ? undefined : val),
+  z.string().optional()
+);
+
 const bulletsSchema = z.preprocess(
   (val) =>
     typeof val === "string"
@@ -17,41 +23,41 @@ const homeContentSchema = z.object({
     title: z.string(),
     subtitle: z.string(),
     backgroundImage: z.string(),
-    backgroundImageMobile: z.string().optional(),
+    backgroundImageMobile: optionalString,
     primaryCtaLabel: z.string(),
     primaryCtaUrl: z.string(),
   }),
   intro: z.object({
     title: z.string(),
     text: z.string(),
-    ctaLabel: z.string().optional(),
-    ctaUrl: z.string().optional(),
-    image: z.string().optional(),
+    ctaLabel: optionalString,
+    ctaUrl: optionalString,
+    image: optionalString,
   }),
   whyOnline: z.object({
     title: z.string(),
     text: z.string(),
-    ctaLabel: z.string().optional(),
-    ctaUrl: z.string().optional(),
-    image: z.string().optional(),
+    ctaLabel: optionalString,
+    ctaUrl: optionalString,
+    image: optionalString,
   }),
   services: z.object({
     title: z.string(),
     cards: z.array(
       z.object({
         title: z.string(),
-        intro: z.string().optional(),
+        intro: optionalString,
         bullets: bulletsSchema,
-        text: z.string().optional(),
+        text: optionalString,
         url: z.string(),
-        imageUrl: z.string().optional(),
-        linkLabel: z.string().optional(),
-        linkUrl: z.string().optional(),
-        ctaLabel: z.string().optional(),
-        ctaUrl: z.string().optional(),
-        image: z.string().optional(),
+        imageUrl: optionalString,
+        linkLabel: optionalString,
+        linkUrl: optionalString,
+        ctaLabel: optionalString,
+        ctaUrl: optionalString,
+        image: optionalString,
         titleUnderline: z.boolean().optional(),
-        imageWidth: z.enum(["narrow", "wide"]).optional(),
+        imageWidth: z.enum(["narrow", "wide"]).nullish(),
       })
     ),
   }),
@@ -66,7 +72,7 @@ const homeContentSchema = z.object({
     text: z.string(),
     ctaLabel: z.string(),
     ctaUrl: z.string(),
-    image: z.string().optional(),
+    image: optionalString,
   }),
   quote: z.object({
     text: z.string(),
@@ -76,8 +82,8 @@ const homeContentSchema = z.object({
     title: z.string(),
     items: z.array(z.object({ author: z.string(), text: z.string() })),
   }),
-  seoTitle: z.string().optional(),
-  seoDescription: z.string().optional(),
+  seoTitle: optionalString,
+  seoDescription: optionalString,
 });
 
 /**
@@ -92,18 +98,20 @@ const pages = defineCollection({
       title: z.string(),
       pageType: z.literal("home"),
       home: homeContentSchema,
+      // Decap peut écrire image: null sur l'accueil — ignoré
+      image: optionalString,
       order: z.number().default(0),
       draft: z.boolean().default(false),
     }),
     z.object({
       title: z.string(),
       pageType: z.literal("page").optional().default("page"),
-      heroTitle: z.string().optional(),
-      description: z.string().optional(),
-      image: z.string().optional(),
-      imageAlt: z.string().optional(),
-      seoTitle: z.string().optional(),
-      seoDescription: z.string().optional(),
+      heroTitle: optionalString,
+      description: optionalString,
+      image: optionalString,
+      imageAlt: optionalString,
+      seoTitle: optionalString,
+      seoDescription: optionalString,
       order: z.number().default(0),
       draft: z.boolean().default(false),
     }),
@@ -117,14 +125,14 @@ const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
   schema: z.object({
     title: z.string(),
-    excerpt: z.string().optional(),
+    excerpt: optionalString,
     tags: z.array(z.string()).default([]),
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),
-    image: z.string().optional(),
-    imageAlt: z.string().optional(),
-    seoTitle: z.string().optional(),
-    seoDescription: z.string().optional(),
+    image: optionalString,
+    imageAlt: optionalString,
+    seoTitle: optionalString,
+    seoDescription: optionalString,
     draft: z.boolean().default(false),
   }),
 });
