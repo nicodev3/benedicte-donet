@@ -47,7 +47,11 @@ collections:
     slug: "{{slug}}"
     preview_path: "/{{slug}}/"
     i18n: true
-    sortable_fields: ["date", "title"]
+    # Affiche la date dans la liste ; tri par défaut = plus récent en premier
+    summary: "{{title}} — {{day}}/{{month}}/{{year}}"
+    sortable_fields:
+      - { field: date, default_sort: desc }
+      - title
     fields:
       - { label: "Titre", name: "title", widget: "string", i18n: true, hint: "Le titre principal de l'article." }
       - label: "Extrait"
@@ -62,12 +66,19 @@ collections:
         i18n: true
         required: false
         hint: "Un tag par ligne. Réutilisez si possible : Psycho, EMDR, Trauma, Pleine conscience, Psychoéducation, Psychologie positive, Relations humaines, Théorie de l'attachement, Respiration, Santé, Gratitude."
-      - { label: "Date de publication", name: "date", widget: "datetime", i18n: duplicate }
+      - label: "Date de publication"
+        name: "date"
+        widget: "datetime"
+        i18n: duplicate
+        date_format: "DD/MM/YYYY"
+        time_format: false
       - label: "Date de mise à jour"
         name: "updated"
         widget: "datetime"
         i18n: duplicate
         required: false
+        date_format: "DD/MM/YYYY"
+        time_format: false
         hint: "À remplir uniquement si vous modifiez un article déjà publié."
       - label: "Image principale"
         name: "image"

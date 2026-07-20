@@ -36,7 +36,7 @@
       ? h(
           "a",
           {
-            className: className || "cms-preview-button",
+            className: className || "cms-preview-cta",
             href: href || "#",
             onClick: (event) => event.preventDefault(),
           },
@@ -44,7 +44,7 @@
         )
       : null;
 
-  const TextImage = ({ title, text, ctaLabel, ctaUrl, image, reverse }) =>
+  const TextImage = ({ title, text, ctaLabel, ctaUrl, image, reverse, ctaClassName }) =>
     h(
       "section",
       { className: `cms-preview-text-image${reverse ? " reverse" : ""}` },
@@ -62,7 +62,11 @@
           className: "cms-preview-richtext",
           dangerouslySetInnerHTML: { __html: richText(text) },
         }),
-        h(Button, { label: ctaLabel, href: ctaUrl })
+        h(Button, {
+          label: ctaLabel,
+          href: ctaUrl,
+          className: ctaClassName || "cms-preview-cta",
+        })
       )
     );
 
@@ -189,7 +193,11 @@
             )
           )
         ),
-        h(Button, { label: appointment.ctaLabel, href: appointment.ctaUrl })
+        h(Button, {
+          label: appointment.ctaLabel,
+          href: appointment.ctaUrl,
+          className: "cms-preview-cta",
+        })
       ),
       h(
         "div",
@@ -200,6 +208,7 @@
           ctaLabel: masterclass.ctaLabel,
           ctaUrl: masterclass.ctaUrl,
           image: asset(getAsset, masterclass.image),
+          ctaClassName: "cms-preview-button",
         })
       ),
       h(
