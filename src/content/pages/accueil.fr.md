@@ -5,7 +5,7 @@ draft: false
 pageType: home
 home:
   intro:
-    title: Bienvenue !
+    title: Bienvenue
     text: >-
       Je suis Bénédicte Donet, psychologue en ligne et psychothérapeute en ligne
       passionnée.
