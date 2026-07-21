@@ -5,7 +5,7 @@ draft: false
 pageType: home
 home:
   intro:
-    title: Welcome!
+    title: Welcome
     text: >-
       I am Bénédicte Donet, a passionate online psychologist and
       psychotherapist.
