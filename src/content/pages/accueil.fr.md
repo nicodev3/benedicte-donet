@@ -45,7 +45,7 @@ home:
     ctaUrl: /masterclass/
     image: /images/portraits/portrait-02.jpg
   hero:
-    title: Psychologue en ligne
+    title: Psychologue en ligne..
     subtitle: Psychologue clinicienne en visio | Trauma-thérapies | EMDR | Sexualité
     backgroundImage: /images/cms-library/backgrounds-bg-citation.jpg
     primaryCtaLabel: Je prends rendez-vous
