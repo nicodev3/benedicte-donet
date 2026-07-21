@@ -11,11 +11,11 @@ backend:
   branch: main
   base_url: https://www.benedictedonet-psyenligne.com   # doit = URL servant /admin/
   auth_endpoint: api/auth
-publish_mode: editorial_workflow
+# pas de publish_mode (= simple) : Enregistrer commit sur main
 locale: fr
 ```
 
-Flux éditorial : **Brouillon** → **En relecture** → **Prêt** → **Publier**. La cliente enregistre sans impacter la prod tant que non publié.
+Mode **simple** : **Enregistrer** = mise en ligne (après build Cloudflare 1–3 min). Pour masquer un article : champ `draft` du blog.
 
 ### i18n Decap
 

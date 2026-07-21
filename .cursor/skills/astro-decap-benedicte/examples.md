@@ -13,7 +13,7 @@ Trois scénarios concrets illustrant la triple synchronisation et les convention
 1. Réglages du site → Page d'accueil (ou EN — Page d'accueil)
 2. Section « Avis de patients » → liste « Avis » → Ajouter
 3. Remplir Prénom / nom abrégé + Texte de l'avis
-4. Enregistrer → flux éditorial → Publier
+4. Enregistrer (mise en ligne après le build Cloudflare)
 
 ### Côté dev (si la section n'existait pas encore)
 

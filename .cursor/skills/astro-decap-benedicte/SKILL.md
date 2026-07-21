@@ -14,7 +14,7 @@ disable-model-invocation: true
 
 # astro-decap-benedicte
 
-Skill projet pour développer, modifier ou étendre le site **benedicte-donet** sans casser la parité CMS ↔ schémas Astro, les URLs SEO (migration WordPress), le flux éditorial Decap, ni le bilinguisme fr/en.
+Skill projet pour développer, modifier ou étendre le site **benedicte-donet** sans casser la parité CMS ↔ schémas Astro, les URLs SEO (migration WordPress), le mode publication Decap, ni le bilinguisme fr/en.
 
 ## Stack & conventions
 
@@ -128,7 +128,7 @@ Pages existantes : `a-propos`, `infos-pratiques`, `masterclass`, `mentions-legal
 - Champs sensibles (URLs menu, Doctolib, `draft` pages) : hint « contacter le webmaster »
 - YAML anchors pour dupliquer champs FR/EN sans divergence
 - `preview_path` cohérent avec routes Astro (`/` → FR, `/en/` → EN home)
-- `publish_mode: editorial_workflow` — la cliente ne publie pas directement en prod
+- Mode publication **simple** (pas de `editorial_workflow`) : **Enregistrer** = commit sur `main` + déploiement. Brouillon blog via le champ `draft`.
 - **Ne pas exposer** au CMS : code, layouts, traductions UI, config build
 - Guide rédacteur existant : `docs/cms-editor-guide.md`
 

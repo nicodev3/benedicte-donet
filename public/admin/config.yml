@@ -30,8 +30,9 @@ logo_url: /images/ui/logo-benedicte-donet.png
 media_folder: "public/images/cms-library"
 public_folder: "/images/cms-library"
 
-# Brouillons validés avant publication
-publish_mode: editorial_workflow
+# Mode simple : un clic « Enregistrer » commit sur main et déclenche le déploiement.
+# (Pas de flux Brouillon → Prêt → Publier, trop confus pour une seule éditrice.)
+# Pour masquer un article blog avant mise en ligne : cocher le champ « Brouillon ».
 
 collections:
   # ------------------------------------------------------------------

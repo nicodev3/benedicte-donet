@@ -8,10 +8,10 @@ Ce guide explique comment modifier votre site vous-même, sans connaissance tech
 2. Cliquez sur **« Se connecter avec GitHub »** et identifiez-vous.
 3. Vous arrivez sur le tableau de bord de l'éditeur.
 
-> Les modifications passent par une étape de validation (« flux éditorial ») :
-> un contenu enregistré en **Brouillon** n'est pas publié. Passez-le en
-> **Prêt** puis **Publier** pour le mettre en ligne. La mise en ligne prend
-> 1 à 3 minutes (le temps que le site se reconstruise).
+> Cliquez sur **Enregistrer** pour mettre le contenu en ligne.
+> La mise à jour du site prend 1 à 3 minutes (reconstruction automatique).
+> Pour un article de blog pas encore prêt : cochez le champ **Brouillon**
+> avant d’enregistrer — l’article reste masqué sur le site.
 
 ## Créer ou modifier un article de blog
 
@@ -25,13 +25,13 @@ Ce guide explique comment modifier votre site vous-même, sans connaissance tech
    - **Contenu** : le corps de l'article (titres, gras, listes, images…).
 3. Champs SEO (voir section dédiée plus bas).
 4. **Brouillon** : laissez désactivé pour publier, activez pour masquer l'article.
-5. Cliquez sur **Enregistrer**, puis **Publier**.
+5. Cliquez sur **Enregistrer**.
 
 ## Modifier une page (Services, Psychothérapie, À propos…)
 
 1. Menu **Pages** → choisissez la page.
 2. Modifiez le titre, le contenu ou l'image.
-3. Enregistrez puis publiez.
+3. Cliquez sur **Enregistrer**.
 
 ⚠️ Vous ne pouvez pas créer ni supprimer de pages : c'est volontaire, pour
 protéger la structure et le référencement du site. Si vous avez besoin d'une
@@ -42,7 +42,7 @@ nouvelle page, contactez votre webmaster.
 1. Menu **Page d'accueil** (entrée dédiée, distincte de **Pages**).
 2. Modifiez le bandeau, les textes, les accompagnements, les étapes de prise de
    rendez-vous, la citation, les avis, etc.
-3. Enregistrez puis publiez.
+3. Cliquez sur **Enregistrer**.
 
 > Il n'y a pas de champ « Contenu » libre sur l'accueil : tout passe par les
 > sections listées ci-dessus.
