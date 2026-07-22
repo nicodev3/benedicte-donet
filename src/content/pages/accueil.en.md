@@ -47,7 +47,7 @@ home:
   hero:
     title: Online psychologist
     subtitle: Clinical psychologist via video | Trauma therapy | EMDR | Sexuality
-    backgroundImage: /images/cms-library/backgrounds-bg-citation.jpg
+    backgroundImage: /images/cms-library/backgrounds-bg-contact.webp
     primaryCtaLabel: Book an appointment
     primaryCtaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
   reviews:
