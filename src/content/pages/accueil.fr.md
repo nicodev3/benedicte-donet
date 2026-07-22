@@ -114,10 +114,7 @@ home:
     title: Les accompagnements que je propose
     cards:
       - imageWidth: wide
-        intro: "Pendant nos séances de psychologie en ligne, nous explorons les
-          différentes dimensions de votre Être afin de **vous accompagner vers
-          le changement** que vous souhaitez accueillir dans votre vie. Cela
-          implique d'explorer et d'accueillir :"
+        intro: "Pendant nos séances de psychologie en ligne, nous explorons:"
         text: Chaque thérapie est unique, et je suis enthousiaste à l'idée de pouvoir
           vous accompagner sur votre propre chemin, en douceur et en respectant
           votre rythme.
