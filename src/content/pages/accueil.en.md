@@ -44,7 +44,7 @@ home:
   hero:
     title: Online psychologist
     subtitle: Trauma therapy | EMDR | Sexuality
-    backgroundImage: /images/cms-library/pexels-olya-tiutkina-108388893-18904861.jpg
+    backgroundImage: /images/cms-library/illustrations-illustration-seance-individuelle-psychologie.jpeg
     primaryCtaLabel: Book an appointment
     primaryCtaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
   reviews:
