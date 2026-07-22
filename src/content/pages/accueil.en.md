@@ -99,7 +99,7 @@ home:
       You do not need to travel, which greatly simplifies booking appointments and organising our sessions. The therapeutic relationship is precious: by choosing an **online psychologist**, you can keep the same therapist regardless of your plans to move, travel, or live abroad.
     ctaLabel: I want to know more
     ctaUrl: /infos-pratiques/
-    image: /images/portraits/portrait-01.jpg
+    image: /images/cms-library/illustrations-illustration-seance-individuelle-psychologie.jpeg
   seoTitle: Online psychologist specialising in EMDR, trauma and anxiety
   quote:
     text: Your task is not to seek for love, but merely to seek and find all the

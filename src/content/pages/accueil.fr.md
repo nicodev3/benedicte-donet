@@ -104,7 +104,7 @@ home:
       Aussi, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.
     ctaLabel: En savoir plus
     ctaUrl: /infos-pratiques/
-    image: /images/portraits/portrait-01.jpg
+    image: /images/cms-library/illustrations-illustration-seance-individuelle-psychologie.jpeg
   seoTitle: Psychologue en ligne spécialisée EMDR, trauma et anxiété
   quote:
     text: Ta tâche n'est pas de chercher l'amour, mais simplement de chercher et
