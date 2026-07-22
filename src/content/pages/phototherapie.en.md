@@ -3,7 +3,7 @@ title: "Phototherapy"
 heroTitle: "Phototherapy"
 description: "A phototherapy session to rebuild self-confidence through photography and psychology with online psychologist Bénédicte Donet."
 image: "/images/phototherapie/photo-phototherapie-cover.jpg"
-imageAlt: ""
+imageAlt: "Outdoor phototherapy session"
 seoTitle: "Phototherapy | Self-confidence photo session"
 seoDescription: "Phototherapy session with Bénédicte Donet: photography and psychology to rebuild self-confidence and ease your relationship with your body."
 order: 4

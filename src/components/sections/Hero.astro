@@ -8,6 +8,7 @@ interface Props {
   subtitle: string;
   backgroundImage: string;
   backgroundImageMobile?: string;
+  backgroundImageAlt: string;
   backgroundPosition?: string;
   ctaLabel?: string;
   ctaUrl?: string;
@@ -20,6 +21,7 @@ const {
   subtitle,
   backgroundImage,
   backgroundImageMobile,
+  backgroundImageAlt,
   backgroundPosition = "center right",
   ctaLabel,
   ctaUrl,
@@ -50,7 +52,7 @@ const mobileImage = await getOptimizedImage(backgroundImageMobile ?? backgroundI
   >
     {
       (mobileImage || desktopImage) && (
-        <picture class="hero-media" aria-hidden="true">
+        <picture class="hero-media">
           {desktopImage && (
             <source
               media="(min-width: 768px)"
@@ -63,7 +65,7 @@ const mobileImage = await getOptimizedImage(backgroundImageMobile ?? backgroundI
             src={mobileImage?.src || desktopImage?.src}
             srcset={mobileImage?.srcset}
             sizes="100vw"
-            alt=""
+            alt={backgroundImageAlt}
             width={Number(mobileImage?.attributes.width || desktopImage?.attributes.width || 828)}
             height={Number(
               mobileImage?.attributes.height || desktopImage?.attributes.height || 1104

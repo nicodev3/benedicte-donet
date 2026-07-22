@@ -36,13 +36,16 @@ const heroImage = await getOptimizedImage(backgroundImage, {
           src={heroImage.src}
           srcset={heroImage.srcset}
           sizes="100vw"
-          alt=""
+          alt={
+            locale === "en"
+              ? "Dried flowers illustrating online psychology services"
+              : "Fleurs séchées illustrant les services de psychologie en ligne"
+          }
           width={Number(heroImage.attributes.width || 828)}
           height={Number(heroImage.attributes.height || 1104)}
           loading="eager"
           fetchpriority="high"
           decoding="sync"
-          aria-hidden="true"
         />
       )
     }
