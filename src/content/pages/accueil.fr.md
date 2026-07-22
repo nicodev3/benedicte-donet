@@ -47,7 +47,7 @@ home:
   hero:
     title: Psychologue en ligne
     subtitle: Trauma-thérapies | EMDR | Sexualité
-    backgroundImage: /images/cms-library/pexels-mali-142497.jpg
+    backgroundImage: /images/cms-library/pexels-olya-tiutkina-108388893-18904861.jpg
     primaryCtaLabel: Je prends rendez-vous
     primaryCtaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
   reviews:
