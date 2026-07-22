@@ -10,7 +10,7 @@ tags:
 date: 2026-04-17T02:14:00Z
 updated: 2026-06-08T12:34:43Z
 image: "/images/stock/stock-paix-interieure.jpeg"
-imageAlt: ""
+imageAlt: "Paysage de parc verdoyant, symbole de paix intérieure"
 seoTitle: "Exploration de croyance: Un état de paix continue est-il vraiment impossible ?"
 seoDescription: "J’ai longtemps cru que le bonheur demandait des efforts. Qu’il fallait travailler sur soi, se transformer, se réparer presque, pour accéder à un état de paix intérieure plus stable, plus continu. Derrière cela, une croyance silencieuse mais profondément ancrée : la paix ne serait pas notre état naturel, mais quelque chose à atteindre, à construire, à mériter… au prix d’un travail exigeant."
 draft: false

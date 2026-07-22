@@ -7,6 +7,7 @@ interface Props {
   date: Date;
   dateLocale: string;
   backgroundImage?: string;
+  backgroundImageAlt: string;
   backgroundPosition?: string;
 }
 
@@ -15,6 +16,7 @@ const {
   date,
   dateLocale,
   backgroundImage,
+  backgroundImageAlt,
   backgroundPosition = "center right",
 } = Astro.props;
 
@@ -45,13 +47,12 @@ const heroImage = await getOptimizedImage(backgroundImage, {
           src={heroImage.src}
           srcset={heroImage.srcset}
           sizes="100vw"
-          alt=""
+          alt={backgroundImageAlt}
           width={Number(heroImage.attributes.width || 828)}
           height={Number(heroImage.attributes.height || 1104)}
           loading="eager"
           fetchpriority="high"
           decoding="sync"
-          aria-hidden="true"
         />
       )
     }

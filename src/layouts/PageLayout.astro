@@ -49,7 +49,7 @@ interface Props {
 }
 
 const { page, structuredData } = Astro.props;
-const { title, heroTitle, description, image, seoTitle, seoDescription } = page.data;
+const { title, heroTitle, description, image, imageAlt, seoTitle, seoDescription } = page.data;
 const hasHero = Boolean(image);
 const pageSlug = getContentSlug(page.filePath, page.id);
 const lcpSource =
@@ -167,6 +167,7 @@ const combinedStructuredData = [
         title={heroTitle ?? title}
         subtitle={description ?? ""}
         backgroundImage={image!}
+        backgroundImageAlt={imageAlt || title}
         backgroundPosition="bottom center"
         subtitleFirst={Boolean(description)}
       />

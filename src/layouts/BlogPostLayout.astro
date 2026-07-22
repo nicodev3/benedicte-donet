@@ -28,6 +28,7 @@ const {
   date,
   updated,
   image,
+  imageAlt,
   seoTitle,
   seoDescription,
 } = post.data;
@@ -86,6 +87,7 @@ const serviceLinks = [
     date={date}
     dateLocale={t.locale.date}
     backgroundImage={image}
+    backgroundImageAlt={imageAlt || title}
   />
 
   <Container narrow>

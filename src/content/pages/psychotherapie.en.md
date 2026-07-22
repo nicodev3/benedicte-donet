@@ -3,7 +3,7 @@ title: "Psychotherapy"
 heroTitle: "Psychotherapy"
 description: "Online psychologist"
 image: "/images/heroes/hero-psychotherapie.webp"
-imageAlt: ""
+imageAlt: "Portrait of Bénédicte Donet, online EMDR psychologist"
 seoTitle: "Online EMDR Psychologist | Trauma and Anxiety"
 seoDescription: "Online EMDR psychologist: video psychotherapy for trauma, anxiety and post-traumatic stress with Bénédicte Donet, clinical psychologist."
 order: 3

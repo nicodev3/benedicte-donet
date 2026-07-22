@@ -3,7 +3,7 @@ title: "Psychothérapie"
 heroTitle: "La psychothérapie"
 description: "Psychologue en ligne"
 image: "/images/heroes/hero-psychotherapie.webp"
-imageAlt: ""
+imageAlt: "Portrait de Bénédicte Donet, psychologue EMDR en ligne"
 seoTitle: "Psychologue EMDR en ligne | Trauma et anxiété"
 seoDescription: "Psychologue EMDR en ligne : séances de psychothérapie en visio pour trauma, anxiété et stress post-traumatique. Accompagnement avec Bénédicte Donet, psychologue clinicienne."
 order: 3
