@@ -5,16 +5,13 @@ draft: false
 pageType: home
 home:
   intro:
-    title: Welcome
+    title: Welcome !
     text: >-
       I am Bénédicte Donet, a passionate online psychologist and
       psychotherapist.
 
 
       I am committed to **guiding you through what you are going through** so you can move from a state of survival, fears, blocks, or difficulties towards the ease, peace, and harmony you are seeking.
-
-
-      My experience and knowledge draw from a holistic approach.
 
 
       During our sessions, we explore every dimension of your experience to discover together what requires **support towards transformation**.

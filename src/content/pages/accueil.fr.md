@@ -5,28 +5,25 @@ draft: false
 pageType: home
 home:
   intro:
-    title: Bienvenue
+    title: Bienvenue !
     text: >-
-      Je suis Bénédicte Donet, psychologue en ligne et psychothérapeute en ligne
+      Je suis Bénédicte Donet, psychologue et psychothérapeute en ligne
       passionnée.
 
 
-      J'ai à cœur de **vous guider dans ce que vous traversez** pour évoluer d'un état de survie, peurs, blocages ou difficultés, vers l'aisance, la paix et l'harmonie que vous recherchez.
+      J'ai à cœur de **vous accompagner dans ce que vous traversez** pour évoluer d'un état de survie, peurs, blocages ou difficultés, vers l'aisance, la paix et l'harmonie que vous recherchez.
 
 
-      Mon expérience et mes connaissances prennent leurs sources dans une approche holistique.
+      Lors de nos séances, nous explorons toutes les dimensions de votre expérience pour découvrir ensemble ce qui nécessite **du soin et de l'attention**.
 
 
-      Lors de nos séances, nous explorons toutes les dimensions de votre expérience pour découvrir ensemble ce qui nécessite **un accompagnement vers une transformation**.
-
-
-      Au travers différents outils (EMDR, IFS, parole, méditation), je vous accompagne dans l'exploration des différentes facettes de votre être et soutiens les changements que vous souhaitez accueillir dans votre vie.
+      Au travers différents outils (EMDR, IFS, parole, méditation), nous accompagnons et soutenons ensemble le changement que  vous souhaitez accueillir dans votre vie.
 
 
       Je crois fermement en l'incroyable potentiel de guérison et de croissance personnelle chez chacun.
 
 
-      **Je m'engage à vous offrir un espace thérapeutique sacré**, où votre vulnérabilité et confiance peuvent naturellement émerger et la guérison est facilitée.
+      **Je m'engage à vous offrir un espace thérapeutique sacré, vulnérable et ancré**, où vos capacités naturels a guérir et intégrer (croyances, traumatismes...) peuvent naturellement émerger et la guérison est facilitée.
     ctaLabel: Découvrir ma pratique
     ctaUrl: /a-propos/
     image: /images/portraits/portrait-accueil.png
@@ -96,13 +93,15 @@ home:
   whyOnline:
     title: Pourquoi choisir une psychologue en ligne ?
     text: >-
-      La **téléconsultation** possède de nombreux avantages.
+      En **téléconsultation** vous recevez votre séance de chez vous, avec le
+      confort et la chaleur de votre maison. Cela favorise un **sentiment de
+      sécurité** et permet de recevoir la thérapie avec plus d'aisance.
 
 
-      En choisissant une psychologue en ligne, vous pouvez recevoir votre accompagnement de chez vous, avec le confort et la chaleur de votre maison. Cela favorise un **sentiment de sécurité** et permet de recevoir la thérapie avec plus d'aisance.
+      Vous n'avez pas besoin de vous déplacer ce qui permet, après chaque séance, de pouvoir intégrer en douceur, dans le confort de votre maison.
 
 
-      Vous n'avez pas besoin de vous déplacer ce qui facilite grandement la prise de rendez-vous et l'organisation de nos séances. Aussi, la relation thérapeutique est précieuse, en choisissant un **psychologue en ligne**, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.
+      Aussi, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.
     ctaLabel: En savoir plus
     ctaUrl: /infos-pratiques/
     image: /images/portraits/portrait-01.jpg
