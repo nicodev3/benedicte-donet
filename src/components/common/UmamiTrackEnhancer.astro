@@ -1,0 +1,74 @@
+---
+/**
+ * Ajoute les attributs Umami sur les liens importants du contenu markdown
+ * (Doctolib, email, contact infos pratiques, masterclass) s'ils n'en ont pas déjà.
+ */
+import { SITE } from "@/site.config";
+import { UMAMI_EVENTS } from "@/lib/umami";
+---
+
+<script
+  define:vars={{
+    siteEmail: SITE.email,
+    events: UMAMI_EVENTS,
+  }}
+>
+  function setUmamiEvent(link, eventName, props) {
+    if (link.hasAttribute("data-umami-event")) return;
+
+    link.setAttribute("data-umami-event", eventName);
+    if (props) {
+      for (const [key, value] of Object.entries(props)) {
+        if (value) link.setAttribute(`data-umami-event-${key}`, value);
+      }
+    }
+  }
+
+  function isStandaloneCtaLink(link) {
+    const parent = link.parentElement;
+    if (!parent || parent.tagName !== "P") return false;
+    const text = parent.textContent?.trim() ?? "";
+    return text === (link.textContent?.trim() ?? "");
+  }
+
+  function emplacementFor(link) {
+    if (link.closest(".page-cta") || isStandaloneCtaLink(link)) return "page-contenu";
+    if (link.closest(".prose")) return "lien-contenu";
+    return "contenu";
+  }
+
+  function tagImportantLinks() {
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const href = link.getAttribute("href") ?? "";
+
+      if (/doctolib\.fr/i.test(href)) {
+        setUmamiEvent(link, events.DOCTOLIB, { emplacement: emplacementFor(link) });
+        return;
+      }
+
+      if (href.toLowerCase().startsWith(`mailto:${siteEmail.toLowerCase()}`)) {
+        setUmamiEvent(link, events.EMAIL, { emplacement: emplacementFor(link) });
+        return;
+      }
+
+      if (/(?:^|\/)(?:en\/)?infos-pratiques\/?#form\b/i.test(href)) {
+        setUmamiEvent(link, events.CONTACT_INFOS, { emplacement: emplacementFor(link) });
+        return;
+      }
+
+      if (/(?:^|\/)(?:en\/)?masterclass\/?(?:#.*)?$/i.test(href)) {
+        setUmamiEvent(link, events.MASTERCLASS, { emplacement: emplacementFor(link) });
+      }
+    });
+  }
+
+  function setup() {
+    tagImportantLinks();
+    // Les enhancers de contenu (page-cta) s'exécutent aussi au chargement.
+    requestAnimationFrame(tagImportantLinks);
+    window.setTimeout(tagImportantLinks, 150);
+  }
+
+  setup();
+  document.addEventListener("astro:page-load", setup);
+</script>

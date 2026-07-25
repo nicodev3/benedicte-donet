@@ -4,6 +4,7 @@ import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import { getOptimizedSrc } from "@/lib/images";
 import { renderInlineRichText } from "@/lib/rich-text";
+import { UMAMI_EVENTS } from "@/lib/umami";
 
 interface Props {
   title: string;
@@ -58,7 +59,12 @@ const appointmentBgMobile = await getOptimizedSrc(
       </div>
 
       <div class="steps-cta">
-        <Button href={ctaUrl} class="steps-button">
+        <Button
+          href={ctaUrl}
+          class="steps-button"
+          umamiEvent={UMAMI_EVENTS.DOCTOLIB}
+          umamiProps={{ emplacement: "etapes-rdv" }}
+        >
           {ctaLabel}
         </Button>
       </div>

@@ -1,6 +1,12 @@
 ---
 import { Sparkles } from "@lucide/astro";
 import { getOptimizedImage } from "@/lib/images";
+import {
+  UMAMI_EVENTS,
+  isDoctolibUrl,
+  isMasterclassUrl,
+  umamiAttrs,
+} from "@/lib/umami";
 
 interface Props {
   eyebrow?: string;
@@ -30,6 +36,17 @@ const {
 
 const showCta = Boolean(ctaLabel && ctaUrl);
 const isExternal = ctaUrl?.startsWith("http") ?? false;
+
+const ctaUmamiAttrs = (() => {
+  if (!ctaUrl) return {};
+  if (isDoctolibUrl(ctaUrl)) {
+    return umamiAttrs(UMAMI_EVENTS.DOCTOLIB, { emplacement: "hero" });
+  }
+  if (isMasterclassUrl(ctaUrl)) {
+    return umamiAttrs(UMAMI_EVENTS.MASTERCLASS, { emplacement: "hero" });
+  }
+  return {};
+})();
 
 const desktopImage = await getOptimizedImage(backgroundImage, {
   widths: [800, 1200, 1600],
@@ -99,6 +116,7 @@ const mobileImage = await getOptimizedImage(backgroundImageMobile ?? backgroundI
             class="hero-cta"
             href={ctaUrl}
             {...isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {}}
+            {...ctaUmamiAttrs}
           >
             <span>{ctaLabel}</span>
             <Sparkles size={32} aria-hidden="true" />

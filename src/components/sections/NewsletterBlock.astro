@@ -5,6 +5,7 @@ import SiteImage from "@/components/common/SiteImage.astro";
 import { getOptimizedSrc } from "@/lib/images";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
+import { UMAMI_EVENTS } from "@/lib/umami";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
@@ -52,7 +53,14 @@ const newsletterBackground = await getOptimizedSrc("/images/backgrounds/bg-newsl
         }
       </div>
 
-      <a class="newsletter-button" href={newsletterUrl} target="_blank" rel="noopener noreferrer">
+      <a
+        class="newsletter-button"
+        href={newsletterUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-umami-event={UMAMI_EVENTS.NEWSLETTER}
+        data-umami-event-langue={locale}
+      >
         <span>{t.newsletter.cta}</span>
         <SiteImage src="/images/ui/icon-newsletter.svg" alt="" width={22} height={22} loading="lazy" />
       </a>

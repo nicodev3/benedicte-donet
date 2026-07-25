@@ -4,6 +4,7 @@ import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import Button from "@/components/common/Button.astro";
 import { renderInlineRichText } from "@/lib/rich-text";
+import { UMAMI_EVENTS, isDoctolibUrl } from "@/lib/umami";
 
 interface Card {
   title: string;
@@ -37,6 +38,13 @@ const { title, cards } = Astro.props;
         cards.map((card, index) => {
           const align = index % 2 === 0 ? "start" : "end";
           const footerHref = card.linkUrl || card.url;
+          const ctaHref = card.ctaUrl || card.url;
+          const ctaUmami = isDoctolibUrl(ctaHref)
+            ? {
+                event: UMAMI_EVENTS.DOCTOLIB,
+                props: { emplacement: "carte-service" },
+              }
+            : undefined;
 
           return (
             <article class:list={["service-card", `align-${align}`]}>
@@ -94,7 +102,12 @@ const { title, cards } = Astro.props;
               {
                 card.ctaLabel && (
                   <div class="service-cta">
-                    <Button href={card.ctaUrl || card.url} class="service-button">
+                    <Button
+                      href={ctaHref}
+                      class="service-button"
+                      umamiEvent={ctaUmami?.event}
+                      umamiProps={ctaUmami?.props}
+                    >
                       {card.ctaLabel}
                     </Button>
                   </div>

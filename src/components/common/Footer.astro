@@ -7,6 +7,7 @@ import { getSiteGlobal } from "@/site.config";
 import { getFooterContent } from "@/lib/footer";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
+import { UMAMI_EVENTS } from "@/lib/umami";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
@@ -28,7 +29,13 @@ const year = new Date().getFullYear();
           loading="lazy"
         />
         <p>{footer.text}</p>
-        <Button href={footer.cta.url}>{footer.cta.label}</Button>
+        <Button
+          href={footer.cta.url}
+          umamiEvent={UMAMI_EVENTS.DOCTOLIB}
+          umamiProps={{ emplacement: "footer", langue: locale }}
+        >
+          {footer.cta.label}
+        </Button>
       </div>
 
       <nav class="footer-links" aria-label={t.footer.quickLinks}>
@@ -48,7 +55,14 @@ const year = new Date().getFullYear();
         <h3>{t.common.contact}</h3>
         <ul>
           <li>
-            <a href={`mailto:${global.email}`}>{global.email}</a>
+            <a
+              href={`mailto:${global.email}`}
+              data-umami-event={UMAMI_EVENTS.EMAIL}
+              data-umami-event-emplacement="footer"
+              data-umami-event-langue={locale}
+            >
+              {global.email}
+            </a>
           </li>
           {global.area && <li>{global.area}</li>}
         </ul>

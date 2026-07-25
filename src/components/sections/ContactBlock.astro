@@ -6,6 +6,7 @@ import { getOptimizedSrc } from "@/lib/images";
 import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { useTranslations } from "@/lib/translations";
+import { UMAMI_EVENTS } from "@/lib/umami";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = useTranslations(locale);
@@ -52,7 +53,14 @@ const contactBackground = await getOptimizedSrc("/images/backgrounds/bg-contact.
         <ul class="contact-list">
           <li>
             <SiteImage class="contact-icon" src="/images/ui/icon-gmail.svg" alt="" />
-            <a href={`mailto:${global.email}`}>{global.email}</a>
+            <a
+              href={`mailto:${global.email}`}
+              data-umami-event={UMAMI_EVENTS.EMAIL}
+              data-umami-event-emplacement="bloc-contact"
+              data-umami-event-langue={locale}
+            >
+              {global.email}
+            </a>
           </li>
           {global.area && <li class="contact-area">{global.area}</li>}
         </ul>
@@ -67,6 +75,7 @@ const contactBackground = await getOptimizedSrc("/images/backgrounds/bg-contact.
         data-error={formLabels.error}
         data-sending={formLabels.sending}
         data-submit-label={formLabels.submit}
+        data-umami-langue={locale}
       >
         <h2>{formLabels.title}</h2>
         <div class="form-card">
@@ -132,6 +141,28 @@ const contactBackground = await getOptimizedSrc("/images/backgrounds/bg-contact.
 </Section>
 
 <script>
+  declare global {
+    interface Window {
+      umami?: {
+        track: (event: string, data?: Record<string, string>) => void;
+      };
+    }
+  }
+
+  const FORM_EVENTS = {
+    submit: "Envoi formulaire contact",
+    success: "Succès formulaire contact",
+    error: "Erreur formulaire contact",
+  } as const;
+
+  function trackUmami(event: string, data?: Record<string, string>) {
+    try {
+      window.umami?.track(event, data);
+    } catch {
+      /* Umami indisponible (bloqueur, hors ligne, etc.) */
+    }
+  }
+
   function initContactForms() {
     document.querySelectorAll<HTMLFormElement>("[data-contact-form]").forEach((form) => {
       if (form.dataset.initialized === "true") return;
@@ -139,6 +170,7 @@ const contactBackground = await getOptimizedSrc("/images/backgrounds/bg-contact.
 
       const statusEl = form.querySelector<HTMLElement>("[data-form-status]");
       const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const langue = form.dataset.umamiLangue || "fr";
 
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -150,6 +182,8 @@ const contactBackground = await getOptimizedSrc("/images/backgrounds/bg-contact.
         const sendingLabel = form.dataset.sending || "Sending…";
         const successMessage = form.dataset.success || "Thank you!";
         const errorMessage = form.dataset.error || "Something went wrong.";
+
+        trackUmami(FORM_EVENTS.submit, { langue });
 
         if (submitBtn) {
           submitBtn.disabled = true;
@@ -171,12 +205,14 @@ const contactBackground = await getOptimizedSrc("/images/backgrounds/bg-contact.
           if (!response.ok) throw new Error("Formspree error");
 
           form.reset();
+          trackUmami(FORM_EVENTS.success, { langue });
           if (statusEl) {
             statusEl.hidden = false;
             statusEl.textContent = successMessage;
             statusEl.dataset.state = "success";
           }
         } catch {
+          trackUmami(FORM_EVENTS.error, { langue });
           if (statusEl) {
             statusEl.hidden = false;
             statusEl.textContent = errorMessage;

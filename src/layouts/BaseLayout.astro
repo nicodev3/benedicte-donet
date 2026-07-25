@@ -5,6 +5,7 @@ import Seo from "@/components/seo/Seo.astro";
 import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
 import LazyBackgrounds from "@/components/common/LazyBackgrounds.astro";
+import UmamiTrackEnhancer from "@/components/common/UmamiTrackEnhancer.astro";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { getAlternateLinks } from "@/lib/seo";
 import { useTranslations } from "@/lib/translations";
@@ -91,5 +92,6 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
     </main>
     <Footer />
     <LazyBackgrounds />
+    <UmamiTrackEnhancer />
   </body>
 </html>

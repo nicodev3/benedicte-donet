@@ -2,6 +2,7 @@
 import { SITE } from "@/site.config";
 import { Copy } from "@lucide/astro";
 import SocialIcon from "@/components/common/SocialIcon.astro";
+import { UMAMI_EVENTS } from "@/lib/umami";
 
 interface Labels {
   title: string;
@@ -63,6 +64,9 @@ const links = [
               ? {}
               : { target: "_blank", rel: "noopener noreferrer" }}
             aria-label={label}
+            data-umami-event={UMAMI_EVENTS.SHARE}
+            data-umami-event-canal={id === "gmail" ? "email" : id}
+            data-umami-event-emplacement={placement}
           >
             <SocialIcon name={id} size={22} monochrome />
           </a>
@@ -77,6 +81,9 @@ const links = [
         data-url={url}
         data-default-label={labels.copyLink}
         data-success-label={labels.linkCopied}
+        data-umami-event={UMAMI_EVENTS.SHARE}
+        data-umami-event-canal="copier-lien"
+        data-umami-event-emplacement={placement}
         aria-label={labels.copyLink}
       >
         <Copy size={22} aria-hidden="true" />
@@ -88,6 +95,9 @@ const links = [
 <script>
   function setupShareCopy() {
     document.querySelectorAll<HTMLButtonElement>("[data-share-copy]").forEach((button) => {
+      if (button.dataset.shareReady === "true") return;
+      button.dataset.shareReady = "true";
+
       button.addEventListener("click", async () => {
         const url = button.dataset.url;
         if (!url) return;

@@ -3,16 +3,37 @@ interface Props {
   href: string;
   variant?: "primary" | "secondary" | "outline";
   class?: string;
+  /** Nom d'événement Umami (data-umami-event) */
+  umamiEvent?: string;
+  /** Propriétés Umami (data-umami-event-*) */
+  umamiProps?: Record<string, string>;
 }
 
-const { href, variant = "primary", class: className = "" } = Astro.props;
+const {
+  href,
+  variant = "primary",
+  class: className = "",
+  umamiEvent,
+  umamiProps,
+} = Astro.props;
 const isExternal = href.startsWith("http");
+
+const umamiDataAttrs: Record<string, string> = {};
+if (umamiEvent) {
+  umamiDataAttrs["data-umami-event"] = umamiEvent;
+  if (umamiProps) {
+    for (const [key, value] of Object.entries(umamiProps)) {
+      if (value) umamiDataAttrs[`data-umami-event-${key}`] = value;
+    }
+  }
+}
 ---
 
 <a
   {href}
   class:list={["button", variant, className]}
   {...isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {}}
+  {...umamiDataAttrs}
 >
   <slot />
 </a>

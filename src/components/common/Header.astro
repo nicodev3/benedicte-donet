@@ -14,6 +14,7 @@ import {
 } from "@/lib/i18n";
 import { getAlternateTagSlug } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
+import { UMAMI_EVENTS } from "@/lib/umami";
 import { getCollection } from "astro:content";
 
 const locale = getLocaleFromPath(Astro.url.pathname);
@@ -125,7 +126,12 @@ function visibleChildren(item: (typeof items)[number]) {
           }
         </ul>
         <div class="nav-actions">
-          <Button href={global.appointmentUrl} class="nav-cta">
+          <Button
+            href={global.appointmentUrl}
+            class="nav-cta"
+            umamiEvent={UMAMI_EVENTS.DOCTOLIB}
+            umamiProps={{ emplacement: "header", langue: locale }}
+          >
             {t.header.appointmentCta}
           </Button>
           <a href={languageUrl} class="language-switch" hreflang={alternateLocale}>

@@ -7,10 +7,16 @@ import Button from "@/components/common/Button.astro";
 import Breadcrumb from "@/components/common/Breadcrumb.astro";
 import { SITE } from "@/site.config";
 import { buildBreadcrumbStructuredData } from "@/lib/breadcrumbs";
-import { getLocaleFromFilePath, getLocaleFromPath, localizedPath } from "@/lib/i18n";
+import {
+  getContentSlug,
+  getLocaleFromFilePath,
+  getLocaleFromPath,
+  localizedPath,
+} from "@/lib/i18n";
 import { resolveSeoImagePath } from "@/lib/images";
 import { parsePriceRange } from "@/lib/pricing";
 import { useTranslations } from "@/lib/translations";
+import { UMAMI_EVENTS, isInfosPratiquesFormUrl } from "@/lib/umami";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -30,6 +36,7 @@ const {
 } = product.data;
 
 const locale = getLocaleFromFilePath(product.filePath) ?? getLocaleFromPath(Astro.url.pathname);
+const productSlug = getContentSlug(product.filePath, product.id);
 const t = useTranslations(locale);
 const breadcrumbs = [
   { label: t.common.home, url: localizedPath("/", locale) },
@@ -105,7 +112,23 @@ const breadcrumbStructuredData = buildBreadcrumbStructuredData(
     <article class="prose product-content">
       <slot />
       <p class="product-cta">
-        <Button href={ctaUrl}>{ctaLabel}</Button>
+        <Button
+          href={ctaUrl}
+          umamiEvent={
+            isInfosPratiquesFormUrl(ctaUrl) ? UMAMI_EVENTS.PRODUCT_ORDER : undefined
+          }
+          umamiProps={
+            isInfosPratiquesFormUrl(ctaUrl)
+              ? {
+                  produit: productSlug,
+                  emplacement: "page-produit",
+                  langue: locale,
+                }
+              : undefined
+          }
+        >
+          {ctaLabel}
+        </Button>
       </p>
     </article>
   </Container>
