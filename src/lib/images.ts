@@ -27,8 +27,8 @@ export interface OptimizedImageResult {
  * Résout un chemin public (/images/...) ou relatif (../../assets/images/...)
  * vers les métadonnées Astro Image.
  *
- * Les uploads Decap (`/images/cms-library/…`) sont mirorés au build dans
- * `src/assets/images/uploads/` pour permettre WebP + srcset.
+ * Les images Decap (`/images/cms-library/…`) sont résolues depuis leur
+ * chemin réel dans les catégories Astro ou depuis le miroir des uploads.
  */
 export function resolveImage(src: string): ImageMetadata | undefined {
   if (!src) return undefined;
@@ -37,9 +37,21 @@ export function resolveImage(src: string): ImageMetadata | undefined {
 
   if (src.startsWith("/images/cms-library/")) {
     const file = src.slice("/images/cms-library/".length);
-    const uploadPath = `/src/assets/images/uploads/${file}`;
-    if (imageModules[uploadPath]?.default) {
-      return imageModules[uploadPath].default;
+    // Les médias versionnés sont aplatis par Decap sous
+    // `${catégorie}-${nom-fichier}` (ex. `illustrations-foo.jpeg`).
+    const separator = file.indexOf("-");
+    const category = separator > 0 ? file.slice(0, separator) : "";
+    const originalFile = separator > 0 ? file.slice(separator + 1) : file;
+    const assetPaths = category
+      ? [
+          `/src/assets/images/${category}/${originalFile}`,
+          `/src/assets/images/uploads/${file}`,
+        ]
+      : [`/src/assets/images/uploads/${file}`];
+    for (const assetPath of assetPaths) {
+      if (imageModules[assetPath]?.default) {
+        return imageModules[assetPath].default;
+      }
     }
   }
 
