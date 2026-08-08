@@ -14,13 +14,17 @@ draft: false
 
 ![](/images/cms-library/annie-spratt-vvxbgjge8a-unsplash.jpg)
 
-Je passe un peu pour une dingue parfois quand je parle de l'EMDR avec les yeux qui brillent.
+![](/images/cms-library/pexels-mali-142497.jpg)
 
-Comment peut-on être si passionné par une technique de thérapie ?
+**Je passe un peu pour une dingue parfois quand je parle de l'EMDR avec les yeux qui brillent.**
+
+**Comment peut-on être si passionné par une technique de thérapie ?**
+
+
 
 Parce que cette pratique, je l'ai vu agir avec une telle rapidité sur les souvenirs traumatiques de mes patients. Mais ce qui me touche le plus, c'est sa façon de nous faire expérimenter quelque chose de simple et profond **: Le corps sait. Il est touché, réagit à ce qui s'est passé  et c'est lui que nous guide.**
 
-A l'inverse de nombreuses pratiques thérapeutiques, l'EMDR, écoute, suit et accompagne le CORPS.
+A l'inverse de nombreuses pratiques thérapeutiques, l'EMDR, écoute, suit et accompagne le corps.
 
 Les accélérations du cœur, le ventre qui se tord, la gorge qui se serre, la nuque qui se raidit, la respiration qui change, cette sensation de danger alors même que nous savons intellectuellement que nous sommes en sécurité...
 
@@ -28,11 +32,7 @@ Tout cela nous parle.
 
 Et c'est précisément ce qui me passionne.
 
-
-
 ## Une thérapie qui accompagne la mémoire
-
-
 
 En EMDR, nous venons accompagner la mémoire pour intégrer ce qui n'a pas pu l'être avant.
 
@@ -42,11 +42,7 @@ En EMDR, nous venons accompagner la mémoire pour intégrer ce qui n'a pas pu l'
 
 Cette image de la mémoire traumatique comme quelque chose qui doit être contenu me parle beaucoup. Parce que le traumatisme n'est pas seulement quelque chose dont nous nous souvenons. C'est quelque chose que notre corps continue a vivre.
 
-
-
 ## Le corps et la mémoire nous guident
-
-
 
 Ce que j'aime le plus avec l'EMDR, c'est que cela nous permet d'expérimenter la sagesse et la fluidité que prend la guérison lorsque nous laissons le corps nous montrer la voie.
 
@@ -64,11 +60,7 @@ L'EMDR, en cela, nous permet de rentrer en connexion, en écoute avec notre corp
 
 serait une autre manière de traduire ce qui se passe dans une séance d'EMDR.
 
-
-
 ## Un mystère que la science continue d'explorer
-
-
 
 L'EMDR a été développé par Francine Shapiro à la fin des années 1980. Depuis, les recherches se sont multipliées et son efficacité dans le traitement du TSPT est aujourd'hui bien documentée. Mais qui est fascinant, c'est que nous ne pouvons pas encore expliquer complètement comment elle fonctionne.
 
@@ -76,11 +68,7 @@ Plusieurs modèles tentent de comprendre les mécanismes à l'œuvre. Le modèle
 
 Mais pas encore une réponse unique. Et ce mystère me rappelle que parfois, en thérapie, nous n'avons pas besoin de tout comprendre et expliquer pour accompagner le changement. 
 
-
-
 ## Et ce rythme qui m'intrigue...
-
-
 
 Il y a une autre chose qui me questionne beaucoup dans l'EMDR.
 
@@ -94,11 +82,9 @@ Quand on regarde l'histoire humaine, le rythme, la percussion, la danse et les m
 
 Parce que derrière les mouvements bilatéraux de l'EMDR, il y a peut-être une histoire beaucoup plus ancienne du corps, du rythme et du mouvement.
 
-
-
 ## Rien à forcer, tout à apprendre du corps
 
-![](/images/cms-library/pexels-mali-142497.jpg)
+![](/images/cms-library/backgrounds-bg-contact.webp)
 
 Je pourrais écrire un livre entier sur tout ce que j'ai appris et compris de cette incroyable pratique, tant elle est riche de sagesse. Mais j'aimerais finir par l'une des plus importantes à mes yeux :
 
