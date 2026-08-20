@@ -48,7 +48,8 @@ collections:
     slug: "{{slug}}"
     preview_path: "/{{slug}}/"
     i18n: true
-    # Affiche la date dans la liste ; tri par défaut = plus récent en premier
+    # Affiche la date dans la liste ; tri par défaut = plus récent en premier.
+    # Les dates sont stockées en ISO pour que le tri textuel reste chronologique.
     summary: "{{title}} — {{day}}/{{month}}/{{year}}"
     sortable_fields:
       - { field: date, default_sort: desc }
@@ -71,14 +72,14 @@ collections:
         name: "date"
         widget: "datetime"
         i18n: duplicate
-        date_format: "DD/MM/YYYY"
+        date_format: "YYYY-MM-DD"
         time_format: false
       - label: "Date de mise à jour"
         name: "updated"
         widget: "datetime"
         i18n: duplicate
         required: false
-        date_format: "DD/MM/YYYY"
+        date_format: "YYYY-MM-DD"
         time_format: false
         hint: "À remplir uniquement si vous modifiez un article déjà publié."
       - label: "Image principale"

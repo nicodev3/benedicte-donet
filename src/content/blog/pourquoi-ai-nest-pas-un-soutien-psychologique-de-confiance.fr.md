@@ -2,7 +2,7 @@
 title: AI, un soutien psychologique de confiance ?
 excerpt: "Je partage ici sur un sujet important: est ce que l'AI peut nous aider
   dans un mieux être psychologique?"
-date: 20/08/2026
+date: 2026-08-20
 image: /images/cms-library/dscf8110.jpg
 draft: false
 ---

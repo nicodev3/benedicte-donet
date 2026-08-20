@@ -7,7 +7,7 @@ const optionalString = z.preprocess(
   z.string().optional()
 );
 
-/** Decap enregistre les dates sans heure au format français configuré dans le CMS. */
+/** Accepte les anciennes dates CMS enregistrées au format français. */
 const normalizeCmsDate = (val: unknown) => {
   if (typeof val !== "string") return val;
 
