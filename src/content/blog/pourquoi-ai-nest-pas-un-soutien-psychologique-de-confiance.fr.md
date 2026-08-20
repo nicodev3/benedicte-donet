@@ -6,7 +6,7 @@ date: 2026-08-20
 image: /images/cms-library/dscf8110.jpg
 draft: false
 ---
-C'est un sujet important qui prend de plus en plus de place depuis que l'AI est arrivé dans nos vies. Une plateforme où, quel que soit le moment du jour et de la nuit, quelqu'un (un robot) répond à toutes nos questions, états d'âme, doutes et peurs.
+C'est un sujet important qui prend de plus en plus de place depuis que l'AI est arrivée dans nos vies. Une plateforme où, quel que soit le moment du jour et de la nuit, quelqu'un (un robot) répond à toutes nos questions, états d'âme, doutes et peurs.
 
 C'est réconfortant bien sûr et ceux qui l'utilisent peuvent penser qu'ils se sentent :
 
@@ -43,7 +43,7 @@ Alors aller chercher un robot pour se comprendre, c'est souvent un détour plut�
 
 L'une des choses que fait le robot est de valider les émotions et croyances de celui qui écrit.
 
- Il est donc facile de se sentir compris, mais pas nécessairement soutenu de la bonne manière.
+Il est donc facile de se sentir compris, mais pas nécessairement soutenu de la bonne manière.
 
 L'AI peut parfois, selon la manière dont la question est formulée et les informations qui lui sont données, renforcer certains éléments de sa réflexion ou de ses croyances, et ainsi renforcer l'idée que ne pas changer est une excellente idée. D'une autre manière, la réponse peut parfois, ne pas être adaptée à la gravité de la situation ou contribuer à renforcer certaines pensées problématiques.
 
