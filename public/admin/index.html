@@ -81,6 +81,35 @@
     </style>
   </head>
   <body>
+    <script>
+      // Decap conserve le choix de tri du navigateur et lui donne priorité sur config.yml.
+      // Réinitialise une seule fois le blog afin d'appliquer le nouvel ordre chronologique.
+      (() => {
+        const migrationKey = "benedicte-cms-blog-sort-v1";
+        const sortKey = "decap-cms.entries.sort";
+
+        try {
+          if (localStorage.getItem(migrationKey)) return;
+
+          let sortState = {};
+          const savedSort = localStorage.getItem(sortKey);
+          if (savedSort) {
+            const parsedSort = JSON.parse(savedSort);
+            if (parsedSort && typeof parsedSort === "object" && !Array.isArray(parsedSort)) {
+              sortState = parsedSort;
+            }
+          }
+
+          sortState.blog = {
+            date: { key: "date", direction: "Descending", index: 0 },
+          };
+          localStorage.setItem(sortKey, JSON.stringify(sortState));
+          localStorage.setItem(migrationKey, "done");
+        } catch (error) {
+          console.warn("Impossible de réinitialiser le tri du blog.", error);
+        }
+      })();
+    </script>
     <!-- Markdown → HTML pour la preview (images inline incluses) -->
     <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
     <!-- Version figée : default_sort est pris en charge à partir de Decap CMS 3.10 -->
