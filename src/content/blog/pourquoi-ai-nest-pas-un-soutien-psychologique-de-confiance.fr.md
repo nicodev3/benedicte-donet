@@ -8,7 +8,9 @@ draft: false
 ---
 C'est un sujet important qui prend de plus en plus de place depuis que l'AI est arrivé dans nos vies. Une plateforme où, quel que soit le moment du jour et de la nuit, quelqu'un (un robot) répond à toutes nos questions, états d'âme, doutes et peurs.
 
-C'est réconfortant bien sûr et ceux qui l'utilisent peuvent penser qu'ils se sentent :\
+C'est réconfortant bien sûr et ceux qui l'utilisent peuvent penser qu'ils se sentent :
+
+\
 moins seuls,\
 soutenus,\
 entendus,\
