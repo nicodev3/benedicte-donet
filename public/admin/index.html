@@ -83,9 +83,9 @@
   <body>
     <script>
       // Decap conserve le choix de tri du navigateur et lui donne priorité sur config.yml.
-      // Réinitialise une seule fois le blog afin d'appliquer le nouvel ordre chronologique.
+      // v2 : après correction du format de date ISO, forcer à nouveau le tri chronologique.
       (() => {
-        const migrationKey = "benedicte-cms-blog-sort-v1";
+        const migrationKey = "benedicte-cms-blog-sort-v2";
         const sortKey = "decap-cms.entries.sort";
 
         try {
