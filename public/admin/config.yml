@@ -49,7 +49,8 @@ collections:
     preview_path: "/{{slug}}/"
     i18n: true
     # Affiche la date dans la liste ; tri par défaut = plus récent en premier.
-    # Les dates sont stockées en ISO pour que le tri textuel reste chronologique.
+    # Sans date_format custom : Decap stocke l’ISO complet (comme les articles
+    # historiques). Un format date-only mélange Date et string → tri cassé.
     summary: "{{title}} — {{day}}/{{month}}/{{year}}"
     sortable_fields:
       - { field: date, default_sort: desc }
@@ -72,15 +73,15 @@ collections:
         name: "date"
         widget: "datetime"
         i18n: duplicate
-        date_format: "YYYY-MM-DD"
         time_format: false
+        picker_utc: true
       - label: "Date de mise à jour"
         name: "updated"
         widget: "datetime"
         i18n: duplicate
         required: false
-        date_format: "YYYY-MM-DD"
         time_format: false
+        picker_utc: true
         hint: "À remplir uniquement si vous modifiez un article déjà publié."
       - label: "Image principale"
         name: "image"
