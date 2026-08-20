@@ -1,6 +1,6 @@
 ---
 title: AI, un soutien psychologique de confiance ?
-date: 2026-08-20T13:49:00.000+05:30
+date: 20/08/2026
 image: /images/cms-library/dscf8110.jpg
 draft: true
 ---
