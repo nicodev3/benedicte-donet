@@ -1,5 +1,7 @@
 ---
 title: AI, un soutien psychologique de confiance ?
+excerpt: "Je partage ici sur un sujet important: est ce que l'AI peut nous aider
+  dans un mieux être psychologique?"
 date: 20/08/2026
 image: /images/cms-library/dscf8110.jpg
 draft: false
@@ -89,13 +91,13 @@ Dans le cadre d'une thérapie également, comme le relate cette article:
 
 ## Nous n'avons pas besoin de plus d'AI
 
-Je vous livre pour finir mon humble conclusion: Nous n'avons pas besoin de plus d'AI. Les recherches le confirme déjà, ces applications n'améliore pas notre bien-être émotionnel, au contraire, elles sont une manière supplémentaire de nous couper. En revanche, mon ressenti est que nous avons besoin de prendre le temps d'être les uns avec les autres. 
+Je vous livre pour finir mon humble conclusion: Nous n'avons pas besoin de plus d'AI. Les recherches le confirme déjà, les applications n'améliore pas notre bien-être émotionnel, au contraire, elles sont une manière supplémentaire de nous en couper. 
+
+En revanche, nous avons besoin de prendre le temps d'être les uns avec les autres. 
 
 De prendre le temps d'être avec soi, avec notre écriture, nos émotions et de prendre confiance que c'est assez. 
 
-Ce lien que nous pouvons le créer avec nous-mêmes : intimement, imparfaitement, c'est ce que nous cherchons, au fond.
-
-En même temps, je tiens à être honnête ici, j'utilise parfois AI pour des questions d'organisations et je me questionne constamment sur sa moralité et son effet délétère sur la nature (épuisement des ressources). 
+Ce lien que nous pouvons créer avec nous-mêmes : intimement, imparfaitement, c'est ce que nous cherchons, au fond.
 
 Il est humain, naturel de chercher du soutien mais il est important de pouvoir questionner, éduquer et comprendre l'impacte de ce que nous faisons sur notre santé, notre bien-être.
 
