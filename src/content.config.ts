@@ -7,6 +7,20 @@ const optionalString = z.preprocess(
   z.string().optional()
 );
 
+/** Decap enregistre les dates sans heure au format français configuré dans le CMS. */
+const normalizeCmsDate = (val: unknown) => {
+  if (typeof val !== "string") return val;
+
+  const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(val);
+  return match ? `${match[3]}-${match[2]}-${match[1]}T00:00:00.000Z` : val;
+};
+
+const cmsDate = z.preprocess(normalizeCmsDate, z.coerce.date());
+const optionalCmsDate = z.preprocess(
+  (val) => (val === null || val === "" ? undefined : normalizeCmsDate(val)),
+  z.coerce.date().optional()
+);
+
 const bulletsSchema = z.preprocess(
   (val) =>
     typeof val === "string"
@@ -127,8 +141,8 @@ const blog = defineCollection({
     title: z.string(),
     excerpt: optionalString,
     tags: z.array(z.string()).default([]),
-    date: z.coerce.date(),
-    updated: z.coerce.date().optional(),
+    date: cmsDate,
+    updated: optionalCmsDate,
     image: optionalString,
     imageAlt: optionalString,
     seoTitle: optionalString,
