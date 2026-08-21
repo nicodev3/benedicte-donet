@@ -1,21 +1,22 @@
 ---
-title: "AI, a trustworthy source of psychological support?"
-excerpt: "I want to share my thoughts on an important question: can AI really help us toward greater psychological well-being?"
+title: AI, a trustworthy source of psychological support?
+excerpt: "I want to share my thoughts on an important question: can AI really
+  help us toward greater psychological well-being?"
 date: 2026-08-20T00:00:00.000Z
+updated: null
 image: /images/cms-library/dscf8110.jpg
-imageAlt: "Two elderly women sitting on a bench on a sunny city sidewalk"
+imageAlt: Two elderly women sitting on a bench on a sunny city sidewalk
 draft: false
 ---
 This is an important topic that has taken up more and more space since AI entered our lives. A platform where, at any hour of the day or night, someone (a robot) answers all our questions, moods, doubts, and fears.
 
 It is comforting, of course, and those who use it may feel:
 
-\
-less alone,\
-supported,\
-heard,\
-understood,\
-and helped.
+* less alone,
+* supported,
+* heard,
+* understood,
+* and helped.
 
 But is that really the case?
 

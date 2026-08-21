@@ -1,22 +1,22 @@
 ---
 title: IA, un soutien psychologique de confiance ?
-excerpt: "Je partage ici sur un sujet important : est-ce que l'IA peut nous aider
-  dans un mieux-être psychologique ?"
+excerpt: "Je partage ici sur un sujet important : est-ce que l'IA peut nous
+  aider dans un mieux-être psychologique ?"
+tags: []
 date: 2026-08-20T00:00:00.000Z
 image: /images/cms-library/dscf8110.jpg
-imageAlt: "Deux femmes âgées assises sur un banc sur un trottoir ensoleillé"
+imageAlt: Deux femmes âgées assises sur un banc sur un trottoir ensoleillé
 draft: false
 ---
 C'est un sujet important qui prend de plus en plus de place depuis que l'IA est arrivée dans nos vies. Une plateforme où, quel que soit le moment du jour et de la nuit, quelqu'un (un robot) répond à toutes nos questions, états d'âme, doutes et peurs.
 
 C'est réconfortant bien sûr et ceux qui l'utilisent peuvent penser qu'ils se sentent :
 
-\
-moins seuls,\
-soutenus,\
-entendus,\
-compris,\
-et aidés.
+* moins seuls,
+* soutenus,
+* entendus,
+* compris,
+* et aidés.
 
 Mais est-ce réellement le cas ?
 
