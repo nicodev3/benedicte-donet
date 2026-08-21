@@ -29,6 +29,7 @@ Les URLs conservées à l'identique n'ont besoin d'aucune règle.
 | `/sitemap/` | `/` | Page « plan de site » WordPress remplacée par le sitemap XML |
 | `/comment-les-traumatismes-impactent-les-relations-amoureuses/` | `/traumatisme-relation-amoureuse/` | Ancien slug d'un article qui capte déjà du trafic organique |
 | `/meditation-et-therapie-une-synergie-puissante/` | `/meditation-pleine-conscience-therapie/` | Ancien slug d'article WordPress |
+| `/pourquoi-ai-nest-pas-un-soutien-psychologique-de-confiance/` | `/pourquoi-ia-nest-pas-un-soutien-psychologique-de-confiance/` | Correction ai → ia (FR + EN) |
 | `/en/*` historiques | équivalents `/en/...` actuels | Anciennes URLs anglaises WordPress |
 
 ## Version anglaise

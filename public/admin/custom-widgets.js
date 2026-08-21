@@ -18,6 +18,49 @@
 })();
 
 /**
+ * Image Markdown sans champ Title (infobulle inutile).
+ * Remplace le composant intégré Decap qui propose Image + Alt + Title.
+ */
+(function registerImageEditorWithoutTitle() {
+  if (!window.CMS || !window.CMS.registerEditorComponent) {
+    window.setTimeout(registerImageEditorWithoutTitle, 50);
+    return;
+  }
+
+  window.CMS.registerEditorComponent({
+    id: "image",
+    label: "Image",
+    fields: [
+      {
+        label: "Image",
+        name: "image",
+        widget: "image",
+        choose_url: false,
+        media_library: { allow_multiple: false },
+      },
+      {
+        label: "Texte alternatif",
+        name: "alt",
+      },
+    ],
+    pattern: /^!\[([^\]]*)\]\((.*?)(?:\s+"([^"]*)")?\)$/,
+    fromBlock: (match) =>
+      match && {
+        alt: match[1],
+        image: match[2],
+      },
+    toBlock: ({ alt, image }) => `![${alt || ""}](${image || ""})`,
+    toPreview: ({ alt, image }, getAsset, fields) => {
+      const imageField = fields?.find((field) => field.get("widget") === "image");
+      const src = getAsset(image, imageField);
+      const safeSrc = String(src || "").replace(/"/g, "&quot;");
+      const safeAlt = String(alt || "").replace(/"/g, "&quot;");
+      return `<img src="${safeSrc}" alt="${safeAlt}" />`;
+    },
+  });
+})();
+
+/**
  * Widget Tags — chips + saisie libre + suggestions.
  * Remplace le list Decap « virgules only » (Enter / nouvelle ligne impossibles).
  * Stocke un tableau de strings, compatible avec le schéma Astro existant.

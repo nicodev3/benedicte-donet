@@ -41,6 +41,10 @@
 /comment-les-traumatismes-impactent-les-relations-amoureuses/ /traumatisme-relation-amoureuse/ 301
 /meditation-et-therapie-une-synergie-puissante/ /meditation-pleine-conscience-therapie/ 301
 
+# Correction de slug (ai → ia)
+/pourquoi-ai-nest-pas-un-soutien-psychologique-de-confiance/ /pourquoi-ia-nest-pas-un-soutien-psychologique-de-confiance/ 301
+/en/pourquoi-ai-nest-pas-un-soutien-psychologique-de-confiance/ /en/pourquoi-ia-nest-pas-un-soutien-psychologique-de-confiance/ 301
+
 # Anciennes URLs anglaises WordPress
 /en/home/ /en/ 301
 /en/about-me/ /en/a-propos/ 301
