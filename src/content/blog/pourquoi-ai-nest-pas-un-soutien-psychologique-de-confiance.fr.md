@@ -2,7 +2,9 @@
 title: IA, un soutien psychologique de confiance ?
 excerpt: "Je partage ici sur un sujet important : est-ce que l'IA peut nous
   aider dans un mieux-être psychologique ?"
-tags: []
+tags:
+  - IA
+  - Psycho
 date: 2026-08-20T00:00:00.000Z
 image: /images/cms-library/dscf8110.jpg
 imageAlt: Deux femmes âgées assises sur un banc sur un trottoir ensoleillé
