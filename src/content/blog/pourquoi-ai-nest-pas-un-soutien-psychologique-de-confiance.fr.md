@@ -50,7 +50,7 @@ L'IA peut parfois, selon la manière dont la question est formulée et les infor
 
 Dans notre vie de tous les jours, le système de valeurs de la personne à qui nous nous confions est important, sa neutralité ou bien sa vision de la vie va venir profondément guider et influencer ses réponses. Nous cherchons un cadre de compréhension qui nous permet d'être nous-mêmes, sans perpétrer de la violence sur soi ou sur les autres.
 
-*[L’entreprise Morpheus Systems a testé des dizaines de modèles d’IA générative avec des messages simulant des pensées délirantes ou mystiques. GPT-4o, le modèle par défaut de ChatGPT au moment du test, confirmait ces délires dans 68 % des cas. ](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
+L’entreprise Morpheus Systems a testé des dizaines de modèles d’IA générative avec des messages simulant des pensées délirantes ou mystiques. GPT-4o, le modèle par défaut de ChatGPT au moment du test, confirmait ces délires dans 68 % des cas ([source IFEMDR](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)).
 
 Ainsi l'IA peut nous amener sur un chemin délétère pour notre santé mentale. S'aimer, c'est prendre soin de la qualité du soutien que nous recevons au quotidien, de ce que nous lisons, de ce que nous regardons, car nous recevons constamment des informations nous guidant à agir d'une manière ou d'une autre. L'importance de développer une intelligence intuitive plutôt que de faire confiance à toute source extérieure devient presque une question primordiale dans cette nouvelle ère des intelligences artificielles. 
 
@@ -62,17 +62,9 @@ Le robot se souvient, il enregistre vos conversations passées, tout ce que vous
 
 Malheureusement, cette mémoire est également ce qui vous empêche de changer, d'évoluer et d'être vu sous un jour différent. 
 
-Ainsi, cette béquille émotionnelle pouvant paraître un soutien infaillible au premier abord, peut très vite nous pousser à l'isolement et réduire l'intimité émotionnelle avec nos compagnons humains. Des recherches ont montré combien ceux qui utilisent l'IA quotidiennement perdent contact avec leurs soutiens extérieurs :
+Ainsi, cette béquille émotionnelle pouvant paraître un soutien infaillible au premier abord, peut très vite nous pousser à l'isolement et réduire l'intimité émotionnelle avec nos compagnons humains. Des recherches ont montré combien ceux qui utilisent l'IA quotidiennement perdent contact avec leurs soutiens extérieurs.
 
- *[L’étude a analysé plus de 4 millions de conversations à la recherche d’indices affectifs et interrogé plus de 4 000 utilisateurs américains. Les résultats montrent une corrélation entre usage quotidien intensif et ](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
-
-*[augmentation du sentiment de solitude,](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
-
-*[ de la dépendance émotionnelle](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
-
-*[ et d’une utilisation jugée problématique par les utilisateurs eux-mêmes,](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
-
-*[ ainsi qu’une diminution de la socialisation.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
+Une [étude rapportée par l’IFEMDR](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/) a analysé plus de 4 millions de conversations à la recherche d’indices affectifs et interrogé plus de 4 000 utilisateurs américains. Les résultats montrent une corrélation entre usage quotidien intensif et augmentation du sentiment de solitude, de la dépendance émotionnelle et d’une utilisation jugée problématique par les utilisateurs eux-mêmes, ainsi qu’une diminution de la socialisation.
 
 ![Homme appuyé contre un taxi de Barcelone stationné dans la rue](/images/cms-library/dscf8120.jpg)
 
@@ -88,9 +80,7 @@ Ils ne vous aident peut-être pas toujours à comprendre. Mais ils peuvent vous 
 
 Et cela fait une grande différence.
 
-Dans le cadre d'une thérapie également, comme le relate cet article :
-
-*[En contexte thérapeutique, cette caractéristique est potentiellement délétère : elle peut renforcer des ruminations, des distorsions cognitives ou des croyances dysfonctionnelles que le thérapeute humain travaillerait précisément à questionner.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)* *[Ariane Calvo, psychothérapeute interviewée par France 24, résume : la verbalisation peut être accompagnée par l’IA, mais le changement thérapeutique exige une confrontation bienveillante que l’IA ne peut pas fournir.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
+Dans le cadre d'une thérapie également, comme le relate [cet article de l’IFEMDR](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/) : en contexte thérapeutique, cette caractéristique est potentiellement délétère — elle peut renforcer des ruminations, des distorsions cognitives ou des croyances dysfonctionnelles que le thérapeute humain travaillerait précisément à questionner. Ariane Calvo, psychothérapeute interviewée par France 24, résume : la verbalisation peut être accompagnée par l’IA, mais le changement thérapeutique exige une confrontation bienveillante que l’IA ne peut pas fournir.
 
 ## Nous n'avons pas besoin de plus d'IA
 
@@ -104,8 +94,4 @@ Ce lien que nous pouvons créer avec nous-mêmes : intimement, imparfaitement, c
 
 Il est humain, naturel de chercher du soutien mais il est important de pouvoir questionner, éduquer et comprendre l'impact de ce que nous faisons sur notre santé, notre bien-être.
 
-[Pour aller plus loin :](https://eudonia.fr/chatbot-sante-mentale-15-violations-ethiques-revelees-par-une-etude-majeure/)
-
-[ voici un article qui traite de ce sujet](https://eudonia.fr/chatbot-sante-mentale-15-violations-ethiques-revelees-par-une-etude-majeure/)
-
-[et un autre :)](https://theconversation.com/les-ia-nos-nouvelles-confidentes-quels-risques-pour-la-sante-mentale-258956)
+Pour aller plus loin : [chatbots et santé mentale (Eudonia)](https://eudonia.fr/chatbot-sante-mentale-15-violations-ethiques-revelees-par-une-etude-majeure/), et [les IA comme confidentes (The Conversation)](https://theconversation.com/les-ia-nos-nouvelles-confidentes-quels-risques-pour-la-sante-mentale-258956).

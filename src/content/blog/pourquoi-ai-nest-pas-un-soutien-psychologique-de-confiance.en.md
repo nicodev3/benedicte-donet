@@ -50,7 +50,7 @@ Depending on how the question is framed and what information is given, AI can so
 
 In everyday life, the value system of the person we confide in matters; their neutrality or their vision of life deeply guides and shapes their responses. We look for a frame of understanding that allows us to be ourselves, without perpetuating violence toward ourselves or others.
 
-*[The company Morpheus Systems tested dozens of generative AI models with messages simulating delusional or mystical thoughts. GPT-4o, ChatGPT’s default model at the time of the test, confirmed those delusions in 68% of cases.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
+The company Morpheus Systems tested dozens of generative AI models with messages simulating delusional or mystical thoughts. GPT-4o, ChatGPT’s default model at the time of the test, confirmed those delusions in 68% of cases ([IFEMDR source](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)).
 
 So AI can lead us down a path that is harmful to our mental health. Loving ourselves means caring about the quality of the support we receive every day, about what we read and what we watch, because we constantly receive information guiding us to act one way or another. Developing intuitive intelligence rather than trusting every outer source becomes almost a primary question in this new era of artificial intelligence.
 
@@ -62,9 +62,9 @@ The robot remembers; it records your past conversations, everything you have con
 
 Unfortunately, that memory is also what keeps you from changing, evolving, and being seen in a different light.
 
-So this emotional crutch, which can seem like infallible support at first, can quickly push us into isolation and reduce emotional intimacy with our human companions. Research has shown how much those who use AI daily lose contact with their outer supports:
+So this emotional crutch, which can seem like infallible support at first, can quickly push us into isolation and reduce emotional intimacy with our human companions. Research has shown how much those who use AI daily lose contact with their outer supports.
 
-*[The study analyzed more than 4 million conversations for affective cues and surveyed more than 4,000 American users. The results show a correlation between intensive daily use and an increase in feelings of loneliness, emotional dependence, and use judged problematic by users themselves, as well as a decrease in socialization.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
+A [study reported by IFEMDR](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/) analyzed more than 4 million conversations for affective cues and surveyed more than 4,000 American users. The results show a correlation between intensive daily use and an increase in feelings of loneliness, emotional dependence, and use judged problematic by users themselves, as well as a decrease in socialization.
 
 ![Man leaning on a Barcelona taxi parked on a city street](/images/cms-library/dscf8120.jpg)
 
@@ -80,9 +80,7 @@ They may not always help you understand. But they can help you feel, to be with,
 
 And that makes a great difference.
 
-In a therapy setting as well, as this article reports:
-
-*[In a therapeutic context, this characteristic is potentially harmful: it can reinforce ruminations, cognitive distortions, or dysfunctional beliefs that a human therapist would precisely work to question.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)* *[Ariane Calvo, a psychotherapist interviewed by France 24, sums it up: verbalization can be accompanied by AI, but therapeutic change requires a benevolent confrontation that AI cannot provide.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
+In a therapy setting as well, as [this IFEMDR article](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/) reports: in a therapeutic context, this characteristic is potentially harmful — it can reinforce ruminations, cognitive distortions, or dysfunctional beliefs that a human therapist would precisely work to question. Ariane Calvo, a psychotherapist interviewed by France 24, sums it up: verbalization can be accompanied by AI, but therapeutic change requires a benevolent confrontation that AI cannot provide.
 
 ## We do not need more AI
 
@@ -96,8 +94,4 @@ This bond we can create with ourselves — intimately, imperfectly — is what w
 
 It is human and natural to seek support, but it is important to be able to question, educate ourselves about, and understand the impact of what we do on our health and well-being.
 
-[To go further:](https://eudonia.fr/chatbot-sante-mentale-15-violations-ethiques-revelees-par-une-etude-majeure/)
-
-[here is an article on this topic](https://eudonia.fr/chatbot-sante-mentale-15-violations-ethiques-revelees-par-une-etude-majeure/)
-
-[and another :)](https://theconversation.com/les-ia-nos-nouvelles-confidentes-quels-risques-pour-la-sante-mentale-258956)
+To go further: [chatbots and mental health (Eudonia)](https://eudonia.fr/chatbot-sante-mentale-15-violations-ethiques-revelees-par-une-etude-majeure/), and [AI as confidants (The Conversation)](https://theconversation.com/les-ia-nos-nouvelles-confidentes-quels-risques-pour-la-sante-mentale-258956).

@@ -1,8 +1,10 @@
 ---
 /**
- * Rend le composant Content Astro puis optimise les <img> locales en WebP.
+ * Rend le composant Content Astro puis optimise les <img> locales en WebP
+ * et force target="_blank" sur les liens externes.
  */
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import { enhanceExternalLinks } from "@/lib/html-links";
 import { optimizeHtmlImages, type OptimizeHtmlImagesOptions } from "@/lib/optimize-html-images";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
@@ -14,12 +16,13 @@ const { Content, eagerFirst = true, widths, quality, sizes } = Astro.props;
 
 const container = await AstroContainer.create();
 const rawHtml = await container.renderToString(Content);
-const html = await optimizeHtmlImages(rawHtml, {
+const withImages = await optimizeHtmlImages(rawHtml, {
   eagerFirst,
   widths,
   quality,
   sizes,
 });
+const html = enhanceExternalLinks(withImages);
 ---
 
 <Fragment set:html={html} />

@@ -65,10 +65,32 @@ collections:
         hint: "Résumé court affiché sur la page Blog (2-3 phrases)."
       - label: "Tags"
         name: "tags"
-        widget: "list"
+        widget: "tags"
         i18n: true
         required: false
-        hint: "Un tag par ligne. Réutilisez si possible : Psycho, EMDR, Trauma, Pleine conscience, Psychoéducation, Psychologie positive, Relations humaines, Théorie de l'attachement, Respiration, Santé, Gratitude."
+        hint: "Ajoutez plusieurs tags (Entrée pour valider). Vous pouvez créer un nouveau tag ou choisir une suggestion."
+        suggestions:
+          - Psycho
+          - EMDR
+          - Trauma
+          - Pleine conscience
+          - Psychoéducation
+          - Psychologie positive
+          - Relations humaines
+          - Théorie de l'attachement
+          - Respiration
+          - Santé
+          - Gratitude
+          - Relation à l'argent
+          - Psychology
+          - Mindfulness
+          - Psychoeducation
+          - Positive psychology
+          - Human relationships
+          - Attachment theory
+          - Breathing
+          - Health
+          - Relationship with money
       - label: "Date de publication"
         name: "date"
         widget: "datetime"

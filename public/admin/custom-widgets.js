@@ -17,6 +17,329 @@
   });
 })();
 
+/**
+ * Widget Tags — chips + saisie libre + suggestions.
+ * Remplace le list Decap « virgules only » (Enter / nouvelle ligne impossibles).
+ * Stocke un tableau de strings, compatible avec le schéma Astro existant.
+ */
+(function registerTagsWidget() {
+  if (!window.CMS || !window.CMS.registerWidget) {
+    window.setTimeout(registerTagsWidget, 50);
+    return;
+  }
+
+  const h = window.h;
+  const createClass = window.createClass;
+
+  const DEFAULT_SUGGESTIONS = [
+    "Psycho",
+    "EMDR",
+    "Trauma",
+    "Pleine conscience",
+    "Psychoéducation",
+    "Psychologie positive",
+    "Relations humaines",
+    "Théorie de l'attachement",
+    "Respiration",
+    "Santé",
+    "Gratitude",
+    "Relation à l'argent",
+    "Psychology",
+    "Mindfulness",
+    "Psychoeducation",
+    "Positive psychology",
+    "Human relationships",
+    "Attachment theory",
+    "Breathing",
+    "Health",
+    "Relationship with money",
+  ];
+
+  const normalizeTag = (tag) => String(tag ?? "").trim().replace(/\s+/g, " ");
+
+  const toTagList = (value) => {
+    if (value == null || value === "") return [];
+    if (typeof value.toJS === "function") return toTagList(value.toJS());
+    if (Array.isArray(value)) {
+      return value.map(normalizeTag).filter(Boolean);
+    }
+    if (typeof value === "string") {
+      return value
+        .split(/[\n,;]+/)
+        .map(normalizeTag)
+        .filter(Boolean);
+    }
+    return [];
+  };
+
+  const uniquePreserveOrder = (tags) => {
+    const seen = new Set();
+    const result = [];
+    for (const tag of tags) {
+      const key = tag.toLocaleLowerCase("fr");
+      if (seen.has(key)) continue;
+      seen.add(key);
+      result.push(tag);
+    }
+    return result;
+  };
+
+  const TagsControl = createClass({
+    getInitialState() {
+      return { draft: "", focused: false };
+    },
+
+    getSuggestions() {
+      const fromConfig = this.props.field?.get?.("suggestions");
+      if (fromConfig && typeof fromConfig.toJS === "function") {
+        return toTagList(fromConfig.toJS());
+      }
+      if (Array.isArray(fromConfig)) return toTagList(fromConfig);
+      return DEFAULT_SUGGESTIONS;
+    },
+
+    commitTags(tags) {
+      this.props.onChange(uniquePreserveOrder(tags.map(normalizeTag).filter(Boolean)));
+    },
+
+    addTags(rawTags) {
+      const incoming = uniquePreserveOrder(
+        (Array.isArray(rawTags) ? rawTags : [rawTags]).map(normalizeTag).filter(Boolean)
+      );
+      if (!incoming.length) return;
+      const current = toTagList(this.props.value);
+      this.commitTags([...current, ...incoming]);
+      this.setState({ draft: "" });
+    },
+
+    addTag(raw) {
+      this.addTags([raw]);
+    },
+
+    removeTag(tagToRemove) {
+      const key = tagToRemove.toLocaleLowerCase("fr");
+      this.commitTags(
+        toTagList(this.props.value).filter((tag) => tag.toLocaleLowerCase("fr") !== key)
+      );
+    },
+
+    handleDraftChange(event) {
+      const next = event.target.value;
+      if (/[,;\n]/.test(next)) {
+        const parts = next.split(/[,;\n]+/);
+        const last = parts.pop() ?? "";
+        this.addTags(parts);
+        this.setState({ draft: last });
+        return;
+      }
+      this.setState({ draft: next });
+    },
+
+    handleKeyDown(event) {
+      if (event.key === "Enter" || event.key === ",") {
+        event.preventDefault();
+        this.addTag(this.state.draft);
+        return;
+      }
+      if (event.key === "Backspace" && !this.state.draft) {
+        const tags = toTagList(this.props.value);
+        if (tags.length > 0) this.removeTag(tags[tags.length - 1]);
+      }
+    },
+
+    render() {
+      const tags = toTagList(this.props.value);
+      const selectedKeys = new Set(tags.map((tag) => tag.toLocaleLowerCase("fr")));
+      const draft = this.state.draft;
+      const draftKey = normalizeTag(draft).toLocaleLowerCase("fr");
+      const suggestions = this.getSuggestions().filter(
+        (suggestion) => !selectedKeys.has(suggestion.toLocaleLowerCase("fr"))
+      );
+      const filteredSuggestions = draft
+        ? suggestions.filter((suggestion) =>
+            suggestion.toLocaleLowerCase("fr").includes(draftKey)
+          )
+        : suggestions;
+      const canCreate =
+        Boolean(draftKey) && !selectedKeys.has(draftKey) &&
+        !suggestions.some((suggestion) => suggestion.toLocaleLowerCase("fr") === draftKey);
+
+      return h(
+        "div",
+        { className: this.props.classNameWrapper, style: { padding: "12px 14px" } },
+        h(
+          "div",
+          {
+            style: {
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "8px",
+              alignItems: "center",
+              minHeight: "42px",
+              padding: "8px 10px",
+              border: "1px solid #e7ddd4",
+              borderRadius: "8px",
+              background: "#fffdf9",
+            },
+          },
+          ...tags.map((tag) =>
+            h(
+              "span",
+              {
+                key: tag,
+                style: {
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  padding: "4px 10px",
+                  borderRadius: "999px",
+                  background: "#efe5dc",
+                  color: "#3f474f",
+                  fontSize: "13px",
+                  lineHeight: 1.3,
+                },
+              },
+              tag,
+              h(
+                "button",
+                {
+                  type: "button",
+                  "aria-label": `Retirer le tag ${tag}`,
+                  onClick: () => this.removeTag(tag),
+                  style: {
+                    border: "none",
+                    background: "transparent",
+                    cursor: "pointer",
+                    color: "#6e756f",
+                    fontSize: "14px",
+                    lineHeight: 1,
+                    padding: 0,
+                  },
+                },
+                "×"
+              )
+            )
+          ),
+          h("input", {
+            id: this.props.forID,
+            type: "text",
+            value: draft,
+            placeholder: tags.length
+              ? "Ajouter un autre tag…"
+              : "Écrire un tag puis Entrée",
+            onChange: this.handleDraftChange,
+            onKeyDown: this.handleKeyDown,
+            onFocus: () => this.setState({ focused: true }),
+            onBlur: () => this.setState({ focused: false }),
+            style: {
+              flex: "1 1 160px",
+              minWidth: "140px",
+              border: "none",
+              outline: "none",
+              background: "transparent",
+              fontSize: "14px",
+              color: "#3f474f",
+              padding: "4px 2px",
+            },
+          })
+        ),
+        h(
+          "p",
+          {
+            style: {
+              margin: "10px 0 6px",
+              fontSize: "12px",
+              color: "#6e756f",
+              lineHeight: 1.45,
+            },
+          },
+          "Appuyez sur Entrée pour ajouter. Vous pouvez créer un tag qui n’existe pas encore, ou cliquer une suggestion."
+        ),
+        canCreate &&
+          h(
+            "button",
+            {
+              type: "button",
+              onMouseDown: (event) => event.preventDefault(),
+              onClick: () => this.addTag(draft),
+              style: {
+                marginBottom: "8px",
+                border: "1px dashed #b98278",
+                background: "#fff",
+                color: "#b98278",
+                borderRadius: "8px",
+                padding: "6px 10px",
+                cursor: "pointer",
+                fontSize: "13px",
+              },
+            },
+            `Créer le tag « ${normalizeTag(draft)} »`
+          ),
+        filteredSuggestions.length > 0 &&
+          h(
+            "div",
+            {
+              style: {
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "6px",
+              },
+            },
+            ...filteredSuggestions.slice(0, 16).map((suggestion) =>
+              h(
+                "button",
+                {
+                  key: suggestion,
+                  type: "button",
+                  onMouseDown: (event) => event.preventDefault(),
+                  onClick: () => this.addTag(suggestion),
+                  style: {
+                    border: "1px solid #e7ddd4",
+                    background: "#fff",
+                    color: "#3f474f",
+                    borderRadius: "999px",
+                    padding: "4px 10px",
+                    cursor: "pointer",
+                    fontSize: "12px",
+                  },
+                },
+                suggestion
+              )
+            )
+          )
+      );
+    },
+  });
+
+  const TagsPreview = createClass({
+    render() {
+      const tags = toTagList(this.props.value);
+      if (!tags.length) return h("span", {}, "");
+      return h(
+        "ul",
+        { style: { display: "flex", flexWrap: "wrap", gap: "6px", listStyle: "none", padding: 0, margin: 0 } },
+        ...tags.map((tag) =>
+          h(
+            "li",
+            {
+              key: tag,
+              style: {
+                padding: "2px 8px",
+                borderRadius: "999px",
+                background: "#efe5dc",
+                fontSize: "12px",
+              },
+            },
+            tag
+          )
+        )
+      );
+    },
+  });
+
+  window.CMS.registerWidget("tags", TagsControl, TagsPreview);
+})();
+
 // Configure un media handler qui normalise les chemins d'images
 (function setupImagePathNormalization() {
   if (!window.CMS) {

@@ -1,3 +1,5 @@
+import { isExternalHref } from "@/lib/html-links";
+
 const escapeHtmlMap: Record<string, string> = {
   "&": "&amp;",
   "<": "&lt;",
@@ -12,7 +14,12 @@ function escapeHtml(value: string): string {
 
 export function renderInlineRichText(value: string): string {
   return escapeHtml(value)
-    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*)\)/g, '<a href="$2">$1</a>')
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*)\)/g, (_match, label, href) => {
+      const externalAttrs = isExternalHref(href)
+        ? ' target="_blank" rel="noopener noreferrer"'
+        : "";
+      return `<a href="${href}"${externalAttrs}>${label}</a>`;
+    })
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
 }

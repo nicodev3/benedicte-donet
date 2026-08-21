@@ -19,6 +19,8 @@ Ce guide explique comment modifier votre site vous-même, sans connaissance tech
 2. Remplissez :
    - **Titre** : le titre de l'article.
    - **Extrait** : 2-3 phrases affichées sur la page Blog.
+   - **Tags** : tapez un mot puis Entrée (plusieurs possibles). Cliquez une
+     suggestion ou créez un tag nouveau.
    - **Date de publication**.
    - **Image principale** : cliquez sur « Choisir une image » pour envoyer une photo.
    - **Description de l'image** : quelques mots décrivant l'image (utile pour Google).
