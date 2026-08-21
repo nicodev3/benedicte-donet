@@ -31,7 +31,7 @@
   const h = window.h;
   const createClass = window.createClass;
 
-  const DEFAULT_SUGGESTIONS = [
+  const SUGGESTIONS_FR = [
     "Psycho",
     "EMDR",
     "Trauma",
@@ -44,7 +44,12 @@
     "Santé",
     "Gratitude",
     "Relation à l'argent",
+  ];
+
+  const SUGGESTIONS_EN = [
     "Psychology",
+    "EMDR",
+    "Trauma",
     "Mindfulness",
     "Psychoeducation",
     "Positive psychology",
@@ -52,6 +57,7 @@
     "Attachment theory",
     "Breathing",
     "Health",
+    "Gratitude",
     "Relationship with money",
   ];
 
@@ -84,18 +90,46 @@
     return result;
   };
 
+  /** Locale du contenu en cours d'édition (FR/EN), pas la langue de l'UI CMS. */
+  const getContentLocale = () => {
+    try {
+      const state = window.CMS.getStore?.()?.getState?.();
+      const entry = state?.entryDraft?.entry;
+      const path =
+        (typeof entry?.get === "function" && (entry.get("path") || entry.get("slug"))) ||
+        "";
+      if (typeof path === "string") {
+        if (/\.en\.(md|mdx|json)$/i.test(path) || /\.en$/i.test(path)) return "en";
+        if (/\.fr\.(md|mdx|json)$/i.test(path) || /\.fr$/i.test(path)) return "fr";
+      }
+
+      const activeLocale = document.querySelector(
+        '[class*="PaneContainer"] [class*="LanguageNav"] button[class*="active"], [class*="I18n"] button[aria-pressed="true"], [class*="LanguageNav"] [aria-current="true"]'
+      );
+      const label = activeLocale?.textContent?.trim().toLowerCase() ?? "";
+      if (label === "en" || label.startsWith("en") || label.includes("english")) return "en";
+      if (label === "fr" || label.startsWith("fr") || label.includes("fran")) return "fr";
+    } catch (_) {
+      /* ignore */
+    }
+    return "fr";
+  };
+
   const TagsControl = createClass({
     getInitialState() {
       return { draft: "", focused: false };
     },
 
     getSuggestions() {
-      const fromConfig = this.props.field?.get?.("suggestions");
+      const locale = getContentLocale();
+      const field = this.props.field;
+      const key = locale === "en" ? "suggestions_en" : "suggestions_fr";
+      const fromConfig = field?.get?.(key) ?? field?.get?.("suggestions");
       if (fromConfig && typeof fromConfig.toJS === "function") {
         return toTagList(fromConfig.toJS());
       }
       if (Array.isArray(fromConfig)) return toTagList(fromConfig);
-      return DEFAULT_SUGGESTIONS;
+      return locale === "en" ? SUGGESTIONS_EN : SUGGESTIONS_FR;
     },
 
     commitTags(tags) {
@@ -253,7 +287,7 @@
               lineHeight: 1.45,
             },
           },
-          "Appuyez sur Entrée pour ajouter. Vous pouvez créer un tag qui n’existe pas encore, ou cliquer une suggestion."
+          "Appuyez sur Entrée pour ajouter. Suggestions selon la langue de l’article (FR/EN) ; vous pouvez aussi créer un tag libre."
         ),
         canCreate &&
           h(

@@ -68,8 +68,8 @@ collections:
         widget: "tags"
         i18n: true
         required: false
-        hint: "Ajoutez plusieurs tags (Entrée pour valider). Vous pouvez créer un nouveau tag ou choisir une suggestion."
-        suggestions:
+        hint: "Ajoutez plusieurs tags (Entrée pour valider). Les suggestions suivent la langue de l’article (FR ou EN). Vous pouvez aussi créer un nouveau tag."
+        suggestions_fr:
           - Psycho
           - EMDR
           - Trauma
@@ -82,7 +82,10 @@ collections:
           - Santé
           - Gratitude
           - Relation à l'argent
+        suggestions_en:
           - Psychology
+          - EMDR
+          - Trauma
           - Mindfulness
           - Psychoeducation
           - Positive psychology
@@ -90,6 +93,7 @@ collections:
           - Attachment theory
           - Breathing
           - Health
+          - Gratitude
           - Relationship with money
       - label: "Date de publication"
         name: "date"
