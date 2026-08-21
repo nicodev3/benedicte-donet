@@ -3,6 +3,7 @@ title: "AI, a trustworthy source of psychological support?"
 excerpt: "I want to share my thoughts on an important question: can AI really help us toward greater psychological well-being?"
 date: 2026-08-20T00:00:00.000Z
 image: /images/cms-library/dscf8110.jpg
+imageAlt: "Two elderly women sitting on a bench on a sunny city sidewalk"
 draft: false
 ---
 This is an important topic that has taken up more and more space since AI entered our lives. A platform where, at any hour of the day or night, someone (a robot) answers all our questions, moods, doubts, and fears.
@@ -36,7 +37,7 @@ What I teach my patients every day is how much their body and their inner wisdom
 
 So turning to a robot to understand ourselves is often a detour rather than the royal road.
 
-![](/images/cms-library/dscf8112.jpg)
+![Pedestrians walking along a tree-lined boulevard next to a coffee kiosk](/images/cms-library/dscf8112.jpg)
 
 ## Being validated above all
 
@@ -64,7 +65,7 @@ So this emotional crutch, which can seem like infallible support at first, can q
 
 *[The study analyzed more than 4 million conversations for affective cues and surveyed more than 4,000 American users. The results show a correlation between intensive daily use and an increase in feelings of loneliness, emotional dependence, and use judged problematic by users themselves, as well as a decrease in socialization.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
 
-![](/images/cms-library/dscf8120.jpg)
+![Man leaning on a Barcelona taxi parked on a city street](/images/cms-library/dscf8120.jpg)
 
 ## Because yes, humans are imperfect
 

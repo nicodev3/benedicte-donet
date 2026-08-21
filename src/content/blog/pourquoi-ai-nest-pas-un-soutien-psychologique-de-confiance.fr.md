@@ -4,6 +4,7 @@ excerpt: "Je partage ici sur un sujet important : est-ce que l'IA peut nous aide
   dans un mieux-être psychologique ?"
 date: 2026-08-20T00:00:00.000Z
 image: /images/cms-library/dscf8110.jpg
+imageAlt: "Deux femmes âgées assises sur un banc sur un trottoir ensoleillé"
 draft: false
 ---
 C'est un sujet important qui prend de plus en plus de place depuis que l'IA est arrivée dans nos vies. Une plateforme où, quel que soit le moment du jour et de la nuit, quelqu'un (un robot) répond à toutes nos questions, états d'âme, doutes et peurs.
@@ -37,7 +38,7 @@ Ce que j'enseigne chaque jour à mes patients, c'est combien leur corps, leurs s
 
 Alors aller chercher un robot pour se comprendre, c'est souvent un détour plutôt que la voie royale.
 
-![](/images/cms-library/dscf8112.jpg)
+![Piétons sur un boulevard ombragé devant un kiosque à café](/images/cms-library/dscf8112.jpg)
 
 ## Être validé avant tout
 
@@ -73,7 +74,7 @@ Ainsi, cette béquille émotionnelle pouvant paraître un soutien infaillible au
 
 *[ ainsi qu’une diminution de la socialisation.](https://www.ifemdr.fr/quand-les-patients-utilisent-lia-comme-psy-ce-que-le-clinicien-doit-savoir/)*
 
-![](/images/cms-library/dscf8120.jpg)
+![Homme appuyé contre un taxi de Barcelone stationné dans la rue](/images/cms-library/dscf8120.jpg)
 
 ## Car oui, les humains sont imparfaits
 
