@@ -70,6 +70,12 @@ const serviceLinks = [
   },
 ];
 
+const formattedDate = new Intl.DateTimeFormat(t.locale.date, {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+}).format(date);
+
 ---
 
 <BaseLayout
@@ -85,8 +91,6 @@ const serviceLinks = [
 >
   <PostHero
     title={title}
-    date={date}
-    dateLocale={t.locale.date}
     backgroundImage={image}
     backgroundImageAlt={imageAlt || title}
   />
@@ -96,6 +100,15 @@ const serviceLinks = [
       <div class="post-breadcrumb">
         <Breadcrumb items={breadcrumbs} locale={locale} />
       </div>
+
+      <p class="post-meta">
+        <span class="post-meta-author">
+          {t.blogPost.authorByline}{" "}
+          <a href={localizedPath("/a-propos/", locale)}>{global.siteName}</a>
+        </span>
+        <span class="post-meta-sep" aria-hidden="true">·</span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </p>
 
       <ShareButtons
         title={title}
@@ -172,11 +185,34 @@ const serviceLinks = [
 
 <style>
   .post-breadcrumb {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
   }
 
   .post-breadcrumb :global(.breadcrumb) {
     margin-bottom: 0;
+  }
+
+  .post-meta {
+    margin: 0 0 var(--space-md);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: var(--color-text-soft);
+  }
+
+  .post-meta-sep {
+    margin-inline: 0.5em;
+  }
+
+  .post-meta-author a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .post-meta-author a:hover {
+    color: var(--color-primary-dark);
   }
 
   .post {

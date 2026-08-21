@@ -36,6 +36,7 @@ interface UiTranslations {
   };
   blogPost: {
     tagsLabel: string;
+    authorByline: string;
     footerText: string;
     footerCta: string;
     serviceLinksTitle: string;
@@ -124,6 +125,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     },
     blogPost: {
       tagsLabel: "Mots-clés de l'article",
+      authorByline: "Par",
       footerText:
         "Envie d'aller plus loin ? Je vous accompagne en téléconsultation.",
       footerCta: "Je prends rendez-vous",
@@ -214,6 +216,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     },
     blogPost: {
       tagsLabel: "Article tags",
+      authorByline: "By",
       footerText:
         "Would you like to go further? I offer online consultations.",
       footerCta: "Book a session",

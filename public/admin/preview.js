@@ -372,8 +372,8 @@
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return "";
     return new Intl.DateTimeFormat("fr-FR", {
-      day: "2-digit",
-      month: "2-digit",
+      day: "numeric",
+      month: "long",
       year: "numeric",
     }).format(date);
   };
@@ -398,13 +398,20 @@
         h(
           "div",
           { className: "cms-preview-post-hero-content" },
-          date && h("p", { className: "cms-preview-post-hero-meta" }, formatDate(date)),
           h("h1", null, title)
         )
       ),
       h(
         "article",
         { className: "cms-preview-post" },
+        date &&
+          h(
+            "p",
+            { className: "cms-preview-post-meta" },
+            h("span", { className: "cms-preview-post-meta-author" }, "Par Bénédicte Donet"),
+            h("span", { className: "cms-preview-post-meta-sep", "aria-hidden": "true" }, "·"),
+            formatDate(date)
+          ),
         tags.length > 0 &&
           h(
             "ul",

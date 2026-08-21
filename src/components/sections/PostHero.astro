@@ -4,8 +4,6 @@ import { preventPunctuationWrap } from "@/lib/typography";
 
 interface Props {
   title: string;
-  date: Date;
-  dateLocale: string;
   backgroundImage?: string;
   backgroundImageAlt: string;
   backgroundPosition?: string;
@@ -13,18 +11,10 @@ interface Props {
 
 const {
   title,
-  date,
-  dateLocale,
   backgroundImage,
   backgroundImageAlt,
   backgroundPosition = "center right",
 } = Astro.props;
-
-const formattedDate = new Intl.DateTimeFormat(dateLocale, {
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(date);
 
 const heroImage = await getOptimizedImage(backgroundImage, {
   widths: [414, 640, 828, 1200],
@@ -58,9 +48,6 @@ const heroImage = await getOptimizedImage(backgroundImage, {
     }
     <div class="post-hero-overlay" aria-hidden="true" />
     <div class="post-hero-content">
-      <p class="post-hero-meta">
-        <time datetime={date.toISOString()}>{formattedDate}</time>
-      </p>
       <h1>{preventPunctuationWrap(title)}</h1>
     </div>
   </div>
@@ -111,21 +98,9 @@ const heroImage = await getOptimizedImage(backgroundImage, {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5625rem;
     width: 100%;
     max-width: 52rem;
     padding: 3.125rem 1.5rem;
-  }
-
-  .post-hero-meta {
-    margin: 0;
-    font-family: var(--font-body);
-    font-size: clamp(0.875rem, 0.8rem + 0.35vw, 1.125rem);
-    font-weight: 300;
-    letter-spacing: 0.056em;
-    text-transform: uppercase;
-    color: var(--color-text);
-    text-decoration: underline;
   }
 
   .post-hero-content h1 {
@@ -161,7 +136,6 @@ const heroImage = await getOptimizedImage(backgroundImage, {
 
     .post-hero-content {
       padding: 2.5rem 1rem;
-      gap: 1.25rem;
     }
   }
 </style>

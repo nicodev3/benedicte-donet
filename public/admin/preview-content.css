@@ -265,19 +265,9 @@ a.cms-preview-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5625rem;
   width: 100%;
   max-width: 52rem;
   padding: 3.125rem 1.5rem;
-}
-
-.cms-preview-post-hero-meta {
-  margin: 0;
-  font-size: 0.875rem;
-  font-weight: 300;
-  letter-spacing: 0.056em;
-  text-transform: uppercase;
-  text-decoration: underline;
 }
 
 .cms-preview-post-hero-content h1,
@@ -302,6 +292,18 @@ a.cms-preview-button {
   max-width: var(--container-narrow);
   margin: 0 auto;
   padding: var(--space-xl) var(--space-md);
+}
+
+.cms-preview-post-meta {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--color-text-soft);
+}
+
+.cms-preview-post-meta-sep {
+  margin-inline: 0.5em;
 }
 
 .cms-preview-post-tags {
