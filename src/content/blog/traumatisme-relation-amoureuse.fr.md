@@ -94,6 +94,7 @@ Dans de nombreux cas, l’aide d’un thérapeute est précieuse.
 Une **thérapie individuelle** ou **de couple** permet d’explorer les mécanismes à l’œuvre et de se libérer des schémas répétitifs. L’EMDR, par exemple, peut être une méthode efficace pour traiter les traumatismes.
 
 👉 [Découvrir l’EMDR, une méthode efficace pour traiter les traumatismes](/therapie-emdr/)  
+👉 [Psychologue EMDR en ligne — mon approche](/psychotherapie/)  
 👉 [Me contacter pour un accompagnement thérapeutique](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 * * *

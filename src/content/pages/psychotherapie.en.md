@@ -65,6 +65,8 @@ Initially driven by a passion for the psychology of infants, children, adolescen
 
 Trauma manifests when the emotions associated with an event or situation overwhelm a person and leave lasting imprints on their psyche. When traumas occur, the brain can sometimes struggle to fully integrate them, creating traces in memory that can be reactivated by everyday events. Therapy thus proves to be **crucial support for understanding, accompanying and overcoming suffering linked to post-traumatic stress**, including intrusive images, persistent thoughts, persistent anxiety, unpleasant physical reactions and associated emotional imbalances.
 
+This also includes wounds of attachment: [trauma in romantic relationships](/en/traumatisme-relation-amoureuse/) often leaves painful patterns that [EMDR therapy](/en/therapie-emdr/) can help reprocess.
+
 ### Support around sexuality
 
 In the field of sexuality, I pay particular attention to fostering a delicate exploration of past traumas, your personal journey and the impact of these experiences on the difficulties you face. Sexual disorders can take different forms, including pain during intercourse, a lack of interest or sexual desire, difficulties related to arousal or orgasm, or challenges in establishing intimate relationships, among others.

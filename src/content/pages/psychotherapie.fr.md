@@ -65,6 +65,8 @@ Initialement animée par une passion pour la psychologie du nourrisson, de l’e
 
 Le traumatisme se manifeste lorsque les émotions associées à un événement ou à une situation submergent une personne et laissent des empreintes durables dans son psychisme. Lorsque des traumatismes surviennent, le cerveau peut parfois éprouver des difficultés à les intégrer pleinement, engendrant des traces dans la mémoire qui peuvent être réactivées par des événements du quotidien. La thérapie se révèle ainsi un **soutien crucial pour comprendre, accompagner et surmonter les souffrances liées au stress post-traumatique**, notamment les images envahissantes, les pensées persistantes, l’angoisse tenace, les réactions physiques désagréables et les déséquilibres émotionnels associés.
 
+Cela concerne aussi les blessures du lien : le [traumatisme en relation amoureuse](/traumatisme-relation-amoureuse/) laisse souvent des schémas d’attachement douloureux que la [thérapie EMDR](/therapie-emdr/) peut aider à retraiter.
+
 ### Accompagnement autour de la sexualité
 
 Dans le domaine de la sexualité, je porte une attention particulière à favoriser une exploration délicate des traumatismes passés, de votre parcours personnel et de l’impact de ces expériences sur les difficultés que vous affrontez. Les troubles sexuels peuvent prendre différentes formes, notamment des douleurs lors des rapports, un manque d’intérêt ou de désir sexuel, des difficultés liées à l’excitation ou à l’orgasme, ou encore des défis à établir des relations intimes, entre autres.

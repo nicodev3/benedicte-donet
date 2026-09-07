@@ -94,6 +94,7 @@ In many cases, the help of a therapist is invaluable.
 **Individual** or **couples therapy** makes it possible to explore the mechanisms at work and free oneself from repetitive patterns. EMDR, for example, can be an effective method for treating trauma.
 
 👉 [Discover EMDR, an effective method for treating trauma](/en/therapie-emdr/)  
+👉 [Online EMDR psychologist — my approach](/en/psychotherapie/)  
 👉 [Contact me for therapeutic support](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 * * *
