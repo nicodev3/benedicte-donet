@@ -4,7 +4,7 @@ excerpt: "I want to share my thoughts on an important question: can AI really
   help us toward greater psychological well-being?"
 tags:
   - AI
-  - Psycho
+  - Psychology
 date: 2026-08-20T00:00:00.000Z
 updated: null
 image: /images/cms-library/dscf8110.jpg
