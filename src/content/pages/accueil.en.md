@@ -40,7 +40,7 @@ home:
       Through these offerings, I invite you to embark on a journey of **self-knowledge** and learning tools that help you cultivate greater harmony in your relationship with yourself and the world.
     ctaLabel: Book now
     ctaUrl: /masterclass/
-    image: /images/portraits/portrait-02.jpg
+    image: /images/cms-library/products-poster-meditation-01.jpg
   hero:
     title: Online psychologist
     subtitle: Trauma therapy | EMDR | Sexuality

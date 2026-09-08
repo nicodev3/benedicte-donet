@@ -40,7 +40,7 @@ home:
       À travers ces offres, je vous invite à entreprendre un voyage de **connaissance de soi** et d'apprentissage d'outils vous permettant de cultiver davantage d'harmonie dans votre relation avec vous-même et le monde.
     ctaLabel: Je réserve
     ctaUrl: /masterclass/
-    image: /images/portraits/portrait-02.jpg
+    image: /images/cms-library/products-poster-meditation-01.jpg
   hero:
     title: Psychologue en ligne
     subtitle: Trauma-thérapies | EMDR | Sexualité
