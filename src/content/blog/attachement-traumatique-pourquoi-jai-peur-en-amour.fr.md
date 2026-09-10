@@ -28,9 +28,9 @@ Cette sécurité émotionnelle, c'est elle qui **permet ensuite d'explorer le mo
 
 ## L'héritage d'insécurité
 
-Peut-être qu'en grandissant, les adultes autour de toi n'avaient pas, eux-mêmes, la capacité de nommer et accueillir leurs émotions, alors encore moins celles de leurs enfants. Le but n'est pas de juger ou **blâmer les générations passées**, mais de reconnaître ce qu'ils n'ont eux mêmes pas reçu et n'ont **donc pas pu transmettre à la génération suivante**. 
+Peut-être qu'en grandissant, les adultes autour de toi n'avaient pas, eux-mêmes, la capacité de nommer et accueillir leurs émotions, alors encore moins celles de leurs enfants. Le but n'est pas de juger ou **blâmer les générations passées**, mais de reconnaître ce qu'ils n'ont eux-mêmes pas reçu et n'ont **donc pas pu transmettre à la génération suivante**. 
 
-La conscience du réel soin a apporter a un enfant est récente. Il y a quelques dizaines d'années à peine, on soignait encore les personnes en difficulté à coups de douches froides dans les hôpitaux psychiatriques. Les émotions étaient mises sous le tapis.
+La conscience du réel soin à apporter à un enfant est récente. Il y a quelques dizaines d'années à peine, on soignait encore les personnes en difficulté à coups de douches froides dans les hôpitaux psychiatriques. Les émotions étaient mises sous le tapis.
 
 Dans les générations précédentes, de nombreuses pratiques créant de l'insécurité ont été transmises et **normalisées** en France (et dans bien d'autres pays). 
 
@@ -50,7 +50,7 @@ la peur de l'autre se développe, des mécanismes **d'immobilité s'installent**
 
 ## Pourquoi ?
 
-Car quand un enfant est puni en utilisant la violence physique (ou verbale) **le corps se souvient**. Ils se souvient et dans le future, cette mémoire corporel peut se réactiver, simplement en étant au contact d'un autre être humain, notamment dans l'intimité.
+Car quand un enfant est puni en utilisant la violence physique (ou verbale) **le corps se souvient**. Il se souvient et dans le futur, cette mémoire corporelle peut se réactiver, simplement en étant au contact d'un autre être humain, notamment dans l'intimité.
 
 **Les études sur les châtiments corporels montrent une association avec :** 
 
@@ -68,7 +68,7 @@ Sur le plan psychologique, la gifle (par exemple) **rompt la sécurité affectiv
 
 Répétée, elle peut créer un attachement dit **« désorganisé »**, où l'enfant est **pris entre son besoin de proximité et sa peur de la figure d'attachement**.
 
-Si tu as vécu quelque choses de similaire, c'est précisément ce qui peut se rejouer dans tes relations actuelles, **sans que tu comprennes pourquoi** : 
+Si tu as vécu quelque chose de similaire, c'est précisément ce qui peut se rejouer dans tes relations actuelles, **sans que tu comprennes pourquoi** : 
 
 tu as envie de t'attacher, d'aller vers l'autre — et en même temps tu sens un danger inexplicable, une peur du lien.
 
@@ -86,11 +86,11 @@ Il apprend à **anticiper l'humeur** de l'autre plutôt qu'à exprimer la sienne
 
 Devenu adulte, ce mécanisme se rejoue en couple : un ton un peu sec, un silence, un désaccord **peuvent réactiver une alarme intérieure disproportionnée** par rapport à la situation présente — parce que le corps réagit à ce qu'il a appris à redouter, pas seulement à ce qui se passe réellement aujourd'hui.
 
-Je tiens aussi a nommer que cette violence peut avoir été transmise par: 
+Je tiens aussi à nommer que cette violence peut avoir été transmise par : 
 
-D'autres enfants en maternelle, à l'école primaire, collège, lycée, camp de vacances, toutes situations de groupe ou l'enfant est suceptible de vivre une forme de harcèlement.
+D'autres enfants en maternelle, à l'école primaire, collège, lycée, camp de vacances, toutes situations de groupe où l'enfant est susceptible de vivre une forme de harcèlement.
 
-Egalement, certaines personne ont vécu de la violences éducatives par des professeurs dans le parcours scolaire ou patron au travail laissant des traces.
+Également, certaines personnes ont vécu des violences éducatives par des professeurs dans le parcours scolaire ou d'un patron au travail, laissant des traces.
 
 ### L'absence
 
@@ -104,7 +104,7 @@ L'enfant apprend alors que ses besoins **ne trouveront pas toujours de réponse*
 
 Ici, les rôles s'inversent : c'est l'enfant qui devient la personne sur qui le parent s'appuie émotionnellement — pour être rassuré, consolé, valorisé. On parle parfois de **parentification**.
 
-L'enfant apprend très tôt à être attentif aux émotions de l'adulte, hyper vigilant, parfois à les gérer, au détriment **de ses propres besoins** qui passent au second plan, voire deviennent invisibles à ses propres yeux.
+L'enfant apprend très tôt à être attentif aux émotions de l'adulte, hypervigilant, parfois à les gérer, au détriment **de ses propres besoins** qui passent au second plan, voire deviennent invisibles à ses propres yeux.
 
 Adulte, cette personne est souvent celle qui **prend soin de tout le monde**, qui a du mal à recevoir, et qui **se sent coupable dès qu'elle priorise ses propres besoins dans une relation**.
 
@@ -120,6 +120,6 @@ En couple, cela peut donner une grande difficulté à poser ses limites, à expr
 
 ## Pour conclure
 
-Si tu te reconnais dans une ou plusieurs de ces situations, **ce n'est pas parce que tu es « trop sensible » ou « compliqué·e »** en amour. Ce sont des réponses tout à fait logiques d'un système nerveux qui a appris, très tôt, que **le lien pouvait être dangereux**, imprévisible, ou conditionné à répondre aux besoins de quelqu'un d'autre. Le stress post traumatique de ce genre d'expérience peut perdurer et empêcher des relations amoureuses sécurisante et confiante.
+Si tu te reconnais dans une ou plusieurs de ces situations, **ce n'est pas parce que tu es « trop sensible » ou « compliqué·e »** en amour. Ce sont des réponses tout à fait logiques d'un système nerveux qui a appris, très tôt, que **le lien pouvait être dangereux**, imprévisible, ou conditionné à répondre aux besoins de quelqu'un d'autre. Le stress post-traumatique de ce genre d'expérience peut perdurer et empêcher des relations amoureuses sécurisantes et confiantes.
 
 La bonne nouvelle, c'est que **ce qui a été appris peut être réappris**. L'attachement n'est pas figé : avec le temps, **la conscience de ces mécanismes**, et parfois un accompagnement thérapeutique, il est possible de construire progressivement un sentiment de sécurité — en soi, et dans le lien à l'autre.
