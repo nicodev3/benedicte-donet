@@ -417,6 +417,160 @@
   window.CMS.registerWidget("tags", TagsControl, TagsPreview);
 })();
 
+/**
+ * Alerte éditeur blog : titre EN manquant = version anglaise non publiée.
+ * N’empêche pas l’enregistrement (le FR peut être publié sans traduction).
+ */
+(function setupBlogTranslationAlert() {
+  if (!window.CMS) {
+    window.setTimeout(setupBlogTranslationAlert, 50);
+    return;
+  }
+
+  const BANNER_ID = "bd-blog-i18n-alert";
+
+  const style = document.createElement("style");
+  style.textContent = `
+    #${BANNER_ID} {
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #e4b4a8;
+      background: #fff4f0;
+      color: #5c3a34;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    #${BANNER_ID} strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+  `;
+  document.head.appendChild(style);
+
+  const getEntryDraft = () => {
+    try {
+      return window.CMS.getStore?.()?.getState?.()?.entryDraft?.entry ?? null;
+    } catch (_) {
+      return null;
+    }
+  };
+
+  const getFieldValue = (data, key) => {
+    if (!data) return "";
+    if (typeof data.get === "function") {
+      const value = data.get(key);
+      if (value == null) return "";
+      if (typeof value === "string") return value;
+      if (typeof value.toJS === "function") {
+        const js = value.toJS();
+        return typeof js === "string" ? js : "";
+      }
+      return String(value);
+    }
+    const value = data[key];
+    return typeof value === "string" ? value : value == null ? "" : String(value);
+  };
+
+  const getContentLocale = () => {
+    try {
+      const entry = getEntryDraft();
+      const path =
+        (typeof entry?.get === "function" && (entry.get("path") || entry.get("slug"))) ||
+        "";
+      if (typeof path === "string") {
+        if (/\.en\.(md|mdx|json)$/i.test(path) || /\.en$/i.test(path)) return "en";
+        if (/\.fr\.(md|mdx|json)$/i.test(path) || /\.fr$/i.test(path)) return "fr";
+      }
+
+      const activeLocale = document.querySelector(
+        '[class*="PaneContainer"] [class*="LanguageNav"] button[class*="active"], [class*="I18n"] button[aria-pressed="true"], [class*="LanguageNav"] [aria-current="true"]'
+      );
+      const label = activeLocale?.textContent?.trim().toLowerCase() ?? "";
+      if (label === "en" || label.startsWith("en") || label.includes("english")) return "en";
+      if (label === "fr" || label.startsWith("fr") || label.includes("fran")) return "fr";
+    } catch (_) {
+      /* ignore */
+    }
+    return "fr";
+  };
+
+  const ensureBanner = () => {
+    let banner = document.getElementById(BANNER_ID);
+    if (banner) return banner;
+
+    const host =
+      document.querySelector('[class*="ControlPaneContainer"]') ||
+      document.querySelector('[class*="EditorControl"]') ||
+      document.querySelector('[class*="CollectionControls"]') ||
+      document.querySelector("main");
+
+    if (!host) return null;
+
+    banner = document.createElement("div");
+    banner.id = BANNER_ID;
+    banner.setAttribute("role", "alert");
+    host.prepend(banner);
+    return banner;
+  };
+
+  const updateBanner = () => {
+    const entry = getEntryDraft();
+    const collection =
+      (typeof entry?.get === "function" && entry.get("collection")) || "";
+    const banner = document.getElementById(BANNER_ID);
+
+    if (collection !== "blog") {
+      banner?.remove();
+      return;
+    }
+
+    const data = typeof entry?.get === "function" ? entry.get("data") : null;
+    const title = getFieldValue(data, "title").trim();
+    const body = getFieldValue(data, "body").trim();
+    const locale = getContentLocale();
+    const draftRaw =
+      typeof data?.get === "function" ? data.get("draft") : data?.draft;
+    const isDraft = draftRaw === true;
+
+    if (locale !== "en" || isDraft) {
+      banner?.remove();
+      return;
+    }
+
+    const missingTitle = !title;
+    const missingBody = !body || body === "." || body === "<p></p>";
+
+    if (!missingTitle && !missingBody) {
+      banner?.remove();
+      return;
+    }
+
+    const el = ensureBanner();
+    if (!el) return;
+
+    if (missingTitle) {
+      el.innerHTML =
+        "<strong>Traduction anglaise incomplète</strong>" +
+        "Le titre EN est vide : la version anglaise <em>ne sera pas publiée</em> sur le site. " +
+        "La version française peut être enregistrée et mise en ligne normalement. " +
+        "Remplissez le titre (et le contenu) EN lorsque vous souhaitez publier la traduction.";
+      return;
+    }
+
+    el.innerHTML =
+      "<strong>Contenu anglais manquant</strong>" +
+      "Le titre EN est renseigné mais le contenu est vide. " +
+      "La page anglaise serait publiée sans texte — ajoutez le corps de l’article avant de considérer la traduction terminée.";
+  };
+
+  setInterval(updateBanner, 1000);
+  document.addEventListener("click", () => setTimeout(updateBanner, 150), true);
+  document.addEventListener("input", () => setTimeout(updateBanner, 150), true);
+  setTimeout(updateBanner, 800);
+})();
+
 // Configure un media handler qui normalise les chemins d'images
 (function setupImagePathNormalization() {
   if (!window.CMS) {

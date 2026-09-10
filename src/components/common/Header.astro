@@ -12,6 +12,7 @@ import {
   getLocaleSwitchLabel,
   localizedPath,
 } from "@/lib/i18n";
+import { isPublishedBlogPost } from "@/lib/blog";
 import { getAlternateTagSlug } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
 import { UMAMI_EVENTS } from "@/lib/umami";
@@ -30,7 +31,7 @@ const alternateLocale = getAlternateLocale(locale);
 const tagMatch = currentPath.match(/^\/(?:en\/)?blog\/tag\/([^/]+)\/$/);
 let languageUrl = alternateLocalePath(currentPath, locale);
 if (tagMatch?.[1]) {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection("blog", isPublishedBlogPost);
   const alternateTag = getAlternateTagSlug(posts, locale, tagMatch[1]);
   languageUrl = alternateTag
     ? localizedPath(`/blog/tag/${alternateTag}/`, alternateLocale)

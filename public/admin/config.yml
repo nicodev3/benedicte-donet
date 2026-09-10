@@ -56,7 +56,12 @@ collections:
       - { field: date, default_sort: desc }
       - title
     fields:
-      - { label: "Titre", name: "title", widget: "string", i18n: true, hint: "Le titre principal de l'article." }
+      - label: "Titre"
+        name: "title"
+        widget: "string"
+        i18n: true
+        required: true
+        hint: "Obligatoire pour chaque langue publiée. Sans titre EN, la version anglaise n’apparaît pas sur le site (le FR peut être publié quand même)."
       - label: "Extrait"
         name: "excerpt"
         widget: "text"
@@ -130,6 +135,7 @@ collections:
         sanitize_preview: false
         buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
+        hint: "Sans contenu EN, évitez de renseigner seulement le titre EN (page vide). Sans titre EN, la version anglaise n’est pas publiée."
       # SEO géré dans les fichiers markdown (pas dans le CMS)
       - { label: "Titre SEO", name: "seoTitle", widget: "hidden", i18n: true, required: false }
       - { label: "Meta description", name: "seoDescription", widget: "hidden", i18n: true, required: false }
@@ -138,7 +144,7 @@ collections:
         widget: "boolean"
         i18n: duplicate
         default: false
-        hint: "Activé = l'article n'est PAS visible sur le site."
+        hint: "Activé = l'article n'est PAS visible sur le site (FR et EN, car le brouillon est partagé)."
 
   # ------------------------------------------------------------------
   # ACCUEIL — page d'accueil (contenu = sections home, pas le markdown body)

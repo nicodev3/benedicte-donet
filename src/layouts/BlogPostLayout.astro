@@ -8,17 +8,16 @@ import ShareButtons from "@/components/common/ShareButtons.astro";
 import PostHero from "@/components/sections/PostHero.astro";
 import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.astro";
 import { buildBreadcrumbs } from "@/lib/breadcrumbs";
-import { getRelatedPosts } from "@/lib/blog";
+import { getRelatedPosts, isPublishedBlogPost, type PublishedBlogPost } from "@/lib/blog";
 import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath, localizedPath } from "@/lib/i18n";
 import { slugifyTag } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
 import { getOptimizedImage } from "@/lib/images";
 import { UMAMI_EVENTS } from "@/lib/umami";
-import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  post: CollectionEntry<"blog">;
+  post: PublishedBlogPost;
 }
 
 const { post } = Astro.props;
@@ -50,7 +49,7 @@ const breadcrumbs = buildBreadcrumbs(Astro.url.pathname, title, undefined, {
   url: localizedPath("/blog/", locale),
 }, locale);
 
-const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const allPosts = await getCollection("blog", isPublishedBlogPost);
 const relatedPosts = getRelatedPosts(allPosts, post.id, locale);
 const serviceLinks = [
   {

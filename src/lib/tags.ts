@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import { isPublishedBlogPost, type PublishedBlogPost } from "@/lib/blog";
 import {
   getLocaleFromFilePath,
   stripLocaleFromFilePath,
@@ -27,7 +28,7 @@ export function getTagsForLocale(
   const bySlug = new Map<string, TagSummary>();
 
   for (const post of posts) {
-    if (post.data.draft) continue;
+    if (!isPublishedBlogPost(post)) continue;
     if (getLocaleFromFilePath(post.filePath) !== locale) continue;
 
     for (const tag of post.data.tags) {
@@ -48,11 +49,11 @@ export function getPostsByTagSlug(
   posts: CollectionEntry<"blog">[],
   locale: Locale,
   tagSlug: string,
-): CollectionEntry<"blog">[] {
+): PublishedBlogPost[] {
   return posts
     .filter(
-      (post) =>
-        !post.data.draft &&
+      (post): post is PublishedBlogPost =>
+        isPublishedBlogPost(post) &&
         getLocaleFromFilePath(post.filePath) === locale &&
         post.data.tags.some((tag) => slugifyTag(tag) === tagSlug),
     )
@@ -67,7 +68,7 @@ export function getAlternateTagSlug(
   locale: Locale,
   tagSlug: string,
 ): string | undefined {
-  const published = posts.filter((post) => !post.data.draft);
+  const published = posts.filter(isPublishedBlogPost);
   const byBaseSlug = new Map<
     string,
     Partial<Record<Locale, CollectionEntry<"blog">>>

@@ -134,11 +134,13 @@ const pages = defineCollection({
 
 /**
  * Articles de blog éditables librement via Decap CMS.
+ * `title` optionnel : Decap crée souvent un `.en.md` vide (champs i18n non remplis).
+ * Sans titre, l'entrée est ignorée à la publication (voir `isPublishedBlogPost`).
  */
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
   schema: z.object({
-    title: z.string(),
+    title: optionalString,
     excerpt: optionalString,
     tags: z.array(z.string()).default([]),
     date: cmsDate,

@@ -5,10 +5,10 @@ import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import { localizedPath, stripLocaleFromFilePath, type Locale } from "@/lib/i18n";
 import { preventPunctuationWrap } from "@/lib/typography";
-import type { CollectionEntry } from "astro:content";
+import type { PublishedBlogPost } from "@/lib/blog";
 
 interface Props {
-  posts: CollectionEntry<"blog">[];
+  posts: PublishedBlogPost[];
   locale: Locale;
   heading: string;
   readMoreLabel: string;

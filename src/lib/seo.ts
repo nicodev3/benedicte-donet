@@ -8,6 +8,7 @@ import {
   stripLocaleFromFilePath,
   type Locale,
 } from "@/lib/i18n";
+import { isPublishedBlogPost } from "@/lib/blog";
 import { getAlternateTagSlug } from "@/lib/tags";
 
 export interface AlternateLink {
@@ -52,7 +53,7 @@ async function getTagAlternateLinks(
   locale: Locale,
   tagSlug: string
 ): Promise<AlternateLink[]> {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection("blog", isPublishedBlogPost);
   const alternateSlug = getAlternateTagSlug(posts, locale, tagSlug);
   if (!alternateSlug) return [];
 
@@ -94,7 +95,7 @@ export async function getAlternateLinks(pathname: string): Promise<AlternateLink
 
   const entries = [
     ...(await getCollection("pages", ({ data }) => !data.draft)),
-    ...(await getCollection("blog", ({ data }) => !data.draft)),
+    ...(await getCollection("blog", isPublishedBlogPost)),
   ];
 
   const matches = entries.filter(
