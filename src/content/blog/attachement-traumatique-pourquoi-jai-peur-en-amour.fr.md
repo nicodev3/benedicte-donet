@@ -12,15 +12,11 @@ date: 2026-09-10T00:00:00.000Z
 image: /images/cms-library/eric-ward-7kqe_8meex8-unsplash.jpg
 draft: false
 ---
-
-
 Si tu tombes sur cet article, c'est peut-être que pour toi aussi les relations créent un stress, une peur, une angoisse — malgré ton **envie d'être en lien**.
 
 Beaucoup de personnes **ressentent de la honte et de l'incompréhension face à ces réactions, comme si quelque chose clochait chez elles**. Cet article a pour but de t'aider à faire le lien entre ce que tu vis aujourd'hui en relation et la compréhension du stress post-traumatique qui peut en être **à l'origine**.
 
 Comme je l'ai déjà décrit dans [un autre article](https://www.benedictedonet-psyenligne.com/comment-te-relies-tu-aux-autres/), nous pouvons avoir **un attachement sécure ou insécure** selon la manière dont nous avons vécu **nos premiers liens d'attachement**. Pour comprendre pourquoi, il faut comprendre notre besoin de sécurité.
-
-
 
 ## Le besoin de sécurité
 
@@ -40,8 +36,6 @@ Dans les générations précédentes, de nombreuses pratiques créant de l'insé
 
 Voici quelques-unes de ces pratiques, qui ont laissé des traces de stress post-traumatique dans la génération suivante :
 
-
-
 ### Les violences physiques
 
 Ce sont les plus évidentes, et aussi les plus banalisées — **« une baffe n'a jamais fait de mal à personne »,** entend-on encore souvent.
@@ -54,7 +48,7 @@ la peur de l'autre se développe, des mécanismes **d'immobilité s'installent**
 
 ![](/images/cms-library/chinh-le-duc-tv1qyuttxj8-unsplash.jpg)
 
-## Pourquoi ? 
+## Pourquoi ?
 
 Car quand un enfant est puni en utilisant la violence physique (ou verbale) **le corps se souvient**. Ils se souvient et dans le future, cette mémoire corporel peut se réactiver, simplement en étant au contact d'un autre être humain, notamment dans l'intimité.
 
@@ -80,8 +74,6 @@ tu as envie de t'attacher, d'aller vers l'autre — et en même temps tu sens un
 
 La mémoire a fait son travail. Elle se souvient. Et ton corps se protège.
 
-
-
 ### Les violences verbales
 
 Crier, humilier, insulter, menacer, comparer un enfant à un autre en sa défaveur : 
@@ -100,8 +92,6 @@ D'autres enfants en maternelle, à l'école primaire, collège, lycée, camp de 
 
 Egalement, certaines personne ont vécu de la violences éducatives par des professeurs dans le parcours scolaire ou patron au travail laissant des traces.
 
-
-
 ### L'absence
 
 Il n'y a pas besoin de violence pour créer de l'insécurité : l'absence suffit. Absence physique — un parent peu présent, en retrait — ou **absence émotionnelle** — un parent présent physiquement mais **indisponible** pour accueillir ce que je ressens.
@@ -109,8 +99,6 @@ Il n'y a pas besoin de violence pour créer de l'insécurité : l'absence suffit
 L'enfant apprend alors que ses besoins **ne trouveront pas toujours de réponse**, ou qu'il vaut mieux **ne pas trop en avoir.** Il peut développer une autonomie **précoce**, en apparence solide, mais construite sur l'idée qu'**on ne peut pas vraiment compter sur l'autre**.
 
 À l'âge adulte, cela peut se traduire par une difficulté à demander de l'aide, un **inconfort face à l'intimité**, ou au contraire une **peur intense** d'être à nouveau laissé de côté dès que le partenaire s'éloigne un peu.
-
-
 
 ### Quand le parent projette ses besoins émotionnels sur son enfant
 
@@ -129,8 +117,6 @@ Traiter un enfant comme une chose plutôt que comme une personne : **ne pas le l
 Ce message, répété, apprend à l'enfant que sa voix et ses besoins **n'ont pas vraiment de valeur, et qu'il doit s'adapter à l'autre plutôt que l'inverse**.
 
 En couple, cela peut donner une grande difficulté à poser ses limites, à exprimer un désaccord, ou même à savoir ce que l'on veut — parce qu'on n'a jamais vraiment appris que cela comptait.
-
-
 
 ## Pour conclure
 
