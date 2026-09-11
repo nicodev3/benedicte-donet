@@ -1,23 +1,38 @@
 ---
-title: "Et si on apprenait à respirer (vraiment) ?"
-excerpt: "Notre manière de respirer s’est détériorée au cours de notre évolution. En effet, notre cerveau a grossi, laissant ainsi moins de place pour les voies respiratoires. Notre alimentation et notre mode de vie ont également grandement influencé notre façon de respirer. Il faut savoir que de nombreuses maladies psychologiques et physiques peuvent trouver leur source dans notre façon de respirer. Cela est dû à l’effet domino : une mauvaise respiration entraîne l’apnée du sommeil, le stress, la fatigue, une pression artérielle plus élevée, etc. Cela peut même aller jusqu’à l’insomnie chronique, les troubles de l’attention, etc."
+title: Et si on apprenait à respirer (vraiment) ?
+excerpt: "Notre manière de respirer s’est détériorée au cours de notre
+  évolution. En effet, notre cerveau a grossi, laissant ainsi moins de place
+  pour les voies respiratoires. Notre alimentation et notre mode de vie ont
+  également grandement influencé notre façon de respirer. Il faut savoir que de
+  nombreuses maladies psychologiques et physiques peuvent trouver leur source
+  dans notre façon de respirer. Cela est dû à l’effet domino : une mauvaise
+  respiration entraîne l’apnée du sommeil, le stress, la fatigue, une pression
+  artérielle plus élevée, etc. Cela peut même aller jusqu’à l’insomnie
+  chronique, les troubles de l’attention, etc."
 tags:
-  - "Pleine conscience"
-  - "Psychoéducation"
-  - "Respiration"
-  - "Santé"
-date: 2023-10-16T17:01:05Z
-updated: 2026-06-08T12:26:14Z
-image: "/images/stock/stock-respiration-consciente.jpeg"
-imageAlt: "exercice pour mieux respirer"
-seoTitle: "Et si on apprenait à respirer (vraiment) ?"
-seoDescription: "Notre manière de respirer s’est détériorée au cours de notre évolution. En effet, notre cerveau a grossi, laissant ainsi moins de place pour les voies respiratoires. Notre alimentation et notre mode de vie ont également grandement influencé notre façon de respirer. Il faut savoir que de nombreuses maladies psychologiques et physiques peuvent trouver leur source dans notre façon de respirer. Cela est dû à l’effet domino : une mauvaise respiration entraîne l’apnée du sommeil, le stress, la fatigue, une pression artérielle plus élevée, etc. Cela peut même aller jusqu’à l’insomnie chronique, les troubles de l’attention, etc."
+  - Pleine conscience
+  - Psychoéducation
+  - Respiration
+  - Santé
+date: 2023-10-16T17:01:05.000Z
+updated: 2026-06-08T12:26:14.000Z
+image: /images/stock/stock-respiration-consciente.jpeg
+imageAlt: exercice pour mieux respirer
+seoTitle: Et si on apprenait à respirer (vraiment) ?
+seoDescription: "Notre manière de respirer s’est détériorée au cours de notre
+  évolution. En effet, notre cerveau a grossi, laissant ainsi moins de place
+  pour les voies respiratoires. Notre alimentation et notre mode de vie ont
+  également grandement influencé notre façon de respirer. Il faut savoir que de
+  nombreuses maladies psychologiques et physiques peuvent trouver leur source
+  dans notre façon de respirer. Cela est dû à l’effet domino : une mauvaise
+  respiration entraîne l’apnée du sommeil, le stress, la fatigue, une pression
+  artérielle plus élevée, etc. Cela peut même aller jusqu’à l’insomnie
+  chronique, les troubles de l’attention, etc."
 draft: false
 ---
-
 ![Personne pratiquant la respiration consciente pour la santé mentale](/images/stock/stock-respiration-consciente.jpeg)
 
-Sprung ins wasser
+
 
 **Spoiler : on respire tous… mais pas forcément bien !**
 
@@ -29,36 +44,36 @@ Or, une respiration inadéquate peut entraîner une véritable réaction en cha�
 
 ## Quelle est la meilleure façon de respirer selon la science ?
 
-Selon de nombreuses recherches scientifiques, la respiration la plus bénéfique pour notre bien-être global serait :  
-👉 **Par le nez exclusivement**  
+Selon de nombreuses recherches scientifiques, la respiration la plus bénéfique pour notre bien-être global serait :\
+👉 **Par le nez exclusivement**\
 👉 **Lente et régulière : 5,5 secondes d’inspiration – 5,5 secondes d’expiration**
 
 Ce rythme permet de calmer le système nerveux, de réguler le cœur, d’augmenter la concentration et de favoriser un retour au calme. En gros, c’est comme offrir un spa intérieur à votre système nerveux. 💆‍♀️
 
-* * *
+- - -
 
 ## 🧘‍♀️ Pour mieux respirer : la respiration ventrale
 
 Imaginez ceci : vous êtes allongé.e, une main sur le ventre, une autre sur la poitrine. Pendant que vous respirez, seule **la main posée sur votre ventre** doit se soulever. Pourquoi ? Parce que **la respiration ventrale (ou diaphragmatique)** active directement le système nerveux parasympathique – celui qui s’occupe de la détente, du repos, et de la digestion.
 
-💡 Entraînez-vous à gonfler le ventre comme un ballon à l’inspiration, et à le dégonfler doucement à l’expiration.  
+💡 Entraînez-vous à gonfler le ventre comme un ballon à l’inspiration, et à le dégonfler doucement à l’expiration.\
 Bonus : vous pouvez poser un livre léger sur le ventre pour mieux sentir le mouvement.
 
-* * *
+- - -
 
 ## 😴 Le petit hack nocturne : dormir la bouche fermée 😮‍💨
 
 Dans le livre [**« Respirer »** de James Nestor](https://www.amazon.in/Respirer-James/dp/2263150854), l’auteur recommande de dormir avec un petit morceau de sparadrap sur la bouche (oui, vous avez bien lu). Le but ? Forcer la respiration nasale pendant la nuit, et éviter les ronflements, l’apnée et les réveils agités. Je teste cette technique en ce moment et je vous ferai un retour dans un prochain article.
 
-* * *
+- - -
 
 ## 🎧 Pour pratiquer : des ressources simples et efficaces
 
--   [Une **vidéo guidée** avec une respiration 5.5 / 5.5 (inspire 5,5 sec – expire 5,5 sec)](https://www.youtube.com/watch?v=MepDpceB-28). Idéale pour démarrer votre routine.
--   Vous pouvez aussi **chanter un mantra** ou **compter mentalement**, à votre rythme.
--   Et pour les curieux.ses, le livre de **James Nestor – « Respirer »**, un petit bijou à mettre entre toutes les narines. Respirer mieux peut donc passer par la pratique directe de la respiration mais aussi par le chant.
+* [Une **vidéo guidée** avec une respiration 5.5 / 5.5 (inspire 5,5 sec – expire 5,5 sec)](https://www.youtube.com/watch?v=MepDpceB-28). Idéale pour démarrer votre routine.
+* Vous pouvez aussi **chanter un mantra** ou **compter mentalement**, à votre rythme.
+* Et pour les curieux.ses, le livre de **James Nestor – « Respirer »**, un petit bijou à mettre entre toutes les narines. Respirer mieux peut donc passer par la pratique directe de la respiration mais aussi par le chant.
 
-* * *
+- - -
 
 ## 🙌 En résumé :
 
@@ -68,4 +83,4 @@ Respirer lentement, par le nez, avec le ventre… ce n’est pas juste une mode 
 
 Si vous souhaitez explorer davantage le lien entre la respiration, la psychologie, la régulation du système nerveux et la gestion des traumatismes, je vous invite à découvrir **mon blog** où je partage régulièrement des articles et des ressources pour mieux comprendre ces sujets essentiels à notre bien-être.
 
-[Découvrez mon blog ici](/blog/)
+Article écrit par Bénédicte Donet  [visite le blog. ](<>)
