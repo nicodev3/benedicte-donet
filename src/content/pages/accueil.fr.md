@@ -98,7 +98,7 @@ home:
       sécurité** et permet de recevoir la thérapie avec plus d'aisance.
 
 
-      Vous n'avez pas besoin de vous déplacer ce qui permet, après chaque séance, de pouvoir intégrer en douceur, dans le confort de votre maison.
+      Après chaque séance, vous n'avez pas besoin de vous déplacer ce qui permet une intégration en douceur.
 
 
       Aussi, vous avez la possibilité de garder la même thérapeute quels que soient vos projets de déménagement, déplacement, expatriation.
@@ -114,10 +114,9 @@ home:
     title: Les accompagnements que je propose
     cards:
       - imageWidth: wide
-        intro: "Pendant nos séances de psychologie en ligne, nous explorons:"
-        text: Chaque thérapie est unique, et je suis enthousiaste à l'idée de pouvoir
-          vous accompagner sur votre propre chemin, en douceur et en respectant
-          votre rythme.
+        intro: "Pendant nos séances nous explorons:"
+        text: Chaque thérapie est unique, et j'ai à coeur de vous accompagner sur votre
+          propre chemin, en douceur et en respectant votre rythme.
         url: /psychotherapie/
         bullets:
           - Votre histoire, peurs, croyances, émotions.
