@@ -1,18 +1,30 @@
 ---
 title: "Personal Growth vs Happiness: Finding the Right Balance"
-excerpt: "What makes us happier: evolving or having fun? Listening to an American coach recently sparked this question in me: should we strive to evolve or focus entirely on having fun and experiencing joy? Of course, one doesn’t necessarily exclude the other… But what if? What if our constant pursuit of evolution prevented us from accessing the happiness and joy we so ardently seek? What if the pursuit of joy kept us from reaching a deeper happiness?"
+excerpt: "What makes us happier: evolving or having fun? Listening to an
+  American coach recently sparked this question in me: should we strive to
+  evolve or focus entirely on having fun and experiencing joy? Of course, one
+  doesn’t necessarily exclude the other… But what if? What if our constant
+  pursuit of evolution prevented us from accessing the happiness and joy we so
+  ardently seek? What if the pursuit of joy kept us from reaching a deeper
+  happiness?"
 tags:
-  - "Mindfulness"
-  - "Psychology"
-  - "Psychoeducation"
-  - "Positive psychology"
-  - "Human relationships"
-date: 2023-10-23T18:18:31Z
-updated: 2026-06-08T12:28:01Z
-image: "/images/stock/stock-developpement-personnel.jpg"
-imageAlt: "transformation intérieure et moment présent équilibre"
+  - Mindfulness
+  - Psychology
+  - Psychoeducation
+  - Positive psychology
+  - Human relationships
+date: 2023-10-23T18:18:31.000Z
+updated: 2026-06-08T12:28:01.000Z
+image: /images/stock/stock-developpement-personnel.jpg
+imageAlt: transformation intérieure et moment présent équilibre
 seoTitle: "Personal Growth vs Happiness: Finding the Right Balance"
-seoDescription: "What makes us happier: evolving or having fun? Listening to an American coach recently sparked this question in me: should we strive to evolve or focus entirely on having fun and experiencing joy? Of course, one doesn’t necessarily exclude the other… But what if? What if our constant pursuit of evolution prevented us from accessing the happiness and joy we so ardently seek? What if the pursuit of joy kept us from reaching a deeper happiness?"
+seoDescription: "What makes us happier: evolving or having fun? Listening to an
+  American coach recently sparked this question in me: should we strive to
+  evolve or focus entirely on having fun and experiencing joy? Of course, one
+  doesn’t necessarily exclude the other… But what if? What if our constant
+  pursuit of evolution prevented us from accessing the happiness and joy we so
+  ardently seek? What if the pursuit of joy kept us from reaching a deeper
+  happiness?"
 draft: false
 ---
 
