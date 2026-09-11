@@ -23,7 +23,7 @@ home:
       Je crois fermement en l'incroyable potentiel de guérison et de croissance personnelle chez chacun.
 
 
-      **Je m'engage à vous offrir un espace thérapeutique sacré, vulnérable et ancré**, où vos capacités naturels a guérir et intégrer (croyances, traumatismes...) peuvent naturellement émerger et la guérison est facilitée.
+      **Je m'engage à vous offrir un espace thérapeutique sacré, vulnérable et ancré**, où vos capacités naturelles a guérir et intégrer (croyances, traumatismes...) peuvent naturellement émerger et la guérison est facilitée.
     ctaLabel: Découvrir ma pratique
     ctaUrl: /a-propos/
     image: /images/portraits/portrait-accueil.png
