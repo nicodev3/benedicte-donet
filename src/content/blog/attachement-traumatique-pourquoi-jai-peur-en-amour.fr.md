@@ -11,6 +11,7 @@ tags:
 date: 2026-09-10T00:00:00.000Z
 image: /images/cms-library/eric-ward-7kqe_8meex8-unsplash.jpg
 draft: false
+updated: "2026-09-13T00:00:00Z"
 ---
 Si tu tombes sur cet article, c'est peut-être que pour toi aussi les relations créent un stress, une peur, une angoisse — malgré ton **envie d'être en lien**.
 
@@ -25,6 +26,9 @@ Un fœtus, un bébé, un enfant a besoin de sécurité : de régularité, de **f
 Cette sécurité émotionnelle, c'est elle qui **permet ensuite d'explorer le monde** en sachant qu'on a un point d'appui sur lequel revenir si besoin.
 
 ![](/images/cms-library/caleb-woods-vzildyoqn_u-unsplash.jpg)
+
+
+> Si la peur de l’abandon ou l’envie de fuir pèsent sur tes relations, tu peux explorer ces difficultés dans un [accompagnement individuel en visio](/psychotherapie/). Nous prenons le temps de discuter de ta situation et de la place que l’EMDR peut avoir dans ton suivi.
 
 ## L'héritage d'insécurité
 

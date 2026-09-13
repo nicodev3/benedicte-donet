@@ -3,8 +3,8 @@ title: "Services"
 description: "Psychologue en ligne"
 image: "/images/heroes/hero-services.jpg"
 imageAlt: "Fleurs séchées — psychologue en visio"
-seoTitle: "Psychologue en ligne & EMDR | Services en visio"
-seoDescription: "Psychologue en ligne et EMDR en visio : psychothérapie, trauma, anxiété, photothérapie et ateliers. Consultations avec Bénédicte Donet."
+seoTitle: "Accompagnements : psychothérapie, ateliers et photothérapie"
+seoDescription: "Découvrez les accompagnements de Bénédicte Donet : psychothérapie individuelle en visio, photothérapie, ateliers et programmes."
 order: 2
 draft: false
 pageType: page
@@ -23,14 +23,14 @@ Ensemble, nous explorons chaque facette de votre être : croyances, tensions, bl
 
 La nature de la thérapie peut évoluer car chacun est unique, nécessitant des méthodes et des approches spécifiques.
 
-[Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
+[Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 ## PSYCHOTHÉRAPIE
 
 Les principales modalités que j’utilise dans mes séances sont :
 
 -   **La parole et l’écoute**, socle nécessaire pour comprendre vos expériences, vos émotions et vos besoins.
--   **L’EMDR** : Thérapie par le mouvement oculaire permettant le traitement et la résolution des traumatismes passés, en facilitant la digestion des souvenirs et en réduisant leur impact émotionnel.
+-   **L’EMDR** : approche psychothérapeutique utilisant notamment des stimulations bilatérales pour travailler sur des souvenirs traumatiques. Son indication et son rythme sont évalués selon chaque situation.
 -   **L’IEMT** : une technique de thérapie qui explore la question de savoir comment nous avons appris à ressentir d’une certaine manière et ouvre la possibilité de créer des changements appropriés dans notre vie émotionnelle.
 -   **L’IFS** : système de famille interne, une technique invitant à accueillir les différentes identités que nous portons en nous, en les aidant à grandir si nécessaire, à évoluer et à retrouver un sentiment de sécurité.
 -   **La pleine conscience** : méditation, observation des émotions et sensations.

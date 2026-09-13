@@ -4,7 +4,7 @@ price: "45.00€"
 image: "/images/products/poster-au-coeur-de-ta-poitrine.jpg"
 imageAlt: "méditation en ligne atelier en ligne"
 ctaLabel: "Je commande"
-ctaUrl: "/infos-pratiques/#form"
+ctaUrl: "/infos-pratiques/#contact"
 seoTitle: "Au cœur de ta poitrine | Masterclass en ligne"
 seoDescription: "Masterclass en ligne « Au cœur de ta poitrine » : science, pleine conscience et tantra pour reconnecter le pouvoir de ta poitrine."
 draft: false

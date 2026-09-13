@@ -9,7 +9,7 @@ updated: 2026-06-08T12:30:02Z
 image: "/images/stock/stock-meditation-pleine-conscience.jpg"
 imageAlt: "mindfulness meditation therapy"
 seoTitle: "Mindfulness meditation and therapy: a powerful synergy for well-being"
-seoDescription: "In the quest for mental well-being, combining meditation and therapy offers a holistic and powerful approach to support individuals on the path of personal transformation."
+seoDescription: "What place does meditation have in psychotherapy? Explore connections between mindfulness, emotions and therapeutic support."
 draft: false
 ---
 

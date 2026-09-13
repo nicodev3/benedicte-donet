@@ -30,21 +30,11 @@ const {
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const locale = getLocaleFromPath(Astro.url.pathname);
 const global = getSiteGlobal(locale);
-function shorten(value: string, maxLength: number): string {
-  if (value.length <= maxLength) return value;
-  const shortened = value.slice(0, maxLength - 1).replace(/\s+\S*$/, "").trim();
-  return `${shortened}…`;
-}
-
 const cleanTitle = title?.trim();
-const fullTitleCandidate = cleanTitle
-  ? `${cleanTitle} | ${SITE.name}`
-  : global.defaultSeoTitle;
-const fullTitle = shorten(fullTitleCandidate, 54);
-const cleanDescription = shorten(
-  description?.trim() || global.defaultSeoDescription,
-  155
-);
+// Les champs SEO sont des textes complets, éditables dans le CMS.
+// Ne pas couper une expression ni ajouter une signature répétitive au rendu.
+const fullTitle = cleanTitle || global.defaultSeoTitle;
+const cleanDescription = description?.trim() || global.defaultSeoDescription;
 const seoImage = await resolveSeoImage(
   image || "/images/heroes/hero-accueil-desktop.jpg"
 );
@@ -55,9 +45,14 @@ const alternateOgLocale = locale === "fr" ? "en_US" : "fr_FR";
 const sameAs = [global.instagramUrl, global.facebookUrl].filter(Boolean);
 const personId = new URL("/#person", SITE.url).href;
 const organizationId = new URL("/#organization", SITE.url).href;
-const serviceId = new URL("/#professional-service", SITE.url).href;
+const serviceId = new URL("/#online-psychology-service", SITE.url).href;
 const websiteId = new URL("/#website", SITE.url).href;
 const webpageId = `${canonical}#webpage`;
+const logo = {
+  "@type": "ImageObject",
+  "@id": new URL("/#logo", SITE.url).href,
+  url: new URL("/images/ui/logo-benedicte-donet.png", SITE.url).href,
+};
 const postalAddress = {
   "@type": "PostalAddress",
   streetAddress: global.address.streetAddress,
@@ -95,25 +90,35 @@ const graph: Record<string, unknown>[] = [
     address: postalAddress,
     sameAs,
     founder: { "@id": personId },
-    ...(primaryImage ? { logo: primaryImage } : {}),
+    logo,
   },
   {
-    // ProfessionalService ⊆ LocalBusiness (not Service): no `provider` / Service-only props.
-    "@type": "ProfessionalService",
+    "@type": "Service",
     "@id": serviceId,
-    name: global.siteName,
+    name:
+      locale === "fr"
+        ? "Consultations de psychologie et thérapie EMDR en ligne"
+        : "Online psychology and EMDR therapy consultations",
     description: global.defaultSeoDescription,
-    url: SITE.url,
-    email: global.email,
-    address: postalAddress,
+    url: new URL(locale === "fr" ? "/psychotherapie/" : "/en/psychotherapie/", SITE.url).href,
+    serviceType:
+      locale === "fr"
+        ? "Psychologie clinique et thérapie EMDR en téléconsultation"
+        : "Clinical psychology and EMDR therapy by video consultation",
+    provider: { "@id": personId },
     areaServed: {
       "@type": "Country",
       name: "France",
     },
-    sameAs,
-    employee: { "@id": personId },
-    founder: { "@id": personId },
-    ...(primaryImage ? { image: primaryImage } : {}),
+    audience: {
+      "@type": "PeopleAudience",
+      suggestedMinAge: 13,
+    },
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: global.appointmentUrl,
+      availableLanguage: ["fr", "en"],
+    },
   },
   {
     "@type": "WebSite",

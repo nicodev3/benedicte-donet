@@ -4,7 +4,7 @@ price: "150.00€"
 image: "/images/products/poster-se-reposer-en-soi.jpg"
 imageAlt: "se reposer en soi Programme de méditation"
 ctaLabel: "Je commande"
-ctaUrl: "/infos-pratiques/#form"
+ctaUrl: "/infos-pratiques/#contact"
 seoTitle: "Se reposer en soi | Méditation en ligne"
 seoDescription: "Programme de méditation en ligne pour débutants : livret détaillé, méditations guidées et séances individuelles pour revenir en soi avec douceur."
 draft: false

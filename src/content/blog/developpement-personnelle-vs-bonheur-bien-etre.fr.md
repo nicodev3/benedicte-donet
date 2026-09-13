@@ -13,16 +13,11 @@ tags:
   - Psychologie positive
   - Relations humaines
 date: 2023-10-23T18:08:47.000Z
-updated: 2026-06-08T12:27:43.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/stock/stock-developpement-personnel.jpg
 imageAlt: transformation intérieure et moment présent équilibre
 seoTitle: "Transformation intérieure et Moment présent : Trouver le Juste Équilibre"
-seoDescription: Devons-nous nous consacrer à notre évolution personnelle, ou le
-  secret du bonheur réside-t-il simplement dans le fait de savourer le moment
-  présent avec joie ? À première vue, ces deux chemins semblent opposés. Et
-  pourtant… Et si la quête constante de transformation nous empêchait de goûter
-  à la joie authentique ? Et si, à l’inverse, la recherche continue de plaisir
-  nous coupait de la profondeur et du sens qu’offre la croissance intérieure ?
+seoDescription: "Comment trouver un équilibre entre développement personnel et présence à soi ? Une réflexion sur le changement, le bonheur et les attentes envers soi."
 draft: false
 ---
 ![Parc verdoyant, illustration du développement personnel](/images/illustrations/illustration-seance-individuelle-psychologie.jpeg)
@@ -33,6 +28,9 @@ Une question a récemment résonné en moi:\
 À première vue, ces deux chemins semblent opposés. Et pourtant…\
 Et si la quête constante de transformation nous empêchait de goûter à la joie authentique ?\
 Et si, à l’inverse, la recherche continue de plaisir nous coupait de la profondeur et du sens qu’offre la croissance intérieure ?
+
+
+> Si cette recherche d’équilibre s’accompagne de souffrance ou de blocages, tu peux en parler dans un [accompagnement psychologique en ligne](/psychotherapie/). Il n’est pas nécessaire d’avoir déjà trouvé les mots pour expliquer ce que tu traverses.
 
 Explorons cela ensemble.
 

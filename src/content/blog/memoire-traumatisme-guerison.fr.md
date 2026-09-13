@@ -10,7 +10,7 @@ updated: 2026-07-18T17:00:00Z
 image: "/images/stock/stock-traumatisme-guerison.jpg"
 imageAlt: "guérir d'un traumatisme"
 seoTitle: "Mémoire et traumatisme"
-seoDescription: "Mémoire et traumatisme : comment le cerveau encode le choc, et comment l’EMDR aide à retraiter les souvenirs pour mieux guérir."
+seoDescription: "Explorer les liens entre mémoire et traumatisme : comprendre les souvenirs douloureux et la place de l’accompagnement thérapeutique."
 draft: false
 ---
 

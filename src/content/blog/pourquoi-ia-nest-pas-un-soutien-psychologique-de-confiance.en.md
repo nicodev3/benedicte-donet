@@ -6,7 +6,7 @@ tags:
   - AI
   - Psychology
 date: 2026-08-20T00:00:00.000Z
-updated: null
+updated: "2026-09-13T00:00:00Z"
 image: /images/cms-library/dscf8110.jpg
 imageAlt: Two elderly women sitting on a bench on a sunny city sidewalk
 draft: false
@@ -42,6 +42,9 @@ What I teach my patients every day is how much their body and their inner wisdom
 So turning to a robot to understand ourselves is often a detour rather than the royal road.
 
 ![Pedestrians walking along a tree-lined boulevard next to a coffee kiosk](/images/cms-library/dscf8112.jpg)
+
+
+> If you feel the need for a conversation with someone who can provide ongoing support, explore [psychological consultations by video](/en/psychotherapie/). The first meeting is a chance to discuss your needs and ask questions about care.
 
 ## Being validated above all
 

@@ -9,7 +9,7 @@ updated: 2026-06-08T12:30:02Z
 image: "/images/stock/stock-meditation-pleine-conscience.jpg"
 imageAlt: "méditation pleine conscience thérapie"
 seoTitle: "Méditation pleine conscience thérapie : une synergie puissante pour le bien-être"
-seoDescription: "Dans la quête du bien-être mental, la combinaison de la méditation et de la thérapie offre une approche holistique et puissante pour accompagner les individus sur le chemin de la transformation personnelle."
+seoDescription: "Quelle place pour la méditation en psychothérapie ? Explorez les liens entre pleine conscience, émotions et accompagnement thérapeutique."
 draft: false
 ---
 

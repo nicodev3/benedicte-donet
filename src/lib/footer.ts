@@ -18,7 +18,7 @@ const FOOTER: Record<Locale, FooterContent> = {
     text: "Bénédicte Donet, psychologue clinicienne en ligne. Accompagnement en visio : trauma-thérapies, EMDR, anxiété, sexualité.",
     quickLinks: [
       { label: "Services", url: "/services/" },
-      { label: "Psychothérapie", url: "/psychotherapie/" },
+      { label: "EMDR et psychothérapie en ligne", url: "/psychotherapie/" },
       { label: "Photothérapie", url: "/phototherapie/" },
       { label: "Masterclass", url: "/masterclass/" },
       { label: "Infos pratiques", url: "/infos-pratiques/" },
@@ -37,7 +37,7 @@ const FOOTER: Record<Locale, FooterContent> = {
     text: "Bénédicte Donet, online clinical psychologist. Video consultations for trauma therapy, EMDR, anxiety and sexuality.",
     quickLinks: [
       { label: "Services", url: "/services/" },
-      { label: "Psychotherapy", url: "/psychotherapie/" },
+      { label: "Online EMDR and psychotherapy", url: "/psychotherapie/" },
       { label: "Phototherapy", url: "/phototherapie/" },
       { label: "Masterclass", url: "/masterclass/" },
       { label: "Practical info", url: "/infos-pratiques/" },

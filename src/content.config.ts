@@ -164,7 +164,7 @@ const products = defineCollection({
     image: z.string(),
     imageAlt: z.string(),
     ctaLabel: z.string().default("Je commande"),
-    ctaUrl: z.string().default("/infos-pratiques/#form"),
+    ctaUrl: z.string().default("/infos-pratiques/#contact"),
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
     draft: z.boolean().default(false),

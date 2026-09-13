@@ -8,14 +8,11 @@ tags:
   - Mindfulness
   - Psychoeducation
 date: 2023-09-14T12:31:49.000Z
-updated: 2026-06-08T12:24:32.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/stock/stock-pensees-apaisement.jpg
 imageAlt: stop complaining
 seoTitle: "How to Stop Complaining Thoughts: A Mindful Guide to Reclaim Your Peace"
-seoDescription: It’s common to be inundated with judgmental thoughts about our
-  surroundings or ourselves. Complaint can be defined as the expression of
-  discontent or, even more deeply, as a vocal expression of pain. Thus, our
-  complaints are ways of expressing suffering, discomfort, or difficulty.
+seoDescription: "Explore complaining thoughts with awareness and kindness: understand what they express and make room for your emotions."
 draft: false
 ---
 
@@ -34,6 +31,9 @@ While normal and natural, frequent complaining has consequences. Neuroscience sh
 Over time, this habit can **fuel anxiety**. Complaining triggers the release of **cortisol**, the stress hormone, and can feel like being stuck on a mental hamster wheel.
 
 * * *
+
+
+> When these thoughts take up a lot of space in daily life, you can discuss them in [online psychological consultations](/en/psychotherapie/) and explore what they express and the difficulties alongside them.
 
 ## 🧠 **Why Do We Judge and Complain?**
 

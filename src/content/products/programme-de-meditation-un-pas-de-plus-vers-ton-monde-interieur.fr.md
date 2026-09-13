@@ -4,9 +4,9 @@ price: "465.00€ – 765.00€"
 image: "/images/products/poster-meditation-01.jpg"
 imageAlt: "programme amour de soi meditation en ligne"
 ctaLabel: "Choix des options"
-ctaUrl: "/infos-pratiques/#form"
+ctaUrl: "/infos-pratiques/#contact"
 seoTitle: "Un pas de plus vers ton monde intérieur | Programme de méditation"
-seoDescription: "Programme amour de soi sur 8 semaines : pleine conscience, pratiques somatiques, méditation et séances Zoom pour explorer ton monde intérieur."
+seoDescription: "Programme amour de soi sur 8 semaines : pleine conscience, pratiques somatiques, méditation et séances en visio pour explorer ton monde intérieur."
 draft: false
 ---
 
@@ -28,7 +28,7 @@ Je désire t’offrir davantage de liberté dans ta manière de guérir, de pren
 
 - **Un guidage progressif** : Ce programme te conduit pas à pas à travers les bases de la pleine conscience. Chaque jour, tu as la liberté de choisir les vidéos de routines (45 minutes).
 
-- **Approfondissement de la connaissance de soi** : Chaque semaine correspond à un chapitre, et chaque chapitre explore un aspect de ton monde intérieur. Tu plongeras dans ces thèmes à travers la lecture de l’ebook, des pratiques et lors de nos rencontres Zoom hebdomadaires.
+- **Approfondissement de la connaissance de soi** : Chaque semaine correspond à un chapitre, et chaque chapitre explore un aspect de ton monde intérieur. Tu plongeras dans ces thèmes à travers la lecture de l’ebook, des pratiques et lors de nos rencontres hebdomadaires en visio.
 
 - **La sagesse de l’expérience** : Ce programme a été créé en tenant compte des défis mentaux et émotionnels auxquels tu pourrais être confronté. Tu seras accompagné tout au long de ce voyage.
 

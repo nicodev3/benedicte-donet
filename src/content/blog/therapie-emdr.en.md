@@ -6,11 +6,11 @@ tags:
   - "Psychology"
   - "Trauma"
 date: 2025-05-20T07:43:13Z
-updated: 2026-09-07T10:00:00Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/illustrations/illustration-emdr-seance.jpeg"
 imageAlt: "EMDR therapy session with a psychologist"
-seoTitle: "EMDR therapy | Method, EMDR psychologist and online EMDR"
-seoDescription: "EMDR therapy (EMDR method): how it works, indications and what a session looks like. See an online EMDR psychologist for trauma, anxiety and post-traumatic stress."
+seoTitle: "EMDR therapy: the method and online sessions"
+seoDescription: "Understand EMDR therapy, its stages and how it can be adapted to video sessions. Explore consultations with Bénédicte Donet."
 draft: false
 ---
 
@@ -23,6 +23,9 @@ draft: false
 It is a recognised psychotherapeutic approach for treating **psychological trauma**, **anxiety**, **phobias** and **post-traumatic stress**. As an **EMDR psychologist**, I use it regularly in online consultations.
 
 Recommended by the [WHO](https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder) and the [Haute Autorité de Santé](https://www.has-sante.fr/), the method relies on adaptive information reprocessing: it helps **unblock painful memories** that remain « stuck » in the nervous system so they can be **naturally reprocessed**, without forcing a reliving of the experience.
+
+
+> Looking for a consultation? Explore [online EMDR therapy, fees and appointments](/en/psychotherapie/). We discuss your situation before choosing the tools for your care.
 
 ## How does the EMDR method work?
 
@@ -66,13 +69,13 @@ Between sessions, processing may continue to « digest » — that is expected. 
 
 ## Online EMDR: is video consultation suitable?
 
-Yes. **Online EMDR** follows the same framework as in person: confidentiality, adapted pacing, preparation then reprocessing phases. Sessions take place by video (Zoom or Doctolib). Bilateral stimulation can be adapted remotely (guided eye movements on screen, tapping, sounds).
+**Online EMDR** may be considered after discussing your situation, needs and the conditions for video consultations. A private space, a stable connection and the ability to remain in contact with your therapist are among the points to check. Adapting the work to video is an individual decision. Read about [the format and practical details of my consultations](/en/psychotherapie/).
 
-**Online EMDR** is particularly suitable if you want regular support without geographical constraints, while keeping a stable therapeutic relationship. This is the format I offer day to day as an online EMDR psychologist — practical details on the [psychotherapy](/en/psychotherapie/) page.
+## What precautions does EMDR therapy involve?
 
-## Is it a safe method?
+Working with difficult memories can bring up intense emotions. Preparation and learning calming techniques are part of treatment; the pace and goals need to suit your situation. Neither a result nor a fixed number of sessions can be guaranteed in advance.
 
-Yes. **EMDR therapy** is a safe and respectful method when practised within a professional framework. Contrary to popular belief, you do not « relive » your trauma: you process its effects from a distance, within a caring and controlled setting.
+The [NICE recommendations on post-traumatic stress disorder, sections 1.6.18 to 1.6.20](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults) describe indications for EMDR in adults, the importance of trained and supervised practitioners, and phased work including ways to manage distressing memories. These recommendations alone do not establish equivalence between video and in-person treatment.
 
 ## A holistic and integrative approach
 
@@ -82,7 +85,7 @@ The **EMDR method** is often complemented by other tools — **mindfulness**, bo
 
 ## In conclusion
 
-**EMDR therapy** offers a gentle and powerful path to transform past wounds into resources. It helps you **regain serenity, lightness and emotional stability** — including when suffering touches the romantic and relational sphere.
+**EMDR therapy** may form part of support for difficulties related to traumatic experiences. Choosing this approach depends on your situation and an assessment with your therapist.
 
 If you would like support from an **EMDR psychologist** via video consultation, you can discover [my psychotherapy practice](/en/psychotherapie/), read the article on [romantic relational trauma](/en/traumatisme-relation-amoureuse/), or book an appointment.
 

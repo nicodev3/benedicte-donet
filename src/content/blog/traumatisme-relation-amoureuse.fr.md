@@ -5,11 +5,11 @@ tags:
   - "Psycho"
   - "Trauma"
 date: 2024-01-30T12:07:00Z
-updated: 2026-06-08T12:32:06Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/stock/stock-relation-couple.jpg"
 imageAlt: "traumatisme et relation amoureuse"
-seoTitle: "Traumatisme et relation amoureuse : comprendre l’impact pour mieux guérir"
-seoDescription: "Les traumatismes laissent une empreinte durable sur la psyché humaine, influençant non seulement notre bien-être individuel mais également nos relations intimes. En tant que psychologue clinicienne, j’ai souvent observé comment les traumatismes peuvent tisser des fils invisibles dans le tissu des relations amoureuses. Dans cet article, nous explorerons la manière dont les traumatismes peuvent influencer ces relations, les défis qui en découlent, et comment une compréhension approfondie peut guider vers une guérison individuelle et relationnelle."
+seoTitle: "Traumatisme amoureux : comprendre et se faire accompagner"
+seoDescription: "Peur, méfiance, blessures du passé : comprendre le traumatisme dans les relations amoureuses et découvrir un accompagnement individuel en visio."
 draft: false
 ---
 
@@ -37,6 +37,9 @@ Par exemple, certains développent une **peur du rejet**, d’autres un besoin 
 👉 [À lire aussi : comprendre les styles d’attachement](/comment-te-relies-tu-aux-autres/)
 
 ![Personne seule, symbolisant la solitude après un traumatisme relationnel](/images/stock/stock-solitude.jpg)
+
+
+> Vous reconnaissez certaines de ces difficultés dans votre histoire ? Je propose un [accompagnement individuel avec une psychologue EMDR en ligne](/psychotherapie/) pour explorer les blessures qui affectent vos relations. Ce suivi est individuel ; il ne s’agit pas d’une consultation de couple.
 
 ## **Les effets du traumatisme sur la confiance et l’intimité**
 
@@ -91,9 +94,9 @@ Ainsi, soutenir son partenaire tout en se respectant soi-même est une posture c
 ### 🧑‍⚕️ 3. Se faire accompagner par un professionnel
 
 Dans de nombreux cas, l’aide d’un thérapeute est précieuse.  
-Une **thérapie individuelle** ou **de couple** permet d’explorer les mécanismes à l’œuvre et de se libérer des schémas répétitifs. L’EMDR, par exemple, peut être une méthode efficace pour traiter les traumatismes.
+Une **thérapie individuelle** ou **de couple** peut aider à explorer les mécanismes à l’œuvre et les schémas répétitifs. Selon la situation, l’EMDR peut faire partie des approches envisagées pour travailler sur des expériences traumatiques.
 
-👉 [Découvrir l’EMDR, une méthode efficace pour traiter les traumatismes](/therapie-emdr/)  
+👉 [Comprendre l’EMDR et ses indications](/therapie-emdr/)
 👉 [Psychologue EMDR en ligne — mon approche](/psychotherapie/)  
 👉 [Me contacter pour un accompagnement thérapeutique](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 

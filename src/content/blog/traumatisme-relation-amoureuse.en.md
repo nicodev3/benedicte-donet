@@ -5,11 +5,11 @@ tags:
   - "Psychology"
   - "Trauma"
 date: 2024-01-30T12:07:00Z
-updated: 2026-06-08T12:32:06Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/stock/stock-relation-couple.jpg"
 imageAlt: "trauma and romantic relationship"
-seoTitle: "Trauma and romantic relationships: understanding the impact to heal better"
-seoDescription: "Trauma leaves a lasting imprint on the human psyche, influencing not only our individual well-being but also our intimate relationships. As a clinical psychologist, I have often observed how trauma can weave invisible threads into the fabric of romantic relationships. In this article, we will explore how trauma can influence these relationships, the challenges that arise, and how a deeper understanding can guide us towards individual and relational healing."
+seoTitle: "Relationship trauma: understanding and finding support"
+seoDescription: "Fear, mistrust and past wounds: understand trauma in romantic relationships and explore individual support through video consultations."
 draft: false
 ---
 
@@ -37,6 +37,9 @@ For example, some people develop a **fear of rejection**, others a constant need
 👉 [Also worth reading: understanding attachment styles](/en/comment-te-relies-tu-aux-autres/)
 
 ![Person alone, symbolising solitude after relational trauma](/images/stock/stock-solitude.jpg)
+
+
+> Do you recognise some of these difficulties in your own history? I offer [individual support as an online EMDR psychologist](/en/psychotherapie/) to explore wounds affecting your relationships. This is individual care, not a couples consultation.
 
 ## **The effects of trauma on trust and intimacy**
 
@@ -91,9 +94,9 @@ Thus, supporting one's partner while respecting oneself is a key posture for str
 ### 🧑‍⚕️ 3. Seek support from a professional
 
 In many cases, the help of a therapist is invaluable.  
-**Individual** or **couples therapy** makes it possible to explore the mechanisms at work and free oneself from repetitive patterns. EMDR, for example, can be an effective method for treating trauma.
+**Individual** or **couples therapy** may help explore the mechanisms at work and repetitive patterns. Depending on the situation, EMDR may be one of the approaches considered for working with traumatic experiences.
 
-👉 [Discover EMDR, an effective method for treating trauma](/en/therapie-emdr/)  
+👉 [Understand EMDR and its indications](/en/therapie-emdr/)
 👉 [Online EMDR psychologist — my approach](/en/psychotherapie/)  
 👉 [Contact me for therapeutic support](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 

@@ -4,7 +4,7 @@ price: "45.00€"
 image: "/images/products/poster-au-coeur-de-ta-poitrine.jpg"
 imageAlt: "Online meditation workshop"
 ctaLabel: "Order now"
-ctaUrl: "/en/infos-pratiques/#form"
+ctaUrl: "/en/infos-pratiques/#contact"
 seoTitle: "At the heart of your chest | Online masterclass"
 seoDescription: "Discover the online masterclass « At the Heart of Your Chest »: science-based knowledge, mindfulness, and tantra tradition to reconnect with the power of your chest."
 draft: false

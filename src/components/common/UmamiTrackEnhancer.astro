@@ -1,70 +1,47 @@
----
-/**
- * Ajoute les attributs Umami sur les liens importants du contenu markdown
- * (Doctolib, email, contact infos pratiques, masterclass) s'ils n'en ont pas déjà.
- */
-import { SITE } from "@/site.config";
-import { UMAMI_EVENTS } from "@/lib/umami";
----
+<script>
+  import { SITE } from "@/site.config";
+  import { getConversionDestination } from "@/lib/umami";
 
-<script
-  define:vars={{
-    siteEmail: SITE.email,
-    events: UMAMI_EVENTS,
-  }}
->
-  function setUmamiEvent(link, eventName, props) {
-    if (link.hasAttribute("data-umami-event")) return;
-
-    link.setAttribute("data-umami-event", eventName);
-    if (props) {
-      for (const [key, value] of Object.entries(props)) {
-        if (value) link.setAttribute(`data-umami-event-${key}`, value);
-      }
-    }
-  }
-
-  function isStandaloneCtaLink(link) {
-    const parent = link.parentElement;
-    if (!parent || parent.tagName !== "P") return false;
-    const text = parent.textContent?.trim() ?? "";
-    return text === (link.textContent?.trim() ?? "");
-  }
-
-  function emplacementFor(link) {
-    if (link.closest(".page-cta") || isStandaloneCtaLink(link)) return "page-contenu";
-    if (link.closest(".prose")) return "lien-contenu";
+  function emplacementFor(link: HTMLAnchorElement): string {
+    if (link.closest("header")) return "navigation";
+    if (link.closest(".post .prose")) return "article-corps";
+    if (link.closest(".post-service-links, .post-footer")) return "article-bas";
+    if (link.closest("footer")) return "pied-de-page";
+    if (link.closest("#contact")) return "bloc-contact";
+    if (link.closest(".prose")) return "page-contenu";
     return "contenu";
   }
 
   function tagImportantLinks() {
-    document.querySelectorAll("a[href]").forEach((link) => {
-      const href = link.getAttribute("href") ?? "";
+    const source = window.location.pathname;
+    const langue = /^\/en(?:\/|$)/.test(source) ? "en" : "fr";
+    const origine = document.querySelector("article.post") ? "article" : "page";
 
-      if (/doctolib\.fr/i.test(href)) {
-        setUmamiEvent(link, events.DOCTOLIB, { emplacement: emplacementFor(link) });
-        return;
+    document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((link) => {
+      const conversion = getConversionDestination(
+        link.getAttribute("href") ?? "", window.location.origin, SITE.email
+      );
+      if (!conversion) return;
+
+      // Conserver les noms et emplacements déjà utilisés dans les rapports Umami.
+      if (!link.hasAttribute("data-umami-event")) {
+        link.setAttribute("data-umami-event", conversion.event);
       }
-
-      if (href.toLowerCase().startsWith(`mailto:${siteEmail.toLowerCase()}`)) {
-        setUmamiEvent(link, events.EMAIL, { emplacement: emplacementFor(link) });
-        return;
-      }
-
-      if (/(?:^|\/)(?:en\/)?infos-pratiques\/?#form\b/i.test(href)) {
-        setUmamiEvent(link, events.CONTACT_INFOS, { emplacement: emplacementFor(link) });
-        return;
-      }
-
-      if (/(?:^|\/)(?:en\/)?masterclass\/?(?:#.*)?$/i.test(href)) {
-        setUmamiEvent(link, events.MASTERCLASS, { emplacement: emplacementFor(link) });
+      const properties = {
+        source, langue, origine,
+        destination: conversion.destination,
+        emplacement: emplacementFor(link),
+      };
+      for (const [key, value] of Object.entries(properties)) {
+        const attribute = `data-umami-event-${key}`;
+        if (!link.hasAttribute(attribute)) link.setAttribute(attribute, value);
       }
     });
   }
 
   function setup() {
     tagImportantLinks();
-    // Les enhancers de contenu (page-cta) s'exécutent aussi au chargement.
+    // Les composants qui mettent en forme les liens peuvent s’exécuter après ce script.
     requestAnimationFrame(tagImportantLinks);
     window.setTimeout(tagImportantLinks, 150);
   }

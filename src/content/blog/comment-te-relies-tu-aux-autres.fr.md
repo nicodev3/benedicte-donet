@@ -9,14 +9,11 @@ tags:
   - Relations humaines
   - Théorie de l'attachement
 date: 2023-08-16T15:16:41.000Z
-updated: 2026-06-08T12:21:34.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/illustrations/illustration-lien-aux-autres.jpg
 imageAlt: attachement connexion aux autres
 seoTitle: Comment te relies-tu aux autres ?
-seoDescription: La manière dont nous établissons des liens les uns avec les
-  autres exerce une influence considérable sur notre vie et notre bien-être.
-  Pour discuter de l’attachement, nous pouvons explorer différents modèles de
-  compréhension.
+seoDescription: "Comprendre les styles d’attachement et leur influence sur nos relations. Des pistes pour explorer ses émotions et ses besoins dans le lien aux autres."
 draft: false
 ---
 La manière dont nous établissons des liens les uns avec les autres exerce une influence considérable sur notre vie et notre bien-être. Pour discuter de l’attachement, nous pouvons explorer différents modèles de compréhension.  
@@ -24,6 +21,9 @@ La manière dont nous établissons des liens les uns avec les autres exerce une 
 Tout d’abord, il y a le modèle qui **distingue l’attachement sécurisé de l’attachement insécure**. Selon ce modèle, environ la moitié de la population aurait développé un lien d’attachement sécurisé depuis l’enfance, tandis que l’autre moitié aurait un attachement insécure. 
 
 L’hypothèse sous-jacente est que cette manière de se lier est influencée par les premiers liens d’attachement, généralement avec les parents ou les personnes responsables de l’enfant. 
+
+
+> Tu reconnais des difficultés récurrentes dans tes liens aux autres ? Je propose un [accompagnement individuel en ligne](/psychotherapie/) pour explorer ton histoire relationnelle, tes émotions et tes besoins à ton rythme.
 
 En ce qui concerne les attachements insécures, nous pouvons les subdiviser en trois groupes : ceux qui vivent le lien de manière anxieuse, 
 

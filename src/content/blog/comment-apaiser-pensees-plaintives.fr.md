@@ -10,16 +10,12 @@ tags:
   - Pleine conscience
   - Psychoéducation
 date: 2023-09-06T12:39:47.000Z
-updated: 2026-06-08T12:22:20.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/stock/stock-pensees-apaisement-02.jpeg
 imageAlt: exercice comment arreter de se plaindre
 seoTitle: "Comment Apaiser Nos Pensées de Plainte : Une Approche Consciente et
   Bienveillante"
-seoDescription: Il est fréquent d’être envahi par des pensées de jugement
-  concernant notre environnement ou nous-mêmes. La plainte peut être définie
-  comme l’expression d’un mécontentement, ou même plus profondément, comme une
-  expression vocale de la douleur. Ainsi, nos plaintes sont des moyens
-  d’exprimer une souffrance, un mal-être, ou une difficulté.
+seoDescription: "Explorer les pensées de plainte avec conscience et bienveillance : comprendre ce qu’elles expriment et faire une place à ses émotions."
 draft: false
 ---
 ![Personne apaisant ses pensées négatives](/images/stock/stock-pensees-negatives.jpeg)
@@ -37,6 +33,9 @@ Mais à force de se répéter, ces pensées tracent des sillons dans notre cerve
 Et plus cette habitude s’installe, plus elle peut nourrir **l’anxiété**. Comme une roue de hamster qui tourne sans fin, la plainte active notre stress et favorise la sécrétion de **cortisol**, l’hormone du stress.
 
 - - -
+
+
+> Lorsque ces pensées prennent beaucoup de place au quotidien, tu peux en parler dans un [suivi psychologique en ligne](/psychotherapie/), pour explorer ce qu’elles expriment et les difficultés qui les accompagnent.
 
 ## 🧠 **Pourquoi jugeons-nous ou critiquons-nous ?**
 

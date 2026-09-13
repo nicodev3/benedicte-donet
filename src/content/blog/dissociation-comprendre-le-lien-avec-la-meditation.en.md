@@ -5,11 +5,11 @@ tags:
   - "Mindfulness"
   - "Psychology"
 date: 2024-01-25T15:27:00Z
-updated: 2026-06-08T12:30:41Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/stock/stock-dissociation-meditation.jpg"
 imageAlt: "Dissociation meditation benefits"
 seoTitle: "Dissociation and reconnection: how meditation can help"
-seoDescription: "Dissociation, a complex phenomenon that can affect mental health, is often little known to the general public. As a psychologist, I am particularly interested in how meditation can play an essential role in the reconnection process for those who live with this experience. In this article, we will explore dissociation, its impact on daily life, and how meditation can be a valuable tool to foster a deep reconnection with oneself."
+seoDescription: "Understand dissociation and explore its relationship with meditation. Reflections on reconnecting with yourself and seeking support."
 draft: false
 ---
 
@@ -24,6 +24,9 @@ draft: false
 Those affected often describe a feeling of living **at a distance from their own life**, as if they were observing things without truly participating in them. This form of disconnection can be unsettling and difficult to explain to those around them.
 
 * * *
+
+
+> If experiences of disconnection worry you, it is helpful to discuss them with a professional. You can explore [the framework of my online consultations](/en/psychotherapie/) before deciding whether to book.
 
 ## Consequences for daily life
 

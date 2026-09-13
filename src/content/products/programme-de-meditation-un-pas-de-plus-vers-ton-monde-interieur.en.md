@@ -4,9 +4,9 @@ price: "465.00€ – 765.00€"
 image: "/images/products/poster-meditation-01.jpg"
 imageAlt: "Online self-love meditation programme"
 ctaLabel: "Choose options"
-ctaUrl: "/en/infos-pratiques/#form"
+ctaUrl: "/en/infos-pratiques/#contact"
 seoTitle: "One step closer to your inner world | Meditation programme"
-seoDescription: "8-week self-love programme combining mindfulness, somatic practices, meditation, and weekly Zoom sessions to explore your inner world step by step."
+seoDescription: "8-week self-love programme combining mindfulness, somatic practices, meditation, and weekly video sessions to explore your inner world step by step."
 draft: false
 ---
 
@@ -28,7 +28,7 @@ I want to offer you more freedom in the way you heal, take care of yourself, and
 
 - **Progressive guidance**: This programme leads you step by step through the foundations of mindfulness. Each day, you have the freedom to choose the routine videos (45 minutes).
 
-- **Deepening self-knowledge**: Each week corresponds to a chapter, and each chapter explores an aspect of your inner world. You will dive into these themes through reading the ebook, practices, and during our weekly Zoom meetings.
+- **Deepening self-knowledge**: Each week corresponds to a chapter, and each chapter explores an aspect of your inner world. You will dive into these themes through reading the ebook, practices, and during our weekly video meetings.
 
 - **The wisdom of experience**: This programme was created taking into account the mental and emotional challenges you might face. You will be accompanied throughout this journey.
 

@@ -4,7 +4,7 @@ price: "45.00€"
 image: "/images/products/poster-cultiver-lamour.jpg"
 imageAlt: "Online masterclass meditation cultivating love"
 ctaLabel: "Order now"
-ctaUrl: "/en/infos-pratiques/#form"
+ctaUrl: "/en/infos-pratiques/#contact"
 seoTitle: "Cultivating love | Online masterclass"
 seoDescription: "Discover the online masterclass « Cultivating Love » and learn step by step to nourish self-love with a detailed workbook, writing exercises, and a guided meditation."
 draft: false

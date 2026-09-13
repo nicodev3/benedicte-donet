@@ -131,7 +131,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       footerCta: "Je prends rendez-vous",
       serviceLinksTitle: "Approfondir l'accompagnement",
       serviceLinks: {
-        psychotherapyTitle: "Psychothérapie en ligne",
+        psychotherapyTitle: "Consultations EMDR en ligne",
         psychotherapyText:
           "Séances en visio pour traverser trauma, anxiété, stress post-traumatique et difficultés relationnelles.",
         emdrTitle: "Comprendre l'EMDR",
@@ -222,7 +222,7 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       footerCta: "Book a session",
       serviceLinksTitle: "Go deeper with support",
       serviceLinks: {
-        psychotherapyTitle: "Online psychotherapy",
+        psychotherapyTitle: "Online EMDR consultations",
         psychotherapyText:
           "Video sessions for trauma, anxiety, post-traumatic stress and relationship difficulties.",
         emdrTitle: "Understanding EMDR",

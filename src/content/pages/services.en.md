@@ -3,8 +3,8 @@ title: "Services"
 description: "Online psychologist"
 image: "/images/heroes/hero-services.jpg"
 imageAlt: "Dried flowers — online psychologist"
-seoTitle: "Online Psychologist | Video Consultation Services"
-seoDescription: "Online psychology consultations with Bénédicte Donet: psychotherapy, EMDR, trauma-informed support, phototherapy, mindfulness programmes and workshops."
+seoTitle: "Psychotherapy, workshops and phototherapy"
+seoDescription: "Explore Bénédicte Donet’s services: individual video psychotherapy, phototherapy, workshops and programmes."
 order: 2
 draft: false
 pageType: page
@@ -23,14 +23,14 @@ Together, we explore every facet of your being: beliefs, tensions, blockages, em
 
 The nature of therapy can evolve because each person is unique, requiring specific methods and approaches.
 
-[Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
+[Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 ## PSYCHOTHERAPY
 
 The main modalities I use in my sessions are:
 
 -   **Speech and listening**, the necessary foundation for understanding your experiences, your emotions and your needs.
--   **EMDR**: Eye movement therapy allowing the treatment and resolution of past traumas, facilitating the digestion of memories and reducing their emotional impact.
+-   **EMDR**: a psychotherapeutic approach using bilateral stimulation to work with traumatic memories. Its suitability and pace are assessed for each person.
 -   **IEMT**: a therapy technique that explores the question of how we learned to feel in a certain way and opens the possibility of creating appropriate changes in our emotional life.
 -   **IFS**: internal family systems, a technique inviting us to welcome the different identities we carry within us, helping them to grow if necessary, to evolve and to regain a sense of safety.
 -   **Mindfulness**: meditation, observation of emotions and sensations.

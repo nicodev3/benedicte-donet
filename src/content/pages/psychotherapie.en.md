@@ -1,11 +1,11 @@
 ---
 title: "Psychotherapy"
-heroTitle: "Psychotherapy"
+heroTitle: "Online EMDR psychologist"
 description: "Online psychologist"
 image: "/images/heroes/hero-psychotherapie.webp"
 imageAlt: "Portrait of Bénédicte Donet, online EMDR psychologist"
-seoTitle: "Online EMDR Psychologist | Trauma and Anxiety"
-seoDescription: "Online EMDR psychologist: video psychotherapy for trauma, anxiety and post-traumatic stress with Bénédicte Donet, clinical psychologist."
+seoTitle: "Online EMDR psychologist | Bénédicte Donet"
+seoDescription: "Online psychology and EMDR therapy with Bénédicte Donet. Discover the session format and fees, and book your video consultation on Doctolib."
 order: 3
 draft: false
 pageType: page
@@ -13,24 +13,70 @@ pageType: page
 
 ![EMDR online psychology benedicte donet](/images/portraits/portrait-emdr-01.jpg)
 
-## Online EMDR psychologist
+## Individual support by video
 
-I am an **online EMDR psychologist**: I support adults via video consultation (Zoom / Doctolib) for trauma, anxiety and post-traumatic stress. **Online EMDR** allows regular care in a safe framework, wherever you are.
+I am Bénédicte Donet, an **online clinical psychologist and psychotherapist**. I support adults dealing with trauma, anxiety or relationship difficulties, in a confidential setting and at their own pace.
 
-Learn more about the method: [What is EMDR therapy?](/en/therapie-emdr/)
+**Online EMDR therapy** is one of the approaches I offer. We take time to discuss your situation and the setting and tools that suit your needs. Sessions take place by video. The address in L’Étang-Salé, Réunion, is an administrative address, not a consultation office.
 
-**More on EMDR:**
+[Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
-- [EMDR and post-traumatic stress](/en/emdr-stress-post-traumatique/)
-- [EMDR as a natural process](/en/emdr-traitement-trauma-processus-naturel/)
-- [Memory and trauma](/en/memoire-traumatisme-guerison/)
+**Professional background:** a master’s degree in clinical psychology and psychopathology from Paul-Valéry University, Montpellier (2015), followed by EMDR training in Australia with [EMDRAA](https://emdraa.org/) (2022). Read about [my qualifications and training](/en/a-propos/).
+
+I mainly support **adults**. Sessions may also be considered for **adolescents aged 13 and over** when the adolescent personally wishes to attend. In this situation, please [email me before booking](mailto:donetbenedicte@gmail.com) to discuss the framework for support.
+
+<span id="tarifpsycho" aria-hidden="true"></span>
+<span id="tarifs" aria-hidden="true"></span>
+
+## Fees
+
+-   First individual session €70
+
+-   Individual session €90
+
+    Duration: 1h30 / Audience: Adults
+
+
+\* I strive to facilitate access to therapeutic support for as many people as possible. **If your personal situation makes access to therapy difficult**, I have reserved a number of places at reduced rates. Depending on your situation (student, job seeker, etc.), I would be happy to discuss fees with you before our first session. Do not hesitate to [contact me](/en/infos-pratiques/) to discuss this.
+
+## How does online EMDR therapy work?
+
+### The first consultation
+
+We discuss what brings you to therapy, your expectations and the framework for working together. You can ask questions before considering ongoing sessions. Reprocessing a traumatic memory does not automatically begin at the first meeting.
+
+### Therapeutic work by video
+
+Depending on your situation, we may combine talking, EMDR and other approaches from my practice. Preparation, resources and pace are developed with you. Adapting EMDR to video sessions requires discussing your individual circumstances.
+
+### Preparing for your appointment
+
+Choose a quiet, private space, a stable internet connection and a device with a camera and microphone. Sessions last **1 hour 30 minutes**. Connection details are shared before your appointment.
+
+<span id="questions-visio" aria-hidden="true"></span>
+
+## Questions about online consultations
+
+### Can I contact you before booking?
+
+Yes, you can [email me](mailto:donetbenedicte@gmail.com) with questions about sessions or fees. To choose an appointment, visit [my Doctolib calendar](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet).
+
+### Do I need to know whether EMDR is right for me?
+
+You can bring your questions and concerns without having chosen a method. We will discuss your needs and whether EMDR or other approaches may have a place in your care.
+
+### Where can I find information about reimbursement and who can consult?
+
+See the [practical information](/en/infos-pratiques/) page. The support described here is individual, including when difficulties concern romantic relationships.
+
+[Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 ## I SUPPORT YOU
 
 At the heart of my therapeutic practice lie speech and listening, two fundamental pillars that guide my sessions towards a deep understanding of your experiences, emotions and needs. This empathic approach makes it possible to establish a **space of trust and openness** where you can move forward at your own pace.  
 I integrate into this foundation other therapeutic methods that seem aligned with your situation:
 
--   **EMDR** (Eye Movement Desensitization and Reprocessing) is a recognised psychotherapeutic technique for treating post-traumatic stress disorder. Eye movements or other sensory stimuli are used while disturbing memories are recalled. This therapy allows past traumas to be treated and resolved, facilitating the digestion of memories and reducing their emotional impact. [More information on EMDR online psychology](https://www.emdr-france.org/lemdr-cest-quoi/la-therapie-emdr/).
+-   **EMDR** (Eye Movement Desensitization and Reprocessing) is a psychotherapeutic approach recommended in some situations involving post-traumatic stress. Eye movements or other bilateral stimulation are used in phased work with specific memories. Its suitability and pace are assessed for each person. Read more about [EMDR therapy](/en/therapie-emdr/) and the [NICE recommendations](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults).
 -   **Mindfulness** is a powerful tool with beneficial effects on our well-being, our body awareness and our ability to fully live in the present moment. I often introduce moments of meditation and mindfulness exploration into my support to help you reconnect with the present moment, deepen your self-knowledge and welcome your inner experiences without resistance.
 -   The **Internal Family Systems** (IFS) model, an identity integration practice, is a fascinating approach. Each individual carries within them a complex world made up of several identities. These identities are not all aligned in terms of age or desires. One part of us may above all wish to protect itself, to feel safe. However, we also have another part within us that aspires to grow and to discover the world around us. The practice of identity integration consists of recognising and welcoming all these parts of ourselves. We work with these different identities, helping them to grow if necessary, to evolve and to regain a sense of safety.
 -   **Breathing and the use of the voice**. When you face high levels of stress and anxiety, it is beneficial to explore your way of breathing. Sometimes breath re-education is necessary in order to support the nervous system. Also, your voice is closely linked to your nervous system and your emotions. By working on voice modulation, we can release emotional tension, express our needs and strengthen our self-confidence. These techniques create a powerful therapeutic space.
@@ -50,7 +96,7 @@ My practice is guided by a holistic vision of psychology, which consists of **ta
 
 Passionate about therapy and its practice, **I continually update my knowledge through training** and by nourishing my personal practice, in order to offer you quality therapeutic support. The maturity, knowledge and experience that result from inner work cannot be compared to knowledge acquired in books. My support is therefore greatly inspired and guided by what I have learned.
 
-[Access the FAQ](/en/services/#faq)
+[Questions about online consultations](#questions-visio)
 
 ## My specialities
 
@@ -85,21 +131,10 @@ These are natural states that we all encounter at some point in our lives. I bel
 We will explore techniques based on mindfulness and relaxation to support you in daily life. To this, I add deep work around trauma. Together, we will gradually address the situations that trigger your phobias. The goal is to allow you to feel more control and confidence in situations that were once sources of anxiety.  
 The psychotherapeutic work we undertake together aims not only to reduce symptoms, but also to help you develop a deep understanding of yourself and your emotions.
 
-## Fees
-
--   First individual session €70
-    
--   Individual session €90
-    
-    Duration: 1h30 / Audience: Adults
-    
-
-\* I strive to facilitate access to therapeutic support for as many people as possible. **If your personal situation makes access to therapy difficult**, I have reserved a number of places at reduced rates. Depending on your situation (student, job seeker, etc.), I would be happy to discuss fees with you before our first session. Do not hesitate to [contact me](/en/infos-pratiques/) to discuss this.
-
 ![EMDR online psychology benedicte donet psychotherapist](/images/portraits/portrait-emdr-02.jpg)
 
 ## Questions?
 
-You can contact me by email: [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com) or via the [contact form](/en/infos-pratiques/) to ask your questions and have an initial exchange before deciding to **book an appointment**.
+You can [email me](mailto:donetbenedicte@gmail.com) with questions before booking a consultation.
 
-[Take the leap](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
+[Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)

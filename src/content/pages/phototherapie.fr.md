@@ -34,6 +34,8 @@ Dans une société qui nous pousse instinctivement à juger et à rejeter certai
 ![Portrait photothérapie confiance en soi](/images/phototherapie/photo-phototherapie-05.jpg)
 ![Séance photo célébration du corps](/images/phototherapie/photo-phototherapie-06.jpg)
 
+<span id="option" aria-hidden="true" style="scroll-margin-top: 6rem"></span>
+
 ## Mes offres de photothérapie
 
 ![séance photo confiance en soi photothérapie](/images/phototherapie/photo-phototherapie-montage-01.png)
@@ -67,7 +69,7 @@ Cette formule s’inscrit dans une exploration plus profonde pour cultiver l’a
   
 Prix : **600 euros**
 
-[Je suis intéressé.e](/infos-pratiques/#form)
+[Je suis intéressé.e](/infos-pratiques/#contact)
 
 ## Le déroulement du photoshoot
 
@@ -113,7 +115,7 @@ La distinction réside principalement dans la durée et l’intensité de l’ex
 
 Si vous vous sentez prête à entreprendre ce cheminement, vous pouvez m’écrire dans le lien de contact.
 
-[Je réserve mon photoshoot](/infos-pratiques/#form)
+[Je réserve mon photoshoot](/infos-pratiques/#contact)
 
 ## Elles en parlent…
 

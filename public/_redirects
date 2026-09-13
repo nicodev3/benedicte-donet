@@ -13,10 +13,6 @@
 # Archives, flux RSS et taxonomies WordPress supprimés
 /feed/ /blog/ 301
 /comments/feed/ /blog/ 301
-/category/* /blog/ 301
-/en/category/* /en/blog/ 301
-/categorie-produit/* /masterclass/ 301
-/en/categorie-produit/* /en/masterclass/ 301
 
 # Étiquettes de blog : les slugs sont traduits et ne peuvent pas être obtenus
 # par un simple ajout/retrait de /en/.
@@ -65,3 +61,59 @@
 /en/personal-growth-happiness-balance/ /en/developpement-personnelle-vs-bonheur-bien-etre/ 301
 /en/the-different-facets-of-your-being/ /en/les-differentes-facettes-de-votre-etre/ 301
 /en/our-relationship-with-money-therapy/ /en/relation-a-l-argent-psychologie/ 301
+
+# Article anglais à la racine documenté lors de la migration WordPress
+/how-to-breathe-better-naturally/ /en/comment-mieux-respirer-pour-supporter-ta-sante-mental/ 301
+
+# Variantes sans slash des anciennes URL (destination finale directe)
+/boutique /masterclass/ 301
+/panier /masterclass/ 301
+/commander /masterclass/ 301
+/mon-compte /masterclass/ 301
+/sitemap / 301
+/feed /blog/ 301
+/comments/feed /blog/ 301
+/blog/tag/relationship-with-money /blog/tag/relation-a-l-argent/ 301
+/blog/tag/psychology /blog/tag/psycho/ 301
+/blog/tag/health /blog/tag/sante/ 301
+/blog/tag/positive-psychology /blog/tag/psychologie-positive/ 301
+/blog/tag/human-relationships /blog/tag/relations-humaines/ 301
+/blog/tag/mindfulness /blog/tag/pleine-conscience/ 301
+/blog/tag/breathing /blog/tag/respiration/ 301
+/blog/tag/attachment-theory /blog/tag/theorie-de-l-attachement/ 301
+/en/blog/tag/sante /en/blog/tag/health/ 301
+/en/blog/tag/theorie-de-l-attachement /en/blog/tag/attachment-theory/ 301
+/en/blog/tag/relation-a-l-argent /en/blog/tag/relationship-with-money/ 301
+/en/blog/tag/relations-humaines /en/blog/tag/human-relationships/ 301
+/en/blog/tag/respiration /en/blog/tag/breathing/ 301
+/en/blog/tag/pleine-conscience /en/blog/tag/mindfulness/ 301
+/en/blog/tag/psychologie-positive /en/blog/tag/positive-psychology/ 301
+/en/blog/tag/psycho /en/blog/tag/psychology/ 301
+/comment-les-traumatismes-impactent-les-relations-amoureuses /traumatisme-relation-amoureuse/ 301
+/meditation-et-therapie-une-synergie-puissante /meditation-pleine-conscience-therapie/ 301
+/pourquoi-ai-nest-pas-un-soutien-psychologique-de-confiance /pourquoi-ia-nest-pas-un-soutien-psychologique-de-confiance/ 301
+/en/pourquoi-ai-nest-pas-un-soutien-psychologique-de-confiance /en/pourquoi-ia-nest-pas-un-soutien-psychologique-de-confiance/ 301
+/en/home /en/ 301
+/en/about-me /en/a-propos/ 301
+/en/my-services /en/services/ 301
+/en/psychotherapy /en/psychotherapie/ 301
+/en/phototherapy /en/phototherapie/ 301
+/en/masterclass-en /en/masterclass/ 301
+/en/practical-information /en/infos-pratiques/ 301
+/en/diary /en/blog/ 301
+/en/basket /en/masterclass/ 301
+/en/kob-khun-maak-ka-gratitude /en/kob-khun-maak-ka-la-gratitude/ 301
+/en/how-to-stop-complaining-thoughts /en/comment-apaiser-pensees-plaintives/ 301
+/en/how-to-navigate-through-our-complaining-thoughts /en/comment-apaiser-pensees-plaintives/ 301
+/en/how-to-breathe-better-naturally /en/comment-mieux-respirer-pour-supporter-ta-sante-mental/ 301
+/en/how-do-you-connect-with-others /en/comment-te-relies-tu-aux-autres/ 301
+/en/personal-growth-happiness-balance /en/developpement-personnelle-vs-bonheur-bien-etre/ 301
+/en/the-different-facets-of-your-being /en/les-differentes-facettes-de-votre-etre/ 301
+/en/our-relationship-with-money-therapy /en/relation-a-l-argent-psychologie/ 301
+/how-to-breathe-better-naturally /en/comment-mieux-respirer-pour-supporter-ta-sante-mental/ 301
+
+# Archives WordPress supprimées
+/category/* /blog/ 301
+/en/category/* /en/blog/ 301
+/categorie-produit/* /masterclass/ 301
+/en/categorie-produit/* /en/masterclass/ 301

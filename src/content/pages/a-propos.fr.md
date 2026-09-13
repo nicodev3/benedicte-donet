@@ -49,7 +49,7 @@ Ce que je vous offre dans ma pratique de psychologue, je l’ai profondément ex
 
 Je suis maintenant passionnée par l’idée de vous transmettre ces savoirs, pratiques, enseignements sous différentes formes : séances individuelles, ateliers, retraites.
 
-[Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
+[Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 ![psychologue en ligne avis benedicte donet](/images/portraits/portrait-infos-pratiques.jpg)
 
@@ -68,7 +68,7 @@ Proverbe africain
 -   Formation de professeur yoga, Pyramid yoga center, Thaïlande, 2019
 -   Formation Blissschool sexualité féminine, Thaïlande, 2020
 -   Formation Layla Martin coach sexualité, amour et relation à distance, 2021
--   Formation EMDR à distance formateur australien, 2022
+-   Formation EMDR en Australie auprès de l’[EMDRAA (EMDR Association of Australia)](https://emdraa.org/), 2022
 -   Formation souffle et respiration, Thaïlande, 2022
 -   Formation inceste, abus et trauma sexuels, à distance, 2022
 -   Formation IEMT, Integral Eye Movement Therapy, à distance, 2023

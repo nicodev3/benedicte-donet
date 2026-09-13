@@ -3,7 +3,7 @@ import { getCollection, render } from "astro:content";
 import PageLayout from "@/layouts/PageLayout.astro";
 import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
 import OptimizedContent from "@/components/common/OptimizedContent.astro";
-import type { CollectionEntry } from "astro:content";
+import { isStandardPage, type StandardPageEntry } from "@/lib/pages";
 import { isPublishedBlogPost, type PublishedBlogPost } from "@/lib/blog";
 import { getContentSlug, getLocaleFromFilePath, localizedPath } from "@/lib/i18n";
 
@@ -14,10 +14,9 @@ import { getContentSlug, getLocaleFromFilePath, localizedPath } from "@/lib/i18n
  */
 export async function getStaticPaths() {
   const staticPageSlugs = new Set(["masterclass", "accueil"]);
-  const pages = (await getCollection("pages", ({ data }) => !data.draft)).filter(
+  const pages = (await getCollection("pages", ({ data }) => !data.draft)).filter(isStandardPage).filter(
     (page) =>
-      !staticPageSlugs.has(getContentSlug(page.filePath, page.id)) &&
-      !("pageType" in page.data && page.data.pageType === "home")
+      !staticPageSlugs.has(getContentSlug(page.filePath, page.id))
   );
   const posts = await getCollection("blog", isPublishedBlogPost);
   const localizedSlug = (entry: (typeof pages)[number] | (typeof posts)[number]) => {
@@ -44,7 +43,7 @@ export async function getStaticPaths() {
 }
 
 type Props =
-  | { type: "page"; entry: CollectionEntry<"pages"> }
+  | { type: "page"; entry: StandardPageEntry }
   | { type: "post"; entry: PublishedBlogPost };
 
 const { type, entry } = Astro.props;

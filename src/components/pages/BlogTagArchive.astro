@@ -4,9 +4,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/common/Container.astro";
 import Hero from "@/components/sections/Hero.astro";
 import PostGrid from "@/components/blog/PostGrid.astro";
-import { localizedPath, type Locale } from "@/lib/i18n";
-import { getPostsByTagSlug, getTagsForLocale } from "@/lib/tags";
+import Button from "@/components/common/Button.astro";
+import { localizedPath, stripLocaleFromFilePath, type Locale } from "@/lib/i18n";
+import { getPostsByTagSlug, getTagArchiveContent, getTagsForLocale } from "@/lib/tags";
 import { useTranslations } from "@/lib/translations";
+import { SITE } from "@/site.config";
+import { UMAMI_EVENTS } from "@/lib/umami";
 
 interface Props {
   locale: Locale;
@@ -20,17 +23,44 @@ const allPosts = await getCollection("blog");
 const tagInfo = getTagsForLocale(allPosts, locale).find((tag) => tag.slug === tagSlug);
 const posts = getPostsByTagSlug(allPosts, locale, tagSlug);
 const tagLabel = tagInfo?.label ?? tagSlug;
+const content = getTagArchiveContent(locale, tagSlug, tagLabel);
+const archiveUrl = new URL(
+  localizedPath(`/blog/tag/${tagSlug}/`, locale),
+  SITE.url,
+).href;
+const structuredData = {
+  "@type": "CollectionPage",
+  "@id": `${archiveUrl}#collection`,
+  name: content.title,
+  description: content.description,
+  url: archiveUrl,
+  inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: posts.length,
+    itemListElement: posts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: post.data.title,
+      url: new URL(
+        localizedPath(`/${stripLocaleFromFilePath(post.filePath, post.id)}/`, locale),
+        SITE.url,
+      ).href,
+    })),
+  },
+};
 
 const blogHeroImage = "/images/heroes/hero-blog.jpg";
 ---
 
 <BaseLayout
-  title={`${t.blog.tagPrefix} : ${tagLabel}`}
-  description={t.blog.description}
+  title={content.title}
+  description={content.description}
   image={blogHeroImage}
+  structuredData={structuredData}
 >
   <Hero
-    title={`${t.blog.tagPrefix} : ${tagLabel}`}
+    title={content.title}
     subtitle={t.blog.heroSubtitle}
     backgroundImage={blogHeroImage}
     backgroundImageAlt={t.blog.heroTitle}
@@ -38,16 +68,57 @@ const blogHeroImage = "/images/heroes/hero-blog.jpg";
   />
 
   <Container>
+    <div class="tag-archive-intro">
+      <p>{content.intro}</p>
+      <p>
+        {locale === "fr"
+          ? `${posts.length} article${posts.length > 1 ? "s" : ""} dans cette sélection.`
+          : `${posts.length} article${posts.length > 1 ? "s" : ""} in this selection.`}
+      </p>
+    </div>
     <p class="tag-archive-back">
       <a href={localizedPath("/blog/", locale)}>{t.blog.backToBlog}</a>
     </p>
     <PostGrid posts={posts} locale={locale} />
+    <aside class="tag-consultation">
+      <h2>{locale === "fr" ? "Vous envisagez un accompagnement ?" : "Are you considering support?"}</h2>
+      <p>
+        {locale === "fr"
+          ? "Découvrez le cadre des consultations individuelles en visio, les tarifs et la prise de rendez-vous."
+          : "Learn about individual video consultations, fees and how to book an appointment."}
+      </p>
+      <Button
+        href={localizedPath("/psychotherapie/", locale)}
+        umamiEvent={UMAMI_EVENTS.CONSULTATION}
+        umamiProps={{ emplacement: "archive-tag", langue: locale }}
+      >
+        {locale === "fr" ? "Découvrir les consultations en ligne" : "Explore online consultations"}
+      </Button>
+    </aside>
   </Container>
 </BaseLayout>
 
 <style>
   .tag-archive-back {
     margin-top: var(--space-lg);
+  }
+
+  .tag-archive-intro {
+    max-width: 52rem;
+    margin-top: var(--space-lg);
+  }
+
+  .tag-consultation {
+    max-width: 52rem;
+    margin: var(--space-xl) auto;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-soft);
+    text-align: center;
+  }
+
+  .tag-consultation h2 {
+    margin-top: 0;
   }
 
   .tag-archive-back a {

@@ -20,7 +20,7 @@ const NAVIGATION: Record<Locale, NavigationItem[]> = {
       order: 2,
       children: [
         { label: "Vue d'ensemble", url: "/services/" },
-        { label: "Psychothérapie", url: "/psychotherapie/" },
+        { label: "EMDR et psychothérapie en ligne", url: "/psychotherapie/" },
         { label: "Photothérapie", url: "/phototherapie/" },
       ],
     },
@@ -36,7 +36,7 @@ const NAVIGATION: Record<Locale, NavigationItem[]> = {
       order: 2,
       children: [
         { label: "Overview", url: "/services/" },
-        { label: "Psychotherapy", url: "/psychotherapie/" },
+        { label: "Online EMDR and psychotherapy", url: "/psychotherapie/" },
         { label: "Phototherapy", url: "/phototherapie/" },
       ],
     },

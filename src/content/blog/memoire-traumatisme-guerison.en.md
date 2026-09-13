@@ -10,7 +10,7 @@ updated: 2026-06-08T12:31:24Z
 image: "/images/stock/stock-traumatisme-guerison.jpg"
 imageAlt: "healing from trauma"
 seoTitle: "Memory and trauma: understanding their connection to heal better"
-seoDescription: "Memory is a complex mechanism that shapes our understanding of the world and influences our behaviour."
+seoDescription: "Explore the links between memory and trauma: understand painful memories and the role of therapeutic support."
 draft: false
 ---
 

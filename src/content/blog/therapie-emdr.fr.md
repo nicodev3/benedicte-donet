@@ -6,11 +6,11 @@ tags:
   - "Psycho"
   - "Trauma"
 date: 2025-05-20T07:43:13Z
-updated: 2026-09-07T10:00:00Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/illustrations/illustration-emdr-seance.jpeg"
 imageAlt: "Séance de thérapie EMDR avec un psychologue"
-seoTitle: "Thérapie EMDR | Méthode, psychologue EMDR et EMDR en ligne"
-seoDescription: "Thérapie EMDR (méthode EMDR) : fonctionnement, indications et déroulé d’une séance. Consultez une psychologue EMDR / psy EMDR en ligne pour trauma, anxiété et stress post-traumatique."
+seoTitle: "Thérapie EMDR : méthode et séances en ligne"
+seoDescription: "Comprendre la thérapie EMDR, ses étapes et son adaptation à la visio. Découvrez aussi le cadre des consultations avec Bénédicte Donet."
 draft: false
 ---
 
@@ -23,6 +23,9 @@ draft: false
 C’est une approche psychothérapeutique reconnue pour le traitement des **traumatismes psychiques**, de l’**anxiété**, des **phobies** et du **stress post-traumatique**. En tant que **psychologue EMDR** (ou **psy EMDR**), je l’utilise régulièrement en téléconsultation.
 
 Recommandée par l’[OMS](https://www.who.int/fr/news-room/fact-sheets/detail/post-traumatic-stress-disorder) et la [Haute Autorité de Santé](https://www.has-sante.fr/), la méthode s’appuie sur le retraitement adaptatif de l’information : elle permet de **débloquer les souvenirs douloureux** restés « coincés » dans le système nerveux, afin de les **retraiter naturellement**, sans forcer la reviviscence.
+
+
+> Vous cherchez une consultation plutôt qu’une explication de la méthode ? Retrouvez [le cadre de la thérapie EMDR en ligne, les tarifs et la prise de rendez-vous](/psychotherapie/). Nous discutons de votre situation avant de choisir les outils du suivi.
 
 ## Comment fonctionne la méthode EMDR ?
 
@@ -66,13 +69,13 @@ Entre les séances, le travail peut continuer à « digérer » — c’est atte
 
 ## EMDR en ligne : la téléconsultation est-elle adaptée ?
 
-Oui. L’**EMDR en ligne** suit le même cadre qu’en présentiel : confidentialité, rythme adapté, phases de préparation puis de retraitement. Les séances se font en visio (Zoom ou Doctolib). La stimulation bilatérale s’adapte à distance (mouvements oculaires guidés à l’écran, tapotements, sons).
+L’**EMDR en ligne** peut être envisagée après un échange sur votre situation, vos besoins et les conditions de la téléconsultation. Un espace privé, une connexion stable et la possibilité de rester en lien avec la thérapeute font partie des points à vérifier. L’adaptation du travail à distance se décide individuellement. Retrouvez [le déroulement et les modalités de mes consultations](/psychotherapie/).
 
-L’**EMDR en ligne** convient particulièrement si vous cherchez un suivi régulier sans contrainte géographique, tout en gardant un lien thérapeutique stable. C’est le format que je propose au quotidien en tant que **psy EMDR** en téléconsultation — détails pratiques sur la page [psychothérapie](/psychotherapie/).
+## Quelles précautions pour une thérapie EMDR ?
 
-## Est-ce une méthode sûre ?
+Le travail sur des souvenirs difficiles peut susciter des émotions intenses. La préparation et l’apprentissage de moyens d’apaisement font partie du suivi ; le rythme et les objectifs doivent être ajustés à votre situation. Il n’est pas possible de garantir à l’avance un résultat ou un nombre de séances.
 
-Oui. La **thérapie EMDR** est une méthode sûre et respectueuse lorsqu’elle est pratiquée dans un cadre professionnel. Contrairement aux idées reçues, vous ne « revivez » pas votre trauma : vous en traitez les effets à distance, dans un cadre bienveillant et maîtrisé.
+Les [recommandations NICE sur le stress post-traumatique, sections 1.6.18 à 1.6.20](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults) décrivent les indications de l’EMDR chez l’adulte, l’importance d’un praticien formé et supervisé, et un travail progressif incluant la gestion des souvenirs éprouvants. Elles ne démontrent pas à elles seules une équivalence entre la visio et le présentiel.
 
 ## Une approche globale et intégrative
 
@@ -82,7 +85,7 @@ La **méthode EMDR** est souvent complétée par d’autres outils — **pleine 
 
 ## En conclusion
 
-La **thérapie EMDR** offre une voie douce et puissante pour transformer les blessures du passé en ressources. Elle vous permet de **retrouver sérénité, légèreté et stabilité émotionnelle** — y compris lorsque la souffrance touche la sphère amoureuse et relationnelle.
+La **thérapie EMDR** peut faire partie d’un accompagnement des difficultés liées à des expériences traumatiques. Le choix de cette approche dépend de votre situation et de l’évaluation menée avec la thérapeute.
 
 Si vous souhaitez être accompagné·e par une **psychologue EMDR** / **psy EMDR** en téléconsultation, vous pouvez découvrir [ma pratique de psychothérapie](/psychotherapie/), lire l’article sur le [traumatisme relationnel amoureux](/traumatisme-relation-amoureuse/), ou prendre rendez-vous.
 

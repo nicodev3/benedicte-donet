@@ -49,7 +49,7 @@ What I offer you in my practice as a psychologist, I have explored deeply in my 
 
 I am now passionate about the idea of passing on this knowledge, practices, and teachings in different forms: individual sessions, workshops, and retreats.
 
-[Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet?fbclid=IwZXh0bgNhZW0CMTAAAR1i9xzKjnpEu4CYAdKrMjOT29-pjttCgck6O0WvVdrZELEQWLEK59NJcnw_aem_AbGEMI5CdusHS4yKDj6GJEo_APfV_1INRdpW1Bs_gRwVQEzXL8cXo6BsdC98g6Rq2LZMFWFqn1TYoTsTeAiwPWGz)
+[Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 ![Online psychologist reviews — Bénédicte Donet](/images/portraits/portrait-infos-pratiques.jpg)
 
@@ -68,7 +68,7 @@ African proverb
 -   Yoga teacher training, Pyramid Yoga Center, Thailand, 2019
 -   Blissschool feminine sexuality training, Thailand, 2020
 -   Layla Martin sexuality, love and relationship coaching training, remote, 2021
--   EMDR remote training with Australian trainer, 2022
+-   EMDR training in Australia with [EMDRAA (EMDR Association of Australia)](https://emdraa.org/), 2022
 -   Breath and breathing training, Thailand, 2022
 -   Incest, abuse and sexual trauma training, remote, 2022
 -   IEMT training, Integral Eye Movement Therapy, remote, 2023

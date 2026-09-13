@@ -11,16 +11,11 @@ tags:
   - Mindfulness
   - Positive psychology
 date: 2023-09-13T12:16:13.000Z
-updated: 2026-06-08T12:23:15.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/illustrations/illustration-gratitude-thailande.jpg
 imageAlt: gratitude pratiquer la gratitude
 seoTitle: Kob khun maak ka, Gratitude
-seoDescription: "With hands pressed together in prayer near my chest, my gaze
-  locked onto theirs, and my head slightly bowed, I humbly utter these words:
-  ขอบคุณมากครับ, phonetically: Kob khun maak khrap/ka. They mean « Thank you
-  very much » in Thai. This ritual is sacred. For a long time, living in
-  Thailand, I didn’t fully grasp the importance of this ritual. The significance
-  of this daily moment of gratitude."
+seoDescription: "Kob khun maak ka: a gratitude ritual in Thailand inspires reflections on appreciation, presence and our connections with others."
 draft: false
 ---
 
@@ -34,6 +29,9 @@ Do you simply take the time to… give thanks? For the money you have received s
 Being grateful does not mean ignoring what’s wrong. It’s about paying as much attention **to feeling difficult emotions** as it is to recognize the blessings in our lives. It’s about cultivating your ability to see and give thanks for all the gifts that come your way and are offered to you. And it starts as simply as saying thank you, spoken with sincerity, while looking into the eyes of another being.  
   
 My recommendations for exploring gratitude:  
+
+
+> Gratitude can coexist with difficult emotions. If you would like space to explore them, discover [my online psychotherapy practice](/en/psychotherapie/), which also welcomes what feels painful or uncomfortable.
 
 -   Book:
     -   [The Magic by Rhonda Byrne](https://www.amazon.com/magie-Rhonda-Byrne-2012-09-21/dp/B01K93JCI8)

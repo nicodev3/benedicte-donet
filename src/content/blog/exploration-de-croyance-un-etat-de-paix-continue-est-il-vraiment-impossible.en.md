@@ -8,11 +8,11 @@ tags:
   - "Positive psychology"
   - "Trauma"
 date: 2026-04-17T02:14:00Z
-updated: 2026-06-08T12:34:43Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/stock/stock-paix-interieure.jpeg"
 imageAlt: "Green park landscape, symbol of inner peace"
 seoTitle: "Exploring a belief: Is a continuous state of peace truly impossible?"
-seoDescription: "For a long time, I believed that happiness required effort. That one had to work on oneself, transform oneself, almost repair oneself, to access a more stable, more continuous inner state of peace. Behind this lay a silent but deeply rooted belief: peace would not be our natural state, but something to achieve, to build, to deserve… at the cost of demanding work."
+seoDescription: "Must we always work on ourselves to find peace? A reflection on beliefs, personal change and presence."
 draft: false
 ---
 
@@ -46,6 +46,9 @@ _Can this state last?_
 _And above all… why had it never seemed so accessible before? Why now?_
 
 * * *
+
+
+> When beliefs or expectations of yourself become painful, they can be explored in [online psychotherapy](/en/psychotherapie/). We start from your experience, without a goal of perfection to reach.
 
 ## 🌿 Second questioning: after certain EMDR sessions
 

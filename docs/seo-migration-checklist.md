@@ -30,12 +30,14 @@
 - [ ] Soumettre `https://www.benedictedonet-psyenligne.com/sitemap-index.xml` dans Google Search Console.
 - [ ] Vérifier dans Search Console qu'aucune erreur 404 inhabituelle n'apparaît (rapport Pages, sous 2-4 semaines).
 - [ ] Surveiller les positions des pages principales (EMDR, psychologue en ligne…).
+- [ ] Suivre chaque mois les étapes décrites dans [`seo-conversion-measurement.md`](./seo-conversion-measurement.md) et les rapprocher du nombre agrégé de nouveaux rendez-vous Doctolib.
 - [ ] Résilier l'hébergement WordPress **seulement après 4-6 semaines** de stabilité.
 - [ ] Conserver un export complet WordPress (base + wp-content) en sauvegarde.
 
 ## Points connus
 
 - Les avis Google (widget Trustindex) sont désormais des contenus statiques éditables dans la page d'accueil.
-- Le formulaire de contact et la newsletter WordPress sont remplacés par des liens mailto en attendant un endpoint dédié.
+- Le contact repose sur deux canaux : Doctolib pour réserver une consultation, email pour poser une question. Le formulaire Formspree a été retiré.
+- La newsletter utilise son lien d’inscription dédié.
 - La boutique WooCommerce n'est pas reprise (redirections vers /masterclass/).
 - Le site est bilingue FR/EN : FR à la racine, EN sous `/en/`, avec liens `hreflang` (pages, blog, produits, tags).

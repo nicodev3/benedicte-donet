@@ -4,7 +4,7 @@ price: "150.00€"
 image: "/images/products/poster-se-reposer-en-soi.jpg"
 imageAlt: "Rest within yourself online meditation programme"
 ctaLabel: "Order now"
-ctaUrl: "/en/infos-pratiques/#form"
+ctaUrl: "/en/infos-pratiques/#contact"
 seoTitle: "Rest within yourself | Online meditation"
 seoDescription: "Beginner online meditation programme with a detailed workbook, three guided meditations, and two individual 30-minute sessions to gently return to yourself."
 draft: false

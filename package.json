@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npm run sync:cms-media && astro dev",
     "build": "npm run sync:cms-media && astro build",
+    "test": "node --test tests/*.test.mjs",
     "sync:cms-media": "node scripts/sync-cms-media-library.mjs",
     "preview": "astro preview",
     "astro": "astro",

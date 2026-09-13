@@ -54,3 +54,11 @@ Puis vérifier après déploiement avec :
 ```bash
 curl -sI https://www.benedictedonet-psyenligne.com/ancienne-url/ | head -5
 ```
+
+## Compléments du 13 septembre 2026
+
+- L’ancienne URL anglaise `/how-to-breathe-better-naturally/`, documentée à la racine, rejoint directement son équivalent sous `/en/`.
+- Chaque redirection exacte de page dispose aussi de sa variante sans slash final, vers la destination finale (pas de chaîne supplémentaire).
+- Les règles génériques d’archives restent après les règles exactes.
+- Les anciennes ancres `#form` de la page Infos pratiques restent accessibles, mais mènent désormais au choix Doctolib / email. Les liens internes utilisent `#contact`.
+- La couverture des autres anciennes URL doit être complétée à partir d’un export Search Console / WordPress ; aucune redirection générale vers l’accueil n’est ajoutée.

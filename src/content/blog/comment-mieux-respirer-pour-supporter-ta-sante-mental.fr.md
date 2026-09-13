@@ -15,19 +15,11 @@ tags:
   - Respiration
   - Santé
 date: 2023-10-16T17:01:05.000Z
-updated: 2026-06-08T12:26:14.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/stock/stock-respiration-consciente.jpeg
 imageAlt: exercice pour mieux respirer
 seoTitle: Et si on apprenait à respirer (vraiment) ?
-seoDescription: "Notre manière de respirer s’est détériorée au cours de notre
-  évolution. En effet, notre cerveau a grossi, laissant ainsi moins de place
-  pour les voies respiratoires. Notre alimentation et notre mode de vie ont
-  également grandement influencé notre façon de respirer. Il faut savoir que de
-  nombreuses maladies psychologiques et physiques peuvent trouver leur source
-  dans notre façon de respirer. Cela est dû à l’effet domino : une mauvaise
-  respiration entraîne l’apnée du sommeil, le stress, la fatigue, une pression
-  artérielle plus élevée, etc. Cela peut même aller jusqu’à l’insomnie
-  chronique, les troubles de l’attention, etc."
+seoDescription: "Explorer sa respiration et son lien au stress : réflexions et pistes pour mieux comprendre les habitudes respiratoires au quotidien."
 draft: false
 ---
 ![Personne pratiquant la respiration consciente pour la santé mentale](/images/stock/stock-respiration-consciente.jpeg)
@@ -51,6 +43,9 @@ Selon de nombreuses recherches scientifiques, la respiration la plus bénéfique
 Ce rythme permet de calmer le système nerveux, de réguler le cœur, d’augmenter la concentration et de favoriser un retour au calme. En gros, c’est comme offrir un spa intérieur à votre système nerveux. 💆‍♀️
 
 - - -
+
+
+> Si le stress ou l’anxiété restent difficiles à vivre, les exercices de respiration peuvent être un sujet à aborder en consultation. Découvre [mon accompagnement psychologique en visio](/psychotherapie/) et le cadre des séances.
 
 ## 🧘‍♀️ Pour mieux respirer : la respiration ventrale
 

@@ -34,6 +34,8 @@ In a society that instinctively pushes us to judge and reject certain facets of 
 ![Phototherapy self-confidence portrait](/images/phototherapie/photo-phototherapie-05.jpg)
 ![Body celebration photo session](/images/phototherapie/photo-phototherapie-06.jpg)
 
+<span id="option" aria-hidden="true" style="scroll-margin-top: 6rem"></span>
+
 ## My phototherapy offers
 
 ![self-confidence photo session phototherapy](/images/phototherapie/photo-phototherapie-montage-01.png)
@@ -67,7 +69,7 @@ This package involves a deeper exploration to cultivate love towards yourself. T
   
 Price: **600 euros**
 
-[I'm interested](/en/infos-pratiques/#form)
+[I'm interested](/en/infos-pratiques/#contact)
 
 ## How the photoshoot unfolds
 
@@ -113,7 +115,7 @@ The distinction lies mainly in the duration and intensity of the experience you 
 
 If you feel ready to embark on this journey, you can write to me via the contact link.
 
-[Book my photoshoot](/en/infos-pratiques/#form)
+[Book my photoshoot](/en/infos-pratiques/#contact)
 
 ## They talk about it…
 

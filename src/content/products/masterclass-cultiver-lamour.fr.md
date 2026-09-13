@@ -4,7 +4,7 @@ price: "45.00€"
 image: "/images/products/poster-cultiver-lamour.jpg"
 imageAlt: "Masterclass méditation amour cultiver amour"
 ctaLabel: "Je commande"
-ctaUrl: "/infos-pratiques/#form"
+ctaUrl: "/infos-pratiques/#contact"
 seoTitle: "Cultiver l'amour | Masterclass en ligne"
 seoDescription: "Masterclass en ligne « Cultiver l'amour » : apprendre pas à pas à nourrir l'amour de soi, avec livret, exercices d'écriture et méditation guidée."
 draft: false

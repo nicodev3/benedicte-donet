@@ -5,17 +5,20 @@ tags:
   - "Mindfulness"
   - "Trauma"
 date: 2026-06-04T09:09:20Z
-updated: 2026-06-08T12:35:28Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/stock/stock-corps-meditation.jpg"
 imageAlt: "benefits of dissociation meditation"
 seoTitle: "In praise of presence: the utterly radical act of inhabiting your body"
-seoDescription: "In this article, I want to share more intimately the journey that led me to the most salvaging act I have ever been given to experience: inhabiting my body. Whatever therapeutic techniques I study, meditation teachings I receive, or experiments I go through, I always return to my dear friend the…"
+seoDescription: "Inhabiting the body and welcoming sensations: Bénédicte Donet reflects on presence, mindfulness and her personal journey."
 draft: false
 ---
 
 ![Mindfulness practice for inhabiting the body](/images/illustrations/illustration-pleine-conscience.jpg)
 
 In this article, I want to share more intimately the journey that led me to the most salvaging act I have ever been given to experience: inhabiting my body.
+
+
+> If difficult experiences affect your relationship with your body, explore [my individual video consultations](/en/psychotherapie/). We discuss the setting and pace of care together, based on your needs.
 
 Whatever therapeutic techniques I study, meditation teachings I receive, or experiments I go through, I always return to my dearest friend: my body, my cells, the sensations moving through me.
 

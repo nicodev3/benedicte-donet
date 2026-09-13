@@ -55,17 +55,21 @@ export function stripLocaleFromFilePath(
 }
 
 export function localizedPath(path: string, locale: Locale): string {
-  if (!path.startsWith("/") || /^https?:\/\//.test(path)) return path;
+  if (!path.startsWith("/") || path.startsWith("//")) return path;
 
-  const cleanPath = path === "/" ? "/" : `/${path.split("/").filter(Boolean).join("/")}/`;
+  // Normaliser uniquement le chemin : les paramètres et fragments sont opaques.
+  const suffixIndex = path.search(/[?#]/);
+  const pathname = suffixIndex === -1 ? path : path.slice(0, suffixIndex);
+  const suffix = suffixIndex === -1 ? "" : path.slice(suffixIndex);
+  const cleanPath = `/${pathname.split("/").filter(Boolean).join("/")}`.replace(/\/?$/, "/");
 
   if (locale === DEFAULT_LOCALE) {
-    return cleanPath.replace(/^\/en\/?/, "/") || "/";
+    return (cleanPath.replace(/^\/en(?=\/)/, "") || "/") + suffix;
   }
 
-  if (cleanPath === "/") return `/${locale}/`;
-  if (cleanPath.startsWith(`/${locale}/`)) return cleanPath;
-  return `/${locale}${cleanPath}`;
+  if (cleanPath === "/") return `/${locale}/${suffix}`;
+  if (cleanPath.startsWith(`/${locale}/`)) return cleanPath + suffix;
+  return `/${locale}${cleanPath}${suffix}`;
 }
 
 export function alternateLocalePath(pathname: string, locale: Locale): string {

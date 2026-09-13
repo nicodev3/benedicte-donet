@@ -21,6 +21,90 @@ export interface TagSummary {
   count: number;
 }
 
+export interface TagArchiveContent {
+  title: string;
+  description: string;
+  intro: string;
+}
+
+const TAG_ARCHIVE_COPY: Record<Locale, Record<string, TagArchiveContent>> = {
+  fr: {
+    emdr: {
+      title: "Articles sur l’EMDR et les traumatismes",
+      description: "Comprendre la thérapie EMDR, le retraitement des souvenirs traumatiques et les possibilités d’accompagnement psychologique en ligne.",
+      intro: "Ces articles expliquent le fonctionnement de l’EMDR, ses principales étapes et la place qu’elle peut prendre dans un accompagnement psychologique. Ils apportent des repères généraux qui ne remplacent pas une évaluation individuelle.",
+    },
+    trauma: {
+      title: "Articles sur le trauma et ses effets",
+      description: "Des repères sur le trauma, la mémoire, les relations et les approches thérapeutiques proposées par Bénédicte Donet, psychologue en ligne.",
+      intro: "Le trauma peut affecter la mémoire, le corps, les émotions ou les relations. Cette sélection rassemble des explications pour mieux comprendre ces effets et découvrir les formes d’accompagnement possibles.",
+    },
+    psycho: {
+      title: "Articles de psychologie",
+      description: "Articles de psychologie sur les émotions, les relations et la santé mentale, avec des repères pour envisager un accompagnement en ligne.",
+      intro: "Cette sélection aborde différents mécanismes psychologiques et leurs effets dans la vie quotidienne. Elle aide à mettre des mots sur une difficulté et à identifier les sujets qui peuvent être travaillés en consultation.",
+    },
+    psychoeducation: {
+      title: "Articles de psychoéducation",
+      description: "Comprendre les mécanismes psychologiques, les émotions et le système nerveux grâce aux articles de Bénédicte Donet.",
+      intro: "La psychoéducation donne des repères pour mieux comprendre ses réactions, ses émotions et ses besoins. Ces contenus restent généraux et peuvent servir de point de départ à un échange thérapeutique.",
+    },
+    "theorie-de-l-attachement": {
+      title: "Articles sur la théorie de l’attachement",
+      description: "Comprendre les styles d’attachement, la peur du lien et leurs effets dans les relations amoureuses et affectives.",
+      intro: "Les expériences relationnelles précoces peuvent influencer la manière de créer du lien, d’exprimer ses besoins ou de réagir à la distance. Ces articles proposent des repères sur les différents styles d’attachement.",
+    },
+  },
+  en: {
+    emdr: {
+      title: "Articles about EMDR and trauma",
+      description: "Understand EMDR therapy, traumatic memory processing and options for online psychological support with Bénédicte Donet.",
+      intro: "These articles explain how EMDR works, its main stages and the role it may play in psychological support. They provide general information and do not replace an individual assessment.",
+    },
+    trauma: {
+      title: "Articles about trauma and its effects",
+      description: "Information about trauma, memory, relationships and therapeutic approaches from Bénédicte Donet, online psychologist.",
+      intro: "Trauma can affect memory, the body, emotions and relationships. This selection brings together explanations to help you understand these effects and explore possible forms of support.",
+    },
+    psychology: {
+      title: "Psychology articles",
+      description: "Psychology articles about emotions, relationships and mental health, with guidance on considering online support.",
+      intro: "This selection explores psychological patterns and their effects in everyday life. It can help you name a difficulty and identify topics that may be addressed in consultation.",
+    },
+    psychoeducation: {
+      title: "Psychoeducation articles",
+      description: "Understand psychological patterns, emotions and the nervous system through articles by Bénédicte Donet.",
+      intro: "Psychoeducation provides useful ways to understand reactions, emotions and needs. These general resources can be a starting point for a therapeutic conversation.",
+    },
+    "attachment-theory": {
+      title: "Articles about attachment theory",
+      description: "Understand attachment styles, fear of connection and their effects on romantic and emotional relationships.",
+      intro: "Early relational experiences can influence how we connect, express needs and respond to distance. These articles offer guidance on different attachment styles.",
+    },
+  },
+};
+
+export function getTagArchiveContent(
+  locale: Locale,
+  slug: string,
+  label: string,
+): TagArchiveContent {
+  const specific = TAG_ARCHIVE_COPY[locale][slug];
+  if (specific) return specific;
+
+  return locale === "fr"
+    ? {
+        title: `Articles sur ${label}`,
+        description: `Retrouvez les articles de Bénédicte Donet autour de ${label}, de la psychologie et du bien-être émotionnel.`,
+        intro: `Cette sélection rassemble les articles consacrés à ${label}. Vous y trouverez des repères pour mieux comprendre votre expérience et approfondir ce sujet.`,
+      }
+    : {
+        title: `Articles about ${label}`,
+        description: `Explore Bénédicte Donet’s articles about ${label}, psychology and emotional wellbeing.`,
+        intro: `This selection brings together articles about ${label}. It offers guidance to better understand your experience and explore the subject further.`,
+      };
+}
+
 export function getTagsForLocale(
   posts: CollectionEntry<"blog">[],
   locale: Locale,

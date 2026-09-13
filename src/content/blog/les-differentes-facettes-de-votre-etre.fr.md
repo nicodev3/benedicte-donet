@@ -9,16 +9,11 @@ tags:
   - Pleine conscience
   - Psychoéducation
 date: 2023-08-16T15:15:59.000Z
-updated: 2026-06-08T12:19:15.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/illustrations/illustration-facettes-personnalite.jpg
 imageAlt: soutien amour
 seoTitle: Les différentes facettes de votre être
-seoDescription: Une ancienne tradition raconte qu’en chacun de nous résident
-  deux loups et que celui qui prédomine est celui que nous nourrissons. En
-  cherchant à être bons et aimants, nous négligeons souvent de reconnaître,
-  d’observer et de reconnaître la partie en nous qui ressent de la haine et de
-  la séparation. Ce sont ces parties en nous qui blessent autant les autres que
-  nous-mêmes.
+seoDescription: "Explorer les différentes parts de soi, y compris les émotions difficiles. Une invitation à mieux comprendre son monde intérieur avec bienveillance."
 draft: false
 ---
 Une ancienne tradition raconte qu’en chacun de nous résident deux loups et que celui qui prédomine est celui que nous nourrissons. En cherchant à être bons et aimants, nous négligeons souvent de reconnaître, d’observer et de reconnaître la partie en nous qui ressent de la haine et de la séparation. Ce sont ces parties en nous qui blessent autant les autres que nous-mêmes.  
@@ -26,6 +21,9 @@ Une ancienne tradition raconte qu’en chacun de nous résident deux loups et qu
 Cependant, ce sont précisément ces parties qui ont **le plus besoin de notre soutien et de notre amour**. Ce sont les parties avec lesquelles nous devons nous asseoir fréquemment et méditer. 
 
 Par exemple, lorsqu’un enfant blesse un autre enfant ou agit d’une manière que la société considère comme « mauvaise », il peut être réprimandé par un enseignant ou ses parents. 
+
+
+> Si ces différentes parts de toi entrent souvent en conflit, tu peux les explorer dans un [accompagnement psychologique en ligne](/psychotherapie/). L’IFS fait partie des approches que j’intègre à ma pratique, selon la situation de chacun.
 
 Si c’est la colère qui a suscité ce comportement, la solution courante est souvent : « Tu dois réprimer cette émotion, c’est mal ».
 

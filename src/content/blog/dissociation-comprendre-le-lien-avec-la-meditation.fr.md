@@ -5,11 +5,11 @@ tags:
   - "Pleine conscience"
   - "Psycho"
 date: 2024-01-25T15:27:00Z
-updated: 2026-06-08T12:30:41Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/stock/stock-dissociation-meditation.jpg"
 imageAlt: "Dissociation méditation bienfaits"
 seoTitle: "Dissociation et reconnexion : comment la méditation peut aider"
-seoDescription: "La dissociation, un phénomène complexe qui peut affecter la santé mentale, est souvent méconnue du grand public. En tant que psychologue, je m’intéresse particulièrement à la façon dont la méditation peut jouer un rôle essentiel dans le processus de reconnexion pour ceux qui vivent cette expérience. Dans cet article, nous explorerons la dissociation, son impact sur la vie quotidienne, et comment la méditation peut être un outil précieux pour favoriser une reconnexion profonde avec soi-même."
+seoDescription: "Comprendre la dissociation et explorer le lien avec la méditation. Une réflexion sur la reconnexion à soi et la place de l’accompagnement."
 draft: false
 ---
 
@@ -24,6 +24,9 @@ La [dissociation](https://www.memoiretraumatique.org/psychotraumatismes/dissocia
 Les personnes concernées décrivent souvent une impression de vivre **à distance de leur propre vie**, comme si elles observaient les choses sans vraiment y participer. Cette forme de décalage peut être perturbante et difficile à expliquer à l’entourage.
 
 * * *
+
+
+> Si tu vis des sensations de déconnexion qui t’inquiètent, il est utile d’en parler avec un professionnel. Tu peux découvrir [le cadre de mes consultations en ligne](/psychotherapie/) avant de décider si tu souhaites prendre rendez-vous.
 
 ## Conséquences sur la vie quotidienne
 

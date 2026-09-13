@@ -8,11 +8,11 @@ tags:
   - "Psychologie positive"
   - "Trauma"
 date: 2026-04-17T02:14:00Z
-updated: 2026-06-08T12:34:43Z
+updated: "2026-09-13T00:00:00Z"
 image: "/images/stock/stock-paix-interieure.jpeg"
 imageAlt: "Paysage de parc verdoyant, symbole de paix intérieure"
 seoTitle: "Exploration de croyance: Un état de paix continue est-il vraiment impossible ?"
-seoDescription: "J’ai longtemps cru que le bonheur demandait des efforts. Qu’il fallait travailler sur soi, se transformer, se réparer presque, pour accéder à un état de paix intérieure plus stable, plus continu. Derrière cela, une croyance silencieuse mais profondément ancrée : la paix ne serait pas notre état naturel, mais quelque chose à atteindre, à construire, à mériter… au prix d’un travail exigeant."
+seoDescription: "Faut-il toujours travailler sur soi pour trouver la paix ? Une réflexion sur nos croyances, la transformation personnelle et la présence."
 draft: false
 ---
 
@@ -46,6 +46,9 @@ _Cet état peut-il durer ?_
 _Et surtout… pourquoi ne m’avait-il jamais semblé aussi accessible auparavant ? Pourquoi maintenant ?_
 
 * * *
+
+
+> Quand les croyances ou les attentes envers soi deviennent douloureuses, elles peuvent être explorées dans un [espace de psychothérapie en ligne](/psychotherapie/). Nous partons de ce que tu vis, sans objectif de perfection à atteindre.
 
 ## 🌿 2ème remise en question : après certaines séances d’EMDR
 

@@ -11,16 +11,11 @@ tags:
   - Pleine conscience
   - Psychologie positive
 date: 2023-08-16T15:16:28.000Z
-updated: 2026-06-08T12:20:41.000Z
+updated: "2026-09-13T00:00:00Z"
 image: /images/illustrations/illustration-gratitude-thailande.jpg
 imageAlt: gratitude pratiquer la gratitude
 seoTitle: Kob khun maak ka, la gratitude
-seoDescription: "Les mains jointes en prière près de ma poitrine, le regard
-  plongé dans le sien, la tête légèrement baissée, je prononce humblement ces
-  mots : ขอบคุณมากครับ, en phonétique : Kob khun maak khrap/ka. Ils signifient «
-  Merci beaucoup » en thaïlandais. Ce rituel est sacré. Pendant longtemps,
-  vivant en Thaïlande, je n’ai pas pleinement saisi l’importance de ce rituel.
-  L’importance de ce moment quotidien de gratitude."
+seoDescription: "Kob khun maak ka : un rituel de gratitude en Thaïlande inspire une réflexion sur la reconnaissance, la présence et nos liens aux autres."
 draft: false
 ---
 Les mains jointes en prière près de ma poitrine, le regard plongé dans le sien, la tête légèrement baissée, je prononce humblement ces mots : ขอบคุณมากครับ, en phonétique : Kob khun maak khrap/ka. Ils signifient « Merci beaucoup » en thaïlandais. Ce rituel est sacré. Pendant longtemps, vivant en Thaïlande, je n’ai pas pleinement saisi l’importance de ce rituel. L’importance de ce moment quotidien de gratitude.
@@ -31,6 +26,9 @@ Désormais, je prononce chaque mot en présence, me connectant au service que la
 \
 Prendre simplement le temps de regarder dans les yeux la personne qui nous a aidés, s’autoriser ce moment de reconnaissance, peut allumer en toi un feu de joie et d’amour.\
 Parfois, on dit merci comme on dit au revoir. Les règles de politesse nous déconnectent parfois du véritable sens des mots que l’on prononce.  
+
+
+> La gratitude peut coexister avec des émotions difficiles. Si tu souhaites un espace pour les explorer, découvre [ma pratique de psychothérapie en ligne](/psychotherapie/), qui accueille aussi ce qui est douloureux ou inconfortable.
 
 Combien de fois ai-je dit le mot « merci » sans vraiment me connecter à cette énergie de gratitude ? 
 
