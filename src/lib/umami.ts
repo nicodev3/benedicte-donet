@@ -3,6 +3,7 @@
  */
 export const UMAMI_EVENTS = {
   DOCTOLIB: "Clic RDV Doctolib",
+  DOCTOLIB_MESSAGE: "Clic message Doctolib",
   CONSULTATION: "Clic vers consultation",
   NEWSLETTER: "Clic abonnement newsletter",
   EMAIL: "Clic email contact",
@@ -11,6 +12,18 @@ export const UMAMI_EVENTS = {
   MASTERCLASS: "Clic découvrir Masterclass",
   SHARE: "Partage article",
 } as const;
+
+function parseHref(href: string, baseUrl?: string): URL | undefined {
+  try {
+    return new URL(href, baseUrl ?? "https://www.doctolib.fr");
+  } catch {
+    return undefined;
+  }
+}
+
+function isDoctolibHost(url: URL): boolean {
+  return url.hostname === "doctolib.fr" || url.hostname.endsWith(".doctolib.fr");
+}
 
 /** Classifier les destinations sans enregistrer paramètres, fragments ou messages. */
 export function getConversionDestination(href: string, baseUrl: string, email: string) {
@@ -21,7 +34,10 @@ export function getConversionDestination(href: string, baseUrl: string, email: s
       return { event: UMAMI_EVENTS.EMAIL, destination: "email" };
     }
     if (!/^https?:$/.test(url.protocol)) return undefined;
-    if (url.hostname === "doctolib.fr" || url.hostname.endsWith(".doctolib.fr")) {
+    if (isDoctolibHost(url)) {
+      if (isDoctolibMessageUrl(href)) {
+        return { event: UMAMI_EVENTS.DOCTOLIB_MESSAGE, destination: "doctolib-message" };
+      }
       return { event: UMAMI_EVENTS.DOCTOLIB, destination: "doctolib" };
     }
     if (url.origin !== base.origin) return undefined;
@@ -63,6 +79,22 @@ export function umamiAttrs(
 
 export function isDoctolibUrl(href: string): boolean {
   return /doctolib\.fr/i.test(href);
+}
+
+export function isDoctolibMessageUrl(href: string): boolean {
+  const url = parseHref(href);
+  if (!url || !isDoctolibHost(url)) return false;
+  return (
+    /\/patient-request(?:\/|$)/i.test(url.pathname) ||
+    url.searchParams.get("category") === "message"
+  );
+}
+
+export function doctolibEventFor(href: string): string | undefined {
+  if (!isDoctolibUrl(href)) return undefined;
+  return isDoctolibMessageUrl(href)
+    ? UMAMI_EVENTS.DOCTOLIB_MESSAGE
+    : UMAMI_EVENTS.DOCTOLIB;
 }
 
 export function isMasterclassUrl(href: string): boolean {

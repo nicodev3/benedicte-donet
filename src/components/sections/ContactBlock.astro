@@ -44,7 +44,7 @@ const labels = locale === "fr" ? {
         <h3>{labels.bookingTitle}</h3>
         <p>{labels.bookingText}</p>
         <Button href={global.appointmentUrl} umamiEvent={UMAMI_EVENTS.DOCTOLIB}
-          umamiProps={{ emplacement: "bloc-contact", action: "rdv", langue: locale }}>{labels.bookingCta}</Button>
+          umamiProps={{ emplacement: "bloc-contact", langue: locale }}>{labels.bookingCta}</Button>
       </div>
       <div class="contact-card">
         <span class="contact-icon contact-icon-mail" aria-hidden="true">
@@ -53,8 +53,8 @@ const labels = locale === "fr" ? {
         <h3>{labels.emailTitle}</h3>
         <p>{labels.emailText}</p>
         <div class="contact-actions">
-          <Button href={global.messageUrl} variant="outline" umamiEvent={UMAMI_EVENTS.DOCTOLIB}
-            umamiProps={{ emplacement: "bloc-contact", action: "message", langue: locale }}>{labels.messageCta}</Button>
+          <Button href={global.messageUrl} variant="outline" umamiEvent={UMAMI_EVENTS.DOCTOLIB_MESSAGE}
+            umamiProps={{ emplacement: "bloc-contact", langue: locale }}>{labels.messageCta}</Button>
           <a
             class="contact-email-link"
             href={`mailto:${global.email}`}

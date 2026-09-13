@@ -3,7 +3,7 @@ import { Sparkles } from "@lucide/astro";
 import { getOptimizedImage } from "@/lib/images";
 import {
   UMAMI_EVENTS,
-  isDoctolibUrl,
+  doctolibEventFor,
   isMasterclassUrl,
   umamiAttrs,
 } from "@/lib/umami";
@@ -39,8 +39,9 @@ const isExternal = ctaUrl?.startsWith("http") ?? false;
 
 const ctaUmamiAttrs = (() => {
   if (!ctaUrl) return {};
-  if (isDoctolibUrl(ctaUrl)) {
-    return umamiAttrs(UMAMI_EVENTS.DOCTOLIB, { emplacement: "hero" });
+  const doctolibEvent = doctolibEventFor(ctaUrl);
+  if (doctolibEvent) {
+    return umamiAttrs(doctolibEvent, { emplacement: "hero" });
   }
   if (isMasterclassUrl(ctaUrl)) {
     return umamiAttrs(UMAMI_EVENTS.MASTERCLASS, { emplacement: "hero" });

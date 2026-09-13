@@ -4,7 +4,7 @@ import Section from "@/components/common/Section.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import Button from "@/components/common/Button.astro";
 import { renderInlineRichText } from "@/lib/rich-text";
-import { UMAMI_EVENTS, isDoctolibUrl } from "@/lib/umami";
+import { doctolibEventFor } from "@/lib/umami";
 
 interface Card {
   title: string;
@@ -39,9 +39,10 @@ const { title, cards } = Astro.props;
           const align = index % 2 === 0 ? "start" : "end";
           const footerHref = card.linkUrl || card.url;
           const ctaHref = card.ctaUrl || card.url;
-          const ctaUmami = isDoctolibUrl(ctaHref)
+          const doctolibEvent = doctolibEventFor(ctaHref);
+          const ctaUmami = doctolibEvent
             ? {
-                event: UMAMI_EVENTS.DOCTOLIB,
+                event: doctolibEvent,
                 props: { emplacement: "carte-service" },
               }
             : undefined;

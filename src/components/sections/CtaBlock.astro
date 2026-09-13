@@ -4,7 +4,7 @@ import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
 import SiteImage from "@/components/common/SiteImage.astro";
 import { renderInlineRichText, splitRichParagraphs } from "@/lib/rich-text";
-import { UMAMI_EVENTS, isDoctolibUrl, isMasterclassUrl } from "@/lib/umami";
+import { UMAMI_EVENTS, doctolibEventFor, isMasterclassUrl } from "@/lib/umami";
 
 interface Props {
   title: string;
@@ -24,8 +24,9 @@ const {
   imageAlt = "Illustration des masterclass et programmes",
 } = Astro.props;
 
-const ctaUmami = isDoctolibUrl(ctaUrl)
-  ? { event: UMAMI_EVENTS.DOCTOLIB, props: { emplacement: "bloc-masterclass" } }
+const doctolibEvent = doctolibEventFor(ctaUrl);
+const ctaUmami = doctolibEvent
+  ? { event: doctolibEvent, props: { emplacement: "bloc-masterclass" } }
   : isMasterclassUrl(ctaUrl)
     ? { event: UMAMI_EVENTS.MASTERCLASS, props: { emplacement: "accueil" } }
     : undefined;
