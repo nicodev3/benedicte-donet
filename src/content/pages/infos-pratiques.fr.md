@@ -14,7 +14,7 @@ pageType: page
 
 ## Prise de rendez-vous
 
-Pour réserver une consultation en visio, choisissez un créneau sur [Doctolib](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet). Pour une question avant de consulter, vous pouvez [m’écrire par email](mailto:donetbenedicte@gmail.com).
+Pour réserver une consultation en visio, choisissez un créneau sur [Doctolib](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet). Pour une question avant de consulter, vous pouvez [m’écrire via Doctolib](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet/patient-request?category=message) ou [par email](mailto:donetbenedicte@gmail.com).
 
 -   **Durée —** Les séances durent **1 h 30**, pour avoir le temps de partager, se déposer et cheminer.
 -   **Rythme —** Le nombre de séances dépend de ce que vous souhaitez travailler et de votre sensibilité.
@@ -25,31 +25,32 @@ Pour réserver une consultation en visio, choisissez un créneau sur [Doctolib](
 
 ## Tarifs des consultations en ligne
 
-La première séance individuelle est à **70 €**, puis les séances sont à **90 €**, pour une durée de **1 h 30**.
+-   Première séance individuelle 70 €
+
+-   Séance individuelle 90 €
+
+    Durée : 1 h 30 · Téléconsultation
 
 Consultez le [détail des tarifs et les possibilités de tarif réduit](/psychotherapie/#tarifs).
 
+<span id="cadre" aria-hidden="true"></span>
+
 ## Votre psychologue et le cadre du suivi
 
-Titulaire d’un **master en psychologie clinique et psychopathologie** obtenu à Paul-Valéry, Montpellier, en 2015, je me suis ensuite formée à l’EMDR en Australie auprès de l’[EMDRAA](https://emdraa.org/) en 2022. Vous pouvez consulter [mon parcours de formation](/a-propos/#mon-parcours-de-formation) et [le déroulement des consultations](/psychotherapie/).
+-   **Formation —** Titulaire d’un **master en psychologie clinique et psychopathologie** obtenu à Paul-Valéry, Montpellier, en 2015, je me suis ensuite formée à l’EMDR en Australie auprès de l’[EMDRAA](https://emdraa.org/) en 2022. Vous pouvez consulter [mon parcours de formation](/a-propos/#mon-parcours-de-formation) et [le déroulement des consultations](/psychotherapie/).
+-   **Public —** Le suivi est **individuel**, principalement destiné aux adultes.
+-   **Séances en visio —** Les consignes pour rejoindre la séance vous sont communiquées avant le rendez-vous. L’adresse à L’Étang-Salé, La Réunion, est uniquement administrative : aucune consultation n’y est proposée.
 
-Le suivi est **individuel**, principalement destiné aux adultes. Pour un adolescent à partir de 13 ans qui souhaite lui-même consulter, contactez-moi par email avant de réserver.
-
-La réservation se fait sur **Doctolib**. Les consignes pour rejoindre la séance en visio vous sont communiquées avant le rendez-vous. L’adresse à L’Étang-Salé, La Réunion, est uniquement administrative : aucune consultation n’y est proposée.
+<span id="avant-de-consulter" aria-hidden="true"></span>
 
 ## À savoir avant de consulter
 
--   Je ne participe pas au parcours « Mon soutien psy ». Vous ne pouvez donc pas vous faire rembourser les séances dans ce cadre précis.
--   En revanche, en dehors de ce dispositif, certaines **mutuelles** vous permettront d’obtenir un remboursement sur un certain nombre de séances. N’hésitez donc pas à contacter votre mutuelle pour lui demander. Si celle-ci vous propose des remboursements, précisez-le-moi au préalable pour que je vous envoie une facture lors de chacune de nos séances.
--   Quelle que soit ton orientation sexuelle et/ou ton idée de genre, tu es le/la bienvenu/e. Je me sensibilise et me forme autant que possible pour offrir un **espace sécurisant** et accueillant pour tous. Je suis aussi ouverte à évoluer et à apprendre de mes patients.
+-   **Mon soutien psy —** Je ne participe pas au parcours « Mon soutien psy ». Vous ne pouvez donc pas vous faire rembourser les séances dans ce cadre précis.
+-   **Mutuelles —** Certaines **mutuelles** remboursent un certain nombre de séances. Demandez-le à la vôtre. Si c’est votre cas, prévenez-moi au préalable pour que je vous envoie une facture à chaque séance.
+-   **Adolescents —** Un suivi peut être envisagé **à partir de 13 ans** lorsque la demande vient de l’adolescent lui-même. Dans ce cas, [écrivez-moi avant de réserver](mailto:donetbenedicte@gmail.com).
+-   **Un espace accueillant —** Quelle que soit votre orientation sexuelle et/ou votre identité de genre, vous êtes le·la bienvenu·e. Je me sensibilise et me forme autant que possible pour offrir un **espace sécurisant** pour tous, et je reste ouverte à apprendre de mes patients.
 
-Pour toute autre question, je serai heureuse de vous répondre par [email](mailto:donetbenedicte@gmail.com).
+Pour toute autre question, je serai heureuse de vous répondre par [messagerie Doctolib](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet/patient-request?category=message) ou par [email](mailto:donetbenedicte@gmail.com).
 
 Prenez bien soin de vous.  
 Bénédicte Donet
-
-Pour me contacter :
-
--   [donetbenedicte@gmail.com](mailto:donetbenedicte@gmail.com)
--   Téléconsultation : suivez les consignes de connexion communiquées avant votre rendez-vous
-

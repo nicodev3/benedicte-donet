@@ -84,6 +84,16 @@ interface UiTranslations {
     journalTitle: string;
     journalCarouselLabel: string;
   };
+  infosPratiques: {
+    jumpNavLabel: string;
+    jumpNav: {
+      booking: string;
+      fees: string;
+      framework: string;
+      notes: string;
+      contact: string;
+    };
+  };
 }
 
 export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
@@ -177,6 +187,16 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
       journalTitle: "Le journal",
       journalCarouselLabel: "Articles du journal",
     },
+    infosPratiques: {
+      jumpNavLabel: "Aller à une section",
+      jumpNav: {
+        booking: "Rendez-vous",
+        fees: "Tarifs",
+        framework: "Cadre",
+        notes: "À savoir",
+        contact: "Contact",
+      },
+    },
   },
   en: {
     locale: {
@@ -267,6 +287,16 @@ export const UI_TRANSLATIONS: Record<Locale, UiTranslations> = {
     services: {
       journalTitle: "The journal",
       journalCarouselLabel: "Journal articles",
+    },
+    infosPratiques: {
+      jumpNavLabel: "Jump to a section",
+      jumpNav: {
+        booking: "Booking",
+        fees: "Fees",
+        framework: "Framework",
+        notes: "Before booking",
+        contact: "Contact",
+      },
     },
   },
 };

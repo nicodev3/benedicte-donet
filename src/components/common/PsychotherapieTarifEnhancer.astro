@@ -67,7 +67,7 @@
 
   function buildTarifBlock(prose: HTMLElement) {
     const heading = prose.querySelector<HTMLElement>(
-      'h2[id^="le-tarif"], h2[id^="fees"]'
+      'h2[id^="le-tarif"], h2[id^="fees"], h2[id^="tarifs-des-consultations"], h2[id^="online-consultation-fees"]'
     );
     if (!heading || heading.dataset.tarifReady === "true") return;
 
@@ -98,6 +98,9 @@
     block.append(heading, priceList, noteEl);
     list.remove();
     note.remove();
+    if (!document.getElementById("tarifs")) {
+      block.id = "tarifs";
+    }
     prose.insertBefore(block, anchor);
     heading.dataset.tarifReady = "true";
   }
@@ -122,6 +125,8 @@
     padding: clamp(1.25rem, 2vw, 3.125rem) clamp(1.25rem, 3vw, 1.875rem);
     background: var(--color-bg-soft);
     text-align: center;
+    scroll-margin-top: 6.5rem;
+    border-radius: var(--radius-md);
   }
 
   .tarif-block > h2 {
@@ -131,6 +136,7 @@
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--color-primary-dark);
+    scroll-margin-top: 6.5rem;
   }
 
   .tarif-price-list {

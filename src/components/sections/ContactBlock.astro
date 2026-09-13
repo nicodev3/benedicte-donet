@@ -2,6 +2,7 @@
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
+import { CalendarDays, MessageCircle } from "@lucide/astro";
 import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { UMAMI_EVENTS } from "@/lib/umami";
@@ -16,7 +17,8 @@ const labels = locale === "fr" ? {
   bookingText: "Consultez les créneaux proposés sur Doctolib et choisissez votre rendez-vous en visio.",
   bookingCta: "Prendre rendez-vous en visio",
   emailTitle: "Une question avant de consulter ?",
-  emailText: "Pour une question sur les séances, les tarifs ou les autres accompagnements, vous pouvez m’écrire directement.",
+  emailText: "Pour une question sur les séances, les tarifs ou les autres accompagnements, vous pouvez m’écrire via la messagerie Doctolib ou par email.",
+  messageCta: "Envoyer un message via Doctolib",
   emailCta: "M’écrire par email",
 } : {
   title: "Book an appointment or ask a question",
@@ -24,7 +26,8 @@ const labels = locale === "fr" ? {
   bookingText: "View available appointments on Doctolib and choose your video consultation.",
   bookingCta: "Book a video consultation",
   emailTitle: "A question before booking?",
-  emailText: "For questions about sessions, fees or other services, you can email me directly.",
+  emailText: "For questions about sessions, fees or other services, you can write via Doctolib messaging or email.",
+  messageCta: "Send a message via Doctolib",
   emailCta: "Email me",
 };
 ---
@@ -35,17 +38,32 @@ const labels = locale === "fr" ? {
     <h2>{labels.title}</h2>
     <div class="contact-grid">
       <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true">
+          <CalendarDays size={22} stroke-width={1.75} />
+        </span>
         <h3>{labels.bookingTitle}</h3>
         <p>{labels.bookingText}</p>
         <Button href={global.appointmentUrl} umamiEvent={UMAMI_EVENTS.DOCTOLIB}
-          umamiProps={{ emplacement: "bloc-contact", langue: locale }}>{labels.bookingCta}</Button>
+          umamiProps={{ emplacement: "bloc-contact", action: "rdv", langue: locale }}>{labels.bookingCta}</Button>
       </div>
       <div class="contact-card">
+        <span class="contact-icon contact-icon-mail" aria-hidden="true">
+          <MessageCircle size={22} stroke-width={1.75} />
+        </span>
         <h3>{labels.emailTitle}</h3>
         <p>{labels.emailText}</p>
-        <Button href={`mailto:${global.email}`} variant="outline" umamiEvent={UMAMI_EVENTS.EMAIL}
-          umamiProps={{ emplacement: "bloc-contact", langue: locale }}>{labels.emailCta}</Button>
-        <p class="contact-address">{global.email}</p>
+        <div class="contact-actions">
+          <Button href={global.messageUrl} variant="outline" umamiEvent={UMAMI_EVENTS.DOCTOLIB}
+            umamiProps={{ emplacement: "bloc-contact", action: "message", langue: locale }}>{labels.messageCta}</Button>
+          <a
+            class="contact-email-link"
+            href={`mailto:${global.email}`}
+            data-umami-event={UMAMI_EVENTS.EMAIL}
+            data-umami-event-emplacement="bloc-contact"
+            data-umami-event-langue={locale}
+          >{labels.emailCta}</a>
+          <p class="contact-address">{global.email}</p>
+        </div>
       </div>
     </div>
   </Container>
@@ -53,11 +71,69 @@ const labels = locale === "fr" ? {
 
 <style>
   #form { scroll-margin-top: 6rem; }
-  h2 { text-align: center; margin: 0 0 var(--space-lg); }
-  .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
-  .contact-card { padding: var(--space-lg); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
-  h3 { margin: 0 0 var(--space-sm); }
-  p { margin: 0 0 var(--space-md); }
-  .contact-address { margin: var(--space-sm) 0 0; overflow-wrap: anywhere; font-size: var(--text-sm); }
-  @media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; } }
+  h2 {
+    text-align: center;
+    margin: 0 0 var(--space-lg);
+    font-family: var(--font-heading);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary-dark);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+  }
+  .contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: 0.85rem;
+    border-radius: var(--radius-sm);
+    background: color-mix(in srgb, var(--color-secondary) 20%, #fff);
+    color: var(--color-secondary-dark);
+  }
+  .contact-icon-mail {
+    background: color-mix(in srgb, var(--color-primary) 16%, #fff);
+    color: var(--color-primary-dark);
+  }
+  h3 {
+    margin: 0 0 var(--space-sm);
+  }
+  .contact-card > p {
+    margin: 0 0 var(--space-md);
+    flex: 1 1 auto;
+  }
+  .contact-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    width: 100%;
+  }
+  .contact-email-link {
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+  .contact-address {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-size: var(--text-sm);
+    color: var(--color-text-soft);
+  }
+  @media (max-width: 700px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
 </style>

@@ -12,6 +12,8 @@ export const SITE = {
   email: "donetbenedicte@gmail.com",
   appointmentUrl:
     "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet",
+  messageUrl:
+    "https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet/patient-request?category=message",
   /** Code fourni par Google Search Console (méthode balise HTML). Laisser vide si vérification DNS. */
   googleSiteVerification: "",
   address: {
@@ -69,6 +71,7 @@ export function getSiteGlobal(locale: Locale) {
     siteName: SITE.siteName,
     email: SITE.email,
     appointmentUrl: SITE.appointmentUrl,
+    messageUrl: SITE.messageUrl,
     instagramUrl: SITE.social.instagram,
     linkedinUrl: SITE.social.linkedin,
     facebookUrl: SITE.social.facebook,

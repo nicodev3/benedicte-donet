@@ -1,21 +1,20 @@
 ---
 /**
- * Section « À savoir avant de consulter » : liste → cartes avec titres et icônes.
+ * Section « Cadre du suivi » : liste → trois cartes (formation, public, visio).
  */
-import { Ban, HandCoins, HeartHandshake, UsersRound } from "@lucide/astro";
+import { GraduationCap, Users, Video } from "@lucide/astro";
 
 const icons = [
-  { key: "ban", Icon: Ban },
-  { key: "mutuelle", Icon: HandCoins },
-  { key: "ados", Icon: UsersRound },
-  { key: "inclusif", Icon: HeartHandshake },
+  { key: "formation", Icon: GraduationCap },
+  { key: "public", Icon: Users },
+  { key: "visio", Icon: Video },
 ] as const;
 ---
 
-<div id="infos-notes-icons" hidden aria-hidden="true">
+<div id="infos-cadre-icons" hidden aria-hidden="true">
   {
     icons.map(({ key, Icon }) => (
-      <span data-infos-note-icon={key}>
+      <span data-infos-cadre-icon={key}>
         <Icon size={22} stroke-width={1.75} aria-hidden="true" />
       </span>
     ))
@@ -47,11 +46,11 @@ const icons = [
     return { label: label || null, body };
   }
 
-  function buildInfosNotes(prose: HTMLElement) {
+  function buildInfosCadre(prose: HTMLElement) {
     const heading = prose.querySelector<HTMLElement>(
-      'h2[id^="à-savoir-avant"], h2[id^="a-savoir-avant"], h2[id^="what-to-know"]'
+      'h2[id^="votre-psychologue"], h2[id^="your-psychologist"]'
     );
-    if (!heading || heading.dataset.infosNotesReady === "true") return;
+    if (!heading || heading.dataset.infosCadreReady === "true") return;
 
     const list = heading.nextElementSibling;
     if (!list || list.tagName !== "UL") return;
@@ -59,24 +58,24 @@ const icons = [
     const items = [...list.querySelectorAll(":scope > li")];
     if (items.length < 2) return;
 
-    const iconRoot = document.getElementById("infos-notes-icons");
+    const iconRoot = document.getElementById("infos-cadre-icons");
     const iconSlots = iconRoot
-      ? [...iconRoot.querySelectorAll<HTMLElement>("[data-infos-note-icon]")]
+      ? [...iconRoot.querySelectorAll<HTMLElement>("[data-infos-cadre-icon]")]
       : [];
 
     const section = document.createElement("section");
-    section.className = "infos-notes";
+    section.className = "infos-cadre";
     section.setAttribute("aria-labelledby", heading.id);
 
     const grid = document.createElement("ul");
-    grid.className = "infos-notes-grid";
+    grid.className = "infos-cadre-grid";
 
     items.forEach((item, index) => {
       const card = document.createElement("li");
-      card.className = "infos-notes-card";
+      card.className = "infos-cadre-card";
 
       const iconWrap = document.createElement("span");
-      iconWrap.className = "infos-notes-icon";
+      iconWrap.className = "infos-cadre-icon";
       iconWrap.setAttribute("aria-hidden", "true");
 
       const source = iconSlots[index] ?? iconSlots[iconSlots.length - 1];
@@ -85,17 +84,17 @@ const icons = [
 
       const { label, body } = splitLabeledHtml(item.innerHTML);
       const bodyEl = document.createElement("div");
-      bodyEl.className = "infos-notes-body";
+      bodyEl.className = "infos-cadre-body";
 
       if (label) {
         const title = document.createElement("p");
-        title.className = "infos-notes-title";
+        title.className = "infos-cadre-title";
         title.textContent = label;
         bodyEl.append(title);
       }
 
       const text = document.createElement("div");
-      text.className = "infos-notes-text";
+      text.className = "infos-cadre-text";
       text.innerHTML = body;
       bodyEl.append(text);
 
@@ -106,55 +105,29 @@ const icons = [
     heading.before(section);
     section.append(heading, grid);
     list.remove();
-    heading.dataset.infosNotesReady = "true";
+    heading.dataset.infosCadreReady = "true";
   }
 
-  function buildInfosClosing(prose: HTMLElement) {
-    if (prose.querySelector(".infos-closing")) return;
-
-    const notes = prose.querySelector(".infos-notes");
-    if (!notes) return;
-
-    const nodes: Element[] = [];
-    let next = notes.nextElementSibling;
-    while (next && next.tagName === "P") {
-      nodes.push(next);
-      next = next.nextElementSibling;
-    }
-
-    if (!nodes.length) return;
-
-    const closing = document.createElement("div");
-    closing.className = "infos-closing";
-    nodes.forEach((node) => closing.append(node));
-    if (next) {
-      prose.insertBefore(closing, next);
-    } else {
-      prose.append(closing);
-    }
-  }
-
-  function setupInfosNotes() {
+  function setupInfosCadre() {
     const prose = document.querySelector<HTMLElement>(".prose.prose-wide");
-    if (!prose || prose.dataset.infosNotesReady === "true") return;
+    if (!prose || prose.dataset.infosCadreReady === "true") return;
 
-    buildInfosNotes(prose);
-    buildInfosClosing(prose);
-    if (prose.querySelector(".infos-notes")) {
-      prose.dataset.infosNotesReady = "true";
+    buildInfosCadre(prose);
+    if (prose.querySelector(".infos-cadre")) {
+      prose.dataset.infosCadreReady = "true";
     }
   }
 
-  setupInfosNotes();
-  document.addEventListener("astro:page-load", setupInfosNotes);
+  setupInfosCadre();
+  document.addEventListener("astro:page-load", setupInfosCadre);
 </script>
 
 <style is:global>
-  .infos-notes {
+  .infos-cadre {
     margin-block: var(--space-lg);
   }
 
-  .infos-notes > h2 {
+  .infos-cadre > h2 {
     margin-top: 0;
     margin-bottom: var(--space-md);
     font-family: var(--font-heading);
@@ -164,51 +137,50 @@ const icons = [
     color: var(--color-primary-dark);
   }
 
-  .infos-notes-grid {
+  .infos-cadre-grid {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+    align-items: stretch;
   }
 
-  .infos-notes-card {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.9rem;
-    align-items: start;
+  .infos-cadre-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
     margin: 0;
     height: 100%;
-    padding: 1.2rem 1.25rem;
-    background: var(--color-bg);
+    padding: 1.25rem 1.2rem 1.35rem;
+    background: var(--color-bg-muted);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
   }
 
-  .infos-notes-grid > li + li {
+  .infos-cadre-grid > li + li {
     margin-top: 0;
   }
 
-  .infos-notes-icon {
+  .infos-cadre-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    flex-shrink: 0;
+    width: 2.6rem;
+    height: 2.6rem;
     border-radius: var(--radius-sm);
-    background: color-mix(in srgb, var(--color-primary) 16%, #fff);
-    color: var(--color-primary-dark);
+    background: color-mix(in srgb, var(--color-secondary) 20%, #fff);
+    color: var(--color-secondary-dark);
   }
 
-  .infos-notes-icon svg {
-    width: 1.25rem;
-    height: 1.25rem;
+  .infos-cadre-icon svg {
+    width: 1.3rem;
+    height: 1.3rem;
     stroke: currentColor;
   }
 
-  .infos-notes-body {
+  .infos-cadre-body {
     min-width: 0;
     color: var(--color-text);
     font-size: var(--text-sm);
@@ -216,8 +188,8 @@ const icons = [
     line-height: 1.6;
   }
 
-  .infos-notes-title {
-    margin: 0 0 0.35rem;
+  .infos-cadre-title {
+    margin: 0 0 0.4rem;
     font-family: var(--font-heading);
     font-size: 0.9375rem;
     font-weight: 700;
@@ -226,53 +198,23 @@ const icons = [
     color: var(--color-primary-dark);
   }
 
-  .infos-notes-text p {
+  .infos-cadre-text p {
     margin: 0;
   }
 
-  .infos-notes-text strong {
+  .infos-cadre-text strong {
     font-weight: 600;
   }
 
-  @media (max-width: 720px) {
-    .infos-notes-grid {
+  @media (max-width: 900px) {
+    .infos-cadre-grid {
       grid-template-columns: 1fr;
     }
-  }
 
-  .infos-closing {
-    max-width: 36rem;
-    margin: var(--space-lg) auto 0;
-    padding: 1.5rem 1.25rem 0;
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-    color: var(--color-text-soft);
-    font-size: var(--text-base);
-    line-height: 1.7;
-  }
-
-  .infos-closing p {
-    margin: 0;
-  }
-
-  .infos-closing p + p {
-    margin-top: 0.85rem;
-    font-family: var(--font-heading);
-    font-style: italic;
-    color: var(--color-text);
-  }
-
-  .page-intro-content h2,
-  .infos-cadre,
-  .infos-notes {
-    scroll-margin-top: 6.5rem;
-  }
-
-  #cadre,
-  #avant-de-consulter {
-    display: block;
-    height: 0;
-    overflow: hidden;
-    scroll-margin-top: 6.5rem;
+    .infos-cadre-card {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+    }
   }
 </style>
