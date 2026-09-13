@@ -42,7 +42,11 @@ const ogImage = seoImage ? new URL(seoImage.src, SITE.url).href : undefined;
 const t = useTranslations(locale);
 const language = localeToSchemaLanguage(locale);
 const alternateOgLocale = locale === "fr" ? "en_US" : "fr_FR";
-const sameAs = [global.instagramUrl, global.facebookUrl].filter(Boolean);
+const sameAs = [
+  global.instagramUrl,
+  global.linkedinUrl,
+  global.appointmentUrl,
+].filter(Boolean);
 const personId = new URL("/#person", SITE.url).href;
 const organizationId = new URL("/#organization", SITE.url).href;
 const serviceId = new URL("/#online-psychology-service", SITE.url).href;
@@ -106,10 +110,10 @@ const graph: Record<string, unknown>[] = [
         ? "Psychologie clinique et thérapie EMDR en téléconsultation"
         : "Clinical psychology and EMDR therapy by video consultation",
     provider: { "@id": personId },
-    areaServed: {
-      "@type": "Country",
-      name: "France",
-    },
+    areaServed: [
+      { "@type": "Country", name: "France" },
+      { "@type": "Place", name: "Worldwide" },
+    ],
     audience: {
       "@type": "PeopleAudience",
       suggestedMinAge: 13,
@@ -118,6 +122,10 @@ const graph: Record<string, unknown>[] = [
       "@type": "ServiceChannel",
       serviceUrl: global.appointmentUrl,
       availableLanguage: ["fr", "en"],
+      serviceLocation: {
+        "@type": "VirtualLocation",
+        url: SITE.url,
+      },
     },
   },
   {

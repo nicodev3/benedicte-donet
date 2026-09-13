@@ -81,6 +81,19 @@ const year = new Date().getFullYear();
             )
           }
           {
+            global.linkedinUrl && (
+              <a
+                href={global.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <SocialIcon name="linkedin" size={20} />
+                <span>LinkedIn</span>
+              </a>
+            )
+          }
+          {
             global.facebookUrl && (
               <a
                 href={global.facebookUrl}

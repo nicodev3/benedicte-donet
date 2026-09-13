@@ -23,6 +23,8 @@ export const SITE = {
   },
   social: {
     instagram: "https://www.instagram.com/benedicte.psyenligne/",
+    linkedin: "https://www.linkedin.com/in/bénédicte-donet-13605195/",
+    /** Page photo : affichée en footer, exclue du sameAs SEO (entité psychologue). */
     facebook: "https://www.facebook.com/BenedicteDonetPhotography",
   },
   locale: {
@@ -68,6 +70,7 @@ export function getSiteGlobal(locale: Locale) {
     email: SITE.email,
     appointmentUrl: SITE.appointmentUrl,
     instagramUrl: SITE.social.instagram,
+    linkedinUrl: SITE.social.linkedin,
     facebookUrl: SITE.social.facebook,
     address: SITE.address,
     defaultSeoTitle: localized.defaultSeoTitle,
