@@ -12,7 +12,7 @@ order: 3
 draft: false
 pageType: page
 ---
-![EMDR psychologie en ligne benedicte donet](/images/cms-library/dsc06691.jpg)
+![EMDR psychologie en ligne benedicte donet](/images/cms-library/portraits-portrait-accueil.png)
 
 ## Un accompagnement individuel en visio
 
@@ -97,11 +97,8 @@ Prévoyez un endroit calme et privé, une connexion internet stable et un appare
 
 ## Le tarif
 
--   Première séance individuelle 70 €
-
--   Séance individuelle 90 €
-
-    Durée : 1 h 30 · Téléconsultation · Adultes
+* Première séance individuelle 70 €
+* Durée : 1 h 30 · Téléconsultation · Adultes
 
 \* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](/infos-pratiques/) pour aborder ce sujet.
 
