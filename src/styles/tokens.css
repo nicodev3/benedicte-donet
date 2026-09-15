@@ -63,6 +63,8 @@
   --space-2xl: 6rem;
   /* Rythme vertical des sections (~44–72px) — évite le double vide entre blocs */
   --section-y: clamp(2.75rem, 4.5vw, 4.5rem);
+  /* Mobile : plus serré pour enchaîner les blocs sans « trous » */
+  --section-y-mobile: 2rem;
 
   /* Mise en page */
   --container-max: 84rem;

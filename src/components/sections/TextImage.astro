@@ -128,14 +128,12 @@ const imageFirst = isIntro || reverse;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
     align-items: center;
     gap: clamp(1.5rem, 4vw, 3.75rem);
-    padding-block: clamp(2.5rem, 5vw, 3.75rem);
   }
 
   .ti-grid.online {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: stretch;
     gap: clamp(1.5rem, 4vw, 3rem);
-    padding-block: clamp(2.5rem, 5vw, 3.75rem);
   }
 
   .ti-grid.no-image {
@@ -270,7 +268,9 @@ const imageFirst = isIntro || reverse;
     .ti-grid.intro,
     .ti-grid.online {
       grid-template-columns: 1fr;
-      padding-block: var(--space-xl);
+      /* Le rythme vertical vient de Section — pas de padding interne en plus */
+      padding-block: 0;
+      gap: var(--space-md);
     }
 
     .ti-grid.reverse .ti-content {

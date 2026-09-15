@@ -50,6 +50,31 @@ const {
     padding-top: calc(var(--section-y) * 0.45);
   }
 
+  /* Après une citation visuelle : ne jamais compresser (spécificité ≥ règle ci-dessus) */
+  .section.quote-section + .section.tone-default,
+  .section.quote-section + .section.tone-soft,
+  .section.quote-section + .section.tone-muted {
+    padding-top: calc(var(--section-y) * 1.25);
+  }
+
+  @media (max-width: 820px) {
+    .section {
+      padding-block: var(--section-y-mobile, var(--section-y));
+    }
+
+    .section.tone-default + .section.tone-default,
+    .section.tone-soft + .section.tone-soft,
+    .section.tone-muted + .section.tone-muted {
+      padding-top: calc(var(--section-y-mobile, var(--section-y)) * 0.3);
+    }
+
+    .section.quote-section + .section.tone-default,
+    .section.quote-section + .section.tone-soft,
+    .section.quote-section + .section.tone-muted {
+      padding-top: var(--space-xl);
+    }
+  }
+
   .tone-soft {
     background: var(--color-bg-soft);
   }
