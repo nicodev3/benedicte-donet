@@ -13,11 +13,17 @@ tags:
   - Breathing
   - Health
 date: 2023-10-23T17:49:24.000Z
-updated: "2026-09-13T00:00:00Z"
+updated: 2026-06-08T12:26:52.000Z
 image: /images/illustrations/illustration-ateliers-meditation.jpeg
 imageAlt: exercice to breathe better
 seoTitle: You Might Be Breathing Wrong — And It’s Totally Normal (But Let’s Fix It)
-seoDescription: "Explore breathing and its relationship with stress: reflections on understanding everyday breathing habits."
+seoDescription: "Our way of breathing has deteriorated over the course of our
+  evolution. Indeed, our brain has grown, leaving less space for the airways.
+  Our diet and lifestyle have also greatly influenced how we breathe. It’s
+  important to know that many psychological and physical diseases can originate
+  from our breathing patterns. This is due to the domino effect: improper
+  breathing leads to sleep apnea, stress, fatigue, higher blood pressure, and so
+  on. It can even lead to chronic insomnia, attention disorders, etc."
 draft: false
 ---
 
@@ -45,9 +51,6 @@ Yep. Poor breathing habits can lead to issues like:
 Basically: if you’re feeling off, wired-but-tired, or like you’re running on fumes, your breath might be playing a bigger role than you think.
 
 ![Nature verdoyante, illustration de la respiration et du calme](/images/stock/stock-nature-respiration.jpg)
-
-
-> If stress or anxiety remain difficult to live with, breathing exercises can be a topic to discuss in a consultation. Explore [my psychological support by video](/en/psychotherapie/) and the setting for sessions.
 
 ## The Breath That Science & Ancient Yogis Agree On
 

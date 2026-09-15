@@ -18,9 +18,61 @@ pageType: page
 
 Je suis Bénédicte Donet, **psychologue clinicienne et psychothérapeute en ligne**. J’accompagne notamment les adultes confrontés à des traumatismes, à l’anxiété ou à des difficultés relationnelles, dans un cadre confidentiel et à leur rythme.
 
-La **thérapie EMDR en ligne** fait partie des approches que je propose. Nous prenons le temps d’échanger sur votre situation pour déterminer ensemble le cadre et les outils adaptés à votre demande.
+La **thérapie EMDR en ligne** fait partie des approches que je propose. Nous prenons le temps d’échanger sur votre situation pour déterminer ensemble le cadre et les outils adaptés à votre demande. Le suivi se déroule en téléconsultation ; l’adresse à L’Étang-Salé, à La Réunion, est une adresse administrative et non un cabinet de consultation.
 
 [Prendre rendez-vous en visio](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
+
+<span id="tarifpsycho" aria-hidden="true"></span>
+<span id="tarifs" aria-hidden="true"></span>
+
+## Le tarif
+
+* Première séance individuelle 70 €
+* Durée : 1h30 / Public : Adultes
+
+\* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](/infos-pratiques/) pour aborder ce sujet.
+
+## Comment se déroule une thérapie EMDR en ligne ?
+
+### La première consultation
+
+Ce premier échange permet de parler de ce qui vous amène, de vos attentes et du cadre de l’accompagnement. Vous pouvez poser vos questions avant d’envisager la suite du suivi. Le travail sur un souvenir traumatique ne commence pas automatiquement dès la première rencontre.
+
+### Le travail thérapeutique à distance
+
+Selon votre situation, nous pouvons associer la parole, l’EMDR et les autres outils de ma pratique. La préparation, les ressources et le rythme de travail se construisent avec vous. L’adaptation de l’EMDR à la visio se discute en séance : ce format ne dispense pas d’évaluer votre situation individuelle.
+
+### Préparer votre rendez-vous en visio
+
+Prévoyez un endroit calme et privé, une connexion internet stable et un appareil avec caméra et microphone. La séance dure **1 h 30**. Les consignes et le lien de connexion vous sont communiqués avant le rendez-vous.
+
+<span id="questions-visio" aria-hidden="true"></span>
+
+## Vos questions sur les consultations en ligne
+
+### Puis-je vous écrire avant de réserver ?
+
+Oui, vous pouvez [m’écrire par email](mailto:donetbenedicte@gmail.com) pour une question sur les séances ou les tarifs. Pour choisir un créneau, consultez directement [mon agenda Doctolib](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet).
+
+### Faut-il savoir si l’EMDR me convient avant de consulter ?
+
+Vous pouvez venir avec vos questions et vos difficultés, sans avoir choisi une méthode. Nous discuterons de votre demande et de la place que l’EMDR ou d’autres approches peuvent prendre dans votre suivi.
+
+### Où trouver les informations sur le remboursement et le public accueilli ?
+
+Les modalités sont détaillées dans les [informations pratiques](/infos-pratiques/). Le suivi présenté ici est individuel, y compris lorsque les difficultés concernent les relations amoureuses.
+
+[Prendre rendez-vous en visio](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
+
+## JE VOUS ACCOMPAGNE
+
+Au cœur de ma pratique thérapeutique résident la parole et l’écoute, deux piliers fondamentaux qui guident mes séances vers une compréhension profonde de vos expériences, émotions et besoins. Cette approche empathique permet d’établir un **espace de confiance et d’ouverture** où vous pouvez avancer à votre propre rythme.\
+J’intègre à ce socle d’autres méthodes thérapeutiques qui me semblent alignées avec votre situation :
+
+* L’**EMDR** (désensibilisation et retraitement de l’information par les mouvements oculaires) est une approche psychothérapeutique recommandée dans certaines situations de stress post-traumatique. Les mouvements oculaires ou d’autres stimulations bilatérales sont utilisés dans un travail progressif sur des souvenirs ciblés. Son indication et son rythme sont évalués selon chaque situation. En savoir plus : [thérapie EMDR](/therapie-emdr/) · [recommandations NICE](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults).
+* La **pleine conscience**, est un outil puissant ayant des effets bénéfiques sur notre bien-être, notre conscience corporelle et notre capacité à vivre pleinement le moment présent. Il est fréquent que j’introduise des moments de méditation et d’exploration de la pleine conscience dans mon accompagnement pour vous aider à reconnecter avec l’instant présent, approfondir votre connaissance de vous-même et accueillir vos expériences internes sans résistance.
+* Le **Système familial intérieur** (IFS), pratique d’intégration des identités, est une approche fascinante. Chaque individu porte en lui un monde complexe, composé de plusieurs identités. Ces identités ne sont pas toutes alignées en termes d’âge ou de désirs. Une partie de nous peut souhaiter avant tout se protéger, être en sécurité. Cependant, nous avons également une autre partie en nous qui aspire à évoluer et à découvrir le monde qui nous entoure. La pratique d’intégration des identités consiste à reconnaître et à accueillir toutes ces parties de nous-mêmes. Nous travaillons avec ces différentes identités, en les aidant à grandir si nécessaire, à évoluer et à retrouver un sentiment de sécurité.
+* La **respiration et l’utilisation de la voix**. Lorsque vous faites face à des niveaux de stress et d’anxiété élevés, il est bénéfique d’explorer votre façon de respirer. Parfois, une rééducation de la respiration est nécessaire afin de soutenir le système nerveux. Aussi, votre voix est étroitement liée à votre système nerveux et à vos émotions. En travaillant sur la modulation de la voix, nous pouvons libérer des tensions émotionnelles, exprimer nos besoins et renforcer notre confiance en nous. Ces techniques créent un espace thérapeutique puissant.
 
 ## MON APPROCHE
 
@@ -31,18 +83,13 @@ Je suis consciente du caractère sacré et vulnérable d’une relation thérape
 
 ### Une pratique holistique, adaptée à chacun
 
-Ma pratique est guidée par une vision holistique de la psychologie, qui consiste à **prendre en compte l’Être dans sa totalité** : ses dimensions physiques, mentales, émotionnelles, familiales, sociales, culturelles et spirituelles. Je crois que nous possédons tous un potentiel de guérison extraordinaire, et ma mission est de **vous accompagner sur votre propre chemin**, en douceur.
+Ma pratique est guidée par une vision holistique de la psychologie, qui consiste à **prendre en compte l’Être dans sa totalité**. Ainsi, mon approche envers l’Être humain tient compte de ses dimensions physiques, mentales, émotionnelles, familiales, sociales, culturelles et spirituelles. Je crois que nous possédons tous un potentiel de guérison et de croissance personnelle extraordinaire, et ma mission est de **vous accompagner sur votre propre chemin**, en douceur et en respectant votre rythme.
 
-[Mon parcours et mes formations](/a-propos/)
+### Une approche passionnée et engagée
 
-## Mes outils
+Passionnée par la thérapie et sa pratique, **je mets continuellement à jour mes connaissances à travers des formations** et en nourrissant ma pratique personnelle, afin de vous offrir un suivi thérapeutique de qualité. La maturité, le savoir et l’expérience qui résultent d’un travail sur soi ne peuvent être comparés aux connaissances acquises dans des livres. Mon accompagnement est donc grandement inspiré et guidé par ce que j’ai acquis.
 
-Au cœur de ma pratique résident **la parole et l’écoute**, deux piliers qui guident mes séances vers une compréhension profonde de vos expériences, émotions et besoins. J’y associe les méthodes qui me semblent alignées avec votre situation :
-
-* L’**EMDR**, approche recommandée dans certaines situations de stress post-traumatique : des stimulations bilatérales soutiennent un travail progressif sur des souvenirs ciblés. Son indication et son rythme sont évalués selon chaque situation. En savoir plus : [thérapie EMDR](/therapie-emdr/) · [recommandations NICE](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults).
-* La **pleine conscience** : des temps de méditation et d’observation des émotions et des sensations, pour reconnecter avec l’instant présent et accueillir vos expériences internes sans résistance.
-* Le **Système familial intérieur (IFS)** : reconnaître et accueillir les différentes parts qui coexistent en vous — celle qui veut se protéger, celle qui aspire à évoluer — et les aider à retrouver un sentiment de sécurité.
-* La **respiration et l’utilisation de la voix** : soutenir le système nerveux, libérer des tensions émotionnelles et renforcer la confiance en soi lorsque le stress et l’anxiété sont élevés.
+[Questions sur les consultations en ligne](#questions-visio)
 
 ## Mes spécialités
 
@@ -74,44 +121,13 @@ Ma spécialisation réside dans l’accompagnement des survivants de traumatisme
 Je suis là pour vous accompagner avec bienveillance et expertise à travers les défis de l’anxiété, du stress et des phobies qui peuvent parfois sembler accablants.\
 Ce sont des états naturels que nous rencontrons tous à un moment donné de notre vie. Je crois en l’importance de comprendre en profondeur les origines et les schémas qui les alimentent. En explorant vos pensées et émotions, nous travaillerons main dans la main pour **identifier les déclencheurs** et les mécanismes sous-jacents à ces états.
 
-Nous explorerons des techniques basées sur la pleine conscience et la relaxation afin de vous soutenir au quotidien. À cela, j’associe un travail profond autour des traumatismes. Ensemble, nous aborderons progressivement les situations qui déclenchent vos phobies. L’objectif est de vous permettre de ressentir plus de confiance dans des situations qui étaient autrefois sources d’anxiété.
+Nous explorerons des techniques basées sur la pleine conscience et la relaxation afin de vous soutenir au quotidien. À cela, j’associe un travail profond autour des traumatismes. Ensemble, nous aborderons progressivement les situations qui déclenchent vos phobies. L’objectif est de vous permettre de ressentir plus de confiance dans des situations qui étaient autrefois sources d’anxiété.\
+Le travail psychothérapeutique que nous entreprendrons ensemble ne vise pas seulement à atténuer les symptômes, mais aussi à vous aider à développer une compréhension profonde de vous-même et de vos émotions.
 
 ![EMDR psychologie en ligne benedicte donet psychothérapeute](/images/portraits/portrait-emdr-02.jpg)
 
-## Comment se déroule une thérapie EMDR en ligne ?
+## Des questions ?
 
-### La première consultation
-
-Ce premier échange permet de parler de ce qui vous amène, de vos attentes et du cadre de l’accompagnement. Vous pouvez poser vos questions avant d’envisager la suite du suivi. Le travail sur un souvenir traumatique ne commence pas automatiquement dès la première rencontre.
-
-### Le travail thérapeutique à distance
-
-Selon votre situation, nous pouvons associer la parole, l’EMDR et les autres outils de ma pratique. La préparation, les ressources et le rythme de travail se construisent avec vous. L’adaptation de l’EMDR à la visio se discute en séance : ce format ne dispense pas d’évaluer votre situation individuelle.
-
-### Préparer votre rendez-vous en visio
-
-Prévoyez un endroit calme et privé, une connexion internet stable et un appareil avec caméra et microphone. La séance dure **1 h 30**. Les consignes et le lien de connexion vous sont communiqués avant le rendez-vous.
-
-<span id="tarifpsycho" aria-hidden="true"></span>
-<span id="tarifs" aria-hidden="true"></span>
-
-## Le tarif
-
-* Première séance individuelle 70 €
-* Durée : 1 h 30 · Téléconsultation · Adultes
-
-\* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](/infos-pratiques/) pour aborder ce sujet.
-
-<span id="questions-visio" aria-hidden="true"></span>
-
-## Vos questions sur les consultations en ligne
-
-### Faut-il savoir si l’EMDR me convient avant de consulter ?
-
-Vous pouvez venir avec vos questions et vos difficultés, sans avoir choisi une méthode. Nous discuterons de votre demande et de la place que l’EMDR ou d’autres approches peuvent prendre dans votre suivi.
-
-### Où trouver les informations sur le remboursement et le public accueilli ?
-
-Les modalités sont détaillées dans les [informations pratiques](/infos-pratiques/). Le suivi présenté ici est individuel, y compris lorsque les difficultés concernent les relations amoureuses.
+Vous pouvez [m’écrire par email](mailto:donetbenedicte@gmail.com) pour poser vos questions avant de réserver une consultation.
 
 [Prendre rendez-vous en visio](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)

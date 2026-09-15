@@ -11,7 +11,6 @@ tags:
 date: 2026-09-10T00:00:00.000Z
 image: /images/cms-library/eric-ward-7kqe_8meex8-unsplash.jpg
 draft: false
-updated: "2026-09-13T00:00:00Z"
 ---
 If you've landed on this article, it may be because relationships also create stress, fear, or anxiety for you — despite your **desire to connect**.
 
@@ -26,9 +25,6 @@ A fetus, a baby, a child needs safety: regularity, **reliability in the bond**, 
 This emotional safety is what **then allows us to explore the world**, knowing we have a secure base to return to if needed.
 
 ![](/images/cms-library/caleb-woods-vzildyoqn_u-unsplash.jpg)
-
-
-> If fear of abandonment or the urge to withdraw weighs on your relationships, you can explore these difficulties in [individual video consultations](/en/psychotherapie/). We take time to discuss your situation and whether EMDR may have a place in your care.
 
 ## The legacy of insecurity
 

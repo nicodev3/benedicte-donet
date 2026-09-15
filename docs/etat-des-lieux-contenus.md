@@ -1,6 +1,6 @@
 # État des lieux — contenus textuels (avant restauration)
 
-Septembre 2026. Document de diagnostic, **sans restauration**. Objectif : distinguer ce que Bénédicte a écrit ou modifié via le CMS Decap, et ce qui a été ajouté, coupé ou réécrit hors CMS (Nicolas, Claude, Cursor).
+Septembre 2026. Document de diagnostic, puis restauration. Objectif : distinguer ce que Bénédicte a écrit ou modifié via le CMS Decap, et ce qui a été ajouté, coupé ou réécrit hors CMS (Nicolas, Claude, Cursor).
 
 Auteurs Git utilisés comme critère :
 
@@ -206,25 +206,22 @@ Ces chaînes reviendront en partie si l’on restaure les pages. Les libellés d
 
 ---
 
-## 7. Plan de restauration proposé (non appliqué)
+## 7. Restauration appliquée
 
-Ordre prévu, une fois validé :
+La restauration a été faite sur cette branche, selon le plan ci-dessous.
 
-1. **Accueil FR/EN** — revenir à `0c43483` (CMS 11 sept), en conservant uniquement d’éventuels correctifs techniques d’images / chemins déjà présents à cette date.
-2. **Psychothérapie FR** — base `d864b97` (CMS 15 sept) + retouches `7d001c5` (image, tarif sans 90 €).
-3. **Psychothérapie EN** — base `82b0ccc` (dernier CMS Bénédicte sur l’EN), aligner le tarif sur le FR (pas de 90 €) si elle l’a retiré des deux langues le 15 sept.
-4. **À propos** — ne pas toucher au corps ; lien vers `/psychotherapie/` conservé sauf avis contraire.
-5. **Services / Photothérapie / Infos pratiques / Masterclass** — remettre le markdown d’avant `a5ecef0`, **sans** recréer `masterclass-intro.md` / `outro.md` (garder l’affichage du fichier CMS).
-6. **Articles CMS Bénédicte** — retirer encadrés CTA du 13 sept et restaurer `seoDescription` / `seoTitle` de ses commits du 11 sept (et du 10 sept pour l’attachement).
-7. **Article IA** — garder le texte CMS ; ne pas reculer le slug `pourquoi-ia-…` ni les correctifs d’orthographe / dates CMS.
-8. **Articles jamais édités par elle** — ne pas y toucher dans cette passe, sauf demande d’élargir le périmètre.
-9. **Ne pas restaurer** : mentions légales, politique de confidentialité, chemins d’images, schémas CMS, correctif d’affichage Masterclass et photothérapie EN.
+1. **Accueil FR/EN** — revenu à `0c43483` (CMS 11 sept).
+2. **Psychothérapie FR** — base `d864b97` (CMS 15 sept) + image du 16 sept (`portraits-portrait-accueil.png`). Tarif sans 90 €, comme Bénédicte l’a enregistré deux fois.
+3. **Psychothérapie EN** — base `82b0ccc` (dernier CMS Bénédicte). Le tarif EN garde 70 € et 90 €, parce qu’elle ne l’avait pas retiré dans cette langue.
+4. **À propos** — corps inchangé ; lien vers `/psychotherapie/` conservé.
+5. **Services / Photothérapie / Infos pratiques** — markdown d’avant la vague du 13–15 sept. Ancres `#contact` et liens Doctolib sans paramètre de tracking conservés. FAQ historique remise sur Services.
+6. **Masterclass** — texte d’origine conservé dans le fichier CMS (affichage admin = site). Les anciens fichiers intro/outro ne sont pas recréés.
+7. **Articles CMS Bénédicte** — encadrés CTA du 13 sept retirés ; `seoDescription` / `seoTitle` de ses commits du 11 sept (et orthographe du 10 sept pour l’attachement).
+8. **Article IA** — texte CMS conservé ; encadré CTA retiré ; slug `pourquoi-ia-…` inchangé.
+9. **Non restauré** : mentions légales, politique de confidentialité, articles jamais édités par elle (dont les enrichissements SEO EMDR de juillet), libellés d’interface hors pages.
 
-Points à trancher avant d’écrire la moindre ligne :
+Le bloc Masterclass de l’accueil est de nouveau affiché et de nouveau éditable dans le CMS.
 
-- Faut-il aussi annuler les ajouts SEO de juillet (articles EMDR) ?
-- La FAQ « historique » de Services doit-elle revenir sur Services, sur Infos pratiques, ou aux deux endroits ?
-- Le bloc Masterclass de l’accueil doit-il réapparaître (Bénédicte ne l’avait pas retiré) ?
 
 ---
 

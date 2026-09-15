@@ -9,7 +9,6 @@ date: 2026-08-20T00:00:00.000Z
 image: /images/cms-library/dscf8110.jpg
 imageAlt: Deux femmes âgées assises sur un banc sur un trottoir ensoleillé
 draft: false
-updated: "2026-09-13T00:00:00Z"
 ---
 C'est un sujet important qui prend de plus en plus de place depuis que l'IA est arrivée dans nos vies. Une plateforme où, quel que soit le moment du jour et de la nuit, quelqu'un (un robot) répond à toutes nos questions, états d'âme, doutes et peurs.
 
@@ -42,9 +41,6 @@ Ce que j'enseigne chaque jour à mes patients, c'est combien leur corps, leurs s
 Alors aller chercher un robot pour se comprendre, c'est souvent un détour plutôt que la voie royale.
 
 ![Piétons sur un boulevard ombragé devant un kiosque à café](/images/cms-library/dscf8112.jpg)
-
-
-> Si tu ressens le besoin d’un échange avec une personne qui t’accompagne dans la durée, tu peux consulter [une psychologue en visio](/psychotherapie/). La première rencontre permet de parler de ta demande et de poser tes questions sur le suivi.
 
 ## Être validé avant tout
 

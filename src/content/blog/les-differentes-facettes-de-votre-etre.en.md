@@ -9,16 +9,17 @@ tags:
   - Mindfulness
   - Psychoeducation
 date: 2023-09-13T12:30:26.000Z
-updated: "2026-09-13T00:00:00Z"
+updated: 2026-06-08T12:25:23.000Z
 image: /images/illustrations/illustration-facettes-personnalite.jpg
 imageAlt: soutien amour
 seoTitle: The Different Facets of Your Being
-seoDescription: "Explore different parts of yourself, including difficult emotions. An invitation to understand your inner world with kindness."
+seoDescription: An ancient tradition tells us that within each of us reside two
+  wolves, and the one that predominates is the one we feed. In our quest to be
+  good and loving, we often neglect to recognize, observe, and acknowledge the
+  part of us that feels hatred and separation. It’s these parts within us that
+  hurt both others and ourselves.
 draft: false
 ---
-
-
-> If these different parts of you often feel in conflict, you can explore them in [online psychological consultations](/en/psychotherapie/). IFS is one of the approaches I integrate into my practice, depending on each person’s situation.
 
 An ancient tradition tells us that within each of us reside two wolves, and the one that predominates is the one we feed. In our quest to be good and loving, we often neglect to recognize, observe, and acknowledge the part of us that feels hatred and separation. It’s these parts within us that hurt both others and ourselves.  
   
