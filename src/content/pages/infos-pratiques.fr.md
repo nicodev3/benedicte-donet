@@ -23,8 +23,6 @@ La prise de rendez-vous se fait par email ou par le lien de contact [ci-dessous]
 
 [Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
-<span id="a-savoir-avant-de-consulter" aria-hidden="true"></span>
-
 ## À savoir avant de consulter
 
 -   Je ne participe pas au parcours « Mon soutien psy ». Vous ne pouvez donc pas vous faire rembourser les séances dans ce cadre précis.

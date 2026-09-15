@@ -23,8 +23,6 @@ Appointments can be made by email or via the contact link [below](#contact).
 
 [Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
-<span id="what-to-know-before-booking" aria-hidden="true"></span>
-
 ## What to know before booking
 
 -   I do not participate in the French « Mon soutien psy » scheme. You therefore cannot be reimbursed for sessions under this specific programme.
