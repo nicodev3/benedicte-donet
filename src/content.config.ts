@@ -81,8 +81,7 @@ const homeContentSchema = z.object({
     ctaLabel: z.string(),
     ctaUrl: z.string(),
   }),
-  /** Bloc CTA masterclass — retiré de l'accueil (doublon de la carte « Ateliers et
-   * programmes »), conservé optionnel pour ne pas casser un contenu existant. */
+  /** Bloc CTA masterclass de l'accueil, optionnel. */
   masterclass: z
     .object({
       title: z.string(),
