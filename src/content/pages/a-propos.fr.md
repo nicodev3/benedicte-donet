@@ -56,13 +56,18 @@ Proverbe africain
 * Un Master en psychologie clinique et psychopathologie orientation phénoménologique - Paul Valery, Montpellier, 2015
 * Formation en périnatalité, Montpellier, 2016
 * Formation pleine conscience, Mindfulness-based stress reduction avec Thomas John Doucence - Montpellier, 2017
-* Formation de professeur yoga, Pyramid yoga center, Thaïlande, 2019
-* Formation Blissschool sexualité féminine, Thaïlande, 2020
-* Formation Layla Martin coach sexualité, amour et relation à distance, 2021
+* Formation de professeur yoga 500h, Pyramid yoga center, 2019
+* Formation Blissschool sexualité féminine, 2020
+* Formation Layla Martin coach sexualité et relation, 2021
 * Formation EMDR en Australie auprès de l’[EMDRAA (EMDR Association of Australia)](https://emdraa.org/), 2022
 * Formation souffle et respiration, Thaïlande, 2022
-* Formation inceste, abus et trauma sexuels, à distance, 2022
+* Formation inceste, abus et trauma sexuels, 2022
 * Formation IEMT, Integral Eye Movement Therapy, à distance, 2023
+* Formation Module 1 Constellation Familliale, avec Institut for the study of family constellations, 2025
+* Formation d'Hypnose (90h) , avec Dr Rashhi Sharma, Soul consciousness Lab, 2025
+* Formation de Breathwork teacher training, avec Senses, 2025
+* Formation niveau 1 Rapid rewire Method, 2026
+* Formation Somatic Experiencing (En cours) 2026
 
 ## Mes recherches universitaires
 
