@@ -378,37 +378,14 @@ collections:
                 widget: "string"
                 i18n: duplicate
                 hint: "En général votre lien Doctolib."
-          - label: "Masterclass & programmes"
-            name: "masterclass"
-            widget: "object"
-            i18n: true
-            fields:
-              - { label: "Titre", name: "title", widget: "string", i18n: true }
-              - label: "Texte"
-                name: "text"
-                widget: "richtext"
-                i18n: true
-                modes: ["rich_text"]
-                buttons: ["bold", "italic", "link"]
-                editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", i18n: true }
-              - label: "Lien du bouton"
-                name: "ctaUrl"
-                widget: "string"
-                i18n: true
-                hint: "En général /masterclass/."
-              - label: "Image"
-                name: "image"
-                widget: "image"
-                choose_url: false
-                required: false
-                i18n: duplicate
-                hint: "Photo ou illustration de la section."
+          # Le bloc « Masterclass & programmes » de l'accueil a été retiré :
+          # il faisait doublon avec la carte « Ateliers et programmes » des
+          # accompagnements. La page /masterclass/ reste éditable dans « Pages ».
           - label: "Citation"
             name: "quote"
             widget: "object"
             i18n: true
-            hint: "Citation affichée entre les masterclass et les avis."
+            hint: "Citation affichée entre les accompagnements et les avis."
             fields:
               - label: "Texte"
                 name: "text"

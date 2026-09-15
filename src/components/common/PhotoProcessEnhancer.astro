@@ -25,7 +25,7 @@
   }
 
   function buildPhotoProcess(prose: HTMLElement) {
-    const heading = prose.querySelector<HTMLElement>('h2[id^="le-déroulement-du-photoshoot"], h2[id^="le-deroulement-du-photoshoot"]');
+    const heading = prose.querySelector<HTMLElement>('h2[id^="le-déroulement-du-photoshoot"], h2[id^="le-deroulement-du-photoshoot"], h2[id^="how-the-photoshoot-unfolds"]');
     if (!heading || heading.dataset.processReady === "true") return;
 
     const textNodes: Element[] = [];

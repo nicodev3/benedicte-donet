@@ -26,7 +26,7 @@ Thus, my practice naturally weaves together different approaches to support a ca
 A lover of inner journeys, I enjoy exploring **different therapeutic modalities drawn from ancestral traditions** and enriching my practice with these discoveries.  
 The way I support you is therefore infused with this unique path, meeting your sensitivity.
 
-[Discover my practices](/en/services/)
+[Discover how I work](/en/psychotherapie/)
 
 ## My journey
 

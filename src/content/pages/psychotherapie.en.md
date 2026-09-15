@@ -19,69 +19,9 @@ pageType: page
 
 I am Bénédicte Donet, an **online clinical psychologist and psychotherapist**. I support adults dealing with trauma, anxiety or relationship difficulties, in a confidential setting and at their own pace.
 
-**Online EMDR therapy** is one of the approaches I offer. We take time to discuss your situation and the setting and tools that suit your needs. Sessions take place by video. The address in L’Étang-Salé, Réunion, is an administrative address, not a consultation office.
+**Online EMDR therapy** is one of the approaches I offer. We take time to discuss your situation and the setting and tools that suit your needs.
 
 [Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
-
-**Professional background:** a master’s degree in clinical psychology and psychopathology from Paul-Valéry University, Montpellier (2015), followed by EMDR training in Australia with [EMDRAA](https://emdraa.org/) (2022). Read about [my qualifications and training](/en/a-propos/).
-
-I mainly support **adults**. Sessions may also be considered for **adolescents aged 13 and over** when the adolescent personally wishes to attend. In this situation, please [email me before booking](mailto:donetbenedicte@gmail.com) to discuss the framework for support.
-
-<span id="tarifpsycho" aria-hidden="true"></span>
-<span id="tarifs" aria-hidden="true"></span>
-
-## Fees
-
--   First individual session €70
-
--   Individual session €90
-
-    Duration: 1h30 / Audience: Adults
-
-
-\* I strive to facilitate access to therapeutic support for as many people as possible. **If your personal situation makes access to therapy difficult**, I have reserved a number of places at reduced rates. Depending on your situation (student, job seeker, etc.), I would be happy to discuss fees with you before our first session. Do not hesitate to [contact me](/en/infos-pratiques/) to discuss this.
-
-## How does online EMDR therapy work?
-
-### The first consultation
-
-We discuss what brings you to therapy, your expectations and the framework for working together. You can ask questions before considering ongoing sessions. Reprocessing a traumatic memory does not automatically begin at the first meeting.
-
-### Therapeutic work by video
-
-Depending on your situation, we may combine talking, EMDR and other approaches from my practice. Preparation, resources and pace are developed with you. Adapting EMDR to video sessions requires discussing your individual circumstances.
-
-### Preparing for your appointment
-
-Choose a quiet, private space, a stable internet connection and a device with a camera and microphone. Sessions last **1 hour 30 minutes**. Connection details are shared before your appointment.
-
-<span id="questions-visio" aria-hidden="true"></span>
-
-## Questions about online consultations
-
-### Can I contact you before booking?
-
-Yes, you can [email me](mailto:donetbenedicte@gmail.com) with questions about sessions or fees. To choose an appointment, visit [my Doctolib calendar](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet).
-
-### Do I need to know whether EMDR is right for me?
-
-You can bring your questions and concerns without having chosen a method. We will discuss your needs and whether EMDR or other approaches may have a place in your care.
-
-### Where can I find information about reimbursement and who can consult?
-
-See the [practical information](/en/infos-pratiques/) page. The support described here is individual, including when difficulties concern romantic relationships.
-
-[Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
-
-## I SUPPORT YOU
-
-At the heart of my therapeutic practice lie speech and listening, two fundamental pillars that guide my sessions towards a deep understanding of your experiences, emotions and needs. This empathic approach makes it possible to establish a **space of trust and openness** where you can move forward at your own pace.  
-I integrate into this foundation other therapeutic methods that seem aligned with your situation:
-
--   **EMDR** (Eye Movement Desensitization and Reprocessing) is a psychotherapeutic approach recommended in some situations involving post-traumatic stress. Eye movements or other bilateral stimulation are used in phased work with specific memories. Its suitability and pace are assessed for each person. Read more about [EMDR therapy](/en/therapie-emdr/) and the [NICE recommendations](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults).
--   **Mindfulness** is a powerful tool with beneficial effects on our well-being, our body awareness and our ability to fully live in the present moment. I often introduce moments of meditation and mindfulness exploration into my support to help you reconnect with the present moment, deepen your self-knowledge and welcome your inner experiences without resistance.
--   The **Internal Family Systems** (IFS) model, an identity integration practice, is a fascinating approach. Each individual carries within them a complex world made up of several identities. These identities are not all aligned in terms of age or desires. One part of us may above all wish to protect itself, to feel safe. However, we also have another part within us that aspires to grow and to discover the world around us. The practice of identity integration consists of recognising and welcoming all these parts of ourselves. We work with these different identities, helping them to grow if necessary, to evolve and to regain a sense of safety.
--   **Breathing and the use of the voice**. When you face high levels of stress and anxiety, it is beneficial to explore your way of breathing. Sometimes breath re-education is necessary in order to support the nervous system. Also, your voice is closely linked to your nervous system and your emotions. By working on voice modulation, we can release emotional tension, express our needs and strengthen our self-confidence. These techniques create a powerful therapeutic space.
 
 ## MY APPROACH
 
@@ -92,13 +32,18 @@ I am aware of the sacred and vulnerable nature of a therapeutic relationship, an
 
 ### A holistic practice, adapted to each person
 
-My practice is guided by a holistic vision of psychology, which consists of **taking the whole Being into account**. Thus, my approach to the human Being takes into account their physical, mental, emotional, family, social, cultural and spiritual dimensions. I believe that we all possess an extraordinary potential for healing and personal growth, and my mission is to **accompany you on your own path**, gently and at your own pace.
+My practice is guided by a holistic vision of psychology, which consists of **taking the whole Being into account**: their physical, mental, emotional, family, social, cultural and spiritual dimensions. I believe that we all possess an extraordinary potential for healing, and my mission is to **accompany you on your own path**, gently.
 
-### A passionate and committed approach
+[My training and qualifications](/en/a-propos/)
 
-Passionate about therapy and its practice, **I continually update my knowledge through training** and by nourishing my personal practice, in order to offer you quality therapeutic support. The maturity, knowledge and experience that result from inner work cannot be compared to knowledge acquired in books. My support is therefore greatly inspired and guided by what I have learned.
+## MY TOOLS
 
-[Questions about online consultations](#questions-visio)
+At the heart of my practice lie **speech and listening**, two pillars that guide my sessions towards a deep understanding of your experiences, emotions and needs. To this foundation I add the methods that seem aligned with your situation:
+
+-   **EMDR**, an approach recommended in some situations involving post-traumatic stress: bilateral stimulation supports phased work with specific memories. Its suitability and pace are assessed for each person. Read more about [EMDR therapy](/en/therapie-emdr/) and the [NICE recommendations](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults).
+-   **Mindfulness**: moments of meditation and observation of emotions and sensations, to reconnect with the present moment and welcome your inner experiences without resistance.
+-   The **Internal Family Systems (IFS)** model: recognising and welcoming the different parts that coexist within you — the one that wants to stay safe, the one that aspires to grow — and helping them regain a sense of safety.
+-   **Breathing and the use of the voice**: supporting the nervous system, releasing emotional tension and strengthening self-confidence when stress and anxiety run high.
 
 ## My specialities
 
@@ -123,20 +68,54 @@ In the field of sexuality, I pay particular attention to fostering a delicate ex
 
 Whatever the origins of your difficulties, known or buried, we undertake together a sensitive and caring exploration of your story, addressing the psychological and psychosomatic dimensions of the disorders you are experiencing. My interest in the delicate exploration of sexuality, often surrounded by taboos and mysteries, deeply motivates me. In the family, educational and social context, there is undeniably a **significant lack of education and transmission around sexuality**.
 
-My desire is to guide each individual on a path of reconnection with this fundamental sphere of their existence. My specialisation lies in supporting survivors of sexual trauma such as **rape, incest and abuse**. I am here to offer you support as you explore the psychological consequences arising from these experiences. After working on resolving trauma, it becomes possible to rediscover pleasure by drawing on approaches from mindfulness and the psychology of sexuality. My deep commitment is to create a path towards emotional healing and personal fulfilment for each individual I support.
+My specialisation lies in supporting survivors of sexual trauma such as **rape, incest and abuse**. I am here to offer you support as you explore the psychological consequences arising from these experiences. After working on resolving trauma, it becomes possible to rediscover pleasure by drawing on approaches from mindfulness and the psychology of sexuality.
 
 ### Anxiety, stress and phobias
 
 I am here to support you with kindness and expertise through the challenges of anxiety, stress and phobias that can sometimes feel overwhelming.  
 These are natural states that we all encounter at some point in our lives. I believe in the importance of deeply understanding the origins and patterns that fuel them. By exploring your thoughts, emotions and behaviours, we will work hand in hand to **identify triggers** and the underlying mechanisms of these states.
 
-We will explore techniques based on mindfulness and relaxation to support you in daily life. To this, I add deep work around trauma. Together, we will gradually address the situations that trigger your phobias. The goal is to allow you to feel more control and confidence in situations that were once sources of anxiety.  
-The psychotherapeutic work we undertake together aims not only to reduce symptoms, but also to help you develop a deep understanding of yourself and your emotions.
+We will explore techniques based on mindfulness and relaxation to support you in daily life. To this, I add deep work around trauma. Together, we will gradually address the situations that trigger your phobias. The goal is to allow you to feel more control and confidence in situations that were once sources of anxiety.
 
 ![EMDR online psychology benedicte donet psychotherapist](/images/portraits/portrait-emdr-02.jpg)
 
-## Questions?
+## How does online EMDR therapy work?
 
-You can [email me](mailto:donetbenedicte@gmail.com) with questions before booking a consultation.
+### The first consultation
+
+We discuss what brings you to therapy, your expectations and the framework for working together. You can ask questions before considering ongoing sessions. Reprocessing a traumatic memory does not automatically begin at the first meeting.
+
+### Therapeutic work by video
+
+Depending on your situation, we may combine talking, EMDR and other approaches from my practice. Preparation, resources and pace are developed with you. Adapting EMDR to video sessions requires discussing your individual circumstances.
+
+### Preparing for your appointment
+
+Choose a quiet, private space, a stable internet connection and a device with a camera and microphone. Sessions last **1 hour 30 minutes**. Connection details are shared before your appointment.
+
+<span id="tarifpsycho" aria-hidden="true"></span>
+<span id="tarifs" aria-hidden="true"></span>
+
+## Fees
+
+-   First individual session €70
+
+-   Individual session €90
+
+    Duration: 1h30 · Video consultation · Adults
+
+\* I strive to facilitate access to therapeutic support for as many people as possible. **If your personal situation makes access to therapy difficult**, I have reserved a number of places at reduced rates. Depending on your situation (student, job seeker, etc.), I would be happy to discuss fees with you before our first session. Do not hesitate to [contact me](/en/infos-pratiques/) to discuss this.
+
+<span id="questions-visio" aria-hidden="true"></span>
+
+## Questions about online consultations
+
+### Do I need to know whether EMDR is right for me?
+
+You can bring your questions and concerns without having chosen a method. We will discuss your needs and whether EMDR or other approaches may have a place in your care.
+
+### Where can I find information about reimbursement and who can consult?
+
+See the [practical information](/en/infos-pratiques/) page. The support described here is individual, including when difficulties concern romantic relationships.
 
 [Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)

@@ -11,13 +11,6 @@ draft: false
 pageType: page
 ---
 
-<!-- Le contenu éditorial est découpé dans src/components/pages/masterclass-{intro,outro}.md
-     et la grille produits dans src/components/sections/ProductsGrid.astro (page masterclass.astro). -->
-
-Psychologie en ligne
-
-# Les Masterclass
-
 ## TON ACCÈS À DU CONTENU EXCLUSIF SUR LA PLEINE CONSCIENCE, LA SEXUALITÉ, LE SYSTÈME NERVEUX.
 
 Cette partie de mon offre est **le cours de psycho-éducation que vous n'avez jamais reçu**. Nous apprenons bien trop peu sur notre psychologie, notre système nerveux et notre sexualité, etc, à l'école.  
@@ -34,8 +27,6 @@ Ici, je suis ravie de partager avec vous ce que je considère comme essentiel po
 J'ai à cœur de vous transmettre les enseignements qui m'aident et aident mes patients à cheminer vers une vie plus harmonieuse.
 
 ## Masterclass et programmes
-
-<div data-products-grid></div>
 
 ![méditation en ligne Masterclass Cultiver l'amour - Bénédicte Donet](/images/portraits/portrait-masterclass-meditation.jpg)
 
