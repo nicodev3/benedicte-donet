@@ -1,10 +1,11 @@
 ---
-title: "About me"
-description: "Online psychologist | Bénédicte Donet"
-image: "/images/heroes/hero-a-propos.jpg"
-imageAlt: "Bénédicte Donet, online psychologist"
-seoTitle: "Bénédicte Donet | Online Clinical Psychologist"
-seoDescription: "Learn about Bénédicte Donet, online clinical psychologist specialising in trauma support, EMDR and body-based therapeutic approaches."
+title: About me
+description: Online psychologist | Bénédicte Donet
+image: /images/heroes/hero-a-propos.jpg
+imageAlt: Bénédicte Donet, online psychologist
+seoTitle: Bénédicte Donet | Online Clinical Psychologist
+seoDescription: Learn about Bénédicte Donet, online clinical psychologist
+  specialising in trauma support, EMDR and body-based therapeutic approaches.
 order: 6
 draft: false
 pageType: page
