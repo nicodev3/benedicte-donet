@@ -15,41 +15,30 @@ pageType: page
 
 ## Qui suis-je ?
 
-Depuis mon plus jeune âge, notre humanité me fascine.\
-Ayant grandit au sein d’une famille de soignants, j’ai été touché et inspiré à **appréhender la guérison de manière multidimensionnelle**, accueillant les aspects mentaux, émotionnels, physiques et énergétiques du soin.\
-Cette ouverture m’a permis de comprendre les liens entre l’approche occidental et oriental.
-
-L’envie de soutenir m’a naturellement orientée vers l’étude de la psychologie.\
-J’ai, depuis le début de mon parcours, développé une vrai passion a apprendre et expérimenter différentes voies de guérisons afin d’**offrir l’approche la plus attentionnée et efficace pour chacun**.\
-Aujourd'hui, je me nourri de mes formations, mes lectures et expériences. Je donne également une importance à l'intuition, la votre et la mienne, afin de guider votre chemin avec justesse. 
-
-La bienveillance est au centre de l'espace dans lequel je vous accueille: vous êtes bienvenue avec toutes les parts de votre être.\
-En tant que grande voyageuse, je suis guidé a expérimenter **différentes modalités thérapeutiques venues de traditions ancestrales.** Néanmoins, j'ai à coeur de proposer un accompagnement **reposant sur des bases solides, efficace et ancré**. 
-
-Ainsi, ma manière de vous soutenir est imprégnée de ce parcours singulier à la rencontre de votre sensibilité.
+Depuis mon plus jeune âge, notre **humanité me fascine**.\
+Ayant grandi au sein d'une famille de soignants, j'ai été **touchée et inspirée** à appréhender la guérison de manière **multidimensionnelle**, accueillant les aspects **mentaux, émotionnels**, physiques et énergétiques du soin.\
+Cette ouverture m'a permis de comprendre **les liens** entre l'approche occidentale et orientale.\
+L'envie de soutenir m'a naturellement orientée vers **l'étude de la psychologie**.\
+J'ai, depuis le début de mon parcours, développé une vraie passion à apprendre et expérimenter **différentes voies de guérison** afin d'offrir l'approche la plus attentionnée et efficace pour chacun.\
+Aujourd'hui, je me nourris de mes formations, mes lectures et expériences. Je donne une place importante à **l'intuition, la vôtre et la mienne**, afin de guider votre chemin avec justesse.\
+**La bienveillance** est au centre de l'espace dans lequel je vous accueille : vous êtes bienvenue avec **toutes les parts de votre être**.\
+En tant que voyageuse, je suis guidée à expérimenter **différentes modalités thérapeutiques** venues de traditions **ancestrales**. Néanmoins, j'ai à cœur de proposer un accompagnement reposant sur **des bases solides, efficace et ancré**.\
+Ainsi, ma manière de vous soutenir est imprégnée de ce parcours singulier **à la rencontre de votre sensibilité.**
 
 [Découvrir mes pratiques](/services/)
 
 ## Mon cheminement
 
-A 25 ans, fraîchement sortie de l’université, mon diplôme de **psychologue clinicienne** en poche, je rentre dans la vie active, passionnée et motivée.
+Je suis sur mon propre **chemin** depuis déjà une vingtaine d'années : mon ouverture m'a menée à explorer les techniques les plus scientifiques, conventionnelles comme les plus holistiques.\
+Après quelques années dans l'éducation nationale, la pratique de la méditation m'a permis de réaliser que je me forçais à rentrer dans **une façon d'exercer** mon métier qui n'était pas la mienne. 
 
-J’aime accompagner les enfants et les adolescents, mais je suis déçue par le cadre de l’éducation nationale. J’observe avec tristesse **la limite** de ce que je peux offrir sur des temps courts et une approche institutionnelle stricte.
+Je suis alors sortie de cette approche institutionnelle, pour explorer une manière multidimensionnelle d'**accompagner et d'offrir mon soutien** en combinant tout ce que j'ai découvert dans mon cheminement.\
+En commençant, comme beaucoup, par la découverte de la méditation et du yoga, j'ai approfondi et je continue aujourd'hui cette exploration afin de proposer une **pratique authentique.**\
+La découverte de l'**EMDR**, en 2022, a profondément marqué mon accompagnement et **ma compréhension de la santé mentale**. Cela m'a permis de mesurer l'impact du stress post-traumatique et de ses répercussions dans **la thérapie**.
 
-Cela m’a mené vers **la découverte** de la méditation (MBSR), puis vers plusieurs retraites de méditation en silence, me permettant de découvrir ces **bénéfices profonds** et de prendre la décision de l'enseigner. 
+Aujourd'hui, ce cheminement, **tissé entre la rigueur de la psychologie clinique traditionnelle et la richesse des approches plus holistiques**, me permet d'offrir un accompagnement authentique qui soutient votre propre cheminement et votre expérience **unique**.
 
-Après avoir quitté mon travail de psychologue en milieu scolaire, j'ai décidé de créer mon cabinet afin d'offrir une approche du soin i**ncluant pas seulement le mental mais aussi le corps: plus ancrée et sensible.**
-
-\
-S’ensuit une exploration de plus en plus profonde de la pratique du **yoga**, incluant la méditation et d'autres pratique tel que: la **constellation familiale,** la **sexualité féminine** grâce a des professeurs, thérapeutes et femme médecine rencontrées en Asie et et en Amérique du sud.\
-En 2022, après avoir moi même reçu plusieurs séances d'EMDR, j'ai la chance de débuté ma formation avec un psychologue clinicien australien de 70 ans à l'époque, ayant lui même appris avec la créatrice de cette méthode, Dr Francine Shapiro. j’approfondis alors ma connaissance du **traumatisme**, du **stress post traumatique** et de la **mémoire**.\
-Cela devient une passion qui me pousse à me former par la suite à l’IEMT et à la flash technique.
-
-Aujourd’hui, ce cheminement entre psychologie clinique, **recherches scientifiques** et ma pratique de la méditation me permettent d’offrir un accompagnement qui **soutient chaque part de votre être et de votre expérience.**
-
-Ce que je vous offre dans ma pratique de psychologue, je l’ai profondément **exploré** dans mon travail personnel et dans mes formations.
-
-Je suis maintenant passionnée par l’idée de **transmettre et guider par ces savoirs, pratiques, enseignements** sous différentes formes : séances individuelles, ateliers, retraites.
+J'ai à cœur de transmettre et de guider ces savoirs et pratiques sous différentes formes : séances individuelles, ateliers, retraites.
 
 [Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
