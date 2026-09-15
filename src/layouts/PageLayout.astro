@@ -16,7 +16,6 @@ import PsychotherapieSpecialitesEnhancer from "@/components/common/Psychotherapi
 import PsychotherapieTarifEnhancer from "@/components/common/PsychotherapieTarifEnhancer.astro";
 import ServicesHeroEnhancer from "@/components/common/ServicesHeroEnhancer.astro";
 import ServicesIntroEnhancer from "@/components/common/ServicesIntroEnhancer.astro";
-import ServicesFaqEnhancer from "@/components/common/ServicesFaqEnhancer.astro";
 import ServicesSectionsEnhancer from "@/components/common/ServicesSectionsEnhancer.astro";
 import ServicesMediaEnhancer from "@/components/common/ServicesMediaEnhancer.astro";
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
@@ -85,97 +84,35 @@ const breadcrumbs = buildBreadcrumbs(
   locale
 );
 
-function getServiceFaqStructuredData() {
-  const questions =
-    locale === "fr"
-      ? [
-          {
-            name: "Suis-je la bonne psychologue pour vous ?",
-            text: "Je vous invite à parcourir mon site et à prendre le temps de sentir si mon approche peut vous convenir. Mon approche est holistique et engagée, et toute question sur ma pratique ou mon cadre thérapeutique est bienvenue.",
-          },
-          {
-            name: "Quelle est la régularité conseillée pour les séances ?",
-            text: "Nous en discutons lors de la première séance. Le rythme dépend de votre capacité à recevoir, du temps d'intégration, de vos envies et de vos besoins.",
-          },
-          {
-            name: "Pourquoi les séances durent 1 h 30 ?",
-            text: "Ce format offre un espace suffisamment spacieux pour sentir, se déposer et partager sans précipiter le processus thérapeutique.",
-          },
-          {
-            name: "Quel espace je propose ?",
-            text: "Je propose un environnement accueillant, avec une écoute bienveillante et sereine, afin d'être présente et disponible lors de chaque séance.",
-          },
-        ]
-      : [
-          {
-            name: "Am I the right psychologist for you?",
-            text: "I invite you to explore the website and sense whether my approach feels right for you. My work is holistic and engaged, and questions about my practice or therapeutic framework are welcome.",
-          },
-          {
-            name: "How often should sessions take place?",
-            text: "We discuss this during the first session. The rhythm depends on your capacity, integration time, wishes and needs.",
-          },
-          {
-            name: "Why do sessions last 1 hour 30 minutes?",
-            text: "This format offers enough space to feel, settle and share without rushing the therapeutic process.",
-          },
-          {
-            name: "What kind of space do I offer?",
-            text: "I offer a welcoming environment with attentive and calm listening, so I can be present and available during each session.",
-          },
-        ];
-
-  return {
-    "@type": "FAQPage",
-    "@id": `${new URL(Astro.url.pathname, SITE.url).href}#faq`,
-    mainEntity: questions.map((question) => ({
-      "@type": "Question",
-      name: question.name,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: question.text,
-      },
-    })),
-  };
-}
-
 function getInfosFaqStructuredData() {
   const questions =
     locale === "fr"
       ? [
           {
-            name: "Comment prendre rendez-vous ?",
-            text: "Les consultations se réservent sur Doctolib. Pour une question avant de consulter, vous pouvez envoyer un message via la messagerie Doctolib ou écrire à donetbenedicte@gmail.com.",
+            name: "Puis-je vous écrire avant de réserver ?",
+            text: "Oui. Pour une question sur les séances ou les tarifs, vous pouvez m’écrire par email ou passer par la messagerie Doctolib. Pour choisir un créneau, consultez directement mon agenda.",
           },
           {
-            name: "Quels sont les tarifs des séances en visio ?",
-            text: "La première séance individuelle est à 70 €, puis les séances sont à 90 €, pour une durée de 1 h 30. Des places à tarif réduit peuvent être discutées selon la situation.",
+            name: "Quelle est la régularité conseillée pour les séances ?",
+            text: "Nous en discutons lors de notre première séance, mais le choix final dépendra de votre capacité à recevoir, du temps nécessaire pour intégrer chaque séance et de vos envies. Nous avons tous un rythme et des besoins différents : nos séances s’adaptent à votre sensibilité.",
           },
           {
-            name: "Les séances sont-elles remboursées ?",
-            text: "Bénédicte Donet ne participe pas au parcours Mon soutien psy. Certaines mutuelles remboursent toutefois un certain nombre de séances : une facture peut être envoyée sur demande.",
-          },
-          {
-            name: "Les consultations ont-elles lieu en cabinet ?",
-            text: "Non. Les séances se déroulent uniquement en téléconsultation. L’adresse à L’Étang-Salé, La Réunion, est administrative.",
+            name: "Pourquoi les séances durent-elles 1 h 30 ?",
+            text: "Il m’est important de vous offrir un espace et un temps suffisamment spacieux pour sentir, se déposer, partager. L’espace de soin est, à mon sens, un espace à protéger d’un besoin ou d’une envie de précipiter. Ainsi, nous pouvons prendre le temps que requiert la rencontre avec votre monde intérieur.",
           },
         ]
       : [
           {
-            name: "How do I book an appointment?",
-            text: "Consultations are booked on Doctolib. For a question before booking, you can send a message via Doctolib messaging or email donetbenedicte@gmail.com.",
+            name: "Can I contact you before booking?",
+            text: "Yes. For a question about sessions or fees, you can email me or use Doctolib messaging. To choose a time slot, go directly to my Doctolib calendar.",
           },
           {
-            name: "What are the fees for video sessions?",
-            text: "The first individual session costs €70, then sessions cost €90, lasting 1 hour 30 minutes. Reduced-rate places may be discussed depending on your situation.",
+            name: "How often should sessions take place?",
+            text: "We discuss this during our first session, but the final choice depends on your capacity to receive, the time needed to integrate each session and your own wishes. We all have different rhythms and needs: sessions adapt to your sensitivity.",
           },
           {
-            name: "Are sessions reimbursed?",
-            text: "Bénédicte Donet does not participate in the French Mon soutien psy scheme. Some health insurance providers may reimburse a number of sessions; an invoice can be sent on request.",
-          },
-          {
-            name: "Are consultations in-person?",
-            text: "No. Sessions are teleconsultation only. The address in L’Étang-Salé, Réunion, is administrative.",
+            name: "Why do sessions last 1 hour 30?",
+            text: "It matters to me to offer a space and a time roomy enough to feel, to settle and to share. The space of care is, to my mind, a space to protect from any need to rush. That way we can take the time that meeting your inner world requires.",
           },
         ];
 
@@ -198,12 +135,13 @@ const breadcrumbStructuredData = buildBreadcrumbStructuredData(
   breadcrumbs,
   pageUrl
 );
+/**
+ * Un seul balisage FAQPage sur le site, sur /infos-pratiques/ : les questions
+ * ci-dessus doivent rester le décalque exact des questions affichées sur la page
+ * (exigence Google : pas de contenu balisé invisible pour le visiteur).
+ */
 const pageStructuredData =
-  pageSlug === "services"
-    ? [getServiceFaqStructuredData()]
-    : pageSlug === "infos-pratiques"
-      ? [getInfosFaqStructuredData()]
-      : [];
+  pageSlug === "infos-pratiques" ? [getInfosFaqStructuredData()] : [];
 const combinedStructuredData = [
   ...pageStructuredData,
   ...(breadcrumbStructuredData ? [breadcrumbStructuredData] : []),
@@ -291,7 +229,7 @@ const combinedStructuredData = [
   <PageIntroEnhancer />
   <PageCtaEnhancer />
   {pageSlug === "a-propos" && <AboutImageSplitEnhancer />}
-  {(pageSlug === "a-propos" || pageSlug === "services") && <ProseQuoteEnhancer />}
+  {pageSlug === "a-propos" && <ProseQuoteEnhancer />}
   {pageSlug === "infos-pratiques" && <InfosPratiquesBookingEnhancer />}
   {pageSlug === "infos-pratiques" && <InfosPratiquesCadreEnhancer />}
   {pageSlug === "infos-pratiques" && <InfosPratiquesNotesEnhancer />}
@@ -302,7 +240,6 @@ const combinedStructuredData = [
   )}
   {pageSlug === "services" && <ServicesHeroEnhancer />}
   {pageSlug === "services" && <ServicesIntroEnhancer />}
-  {pageSlug === "services" && <ServicesFaqEnhancer />}
   {pageSlug === "services" && <ServicesSectionsEnhancer />}
   {pageSlug === "services" && <ServicesMediaEnhancer />}
   {pageSlug === "phototherapie" && <PhotoOffersEnhancer />}

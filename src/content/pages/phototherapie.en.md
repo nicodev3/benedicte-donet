@@ -73,31 +73,25 @@ Price: **600 euros**
 
 ## How the photoshoot unfolds
 
-### Seeds of Love:
+Both formats follow the same path. **A Garden of Love** adds a second therapeutic meeting and a review session.
 
-A First MeetingWe will take the time to get to know you and listen to your aspirations. The themes of **self-love** and **your relationship with your body** will be addressed. We will co-create this moment together, integrating your intentions, desires and apprehensions. The choice of location will also be discussed to ensure a comfortable and conducive environment.
+### A first meeting
 
-The Photoshoot  
-For 2 hours, we will explore the subjects discussed during our first meeting. Emotions and states of mind will be welcome in the process, with the intention of welcoming them with full presence and kindness. The tools used include meditation, dance, breathing, movement and speech.
+We take the time to get to know you and listen to your aspirations. The themes of **self-love** and **your relationship with your body** are addressed. We co-create this moment together, integrating your intentions, desires and apprehensions. The choice of location is also discussed to ensure a comfortable and conducive environment.
 
-After the photoshoot  
-I will devote time to editing the photos with all my dedication and passion. This beautiful moment often allows me to discover elements that unfolded in the background. This process will reveal the evolution and highlight the person you are. I will send you 50 edited photos.
+### A second meeting — A Garden of Love
 
-### A Garden of Love:
-
-A First Meeting  
-We will become familiar with your aspirations and take the time to listen to what you wish to explore. The themes of self-love and your relationship with your body will be at the heart of our discussion. Your intentions, desires and apprehensions will guide our collaboration, as will the choice of location for a comfortable atmosphere.  
-  
-A Second Meeting  
-We will deepen the work begun during our first session, opening a space of listening for present emotions and for the release of blockages hindering self-love. Various methods such as talk therapy, EMDR, family constellation or somatic practices will be offered.
+We deepen the work begun during the first session, opening a space of listening for present emotions and for the release of blockages hindering self-love. Various methods such as talk therapy, EMDR, family constellation or somatic practices are offered.
 
 ![self-confidence photo session love phototherapy](/images/phototherapie/photo-phototherapie-07.jpg)
 
-The Photoshoot  
-For 2 hours, we will immerse ourselves in photography and sensation to explore the themes addressed during our meeting. Emotions and states of mind will be welcomed with kindness. The tools used include meditation, dance, breathing, movement and speech.
+### The photoshoot
 
-After the photoshoot  
-I will take the time to edit the photos with all my sensitivity and passion. This exceptional moment often allows me to discover elements that enriched our experience. This process will reveal the evolution and highlight the person you are. You will receive around a hundred edited photos and we will have a review session to integrate the elements of the photoshoot. I can also offer you avenues for inner work: practices, meditations, etc.
+For 2 hours, we immerse ourselves in photography and sensation to explore the themes addressed during our meeting. Emotions and states of mind are welcomed with full presence and kindness. The tools used include meditation, dance, breathing, movement and speech.
+
+### After the photoshoot
+
+I take the time to edit the photos with all my sensitivity and passion. This process reveals the evolution and highlights the person you are. You receive **50 edited photos** with Seeds of Love, **around a hundred** with A Garden of Love — along with a review session to integrate the elements of the photoshoot and avenues for inner work: practices, meditations, etc.
 
 ![Phototherapy gallery — expressive portrait](/images/phototherapie/photo-phototherapie-08.jpg)
 ![Phototherapy gallery — session in natural light](/images/phototherapie/photo-phototherapie-09.jpg)

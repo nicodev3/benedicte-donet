@@ -38,7 +38,7 @@
   }
 
   function buildTestimonialsCarousel(prose: HTMLElement) {
-    const heading = prose.querySelector<HTMLElement>('h2[id^="elles-en-parlent"]');
+    const heading = prose.querySelector<HTMLElement>('h2[id^="elles-en-parlent"], h2[id^="they-talk-about-it"]');
     if (!heading || heading.dataset.testimonialsReady === "true") return;
 
     const testimonials: { quotes: Element[]; author: Element }[] = [];

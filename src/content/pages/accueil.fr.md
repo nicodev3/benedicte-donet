@@ -15,42 +15,12 @@ home:
       l'harmonie que vous recherchez.
 
 
-      Lors de nos séances, nous explorons toutes les dimensions de votre expérience pour
-      découvrir ensemble ce qui nécessite **du soin et de l'attention**.
-
-
-      Au travers différents outils (EMDR, IFS, parole, méditation), nous accompagnons et
-      soutenons ensemble le changement que  vous souhaitez accueillir dans votre vie.
-
-
-      Je crois fermement en l'incroyable potentiel de guérison et de croissance
-      personnelle chez chacun.
-
-
-      **Je m'engage à vous offrir un espace thérapeutique attentif et ancré**, où nous
-      pouvons explorer vos difficultés, vos ressources et les changements que vous
-      souhaitez engager, à votre rythme.
+      Au travers différents outils (EMDR, IFS, parole, méditation), nous soutenons
+      ensemble le changement que vous souhaitez accueillir dans votre vie, **dans un
+      espace thérapeutique attentif et ancré** où vous avancez à votre rythme.
     ctaLabel: Découvrir les consultations en ligne
     ctaUrl: /psychotherapie/
     image: /images/portraits/portrait-accueil.png
-  masterclass:
-    title: Masterclass & Programmes
-    text: >-
-      Découvrez une expérience d'exploration personnelle grâce à des Masterclass et des
-      programmes **psycho-éducatifs en ligne**.
-
-
-      Chacun de ces ateliers et programmes en ligne sont une invitation à pratiquer des
-      outils tels que la méditation, l'amour de soi, la régulation du système nerveux et
-      l'exploration de la sexualité pour cultiver une compréhension profonde de soi-même.
-
-
-      À travers ces offres, je vous invite à entreprendre un voyage de **connaissance de
-      soi** et d'apprentissage d'outils vous permettant de cultiver davantage d'harmonie
-      dans votre relation avec vous-même et le monde.
-    ctaLabel: Je réserve
-    ctaUrl: /masterclass/
-    image: /images/cms-library/products-poster-meditation-01.jpg
   hero:
     title: Psychologue en ligne
     subtitle: Trauma-thérapies | EMDR | Sexualité
@@ -101,21 +71,16 @@ home:
     title: Pourquoi choisir une psychologue en ligne ?
     text: >-
       En **téléconsultation** vous recevez votre séance de chez vous, avec le confort et
-      la chaleur de votre maison. Cela favorise un **sentiment de sécurité** et permet de
-      recevoir la thérapie avec plus d'aisance.
+      la chaleur de votre maison. Cela favorise un **sentiment de sécurité** et permet,
+      après la séance, une intégration en douceur sans avoir à vous déplacer.
 
 
-      Après chaque séance, vous n'avez pas besoin de vous déplacer ce qui permet une
-      intégration en douceur.
-
-
-      Aussi, vous avez la possibilité de garder la même thérapeute quels que soient vos
-      projets de déménagement, déplacement, expatriation.
+      Vous gardez aussi la même thérapeute quels que soient vos projets de déménagement,
+      déplacement ou expatriation.
 
 
       Je propose notamment un accompagnement en **EMDR en visio**. Découvrez [le
-      déroulement des consultations et les tarifs](/psychotherapie/), ainsi que le cadre
-      de notre première rencontre.
+      déroulement des consultations et les tarifs](/psychotherapie/).
     ctaLabel: En savoir plus
     ctaUrl: /infos-pratiques/
     image: /images/cms-library/illustrations-illustration-seance-individuelle-psychologie.jpeg

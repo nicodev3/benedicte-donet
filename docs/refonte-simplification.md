@@ -1,44 +1,43 @@
-# Simplifier le site — proposition
+# Simplifier le site — ce qui a été fait
 
-Document de travail, septembre 2026. Il répond au retour de Bénédicte : *« je sens que j'ai envie vraiment de simplifier, qu'il y ait le moins à lire possible, et que la même information ne soit pas à plusieurs endroits »*.
+Septembre 2026. Ce document répond au retour de Bénédicte : *« je sens que j'ai envie vraiment de simplifier, qu'il y ait le moins à lire possible, et que la même information ne soit pas à plusieurs endroits »*.
 
-Rien n'est encore modifié sur le site. Ce document sert à valider **ce qu'on garde, ce qu'on enlève et où chaque information vit désormais**, avant de passer à la réalisation.
-
----
-
-## 1. Le constat, en chiffres
-
-Le parcours principal du site (les six pages qu'un visiteur traverse avant de prendre rendez-vous) représente aujourd'hui **environ 5 700 mots**, soit une vingtaine de minutes de lecture.
-
-| Page | Aujourd'hui | Après simplification |
-|---|---|---|
-| Accueil | ~1 050 mots | ~700 |
-| Services (« Vue d'ensemble ») | ~750 mots | ~200 |
-| EMDR et psychothérapie en ligne | ~1 640 mots | ~1 000 |
-| Photothérapie | ~1 230 mots | ~1 000 |
-| À propos | ~660 mots | inchangé |
-| Infos pratiques | ~400 mots | ~400, mieux rangés |
-
-**~5 700 → ~3 900 mots**, sans rien perdre d'essentiel : l'essentiel de ce qu'on retire est déjà écrit ailleurs.
+Les modifications décrites ici **ont été appliquées** sur la branche `claude/kind-euler-5bdy13`. Rien n'est en ligne tant que la branche n'est pas fusionnée : tout est à relire en préversion.
 
 ---
 
-## 2. La règle : une information, un seul endroit
+## 1. Le résultat, en chiffres
 
-C'est le cœur du problème que tu décris. Aujourd'hui les tarifs sont annoncés à trois endroits, le fait que les séances soient en visio à quatre, et ton parcours de formation à trois. Chaque fois qu'une de ces informations change, il faut penser à la corriger partout — et le visiteur, lui, a l'impression de relire la même chose.
-
-Proposition de répartition :
-
-| L'information | Vit ici, et nulle part ailleurs | Ailleurs, on met seulement… |
+| Page | Avant | Après |
 |---|---|---|
-| **Tarifs** (70 € puis 90 €, 1 h 30, tarif réduit) | EMDR et psychothérapie en ligne → section « Le tarif » | un lien « Voir les tarifs » |
-| **Cadre pratique** : téléconsultation, adresse administrative, remboursement, mutuelles, adolescents | Infos pratiques | un lien « Toutes les infos pratiques » |
-| **Parcours, diplômes, formations** | À propos → « Mon parcours de formation » | un lien « Mon parcours » |
-| **Tes outils** (EMDR, IFS, pleine conscience, souffle et voix) | EMDR et psychothérapie en ligne | une phrase et un lien |
-| **Photothérapie** | Photothérapie | une carte avec deux lignes |
-| **Masterclass et programmes** | Masterclass | une carte avec deux lignes |
+| Accueil | ~1 120 mots | ~945 |
+| Services (« Vue d'ensemble ») | ~800 mots | ~215 |
+| EMDR et psychothérapie en ligne | ~1 700 mots | ~1 310 |
+| Photothérapie | ~1 300 mots | ~1 150 |
+| Infos pratiques | ~460 mots | ~590 |
+| À propos | ~715 mots | inchangée |
 
-Une seule exception assumée : les avis de patients, qui restent sur l'accueil **et** sur Infos pratiques. Ils rassurent au moment de la décision, c'est leur rôle.
+**~6 100 → ~4 930 mots**, soit **‑19 %** sur le parcours principal.
+
+Deux écarts par rapport à l'estimation initiale, assumés :
+
+- **Infos pratiques s'allonge** de 130 mots : la page récupère les questions qui étaient sur Services. C'est un gain à l'échelle du site, pas une perte.
+- **« Mes spécialités » n'a pas été raccourcie** sur la page Psychothérapie (~550 mots). C'est le contenu le plus spécifique du site, celui qui fait venir les visiteurs depuis Google. Le raccourcir aurait coûté plus qu'il n'aurait rapporté.
+
+---
+
+## 2. Une information, un seul endroit
+
+| L'information | Vit ici, et nulle part ailleurs | Ailleurs |
+|---|---|---|
+| **Tarifs** (70 € puis 90 €, 1 h 30, tarif réduit) | EMDR et psychothérapie en ligne → « Le tarif » | un lien |
+| **Cadre pratique** : visio, adresse administrative, remboursement, mutuelles, adolescents | Infos pratiques | un lien |
+| **Parcours, diplômes, formations** | À propos → « Mon parcours de formation » | un lien |
+| **Les outils** (EMDR, IFS, pleine conscience, souffle et voix) | EMDR et psychothérapie en ligne → « Mes outils » | une phrase et un lien |
+| **Photothérapie** | Photothérapie | une carte |
+| **Masterclass** | Masterclass | une carte |
+
+Seule exception assumée : les avis de patients, qui restent sur l'accueil **et** sur Infos pratiques. Ils rassurent au moment de la décision.
 
 ---
 
@@ -46,115 +45,88 @@ Une seule exception assumée : les avis de patients, qui restent sur l'accueil *
 
 ### Accueil
 
-**Ce qui pose problème :** la page parle **deux fois** des masterclass (la carte « Ateliers et programmes » au milieu, puis un grand bloc « Masterclass & Programmes » plus bas) et le texte « Bienvenue ! » fait six paragraphes, dont trois disent la même chose que la page À propos.
-
-**Proposition :**
-- Raccourcir « Bienvenue ! » à trois ou quatre phrases : qui tu es, ce que tu accompagnes, un lien vers À propos.
-- Raccourcir « Pourquoi choisir une psychologue en ligne ? » — l'argument tient en trois phrases.
-- Supprimer le grand bloc « Masterclass & Programmes » en bas : la carte du milieu fait déjà le travail.
-- Garder tel quel : le bandeau, les trois cartes d'accompagnement, « Comment prendre rendez-vous » (les 3 étapes), les avis, le bloc de contact.
+- « Bienvenue ! » passe de six paragraphes à trois.
+- « Pourquoi choisir une psychologue en ligne ? » resserré de moitié.
+- **Le grand bloc « Masterclass & Programmes » a été supprimé** : la page en parlait deux fois. La carte « Ateliers et programmes » reste.
+- Inchangés : bandeau, trois cartes, « Comment prendre rendez-vous », avis, contact, newsletter.
 
 ### Services — « Vue d'ensemble »
 
-Tu te demandes si cette page a encore une raison d'être. Elle en a une, mais une seule : **servir de carrefour**. Aujourd'hui elle essaie en plus de tout expliquer, et redit la liste de tes outils que la page Psychothérapie développe ensuite bien mieux.
+La page devient une **page-carrefour** : titre, une phrase d'introduction, trois blocs de deux lignes (Psychothérapie & EMDR · Photothérapie · Masterclass), chacun avec son image et son lien, plus le carrousel des derniers articles.
 
-**Proposition — la page devient une page-carrefour, environ 200 mots :**
-- Le titre, une phrase d'introduction, trois cartes (Psychothérapie & EMDR · Photothérapie · Masterclass), un bouton de prise de rendez-vous, et le carrousel des derniers articles.
+Sont partis : le texte « Je vous accompagne à travers divers outils » dans sa version longue, la liste des modalités (développée sur la page Psychothérapie), les pitchs longs photothérapie et masterclass, la citation de Rûmi (il y en a déjà une sur l'accueil et une sur À propos), et la foire aux questions.
 
-**Ce qui part :**
-- « Je vous accompagne à travers divers outils » ;
-- la liste des modalités (parole, EMDR, IEMT, IFS, pleine conscience, libération émotionnelle) → elle est développée sur la page Psychothérapie ;
-- les pitchs longs Photothérapie et Masterclass → chacun a sa page ;
-- la citation de Rûmi (il y en a déjà une sur l'accueil et une sur À propos) ;
-- la foire aux questions → voir le point 4.
-
-> **Si tu préfères aller plus loin :** supprimer complètement cette page est possible et sans risque (elle ne reçoit aucune visite depuis Google — vérifié). Le menu « Services » pointerait alors directement sur « EMDR et psychothérapie en ligne ». On a retenu la version « page allégée » pour l'instant, mais la porte reste ouverte.
+> Supprimer complètement cette page reste possible et sans risque : elle ne reçoit aucune visite depuis Google. La porte reste ouverte.
 
 ### EMDR et psychothérapie en ligne
 
-C'est la page la plus chargée du site — et celle que tu cites le plus. C'est aussi la plus importante pour Google : c'est elle qui doit répondre à « psychologue EMDR en ligne ».
+Nouvel ordre : présentation → **Mon approche** → **Mes outils** → Mes spécialités → Comment se déroule une thérapie EMDR en ligne → Le tarif → questions fréquentes → prendre rendez-vous.
 
-**Ce qui part, et où ça va :**
+Ce qui a été retiré :
 
-| Ce qu'on retire | Pourquoi | Où c'est déjà écrit |
-|---|---|---|
-| Dans le chapô : « le suivi se déroule en téléconsultation ; l'adresse à L'Étang-Salé est une adresse administrative » | C'est une information pratique, pas thérapeutique | Infos pratiques (deux fois, même) |
-| « Une approche passionnée et engagée » (formation continue, travail sur soi) | Redit ton parcours | À propos → Mon parcours de formation |
-| Le paragraphe « Professional background » — **version anglaise uniquement** | Répète master 2015 + EMDRAA 2022 | À propos |
-| Le paragraphe adolescents 13 ans — **version anglaise uniquement** | Information pratique | Infos pratiques |
-| « Des questions ? » tout en bas | Le bloc de contact fait déjà ça | Infos pratiques + bloc contact |
+| Retiré | Où l'information se trouve maintenant |
+|---|---|
+| « Le suivi se déroule en téléconsultation ; l'adresse à L'Étang-Salé est administrative » (dans le chapô) | Infos pratiques |
+| « Une approche passionnée et engagée » | À propos → Mon parcours de formation (un bouton y mène) |
+| « Professional background » et le paragraphe adolescents (version anglaise) | À propos et Infos pratiques |
+| « Des questions ? » en bas de page | le bloc de contact et Infos pratiques |
 
-**Ce qu'on fusionne :** « JE VOUS ACCOMPAGNE » (tes quatre outils, en long) et « MON APPROCHE » (cadre sécurisant, pratique holistique) deviennent **une seule section**, resserrée. Les deux disent la même chose sous deux angles.
+« Je vous accompagne » devient **« Mes outils »**, resserré : chaque outil tient en deux ou trois lignes au lieu d'un paragraphe. « Mon approche » garde deux cartes au lieu de trois.
 
-**Ce qu'on garde absolument :** « Mes spécialités » (trauma, traumatismes sexuels, anxiété, sexualité) et « Comment se déroule une thérapie EMDR en ligne ? ». C'est le contenu que personne d'autre n'écrit et c'est ce qui fait venir les gens.
-
-**Les tarifs restent sur cette page.** C'est déjà là que pointe le lien « Consultez les tarifs » de l'accueil.
-
-**⚠️ Une incohérence à corriger au passage :** la version française n'affiche que « Première séance individuelle 70 € ». La version anglaise affiche « 70 € puis 90 € ». Et Infos pratiques affiche « 70 € puis 90 € ». Il faut trancher et aligner les trois.
-
-**Ordre proposé pour la page :** présentation → mon approche et mes outils → mes spécialités → comment se déroule une thérapie EMDR en ligne → le tarif → questions fréquentes → prendre rendez-vous.
+**Incohérence corrigée :** la version française n'affichait que « 70 € » là où l'anglaise affichait « 70 € puis 90 € ». Les deux versions affichent désormais la même chose : première séance 70 €, séance 90 €, 1 h 30, adultes.
 
 ### Infos pratiques
 
-La page est courte et bien faite. Deux corrections :
-
-- La même information y est écrite **deux fois** : « Format — uniquement en téléconsultation. L'adresse sur Google n'est pas celle d'un cabinet » en haut, puis « Séances en visio — l'adresse à L'Étang-Salé est uniquement administrative » plus bas. On n'en garde qu'une.
-- Le bloc « Tarifs des consultations en ligne » devient **une ligne et un lien** vers les tarifs de la page Psychothérapie.
-
-> **Le point à bien peser :** beaucoup de gens cherchent le tarif sur « Infos pratiques » — c'est le réflexe naturel. Si on le sort d'ici, le lien doit être très visible, et l'entrée « Tarifs » du petit menu en haut de page doit rester. À l'inverse, si tu préfères que le tarif s'affiche en toutes lettres ici, c'est la page Psychothérapie qui devra se contenter d'un lien. Un des deux, pas les deux.
+- La double mention de la visio est supprimée : l'adresse administrative n'est plus écrite qu'une fois, dans « Format ».
+- Le bloc tarifs devient une phrase et un lien vers la page Psychothérapie.
+- La ligne « Formation » ne répète plus le détail du parcours : elle y renvoie.
+- La page accueille la **FAQ unique** du site (trois questions).
 
 ### À propos
 
-**Rien à changer.** Tu viens de la retravailler (nouveaux textes « Qui suis-je » et « Mon cheminement », formations à jour jusqu'à Somatic Experiencing 2026, nouvelle photo). Elle devient la **source unique** de ton parcours : les autres pages n'en gardent qu'un lien.
-
-Seul détail : le lien « Découvrir mes pratiques » en bas de « Qui suis-je ? » pointe vers Services. Si Services devient une simple page-carrefour, autant l'envoyer directement vers « EMDR et psychothérapie en ligne ».
+Aucun changement de structure, hormis le lien « Découvrir mes pratiques » qui pointait vers Services et mène maintenant directement à « EMDR et psychothérapie en ligne ».
 
 ### Photothérapie
 
-Hors de ta demande, mais tant qu'on y est : les deux blocs « Le déroulement du photoshoot » (Les Graines d'Amour / Un Jardin d'Amour) répètent presque mot pour mot le même texte — Première rencontre, Le photoshoot, Après le photoshoot. On peut les fusionner en un **comparatif à deux colonnes** : mêmes informations, deux fois moins à lire.
+Les deux blocs « Le déroulement du photoshoot » (Graines d'Amour / Jardin d'Amour) répétaient presque mot pour mot le même texte. Ils sont fusionnés en un parcours unique en quatre étapes, où la différence entre les deux formules est dite une fois : Un Jardin d'Amour ajoute une seconde rencontre et une séance bilan.
+
+Au passage : la version anglaise de cette page n'avait **aucune** de ses mises en page (offres, déroulement, témoignages s'affichaient en texte brut). C'est corrigé, les deux versions sont identiques.
 
 ---
 
-## 4. La foire aux questions : ce qui est le mieux pour le référencement
+## 4. La foire aux questions : la logique retenue
 
-Tu remarques que la FAQ de la page Services redit ce qui est dans Infos pratiques. C'est exact, et ça vaut le détour par trois explications.
+**1. Les FAQ n'apportent plus de visibilité sur Google.** Jusqu'en 2023, une FAQ balisée pouvait s'afficher dépliée dans les résultats de recherche. Depuis août 2023, Google a réservé cet affichage aux sites institutionnels et de santé publique. Multiplier les FAQ n'ajoute donc plus que du texte à lire et à maintenir.
 
-**1. Les FAQ n'apportent plus de visibilité sur Google.** Jusqu'en 2023, une FAQ balisée pouvait s'afficher dépliée directement dans les résultats de recherche. Depuis août 2023, Google a réservé cet affichage aux sites institutionnels et de santé publique. Pour un site comme le tien, **multiplier les FAQ n'apporte plus rien en visibilité** : ça n'ajoute que du texte à lire et à maintenir.
+**2. Deux FAQ identiques font se concurrencer tes propres pages.** Quand quelqu'un cherche « tarif psychologue en ligne » ou « durée séance psychologue », Google doit choisir *une* page de ton site. Si trois pages répondent, il hésite, et les trois se positionnent moins bien qu'une seule le ferait.
 
-**2. Deux FAQ qui répondent aux mêmes questions font se concurrencer tes propres pages.** Quand quelqu'un cherche « tarif psychologue en ligne » ou « durée séance psychologue », Google doit choisir *une* page de ton site. Si trois pages répondent, il hésite, et les trois se positionnent moins bien qu'une seule le ferait. C'est exactement le mécanisme derrière ton impression de « bazar » : ce qui est confus pour toi l'est aussi pour Google.
+**3. Un point technique corrigé.** Le site envoyait à Google une FAQ pour Services et une pour Infos pratiques contenant des réponses **qui n'étaient pas affichées sur la page** (les tarifs, « Mon soutien psy », l'adresse administrative). Google demande que le contenu transmis soit visible par le visiteur.
 
-**3. Un point technique à corriger.** Le site envoie aujourd'hui à Google une FAQ pour la page Services et une pour Infos pratiques, avec des réponses qui **ne sont pas affichées sur la page** (les tarifs 70 €/90 €, « Mon soutien psy », l'adresse administrative). C'est contraire aux consignes de Google, qui demande que le contenu transmis soit visible par le visiteur. À aligner.
+**Ce qui est en place :**
 
-**Recommandation :**
-
-- **Une seule FAQ visible, sur Infos pratiques**, qui regroupe toutes les questions pratiques : comment réserver, peut-on écrire avant, pourquoi 1 h 30, quelle régularité, remboursement et mutuelles, visio uniquement, adolescents.
-- **Un bloc court conservé sur la page Psychothérapie**, « Vos questions sur les consultations en ligne », limité aux questions **thérapeutiques** : faut-il savoir si l'EMDR me convient, comment ça se passe la première fois. Aucune question ne figure aux deux endroits.
-- **La FAQ de Services disparaît** avec l'allègement de la page. Ses quatre questions sont réparties : « Quelle régularité ? » et « Pourquoi 1 h 30 ? » rejoignent Infos pratiques ; « Suis-je la bonne psychologue pour vous ? » et « Quel espace je propose ? » ne sont pas vraiment des questions pratiques — c'est ta manière de travailler, ça se fond dans « Mon approche » sur la page Psychothérapie.
-- **Un seul balisage technique**, sur Infos pratiques, strictement identique au texte affiché.
+- Une seule FAQ visible, sur **Infos pratiques** : « Puis-je vous écrire avant de réserver ? », « Quelle est la régularité conseillée ? », « Pourquoi les séances durent-elles 1 h 30 ? »
+- Un bloc court conservé sur **Psychothérapie**, limité aux questions thérapeutiques : l'EMDR, et où trouver les informations pratiques.
+- **Un seul balisage FAQ** sur tout le site, sur Infos pratiques, décalque exact du texte affiché.
 
 ---
 
 ## 5. Points d'attention
 
-**Le risque pour le référencement est faible.** Vérification faite : la page Services ne reçoit aucune visite depuis Google, et le trafic actuel du site passe par l'accueil et trois articles de blog (rapport à l'argent, traumatisme amoureux, thérapie EMDR). Alléger les pages vitrines ne met rien en danger. Les articles de blog, eux, on n'y touche pas.
+**Le risque pour le référencement est faible.** La page Services ne reçoit aucune visite depuis Google, et le trafic passe par l'accueil et trois articles de blog. Aucun article n'a été touché, aucune URL n'a changé, aucune redirection n'était nécessaire.
 
-**Le site est bilingue, et les deux versions ont déjà divergé.** La version anglaise de la page Psychothérapie contient deux paragraphes que la française n'a pas, et les tarifs n'y sont pas les mêmes. Chaque modification devra être faite des deux côtés — c'est prévu dans le chiffrage.
+**Le piège de la page Masterclass est réparé.** Le texte que tu voyais et modifiais dans l'interface d'administration n'était pas celui qui s'affichait sur le site : l'affichage venait d'un autre fichier. Désormais, ce que tu écris dans l'admin est ce qui s'affiche. Seule règle à respecter : **garder le titre « Masterclass et programmes »**, c'est lui qui indique où placer la grille des produits.
 
-**Un piège dans l'admin, à corriger :** le texte de la page Masterclass que tu vois et modifies dans l'interface d'administration **n'est pas celui qui s'affiche sur le site**. Le texte affiché vient d'un autre fichier. Si tu as modifié cette page récemment sans voir de changement, c'est pour ça. À réparer lors de la mise en œuvre.
+**Le bloc Masterclass de l'accueil n'est plus éditable** dans l'admin, puisqu'il n'existe plus.
+
+**Ce qui reste à décider :** les libellés du menu déroulant « Services » — « Vue d'ensemble » et « EMDR et psychothérapie en ligne » — n'ont pas été touchés. « Psychothérapie & EMDR » serait plus lisible sur téléphone. À trancher ensemble.
+
+**Ce qui reste à faire, côté texte :** les textes raccourcis l'ont été en coupant, jamais en réécrivant. Si certaines formulations ne te ressemblent plus, tu peux les reprendre directement dans l'admin.
 
 ---
 
-## 6. Comment on avance
+## 6. Vérifications effectuées
 
-**Ce que tu peux faire toi-même, dans l'admin :** raccourcir les textes que toi seule peux réécrire — « Bienvenue ! » sur l'accueil, « Pourquoi choisir une psychologue en ligne ? », la fusion des deux sections d'approche sur la page Psychothérapie. Tu n'as rien à supprimer toi-même : il vaut mieux que les suppressions de sections et de pages passent par moi, pour garder les liens et les redirections propres.
-
-**Ce qui passe par moi :** le menu et le pied de page, la suppression des sections et de la FAQ, le balisage envoyé à Google, les redirections, les corrections de tarifs, l'alignement français/anglais, le piège de la page Masterclass.
-
-**Ordre proposé :**
-1. Accueil et Services — les gains les plus visibles, et les moins risqués.
-2. EMDR et psychothérapie en ligne — le gros morceau.
-3. Infos pratiques et la FAQ unique.
-4. Alignement de la version anglaise.
-5. Photothérapie, si tu veux aller jusque-là.
-
-**Une question ouverte :** le menu déroulant « Services » garde-t-il ses libellés actuels — « Vue d'ensemble » et « EMDR et psychothérapie en ligne » — ou les raccourcit-on ? « Psychothérapie & EMDR » serait plus lisible, surtout sur téléphone.
+- Construction du site complète (91 pages) sans erreur, contrôle de types sans erreur, tests au vert.
+- Les 8 pages vitrines relues dans un navigateur, en français et en anglais : mises en page, tarifs, cartes, grille produits, FAQ, aucune erreur JavaScript.
+- Aucun lien interne ni ancre cassés sur l'ensemble du site.
+- Aucun débordement horizontal sur mobile (390 px) sur les 7 pages principales.

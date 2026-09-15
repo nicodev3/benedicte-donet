@@ -201,18 +201,20 @@
           className: "cms-preview-cta",
         })
       ),
-      h(
-        "div",
-        { className: "cms-preview-masterclass" },
-        h(TextImage, {
-          title: masterclass.title,
-          text: masterclass.text,
-          ctaLabel: masterclass.ctaLabel,
-          ctaUrl: masterclass.ctaUrl,
-          image: asset(getAsset, masterclass.image),
-          ctaClassName: "cms-preview-button",
-        })
-      ),
+      masterclass.title
+        ? h(
+            "div",
+            { className: "cms-preview-masterclass" },
+            h(TextImage, {
+              title: masterclass.title,
+              text: masterclass.text,
+              ctaLabel: masterclass.ctaLabel,
+              ctaUrl: masterclass.ctaUrl,
+              image: asset(getAsset, masterclass.image),
+              ctaClassName: "cms-preview-button",
+            })
+          )
+        : null,
       h(
         "section",
         { className: "cms-preview-quote" },

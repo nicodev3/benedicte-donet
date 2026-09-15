@@ -25,7 +25,7 @@ Aujourd'hui, je me nourris de mes formations, mes lectures et expériences. Je d
 En tant que voyageuse, je suis guidée à expérimenter **différentes modalités thérapeutiques** venues de traditions **ancestrales**. Néanmoins, j'ai à cœur de proposer un accompagnement reposant sur **des bases solides, efficace et ancré**.\
 Ainsi, ma manière de vous soutenir est imprégnée de ce parcours singulier **à la rencontre de votre sensibilité.**
 
-[Découvrir mes pratiques](/services/)
+[Découvrir mes accompagnements](/psychotherapie/)
 
 ## Mon cheminement
 

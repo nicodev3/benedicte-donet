@@ -73,31 +73,25 @@ Prix : **600 euros**
 
 ## Le déroulement du photoshoot
 
-### Les Graines d’Amour :
+Les deux formules suivent le même chemin. **Un Jardin d’Amour** y ajoute une seconde rencontre thérapeutique et une séance bilan.
 
-Une Première RencontreNous prendrons le temps de vous connaître et d’écouter vos aspirations. Les thèmes de l’**amour de soi** et de la **relation avec votre corps** seront abordés. Nous co-créerons ce moment ensemble, en intégrant vos intentions, désirs et appréhensions. Le choix du lieu sera également discuté pour vous garantir un environnement confortable et propice.
+### Une première rencontre
 
-Le Photoshoot  
-Pendant 2 heures, nous explorerons les sujets évoqués lors de notre première rencontre. Les émotions et les états d’esprit seront bienvenus dans le processus, avec l’intention de les accueillir en toute présence et bienveillance. Les outils utilisés incluent la méditation, la danse, la respiration, les mouvements et la parole.
+Nous prenons le temps de vous connaître et d’écouter vos aspirations. Les thèmes de l’**amour de soi** et de la **relation avec votre corps** sont abordés. Nous co-créons ce moment ensemble, en intégrant vos intentions, désirs et appréhensions. Le choix du lieu est également discuté pour vous garantir un environnement confortable et propice.
 
-Après le photoshoot  
-Je consacrerai du temps à éditer les photos avec tout mon dévouement et ma passion. Ce moment magnifique me permet souvent de découvrir des éléments qui se sont déroulés en arrière-plan. Ce processus révèlera l’évolution et mettra en lumière la personne que vous êtes. Je vous enverrai 50 photos éditées.
+### Une seconde rencontre — Un Jardin d’Amour
 
-### Un Jardin d’Amour :
-
-Une Première Rencontre  
-Nous nous familiarisons avec vos aspirations et prendrons le temps d’écouter ce que vous souhaitez explorer. Les thèmes de l’amour de soi et de la relation avec votre corps seront au cœur de notre discussion. Vos intentions, désirs et appréhensions guideront notre collaboration, tout comme le choix du lieu pour une atmosphère confortable.  
-  
-Une Seconde Rencontre  
-Nous approfondirons le travail amorcé lors de notre première séance, en ouvrant un espace d’écoute pour les émotions présentes et pour la libération des blocages entravant l’amour de soi. Des méthodes variées telles que la parole, l’EMDR, la constellation familiale ou les pratiques somatiques seront proposées.
+Nous approfondissons le travail amorcé lors de la première séance, en ouvrant un espace d’écoute pour les émotions présentes et pour la libération des blocages entravant l’amour de soi. Des méthodes variées telles que la parole, l’EMDR, la constellation familiale ou les pratiques somatiques sont proposées.
 
 ![séance photo confiance en soi amour phototherapie](/images/phototherapie/photo-phototherapie-07.jpg)
 
-Le Photoshoot  
-Pendant 2 heures, nous plongerons dans la photographie et la sensation pour explorer les thèmes abordés lors de notre rencontre. Les émotions et les états d’esprit seront accueillis avec bienveillance. Les outils utilisés incluent la méditation, la danse, la respiration, les mouvements et la parole.
+### Le photoshoot
 
-Après le photoshoot  
-Je prendrai le temps d’éditer les photos avec toute ma sensibilité et ma passion. Ce moment exceptionnel me permet souvent de découvrir des éléments qui ont enrichi notre expérience. Ce processus révélera l’évolution et mettra en lumière la personne que vous êtes. Vous recevrez une centaine de photos éditées et nous aurons une séance bilan pour intégrer les éléments du photoshoot. Je pourrai également vous offrir des axes de travail sur soi : pratiques, méditations, etc.
+Pendant 2 heures, nous explorons en photographie et en sensation les sujets évoqués lors de notre rencontre. Les émotions et les états d’esprit sont accueillis en toute présence et bienveillance. Les outils utilisés incluent la méditation, la danse, la respiration, les mouvements et la parole.
+
+### Après le photoshoot
+
+Je prends le temps d’éditer les photos avec toute ma sensibilité et ma passion. Ce processus révèle l’évolution et met en lumière la personne que vous êtes. Vous recevez **50 photos éditées** avec Les Graines d’Amour, **une centaine** avec Un Jardin d’Amour — ainsi qu’une séance bilan pour intégrer les éléments du photoshoot et des axes de travail sur soi : pratiques, méditations, etc.
 
 ![Galerie photothérapie — portrait expressif](/images/phototherapie/photo-phototherapie-08.jpg)
 ![Galerie photothérapie — séance en lumière naturelle](/images/phototherapie/photo-phototherapie-09.jpg)

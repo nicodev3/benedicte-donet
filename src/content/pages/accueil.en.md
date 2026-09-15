@@ -15,43 +15,12 @@ home:
       and harmony you are seeking.
 
 
-      During our sessions, we explore every dimension of your experience to discover
-      together what requires **support towards transformation**.
-
-
-      Through various tools (EMDR, IFS, talk therapy, meditation), I accompany you in
-      exploring the different facets of your being and support the changes you wish to
-      welcome into your life.
-
-
-      I firmly believe in the incredible potential for healing and personal growth within
-      each person.
-
-
-      **I am committed to offering you an attentive and grounded therapeutic space**,
-      where we can explore your difficulties, resources and the changes you would like
-      to make, at your own pace.
+      Through various tools (EMDR, IFS, talk therapy, meditation), we support together the
+      changes you wish to welcome into your life, **in an attentive and grounded
+      therapeutic space** where you move at your own pace.
     ctaLabel: Explore online consultations
     ctaUrl: /psychotherapie/
     image: /images/portraits/portrait-accueil.png
-  masterclass:
-    title: Masterclasses & Programmes
-    text: >-
-      Discover a personal exploration experience through **online psycho-educational**
-      masterclasses and programmes.
-
-
-      Each of these online workshops and programmes is an invitation to practise tools
-      such as meditation, self-love, nervous system regulation, and exploring sexuality to
-      cultivate a deep understanding of yourself.
-
-
-      Through these offerings, I invite you to embark on a journey of **self-knowledge**
-      and learning tools that help you cultivate greater harmony in your relationship with
-      yourself and the world.
-    ctaLabel: Book now
-    ctaUrl: /masterclass/
-    image: /images/cms-library/products-poster-meditation-01.jpg
   hero:
     title: Online psychologist
     subtitle: Trauma therapy | EMDR | Sexuality
@@ -99,22 +68,17 @@ home:
   whyOnline:
     title: Why choose an online psychologist?
     text: >-
-      **Teleconsultation** offers many advantages.
-
-
       By choosing an online psychologist, you can receive support from home, with the
-      comfort and warmth of your own space. This fosters a **sense of safety** and makes
-      it easier to engage in therapy.
+      comfort and warmth of your own space. This fosters a **sense of safety** and lets
+      each session settle gently, with no journey afterwards.
 
 
-      You do not need to travel, which greatly simplifies booking appointments and
-      organising our sessions. The therapeutic relationship is precious: by choosing an
-      **online psychologist**, you can keep the same therapist regardless of your plans to
-      move, travel, or live abroad.
+      You also keep the same therapist regardless of your plans to move, travel, or live
+      abroad.
 
 
-      I also offer **EMDR by video**. Explore [the consultation format and
-      fees](/en/psychotherapie/), including the framework for our first meeting.
+      I offer **EMDR by video**. Explore [the consultation format and
+      fees](/en/psychotherapie/).
     ctaLabel: I want to know more
     ctaUrl: /infos-pratiques/
     image: /images/cms-library/illustrations-illustration-seance-individuelle-psychologie.jpeg

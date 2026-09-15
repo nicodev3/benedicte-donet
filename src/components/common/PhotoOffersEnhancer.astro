@@ -24,7 +24,7 @@
   }
 
   function buildPhotoOffers(prose: HTMLElement) {
-    const heading = prose.querySelector<HTMLElement>('h2[id^="mes-offres-de-"]');
+    const heading = prose.querySelector<HTMLElement>('h2[id^="mes-offres-de-"], h2[id^="my-phototherapy-offers"]');
     if (!heading || heading.dataset.offersReady === "true") return;
 
     const blocks: Element[][] = [];

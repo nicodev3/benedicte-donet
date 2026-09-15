@@ -1,17 +1,14 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { isStandardPage } from "@/lib/pages";
 import PageLayout from "@/layouts/PageLayout.astro";
+import OptimizedContent from "@/components/common/OptimizedContent.astro";
 import ProductsGrid from "@/components/sections/ProductsGrid.astro";
 import { SITE } from "@/site.config";
 import { resolveSeoImagePath } from "@/lib/images";
 import { getMasterclassProducts } from "@/lib/masterclass-products";
 import { parsePrice } from "@/lib/pricing";
 import { getContentSlug, getLocaleFromPath, localizedPath, type Locale } from "@/lib/i18n";
-import { Content as MasterclassIntroFr } from "@/components/pages/masterclass-intro.md";
-import { Content as MasterclassOutroFr } from "@/components/pages/masterclass-outro.md";
-import { Content as MasterclassIntroEn } from "@/components/pages/masterclass-intro.en.md";
-import { Content as MasterclassOutroEn } from "@/components/pages/masterclass-outro.en.md";
 
 interface Props {
   locale?: Locale;
@@ -19,8 +16,6 @@ interface Props {
 
 const locale = Astro.props.locale ?? getLocaleFromPath(Astro.url.pathname);
 const products = getMasterclassProducts(locale);
-const MasterclassIntro = locale === "en" ? MasterclassIntroEn : MasterclassIntroFr;
-const MasterclassOutro = locale === "en" ? MasterclassOutroEn : MasterclassOutroFr;
 
 const page = (await getCollection("pages")).filter(isStandardPage).find(
   (entry) =>
@@ -63,14 +58,45 @@ const productListStructuredData = {
   }),
 };
 
-const sectionTitle =
-  locale === "en" ? "Masterclasses and programmes" : "Masterclass et programmes";
+/**
+ * Le titre de section vit dans le markdown de la page (éditable dans le CMS) :
+ * la grille produits vient se placer juste après lui. Si le titre est renommé ou
+ * supprimé, la grille reste affichée à sa position de repli, en fin de page.
+ */
+const productsHeadingIds =
+  locale === "en"
+    ? ["masterclasses-and-programmes", "masterclass-and-programmes"]
+    : ["masterclass-et-programmes", "les-masterclass-et-programmes"];
+
+const { Content } = await render(page);
 ---
 
 <PageLayout page={page} structuredData={productListStructuredData}>
-  <MasterclassIntro />
-  <span id="masterclass" aria-hidden="true" style="scroll-margin-top: 6rem"></span>
-  <h2 id="masterclass-et-programmes">{sectionTitle}</h2>
-  <ProductsGrid products={products} locale={locale} />
-  <MasterclassOutro />
+  <OptimizedContent
+    Content={Content}
+    eagerFirst
+    sizes="(max-width: 820px) 90vw, 480px"
+  />
+  <div id="masterclass-products" data-products-headings={productsHeadingIds.join(",")}>
+    <span id="masterclass" aria-hidden="true" style="scroll-margin-top: 6rem"></span>
+    <ProductsGrid products={products} locale={locale} />
+  </div>
 </PageLayout>
+
+<script>
+  function placeProductsGrid() {
+    const block = document.getElementById("masterclass-products");
+    if (!block || block.dataset.placed === "true") return;
+
+    const ids = (block.dataset.productsHeadings ?? "").split(",").filter(Boolean);
+    const heading = ids
+      .map((id) => document.getElementById(id))
+      .find((element): element is HTMLElement => element instanceof HTMLElement);
+
+    if (heading) heading.after(block);
+    block.dataset.placed = "true";
+  }
+
+  placeProductsGrid();
+  document.addEventListener("astro:page-load", placeProductsGrid);
+</script>

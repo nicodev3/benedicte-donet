@@ -83,14 +83,18 @@ const lcpImage = await getOptimizedImage(
     ctaUrl={localizedPath(home.appointment.ctaUrl, locale)}
   />
 
-  <CtaBlock
-    title={home.masterclass.title}
-    text={home.masterclass.text}
-    ctaLabel={home.masterclass.ctaLabel}
-    ctaUrl={localizedPath(home.masterclass.ctaUrl, locale)}
-    image={home.masterclass.image}
-    imageAlt="Méditation en pleine nature — masterclass et programmes en ligne"
-  />
+  {
+    home.masterclass && (
+      <CtaBlock
+        title={home.masterclass.title}
+        text={home.masterclass.text}
+        ctaLabel={home.masterclass.ctaLabel}
+        ctaUrl={localizedPath(home.masterclass.ctaUrl, locale)}
+        image={home.masterclass.image}
+        imageAlt="Méditation en pleine nature — masterclass et programmes en ligne"
+      />
+    )
+  }
 
   <QuoteBlock text={home.quote.text} author={home.quote.author} />
 

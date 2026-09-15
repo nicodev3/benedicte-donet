@@ -79,7 +79,9 @@ const approachIllustrations = (
     }
 
     if (current.length) columns.push(current);
-    if (columns.length < 3) return;
+    // 2 ou 3 cartes selon le contenu de la page (la 3e carte « approche engagée »
+    // a été retirée : elle redisait le parcours de formation de la page À propos).
+    if (columns.length < 2) return;
 
     const afterSection = child;
     const section = document.createElement("section");
@@ -161,7 +163,7 @@ const approachIllustrations = (
 
   .approach-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
     align-items: stretch;
     column-gap: 1.25rem;
     row-gap: var(--space-sm);
