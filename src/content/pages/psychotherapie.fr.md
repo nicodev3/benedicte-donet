@@ -1,17 +1,18 @@
 ---
-title: "Psychothérapie"
-heroTitle: "Psychologue EMDR en ligne"
-description: "Psychologue en ligne"
-image: "/images/heroes/hero-psychotherapie.webp"
-imageAlt: "Portrait de Bénédicte Donet, psychologue EMDR en ligne"
-seoTitle: "Psychologue EMDR en ligne | Bénédicte Donet"
-seoDescription: "Consultations de psychologie et thérapie EMDR en visio avec Bénédicte Donet. Découvrez le cadre, les tarifs et prenez rendez-vous sur Doctolib."
+title: Psychothérapie
+heroTitle: Psychologue EMDR en ligne
+description: Psychologue en ligne
+image: /images/heroes/hero-psychotherapie.webp
+imageAlt: Portrait de Bénédicte Donet, psychologue EMDR en ligne
+seoTitle: Psychologue EMDR en ligne | Bénédicte Donet
+seoDescription: Consultations de psychologie et thérapie EMDR en visio avec
+  Bénédicte Donet. Découvrez le cadre, les tarifs et prenez rendez-vous sur
+  Doctolib.
 order: 3
 draft: false
 pageType: page
 ---
-
-![EMDR psychologie en ligne benedicte donet](/images/portraits/portrait-emdr-01.jpg)
+![EMDR psychologie en ligne benedicte donet](/images/cms-library/profile-pic-9.png)
 
 ## Un accompagnement individuel en visio
 
@@ -21,21 +22,13 @@ La **thérapie EMDR en ligne** fait partie des approches que je propose. Nous pr
 
 [Prendre rendez-vous en visio](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
-**Mes repères professionnels :** master en psychologie clinique et psychopathologie à l’université Paul-Valéry de Montpellier (2015), puis formation EMDR en Australie auprès de l’[EMDRAA](https://emdraa.org/) (2022). Retrouvez [mes diplômes et formations](/a-propos/#mon-parcours-de-formation).
-
-J’accompagne principalement les **adultes**. Un suivi peut également être envisagé pour les **adolescents à partir de 13 ans**, lorsque la demande vient de l’adolescent lui-même. Pour cette situation, [écrivez-moi avant de réserver](mailto:donetbenedicte@gmail.com) afin de préciser le cadre du suivi.
-
 <span id="tarifpsycho" aria-hidden="true"></span>
 <span id="tarifs" aria-hidden="true"></span>
 
 ## Le tarif
 
--   Première séance individuelle 70 €
-
--   Séance individuelle 90 €
-
-    Durée : 1h30 / Public : Adultes
-
+* Première séance individuelle 70 €
+* Durée : 1h30 / Public : Adultes
 
 \* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](/infos-pratiques/) pour aborder ce sujet.
 
@@ -73,19 +66,19 @@ Les modalités sont détaillées dans les [informations pratiques](/infos-pratiq
 
 ## JE VOUS ACCOMPAGNE
 
-Au cœur de ma pratique thérapeutique résident la parole et l’écoute, deux piliers fondamentaux qui guident mes séances vers une compréhension profonde de vos expériences, émotions et besoins. Cette approche empathique permet d’établir un **espace de confiance et d’ouverture** où vous pouvez avancer à votre propre rythme.  
+Au cœur de ma pratique thérapeutique résident la parole et l’écoute, deux piliers fondamentaux qui guident mes séances vers une compréhension profonde de vos expériences, émotions et besoins. Cette approche empathique permet d’établir un **espace de confiance et d’ouverture** où vous pouvez avancer à votre propre rythme.\
 J’intègre à ce socle d’autres méthodes thérapeutiques qui me semblent alignées avec votre situation :
 
--   L’**EMDR** (désensibilisation et retraitement de l’information par les mouvements oculaires) est une approche psychothérapeutique recommandée dans certaines situations de stress post-traumatique. Les mouvements oculaires ou d’autres stimulations bilatérales sont utilisés dans un travail progressif sur des souvenirs ciblés. Son indication et son rythme sont évalués selon chaque situation. En savoir plus : [thérapie EMDR](/therapie-emdr/) · [recommandations NICE](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults).
--   La **pleine conscience**, est un outil puissant ayant des effets bénéfiques sur notre bien-être, notre conscience corporelle et notre capacité à vivre pleinement le moment présent. Il est fréquent que j’introduise des moments de méditation et d’exploration de la pleine conscience dans mon accompagnement pour vous aider à reconnecter avec l’instant présent, approfondir votre connaissance de vous-même et accueillir vos expériences internes sans résistance.
--   Le **Système familial intérieur** (IFS), pratique d’intégration des identités, est une approche fascinante. Chaque individu porte en lui un monde complexe, composé de plusieurs identités. Ces identités ne sont pas toutes alignées en termes d’âge ou de désirs. Une partie de nous peut souhaiter avant tout se protéger, être en sécurité. Cependant, nous avons également une autre partie en nous qui aspire à évoluer et à découvrir le monde qui nous entoure. La pratique d’intégration des identités consiste à reconnaître et à accueillir toutes ces parties de nous-mêmes. Nous travaillons avec ces différentes identités, en les aidant à grandir si nécessaire, à évoluer et à retrouver un sentiment de sécurité.
--   La **respiration et l’utilisation de la voix**. Lorsque vous faites face à des niveaux de stress et d’anxiété élevés, il est bénéfique d’explorer votre façon de respirer. Parfois, une rééducation de la respiration est nécessaire afin de soutenir le système nerveux. Aussi, votre voix est étroitement liée à votre système nerveux et à vos émotions. En travaillant sur la modulation de la voix, nous pouvons libérer des tensions émotionnelles, exprimer nos besoins et renforcer notre confiance en nous. Ces techniques créent un espace thérapeutique puissant.
+* L’**EMDR** (désensibilisation et retraitement de l’information par les mouvements oculaires) est une approche psychothérapeutique recommandée dans certaines situations de stress post-traumatique. Les mouvements oculaires ou d’autres stimulations bilatérales sont utilisés dans un travail progressif sur des souvenirs ciblés. Son indication et son rythme sont évalués selon chaque situation. En savoir plus : [thérapie EMDR](/therapie-emdr/) · [recommandations NICE](https://www.nice.org.uk/guidance/ng116/chapter/recommendations#psychological-interventions-for-the-prevention-and-treatment-of-ptsd-in-adults).
+* La **pleine conscience**, est un outil puissant ayant des effets bénéfiques sur notre bien-être, notre conscience corporelle et notre capacité à vivre pleinement le moment présent. Il est fréquent que j’introduise des moments de méditation et d’exploration de la pleine conscience dans mon accompagnement pour vous aider à reconnecter avec l’instant présent, approfondir votre connaissance de vous-même et accueillir vos expériences internes sans résistance.
+* Le **Système familial intérieur** (IFS), pratique d’intégration des identités, est une approche fascinante. Chaque individu porte en lui un monde complexe, composé de plusieurs identités. Ces identités ne sont pas toutes alignées en termes d’âge ou de désirs. Une partie de nous peut souhaiter avant tout se protéger, être en sécurité. Cependant, nous avons également une autre partie en nous qui aspire à évoluer et à découvrir le monde qui nous entoure. La pratique d’intégration des identités consiste à reconnaître et à accueillir toutes ces parties de nous-mêmes. Nous travaillons avec ces différentes identités, en les aidant à grandir si nécessaire, à évoluer et à retrouver un sentiment de sécurité.
+* La **respiration et l’utilisation de la voix**. Lorsque vous faites face à des niveaux de stress et d’anxiété élevés, il est bénéfique d’explorer votre façon de respirer. Parfois, une rééducation de la respiration est nécessaire afin de soutenir le système nerveux. Aussi, votre voix est étroitement liée à votre système nerveux et à vos émotions. En travaillant sur la modulation de la voix, nous pouvons libérer des tensions émotionnelles, exprimer nos besoins et renforcer notre confiance en nous. Ces techniques créent un espace thérapeutique puissant.
 
 ## MON APPROCHE
 
 ### Un cadre chaleureux et sécurisant
 
-J’ai à cœur de vous offrir un espace de confiance et un environnement chaleureux pour vous permettre de **vous ouvrir à votre propre rythme**.  
+J’ai à cœur de vous offrir un espace de confiance et un environnement chaleureux pour vous permettre de **vous ouvrir à votre propre rythme**.\
 Je suis consciente du caractère sacré et vulnérable d’une relation thérapeutique, et je m’engage à préserver cette confiance en maintenant la **qualité de ma présence** et en respectant strictement le secret professionnel.
 
 ### Une pratique holistique, adaptée à chacun
@@ -100,12 +93,12 @@ Passionnée par la thérapie et sa pratique, **je mets continuellement à jour m
 
 ## Mes spécialités
 
-Initialement animée par une passion pour la psychologie du nourrisson, de l’enfant, de l’adolescent et des dynamiques familiales, mes expériences m’ont progressivement orientée vers une expertise formée et spécialisée dans l’accompagnement de divers domaines :
+Mes expériences m’ont progressivement orientée vers une expertise formée et spécialisée dans l’accompagnement de divers domaines :
 
--   La **sexualité** féminine et masculine
--   Les **traumatismes sexuels** tels que les abus et les incestes
--   L’**anxiété**, les phobies et le stress
--   Les traumatismes et le **stress post-traumatique**
+* Les traumatismes et le **stress post-traumatique**
+* Les **traumatismes sexuels** tels que les abus et les incestes
+* L’**anxiété**, les phobies et le stress
+* La **sexualité** féminine et masculine
 
 ### Qu’est-ce que le traumatisme ?
 
@@ -121,14 +114,14 @@ Dans le domaine de la sexualité, je porte une attention particulière à favori
 
 Quelles que soient les origines de vos difficultés, connues ou enfouies, nous entreprenons ensemble une exploration sensible et bienveillante de votre histoire, abordant ainsi les dimensions psychologiques et psychosomatiques des troubles que vous vivez. Mon intérêt pour l’exploration délicate de la sexualité, souvent entourée de tabous et de mystères, m’anime profondément. Dans le contexte familial, éducatif et social, il est indéniable qu’il existe un **manque important en matière d’éducation et de transmission sur la sexualité**.
 
-Mon désir est de guider chaque individu dans un parcours de reconnexion avec cette sphère fondamentale de leur existence. Ma spécialisation réside dans l’accompagnement des survivants de traumatismes sexuels tels que **le viol, l’inceste et les abus**. Je suis là pour vous offrir un soutien lors de l’exploration des conséquences psychologiques découlant de ces expériences. Après avoir travaillé sur la résolution des traumatismes, il devient envisageable de redécouvrir le plaisir en empruntant des approches issues de la pleine conscience et de la psychologie de la sexualité. Mon profond engagement consiste à créer un chemin vers la guérison émotionnelle et l’épanouissement personnel pour chaque individu que j’accompagne.
+Ma spécialisation réside dans l’accompagnement des survivants de traumatismes sexuels tels que **le viol, l’inceste et les abus**. Je suis là pour vous offrir un soutien lors de l’exploration des conséquences psychologiques découlant de ces expériences. Après avoir travaillé sur l'intégration des traumatismes, il devient envisageable de redécouvrir le plaisir en empruntant des approches issues de la pleine conscience et de la psychologie de la sexualité. 
 
 ### Anxiété, Stress et Phobies
 
-Je suis là pour vous accompagner avec bienveillance et expertise à travers les défis de l’anxiété, du stress et des phobies qui peuvent parfois sembler accablants.  
-Ce sont des états naturels que nous rencontrons tous à un moment donné de notre vie. Je crois en l’importance de comprendre en profondeur les origines et les schémas qui les alimentent. En explorant vos pensées, émotions et comportements, nous travaillerons main dans la main pour **identifier les déclencheurs** et les mécanismes sous-jacents à ces états.
+Je suis là pour vous accompagner avec bienveillance et expertise à travers les défis de l’anxiété, du stress et des phobies qui peuvent parfois sembler accablants.\
+Ce sont des états naturels que nous rencontrons tous à un moment donné de notre vie. Je crois en l’importance de comprendre en profondeur les origines et les schémas qui les alimentent. En explorant vos pensées et émotions, nous travaillerons main dans la main pour **identifier les déclencheurs** et les mécanismes sous-jacents à ces états.
 
-Nous explorerons des techniques basées sur la pleine conscience et la relaxation afin de vous soutenir au quotidien. À cela, j’associe un travail profond autour des traumatismes. Ensemble, nous aborderons progressivement les situations qui déclenchent vos phobies. L’objectif est de vous permettre de ressentir plus de contrôle et de confiance dans des situations qui étaient autrefois sources d’anxiété.  
+Nous explorerons des techniques basées sur la pleine conscience et la relaxation afin de vous soutenir au quotidien. À cela, j’associe un travail profond autour des traumatismes. Ensemble, nous aborderons progressivement les situations qui déclenchent vos phobies. L’objectif est de vous permettre de ressentir plus de confiance dans des situations qui étaient autrefois sources d’anxiété.\
 Le travail psychothérapeutique que nous entreprendrons ensemble ne vise pas seulement à atténuer les symptômes, mais aussi à vous aider à développer une compréhension profonde de vous-même et de vos émotions.
 
 ![EMDR psychologie en ligne benedicte donet psychothérapeute](/images/portraits/portrait-emdr-02.jpg)

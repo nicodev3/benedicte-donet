@@ -1,11 +1,13 @@
 ---
-title: "Psychotherapy"
-heroTitle: "Online EMDR psychologist"
-description: "Online psychologist"
-image: "/images/heroes/hero-psychotherapie.webp"
-imageAlt: "Portrait of Bénédicte Donet, online EMDR psychologist"
-seoTitle: "Online EMDR psychologist | Bénédicte Donet"
-seoDescription: "Online psychology and EMDR therapy with Bénédicte Donet. Discover the session format and fees, and book your video consultation on Doctolib."
+title: Psychotherapy
+heroTitle: Online EMDR psychologist
+description: Online psychologist
+image: /images/heroes/hero-psychotherapie.webp
+imageAlt: Portrait of Bénédicte Donet, online EMDR psychologist
+seoTitle: Online EMDR psychologist | Bénédicte Donet
+seoDescription: Online psychology and EMDR therapy with Bénédicte Donet.
+  Discover the session format and fees, and book your video consultation on
+  Doctolib.
 order: 3
 draft: false
 pageType: page
