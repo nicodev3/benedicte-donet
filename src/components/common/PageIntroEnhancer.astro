@@ -110,10 +110,9 @@
   .page-intro-image-inner img {
     display: block;
     width: 100%;
-    max-height: 18rem;
-    min-height: 12rem;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
@@ -167,8 +166,10 @@
     }
 
     .page-intro-image-inner img {
+      height: auto;
       max-height: none;
-      min-height: 18rem;
+      min-height: 0;
+      object-fit: contain;
     }
   }
 </style>
