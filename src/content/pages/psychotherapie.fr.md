@@ -12,7 +12,7 @@ order: 3
 draft: false
 pageType: page
 ---
-![EMDR psychologie en ligne benedicte donet](/images/cms-library/profile-pic-9.png)
+![EMDR psychologie en ligne benedicte donet](/images/cms-library/dscf8060.jpg)
 
 ## Un accompagnement individuel en visio
 
