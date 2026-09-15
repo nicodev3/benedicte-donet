@@ -33,7 +33,7 @@ Je suis sur mon propre **chemin** depuis déjà une vingtaine d'années : mon ou
 Après quelques années dans l'éducation nationale, la pratique de la méditation m'a permis de réaliser que je me forçais à rentrer dans **une façon d'exercer** mon métier qui n'était pas la mienne. 
 
 Je suis alors sortie de cette approche institutionnelle, pour explorer une manière multidimensionnelle d'**accompagner et d'offrir mon soutien** en combinant tout ce que j'ai découvert dans mon cheminement.\
-En commençant, comme beaucoup, par la découverte de la méditation et du yoga, j'ai approfondi et je continue aujourd'hui cette exploration afin de proposer une **pratique authentique.**\
+En commençant, comme beaucoup, par la découverte de la méditation et du yoga, j'ai approfondi et je continue aujourd'hui cette exploration afin de proposer une **pratique incarné.**\
 La découverte de l'**EMDR**, en 2022, a profondément marqué mon accompagnement et **ma compréhension de la santé mentale**. Cela m'a permis de mesurer l'impact du stress post-traumatique et de ses répercussions dans **la thérapie**.
 
 Aujourd'hui, ce cheminement, **tissé entre la rigueur de la psychologie clinique traditionnelle et la richesse des approches plus holistiques**, me permet d'offrir un accompagnement authentique qui soutient votre propre cheminement et votre expérience **unique**.
