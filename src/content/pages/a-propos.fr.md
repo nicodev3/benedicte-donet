@@ -66,6 +66,7 @@ Proverbe africain
 * Formation Module 1 Constellation Familliale, avec Institut for the study of family constellations, 2025
 * Formation d'Hypnose (90h) , avec Dr Rashhi Sharma, Soul consciousness Lab, 2025
 * Formation de Breathwork teacher training, avec Senses, 2025
+* Formation EFT niveau 1, 2025
 * Formation niveau 1 Rapid rewire Method, 2026
 * Formation Somatic Experiencing (En cours) 2026
 
