@@ -184,7 +184,7 @@ const icons = [
     min-width: 0;
     color: var(--color-text);
     font-size: var(--text-sm);
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.6;
   }
 
@@ -200,6 +200,7 @@ const icons = [
 
   .infos-cadre-text p {
     margin: 0;
+    font-weight: 300;
   }
 
   .infos-cadre-text strong {
@@ -207,14 +208,47 @@ const icons = [
   }
 
   @media (max-width: 900px) {
+    .infos-cadre {
+      margin-block: 0;
+    }
+
+    .infos-cadre > h2 {
+      margin-bottom: var(--space-sm);
+      max-width: 40rem;
+    }
+
     .infos-cadre-grid {
       grid-template-columns: 1fr;
+      gap: 0.65rem;
     }
 
     .infos-cadre-card {
       display: grid;
       grid-template-columns: auto minmax(0, 1fr);
       align-items: start;
+      gap: 0.7rem;
+      padding: 0.9rem 0.85rem;
+    }
+
+    .infos-cadre-icon {
+      width: 2.15rem;
+      height: 2.15rem;
+    }
+
+    .infos-cadre-icon svg {
+      width: 1.15rem;
+      height: 1.15rem;
+    }
+
+    .infos-cadre-title {
+      margin-bottom: 0.25rem;
+      font-size: 0.8125rem;
+      letter-spacing: 0.06em;
+    }
+
+    .infos-cadre-body {
+      font-size: 0.9375rem;
+      line-height: 1.6;
     }
   }
 </style>

@@ -36,7 +36,7 @@ My practice is guided by a holistic vision of psychology, which consists of **ta
 
 [My training and qualifications](/en/a-propos/)
 
-## MY TOOLS
+## My tools
 
 At the heart of my practice lie **speech and listening**, two pillars that guide my sessions towards a deep understanding of your experiences, emotions and needs. To this foundation I add the methods that seem aligned with your situation:
 

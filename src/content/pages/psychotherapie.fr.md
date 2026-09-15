@@ -35,7 +35,7 @@ Ma pratique est guidée par une vision holistique de la psychologie, qui consist
 
 [Mon parcours et mes formations](/a-propos/)
 
-## MES OUTILS
+## Mes outils
 
 Au cœur de ma pratique résident **la parole et l’écoute**, deux piliers qui guident mes séances vers une compréhension profonde de vos expériences, émotions et besoins. J’y associe les méthodes qui me semblent alignées avec votre situation :
 

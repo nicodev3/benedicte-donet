@@ -155,10 +155,10 @@ const approachIllustrations = (
     margin: 0 0 var(--space-sm);
     text-align: center;
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
-    color: var(--color-text);
+    letter-spacing: 0.04em;
+    color: var(--color-primary-dark);
   }
 
   .approach-grid {
@@ -245,14 +245,20 @@ const approachIllustrations = (
       row-gap: 0.25rem;
     }
 
+    .approach-column {
+      align-items: stretch;
+      width: 100%;
+    }
+
     .approach-illustration {
       width: 50%;
+      margin-inline: auto;
     }
 
     .approach-card {
-      width: 80%;
+      width: 100%;
       margin-top: -0.625rem;
-      padding: 0.9375rem 0.9375rem 1.5rem;
+      padding: 0.9375rem 1rem 1.5rem;
       border-radius: 60px 0;
     }
 
@@ -261,7 +267,8 @@ const approachIllustrations = (
     }
 
     .approach-text {
-      padding-inline: 1rem;
+      margin-inline: 0;
+      padding: 0.625rem 1rem;
       font-size: 0.875rem;
     }
 
@@ -273,12 +280,24 @@ const approachIllustrations = (
 
   @media (max-width: 767px) {
     .approach-section > h2 {
-      width: 70%;
-      margin-inline: auto;
+      width: 100%;
+      margin-inline: 0;
+    }
+
+    .approach-grid {
+      max-width: none;
     }
 
     .approach-illustration {
       width: 50%;
+    }
+
+    .approach-card {
+      padding: 0.9375rem 0.75rem 1.25rem;
+    }
+
+    .approach-text {
+      padding: 0.625rem 0.75rem;
     }
   }
 </style>
