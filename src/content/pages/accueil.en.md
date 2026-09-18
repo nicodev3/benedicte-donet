@@ -27,20 +27,6 @@ home:
     ctaLabel: Discover my practice
     ctaUrl: /a-propos/
     image: /images/portraits/portrait-accueil.png
-  masterclass:
-    title: Masterclasses & Programmes
-    text: >-
-      Discover a personal exploration experience through **online
-      psycho-educational** masterclasses and programmes.
-
-
-      Each of these online workshops and programmes is an invitation to practise tools such as meditation, self-love, nervous system regulation, and exploring sexuality to cultivate a deep understanding of yourself.
-
-
-      Through these offerings, I invite you to embark on a journey of **self-knowledge** and learning tools that help you cultivate greater harmony in your relationship with yourself and the world.
-    ctaLabel: Book now
-    ctaUrl: /masterclass/
-    image: /images/cms-library/products-poster-meditation-01.jpg
   hero:
     title: Online psychologist
     subtitle: Trauma therapy | EMDR | Sexuality
@@ -143,17 +129,6 @@ home:
         url: /masterclass/
         image: /images/illustrations/illustration-fleur-sechee-03.png
         imageWidth: narrow
-      - title: Phototherapy
-        text: Through phototherapy, I accompany you in **exploring your relationship
-          with your body**. It is a time and space dedicated to self-love and
-          welcoming, with kindness, what needs to be brought into the light and
-          felt. Phototherapy allows you to explore different facets of yourself.
-        url: /phototherapie/
-        ctaLabel: Book an appointment
-        ctaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
-        image: /images/illustrations/illustration-fleur-sechee-02.png
-        imageWidth: wide
-        titleUnderline: true
   seoDescription: Online psychologist Bénédicte Donet supports adults with EMDR,
     trauma, anxiety, post-traumatic stress and sexuality.
   appointment:

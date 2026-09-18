@@ -27,20 +27,6 @@ home:
     ctaLabel: Découvrir ma pratique
     ctaUrl: /a-propos/
     image: /images/portraits/portrait-accueil.png
-  masterclass:
-    title: Masterclass & Programmes
-    text: >-
-      Découvrez une expérience d'exploration personnelle grâce à des Masterclass
-      et des programmes **psycho-éducatifs en ligne**.
-
-
-      Chacun de ces ateliers et programmes en ligne sont une invitation à pratiquer des outils tels que la méditation, l'amour de soi, la régulation du système nerveux et l'exploration de la sexualité pour cultiver une compréhension profonde de soi-même.
-
-
-      À travers ces offres, je vous invite à entreprendre un voyage de **connaissance de soi** et d'apprentissage d'outils vous permettant de cultiver davantage d'harmonie dans votre relation avec vous-même et le monde.
-    ctaLabel: Je réserve
-    ctaUrl: /masterclass/
-    image: /images/cms-library/products-poster-meditation-01.jpg
   hero:
     title: Psychologue en ligne
     subtitle: Trauma-thérapies | EMDR | Sexualité
@@ -146,18 +132,6 @@ home:
         url: /masterclass/
         image: /images/illustrations/illustration-fleur-sechee-03.png
         imageWidth: narrow
-      - title: Photothérapie
-        text: Au travers de la photothérapie, je vous accompagne à **explorer votre
-          relation au corps**. C'est un temps et un espace dédié à l'amour de
-          soi et à l'accueil avec bienveillance, de ce qui a besoin d'être mis
-          en lumière et senti. La photothérapie permet d'explorer différentes
-          facettes.
-        url: /phototherapie/
-        ctaLabel: Prendre rendez-vous
-        ctaUrl: https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet
-        image: /images/illustrations/illustration-fleur-sechee-02.png
-        imageWidth: wide
-        titleUnderline: true
   seoDescription: Psychologue en ligne, Bénédicte Donet accompagne les adultes en
     EMDR, trauma, anxiété, stress post-traumatique et sexualité.
   appointment:
