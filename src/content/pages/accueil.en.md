@@ -107,28 +107,10 @@ home:
           - Your **attachment style**, way of communicating, and **perceiving
             the world**.
           - Your **environment**, routines, and many other aspects.
-        imageUrl: /services/
         linkUrl: /psychotherapie/#tarifpsycho
         title: Individual session
         linkLabel: View rates
         image: /images/illustrations/illustration-fleur-sechee-01.png
-      - title: Workshops and programmes
-        intro: "Through workshops and programmes, I offer you **transformative practices
-          and knowledge**. Everything I share in these formats represents
-          knowledge I consider essential for **living in harmony** with who we
-          are. Self-knowledge and understanding our inner workings are necessary
-          to welcome ourselves and live with greater harmony. I am happy to
-          share what I have gained from years of **practice and research** in my
-          areas of expertise:"
-        bullets:
-          - Trauma,
-          - Nervous system regulation,
-          - Sexuality,
-          - Meditation,
-          - Psycho-corporeal practices.
-        url: /masterclass/
-        image: /images/illustrations/illustration-fleur-sechee-03.png
-        imageWidth: narrow
   seoDescription: Online psychologist Bénédicte Donet supports adults with EMDR,
     trauma, anxiety, post-traumatic stress and sexuality.
   appointment:

@@ -6,7 +6,7 @@ imageAlt: "Dried flowers — online psychologist"
 seoTitle: "Online Psychologist | Video Consultation Services"
 seoDescription: "Online psychology consultations with Bénédicte Donet: psychotherapy, EMDR, trauma-informed support, phototherapy, mindfulness programmes and workshops."
 order: 2
-draft: false
+draft: true
 pageType: page
 ---
 

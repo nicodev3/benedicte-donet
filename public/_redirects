@@ -1,6 +1,12 @@
 # Redirections 301 — URLs WordPress supprimées lors de la migration
 # Format Cloudflare Pages : source destination code
 
+# Ancienne page-carrefour Services → page Consultations
+/services/ /psychotherapie/ 301
+/en/services/ /en/psychotherapie/ 301
+/services /psychotherapie/ 301
+/en/services /en/psychotherapie/ 301
+
 # Pages WooCommerce (boutique en ligne non reprise)
 /boutique/ /masterclass/ 301
 /panier/ /masterclass/ 301
@@ -44,7 +50,7 @@
 # Anciennes URLs anglaises WordPress
 /en/home/ /en/ 301
 /en/about-me/ /en/a-propos/ 301
-/en/my-services/ /en/services/ 301
+/en/my-services/ /en/psychotherapie/ 301
 /en/psychotherapy/ /en/psychotherapie/ 301
 /en/phototherapy/ /en/phototherapie/ 301
 /en/masterclass-en/ /en/masterclass/ 301
@@ -95,7 +101,7 @@
 /en/pourquoi-ai-nest-pas-un-soutien-psychologique-de-confiance /en/pourquoi-ia-nest-pas-un-soutien-psychologique-de-confiance/ 301
 /en/home /en/ 301
 /en/about-me /en/a-propos/ 301
-/en/my-services /en/services/ 301
+/en/my-services /en/psychotherapie/ 301
 /en/psychotherapy /en/psychotherapie/ 301
 /en/phototherapy /en/phototherapie/ 301
 /en/masterclass-en /en/masterclass/ 301

@@ -14,33 +14,13 @@ export interface NavigationItem {
 
 const NAVIGATION: Record<Locale, NavigationItem[]> = {
   fr: [
-    {
-      label: "Services",
-      url: "/services/",
-      order: 2,
-      children: [
-        { label: "Vue d'ensemble", url: "/services/" },
-        { label: "EMDR et psychothérapie en ligne", url: "/psychotherapie/" },
-        { label: "Photothérapie", url: "/phototherapie/" },
-      ],
-    },
-    { label: "Masterclass", url: "/masterclass/", order: 5 },
+    { label: "Consultations", url: "/psychotherapie/", order: 2 },
     { label: "A propos", url: "/a-propos/", order: 6 },
     { label: "Infos pratiques", url: "/infos-pratiques/", order: 7 },
     { label: "Blog", url: "/blog/", order: 8 },
   ],
   en: [
-    {
-      label: "Services",
-      url: "/services/",
-      order: 2,
-      children: [
-        { label: "Overview", url: "/services/" },
-        { label: "Online EMDR and psychotherapy", url: "/psychotherapie/" },
-        { label: "Phototherapy", url: "/phototherapie/" },
-      ],
-    },
-    { label: "Masterclass", url: "/masterclass/", order: 5 },
+    { label: "Consultations", url: "/psychotherapie/", order: 2 },
     { label: "About", url: "/a-propos/", order: 6 },
     { label: "Practical info", url: "/infos-pratiques/", order: 7 },
     { label: "Blog", url: "/blog/", order: 8 },

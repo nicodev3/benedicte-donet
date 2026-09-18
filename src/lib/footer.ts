@@ -17,12 +17,12 @@ const FOOTER: Record<Locale, FooterContent> = {
   fr: {
     text: "Bénédicte Donet, psychologue clinicienne en ligne. Accompagnement en visio : trauma-thérapies, EMDR, anxiété, sexualité.",
     quickLinks: [
-      { label: "Services", url: "/services/" },
-      { label: "EMDR et psychothérapie en ligne", url: "/psychotherapie/" },
-      { label: "Photothérapie", url: "/phototherapie/" },
-      { label: "Masterclass", url: "/masterclass/" },
+      { label: "Consultations", url: "/psychotherapie/" },
+      { label: "À propos", url: "/a-propos/" },
       { label: "Infos pratiques", url: "/infos-pratiques/" },
       { label: "Blog", url: "/blog/" },
+      { label: "Photothérapie", url: "/phototherapie/" },
+      { label: "Masterclass", url: "/masterclass/" },
     ],
     legalLinks: [
       { label: "Mentions légales", url: "/mentions-legales/" },
@@ -36,12 +36,12 @@ const FOOTER: Record<Locale, FooterContent> = {
   en: {
     text: "Bénédicte Donet, online clinical psychologist. Video consultations for trauma therapy, EMDR, anxiety and sexuality.",
     quickLinks: [
-      { label: "Services", url: "/services/" },
-      { label: "Online EMDR and psychotherapy", url: "/psychotherapie/" },
-      { label: "Phototherapy", url: "/phototherapie/" },
-      { label: "Masterclass", url: "/masterclass/" },
+      { label: "Consultations", url: "/psychotherapie/" },
+      { label: "About", url: "/a-propos/" },
       { label: "Practical info", url: "/infos-pratiques/" },
       { label: "Blog", url: "/blog/" },
+      { label: "Phototherapy", url: "/phototherapie/" },
+      { label: "Masterclass", url: "/masterclass/" },
     ],
     legalLinks: [
       { label: "Legal notice", url: "/mentions-legales/" },

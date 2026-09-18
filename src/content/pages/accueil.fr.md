@@ -109,29 +109,10 @@ home:
           - Votre **style d'attachement**, manière de communiquer et de
             **percevoir le monde**.
           - Votre **environnement**, routine, et bien d'autres aspects.
-        imageUrl: /services/
         linkUrl: /psychotherapie/#tarifpsycho
         title: Séance individuelle
         linkLabel: Consultez les tarifs
         image: /images/illustrations/illustration-fleur-sechee-01.png
-      - title: Ateliers et programmes
-        intro: "Au travers des ateliers et programmes, je vous offre des **pratiques et
-          savoirs transformateurs**. Tout ce que je vous transmets sous cette
-          forme sont des savoirs qui me paraissent indispensables pour **vivre
-          en harmonie** avec qui nous sommes. La connaissance de soi, de nos
-          fonctionnements est nécessaire pour pouvoir s'accueillir et vivre avec
-          davantage d'harmonie. Je suis heureuse de vous offrir ce que j'ai reçu
-          d'années de **pratique et recherches** sur mes domaines d'expertise
-          qui sont :"
-        bullets:
-          - Le traumatisme,
-          - La régulation du système nerveux,
-          - La sexualité,
-          - La méditation,
-          - Les pratiques psycho-corporelles.
-        url: /masterclass/
-        image: /images/illustrations/illustration-fleur-sechee-03.png
-        imageWidth: narrow
   seoDescription: Psychologue en ligne, Bénédicte Donet accompagne les adultes en
     EMDR, trauma, anxiété, stress post-traumatique et sexualité.
   appointment:

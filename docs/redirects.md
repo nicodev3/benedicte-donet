@@ -12,7 +12,7 @@ Les URLs conservées à l'identique n'ont besoin d'aucune règle.
 ## URLs conservées (aucune redirection nécessaire)
 
 - `/` (accueil)
-- `/services/`, `/psychotherapie/`, `/phototherapie/`, `/masterclass/`,
+- `/psychotherapie/`, `/phototherapie/`, `/masterclass/`,
   `/a-propos/`, `/infos-pratiques/`, `/mentions-legales/`,
   `/politique-de-confidentialite/`
 - `/blog/` (liste des articles)
@@ -22,6 +22,8 @@ Les URLs conservées à l'identique n'ont besoin d'aucune règle.
 
 | Ancienne URL | Redirection | Raison |
 |---|---|---|
+| `/services/`, `/en/services/` | `/psychotherapie/`, `/en/psychotherapie/` | Page-carrefour remplacée par Consultations |
+| `/en/my-services/` | `/en/psychotherapie/` | Ancienne URL WordPress, destination alignée sur Consultations |
 | `/boutique/`, `/panier/`, `/commander/`, `/mon-compte/` | `/masterclass/` | WooCommerce non repris ; la vente passe par Doctolib/contact |
 | `/categorie-produit/*`, `/en/categorie-produit/*` | `/masterclass/`, `/en/masterclass/` | Archives WooCommerce encore visibles dans Ahrefs |
 | `/category/*`, `/en/category/*` | `/blog/`, `/en/blog/` | Archives de catégories WordPress supprimées |

@@ -81,73 +81,12 @@ const breadcrumbs = buildBreadcrumbs(
   locale
 );
 
-function getServiceFaqStructuredData() {
-  const questions =
-    locale === "fr"
-      ? [
-          {
-            name: "Suis-je la bonne psychologue pour vous ?",
-            text: "Je vous invite à parcourir mon site et prendre le temps de sentir si mon approche peut vous convenir. Il y a tant de manières d’accompagner. Mon approche est holistique et engagée. Toutes questions pour préciser un point de ma pratique et de mon cadre thérapeutique sont bienvenues par message privé.",
-          },
-          {
-            name: "Quelle est la régularité conseillée pour les séances ?",
-            text: "Nous en discutons lors de notre première séance, mais le choix final dépendra de votre capacité à recevoir, du temps nécessaire pour intégrer chaque séance, de vos envies. Nous sommes tous différents et nous avons tous un rythme et des besoins bien différents. Nos séances s'adaptent donc à votre sensibilité.",
-          },
-          {
-            name: "Pourquoi les séances durent 1 h 30 ?",
-            text: "Il m’est important de vous offrir un espace et un temps suffisamment spacieux pour sentir, se déposer, partager. L’espace de soin est, à mon sens, un espace à protéger d’un besoin ou d’une envie de précipiter. Le corps et l’esprit ont leurs propres sagesses, comme la nature, ils vont parfois vite et parfois lentement. Ainsi, nous pouvons prendre le temps que requiert la rencontre avec votre monde intérieur.",
-          },
-          {
-            name: "Quel espace je propose ?",
-            text: "En tant que psychologue en visio, dans mon accompagnement, j'aime créer un environnement accueillant en vous offrant une écoute bienveillante et sereine. Je m'engage donc à être ressourcée, présente et disponible à vos côtés lors de chacune de nos séances. Pour cela, j'ai à cœur de prévoir des intervalles entre chaque séance que je propose. J'organise mon emploi du temps de manière à vous offrir le meilleur de ma capacité de présence et d'écoute.",
-          },
-        ]
-      : [
-          {
-            name: "Am I the right psychologist for you?",
-            text: "I invite you to browse my site and take the time to sense whether my approach may suit you. There are so many ways to provide support. My approach is holistic and committed. Any questions to clarify a point about my practice and therapeutic framework are welcome by private message.",
-          },
-          {
-            name: "What is the recommended frequency for sessions?",
-            text: "We discuss this during our first session, but the final choice will depend on your capacity to receive, the time needed to integrate each session, and your wishes. We are all different and we all have very different rhythms and needs. Our sessions therefore adapt to your sensitivity.",
-          },
-          {
-            name: "Why do sessions last 1 hour 30?",
-            text: "It is important to me to offer you a space and time that is sufficiently spacious to feel, settle in and share. The space of care is, in my view, a space to protect from a need or desire to rush. The body and mind have their own wisdom; like nature, they sometimes move quickly and sometimes slowly. Thus, we can take the time that meeting your inner world requires.",
-          },
-          {
-            name: "What space do I offer?",
-            text: "As an online psychologist, in my support I like to create a welcoming environment by offering you a kind and serene listening. I therefore commit to being resourced, present and available at your side during each of our sessions. For this, I make it a priority to plan intervals between each session I offer. I organise my schedule in a way that offers you the best of my capacity for presence and listening.",
-          },
-        ];
-
-  return {
-    "@type": "FAQPage",
-    "@id": `${new URL(Astro.url.pathname, SITE.url).href}#faq`,
-    mainEntity: questions.map((question) => ({
-      "@type": "Question",
-      name: question.name,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: question.text,
-      },
-    })),
-  };
-}
-
 const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
 const breadcrumbStructuredData = buildBreadcrumbStructuredData(
   breadcrumbs,
   pageUrl
 );
-/**
- * Balisage FAQPage sur /services/ : décalque des questions affichées
- * (exigence Google : pas de contenu balisé invisible pour le visiteur).
- */
-const pageStructuredData =
-  pageSlug === "services" ? [getServiceFaqStructuredData()] : [];
 const combinedStructuredData = [
-  ...pageStructuredData,
   ...(breadcrumbStructuredData ? [breadcrumbStructuredData] : []),
   ...(structuredData
     ? Array.isArray(structuredData)

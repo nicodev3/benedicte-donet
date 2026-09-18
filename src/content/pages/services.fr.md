@@ -6,7 +6,7 @@ imageAlt: "Fleurs séchées — psychologue en visio"
 seoTitle: "Psychologue en ligne & EMDR | Services en visio"
 seoDescription: "Psychologue en ligne et EMDR en visio : psychothérapie, trauma, anxiété, photothérapie et ateliers. Consultations avec Bénédicte Donet."
 order: 2
-draft: false
+draft: true
 pageType: page
 ---
 
