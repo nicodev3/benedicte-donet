@@ -67,6 +67,7 @@ h2 {
 
 h3 {
   font-size: var(--text-2xl);
+  font-weight: 400;
 }
 
 h4 {
