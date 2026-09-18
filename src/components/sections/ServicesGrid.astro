@@ -126,7 +126,7 @@ const { title, cards } = Astro.props;
 
 <style>
   :global(.section.services-section) {
-    padding-block: clamp(4.5rem, 8vw, 9.375rem) var(--space-xl);
+    padding-block: clamp(3rem, 5vw, 4.5rem) var(--space-lg);
   }
 
   @media (max-width: 820px) {
@@ -137,10 +137,12 @@ const { title, cards } = Astro.props;
 
   .services-title {
     text-align: center;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    margin-bottom: clamp(1.875rem, 3vw, 1.875rem);
+    color: var(--color-primary-dark);
+    margin-bottom: clamp(1.25rem, 2.5vw, 1.875rem);
   }
 
   .services-stack {

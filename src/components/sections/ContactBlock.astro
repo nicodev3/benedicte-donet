@@ -55,7 +55,6 @@ const labels = locale === "fr" ? {
             data-umami-event-emplacement="bloc-contact"
             data-umami-event-langue={locale}
           >{labels.emailCta}</a>
-          <p class="contact-address">{global.email}</p>
         </div>
       </div>
     </div>
@@ -89,6 +88,10 @@ const labels = locale === "fr" ? {
   }
   h3 {
     margin: 0 0 var(--space-sm);
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: var(--color-primary-dark);
   }
   .contact-card > p {
     margin: 0 0 var(--space-md);
@@ -104,12 +107,6 @@ const labels = locale === "fr" ? {
   .contact-email-link {
     font-size: var(--text-sm);
     font-weight: 500;
-  }
-  .contact-address {
-    margin: 0;
-    overflow-wrap: anywhere;
-    font-size: var(--text-sm);
-    color: var(--color-text-soft);
   }
   @media (max-width: 700px) {
     .contact-grid { grid-template-columns: 1fr; }

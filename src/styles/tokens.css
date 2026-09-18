@@ -1,23 +1,8 @@
 /* ===================================================================
    Design tokens — charte reprise du site WordPress d'origine
-   Polices : Caviar Dreams (titres) / Rubik (texte)
+   Polices : Raleway (titres) / Rubik (texte) via Astro Fonts API
+   --font-heading / --font-body sont injectés par <Font />
    =================================================================== */
-
-@font-face {
-  font-family: "Caviar Dreams";
-  src: url("/fonts/CaviarDreams.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Caviar Dreams";
-  src: url("/fonts/CaviarDreams_Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   /* Couleurs — charte WP avec variantes accessibles (WCAG 2.1 AA) */
@@ -42,9 +27,7 @@
   --color-border: #eadfdb; /* bordures décoratives */
   --color-border-strong: #9d928e; /* séparateurs UI (3.03:1 sur blanc) */
 
-  /* Typographie */
-  --font-heading: "Caviar Dreams", "Trebuchet MS", sans-serif;
-  --font-body: "Rubik Variable", "Rubik", system-ui, sans-serif;
+  /* --font-heading / --font-body : injectés par <Font /> (astro.config) */
 
   --text-sm: 0.875rem;
   --text-base: 1rem;

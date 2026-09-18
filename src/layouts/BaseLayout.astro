@@ -1,6 +1,6 @@
 ---
-import "@/styles/fonts.css";
 import "@/styles/global.css";
+import { Font } from "astro:assets";
 import Seo from "@/components/seo/Seo.astro";
 import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
@@ -60,12 +60,17 @@ const alternateLinks = await getAlternateLinks(Astro.url.pathname);
         />
       )
     }
-    <link
-      rel="preload"
-      href="/fonts/CaviarDreams_Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
+    {/* Hero + nav above-the-fold : Raleway 400/700 ; corps : Rubik latin */}
+    <Font
+      cssVariable="--font-heading"
+      preload={[
+        { weight: 400, style: "normal" },
+        { weight: 700, style: "normal" },
+      ]}
+    />
+    <Font
+      cssVariable="--font-body"
+      preload={[{ subset: "latin", style: "normal" }]}
     />
     <slot name="head" />
     <Seo {...seoProps} />

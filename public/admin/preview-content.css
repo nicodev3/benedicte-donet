@@ -3,29 +3,7 @@
  * Injecté en brut dans l'iframe (voir preview.js).
  */
 
-@font-face {
-  font-family: "Caviar Dreams";
-  src: url("/fonts/CaviarDreams.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Caviar Dreams";
-  src: url("/fonts/CaviarDreams_Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Caviar Dreams";
-  src: url("/fonts/CaviarDreams_Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400&family=Rubik:wght@300;400;500;700&display=swap");
 
 :root {
   --color-primary: #c68d85;
@@ -43,8 +21,8 @@
   --color-bg-soft: #fff1eb;
   --color-bg-muted: #faf6f4;
   --color-border: #eadfdb;
-  --font-heading: "Caviar Dreams", "Trebuchet MS", sans-serif;
-  --font-body: "Rubik", "Rubik Variable", system-ui, sans-serif;
+  --font-heading: "Raleway", "Trebuchet MS", sans-serif;
+  --font-body: "Rubik", system-ui, sans-serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;

@@ -56,9 +56,9 @@ const imageFirst = isIntro || reverse;
             <SiteImage
               src={image}
               alt={imageAlt}
-              width={352}
-              widths={[200, 256, 352]}
-              sizes="(max-width: 820px) 255px, 352px"
+              width={416}
+              widths={[200, 256, 352, 416]}
+              sizes="(max-width: 820px) 320px, 416px"
               loading="lazy"
             />
           </div>
@@ -165,12 +165,9 @@ const imageFirst = isIntro || reverse;
     font-family: var(--font-heading);
     font-weight: 400;
     letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--color-primary-dark);
     margin-bottom: clamp(1.25rem, 2.5vw, 1.875rem);
-  }
-
-  .ti-grid.online .ti-content h2 {
-    text-transform: uppercase;
   }
 
   .ti-grid.online .ti-content {
@@ -224,8 +221,8 @@ const imageFirst = isIntro || reverse;
   }
 
   .ti-grid.intro .ti-image :global(img) {
-    width: 70%;
-    max-width: 22rem;
+    width: 82%;
+    max-width: 26rem;
     border-radius: 0;
     box-shadow: none;
   }
@@ -286,7 +283,7 @@ const imageFirst = isIntro || reverse;
     }
 
     .ti-grid.intro .ti-image :global(img) {
-      width: min(70%, 16rem);
+      width: min(82%, 20rem);
     }
 
     .ti-grid.online .ti-image {
