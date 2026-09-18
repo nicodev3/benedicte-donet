@@ -92,7 +92,7 @@ home:
       barriers within yourself that you have built against it.
     author: Rumi
   services:
-    title: The support I offer
+    title: The psychological support I offer
     cards:
       - intro: "During our online psychology sessions, we explore the different
           dimensions of your Being in order to **support you towards the

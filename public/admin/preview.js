@@ -187,6 +187,7 @@
             h(
               "article",
               { className: "cms-preview-card", key: `${step.title}-${index}` },
+              h("span", { className: "cms-preview-step-number" }, String(index + 1)),
               h("h3", null, step.title),
               h("div", {
                 className: "cms-preview-richtext",

@@ -97,7 +97,7 @@ home:
       trouver tous les obstacles que tu as construits contre l'amour.
     author: Rûmi
   services:
-    title: Les accompagnements que je propose
+    title: L'accompagnement psychologique que je propose
     cards:
       - intro: "Pendant nos séances nous explorons:"
         text: Chaque thérapie est unique, et j'ai à coeur de vous accompagner sur votre
