@@ -5,7 +5,7 @@ draft: false
 pageType: home
 home:
   intro:
-    title: Welcome !
+    title: Bénédicte Donet, psychologist and psychotherapist
     text: >-
       I am Bénédicte Donet, a passionate online psychologist and
       psychotherapist.
@@ -94,8 +94,7 @@ home:
   services:
     title: The support I offer
     cards:
-      - imageWidth: wide
-        intro: "During our online psychology sessions, we explore the different
+      - intro: "During our online psychology sessions, we explore the different
           dimensions of your Being in order to **support you towards the
           change** you wish to welcome into your life. This involves exploring
           and welcoming:"
@@ -107,9 +106,8 @@ home:
           - Your **attachment style**, way of communicating, and **perceiving
             the world**.
           - Your **environment**, routines, and many other aspects.
-        linkUrl: /psychotherapie/#tarifpsycho
-        title: Individual session
-        linkLabel: View rates
+        linkLabel: Discover consultations
+        linkUrl: /psychotherapie/
         image: /images/illustrations/illustration-fleur-sechee-01.png
   seoDescription: Online psychologist Bénédicte Donet supports adults with EMDR,
     trauma, anxiety, post-traumatic stress and sexuality.

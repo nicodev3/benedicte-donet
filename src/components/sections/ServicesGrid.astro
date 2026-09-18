@@ -33,7 +33,7 @@ const { title, cards } = Astro.props;
 <Section class="services-section">
   <Container>
     <h2 class="services-title">{title}</h2>
-    <div class="services-stack">
+    <div class:list={["services-stack", { "is-single": cards.length === 1 }]}>
       {
         cards.map((card, index) => {
           const align = index % 2 === 0 ? "start" : "end";
@@ -61,7 +61,11 @@ const { title, cards } = Astro.props;
                       >
                         <SiteImage
                           src={card.image}
-                          alt={`Illustration : ${card.title}`}
+                          alt={
+                            card.title
+                              ? `Illustration : ${card.title}`
+                              : "Illustration de l'accompagnement proposé"
+                          }
                           width={160}
                           widths={[96, 120, 160]}
                           sizes="100px"
@@ -72,9 +76,7 @@ const { title, cards } = Astro.props;
                     </div>
                   )
                 }
-                <h3>
-                  <a href={card.url}>{card.title}</a>
-                </h3>
+                {card.title && <h3>{card.title}</h3>}
                 <div class="service-body">
                   {card.intro && <p set:html={renderInlineRichText(card.intro)} />}
                   {
@@ -142,29 +144,31 @@ const { title, cards } = Astro.props;
   }
 
   .services-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.875rem;
-    width: 80%;
-    max-width: 52rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: clamp(1.5rem, 3vw, 2.75rem);
+    width: 100%;
+    max-width: none;
     margin-inline: auto;
   }
 
+  .services-stack.is-single {
+    grid-template-columns: minmax(0, 32rem);
+    justify-content: center;
+  }
+
   .service-card {
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
   }
 
-  .service-card.align-start {
-    align-self: flex-start;
-  }
-
+  .service-card.align-start,
   .service-card.align-end {
-    align-self: flex-end;
+    align-self: stretch;
   }
 
   .service-card-inner {
@@ -174,7 +178,7 @@ const { title, cards } = Astro.props;
     align-items: center;
     gap: 0.625rem;
     margin-top: -0.9375rem;
-    padding: 1.875rem 3.125rem 2.5rem;
+    padding: 1.5rem 1.75rem 2.25rem;
     background: rgb(103 199 202 / 0.13);
     border-radius: 5.625rem 0 5.625rem 0;
   }
@@ -189,18 +193,15 @@ const { title, cards } = Astro.props;
 
   .service-image {
     display: block;
-    width: 46%;
-    max-width: 9rem;
-  }
-
-  .service-image.narrow {
-    width: 42%;
-    max-width: 6.5rem;
+    width: 7.5rem;
+    height: 8.5rem;
   }
 
   .service-image :global(img) {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
     margin-inline: auto;
   }
 
@@ -211,17 +212,7 @@ const { title, cards } = Astro.props;
     font-weight: 400;
     letter-spacing: 0.04em;
     margin-top: 0.25rem;
-  }
-
-  .service-card-inner h3 a {
     color: var(--color-primary-dark);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
-  }
-
-  .service-card-inner h3 a:hover {
-    color: var(--color-primary-stronger);
   }
 
   .service-body {
@@ -283,28 +274,19 @@ const { title, cards } = Astro.props;
   }
 
   @media (max-width: 1024px) {
-    .services-stack {
-      width: 100%;
-    }
-
     .service-card-inner {
-      padding-inline: 2.5rem;
+      padding-inline: 1.5rem;
     }
 
     .service-visual {
       width: 72%;
       max-width: 14rem;
     }
-
-    .service-image,
-    .service-image.narrow {
-      width: 48%;
-      max-width: 7rem;
-    }
   }
 
   @media (max-width: 767px) {
     .services-stack {
+      grid-template-columns: 1fr;
       width: 100%;
     }
 
@@ -323,12 +305,6 @@ const { title, cards } = Astro.props;
     .service-visual {
       width: 78%;
       max-width: 12rem;
-    }
-
-    .service-image,
-    .service-image.narrow {
-      width: 50%;
-      max-width: 6rem;
     }
 
     .service-card-inner h3 {

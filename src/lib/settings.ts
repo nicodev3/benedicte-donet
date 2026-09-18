@@ -31,7 +31,7 @@ export interface HomeSettings {
   services: {
     title: string;
     cards: {
-      title: string;
+      title?: string;
       intro?: string;
       bullets?: string[];
       text?: string;

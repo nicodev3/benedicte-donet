@@ -285,7 +285,7 @@ collections:
                 summary: "{{fields.title}}"
                 hint: "Chaque carte = un accompagnement. L'ordre des cartes est celui affiché sur le site."
                 fields:
-                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Titre", name: "title", widget: "string", required: false, hint: "Laissez vide pour n'afficher que le texte de la carte." }
                   - label: "Introduction"
                     name: "intro"
                     widget: "richtext"

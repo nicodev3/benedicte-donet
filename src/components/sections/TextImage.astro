@@ -164,10 +164,13 @@ const imageFirst = isIntro || reverse;
   .ti-grid.online .ti-content h2 {
     font-family: var(--font-heading);
     font-weight: 400;
-    text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--color-primary-dark);
     margin-bottom: clamp(1.25rem, 2.5vw, 1.875rem);
+  }
+
+  .ti-grid.online .ti-content h2 {
+    text-transform: uppercase;
   }
 
   .ti-grid.online .ti-content {
@@ -201,6 +204,11 @@ const imageFirst = isIntro || reverse;
     font-weight: 300;
     line-height: 1.7;
     margin-block: 0;
+  }
+
+  .ti-grid.intro .ti-body :global(p + p),
+  .ti-grid.online .ti-body :global(p + p) {
+    margin-top: 0.75em;
   }
 
   .ti-image :global(img) {

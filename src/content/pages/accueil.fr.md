@@ -5,7 +5,7 @@ draft: false
 pageType: home
 home:
   intro:
-    title: Bienvenue !
+    title: Bénédicte Donet, psychologue et psychothérapeute
     text: >-
       Je suis Bénédicte Donet, psychologue et psychothérapeute en ligne
       passionnée.
@@ -99,8 +99,7 @@ home:
   services:
     title: Les accompagnements que je propose
     cards:
-      - imageWidth: wide
-        intro: "Pendant nos séances nous explorons:"
+      - intro: "Pendant nos séances nous explorons:"
         text: Chaque thérapie est unique, et j'ai à coeur de vous accompagner sur votre
           propre chemin, en douceur et en respectant votre rythme.
         url: /psychotherapie/
@@ -109,9 +108,8 @@ home:
           - Votre **style d'attachement**, manière de communiquer et de
             **percevoir le monde**.
           - Votre **environnement**, routine, et bien d'autres aspects.
-        linkUrl: /psychotherapie/#tarifpsycho
-        title: Séance individuelle
-        linkLabel: Consultez les tarifs
+        linkLabel: Découvrir les consultations
+        linkUrl: /psychotherapie/
         image: /images/illustrations/illustration-fleur-sechee-01.png
   seoDescription: Psychologue en ligne, Bénédicte Donet accompagne les adultes en
     EMDR, trauma, anxiété, stress post-traumatique et sexualité.

@@ -2,7 +2,6 @@
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
 import Button from "@/components/common/Button.astro";
-import { CalendarDays, MessageCircle } from "@lucide/astro";
 import { getSiteGlobal } from "@/site.config";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { UMAMI_EVENTS } from "@/lib/umami";
@@ -38,18 +37,12 @@ const labels = locale === "fr" ? {
     <h2>{labels.title}</h2>
     <div class="contact-grid">
       <div class="contact-card">
-        <span class="contact-icon" aria-hidden="true">
-          <CalendarDays size={22} stroke-width={1.75} />
-        </span>
         <h3>{labels.bookingTitle}</h3>
         <p>{labels.bookingText}</p>
         <Button href={global.appointmentUrl} umamiEvent={UMAMI_EVENTS.DOCTOLIB}
           umamiProps={{ emplacement: "bloc-contact", langue: locale }}>{labels.bookingCta}</Button>
       </div>
       <div class="contact-card">
-        <span class="contact-icon contact-icon-mail" aria-hidden="true">
-          <MessageCircle size={22} stroke-width={1.75} />
-        </span>
         <h3>{labels.emailTitle}</h3>
         <p>{labels.emailText}</p>
         <div class="contact-actions">
@@ -93,21 +86,6 @@ const labels = locale === "fr" ? {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     background: var(--color-bg);
-  }
-  .contact-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    margin-bottom: 0.85rem;
-    border-radius: var(--radius-sm);
-    background: color-mix(in srgb, var(--color-secondary) 20%, #fff);
-    color: var(--color-secondary-dark);
-  }
-  .contact-icon-mail {
-    background: color-mix(in srgb, var(--color-primary) 16%, #fff);
-    color: var(--color-primary-dark);
   }
   h3 {
     margin: 0 0 var(--space-sm);

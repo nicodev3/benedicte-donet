@@ -478,13 +478,16 @@ a.cms-preview-button {
 .cms-preview-home .cms-preview-section-copy h2 {
   margin: 0 0 clamp(1.25rem, 2.5vw, 1.875rem);
   color: var(--color-primary-dark);
-  text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
 }
 
+.cms-preview-home .cms-preview-text-image.reverse .cms-preview-section-copy h2 {
+  text-transform: uppercase;
+}
+
 .cms-preview-home .cms-preview-richtext p {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75em;
   text-align: start;
   font-weight: 300;
   line-height: 1.7;
@@ -513,28 +516,26 @@ a.cms-preview-button {
 }
 
 .cms-preview-home .cms-preview-service-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.875rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .cms-preview-home .cms-preview-card {
-  width: 85%;
-  margin-inline: auto;
-  padding: 1.875rem 2rem 2.5rem;
+  width: 100%;
+  margin-inline: 0;
+  padding: 1.5rem 1.5rem 2rem;
   background: rgb(103 199 202 / 0.13);
   border-radius: 5.625rem 0 5.625rem 0;
   text-align: center;
 }
 
 .cms-preview-home .cms-preview-card:nth-child(odd) {
-  margin-right: auto;
-  margin-left: 0;
+  margin: 0;
 }
 
 .cms-preview-home .cms-preview-card:nth-child(even) {
-  margin-left: auto;
-  margin-right: 0;
+  margin: 0;
 }
 
 .cms-preview-home .cms-preview-card img {
@@ -549,8 +550,6 @@ a.cms-preview-button {
   font-size: clamp(1.125rem, 1rem + 0.5vw, 1.625rem);
   letter-spacing: 0.04em;
   color: var(--color-primary-dark);
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 .cms-preview-home .cms-preview-card .cms-preview-richtext,

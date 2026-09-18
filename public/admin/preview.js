@@ -145,7 +145,7 @@
               { className: "cms-preview-card", key: card.title },
               card.image &&
                 h("img", { src: asset(getAsset, card.image), alt: "" }),
-              h("h3", null, card.title),
+              card.title && h("h3", null, card.title),
               card.intro &&
                 h("div", {
                   className: "cms-preview-richtext",

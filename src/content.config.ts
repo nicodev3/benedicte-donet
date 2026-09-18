@@ -59,7 +59,7 @@ const homeContentSchema = z.object({
     title: z.string(),
     cards: z.array(
       z.object({
-        title: z.string(),
+        title: z.string().optional(),
         intro: optionalString,
         bullets: bulletsSchema,
         text: optionalString,
