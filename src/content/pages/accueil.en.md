@@ -94,7 +94,8 @@ home:
   services:
     title: The psychological support I offer
     cards:
-      - intro: "During our online psychology sessions, we explore the different
+      - title: Online psychotherapy sessions
+        intro: "During our online psychology sessions, we explore the different
           dimensions of your Being in order to **support you towards the
           change** you wish to welcome into your life. This involves exploring
           and welcoming:"

@@ -99,7 +99,8 @@ home:
   services:
     title: L'accompagnement psychologique que je propose
     cards:
-      - intro: "Pendant nos séances nous explorons:"
+      - title: Séances de psychothérapie en ligne
+        intro: "Pendant nos séances nous explorons:"
         text: Chaque thérapie est unique, et j'ai à coeur de vous accompagner sur votre
           propre chemin, en douceur et en respectant votre rythme.
         url: /psychotherapie/
