@@ -12,15 +12,24 @@ interface Props {
   carouselLabel: string;
   goToSlideLabel: string;
   starsLabel: string;
+  tone?: "default" | "soft" | "muted";
 }
 
-const { title, items, prevLabel, nextLabel, carouselLabel, goToSlideLabel, starsLabel } =
-  Astro.props;
+const {
+  title,
+  items,
+  prevLabel,
+  nextLabel,
+  carouselLabel,
+  goToSlideLabel,
+  starsLabel,
+  tone = "default",
+} = Astro.props;
 const starCount = 5;
 const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
 ---
 
-<Section class="reviews-section">
+<Section class="reviews-section" {tone}>
   <Container>
     <h2 id={`${carouselId}-heading`} class="reviews-title">{title}</h2>
 
@@ -310,6 +319,22 @@ const carouselId = `reviews-${Math.random().toString(36).slice(2, 9)}`;
   .carousel-shell::after {
     right: 0;
     background: linear-gradient(to left, var(--color-bg), transparent);
+  }
+
+  :global(.section.tone-muted) .carousel-shell::before {
+    background: linear-gradient(to right, var(--color-bg-muted), transparent);
+  }
+
+  :global(.section.tone-muted) .carousel-shell::after {
+    background: linear-gradient(to left, var(--color-bg-muted), transparent);
+  }
+
+  :global(.section.tone-soft) .carousel-shell::before {
+    background: linear-gradient(to right, var(--color-bg-soft), transparent);
+  }
+
+  :global(.section.tone-soft) .carousel-shell::after {
+    background: linear-gradient(to left, var(--color-bg-soft), transparent);
   }
 
   .carousel.at-start .carousel-shell::before,

@@ -56,6 +56,7 @@ const lcpImage = await getOptimizedImage(
 
   <TextImage
     variant="intro"
+    tone="muted"
     title={home.intro.title}
     text={home.intro.text}
     ctaLabel={home.intro.ctaLabel}
@@ -74,7 +75,7 @@ const lcpImage = await getOptimizedImage(
     imageAlt="Psychologue en ligne Bénédicte Donet"
   />
 
-  <ServicesGrid title={home.services.title} cards={serviceCards} />
+  <ServicesGrid title={home.services.title} cards={serviceCards} tone="muted" />
 
   <AppointmentSteps
     title={home.appointment.title}
@@ -106,6 +107,7 @@ const lcpImage = await getOptimizedImage(
     carouselLabel={t.reviews.carouselLabel}
     goToSlideLabel={t.carousel.goToSlide}
     starsLabel={t.reviews.starsLabel}
+    tone="muted"
   />
 
   <ContactBlock />

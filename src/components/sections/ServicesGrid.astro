@@ -24,13 +24,14 @@ interface Card {
 interface Props {
   title: string;
   cards: Card[];
+  tone?: "default" | "soft" | "muted";
 }
 
-const { title, cards } = Astro.props;
+const { title, cards, tone = "default" } = Astro.props;
 
 ---
 
-<Section class="services-section">
+<Section class="services-section" {tone}>
   <Container>
     <h2 class="services-title">{title}</h2>
     <div class:list={["services-stack", { "is-single": cards.length === 1 }]}>
@@ -142,7 +143,7 @@ const { title, cards } = Astro.props;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--color-primary-dark);
-    margin-bottom: clamp(1.25rem, 2.5vw, 1.875rem);
+    margin-bottom: clamp(2.25rem, 4vw, 3.25rem);
   }
 
   .services-stack {
@@ -180,7 +181,7 @@ const { title, cards } = Astro.props;
     align-items: center;
     gap: 0.625rem;
     margin-top: -0.9375rem;
-    padding: 1.5rem 1.75rem 2.25rem;
+    padding: 2rem 2.25rem 2.75rem;
     background: rgb(103 199 202 / 0.13);
     border-radius: 5.625rem 0 5.625rem 0;
   }
@@ -221,7 +222,7 @@ const { title, cards } = Astro.props;
     width: 100%;
     background: var(--color-bg);
     margin-inline: -0.75rem;
-    padding: 0.625rem 1.875rem;
+    padding: 1.35rem 1.875rem;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.7;
@@ -277,7 +278,7 @@ const { title, cards } = Astro.props;
 
   @media (max-width: 1024px) {
     .service-card-inner {
-      padding-inline: 1.5rem;
+      padding-inline: 2rem;
     }
 
     .service-visual {
@@ -301,7 +302,7 @@ const { title, cards } = Astro.props;
 
     .service-card-inner {
       border-radius: 3.75rem 0 3.75rem 0;
-      padding: 0.9375rem 1.25rem 2.5rem;
+      padding: 1.5rem 1.75rem 2.75rem;
     }
 
     .service-visual {
@@ -316,8 +317,8 @@ const { title, cards } = Astro.props;
     .service-body {
       align-self: stretch;
       width: auto;
-      margin-inline: -1.25rem;
-      padding: 0.5rem 1.25rem;
+      margin-inline: -1.75rem;
+      padding: 1.15rem 1.75rem;
       font-size: 0.9375rem;
       box-sizing: border-box;
     }

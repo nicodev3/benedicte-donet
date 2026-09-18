@@ -160,6 +160,7 @@ const mobileImage = await getOptimizedImage(backgroundImageMobile ?? backgroundI
   .hero-bg {
     object-fit: cover;
     object-position: var(--hero-bg-position, center right);
+    filter: brightness(0.86) saturate(0.88);
   }
 
   .hero-overlay {
@@ -170,9 +171,9 @@ const mobileImage = await getOptimizedImage(backgroundImageMobile ?? backgroundI
     background:
       radial-gradient(
         ellipse 80% 75% at 50% 45%,
-        rgba(255, 255, 255, 0.82) 0%,
-        rgba(255, 255, 255, 0.62) 45%,
-        rgba(255, 255, 255, 0.4) 100%
+        rgba(255, 255, 255, 0.92) 0%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 241, 235, 0.68) 100%
       );
     pointer-events: none;
   }
@@ -202,7 +203,7 @@ const mobileImage = await getOptimizedImage(backgroundImageMobile ?? backgroundI
     margin: 0;
     font-family: var(--font-heading);
     font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.6875rem);
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     line-height: 1.2;

@@ -157,9 +157,9 @@ blockquote {
 .site-quote--featured {
   margin-block: 0;
   max-width: none;
-  background: rgb(255 255 255 / 0.72);
-  border-color: rgb(234 223 219 / 0.85);
-  backdrop-filter: blur(4px);
+  background: #fff;
+  border-color: var(--color-border);
+  box-shadow: 0 10px 36px rgba(59, 46, 56, 0.12);
 }
 
 hr {

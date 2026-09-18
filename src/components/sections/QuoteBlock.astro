@@ -1,7 +1,6 @@
 ---
 import Container from "@/components/common/Container.astro";
 import Section from "@/components/common/Section.astro";
-import { getOptimizedSrc } from "@/lib/images";
 import { renderInlineRichText } from "@/lib/rich-text";
 
 interface Props {
@@ -10,14 +9,9 @@ interface Props {
 }
 
 const { text, author } = Astro.props;
-const quoteBackground = await getOptimizedSrc("/images/backgrounds/bg-citation.jpg", {
-  width: 1000,
-  format: "webp",
-  quality: 60,
-});
 ---
 
-<Section class="quote-section" lazyBg={quoteBackground} lazyBgVar="--quote-bg">
+<Section class="quote-section">
   <Container narrow>
     <figure class="site-quote site-quote--featured">
       <span class="site-quote-mark" aria-hidden="true">“</span>
@@ -29,33 +23,14 @@ const quoteBackground = await getOptimizedSrc("/images/backgrounds/bg-citation.j
 
 <style>
   :global(.section.quote-section) {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    min-height: clamp(12rem, 18vw, 15rem);
     display: flex;
     align-items: center;
+    min-height: clamp(12rem, 18vw, 15rem);
     padding-block: clamp(3rem, 5vw, 4rem);
-    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.2);
-    background-image: var(--quote-bg, none);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: var(--color-text);
   }
 
-  :global(.section.quote-section)::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: rgba(255, 255, 255, 0.78);
-    pointer-events: none;
-  }
-
   :global(.section.quote-section > .container) {
-    position: relative;
-    z-index: 1;
     width: 100%;
   }
 </style>
