@@ -1,0 +1,171 @@
+---
+/**
+ * Liste des méthodes sous « Je vous accompagne » → grille 4 cartes (2×2 desktop).
+ */
+---
+
+<script>
+  function extractMethodCard(item: HTMLElement): { title: string; bodyHtml: string } | null {
+    const strong = item.querySelector(":scope > strong, :scope strong");
+    if (!strong) return null;
+
+    const title = (strong.textContent ?? "")
+      .replace(/[.:]\s*$/, "")
+      .trim()
+      .replace(/^\p{Ll}/u, (letter) => letter.toUpperCase());
+    if (!title) return null;
+
+    const clone = item.cloneNode(true) as HTMLElement;
+    const cloneStrong = clone.querySelector("strong");
+    cloneStrong?.remove();
+
+    let bodyHtml = clone.innerHTML
+      .replace(/^\s*(?:L[’']|La\s+|Le\s+|The\s+)/i, "")
+      .replace(/^\s*[,.:]\s*/, "")
+      .replace(/^\s+/u, "")
+      .trim();
+
+    if (!bodyHtml) return null;
+
+    return { title, bodyHtml };
+  }
+
+  function buildMethodesGrid(prose: HTMLElement) {
+    const heading = prose.querySelector<HTMLElement>(
+      'h2[id^="je-vous-accompagne"], h2[id^="i-support-you"]'
+    );
+    if (!heading || heading.dataset.methodesReady === "true") return;
+
+    let child = heading.nextElementSibling;
+    let list: HTMLElement | null = null;
+
+    while (child && child.tagName !== "H2") {
+      if (child.tagName === "UL") {
+        list = child as HTMLElement;
+        break;
+      }
+      child = child.nextElementSibling;
+    }
+
+    if (!list) return;
+
+    const items = [...list.querySelectorAll<HTMLElement>(":scope > li")];
+    if (items.length < 2) return;
+
+    const cards = items
+      .map((item) => extractMethodCard(item))
+      .filter((card): card is { title: string; bodyHtml: string } => Boolean(card));
+
+    if (cards.length < 2) return;
+
+    const grid = document.createElement("ul");
+    grid.className = "methodes-grid";
+    grid.setAttribute("role", "list");
+
+    cards.forEach(({ title, bodyHtml }) => {
+      const card = document.createElement("li");
+      card.className = "methodes-card";
+
+      const headingEl = document.createElement("h3");
+      headingEl.className = "methodes-card-title";
+      headingEl.textContent = title;
+
+      const body = document.createElement("div");
+      body.className = "methodes-card-body";
+      body.innerHTML = bodyHtml;
+
+      card.append(headingEl, body);
+      grid.append(card);
+    });
+
+    list.replaceWith(grid);
+    heading.dataset.methodesReady = "true";
+  }
+
+  function setupMethodesGrid() {
+    document.querySelectorAll<HTMLElement>("article.page-psychotherapie").forEach((prose) => {
+      if (prose.dataset.methodesReady === "true") return;
+      buildMethodesGrid(prose);
+      if (prose.querySelector(".methodes-grid")) {
+        prose.dataset.methodesReady = "true";
+      }
+    });
+  }
+
+  setupMethodesGrid();
+  document.addEventListener("astro:page-load", setupMethodesGrid);
+</script>
+
+<style is:global>
+  .methodes-grid {
+    list-style: none;
+    margin: var(--space-md) 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .methodes-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    border-radius: 1.5rem 0;
+    background: rgb(103 199 202 / 0.13);
+  }
+
+  .methodes-card-title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.125rem, 1rem + 0.45vw, 1.375rem);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    color: var(--color-primary-dark);
+  }
+
+  .methodes-card-body {
+    margin: 0;
+  }
+
+  .methodes-card-body > * {
+    margin: 0;
+  }
+
+  .methodes-card-body > * + * {
+    margin-top: 0.65rem;
+  }
+
+  .methodes-card-body,
+  .methodes-card-body p,
+  .methodes-card-body li {
+    font-family: var(--font-body);
+    font-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  .methodes-card-body a {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+
+  .methodes-card-body a:hover {
+    color: var(--color-primary-strong);
+  }
+
+  @media (max-width: 767px) {
+    .methodes-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .methodes-card {
+      border-radius: 1.25rem 0;
+    }
+  }
+</style>

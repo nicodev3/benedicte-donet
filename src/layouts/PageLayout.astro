@@ -12,6 +12,7 @@ import PageCtaEnhancer from "@/components/common/PageCtaEnhancer.astro";
 import AboutImageSplitEnhancer from "@/components/common/AboutImageSplitEnhancer.astro";
 import ProseQuoteEnhancer from "@/components/common/ProseQuoteEnhancer.astro";
 import PsychotherapieApproachEnhancer from "@/components/common/PsychotherapieApproachEnhancer.astro";
+import PsychotherapieMethodesEnhancer from "@/components/common/PsychotherapieMethodesEnhancer.astro";
 import PsychotherapieSpecialitesEnhancer from "@/components/common/PsychotherapieSpecialitesEnhancer.astro";
 import ServicesHeroEnhancer from "@/components/common/ServicesHeroEnhancer.astro";
 import ServicesIntroEnhancer from "@/components/common/ServicesIntroEnhancer.astro";
@@ -178,6 +179,7 @@ const combinedStructuredData = [
   {pageSlug === "a-propos" && <AboutImageSplitEnhancer />}
   {pageSlug === "a-propos" && <ProseQuoteEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieApproachEnhancer />}
+  {pageSlug === "psychotherapie" && <PsychotherapieMethodesEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieSpecialitesEnhancer />}
   {pageSlug === "services" && <ServicesHeroEnhancer />}
   {pageSlug === "services" && <ServicesIntroEnhancer />}
