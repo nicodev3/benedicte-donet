@@ -1,13 +1,13 @@
 ---
 title: Psychothérapie
-heroTitle: Psychologue EMDR en ligne
-description: Psychologue en ligne
+heroTitle: Psychothérapie en ligne
+description: Cadre et rendez-vous de psychothérapie en ligne
 image: /images/heroes/hero-psychotherapie.webp
-imageAlt: Portrait de Bénédicte Donet, psychologue EMDR en ligne
-seoTitle: Psychologue EMDR en ligne | Bénédicte Donet
-seoDescription: Consultations de psychologie et thérapie EMDR en visio avec
-  Bénédicte Donet. Découvrez le cadre, les tarifs et prenez rendez-vous sur
-  Doctolib.
+imageAlt: Portrait de Bénédicte Donet, psychothérapie en ligne
+seoTitle: Psychothérapie en ligne | Bénédicte Donet
+seoDescription: Psychothérapie en ligne avec Bénédicte Donet. Cadre des séances
+  et prise de rendez-vous en visio sur Doctolib. EMDR et accompagnement
+  individuel.
 order: 3
 draft: false
 pageType: page
@@ -16,51 +16,10 @@ pageType: page
 
 ## Un accompagnement individuel en visio
 
-Je suis Bénédicte Donet, **psychologue clinicienne et psychothérapeute en ligne**. J’accompagne notamment les adultes confrontés à des traumatismes, à l’anxiété ou à des difficultés relationnelles, dans un cadre confidentiel et à leur rythme.
+Qu’il s’agisse de séances individuelles, de programmes, d’ateliers ou de la photothérapie, le cœur du travail thérapeutique repose sur la bienveillance, l’accueil et l’intégration de votre vécu.
+Ensemble, nous explorons chaque facette de votre être : croyances, tensions, blocages, émotions, afin de saisir et de soutenir ce qui est prêt à évoluer.
 
-La **thérapie EMDR en ligne** fait partie des approches que je propose. Nous prenons le temps d’échanger sur votre situation pour déterminer ensemble le cadre et les outils adaptés à votre demande. Le suivi se déroule en téléconsultation ; l’adresse à L’Étang-Salé, à La Réunion, est une adresse administrative et non un cabinet de consultation.
-
-[Prendre rendez-vous en visio](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
-
-<span id="tarifpsycho" aria-hidden="true"></span>
-<span id="tarifs" aria-hidden="true"></span>
-
-## Le tarif
-
-* Première séance individuelle 70 €
-* Durée : 1h30 / Public : Adultes
-
-\* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](/infos-pratiques/) pour aborder ce sujet.
-
-## Comment se déroule une thérapie EMDR en ligne ?
-
-### La première consultation
-
-Ce premier échange permet de parler de ce qui vous amène, de vos attentes et du cadre de l’accompagnement. Vous pouvez poser vos questions avant d’envisager la suite du suivi. Le travail sur un souvenir traumatique ne commence pas automatiquement dès la première rencontre.
-
-### Le travail thérapeutique à distance
-
-Selon votre situation, nous pouvons associer la parole, l’EMDR et les autres outils de ma pratique. La préparation, les ressources et le rythme de travail se construisent avec vous. L’adaptation de l’EMDR à la visio se discute en séance : ce format ne dispense pas d’évaluer votre situation individuelle.
-
-### Préparer votre rendez-vous en visio
-
-Prévoyez un endroit calme et privé, une connexion internet stable et un appareil avec caméra et microphone. La séance dure **1 h 30**. Les consignes et le lien de connexion vous sont communiqués avant le rendez-vous.
-
-<span id="questions-visio" aria-hidden="true"></span>
-
-## Vos questions sur les consultations en ligne
-
-### Puis-je vous écrire avant de réserver ?
-
-Oui, vous pouvez [m’écrire par email](mailto:donetbenedicte@gmail.com) pour une question sur les séances ou les tarifs. Pour choisir un créneau, consultez directement [mon agenda Doctolib](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet).
-
-### Faut-il savoir si l’EMDR me convient avant de consulter ?
-
-Vous pouvez venir avec vos questions et vos difficultés, sans avoir choisi une méthode. Nous discuterons de votre demande et de la place que l’EMDR ou d’autres approches peuvent prendre dans votre suivi.
-
-### Où trouver les informations sur le remboursement et le public accueilli ?
-
-Les modalités sont détaillées dans les [informations pratiques](/infos-pratiques/). Le suivi présenté ici est individuel, y compris lorsque les difficultés concernent les relations amoureuses.
+La nature de la thérapie peut évoluer car chacun est unique, nécessitant des méthodes et des approches spécifiques.
 
 [Prendre rendez-vous en visio](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
@@ -88,8 +47,6 @@ Ma pratique est guidée par une vision holistique de la psychologie, qui consist
 ### Une approche passionnée et engagée
 
 Passionnée par la thérapie et sa pratique, **je mets continuellement à jour mes connaissances à travers des formations** et en nourrissant ma pratique personnelle, afin de vous offrir un suivi thérapeutique de qualité. La maturité, le savoir et l’expérience qui résultent d’un travail sur soi ne peuvent être comparés aux connaissances acquises dans des livres. Mon accompagnement est donc grandement inspiré et guidé par ce que j’ai acquis.
-
-[Questions sur les consultations en ligne](#questions-visio)
 
 ## Mes spécialités
 
