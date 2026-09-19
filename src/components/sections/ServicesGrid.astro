@@ -7,7 +7,7 @@ import { renderInlineRichText } from "@/lib/rich-text";
 import { doctolibEventFor } from "@/lib/umami";
 
 interface Card {
-  title: string;
+  title?: string;
   intro?: string;
   bullets?: string[];
   text?: string;
@@ -181,13 +181,7 @@ const { title, cards, tone = "default" } = Astro.props;
     align-items: center;
     gap: 1rem;
     padding: 2rem 2.25rem 2.5rem;
-    background:
-      linear-gradient(
-        160deg,
-        rgb(103 199 202 / 0.18) 0%,
-        rgb(255 241 235 / 0.45) 55%,
-        rgb(103 199 202 / 0.1) 100%
-      );
+    background: rgb(103 199 202 / 0.13);
     border: 1px solid rgb(103 199 202 / 0.22);
     border-radius: 5.625rem 0 5.625rem 0;
     box-shadow: 0 14px 40px rgba(59, 46, 56, 0.08);

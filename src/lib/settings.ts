@@ -52,14 +52,6 @@ export interface HomeSettings {
     ctaLabel: string;
     ctaUrl: string;
   };
-  /** Bloc CTA retiré de l'accueil — optionnel pour les contenus existants. */
-  masterclass?: {
-    title: string;
-    text: string;
-    ctaLabel: string;
-    ctaUrl: string;
-    image?: string;
-  };
   quote: { text: string; author: string };
   reviews: {
     title: string;

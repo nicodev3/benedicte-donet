@@ -84,7 +84,6 @@
     const whyOnline = content.whyOnline || {};
     const services = content.services || {};
     const appointment = content.appointment || {};
-    const masterclass = content.masterclass || {};
     const quote = content.quote || {};
     const reviews = content.reviews || {};
     const cards = services.cards || [];
@@ -202,20 +201,6 @@
           className: "cms-preview-cta",
         })
       ),
-      masterclass.title
-        ? h(
-            "div",
-            { className: "cms-preview-masterclass" },
-            h(TextImage, {
-              title: masterclass.title,
-              text: masterclass.text,
-              ctaLabel: masterclass.ctaLabel,
-              ctaUrl: masterclass.ctaUrl,
-              image: asset(getAsset, masterclass.image),
-              ctaClassName: "cms-preview-button",
-            })
-          )
-        : null,
       h(
         "section",
         { className: "cms-preview-quote" },

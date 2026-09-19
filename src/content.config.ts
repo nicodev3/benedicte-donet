@@ -81,16 +81,6 @@ const homeContentSchema = z.object({
     ctaLabel: z.string(),
     ctaUrl: z.string(),
   }),
-  /** Bloc CTA masterclass de l'accueil, optionnel. */
-  masterclass: z
-    .object({
-      title: z.string(),
-      text: z.string(),
-      ctaLabel: z.string(),
-      ctaUrl: z.string(),
-      image: optionalString,
-    })
-    .optional(),
   quote: z.object({
     text: z.string(),
     author: z.string(),

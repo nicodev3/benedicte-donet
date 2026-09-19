@@ -597,10 +597,6 @@ a.cms-preview-button {
   text-align: center;
 }
 
-.cms-preview-home .cms-preview-masterclass {
-  background: var(--color-bg-soft);
-}
-
 .cms-preview-home .cms-preview-quote {
   padding: clamp(3rem, 5vw, 4rem) 1.5rem;
   text-align: center;

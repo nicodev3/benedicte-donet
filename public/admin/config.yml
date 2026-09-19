@@ -274,7 +274,7 @@ collections:
             name: "services"
             widget: "object"
             i18n: true
-            hint: "Les 3 cartes présentant vos accompagnements (séance, ateliers, photothérapie…)."
+            hint: "La carte présentant vos séances de psychothérapie en ligne."
             fields:
               - { label: "Titre de la section", name: "title", widget: "string", i18n: true }
               # List widgets : seul i18n: true est supporté (sous-champs ignorés pour i18n).
@@ -378,37 +378,11 @@ collections:
                 widget: "string"
                 i18n: duplicate
                 hint: "En général votre lien Doctolib."
-          - label: "Masterclass & programmes"
-            name: "masterclass"
-            widget: "object"
-            i18n: true
-            fields:
-              - { label: "Titre", name: "title", widget: "string", i18n: true }
-              - label: "Texte"
-                name: "text"
-                widget: "richtext"
-                i18n: true
-                modes: ["rich_text"]
-                buttons: ["bold", "italic", "link"]
-                editor_components: []
-              - { label: "Texte du bouton", name: "ctaLabel", widget: "string", i18n: true }
-              - label: "Lien du bouton"
-                name: "ctaUrl"
-                widget: "string"
-                i18n: true
-                hint: "En général /masterclass/."
-              - label: "Image"
-                name: "image"
-                widget: "image"
-                choose_url: false
-                required: false
-                i18n: duplicate
-                hint: "Photo ou illustration de la section."
           - label: "Citation"
             name: "quote"
             widget: "object"
             i18n: true
-            hint: "Citation affichée entre les masterclass et les avis."
+            hint: "Citation affichée entre les étapes de rendez-vous et les avis."
             fields:
               - label: "Texte"
                 name: "text"
