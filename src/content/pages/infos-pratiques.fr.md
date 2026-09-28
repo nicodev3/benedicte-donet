@@ -4,7 +4,7 @@ description: "Psychologue à distance | Bénédicte Donet"
 image: "/images/heroes/hero-infos-pratiques.jpg"
 imageAlt: "Bénédicte Donet, psychologue en ligne"
 seoTitle: "Consultation psychologue en ligne | Infos pratiques"
-seoDescription: "Informations pour consulter une psychologue en ligne : durée des séances, téléconsultation, prise de rendez-vous, remboursement mutuelle et cadre thérapeutique."
+seoDescription: "Informations pour consulter une psychologue en ligne : tarifs, durée des séances, téléconsultation, prise de rendez-vous, remboursement mutuelle et cadre thérapeutique."
 order: 7
 draft: false
 pageType: page
@@ -22,6 +22,14 @@ La prise de rendez-vous se fait par email ou par le lien de contact [ci-dessous]
 -   **Disponibilités —** Si je n’ai rien à proposer avant plusieurs mois, je pourrai vous orienter vers un autre professionnel de confiance.
 
 [Je réserve ma séance](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
+
+## Le tarif
+
+-   Première séance individuelle : **90 €**
+-   Séances suivantes : **70 €**
+-   Durée : 1 h 30 / Public : Adultes
+
+\* Je tiens à favoriser autant que possible l’accès à un suivi thérapeutique pour tous. **Si votre situation personnelle rend l’accès à la thérapie difficile**, j’ai réservé un certain nombre de places à tarif réduit. En fonction de votre situation (étudiant, demandeur d’emploi, etc.), je serais ravie d’échanger avec vous au sujet des tarifs avant notre première séance. N’hésitez pas à me [contacter](#contact) pour aborder ce sujet.
 
 ## À savoir avant de consulter
 

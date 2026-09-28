@@ -4,7 +4,7 @@ description: "Online psychologist | Bénédicte Donet"
 image: "/images/heroes/hero-infos-pratiques.jpg"
 imageAlt: "Bénédicte Donet, online psychologist"
 seoTitle: "Online Psychologist Consultation | Practical Info"
-seoDescription: "Practical information for booking an online psychologist consultation: session length, video setting, appointments, reimbursement and therapeutic framework."
+seoDescription: "Practical information for booking an online psychologist consultation: fees, session length, video setting, appointments, reimbursement and therapeutic framework."
 order: 7
 draft: false
 pageType: page
@@ -22,6 +22,14 @@ Appointments can be made by email or via the contact link [below](#contact).
 -   **Availability —** If I have nothing to offer for several months, I can refer you to another trusted professional.
 
 [Book my session](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
+
+## Fees
+
+-   First individual session: **€90**
+-   Following sessions: **€70**
+-   Duration: 1 hour 30 minutes / Adults
+
+\* I aim to keep therapy as accessible as possible. **If your personal situation makes it difficult to access therapy**, I reserve a number of reduced-fee places. Depending on your situation (student, job seeker, etc.), I would be glad to discuss fees with you before our first session. Feel free to [contact me](#contact) about this.
 
 ## What to know before booking
 

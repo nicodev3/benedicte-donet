@@ -25,7 +25,7 @@ It is a recognised psychotherapeutic approach for treating **psychological traum
 Recommended by the [WHO](https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder) and the [Haute Autorité de Santé](https://www.has-sante.fr/), the method relies on adaptive information reprocessing: it helps **unblock painful memories** that remain « stuck » in the nervous system so they can be **naturally reprocessed**, without forcing a reliving of the experience.
 
 
-> Looking for a consultation? Explore [online EMDR therapy, fees and appointments](/en/psychotherapie/). We discuss your situation before choosing the tools for your care.
+> Looking for a consultation? Explore [online EMDR therapy](/en/psychotherapie/) as well as [fees and appointments](/en/infos-pratiques/). We discuss your situation before choosing the tools for your care.
 
 ## How does the EMDR method work?
 

@@ -25,7 +25,7 @@ C’est une approche psychothérapeutique reconnue pour le traitement des **trau
 Recommandée par l’[OMS](https://www.who.int/fr/news-room/fact-sheets/detail/post-traumatic-stress-disorder) et la [Haute Autorité de Santé](https://www.has-sante.fr/), la méthode s’appuie sur le retraitement adaptatif de l’information : elle permet de **débloquer les souvenirs douloureux** restés « coincés » dans le système nerveux, afin de les **retraiter naturellement**, sans forcer la reviviscence.
 
 
-> Vous cherchez une consultation plutôt qu’une explication de la méthode ? Retrouvez [le cadre de la thérapie EMDR en ligne, les tarifs et la prise de rendez-vous](/psychotherapie/). Nous discutons de votre situation avant de choisir les outils du suivi.
+> Vous cherchez une consultation plutôt qu’une explication de la méthode ? Retrouvez [le cadre de la thérapie EMDR en ligne](/psychotherapie/) ainsi que [les tarifs et la prise de rendez-vous](/infos-pratiques/). Nous discutons de votre situation avant de choisir les outils du suivi.
 
 ## Comment fonctionne la méthode EMDR ?
 
