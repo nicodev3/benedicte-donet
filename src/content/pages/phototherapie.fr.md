@@ -34,8 +34,6 @@ Dans une société qui nous pousse instinctivement à juger et à rejeter certai
 ![Portrait photothérapie confiance en soi](/images/phototherapie/photo-phototherapie-05.jpg)
 ![Séance photo célébration du corps](/images/phototherapie/photo-phototherapie-06.jpg)
 
-<span id="option" aria-hidden="true" style="scroll-margin-top: 6rem"></span>
-
 ## Mes offres de photothérapie
 
 ![séance photo confiance en soi photothérapie](/images/phototherapie/photo-phototherapie-montage-01.png)

@@ -22,6 +22,7 @@ import ServicesFaqEnhancer from "@/components/common/ServicesFaqEnhancer.astro";
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
+import LegacyAnchorsEnhancer from "@/components/common/LegacyAnchorsEnhancer.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
 import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.astro";
 import { getLatestPosts } from "@/lib/blog";
@@ -176,6 +177,7 @@ const combinedStructuredData = [
 
   <PageIntroEnhancer />
   <PageCtaEnhancer />
+  <LegacyAnchorsEnhancer />
   {pageSlug === "a-propos" && <AboutImageSplitEnhancer />}
   {pageSlug === "a-propos" && <ProseQuoteEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieApproachEnhancer />}
