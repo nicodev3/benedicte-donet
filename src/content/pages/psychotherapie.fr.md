@@ -22,9 +22,6 @@ La **thérapie EMDR en ligne** fait partie des approches que je propose. Nous pr
 
 [Prendre rendez-vous en visio](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
-<span id="tarifpsycho" aria-hidden="true"></span>
-<span id="tarifs" aria-hidden="true"></span>
-
 ## Le tarif
 
 * Première séance individuelle 70 €
