@@ -12,8 +12,8 @@ import PageCtaEnhancer from "@/components/common/PageCtaEnhancer.astro";
 import AboutImageSplitEnhancer from "@/components/common/AboutImageSplitEnhancer.astro";
 import ProseQuoteEnhancer from "@/components/common/ProseQuoteEnhancer.astro";
 import PsychotherapieApproachEnhancer from "@/components/common/PsychotherapieApproachEnhancer.astro";
+import PsychotherapieMethodesEnhancer from "@/components/common/PsychotherapieMethodesEnhancer.astro";
 import PsychotherapieSpecialitesEnhancer from "@/components/common/PsychotherapieSpecialitesEnhancer.astro";
-import PsychotherapieTarifEnhancer from "@/components/common/PsychotherapieTarifEnhancer.astro";
 import ServicesHeroEnhancer from "@/components/common/ServicesHeroEnhancer.astro";
 import ServicesIntroEnhancer from "@/components/common/ServicesIntroEnhancer.astro";
 import ServicesSectionsEnhancer from "@/components/common/ServicesSectionsEnhancer.astro";
@@ -22,6 +22,7 @@ import ServicesFaqEnhancer from "@/components/common/ServicesFaqEnhancer.astro";
 import PhotoOffersEnhancer from "@/components/common/PhotoOffersEnhancer.astro";
 import PhotoProcessEnhancer from "@/components/common/PhotoProcessEnhancer.astro";
 import PhotoTestimonialsEnhancer from "@/components/common/PhotoTestimonialsEnhancer.astro";
+import LegacyAnchorsEnhancer from "@/components/common/LegacyAnchorsEnhancer.astro";
 import ReviewsBlock from "@/components/sections/ReviewsBlock.astro";
 import RelatedPostsCarousel from "@/components/sections/RelatedPostsCarousel.astro";
 import { getLatestPosts } from "@/lib/blog";
@@ -111,13 +112,11 @@ const combinedStructuredData = [
     ) : hasHero ? (
       <Hero
         title={heroTitle ?? title}
-        subtitle={description ?? ""}
         backgroundImage={image!}
         backgroundImageAlt={imageAlt || title}
         backgroundPosition="bottom center"
         ctaLabel={heroCta?.label}
         ctaUrl={heroCta?.url}
-        subtitleFirst={Boolean(description)}
       />
     ) : (
       <Section tone="soft" class="page-hero">
@@ -178,11 +177,12 @@ const combinedStructuredData = [
 
   <PageIntroEnhancer />
   <PageCtaEnhancer />
+  <LegacyAnchorsEnhancer />
   {pageSlug === "a-propos" && <AboutImageSplitEnhancer />}
   {pageSlug === "a-propos" && <ProseQuoteEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieApproachEnhancer />}
+  {pageSlug === "psychotherapie" && <PsychotherapieMethodesEnhancer />}
   {pageSlug === "psychotherapie" && <PsychotherapieSpecialitesEnhancer />}
-  {pageSlug === "psychotherapie" && <PsychotherapieTarifEnhancer />}
   {pageSlug === "services" && <ServicesHeroEnhancer />}
   {pageSlug === "services" && <ServicesIntroEnhancer />}
   {pageSlug === "services" && <ServicesSectionsEnhancer />}

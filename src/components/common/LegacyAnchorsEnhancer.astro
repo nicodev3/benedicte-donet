@@ -1,0 +1,58 @@
+---
+/**
+ * Ancres d’URL héritées (WordPress, liens externes) sans HTML dans le CMS.
+ * Place des repères invisibles devant les titres markdown correspondants.
+ */
+---
+
+<script>
+  type AnchorRule = { heading: string; ids: string[] };
+
+  const RULES: AnchorRule[] = [
+    {
+      heading:
+        'h2[id^="le-tarif"], h2[id^="fees"], h2[id^="tarifs-des-consultations"], h2[id^="online-consultation-fees"]',
+      ids: ["tarifs", "tarifpsycho"],
+    },
+    {
+      heading: 'h2[id^="vos-questions"], h2[id^="your-questions"]',
+      ids: ["questions-visio"],
+    },
+    {
+      heading: 'h2[id^="mes-offres-de-"], h2[id^="my-phototherapy-offers"]',
+      ids: ["option"],
+    },
+  ];
+
+  function ensureLegacyAnchors() {
+    const prose = document.querySelector<HTMLElement>("article.prose");
+    if (!prose || prose.dataset.legacyAnchorsReady === "true") return;
+
+    for (const rule of RULES) {
+      const heading = prose.querySelector<HTMLElement>(rule.heading);
+      if (!heading) continue;
+
+      for (const id of rule.ids) {
+        if (document.getElementById(id)) continue;
+        const span = document.createElement("span");
+        span.id = id;
+        span.setAttribute("aria-hidden", "true");
+        heading.before(span);
+      }
+    }
+
+    prose.dataset.legacyAnchorsReady = "true";
+  }
+
+  ensureLegacyAnchors();
+  document.addEventListener("astro:page-load", ensureLegacyAnchors);
+</script>
+
+<style is:global>
+  #tarifs,
+  #tarifpsycho,
+  #questions-visio,
+  #option {
+    scroll-margin-top: 6rem;
+  }
+</style>

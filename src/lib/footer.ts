@@ -17,7 +17,7 @@ const FOOTER: Record<Locale, FooterContent> = {
   fr: {
     text: "Bénédicte Donet, psychologue clinicienne en ligne. Accompagnement en visio : trauma-thérapies, EMDR, anxiété, sexualité.",
     quickLinks: [
-      { label: "Consultations", url: "/psychotherapie/" },
+      { label: "Psychothérapie", url: "/psychotherapie/" },
       { label: "À propos", url: "/a-propos/" },
       { label: "Infos pratiques", url: "/infos-pratiques/" },
       { label: "Blog", url: "/blog/" },
@@ -36,7 +36,7 @@ const FOOTER: Record<Locale, FooterContent> = {
   en: {
     text: "Bénédicte Donet, online clinical psychologist. Video consultations for trauma therapy, EMDR, anxiety and sexuality.",
     quickLinks: [
-      { label: "Consultations", url: "/psychotherapie/" },
+      { label: "Psychotherapy", url: "/psychotherapie/" },
       { label: "About", url: "/a-propos/" },
       { label: "Practical info", url: "/infos-pratiques/" },
       { label: "Blog", url: "/blog/" },

@@ -34,8 +34,6 @@ In a society that instinctively pushes us to judge and reject certain facets of 
 ![Phototherapy self-confidence portrait](/images/phototherapie/photo-phototherapie-05.jpg)
 ![Body celebration photo session](/images/phototherapie/photo-phototherapie-06.jpg)
 
-<span id="option" aria-hidden="true" style="scroll-margin-top: 6rem"></span>
-
 ## My phototherapy offers
 
 ![self-confidence photo session phototherapy](/images/phototherapie/photo-phototherapie-montage-01.png)

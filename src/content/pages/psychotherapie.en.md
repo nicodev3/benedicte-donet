@@ -1,13 +1,12 @@
 ---
 title: Psychotherapy
-heroTitle: Online EMDR psychologist
-description: Online psychologist
+heroTitle: Online psychotherapy
+description: Online psychotherapy framework and booking
 image: /images/heroes/hero-psychotherapie.webp
-imageAlt: Portrait of Bénédicte Donet, online EMDR psychologist
-seoTitle: Online EMDR psychologist | Bénédicte Donet
-seoDescription: Online psychology and EMDR therapy with Bénédicte Donet.
-  Discover the session format and fees, and book your video consultation on
-  Doctolib.
+imageAlt: Portrait of Bénédicte Donet, online psychotherapy
+seoTitle: Online psychotherapy | Bénédicte Donet
+seoDescription: Online psychotherapy with Bénédicte Donet. Session format and
+  video booking on Doctolib. EMDR and individual support.
 order: 3
 draft: false
 pageType: page
@@ -17,61 +16,16 @@ pageType: page
 
 ## Individual support by video
 
-I am Bénédicte Donet, an **online clinical psychologist and psychotherapist**. I support adults dealing with trauma, anxiety or relationship difficulties, in a confidential setting and at their own pace.
+Whether through individual sessions, programmes, workshops or phototherapy, the heart of the therapeutic work rests on kindness, welcome and the integration of what you are living.
+Together, we explore every facet of your being: beliefs, tensions, blockages, emotions — to recognise and support what is ready to evolve.
 
-**Online EMDR therapy** is one of the approaches I offer. We take time to discuss your situation and the setting and tools that suit your needs. Sessions take place by video. The address in L’Étang-Salé, Réunion, is an administrative address, not a consultation office.
+The nature of therapy can evolve because each person is unique and needs specific methods and approaches.
 
 [Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 **Professional background:** a master’s degree in clinical psychology and psychopathology from Paul-Valéry University, Montpellier (2015), followed by EMDR training in Australia with [EMDRAA](https://emdraa.org/) (2022). Read about [my qualifications and training](/en/a-propos/).
 
 I mainly support **adults**. Sessions may also be considered for **adolescents aged 13 and over** when the adolescent personally wishes to attend. In this situation, please [email me before booking](mailto:donetbenedicte@gmail.com) to discuss the framework for support.
-
-<span id="tarifpsycho" aria-hidden="true"></span>
-<span id="tarifs" aria-hidden="true"></span>
-
-## Fees
-
--   First individual session €70
-
--   Individual session €90
-
-    Duration: 1h30 / Audience: Adults
-
-
-\* I strive to facilitate access to therapeutic support for as many people as possible. **If your personal situation makes access to therapy difficult**, I have reserved a number of places at reduced rates. Depending on your situation (student, job seeker, etc.), I would be happy to discuss fees with you before our first session. Do not hesitate to [contact me](/en/infos-pratiques/) to discuss this.
-
-## How does online EMDR therapy work?
-
-### The first consultation
-
-We discuss what brings you to therapy, your expectations and the framework for working together. You can ask questions before considering ongoing sessions. Reprocessing a traumatic memory does not automatically begin at the first meeting.
-
-### Therapeutic work by video
-
-Depending on your situation, we may combine talking, EMDR and other approaches from my practice. Preparation, resources and pace are developed with you. Adapting EMDR to video sessions requires discussing your individual circumstances.
-
-### Preparing for your appointment
-
-Choose a quiet, private space, a stable internet connection and a device with a camera and microphone. Sessions last **1 hour 30 minutes**. Connection details are shared before your appointment.
-
-<span id="questions-visio" aria-hidden="true"></span>
-
-## Questions about online consultations
-
-### Can I contact you before booking?
-
-Yes, you can [email me](mailto:donetbenedicte@gmail.com) with questions about sessions or fees. To choose an appointment, visit [my Doctolib calendar](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet).
-
-### Do I need to know whether EMDR is right for me?
-
-You can bring your questions and concerns without having chosen a method. We will discuss your needs and whether EMDR or other approaches may have a place in your care.
-
-### Where can I find information about reimbursement and who can consult?
-
-See the [practical information](/en/infos-pratiques/) page. The support described here is individual, including when difficulties concern romantic relationships.
-
-[Book a video consultation](https://www.doctolib.fr/psychologue/l-etang-sale/benedicte-donet)
 
 ## I SUPPORT YOU
 
@@ -97,8 +51,6 @@ My practice is guided by a holistic vision of psychology, which consists of **ta
 ### A passionate and committed approach
 
 Passionate about therapy and its practice, **I continually update my knowledge through training** and by nourishing my personal practice, in order to offer you quality therapeutic support. The maturity, knowledge and experience that result from inner work cannot be compared to knowledge acquired in books. My support is therefore greatly inspired and guided by what I have learned.
-
-[Questions about online consultations](#questions-visio)
 
 ## My specialities
 

@@ -101,14 +101,14 @@ const graph: Record<string, unknown>[] = [
     "@id": serviceId,
     name:
       locale === "fr"
-        ? "Consultations de psychologie et thérapie EMDR en ligne"
-        : "Online psychology and EMDR therapy consultations",
+        ? "Psychothérapie en ligne"
+        : "Online psychotherapy",
     description: global.defaultSeoDescription,
     url: new URL(locale === "fr" ? "/psychotherapie/" : "/en/psychotherapie/", SITE.url).href,
     serviceType:
       locale === "fr"
-        ? "Psychologie clinique et thérapie EMDR en téléconsultation"
-        : "Clinical psychology and EMDR therapy by video consultation",
+        ? "Psychothérapie et thérapie EMDR en téléconsultation"
+        : "Psychotherapy and EMDR therapy by video consultation",
     provider: { "@id": personId },
     areaServed: [
       { "@type": "Country", name: "France" },
